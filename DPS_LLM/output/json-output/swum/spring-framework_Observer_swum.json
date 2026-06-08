@@ -1,0 +1,219 @@
+{
+  "project_name" : "spring-framework/Observer",
+  "swum_version" : "1.0",
+  "generated_timestamp" : 1780917880890,
+  "class_summaries" : {
+    "ApplicationEventPublisher" : {
+      "class_name" : "ApplicationEventPublisher",
+      "class_type" : "interface",
+      "method_summaries" : {
+        "publishEvent" : {
+          "method_name" : "publishEvent",
+          "return_type" : "void",
+          "parameters" : "Object",
+          "swum_summary" : "This method publishes an event using a parameter.",
+          "swum_actions" : "publish",
+          "swum_objects" : "Event",
+          "swum_parse_tree" : "(VERB_PHRASE publish (OBJECT Event))"
+        }
+      },
+      "swum_class_summary" : "The ApplicationEventPublisher class provides methods to publish, publish for managing event."
+    },
+    "ApplicationListener" : {
+      "class_name" : "ApplicationListener",
+      "class_type" : "interface",
+      "method_summaries" : {
+        "onApplicationEvent" : {
+          "method_name" : "onApplicationEvent",
+          "return_type" : "void",
+          "parameters" : "E",
+          "swum_summary" : "This method performs an event using a parameter.",
+          "swum_actions" : "",
+          "swum_objects" : "Event",
+          "swum_parse_tree" : "(NOUN_PHRASE on Application Event)"
+        },
+        "supportsAsyncExecution" : {
+          "method_name" : "supportsAsyncExecution",
+          "return_type" : "boolean",
+          "parameters" : "",
+          "swum_summary" : "This method performs and returns a boolean.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE supports Async Execution)"
+        },
+        "forPayload" : {
+          "method_name" : "forPayload",
+          "return_type" : "ApplicationListener<PayloadApplicationEvent<T>>",
+          "parameters" : "Consumer<T>",
+          "swum_summary" : "This method performs using a parameter and returns a collection.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE for Payload)"
+        }
+      },
+      "swum_class_summary" : "The ApplicationListener class."
+    },
+    "AbstractApplicationEventMulticaster" : {
+      "class_name" : "AbstractApplicationEventMulticaster",
+      "class_type" : "class",
+      "method_summaries" : {
+        "setBeanClassLoader" : {
+          "method_name" : "setBeanClassLoader",
+          "return_type" : "void",
+          "parameters" : "ClassLoader",
+          "swum_summary" : "This method sets using a parameter.",
+          "swum_actions" : "set",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE set (OBJECT Bean Class Loader))"
+        },
+        "setBeanFactory" : {
+          "method_name" : "setBeanFactory",
+          "return_type" : "void",
+          "parameters" : "BeanFactory",
+          "swum_summary" : "This method sets using a parameter.",
+          "swum_actions" : "set",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE set (OBJECT Bean Factory))"
+        },
+        "getBeanFactory" : {
+          "method_name" : "getBeanFactory",
+          "return_type" : "ConfigurableBeanFactory",
+          "parameters" : "",
+          "swum_summary" : "This method retrieves and returns an object.",
+          "swum_actions" : "get",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Bean Factory))"
+        },
+        "addApplicationListener" : {
+          "method_name" : "addApplicationListener",
+          "return_type" : "void",
+          "parameters" : "ApplicationListener<?>",
+          "swum_summary" : "This method adds using a parameter.",
+          "swum_actions" : "add",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE add (OBJECT Application Listener))"
+        },
+        "addApplicationListenerBean" : {
+          "method_name" : "addApplicationListenerBean",
+          "return_type" : "void",
+          "parameters" : "String",
+          "swum_summary" : "This method adds using a parameter.",
+          "swum_actions" : "add",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE add (OBJECT Application Listener Bean))"
+        },
+        "removeApplicationListener" : {
+          "method_name" : "removeApplicationListener",
+          "return_type" : "void",
+          "parameters" : "ApplicationListener<?>",
+          "swum_summary" : "This method removes using a parameter.",
+          "swum_actions" : "remove",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE remove (OBJECT Application Listener))"
+        },
+        "removeApplicationListenerBean" : {
+          "method_name" : "removeApplicationListenerBean",
+          "return_type" : "void",
+          "parameters" : "String",
+          "swum_summary" : "This method removes using a parameter.",
+          "swum_actions" : "remove",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE remove (OBJECT Application Listener Bean))"
+        },
+        "removeApplicationListeners" : {
+          "method_name" : "removeApplicationListeners",
+          "return_type" : "void",
+          "parameters" : "Predicate<ApplicationListener<?>>",
+          "swum_summary" : "This method removes using a parameter.",
+          "swum_actions" : "remove",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE remove (OBJECT Application Listeners))"
+        },
+        "removeApplicationListenerBeans" : {
+          "method_name" : "removeApplicationListenerBeans",
+          "return_type" : "void",
+          "parameters" : "Predicate<String>",
+          "swum_summary" : "This method removes using a parameter.",
+          "swum_actions" : "remove",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE remove (OBJECT Application Listener Beans))"
+        },
+        "removeAllListeners" : {
+          "method_name" : "removeAllListeners",
+          "return_type" : "void",
+          "parameters" : "",
+          "swum_summary" : "This method removes.",
+          "swum_actions" : "remove",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE remove (OBJECT All Listeners))"
+        },
+        "getApplicationListeners" : {
+          "method_name" : "getApplicationListeners",
+          "return_type" : "Collection<ApplicationListener<?>>",
+          "parameters" : "",
+          "swum_summary" : "This method retrieves and returns a collection.",
+          "swum_actions" : "get",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Application Listeners))"
+        },
+        "retrieveApplicationListeners" : {
+          "method_name" : "retrieveApplicationListeners",
+          "return_type" : "Collection<ApplicationListener<?>>",
+          "parameters" : "ResolvableType, @Nullable, @Nullable",
+          "swum_summary" : "This method retrieves using 3 parameters and returns a collection.",
+          "swum_actions" : "retrieve",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE retrieve (OBJECT Application Listeners))"
+        },
+        "supportsEvent" : {
+          "method_name" : "supportsEvent",
+          "return_type" : "boolean",
+          "parameters" : "ApplicationListener<?>, ResolvableType, @Nullable",
+          "swum_summary" : "This method performs an event using 3 parameters and returns a boolean.",
+          "swum_actions" : "",
+          "swum_objects" : "Event",
+          "swum_parse_tree" : "(NOUN_PHRASE supports Event)"
+        },
+        "equals" : {
+          "method_name" : "equals",
+          "return_type" : "boolean",
+          "parameters" : "@Nullable",
+          "swum_summary" : "This method performs using a parameter and returns a boolean.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE equals)"
+        },
+        "hashCode" : {
+          "method_name" : "hashCode",
+          "return_type" : "int",
+          "parameters" : "",
+          "swum_summary" : "This method performs and returns a number.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE hash Code)"
+        },
+        "toString" : {
+          "method_name" : "toString",
+          "return_type" : "String",
+          "parameters" : "",
+          "swum_summary" : "This method performs and returns a String.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE to String)"
+        },
+        "compareTo" : {
+          "method_name" : "compareTo",
+          "return_type" : "int",
+          "parameters" : "ListenerCacheKey",
+          "swum_summary" : "This method compares using a parameter and returns a number.",
+          "swum_actions" : "compare",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE compare (OBJECT To))"
+        }
+      },
+      "swum_class_summary" : "The AbstractApplicationEventMulticaster class provides 16 methods including retrieval, deletion, storage and modification and other operations for managing event."
+    }
+  },
+  "swum_project_summary" : "This software project contains 3 classes with 21 methods. Primary operations include add, compare, get, publish, remove. Key objects manipulated are Event.",
+  "swum_design_pattern" : [ ]
+}

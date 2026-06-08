@@ -1,0 +1,415 @@
+{
+  "project_name" : "spring-framework/Singleton",
+  "swum_version" : "1.0",
+  "generated_timestamp" : 1780917880893,
+  "class_summaries" : {
+    "SmartInitializingSingleton" : {
+      "class_name" : "SmartInitializingSingleton",
+      "class_type" : "interface",
+      "method_summaries" : {
+        "afterSingletonsInstantiated" : {
+          "method_name" : "afterSingletonsInstantiated",
+          "return_type" : "void",
+          "parameters" : "",
+          "swum_summary" : "This method performs as part of the Singleton pattern.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE after Singletons Instantiated)"
+        }
+      },
+      "swum_class_summary" : "The SmartInitializingSingleton class is part of the Singleton pattern."
+    },
+    "DefaultSingletonBeanRegistry" : {
+      "class_name" : "DefaultSingletonBeanRegistry",
+      "class_type" : "class",
+      "method_summaries" : {
+        "registerSingleton" : {
+          "method_name" : "registerSingleton",
+          "return_type" : "void",
+          "parameters" : "String, Object",
+          "swum_summary" : "This method registers using 2 parameters as part of the Singleton pattern.",
+          "swum_actions" : "register",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE register (OBJECT Singleton))"
+        },
+        "addSingleton" : {
+          "method_name" : "addSingleton",
+          "return_type" : "void",
+          "parameters" : "String, Object",
+          "swum_summary" : "This method adds using 2 parameters as part of the Singleton pattern.",
+          "swum_actions" : "add",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE add (OBJECT Singleton))"
+        },
+        "addSingletonFactory" : {
+          "method_name" : "addSingletonFactory",
+          "return_type" : "void",
+          "parameters" : "String, ObjectFactory<?>",
+          "swum_summary" : "This method adds using 2 parameters as part of the Singleton pattern.",
+          "swum_actions" : "add",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE add (OBJECT Singleton Factory))"
+        },
+        "addSingletonCallback" : {
+          "method_name" : "addSingletonCallback",
+          "return_type" : "void",
+          "parameters" : "String, Consumer<Object>",
+          "swum_summary" : "This method adds using 2 parameters as part of the Singleton pattern.",
+          "swum_actions" : "add",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE add (OBJECT Singleton Callback))"
+        },
+        "getSingleton" : {
+          "method_name" : "getSingleton",
+          "return_type" : "Object",
+          "parameters" : "String, ObjectFactory<?>",
+          "swum_summary" : "This method retrieves using 2 parameters and returns an object as part of the Singleton pattern.",
+          "swum_actions" : "get",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Singleton))"
+        },
+        "checkDependentWaitingThreads" : {
+          "method_name" : "checkDependentWaitingThreads",
+          "return_type" : "boolean",
+          "parameters" : "Thread, Thread",
+          "swum_summary" : "This method checks using 2 parameters and returns a boolean as part of the Singleton pattern.",
+          "swum_actions" : "check",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE check (OBJECT Dependent Waiting Threads))"
+        },
+        "isCurrentThreadAllowedToHoldSingletonLock" : {
+          "method_name" : "isCurrentThreadAllowedToHoldSingletonLock",
+          "return_type" : "Boolean",
+          "parameters" : "",
+          "swum_summary" : "This method performs and returns a boolean as part of the Singleton pattern.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE is Current Thread Allowed To Hold Singleton Lock)"
+        },
+        "onSuppressedException" : {
+          "method_name" : "onSuppressedException",
+          "return_type" : "void",
+          "parameters" : "Exception",
+          "swum_summary" : "This method performs using a parameter as part of the Singleton pattern.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE on Suppressed Exception)"
+        },
+        "removeSingleton" : {
+          "method_name" : "removeSingleton",
+          "return_type" : "void",
+          "parameters" : "String",
+          "swum_summary" : "This method removes using a parameter as part of the Singleton pattern.",
+          "swum_actions" : "remove",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE remove (OBJECT Singleton))"
+        },
+        "containsSingleton" : {
+          "method_name" : "containsSingleton",
+          "return_type" : "boolean",
+          "parameters" : "String",
+          "swum_summary" : "This method performs using a parameter and returns a boolean as part of the Singleton pattern.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE contains Singleton)"
+        },
+        "getSingletonNames" : {
+          "method_name" : "getSingletonNames",
+          "return_type" : "String[]",
+          "parameters" : "",
+          "swum_summary" : "This method retrieves and returns a String as part of the Singleton pattern.",
+          "swum_actions" : "get",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Singleton Names))"
+        },
+        "getSingletonCount" : {
+          "method_name" : "getSingletonCount",
+          "return_type" : "int",
+          "parameters" : "",
+          "swum_summary" : "This method retrieves and returns a number as part of the Singleton pattern.",
+          "swum_actions" : "get",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Singleton Count))"
+        },
+        "setCurrentlyInCreation" : {
+          "method_name" : "setCurrentlyInCreation",
+          "return_type" : "void",
+          "parameters" : "String, boolean",
+          "swum_summary" : "This method sets using 2 parameters as part of the Singleton pattern.",
+          "swum_actions" : "set",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE set (OBJECT Currently In Creation))"
+        },
+        "isCurrentlyInCreation" : {
+          "method_name" : "isCurrentlyInCreation",
+          "return_type" : "boolean",
+          "parameters" : "String",
+          "swum_summary" : "This method performs using a parameter and returns a boolean as part of the Singleton pattern.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE is Currently In Creation)"
+        },
+        "isActuallyInCreation" : {
+          "method_name" : "isActuallyInCreation",
+          "return_type" : "boolean",
+          "parameters" : "String",
+          "swum_summary" : "This method performs using a parameter and returns a boolean as part of the Singleton pattern.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE is Actually In Creation)"
+        },
+        "isSingletonCurrentlyInCreation" : {
+          "method_name" : "isSingletonCurrentlyInCreation",
+          "return_type" : "boolean",
+          "parameters" : "@Nullable",
+          "swum_summary" : "This method performs using a parameter and returns a boolean as part of the Singleton pattern.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE is Singleton Currently In Creation)"
+        },
+        "beforeSingletonCreation" : {
+          "method_name" : "beforeSingletonCreation",
+          "return_type" : "void",
+          "parameters" : "String",
+          "swum_summary" : "This method performs using a parameter as part of the Singleton pattern.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE before Singleton Creation)"
+        },
+        "afterSingletonCreation" : {
+          "method_name" : "afterSingletonCreation",
+          "return_type" : "void",
+          "parameters" : "String",
+          "swum_summary" : "This method performs using a parameter as part of the Singleton pattern.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE after Singleton Creation)"
+        },
+        "registerDisposableBean" : {
+          "method_name" : "registerDisposableBean",
+          "return_type" : "void",
+          "parameters" : "String, DisposableBean",
+          "swum_summary" : "This method registers using 2 parameters as part of the Singleton pattern.",
+          "swum_actions" : "register",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE register (OBJECT Disposable Bean))"
+        },
+        "registerContainedBean" : {
+          "method_name" : "registerContainedBean",
+          "return_type" : "void",
+          "parameters" : "String, String",
+          "swum_summary" : "This method registers using 2 parameters as part of the Singleton pattern.",
+          "swum_actions" : "register",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE register (OBJECT Contained Bean))"
+        },
+        "registerDependentBean" : {
+          "method_name" : "registerDependentBean",
+          "return_type" : "void",
+          "parameters" : "String, String",
+          "swum_summary" : "This method registers using 2 parameters as part of the Singleton pattern.",
+          "swum_actions" : "register",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE register (OBJECT Dependent Bean))"
+        },
+        "isDependent" : {
+          "method_name" : "isDependent",
+          "return_type" : "boolean",
+          "parameters" : "String, String, @Nullable",
+          "swum_summary" : "This method performs using 3 parameters and returns a boolean as part of the Singleton pattern.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE is Dependent)"
+        },
+        "hasDependentBean" : {
+          "method_name" : "hasDependentBean",
+          "return_type" : "boolean",
+          "parameters" : "String",
+          "swum_summary" : "This method performs using a parameter and returns a boolean as part of the Singleton pattern.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE has Dependent Bean)"
+        },
+        "getDependentBeans" : {
+          "method_name" : "getDependentBeans",
+          "return_type" : "String[]",
+          "parameters" : "String",
+          "swum_summary" : "This method retrieves using a parameter and returns a String as part of the Singleton pattern.",
+          "swum_actions" : "get",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Dependent Beans))"
+        },
+        "getDependenciesForBean" : {
+          "method_name" : "getDependenciesForBean",
+          "return_type" : "String[]",
+          "parameters" : "String",
+          "swum_summary" : "This method retrieves using a parameter and returns a String as part of the Singleton pattern.",
+          "swum_actions" : "get",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Dependencies For Bean))"
+        },
+        "destroySingletons" : {
+          "method_name" : "destroySingletons",
+          "return_type" : "void",
+          "parameters" : "",
+          "swum_summary" : "This method performs as part of the Singleton pattern.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE destroy Singletons)"
+        },
+        "clearSingletonCache" : {
+          "method_name" : "clearSingletonCache",
+          "return_type" : "void",
+          "parameters" : "",
+          "swum_summary" : "This method clears as part of the Singleton pattern.",
+          "swum_actions" : "clear",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE clear (OBJECT Singleton Cache))"
+        },
+        "destroySingleton" : {
+          "method_name" : "destroySingleton",
+          "return_type" : "void",
+          "parameters" : "String",
+          "swum_summary" : "This method performs using a parameter as part of the Singleton pattern.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE destroy Singleton)"
+        },
+        "destroyBean" : {
+          "method_name" : "destroyBean",
+          "return_type" : "void",
+          "parameters" : "String, @Nullable",
+          "swum_summary" : "This method performs using 2 parameters as part of the Singleton pattern.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE destroy Bean)"
+        },
+        "getSingletonMutex" : {
+          "method_name" : "getSingletonMutex",
+          "return_type" : "Object",
+          "parameters" : "",
+          "swum_summary" : "This method retrieves and returns an object as part of the Singleton pattern.",
+          "swum_actions" : "get",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Singleton Mutex))"
+        }
+      },
+      "swum_class_summary" : "The DefaultSingletonBeanRegistry class is part of the Singleton pattern provides 19 methods including retrieval, registration and lifecycle, creation and other operations."
+    },
+    "SingletonSupplier" : {
+      "class_name" : "SingletonSupplier",
+      "class_type" : "class",
+      "method_summaries" : {
+        "get" : {
+          "method_name" : "get",
+          "return_type" : "T",
+          "parameters" : "",
+          "swum_summary" : "This method retrieves and returns an object as part of the Singleton pattern.",
+          "swum_actions" : "get",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE get)"
+        },
+        "obtain" : {
+          "method_name" : "obtain",
+          "return_type" : "T",
+          "parameters" : "",
+          "swum_summary" : "This method obtains and returns an object as part of the Singleton pattern.",
+          "swum_actions" : "obtain",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE obtain)"
+        },
+        "of" : {
+          "method_name" : "of",
+          "return_type" : "SingletonSupplier<T>",
+          "parameters" : "Supplier<T>",
+          "swum_summary" : "This method performs using a parameter and returns an object as part of the Singleton pattern.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE of)"
+        },
+        "ofNullable" : {
+          "method_name" : "ofNullable",
+          "return_type" : "SingletonSupplier<T>",
+          "parameters" : "@Nullable",
+          "swum_summary" : "This method performs using a parameter and returns an object as part of the Singleton pattern.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE of Nullable)"
+        }
+      },
+      "swum_class_summary" : "The SingletonSupplier class is part of the Singleton pattern and provides methods to get, obtain."
+    },
+    "SingletonBeanRegistry" : {
+      "class_name" : "SingletonBeanRegistry",
+      "class_type" : "interface",
+      "method_summaries" : {
+        "registerSingleton" : {
+          "method_name" : "registerSingleton",
+          "return_type" : "void",
+          "parameters" : "String, Object",
+          "swum_summary" : "This method registers using 2 parameters as part of the Singleton pattern.",
+          "swum_actions" : "register",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE register (OBJECT Singleton))"
+        },
+        "addSingletonCallback" : {
+          "method_name" : "addSingletonCallback",
+          "return_type" : "void",
+          "parameters" : "String, Consumer<Object>",
+          "swum_summary" : "This method adds using 2 parameters as part of the Singleton pattern.",
+          "swum_actions" : "add",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE add (OBJECT Singleton Callback))"
+        },
+        "getSingleton" : {
+          "method_name" : "getSingleton",
+          "return_type" : "Object",
+          "parameters" : "String",
+          "swum_summary" : "This method retrieves using a parameter and returns an object as part of the Singleton pattern.",
+          "swum_actions" : "get",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Singleton))"
+        },
+        "containsSingleton" : {
+          "method_name" : "containsSingleton",
+          "return_type" : "boolean",
+          "parameters" : "String",
+          "swum_summary" : "This method performs using a parameter and returns a boolean as part of the Singleton pattern.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE contains Singleton)"
+        },
+        "getSingletonNames" : {
+          "method_name" : "getSingletonNames",
+          "return_type" : "String[]",
+          "parameters" : "",
+          "swum_summary" : "This method retrieves and returns a String as part of the Singleton pattern.",
+          "swum_actions" : "get",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Singleton Names))"
+        },
+        "getSingletonCount" : {
+          "method_name" : "getSingletonCount",
+          "return_type" : "int",
+          "parameters" : "",
+          "swum_summary" : "This method retrieves and returns a number as part of the Singleton pattern.",
+          "swum_actions" : "get",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Singleton Count))"
+        },
+        "getSingletonMutex" : {
+          "method_name" : "getSingletonMutex",
+          "return_type" : "Object",
+          "parameters" : "",
+          "swum_summary" : "This method retrieves and returns an object as part of the Singleton pattern.",
+          "swum_actions" : "get",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Singleton Mutex))"
+        }
+      },
+      "swum_class_summary" : "The SingletonBeanRegistry class is part of the Singleton pattern and provides methods to register, add, get, get, get, get."
+    }
+  },
+  "swum_project_summary" : "This software project contains 4 classes with 42 methods. Primary operations include add, check, clear, get, obtain.",
+  "swum_design_pattern" : [ ]
+}

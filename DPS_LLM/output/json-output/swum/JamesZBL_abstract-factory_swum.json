@@ -1,0 +1,352 @@
+{
+  "project_name" : "JamesZBL/abstract-factory",
+  "swum_version" : "1.0",
+  "generated_timestamp" : 1780917880819,
+  "class_summaries" : {
+    "YoungSailor" : {
+      "class_name" : "YoungSailor",
+      "class_type" : "class",
+      "method_summaries" : {
+        "getDescription" : {
+          "method_name" : "getDescription",
+          "return_type" : "String",
+          "parameters" : "",
+          "swum_summary" : "This method retrieves and returns a String. The YoungSailor class acts as a concrete observer in the observer pattern and acts as an abstract product in the abstract_factory pattern.",
+          "swum_actions" : "get",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Description))"
+        }
+      },
+      "swum_class_summary" : "The YoungSailor class acts as a concrete observer in the observer pattern and acts as an abstract product in the abstract_factory pattern and provides methods to get."
+    },
+    "OldShip" : {
+      "class_name" : "OldShip",
+      "class_type" : "class",
+      "method_summaries" : {
+        "getDescription" : {
+          "method_name" : "getDescription",
+          "return_type" : "String",
+          "parameters" : "",
+          "swum_summary" : "This method retrieves and returns a String. The OldShip class acts as a concrete observer in the observer pattern and acts as an abstract product in the abstract_factory pattern.",
+          "swum_actions" : "get",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Description))"
+        }
+      },
+      "swum_class_summary" : "The OldShip class acts as a concrete observer in the observer pattern and acts as an abstract product in the abstract_factory pattern and provides methods to get."
+    },
+    "YoungTeamFactory" : {
+      "class_name" : "YoungTeamFactory",
+      "class_type" : "class",
+      "method_summaries" : {
+        "createShip" : {
+          "method_name" : "createShip",
+          "return_type" : "Ship",
+          "parameters" : "",
+          "swum_summary" : "This method creates and returns an object as part of the Factory pattern.",
+          "swum_actions" : "create",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE create (OBJECT Ship))"
+        },
+        "createCaptain" : {
+          "method_name" : "createCaptain",
+          "return_type" : "Captain",
+          "parameters" : "",
+          "swum_summary" : "This method creates and returns an object as part of the Factory pattern.",
+          "swum_actions" : "create",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE create (OBJECT Captain))"
+        },
+        "createSailor" : {
+          "method_name" : "createSailor",
+          "return_type" : "Sailor",
+          "parameters" : "",
+          "swum_summary" : "This method creates and returns an object as part of the Factory pattern.",
+          "swum_actions" : "create",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE create (OBJECT Sailor))"
+        }
+      },
+      "swum_class_summary" : "The YoungTeamFactory class is part of the Factory pattern and provides methods to create, create, create."
+    },
+    "YoungCaptain" : {
+      "class_name" : "YoungCaptain",
+      "class_type" : "class",
+      "method_summaries" : {
+        "getDescription" : {
+          "method_name" : "getDescription",
+          "return_type" : "String",
+          "parameters" : "",
+          "swum_summary" : "This method retrieves and returns a String. The YoungCaptain class acts as a concrete observer in the observer pattern and acts as an abstract product in the abstract_factory pattern.",
+          "swum_actions" : "get",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Description))"
+        }
+      },
+      "swum_class_summary" : "The YoungCaptain class acts as a concrete observer in the observer pattern and acts as an abstract product in the abstract_factory pattern and provides methods to get."
+    },
+    "Captain" : {
+      "class_name" : "Captain",
+      "class_type" : "interface",
+      "method_summaries" : { },
+      "swum_class_summary" : "The Captain class acts as a publisher in the observer pattern and acts as an abstract product in the abstract_factory pattern."
+    },
+    "OldSailor" : {
+      "class_name" : "OldSailor",
+      "class_type" : "class",
+      "method_summaries" : {
+        "getDescription" : {
+          "method_name" : "getDescription",
+          "return_type" : "String",
+          "parameters" : "",
+          "swum_summary" : "This method retrieves and returns a String. The OldSailor class acts as a concrete observer in the observer pattern and acts as an abstract product in the abstract_factory pattern.",
+          "swum_actions" : "get",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Description))"
+        }
+      },
+      "swum_class_summary" : "The OldSailor class acts as a concrete observer in the observer pattern and acts as an abstract product in the abstract_factory pattern and provides methods to get."
+    },
+    "NewShip" : {
+      "class_name" : "NewShip",
+      "class_type" : "class",
+      "method_summaries" : {
+        "getDescription" : {
+          "method_name" : "getDescription",
+          "return_type" : "String",
+          "parameters" : "",
+          "swum_summary" : "This method retrieves and returns a String. The NewShip class acts as a concrete observer in the observer pattern and acts as an abstract product in the abstract_factory pattern.",
+          "swum_actions" : "get",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Description))"
+        }
+      },
+      "swum_class_summary" : "The NewShip class acts as a concrete observer in the observer pattern and acts as an abstract product in the abstract_factory pattern and provides methods to get."
+    },
+    "PermanentTeamFactory" : {
+      "class_name" : "PermanentTeamFactory",
+      "class_type" : "class",
+      "method_summaries" : {
+        "createShip" : {
+          "method_name" : "createShip",
+          "return_type" : "Ship",
+          "parameters" : "",
+          "swum_summary" : "This method creates and returns an object as part of the Factory pattern.",
+          "swum_actions" : "create",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE create (OBJECT Ship))"
+        },
+        "createCaptain" : {
+          "method_name" : "createCaptain",
+          "return_type" : "Captain",
+          "parameters" : "",
+          "swum_summary" : "This method creates and returns an object as part of the Factory pattern.",
+          "swum_actions" : "create",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE create (OBJECT Captain))"
+        },
+        "createSailor" : {
+          "method_name" : "createSailor",
+          "return_type" : "Sailor",
+          "parameters" : "",
+          "swum_summary" : "This method creates and returns an object as part of the Factory pattern.",
+          "swum_actions" : "create",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE create (OBJECT Sailor))"
+        }
+      },
+      "swum_class_summary" : "The PermanentTeamFactory class is part of the Factory pattern and provides methods to create, create, create."
+    },
+    "OldCaptain" : {
+      "class_name" : "OldCaptain",
+      "class_type" : "class",
+      "method_summaries" : {
+        "getDescription" : {
+          "method_name" : "getDescription",
+          "return_type" : "String",
+          "parameters" : "",
+          "swum_summary" : "This method retrieves and returns a String. The OldCaptain class acts as a concrete observer in the observer pattern and acts as an abstract product in the abstract_factory pattern.",
+          "swum_actions" : "get",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Description))"
+        }
+      },
+      "swum_class_summary" : "The OldCaptain class acts as a concrete observer in the observer pattern and acts as an abstract product in the abstract_factory pattern and provides methods to get."
+    },
+    "Ship" : {
+      "class_name" : "Ship",
+      "class_type" : "interface",
+      "method_summaries" : { },
+      "swum_class_summary" : "The Ship class acts as a publisher in the observer pattern and acts as an abstract product in the abstract_factory pattern."
+    },
+    "TeamFactory" : {
+      "class_name" : "TeamFactory",
+      "class_type" : "interface",
+      "method_summaries" : {
+        "createShip" : {
+          "method_name" : "createShip",
+          "return_type" : "Ship",
+          "parameters" : "",
+          "swum_summary" : "This method creates product objects as part of the abstract_factory pattern.",
+          "swum_actions" : "create",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE create (OBJECT Ship))"
+        },
+        "createCaptain" : {
+          "method_name" : "createCaptain",
+          "return_type" : "Captain",
+          "parameters" : "",
+          "swum_summary" : "This method creates product objects as part of the abstract_factory pattern.",
+          "swum_actions" : "create",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE create (OBJECT Captain))"
+        },
+        "createSailor" : {
+          "method_name" : "createSailor",
+          "return_type" : "Sailor",
+          "parameters" : "",
+          "swum_summary" : "This method creates product objects as part of the abstract_factory pattern.",
+          "swum_actions" : "create",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE create (OBJECT Sailor))"
+        }
+      },
+      "swum_class_summary" : "The TeamFactory class acts as a factory in the abstract_factory pattern and provides methods to create, create, create."
+    },
+    "Member" : {
+      "class_name" : "Member",
+      "class_type" : "interface",
+      "method_summaries" : {
+        "getDescription" : {
+          "method_name" : "getDescription",
+          "return_type" : "String",
+          "parameters" : "",
+          "swum_summary" : "This method retrieves and returns a String.",
+          "swum_actions" : "get",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Description))"
+        }
+      },
+      "swum_class_summary" : "The Member class provides methods to get."
+    },
+    "Application" : {
+      "class_name" : "Application",
+      "class_type" : "class",
+      "method_summaries" : {
+        "createTeam" : {
+          "method_name" : "createTeam",
+          "return_type" : "void",
+          "parameters" : "final",
+          "swum_summary" : "This method creates using a parameter. The Application class acts as a publisher in the observer pattern.",
+          "swum_actions" : "create",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE create (OBJECT Team))"
+        },
+        "main" : {
+          "method_name" : "main",
+          "return_type" : "void",
+          "parameters" : "String[]",
+          "swum_summary" : "This method performs using a parameter. The Application class acts as a publisher in the observer pattern.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE main)"
+        },
+        "getmShip" : {
+          "method_name" : "getmShip",
+          "return_type" : "Ship",
+          "parameters" : "",
+          "swum_summary" : "This method performs and returns an object. The Application class acts as a publisher in the observer pattern.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE getm Ship)"
+        },
+        "setmShip" : {
+          "method_name" : "setmShip",
+          "return_type" : "void",
+          "parameters" : "Ship",
+          "swum_summary" : "This method performs using a parameter. The Application class acts as a publisher in the observer pattern.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE setm Ship)"
+        },
+        "getmCaptain" : {
+          "method_name" : "getmCaptain",
+          "return_type" : "Captain",
+          "parameters" : "",
+          "swum_summary" : "This method performs and returns an object. The Application class acts as a publisher in the observer pattern.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE getm Captain)"
+        },
+        "setmCaptain" : {
+          "method_name" : "setmCaptain",
+          "return_type" : "void",
+          "parameters" : "Captain",
+          "swum_summary" : "This method performs using a parameter. The Application class acts as a publisher in the observer pattern.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE setm Captain)"
+        },
+        "getmSailor" : {
+          "method_name" : "getmSailor",
+          "return_type" : "Sailor",
+          "parameters" : "",
+          "swum_summary" : "This method performs and returns an object. The Application class acts as a publisher in the observer pattern.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE getm Sailor)"
+        },
+        "setmSailor" : {
+          "method_name" : "setmSailor",
+          "return_type" : "void",
+          "parameters" : "Sailor",
+          "swum_summary" : "This method performs using a parameter. The Application class acts as a publisher in the observer pattern.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE setm Sailor)"
+        }
+      },
+      "swum_class_summary" : "The Application class acts as a publisher in the observer pattern and provides methods to create."
+    },
+    "Sailor" : {
+      "class_name" : "Sailor",
+      "class_type" : "interface",
+      "method_summaries" : { },
+      "swum_class_summary" : "The Sailor class acts as a publisher in the observer pattern and acts as an abstract product in the abstract_factory pattern."
+    }
+  },
+  "swum_project_summary" : "This software project contains 14 classes with 24 methods. The system implements multiple design patterns including observer, abstract_factory. Primary operations include create, get.",
+  "swum_design_pattern" : [ {
+    "abstract_factory" : {
+      "TeamFactory" : {
+        "abstract_product" : {
+          "Ship" : [ "OldShip", "NewShip" ],
+          "Captain" : [ "YoungCaptain", "OldCaptain" ],
+          "Sailor" : [ "YoungSailor", "OldSailor" ]
+        },
+        "concrete_factory" : [ "YoungTeamFactory", "PermanentTeamFactory" ]
+      }
+    }
+  }, {
+    "observer" : {
+      "Ship" : {
+        "concrete_observer" : [ "OldShip", "NewShip" ],
+        "publisher" : {
+          "Application" : [ ]
+        }
+      },
+      "Captain" : {
+        "concrete_observer" : [ "YoungCaptain", "OldCaptain" ],
+        "publisher" : {
+          "Application" : [ ]
+        }
+      },
+      "Sailor" : {
+        "concrete_observer" : [ "YoungSailor", "OldSailor" ],
+        "publisher" : {
+          "Application" : [ ]
+        }
+      }
+    }
+  } ]
+}

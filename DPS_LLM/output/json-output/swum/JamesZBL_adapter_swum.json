@@ -1,0 +1,107 @@
+{
+  "project_name" : "JamesZBL/adapter",
+  "swum_version" : "1.0",
+  "generated_timestamp" : 1780917880826,
+  "class_summaries" : {
+    "Bus" : {
+      "class_name" : "Bus",
+      "class_type" : "class",
+      "method_summaries" : {
+        "run" : {
+          "method_name" : "run",
+          "return_type" : "void",
+          "parameters" : "",
+          "swum_summary" : "This method runs. The Bus class acts as an adaptee in the adapter pattern.",
+          "swum_actions" : "run",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE run)"
+        }
+      },
+      "swum_class_summary" : "The Bus class acts as an adaptee in the adapter pattern and provides methods to run."
+    },
+    "Car" : {
+      "class_name" : "Car",
+      "class_type" : "interface",
+      "method_summaries" : {
+        "drive" : {
+          "method_name" : "drive",
+          "return_type" : "void",
+          "parameters" : "",
+          "swum_summary" : "This method performs. The Car class acts as a component in the decorator pattern and acts as a target in the adapter pattern.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE drive)"
+        }
+      },
+      "swum_class_summary" : "The Car class acts as a component in the decorator pattern and acts as a target in the adapter pattern."
+    },
+    "Driver" : {
+      "class_name" : "Driver",
+      "class_type" : "class",
+      "method_summaries" : {
+        "drive" : {
+          "method_name" : "drive",
+          "return_type" : "void",
+          "parameters" : "",
+          "swum_summary" : "This method performs. The Driver class acts as a decorator in the decorator pattern.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE drive)"
+        }
+      },
+      "swum_class_summary" : "The Driver class acts as a decorator in the decorator pattern."
+    },
+    "BusAdapter" : {
+      "class_name" : "BusAdapter",
+      "class_type" : "class",
+      "method_summaries" : {
+        "drive" : {
+          "method_name" : "drive",
+          "return_type" : "void",
+          "parameters" : "",
+          "swum_summary" : "This method performs. The BusAdapter class acts as a concrete component in the decorator pattern and acts as an adapter in the adapter pattern.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE drive)"
+        }
+      },
+      "swum_class_summary" : "The BusAdapter class acts as a concrete component in the decorator pattern and acts as an adapter in the adapter pattern."
+    },
+    "Application" : {
+      "class_name" : "Application",
+      "class_type" : "class",
+      "method_summaries" : {
+        "main" : {
+          "method_name" : "main",
+          "return_type" : "void",
+          "parameters" : "String[]",
+          "swum_summary" : "This method performs using a parameter.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE main)"
+        }
+      },
+      "swum_class_summary" : "The Application class."
+    }
+  },
+  "swum_project_summary" : "This software project contains 5 classes with 5 methods. The system implements multiple design patterns including decorator, adapter. Primary operations include run.",
+  "swum_design_pattern" : [ {
+    "adapter" : {
+      "BusAdapter" : {
+        "adaptee" : [ "Bus" ],
+        "target" : [ "Car" ]
+      }
+    }
+  }, {
+    "decorator" : {
+      "Driver" : {
+        "component" : {
+          "Car" : {
+            "concrete_component" : [ "BusAdapter" ]
+          }
+        },
+        "concrete_decorator" : [ ]
+      }
+    }
+  } ]
+}

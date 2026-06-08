@@ -1,0 +1,732 @@
+{
+	"final_summary" : "YoungSailor.java: observer: YoungSailor acts as an observer, which gets Description. It is a public class that implements Sailor. The only method of YoungSailor is getDescription (String). No methods call getDescription and getDescription calls no methods.\n\n abstract_factory: YoungSailor acts as a product for TeamFactory, which overrides. It is a public class that implements Sailor. The only method of YoungSailor is getDescription (String). No methods call getDescription and getDescription calls no methods.\n\n\nOldShip.java: observer: OldShip acts as an observer, which gets Description. It is a public class that implements Ship. The only method of OldShip is getDescription (String). No methods call getDescription and getDescription calls no methods.\n\n abstract_factory: OldShip acts as a product for TeamFactory, which overrides. It is a public class that implements Ship. The only method of OldShip is getDescription (String). No methods call getDescription and getDescription calls no methods.\n\n\nYoungTeamFactory.java: abstract_factory: YoungTeamFactory acts as a factory for TeamFactory, which overrides. It is a public class that extends TeamFactory and that implements TeamFactory. The 3 methods of YoungTeamFactory are createShip (Ship), createCaptain (Captain) and createSailor (Sailor). No methods call createShip and createShip calls no methods. No methods call createCaptain and createCaptain calls no methods. No methods call createSailor and createSailor calls no methods.\n\n\nYoungCaptain.java: observer: YoungCaptain acts as an observer, which gets Description. It is a public class that implements Captain. The only method of YoungCaptain is getDescription (String). No methods call getDescription and getDescription calls no methods.\n\n abstract_factory: YoungCaptain acts as a product for TeamFactory, which overrides. It is a public class that implements Captain. The only method of YoungCaptain is getDescription (String). No methods call getDescription and getDescription calls no methods.\n\n\nCaptain.java: observer: Captain acts as an observer for publisher Application, which is inherited by YoungCaptain, OldCaptain. It is a public interface that extends Member. abstract_factory: Captain acts as an abstract product for Captain, which is inherited by YoungCaptain, OldCaptain. It is a public interface that extends Member.\nOldSailor.java: observer: OldSailor acts as an observer, which gets Description. It is a public class that implements Sailor. The only method of OldSailor is getDescription (String). No methods call getDescription and getDescription calls no methods.\n\n abstract_factory: OldSailor acts as a product for TeamFactory, which overrides. It is a public class that implements Sailor. The only method of OldSailor is getDescription (String). No methods call getDescription and getDescription calls no methods.\n\n\nNewShip.java: observer: NewShip acts as an observer, which gets Description. It is a public class that implements Ship. The only method of NewShip is getDescription (String). No methods call getDescription and getDescription calls no methods.\n\n abstract_factory: NewShip acts as a product for TeamFactory, which overrides. It is a public class that implements Ship. The only method of NewShip is getDescription (String). No methods call getDescription and getDescription calls no methods.\n\n\nPermanentTeamFactory.java: abstract_factory: PermanentTeamFactory acts as a factory for TeamFactory, which overrides. It is a public class that extends TeamFactory and that implements TeamFactory. The 3 methods of PermanentTeamFactory are createShip (Ship), createCaptain (Captain) and createSailor (Sailor). No methods call createShip and createShip calls no methods. No methods call createCaptain and createCaptain calls no methods. No methods call createSailor and createSailor calls no methods.\n\n\nOldCaptain.java: observer: OldCaptain acts as an observer, which gets Description. It is a public class that implements Captain. The only method of OldCaptain is getDescription (String). No methods call getDescription and getDescription calls no methods.\n\n abstract_factory: OldCaptain acts as a product for TeamFactory, which overrides. It is a public class that implements Captain. The only method of OldCaptain is getDescription (String). No methods call getDescription and getDescription calls no methods.\n\n\nShip.java: observer: Ship acts as an observer for publisher Application, which is inherited by OldShip, NewShip. It is a public interface that extends Member. abstract_factory: Ship acts as an abstract product for Ship, which is inherited by OldShip, NewShip. It is a public interface that extends Member.\nTeamFactory.java: abstract_factory: TeamFactory acts as an abstract factory for Ship, Captain, Sailor, which is inherited by YoungTeamFactory, PermanentTeamFactory. It is a public interface. The 3 methods of TeamFactory are createShip (Ship), createCaptain (Captain) and createSailor (Sailor). No methods call createShip and createShip calls no methods. No methods call createCaptain and createCaptain calls no methods. No methods call createSailor and createSailor calls no methods.\n\n\nMember.java: It is a public interface. The only method of Member is getDescription (String). No methods call getDescription and getDescription calls no methods.\n\n\nApplication.java: observer: Application acts as a publisher for observer Ship, which is inherited by, which creates final parameter of TeamFactory Team, which mains String[] parameter of args, which getms Ship, which setms Ship parameter of mShip Ship, which getms Captain, which setms Captain parameter of mCaptain Captain, which getms Sailor, which setms Sailor parameter of mSailor Sailor. Application acts as a publisher for observer Sailor, which is inherited by, which creates final parameter of TeamFactory Team, which mains String[] parameter of args, which getms Ship, which setms Ship parameter of mShip Ship, which getms Captain, which setms Captain parameter of mCaptain Captain, which getms Sailor, which setms Sailor parameter of mSailor Sailor. Application acts as a publisher for observer Captain, which is inherited by, which creates final parameter of TeamFactory Team, which mains String[] parameter of args, which getms Ship, which setms Ship parameter of mShip Ship, which getms Captain, which setms Captain parameter of mCaptain Captain, which getms Sailor, which setms Sailor parameter of mSailor Sailor. It is a public class. The 8 methods of Application are createTeam (void), main (void), getmShip (Ship), setmShip (void), getmCaptain (Captain), setmCaptain (void), getmSailor (Sailor) and setmSailor (void). No methods call createTeam and createTeam calls no methods. No methods call main and main calls 3 methods : getmCaptain method of class Application, getmSailor method of class Application and getmShip method of class Application. Only one method ( main method of class Application ) calls getmShip and getmShip calls no methods. No methods call setmShip and setmShip calls no methods. Only one method ( main method of class Application ) calls getmCaptain and getmCaptain calls no methods. No methods call setmCaptain and setmCaptain calls no methods. Only one method ( main method of class Application ) calls getmSailor and getmSailor calls no methods. No methods call setmSailor and setmSailor calls no methods.\n\n\nSailor.java: observer: Sailor acts as an observer for publisher Application, which is inherited by YoungSailor, OldSailor. It is a public interface that extends Member. abstract_factory: Sailor acts as an abstract product for Sailor, which is inherited by YoungSailor, OldSailor. It is a public interface that extends Member.\n",
+	"design_pattern" : [ {
+		"abstract_factory" : {
+			"TeamFactory" : {
+				"abstract_product" : {
+					"Ship" : [ "OldShip", "NewShip" ],
+					"Captain" : [ "YoungCaptain", "OldCaptain" ],
+					"Sailor" : [ "YoungSailor", "OldSailor" ]
+				},
+				"concrete_factory" : [ "YoungTeamFactory", "PermanentTeamFactory" ]
+			}
+		}
+	}, {
+		"observer" : {
+			"Ship" : {
+				"concrete_observer" : [ "OldShip", "NewShip" ],
+				"publisher" : {
+					"Application" : [ ]
+				}
+			},
+			"Captain" : {
+				"concrete_observer" : [ "YoungCaptain", "OldCaptain" ],
+				"publisher" : {
+					"Application" : [ ]
+				}
+			},
+			"Sailor" : {
+				"concrete_observer" : [ "YoungSailor", "OldSailor" ],
+				"publisher" : {
+					"Application" : [ ]
+				}
+			}
+		}
+	} ],
+	"JamesZBL/abstract-factory" : {
+		"YoungSailor" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "String",
+				"FIELDMODIFIERTYPE" : [ "static", "final" ],
+				"FIELDDECLARATION" : [ "DESCRIPTION = \"我是年轻的水手\"" ],
+				"FIELDDATATYPE" : "String",
+				"FIELDACCESSSPECIFIER" : "NONE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ "Sailor" ],
+				"CLASSNAME" : "YoungSailor",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getDescription",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"OldShip" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "String",
+				"FIELDMODIFIERTYPE" : [ "static", "final" ],
+				"FIELDDECLARATION" : [ "DESCRIPTION = \"我是一艘破旧的船\"" ],
+				"FIELDDATATYPE" : "String",
+				"FIELDACCESSSPECIFIER" : "NONE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ "Ship" ],
+				"CLASSNAME" : "OldShip",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getDescription",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"YoungTeamFactory" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ "TeamFactory" ],
+				"IMPLEMENTSFROM" : [ "TeamFactory" ],
+				"CLASSNAME" : "YoungTeamFactory",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "createShip",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "Ship",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "createCaptain",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "Captain",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "createSailor",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "Sailor",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"YoungCaptain" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "String",
+				"FIELDMODIFIERTYPE" : [ "static", "final" ],
+				"FIELDDECLARATION" : [ "DESCRIPTION = \"我是一名年轻的船长\"" ],
+				"FIELDDATATYPE" : "String",
+				"FIELDACCESSSPECIFIER" : "NONE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ "Captain" ],
+				"CLASSNAME" : "YoungCaptain",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getDescription",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"Captain" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ "Member" ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Captain",
+				"ISINTERFACEORNOT" : true,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ ]
+		},
+		"OldSailor" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "String",
+				"FIELDMODIFIERTYPE" : [ "static", "final" ],
+				"FIELDDECLARATION" : [ "DESCRIPTION = \"我是一名老水手\"" ],
+				"FIELDDATATYPE" : "String",
+				"FIELDACCESSSPECIFIER" : "NONE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ "Sailor" ],
+				"CLASSNAME" : "OldSailor",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getDescription",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"NewShip" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "String",
+				"FIELDMODIFIERTYPE" : [ "static", "final" ],
+				"FIELDDECLARATION" : [ "DESCRIPTION = \"我是一艘崭新的船\"" ],
+				"FIELDDATATYPE" : "String",
+				"FIELDACCESSSPECIFIER" : "NONE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ "Ship" ],
+				"CLASSNAME" : "NewShip",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getDescription",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"PermanentTeamFactory" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ "TeamFactory" ],
+				"IMPLEMENTSFROM" : [ "TeamFactory" ],
+				"CLASSNAME" : "PermanentTeamFactory",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "createShip",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "Ship",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "createCaptain",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "Captain",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "createSailor",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "Sailor",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"OldCaptain" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "String",
+				"FIELDMODIFIERTYPE" : [ "static", "final" ],
+				"FIELDDECLARATION" : [ "DESCRIPTION = \"我是一名老船长\"" ],
+				"FIELDDATATYPE" : "String",
+				"FIELDACCESSSPECIFIER" : "NONE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ "Captain" ],
+				"CLASSNAME" : "OldCaptain",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getDescription",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"Ship" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ "Member" ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Ship",
+				"ISINTERFACEORNOT" : true,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ ]
+		},
+		"TeamFactory" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "TeamFactory",
+				"ISINTERFACEORNOT" : true,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "createShip",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "Ship",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "createCaptain",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "Captain",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "createSailor",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "Sailor",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"Member" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Member",
+				"ISINTERFACEORNOT" : true,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getDescription",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"Application" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "Logger",
+				"FIELDMODIFIERTYPE" : [ "private", "static", "final" ],
+				"FIELDDECLARATION" : [ "LOGGER = LoggerFactory.getLogger(Application.class)" ],
+				"FIELDDATATYPE" : "Logger",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "Ship",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "mShip" ],
+				"FIELDDATATYPE" : "Ship",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "Captain",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "mCaptain" ],
+				"FIELDDATATYPE" : "Captain",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "Sailor",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "mSailor" ],
+				"FIELDDATATYPE" : "Sailor",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 29,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Application",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "app = new Application()" ],
+				"VARIABLECOMMONTYPE" : "Application",
+				"VARIABLEELEMENTTYPE" : "Application"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "createTeam",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 6,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 3,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "TeamFactory",
+					"PARAMETERTYPE" : "final"
+				} ]
+			}, {
+				"METHODNAME" : "main",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public", "static" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 1,
+				"NUMBEROFOUTGOINGMETHODS" : 22,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "Application",
+					"CALLEEMETHODNAME" : "getmCaptain"
+				}, {
+					"CALLEECLASS" : "Application",
+					"CALLEEMETHODNAME" : "getmShip"
+				}, {
+					"CALLEECLASS" : "Application",
+					"CALLEEMETHODNAME" : "getmSailor"
+				}, {
+					"CALLEECLASS" : "Application",
+					"CALLEEMETHODNAME" : "getmCaptain"
+				}, {
+					"CALLEECLASS" : "Application",
+					"CALLEEMETHODNAME" : "getmShip"
+				}, {
+					"CALLEECLASS" : "Application",
+					"CALLEEMETHODNAME" : "getmSailor"
+				} ],
+				"NUMBEROFMETHODLINES" : 11,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "args",
+					"PARAMETERTYPE" : "String[]"
+				} ]
+			}, {
+				"METHODNAME" : "getmShip",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "Application"
+				}, {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "Application"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "Ship",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "setmShip",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "mShip",
+					"PARAMETERTYPE" : "Ship"
+				} ]
+			}, {
+				"METHODNAME" : "getmCaptain",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "Application"
+				}, {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "Application"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "Captain",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "setmCaptain",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "mCaptain",
+					"PARAMETERTYPE" : "Captain"
+				} ]
+			}, {
+				"METHODNAME" : "getmSailor",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "Application"
+				}, {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "Application"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "Sailor",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "setmSailor",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "mSailor",
+					"PARAMETERTYPE" : "Sailor"
+				} ]
+			} ]
+		},
+		"Sailor" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ "Member" ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Sailor",
+				"ISINTERFACEORNOT" : true,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ ]
+		}
+	},
+	"summary_NLG" : {
+		"observer" : {
+			"YoungSailor" : [ "YoungSailor acts as an observer, which gets Description." ],
+			"OldShip" : [ "OldShip acts as an observer, which gets Description." ],
+			"YoungCaptain" : [ "YoungCaptain acts as an observer, which gets Description." ],
+			"Ship" : [ "Ship acts as an observer for publisher Application, which is inherited by OldShip, NewShip." ],
+			"OldCaptain" : [ "OldCaptain acts as an observer, which gets Description." ],
+			"Captain" : [ "Captain acts as an observer for publisher Application, which is inherited by YoungCaptain, OldCaptain." ],
+			"Application" : [ "Application acts as a publisher for observer Ship, which is inherited by, which creates final parameter of TeamFactory Team, which mains String[] parameter of args, which getms Ship, which setms Ship parameter of mShip Ship, which getms Captain, which setms Captain parameter of mCaptain Captain, which getms Sailor, which setms Sailor parameter of mSailor Sailor.", "Application acts as a publisher for observer Sailor, which is inherited by, which creates final parameter of TeamFactory Team, which mains String[] parameter of args, which getms Ship, which setms Ship parameter of mShip Ship, which getms Captain, which setms Captain parameter of mCaptain Captain, which getms Sailor, which setms Sailor parameter of mSailor Sailor.", "Application acts as a publisher for observer Captain, which is inherited by, which creates final parameter of TeamFactory Team, which mains String[] parameter of args, which getms Ship, which setms Ship parameter of mShip Ship, which getms Captain, which setms Captain parameter of mCaptain Captain, which getms Sailor, which setms Sailor parameter of mSailor Sailor." ],
+			"OldSailor" : [ "OldSailor acts as an observer, which gets Description." ],
+			"Sailor" : [ "Sailor acts as an observer for publisher Application, which is inherited by YoungSailor, OldSailor." ],
+			"NewShip" : [ "NewShip acts as an observer, which gets Description." ]
+		},
+		"abstract_factory" : {
+			"YoungSailor" : [ "YoungSailor acts as a product for TeamFactory, which overrides." ],
+			"OldShip" : [ "OldShip acts as a product for TeamFactory, which overrides." ],
+			"YoungTeamFactory" : [ "YoungTeamFactory acts as a factory for TeamFactory, which overrides." ],
+			"YoungCaptain" : [ "YoungCaptain acts as a product for TeamFactory, which overrides." ],
+			"PermanentTeamFactory" : [ "PermanentTeamFactory acts as a factory for TeamFactory, which overrides." ],
+			"Ship" : [ "Ship acts as an abstract product for Ship, which is inherited by OldShip, NewShip." ],
+			"OldCaptain" : [ "OldCaptain acts as a product for TeamFactory, which overrides." ],
+			"TeamFactory" : [ "TeamFactory acts as an abstract factory for Ship, Captain, Sailor, which is inherited by YoungTeamFactory, PermanentTeamFactory." ],
+			"Captain" : [ "Captain acts as an abstract product for Captain, which is inherited by YoungCaptain, OldCaptain." ],
+			"OldSailor" : [ "OldSailor acts as a product for TeamFactory, which overrides." ],
+			"Sailor" : [ "Sailor acts as an abstract product for Sailor, which is inherited by YoungSailor, OldSailor." ],
+			"NewShip" : [ "NewShip acts as a product for TeamFactory, which overrides." ]
+		}
+	},
+	"project_identifier" : "JamesZBL/abstract-factory"
+}

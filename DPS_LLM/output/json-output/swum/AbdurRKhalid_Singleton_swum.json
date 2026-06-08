@@ -1,0 +1,43 @@
+{
+  "project_name" : "AbdurRKhalid/Singleton",
+  "swum_version" : "1.0",
+  "generated_timestamp" : 1780917880794,
+  "class_summaries" : {
+    "Test" : {
+      "class_name" : "Test",
+      "class_type" : "class",
+      "method_summaries" : {
+        "main" : {
+          "method_name" : "main",
+          "return_type" : "void",
+          "parameters" : "String[]",
+          "swum_summary" : "This method performs using a parameter.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE main)"
+        }
+      },
+      "swum_class_summary" : "The Test class."
+    },
+    "Singleton" : {
+      "class_name" : "Singleton",
+      "class_type" : "class",
+      "method_summaries" : {
+        "getInstance" : {
+          "method_name" : "getInstance",
+          "return_type" : "Singleton",
+          "parameters" : "String",
+          "swum_summary" : "This method retrieves an instance using a parameter and returns an object as part of the Singleton pattern.",
+          "swum_actions" : "get",
+          "swum_objects" : "Instance",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Instance))"
+        }
+      },
+      "swum_class_summary" : "The Singleton class is part of the Singleton pattern and provides methods to get."
+    }
+  },
+  "swum_project_summary" : "This software project contains 2 classes with 2 methods. The system implements the singleton design pattern. Primary operations include get. Key objects manipulated are Instance.",
+  "swum_design_pattern" : [ {
+    "singleton" : [ "Singleton" ]
+  } ]
+}

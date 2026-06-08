@@ -1,0 +1,107 @@
+{
+  "project_name" : "JamesZBL/singleton",
+  "swum_version" : "1.0",
+  "generated_timestamp" : 1780917880848,
+  "class_summaries" : {
+    "ThreadSafeDoubleCheckLocking" : {
+      "class_name" : "ThreadSafeDoubleCheckLocking",
+      "class_type" : "class",
+      "method_summaries" : {
+        "getInstance" : {
+          "method_name" : "getInstance",
+          "return_type" : "ThreadSafeDoubleCheckLocking",
+          "parameters" : "",
+          "swum_summary" : "This method retrieves an instance and returns a number.",
+          "swum_actions" : "get",
+          "swum_objects" : "Instance",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Instance))"
+        }
+      },
+      "swum_class_summary" : "The ThreadSafeDoubleCheckLocking class provides methods to get."
+    },
+    "EnumDirector" : {
+      "class_name" : "EnumDirector",
+      "class_type" : "class",
+      "method_summaries" : {
+        "toString" : {
+          "method_name" : "toString",
+          "return_type" : "String",
+          "parameters" : "",
+          "swum_summary" : "This method performs and returns a String.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE to String)"
+        }
+      },
+      "swum_class_summary" : "The EnumDirector class."
+    },
+    "LazyInitializationDirector" : {
+      "class_name" : "LazyInitializationDirector",
+      "class_type" : "class",
+      "method_summaries" : {
+        "getInstance" : {
+          "method_name" : "getInstance",
+          "return_type" : "LazyInitializationDirector",
+          "parameters" : "",
+          "swum_summary" : "This method retrieves an instance and returns an object.",
+          "swum_actions" : "get",
+          "swum_objects" : "Instance",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Instance))"
+        }
+      },
+      "swum_class_summary" : "The LazyInitializationDirector class provides methods to get."
+    },
+    "Director" : {
+      "class_name" : "Director",
+      "class_type" : "class",
+      "method_summaries" : {
+        "getInstance" : {
+          "method_name" : "getInstance",
+          "return_type" : "Director",
+          "parameters" : "",
+          "swum_summary" : "This method retrieves an instance and returns an object.",
+          "swum_actions" : "get",
+          "swum_objects" : "Instance",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Instance))"
+        }
+      },
+      "swum_class_summary" : "The Director class provides methods to get."
+    },
+    "ThreadSafeLazyLoadDirector" : {
+      "class_name" : "ThreadSafeLazyLoadDirector",
+      "class_type" : "class",
+      "method_summaries" : {
+        "getInstance" : {
+          "method_name" : "getInstance",
+          "return_type" : "ThreadSafeLazyLoadDirector",
+          "parameters" : "",
+          "swum_summary" : "This method retrieves an instance and returns an object.",
+          "swum_actions" : "get",
+          "swum_objects" : "Instance",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Instance))"
+        }
+      },
+      "swum_class_summary" : "The ThreadSafeLazyLoadDirector class provides methods to get."
+    },
+    "Application" : {
+      "class_name" : "Application",
+      "class_type" : "class",
+      "method_summaries" : {
+        "main" : {
+          "method_name" : "main",
+          "return_type" : "void",
+          "parameters" : "String[]",
+          "swum_summary" : "This method performs using a parameter.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE main)"
+        }
+      },
+      "swum_class_summary" : "The Application class."
+    }
+  },
+  "swum_project_summary" : "This software project contains 6 classes with 6 methods. The system implements the singleton design pattern. Primary operations include get. Key objects manipulated are Instance.",
+  "swum_design_pattern" : [ {
+    "singleton" : [ "ThreadSafeDoubleCheckLocking", "LazyInitializationDirector", "Director", "ThreadSafeLazyLoadDirector" ]
+  } ]
+}

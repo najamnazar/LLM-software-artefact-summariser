@@ -1,0 +1,219 @@
+{
+  "project_name" : "AbdurRKhalid/Decorator",
+  "swum_version" : "1.0",
+  "generated_timestamp" : 1780917880757,
+  "class_summaries" : {
+    "DataSourceDecorator" : {
+      "class_name" : "DataSourceDecorator",
+      "class_type" : "class",
+      "method_summaries" : {
+        "writeData" : {
+          "method_name" : "writeData",
+          "return_type" : "void",
+          "parameters" : "String",
+          "swum_summary" : "This method writes a data using a parameter. The DataSourceDecorator class acts as a decorator in the decorator pattern.",
+          "swum_actions" : "write",
+          "swum_objects" : "Data",
+          "swum_parse_tree" : "(VERB_PHRASE write (OBJECT Data))"
+        },
+        "readData" : {
+          "method_name" : "readData",
+          "return_type" : "String",
+          "parameters" : "",
+          "swum_summary" : "This method reads a data and returns a String. The DataSourceDecorator class acts as a decorator in the decorator pattern.",
+          "swum_actions" : "read",
+          "swum_objects" : "Data",
+          "swum_parse_tree" : "(VERB_PHRASE read (OBJECT Data))"
+        }
+      },
+      "swum_class_summary" : "The DataSourceDecorator class acts as a decorator in the decorator pattern and provides methods to write, read for managing data."
+    },
+    "EncryptionDecorator" : {
+      "class_name" : "EncryptionDecorator",
+      "class_type" : "class",
+      "method_summaries" : {
+        "writeData" : {
+          "method_name" : "writeData",
+          "return_type" : "void",
+          "parameters" : "String",
+          "swum_summary" : "This method writes a data using a parameter. The EncryptionDecorator class acts as a concrete decorator in the decorator pattern.",
+          "swum_actions" : "write",
+          "swum_objects" : "Data",
+          "swum_parse_tree" : "(VERB_PHRASE write (OBJECT Data))"
+        },
+        "readData" : {
+          "method_name" : "readData",
+          "return_type" : "String",
+          "parameters" : "",
+          "swum_summary" : "This method reads a data and returns a String. The EncryptionDecorator class acts as a concrete decorator in the decorator pattern.",
+          "swum_actions" : "read",
+          "swum_objects" : "Data",
+          "swum_parse_tree" : "(VERB_PHRASE read (OBJECT Data))"
+        },
+        "encode" : {
+          "method_name" : "encode",
+          "return_type" : "String",
+          "parameters" : "String",
+          "swum_summary" : "This method encodes using a parameter and returns a String. The EncryptionDecorator class acts as a concrete decorator in the decorator pattern.",
+          "swum_actions" : "encode",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE encode)"
+        },
+        "decode" : {
+          "method_name" : "decode",
+          "return_type" : "String",
+          "parameters" : "String",
+          "swum_summary" : "This method decodes using a parameter and returns a String. The EncryptionDecorator class acts as a concrete decorator in the decorator pattern.",
+          "swum_actions" : "decode",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE decode)"
+        }
+      },
+      "swum_class_summary" : "The EncryptionDecorator class acts as a concrete decorator in the decorator pattern and provides methods to write, read, encode, decode."
+    },
+    "Test" : {
+      "class_name" : "Test",
+      "class_type" : "class",
+      "method_summaries" : {
+        "main" : {
+          "method_name" : "main",
+          "return_type" : "void",
+          "parameters" : "String[]",
+          "swum_summary" : "This method performs using a parameter. The Test class acts as a facade in the facade pattern.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE main)"
+        }
+      },
+      "swum_class_summary" : "The Test class acts as a facade in the facade pattern."
+    },
+    "CompressionDecorator" : {
+      "class_name" : "CompressionDecorator",
+      "class_type" : "class",
+      "method_summaries" : {
+        "getCompressionLevel" : {
+          "method_name" : "getCompressionLevel",
+          "return_type" : "int",
+          "parameters" : "",
+          "swum_summary" : "This method retrieves and returns a number. The CompressionDecorator class acts as a concrete decorator in the decorator pattern.",
+          "swum_actions" : "get",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Compression Level))"
+        },
+        "setCompressionLevel" : {
+          "method_name" : "setCompressionLevel",
+          "return_type" : "void",
+          "parameters" : "int",
+          "swum_summary" : "This method sets using a parameter. The CompressionDecorator class acts as a concrete decorator in the decorator pattern.",
+          "swum_actions" : "set",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE set (OBJECT Compression Level))"
+        },
+        "writeData" : {
+          "method_name" : "writeData",
+          "return_type" : "void",
+          "parameters" : "String",
+          "swum_summary" : "This method writes a data using a parameter. The CompressionDecorator class acts as a concrete decorator in the decorator pattern.",
+          "swum_actions" : "write",
+          "swum_objects" : "Data",
+          "swum_parse_tree" : "(VERB_PHRASE write (OBJECT Data))"
+        },
+        "readData" : {
+          "method_name" : "readData",
+          "return_type" : "String",
+          "parameters" : "",
+          "swum_summary" : "This method reads a data and returns a String. The CompressionDecorator class acts as a concrete decorator in the decorator pattern.",
+          "swum_actions" : "read",
+          "swum_objects" : "Data",
+          "swum_parse_tree" : "(VERB_PHRASE read (OBJECT Data))"
+        },
+        "compress" : {
+          "method_name" : "compress",
+          "return_type" : "String",
+          "parameters" : "String",
+          "swum_summary" : "This method compresses using a parameter and returns a String. The CompressionDecorator class acts as a concrete decorator in the decorator pattern.",
+          "swum_actions" : "compress",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE compress)"
+        },
+        "decompress" : {
+          "method_name" : "decompress",
+          "return_type" : "String",
+          "parameters" : "String",
+          "swum_summary" : "This method decompresses using a parameter and returns a String. The CompressionDecorator class acts as a concrete decorator in the decorator pattern.",
+          "swum_actions" : "decompress",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE decompress)"
+        }
+      },
+      "swum_class_summary" : "The CompressionDecorator class acts as a concrete decorator in the decorator pattern and provides methods to get, set, write, read, compress, decompress."
+    },
+    "FileDataSource" : {
+      "class_name" : "FileDataSource",
+      "class_type" : "class",
+      "method_summaries" : {
+        "writeData" : {
+          "method_name" : "writeData",
+          "return_type" : "void",
+          "parameters" : "String",
+          "swum_summary" : "This method writes a data using a parameter. The FileDataSource class acts as a concrete component in the decorator pattern.",
+          "swum_actions" : "write",
+          "swum_objects" : "Data",
+          "swum_parse_tree" : "(VERB_PHRASE write (OBJECT Data))"
+        },
+        "readData" : {
+          "method_name" : "readData",
+          "return_type" : "String",
+          "parameters" : "",
+          "swum_summary" : "This method reads a data and returns a String. The FileDataSource class acts as a concrete component in the decorator pattern.",
+          "swum_actions" : "read",
+          "swum_objects" : "Data",
+          "swum_parse_tree" : "(VERB_PHRASE read (OBJECT Data))"
+        }
+      },
+      "swum_class_summary" : "The FileDataSource class acts as a concrete component in the decorator pattern and provides methods to write, read for managing file, data."
+    },
+    "DataSource" : {
+      "class_name" : "DataSource",
+      "class_type" : "interface",
+      "method_summaries" : {
+        "writeData" : {
+          "method_name" : "writeData",
+          "return_type" : "void",
+          "parameters" : "String",
+          "swum_summary" : "This method writes a data using a parameter. The DataSource class acts as a component in the decorator pattern.",
+          "swum_actions" : "write",
+          "swum_objects" : "Data",
+          "swum_parse_tree" : "(VERB_PHRASE write (OBJECT Data))"
+        },
+        "readData" : {
+          "method_name" : "readData",
+          "return_type" : "String",
+          "parameters" : "",
+          "swum_summary" : "This method reads a data and returns a String. The DataSource class acts as a component in the decorator pattern.",
+          "swum_actions" : "read",
+          "swum_objects" : "Data",
+          "swum_parse_tree" : "(VERB_PHRASE read (OBJECT Data))"
+        }
+      },
+      "swum_class_summary" : "The DataSource class acts as a component in the decorator pattern and provides methods to write, read for managing data."
+    }
+  },
+  "swum_project_summary" : "This software project contains 6 classes with 17 methods. The system implements multiple design patterns including decorator, facade. Primary operations include compress, decode, decompress, encode, get. Key objects manipulated are Data.",
+  "swum_design_pattern" : [ {
+    "decorator" : {
+      "DataSourceDecorator" : {
+        "component" : {
+          "DataSource" : {
+            "concrete_component" : [ "FileDataSource", "FileDataSource" ]
+          }
+        },
+        "concrete_decorator" : [ "EncryptionDecorator", "CompressionDecorator" ]
+      }
+    }
+  }, {
+    "facade" : {
+      "Test" : [ "DataSourceDecorator", "DataSource" ]
+    }
+  } ]
+}

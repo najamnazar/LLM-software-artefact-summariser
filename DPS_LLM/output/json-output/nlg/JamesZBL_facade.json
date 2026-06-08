@@ -1,0 +1,427 @@
+{
+	"final_summary" : "CourseFacade.java: It is a public class. The 3 methods of CourseFacade are prepare (void), proceed (void) and stop (void). No methods call prepare and prepare calls no methods. No methods call proceed and proceed calls no methods. No methods call stop and stop calls no methods.\n\n\nCourseParticipator.java: It is a public abstract class. The 8 methods of CourseParticipator are prepareCourse (void), proceedCourse (void), stopCourse (void), goToSchool (void), goHome (void), name (String), action (void) and action (void). Only one method ( action method of class CourseParticipator ) calls prepareCourse and prepareCourse calls only one method : name method of class CourseParticipator. Only one method ( action method of class CourseParticipator ) calls proceedCourse and proceedCourse calls only one method : name method of class CourseParticipator. Only one method ( action method of class CourseParticipator ) calls stopCourse and stopCourse calls only one method : name method of class CourseParticipator. Only one method ( action method of class CourseParticipator ) calls goToSchool and goToSchool calls only one method : name method of class CourseParticipator. Only one method ( action method of class CourseParticipator ) calls goHome and goHome calls only one method : name method of class CourseParticipator. 5 methods ( stopCourse method of class CourseParticipator, prepareCourse method of class CourseParticipator, proceedCourse method of class CourseParticipator, goHome method of class CourseParticipator and goToSchool method of class CourseParticipator ) call name and name calls no methods. Only one method ( action method of class CourseParticipator ) calls action and action calls 6 methods : proceedCourse method of class CourseParticipator, goHome method of class CourseParticipator, goToSchool method of class CourseParticipator, prepareCourse method of class CourseParticipator, stopCourse method of class CourseParticipator and action method of class CourseParticipator. Only one method ( action method of class CourseParticipator ) calls action and action calls 6 methods : proceedCourse method of class CourseParticipator, goHome method of class CourseParticipator, goToSchool method of class CourseParticipator, prepareCourse method of class CourseParticipator, stopCourse method of class CourseParticipator and action method of class CourseParticipator.\n\n\nCourseStudent.java: It is a public class that extends CourseParticipator. The only method of CourseStudent is name (String). No methods call name and name calls no methods.\n\n\nCourseTeacher.java: It is a public class that extends CourseParticipator. The only method of CourseTeacher is name (String). No methods call name and name calls no methods.\n\n\nApplication.java: It is a public class. The only method of Application is main (void). No methods call main and main calls no methods.\n\n\n",
+	"JamesZBL/facade" : {
+		"CourseFacade" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "List<CourseParticipator>",
+				"FIELDMODIFIERTYPE" : [ "private", "final" ],
+				"FIELDDECLARATION" : [ "participators" ],
+				"FIELDDATATYPE" : "List<CourseParticipator>",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 7,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "CourseFacade",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ ]
+			} ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "participator" ],
+				"VARIABLECOMMONTYPE" : "CourseParticipator",
+				"VARIABLEELEMENTTYPE" : "CourseParticipator"
+			}, {
+				"VARIABLEDECLARATION" : [ "participator" ],
+				"VARIABLECOMMONTYPE" : "CourseParticipator",
+				"VARIABLEELEMENTTYPE" : "CourseParticipator"
+			}, {
+				"VARIABLEDECLARATION" : [ "participator" ],
+				"VARIABLECOMMONTYPE" : "CourseParticipator",
+				"VARIABLEELEMENTTYPE" : "CourseParticipator"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "prepare",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "LOOP" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "proceed",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "LOOP" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "stop",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "LOOP" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"CourseParticipator" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "Logger",
+				"FIELDMODIFIERTYPE" : [ "private", "static", "final" ],
+				"FIELDDECLARATION" : [ "LOGGER = LoggerFactory.getLogger(CourseParticipator.class)" ],
+				"FIELDDATATYPE" : "Logger",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 18,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "CourseParticipator",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : true,
+				"CLASSMODIFIERTYPE" : [ "public", "abstract" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "e" ],
+				"VARIABLECOMMONTYPE" : "Event",
+				"VARIABLEELEMENTTYPE" : "Event"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "prepareCourse",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "action",
+					"CALLEDCLASS" : "CourseParticipator"
+				}, {
+					"CALLEDMETHODNAME" : "action",
+					"CALLEDCLASS" : "CourseParticipator"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "CourseParticipator",
+					"CALLEEMETHODNAME" : "name"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "proceedCourse",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "action",
+					"CALLEDCLASS" : "CourseParticipator"
+				}, {
+					"CALLEDMETHODNAME" : "action",
+					"CALLEDCLASS" : "CourseParticipator"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "CourseParticipator",
+					"CALLEEMETHODNAME" : "name"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "stopCourse",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "action",
+					"CALLEDCLASS" : "CourseParticipator"
+				}, {
+					"CALLEDMETHODNAME" : "action",
+					"CALLEDCLASS" : "CourseParticipator"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "CourseParticipator",
+					"CALLEEMETHODNAME" : "name"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "goToSchool",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "action",
+					"CALLEDCLASS" : "CourseParticipator"
+				}, {
+					"CALLEDMETHODNAME" : "action",
+					"CALLEDCLASS" : "CourseParticipator"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "CourseParticipator",
+					"CALLEEMETHODNAME" : "name"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "goHome",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "action",
+					"CALLEDCLASS" : "CourseParticipator"
+				}, {
+					"CALLEDMETHODNAME" : "action",
+					"CALLEDCLASS" : "CourseParticipator"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "CourseParticipator",
+					"CALLEEMETHODNAME" : "name"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "name",
+				"NUMBEROFINCOMINGMETHODS" : 5,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "stopCourse",
+					"CALLEDCLASS" : "CourseParticipator"
+				}, {
+					"CALLEDMETHODNAME" : "goToSchool",
+					"CALLEDCLASS" : "CourseParticipator"
+				}, {
+					"CALLEDMETHODNAME" : "proceedCourse",
+					"CALLEDCLASS" : "CourseParticipator"
+				}, {
+					"CALLEDMETHODNAME" : "prepareCourse",
+					"CALLEDCLASS" : "CourseParticipator"
+				}, {
+					"CALLEDMETHODNAME" : "goHome",
+					"CALLEDCLASS" : "CourseParticipator"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public", "abstract" ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "action",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "action",
+					"CALLEDCLASS" : "CourseParticipator"
+				}, {
+					"CALLEDMETHODNAME" : "action",
+					"CALLEDCLASS" : "CourseParticipator"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "LOOP" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "CourseParticipator",
+					"CALLEEMETHODNAME" : "prepareCourse"
+				}, {
+					"CALLEECLASS" : "CourseParticipator",
+					"CALLEEMETHODNAME" : "proceedCourse"
+				}, {
+					"CALLEECLASS" : "CourseParticipator",
+					"CALLEEMETHODNAME" : "stopCourse"
+				}, {
+					"CALLEECLASS" : "CourseParticipator",
+					"CALLEEMETHODNAME" : "goHome"
+				}, {
+					"CALLEECLASS" : "CourseParticipator",
+					"CALLEEMETHODNAME" : "goToSchool"
+				}, {
+					"CALLEECLASS" : "CourseParticipator",
+					"CALLEEMETHODNAME" : "action"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "events",
+					"PARAMETERTYPE" : "Event..."
+				} ]
+			}, {
+				"METHODNAME" : "action",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "action",
+					"CALLEDCLASS" : "CourseParticipator"
+				}, {
+					"CALLEDMETHODNAME" : "action",
+					"CALLEDCLASS" : "CourseParticipator"
+				} ],
+				"METHODMODIFIERTYPE" : [ "private" ],
+				"METHODBODYLINETYPE" : [ "SWITCH" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 6,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "CourseParticipator",
+					"CALLEEMETHODNAME" : "prepareCourse"
+				}, {
+					"CALLEECLASS" : "CourseParticipator",
+					"CALLEEMETHODNAME" : "proceedCourse"
+				}, {
+					"CALLEECLASS" : "CourseParticipator",
+					"CALLEEMETHODNAME" : "stopCourse"
+				}, {
+					"CALLEECLASS" : "CourseParticipator",
+					"CALLEEMETHODNAME" : "goHome"
+				}, {
+					"CALLEECLASS" : "CourseParticipator",
+					"CALLEEMETHODNAME" : "goToSchool"
+				}, {
+					"CALLEECLASS" : "CourseParticipator",
+					"CALLEEMETHODNAME" : "action"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "e",
+					"PARAMETERTYPE" : "Event"
+				} ]
+			} ]
+		},
+		"CourseStudent" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ "CourseParticipator" ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "CourseStudent",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "name",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"CourseTeacher" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ "CourseParticipator" ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "CourseTeacher",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "name",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"Application" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 3,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Application",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "participator = new CourseFacade()" ],
+				"VARIABLECOMMONTYPE" : "CourseFacade",
+				"VARIABLEELEMENTTYPE" : "CourseFacade"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "main",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public", "static" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 1,
+				"NUMBEROFOUTGOINGMETHODS" : 3,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 4,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "args",
+					"PARAMETERTYPE" : "String[]"
+				} ]
+			} ]
+		}
+	},
+	"design_pattern" : [ ],
+	"summary_NLG" : { },
+	"project_identifier" : "JamesZBL/facade"
+}

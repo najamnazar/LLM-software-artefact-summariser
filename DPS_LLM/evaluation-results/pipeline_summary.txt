@@ -1,0 +1,17 @@
+=== SWUM Processing Summary ===
+
+Projects processed: 27
+SWUM output directory: /home/najam/Documents/Repository/TOSEM/DPS_LLM/output/json-output/swum
+
+Sample outputs:
+- AbdurRKhalid_AbstractFactory_swum.json
+- AbdurRKhalid_Adapter_swum.json
+- AbdurRKhalid_Decorator_swum.json
+- AbdurRKhalid_Facade_swum.json
+- AbdurRKhalid_FactoryMethod_swum.json
+- ... (22 more)
+
+Next steps:
+- Review generated SWUM summaries under output/json-output/ (*_swum.json files).
+- SWUM CSV summaries available at output/summary-output/swum_summaries.csv
+- Run python/evaluate_summaries.py to compute similarity metrics if required.

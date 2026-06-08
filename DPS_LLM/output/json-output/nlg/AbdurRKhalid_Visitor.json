@@ -1,0 +1,496 @@
+{
+	"final_summary" : "ComputerPart.java: visitor: ComputerPart acts as an element for visitor ComputerPartVisitor, which is inherited by Monitor, Mouse, Keyboard, Computer, which accepts ComputerPartVisitor parameter of computerPartVisitor. It is a public interface. The only method of ComputerPart is accept (void). 2 methods ( main method of class Test and accept method of class Computer ) call accept and accept calls no methods.\n\n\nMonitor.java: visitor: Monitor acts as an element for visitor ComputerPartVisitor, which is inherited by, which accepts ComputerPartVisitor parameter of computerPartVisitor. Monitor acts as an element for visitor, which overrides accept method of ComputerPart. It is a public class that extends ComputerPart and that implements ComputerPart. The only method of Monitor is accept (void). No methods call accept and accept calls only one method : visit method of class ComputerPartVisitor.\n\n\nMouse.java: visitor: Mouse acts as an element for visitor, which overrides accept method of ComputerPart. Mouse acts as an element for visitor ComputerPartVisitor, which is inherited by, which accepts ComputerPartVisitor parameter of computerPartVisitor. It is a public class that extends ComputerPart and that implements ComputerPart. The only method of Mouse is accept (void). No methods call accept and accept calls only one method : visit method of class ComputerPartVisitor.\n\n\nComputerPartDisplayVisitor.java: visitor: ComputerPartDisplayVisitor acts as a visitor for element Computer, which overrides visit method of Computer, visit method of Computer, visit method of Computer, visit method of Computer, which visits Computer parameter of computer, which visits Mouse parameter of mouse, which visits Keyboard parameter of keyboard, which visits Monitor parameter of monitor. ComputerPartDisplayVisitor acts as a visitor for element Keyboard, which overrides visit method of Keyboard, visit method of Keyboard, visit method of Keyboard, visit method of Keyboard, which visits Computer parameter of computer, which visits Mouse parameter of mouse, which visits Keyboard parameter of keyboard, which visits Monitor parameter of monitor. ComputerPartDisplayVisitor acts as a visitor for element ComputerPart, which overrides visit method of ComputerPart, visit method of ComputerPart, visit method of ComputerPart, visit method of ComputerPart, which visits Computer parameter of computer, which visits Mouse parameter of mouse, which visits Keyboard parameter of keyboard, which visits Monitor parameter of monitor. ComputerPartDisplayVisitor acts as a visitor for element Monitor, which overrides visit method of Monitor, visit method of Monitor, visit method of Monitor, visit method of Monitor, which visits Computer parameter of computer, which visits Mouse parameter of mouse, which visits Keyboard parameter of keyboard, which visits Monitor parameter of monitor. ComputerPartDisplayVisitor acts as a visitor for element Mouse, which overrides visit method of Mouse, visit method of Mouse, visit method of Mouse, visit method of Mouse, which visits Computer parameter of computer, which visits Mouse parameter of mouse, which visits Keyboard parameter of keyboard, which visits Monitor parameter of monitor. It is a public class that extends ComputerPartVisitor and that implements ComputerPartVisitor. The 4 methods of ComputerPartDisplayVisitor are visit (void), visit (void), visit (void) and visit (void). No methods call visit and visit calls no methods. No methods call visit and visit calls no methods. No methods call visit and visit calls no methods. No methods call visit and visit calls no methods.\n\n\nTest.java: It is a public class. The only method of Test is main (void). No methods call main and main calls only one method : accept method of class ComputerPart.\n\n\nKeyboard.java: visitor: Keyboard acts as an element for visitor, which overrides accept method of ComputerPart. Keyboard acts as an element for visitor ComputerPartVisitor, which is inherited by, which accepts ComputerPartVisitor parameter of computerPartVisitor. It is a public class that extends ComputerPart and that implements ComputerPart. The only method of Keyboard is accept (void). No methods call accept and accept calls only one method : visit method of class ComputerPartVisitor.\n\n\nComputer.java: visitor: Computer acts as an element for visitor, which overrides accept method of ComputerPart. Computer acts as an element for visitor ComputerPartVisitor, which is inherited by, which accepts ComputerPartVisitor parameter of computerPartVisitor. It is a public class that extends ComputerPart and that implements ComputerPart. The only method of Computer is accept (void). No methods call accept and accept calls 2 methods : visit method of class ComputerPartVisitor and accept method of class ComputerPart.\n\n\nComputerPartVisitor.java: visitor: ComputerPartVisitor acts as a visitor for element Computer, which is inherited by ComputerPartDisplayVisitor, which visits Computer parameter of computer, which visits Mouse parameter of mouse, which visits Keyboard parameter of keyboard, which visits Monitor parameter of monitor. ComputerPartVisitor acts as a visitor for element Keyboard, which is inherited by ComputerPartDisplayVisitor, which visits Computer parameter of computer, which visits Mouse parameter of mouse, which visits Keyboard parameter of keyboard, which visits Monitor parameter of monitor. ComputerPartVisitor acts as a visitor for element Monitor, which is inherited by ComputerPartDisplayVisitor, which visits Computer parameter of computer, which visits Mouse parameter of mouse, which visits Keyboard parameter of keyboard, which visits Monitor parameter of monitor. ComputerPartVisitor acts as a visitor for element ComputerPart, which is inherited by ComputerPartDisplayVisitor, which visits Computer parameter of computer, which visits Mouse parameter of mouse, which visits Keyboard parameter of keyboard, which visits Monitor parameter of monitor. ComputerPartVisitor acts as a visitor for element Mouse, which is inherited by ComputerPartDisplayVisitor, which visits Computer parameter of computer, which visits Mouse parameter of mouse, which visits Keyboard parameter of keyboard, which visits Monitor parameter of monitor. It is a public interface. The 4 methods of ComputerPartVisitor are visit (void), visit (void), visit (void) and visit (void). 4 methods ( accept method of class Keyboard, accept method of class Mouse, accept method of class Monitor and accept method of class Computer ) call visit and visit calls no methods. 4 methods ( accept method of class Keyboard, accept method of class Mouse, accept method of class Monitor and accept method of class Computer ) call visit and visit calls no methods. 4 methods ( accept method of class Keyboard, accept method of class Mouse, accept method of class Monitor and accept method of class Computer ) call visit and visit calls no methods. 4 methods ( accept method of class Keyboard, accept method of class Mouse, accept method of class Monitor and accept method of class Computer ) call visit and visit calls no methods.\n\n\n",
+	"design_pattern" : [ {
+		"visitor" : {
+			"ComputerPart" : {
+				"concrete_element" : [ "Monitor", "Mouse", "Keyboard", "Computer" ],
+				"visitor" : {
+					"ComputerPartVisitor" : [ "ComputerPartDisplayVisitor" ]
+				}
+			},
+			"Monitor" : {
+				"visitor" : {
+					"ComputerPartVisitor" : [ "ComputerPartDisplayVisitor" ]
+				}
+			},
+			"Mouse" : {
+				"visitor" : {
+					"ComputerPartVisitor" : [ "ComputerPartDisplayVisitor" ]
+				}
+			},
+			"Keyboard" : {
+				"visitor" : {
+					"ComputerPartVisitor" : [ "ComputerPartDisplayVisitor" ]
+				}
+			},
+			"Computer" : {
+				"visitor" : {
+					"ComputerPartVisitor" : [ "ComputerPartDisplayVisitor" ]
+				}
+			}
+		}
+	} ],
+	"summary_NLG" : {
+		"visitor" : {
+			"ComputerPart" : [ "ComputerPart acts as an element for visitor ComputerPartVisitor, which is inherited by Monitor, Mouse, Keyboard, Computer, which accepts ComputerPartVisitor parameter of computerPartVisitor." ],
+			"Monitor" : [ "Monitor acts as an element for visitor ComputerPartVisitor, which is inherited by, which accepts ComputerPartVisitor parameter of computerPartVisitor.", "Monitor acts as an element for visitor, which overrides accept method of ComputerPart." ],
+			"Mouse" : [ "Mouse acts as an element for visitor, which overrides accept method of ComputerPart.", "Mouse acts as an element for visitor ComputerPartVisitor, which is inherited by, which accepts ComputerPartVisitor parameter of computerPartVisitor." ],
+			"ComputerPartDisplayVisitor" : [ "ComputerPartDisplayVisitor acts as a visitor for element Computer, which overrides visit method of Computer, visit method of Computer, visit method of Computer, visit method of Computer, which visits Computer parameter of computer, which visits Mouse parameter of mouse, which visits Keyboard parameter of keyboard, which visits Monitor parameter of monitor.", "ComputerPartDisplayVisitor acts as a visitor for element Keyboard, which overrides visit method of Keyboard, visit method of Keyboard, visit method of Keyboard, visit method of Keyboard, which visits Computer parameter of computer, which visits Mouse parameter of mouse, which visits Keyboard parameter of keyboard, which visits Monitor parameter of monitor.", "ComputerPartDisplayVisitor acts as a visitor for element ComputerPart, which overrides visit method of ComputerPart, visit method of ComputerPart, visit method of ComputerPart, visit method of ComputerPart, which visits Computer parameter of computer, which visits Mouse parameter of mouse, which visits Keyboard parameter of keyboard, which visits Monitor parameter of monitor.", "ComputerPartDisplayVisitor acts as a visitor for element Monitor, which overrides visit method of Monitor, visit method of Monitor, visit method of Monitor, visit method of Monitor, which visits Computer parameter of computer, which visits Mouse parameter of mouse, which visits Keyboard parameter of keyboard, which visits Monitor parameter of monitor.", "ComputerPartDisplayVisitor acts as a visitor for element Mouse, which overrides visit method of Mouse, visit method of Mouse, visit method of Mouse, visit method of Mouse, which visits Computer parameter of computer, which visits Mouse parameter of mouse, which visits Keyboard parameter of keyboard, which visits Monitor parameter of monitor." ],
+			"Keyboard" : [ "Keyboard acts as an element for visitor, which overrides accept method of ComputerPart.", "Keyboard acts as an element for visitor ComputerPartVisitor, which is inherited by, which accepts ComputerPartVisitor parameter of computerPartVisitor." ],
+			"Computer" : [ "Computer acts as an element for visitor, which overrides accept method of ComputerPart.", "Computer acts as an element for visitor ComputerPartVisitor, which is inherited by, which accepts ComputerPartVisitor parameter of computerPartVisitor." ],
+			"ComputerPartVisitor" : [ "ComputerPartVisitor acts as a visitor for element Computer, which is inherited by ComputerPartDisplayVisitor, which visits Computer parameter of computer, which visits Mouse parameter of mouse, which visits Keyboard parameter of keyboard, which visits Monitor parameter of monitor.", "ComputerPartVisitor acts as a visitor for element Keyboard, which is inherited by ComputerPartDisplayVisitor, which visits Computer parameter of computer, which visits Mouse parameter of mouse, which visits Keyboard parameter of keyboard, which visits Monitor parameter of monitor.", "ComputerPartVisitor acts as a visitor for element Monitor, which is inherited by ComputerPartDisplayVisitor, which visits Computer parameter of computer, which visits Mouse parameter of mouse, which visits Keyboard parameter of keyboard, which visits Monitor parameter of monitor.", "ComputerPartVisitor acts as a visitor for element ComputerPart, which is inherited by ComputerPartDisplayVisitor, which visits Computer parameter of computer, which visits Mouse parameter of mouse, which visits Keyboard parameter of keyboard, which visits Monitor parameter of monitor.", "ComputerPartVisitor acts as a visitor for element Mouse, which is inherited by ComputerPartDisplayVisitor, which visits Computer parameter of computer, which visits Mouse parameter of mouse, which visits Keyboard parameter of keyboard, which visits Monitor parameter of monitor." ]
+		}
+	},
+	"AbdurRKhalid/Visitor" : {
+		"ComputerPart" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "ComputerPart",
+				"ISINTERFACEORNOT" : true,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "accept",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "Test"
+				}, {
+					"CALLEDMETHODNAME" : "accept",
+					"CALLEDCLASS" : "Computer"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "computerPartVisitor",
+					"PARAMETERTYPE" : "ComputerPartVisitor"
+				} ]
+			} ]
+		},
+		"Monitor" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 1,
+				"EXTENDSFROM" : [ "ComputerPart" ],
+				"IMPLEMENTSFROM" : [ "ComputerPart" ],
+				"CLASSNAME" : "Monitor",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "accept",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "ComputerPartVisitor",
+					"CALLEEMETHODNAME" : "visit"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "computerPartVisitor",
+					"PARAMETERTYPE" : "ComputerPartVisitor"
+				} ]
+			} ]
+		},
+		"Mouse" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 1,
+				"EXTENDSFROM" : [ "ComputerPart" ],
+				"IMPLEMENTSFROM" : [ "ComputerPart" ],
+				"CLASSNAME" : "Mouse",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "accept",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "ComputerPartVisitor",
+					"CALLEEMETHODNAME" : "visit"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "computerPartVisitor",
+					"PARAMETERTYPE" : "ComputerPartVisitor"
+				} ]
+			} ]
+		},
+		"ComputerPartDisplayVisitor" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 4,
+				"EXTENDSFROM" : [ "ComputerPartVisitor" ],
+				"IMPLEMENTSFROM" : [ "ComputerPartVisitor" ],
+				"CLASSNAME" : "ComputerPartDisplayVisitor",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "visit",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "computer",
+					"PARAMETERTYPE" : "Computer"
+				} ]
+			}, {
+				"METHODNAME" : "visit",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "mouse",
+					"PARAMETERTYPE" : "Mouse"
+				} ]
+			}, {
+				"METHODNAME" : "visit",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "keyboard",
+					"PARAMETERTYPE" : "Keyboard"
+				} ]
+			}, {
+				"METHODNAME" : "visit",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "monitor",
+					"PARAMETERTYPE" : "Monitor"
+				} ]
+			} ]
+		},
+		"Test" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 1,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Test",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "computer = new Computer()" ],
+				"VARIABLECOMMONTYPE" : "ComputerPart",
+				"VARIABLEELEMENTTYPE" : "ComputerPart"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "main",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public", "static" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 1,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "ComputerPart",
+					"CALLEEMETHODNAME" : "accept"
+				} ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "args",
+					"PARAMETERTYPE" : "String[]"
+				} ]
+			} ]
+		},
+		"Keyboard" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 1,
+				"EXTENDSFROM" : [ "ComputerPart" ],
+				"IMPLEMENTSFROM" : [ "ComputerPart" ],
+				"CLASSNAME" : "Keyboard",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "accept",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "ComputerPartVisitor",
+					"CALLEEMETHODNAME" : "visit"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "computerPartVisitor",
+					"PARAMETERTYPE" : "ComputerPartVisitor"
+				} ]
+			} ]
+		},
+		"Computer" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "ComputerPart[]",
+				"FIELDMODIFIERTYPE" : [ ],
+				"FIELDDECLARATION" : [ "parts" ],
+				"FIELDDATATYPE" : "ComputerPart",
+				"FIELDACCESSSPECIFIER" : "NONE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 2,
+				"EXTENDSFROM" : [ "ComputerPart" ],
+				"IMPLEMENTSFROM" : [ "ComputerPart" ],
+				"CLASSNAME" : "Computer",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ ]
+			} ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "i = 0" ],
+				"VARIABLECOMMONTYPE" : "int",
+				"VARIABLEELEMENTTYPE" : "int"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "accept",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "LOOP", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "ComputerPart",
+					"CALLEEMETHODNAME" : "accept"
+				}, {
+					"CALLEECLASS" : "ComputerPartVisitor",
+					"CALLEEMETHODNAME" : "visit"
+				} ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "computerPartVisitor",
+					"PARAMETERTYPE" : "ComputerPartVisitor"
+				} ]
+			} ]
+		},
+		"ComputerPartVisitor" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "ComputerPartVisitor",
+				"ISINTERFACEORNOT" : true,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "visit",
+				"NUMBEROFINCOMINGMETHODS" : 4,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "accept",
+					"CALLEDCLASS" : "Mouse"
+				}, {
+					"CALLEDMETHODNAME" : "accept",
+					"CALLEDCLASS" : "Monitor"
+				}, {
+					"CALLEDMETHODNAME" : "accept",
+					"CALLEDCLASS" : "Computer"
+				}, {
+					"CALLEDMETHODNAME" : "accept",
+					"CALLEDCLASS" : "Keyboard"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "computer",
+					"PARAMETERTYPE" : "Computer"
+				} ]
+			}, {
+				"METHODNAME" : "visit",
+				"NUMBEROFINCOMINGMETHODS" : 4,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "accept",
+					"CALLEDCLASS" : "Mouse"
+				}, {
+					"CALLEDMETHODNAME" : "accept",
+					"CALLEDCLASS" : "Monitor"
+				}, {
+					"CALLEDMETHODNAME" : "accept",
+					"CALLEDCLASS" : "Computer"
+				}, {
+					"CALLEDMETHODNAME" : "accept",
+					"CALLEDCLASS" : "Keyboard"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "mouse",
+					"PARAMETERTYPE" : "Mouse"
+				} ]
+			}, {
+				"METHODNAME" : "visit",
+				"NUMBEROFINCOMINGMETHODS" : 4,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "accept",
+					"CALLEDCLASS" : "Mouse"
+				}, {
+					"CALLEDMETHODNAME" : "accept",
+					"CALLEDCLASS" : "Monitor"
+				}, {
+					"CALLEDMETHODNAME" : "accept",
+					"CALLEDCLASS" : "Computer"
+				}, {
+					"CALLEDMETHODNAME" : "accept",
+					"CALLEDCLASS" : "Keyboard"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "keyboard",
+					"PARAMETERTYPE" : "Keyboard"
+				} ]
+			}, {
+				"METHODNAME" : "visit",
+				"NUMBEROFINCOMINGMETHODS" : 4,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "accept",
+					"CALLEDCLASS" : "Mouse"
+				}, {
+					"CALLEDMETHODNAME" : "accept",
+					"CALLEDCLASS" : "Monitor"
+				}, {
+					"CALLEDMETHODNAME" : "accept",
+					"CALLEDCLASS" : "Computer"
+				}, {
+					"CALLEDMETHODNAME" : "accept",
+					"CALLEDCLASS" : "Keyboard"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "monitor",
+					"PARAMETERTYPE" : "Monitor"
+				} ]
+			} ]
+		}
+	},
+	"project_identifier" : "AbdurRKhalid/Visitor"
+}

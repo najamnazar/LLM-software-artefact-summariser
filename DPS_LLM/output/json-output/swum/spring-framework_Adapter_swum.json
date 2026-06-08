@@ -1,0 +1,145 @@
+{
+  "project_name" : "spring-framework/Adapter",
+  "swum_version" : "1.0",
+  "generated_timestamp" : 1780917880856,
+  "class_summaries" : {
+    "IsolationLevelDataSourceAdapter" : {
+      "class_name" : "IsolationLevelDataSourceAdapter",
+      "class_type" : "class",
+      "method_summaries" : {
+        "setIsolationLevelName" : {
+          "method_name" : "setIsolationLevelName",
+          "return_type" : "void",
+          "parameters" : "String",
+          "swum_summary" : "This method sets using a parameter as part of the Adapter pattern.",
+          "swum_actions" : "set",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE set (OBJECT Isolation Level Name))"
+        },
+        "setIsolationLevel" : {
+          "method_name" : "setIsolationLevel",
+          "return_type" : "void",
+          "parameters" : "int",
+          "swum_summary" : "This method sets using a parameter as part of the Adapter pattern.",
+          "swum_actions" : "set",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE set (OBJECT Isolation Level))"
+        },
+        "getIsolationLevel" : {
+          "method_name" : "getIsolationLevel",
+          "return_type" : "Integer",
+          "parameters" : "",
+          "swum_summary" : "This method retrieves and returns a number as part of the Adapter pattern.",
+          "swum_actions" : "get",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Isolation Level))"
+        },
+        "doGetConnection" : {
+          "method_name" : "doGetConnection",
+          "return_type" : "Connection",
+          "parameters" : "@Nullable, @Nullable",
+          "swum_summary" : "This method retrieves a connection using 2 parameters and returns an object as part of the Adapter pattern.",
+          "swum_actions" : "Get",
+          "swum_objects" : "Connection",
+          "swum_parse_tree" : "(VERB_PHRASE (SUBJECT do) Get (OBJECT Connection))"
+        },
+        "getCurrentIsolationLevel" : {
+          "method_name" : "getCurrentIsolationLevel",
+          "return_type" : "Integer",
+          "parameters" : "",
+          "swum_summary" : "This method retrieves and returns a number as part of the Adapter pattern.",
+          "swum_actions" : "get",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Current Isolation Level))"
+        },
+        "getCurrentReadOnlyFlag" : {
+          "method_name" : "getCurrentReadOnlyFlag",
+          "return_type" : "Boolean",
+          "parameters" : "",
+          "swum_summary" : "This method retrieves operations and returns a boolean as part of the Adapter pattern.",
+          "swum_actions" : "get, Read",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Current Read Only Flag))"
+        }
+      },
+      "swum_class_summary" : "The IsolationLevelDataSourceAdapter class is part of the Adapter pattern and provides methods to set, set, get, get, get, get, read for managing data."
+    },
+    "HttpRequestHandlerAdapter" : {
+      "class_name" : "HttpRequestHandlerAdapter",
+      "class_type" : "class",
+      "method_summaries" : {
+        "supports" : {
+          "method_name" : "supports",
+          "return_type" : "boolean",
+          "parameters" : "Object",
+          "swum_summary" : "This method performs using a parameter and returns a boolean as part of the Adapter pattern.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE supports)"
+        },
+        "handle" : {
+          "method_name" : "handle",
+          "return_type" : "ModelAndView",
+          "parameters" : "HttpServletRequest, HttpServletResponse, Object",
+          "swum_summary" : "This method handles using 3 parameters and returns an object as part of the Adapter pattern.",
+          "swum_actions" : "handle",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE handle)"
+        }
+      },
+      "swum_class_summary" : "The HttpRequestHandlerAdapter class is part of the Adapter pattern and provides methods to handle for managing request."
+    },
+    "SimpleControllerHandlerAdapter" : {
+      "class_name" : "SimpleControllerHandlerAdapter",
+      "class_type" : "class",
+      "method_summaries" : {
+        "supports" : {
+          "method_name" : "supports",
+          "return_type" : "boolean",
+          "parameters" : "Object",
+          "swum_summary" : "This method performs using a parameter and returns a boolean as part of the Adapter pattern.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE supports)"
+        },
+        "handle" : {
+          "method_name" : "handle",
+          "return_type" : "ModelAndView",
+          "parameters" : "HttpServletRequest, HttpServletResponse, Object",
+          "swum_summary" : "This method handles using 3 parameters and returns an object as part of the Adapter pattern.",
+          "swum_actions" : "handle",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE handle)"
+        }
+      },
+      "swum_class_summary" : "The SimpleControllerHandlerAdapter class is part of the Adapter pattern and provides methods to handle."
+    },
+    "MethodBeforeAdviceAdapter" : {
+      "class_name" : "MethodBeforeAdviceAdapter",
+      "class_type" : "class",
+      "method_summaries" : {
+        "supportsAdvice" : {
+          "method_name" : "supportsAdvice",
+          "return_type" : "boolean",
+          "parameters" : "Advice",
+          "swum_summary" : "This method performs using a parameter and returns a boolean as part of the Adapter pattern.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE supports Advice)"
+        },
+        "getInterceptor" : {
+          "method_name" : "getInterceptor",
+          "return_type" : "MethodInterceptor",
+          "parameters" : "Advisor",
+          "swum_summary" : "This method retrieves using a parameter and returns a number as part of the Adapter pattern.",
+          "swum_actions" : "get",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Interceptor))"
+        }
+      },
+      "swum_class_summary" : "The MethodBeforeAdviceAdapter class is part of the Adapter pattern and provides methods to get."
+    }
+  },
+  "swum_project_summary" : "This software project contains 4 classes with 12 methods. Primary operations include Get, Read, get, handle, set. Key objects manipulated are Connection.",
+  "swum_design_pattern" : [ ]
+}

@@ -1,0 +1,161 @@
+{
+  "project_name" : "JamesZBL/facade",
+  "swum_version" : "1.0",
+  "generated_timestamp" : 1780917880834,
+  "class_summaries" : {
+    "CourseFacade" : {
+      "class_name" : "CourseFacade",
+      "class_type" : "class",
+      "method_summaries" : {
+        "prepare" : {
+          "method_name" : "prepare",
+          "return_type" : "void",
+          "parameters" : "",
+          "swum_summary" : "This method performs as part of the Facade pattern.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE prepare)"
+        },
+        "proceed" : {
+          "method_name" : "proceed",
+          "return_type" : "void",
+          "parameters" : "",
+          "swum_summary" : "This method performs as part of the Facade pattern.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE proceed)"
+        },
+        "stop" : {
+          "method_name" : "stop",
+          "return_type" : "void",
+          "parameters" : "",
+          "swum_summary" : "This method stops as part of the Facade pattern.",
+          "swum_actions" : "stop",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE stop)"
+        }
+      },
+      "swum_class_summary" : "The CourseFacade class is part of the Facade pattern and provides methods to stop."
+    },
+    "CourseParticipator" : {
+      "class_name" : "CourseParticipator",
+      "class_type" : "class",
+      "method_summaries" : {
+        "prepareCourse" : {
+          "method_name" : "prepareCourse",
+          "return_type" : "void",
+          "parameters" : "",
+          "swum_summary" : "This method performs.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE prepare Course)"
+        },
+        "proceedCourse" : {
+          "method_name" : "proceedCourse",
+          "return_type" : "void",
+          "parameters" : "",
+          "swum_summary" : "This method performs.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE proceed Course)"
+        },
+        "stopCourse" : {
+          "method_name" : "stopCourse",
+          "return_type" : "void",
+          "parameters" : "",
+          "swum_summary" : "This method stops.",
+          "swum_actions" : "stop",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE stop (OBJECT Course))"
+        },
+        "goToSchool" : {
+          "method_name" : "goToSchool",
+          "return_type" : "void",
+          "parameters" : "",
+          "swum_summary" : "This method performs.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE go To School)"
+        },
+        "goHome" : {
+          "method_name" : "goHome",
+          "return_type" : "void",
+          "parameters" : "",
+          "swum_summary" : "This method performs.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE go Home)"
+        },
+        "name" : {
+          "method_name" : "name",
+          "return_type" : "String",
+          "parameters" : "",
+          "swum_summary" : "This method performs and returns a String.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE name)"
+        },
+        "action" : {
+          "method_name" : "action",
+          "return_type" : "void",
+          "parameters" : "Event",
+          "swum_summary" : "This method performs using a parameter.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE action)"
+        }
+      },
+      "swum_class_summary" : "The CourseParticipator class provides methods to stop."
+    },
+    "CourseStudent" : {
+      "class_name" : "CourseStudent",
+      "class_type" : "class",
+      "method_summaries" : {
+        "name" : {
+          "method_name" : "name",
+          "return_type" : "String",
+          "parameters" : "",
+          "swum_summary" : "This method performs and returns a String.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE name)"
+        }
+      },
+      "swum_class_summary" : "The CourseStudent class."
+    },
+    "CourseTeacher" : {
+      "class_name" : "CourseTeacher",
+      "class_type" : "class",
+      "method_summaries" : {
+        "name" : {
+          "method_name" : "name",
+          "return_type" : "String",
+          "parameters" : "",
+          "swum_summary" : "This method performs and returns a String.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE name)"
+        }
+      },
+      "swum_class_summary" : "The CourseTeacher class."
+    },
+    "Application" : {
+      "class_name" : "Application",
+      "class_type" : "class",
+      "method_summaries" : {
+        "main" : {
+          "method_name" : "main",
+          "return_type" : "void",
+          "parameters" : "String[]",
+          "swum_summary" : "This method performs using a parameter.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE main)"
+        }
+      },
+      "swum_class_summary" : "The Application class."
+    }
+  },
+  "swum_project_summary" : "This software project contains 5 classes with 13 methods. Primary operations include stop.",
+  "swum_design_pattern" : [ ]
+}

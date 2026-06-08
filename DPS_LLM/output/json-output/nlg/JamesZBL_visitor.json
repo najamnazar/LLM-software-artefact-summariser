@@ -1,0 +1,562 @@
+{
+	"final_summary" : "Boss.java: visitor: Boss acts as an element for visitor UnitVisitor, which is inherited by, which is a Visited to, which tos a String to. It is a public class that extends Unit. The 2 methods of Boss are beVisited (void) and toString (String). No methods call beVisited and beVisited calls no methods. No methods call toString and toString calls no methods.\n\n\nEngineer.java: visitor: Engineer acts as an element for visitor UnitVisitor, which is inherited by, which is a Visited to, which tos a String to. It is a public class that extends Unit. The 2 methods of Engineer are beVisited (void) and toString (String). No methods call beVisited and beVisited calls no methods. No methods call toString and toString calls no methods.\n\n\nManagerVisitor.java: visitor: ManagerVisitor acts as a visitor for element Boss, which overrides visitEngineer method of Boss, visitBoss method of Boss, visitManager method of Boss, which visits a Engineer to, which visits a Boss to, which visits a Manager to. ManagerVisitor acts as a visitor for element Engineer, which overrides visitEngineer method of Engineer, visitBoss method of Engineer, visitManager method of Engineer, which visits a Engineer to, which visits a Boss to, which visits a Manager to. ManagerVisitor acts as a visitor for element Manager, which overrides visitEngineer method of Manager, visitBoss method of Manager, visitManager method of Manager, which visits a Engineer to, which visits a Boss to, which visits a Manager to. ManagerVisitor acts as a visitor for element Unit, which overrides visitEngineer method of Unit, visitBoss method of Unit, visitManager method of Unit, which visits a Engineer to, which visits a Boss to, which visits a Manager to. It is a public class that extends UnitVisitor and that implements UnitVisitor. The 3 methods of ManagerVisitor are visitEngineer (void), visitBoss (void) and visitManager (void). No methods call visitEngineer and visitEngineer calls no methods. No methods call visitBoss and visitBoss calls no methods. No methods call visitManager and visitManager calls no methods.\n\n\nUnitVisitor.java: visitor: UnitVisitor acts as a visitor for element Manager, which is inherited by ManagerVisitor, BossVisitor, EngineerVisitor, which visits a Engineer to, which visits a Boss to, which visits a Manager to. UnitVisitor acts as a visitor for element Engineer, which is inherited by ManagerVisitor, BossVisitor, EngineerVisitor, which visits a Engineer to, which visits a Boss to, which visits a Manager to. UnitVisitor acts as a visitor for element Boss, which is inherited by ManagerVisitor, BossVisitor, EngineerVisitor, which visits a Engineer to, which visits a Boss to, which visits a Manager to. UnitVisitor acts as a visitor for element Unit, which is inherited by ManagerVisitor, BossVisitor, EngineerVisitor, which visits a Engineer to, which visits a Boss to, which visits a Manager to. It is a public interface. The 3 methods of UnitVisitor are visitEngineer (void), visitBoss (void) and visitManager (void). No methods call visitEngineer and visitEngineer calls no methods. No methods call visitBoss and visitBoss calls no methods. No methods call visitManager and visitManager calls no methods.\n\n\nManager.java: visitor: Manager acts as an element for visitor UnitVisitor, which is inherited by, which is a Visited to, which tos a String to. It is a public class that extends Unit. The 2 methods of Manager are beVisited (void) and toString (String). No methods call beVisited and beVisited calls no methods. No methods call toString and toString calls no methods.\n\n\nBossVisitor.java: visitor: BossVisitor acts as a visitor for element Boss, which overrides visitEngineer method of Boss, visitBoss method of Boss, visitManager method of Boss, which visits a Engineer to, which visits a Boss to, which visits a Manager to. BossVisitor acts as a visitor for element Manager, which overrides visitEngineer method of Manager, visitBoss method of Manager, visitManager method of Manager, which visits a Engineer to, which visits a Boss to, which visits a Manager to. BossVisitor acts as a visitor for element Engineer, which overrides visitEngineer method of Engineer, visitBoss method of Engineer, visitManager method of Engineer, which visits a Engineer to, which visits a Boss to, which visits a Manager to. BossVisitor acts as a visitor for element Unit, which overrides visitEngineer method of Unit, visitBoss method of Unit, visitManager method of Unit, which visits a Engineer to, which visits a Boss to, which visits a Manager to. It is a public class that extends UnitVisitor and that implements UnitVisitor. The 3 methods of BossVisitor are visitEngineer (void), visitBoss (void) and visitManager (void). No methods call visitEngineer and visitEngineer calls no methods. No methods call visitBoss and visitBoss calls no methods. No methods call visitManager and visitManager calls no methods.\n\n\nUnit.java: visitor: Unit acts as an element for visitor UnitVisitor, which is inherited by, which is a Visited to. It is a public abstract class. The only method of Unit is beVisited (void). No methods call beVisited and beVisited calls no methods.\n\n\nEngineerVisitor.java: visitor: EngineerVisitor acts as a visitor for element Manager, which overrides visitEngineer method of Manager, visitBoss method of Manager, visitManager method of Manager, which visits a Engineer to, which visits a Boss to, which visits a Manager to. EngineerVisitor acts as a visitor for element Boss, which overrides visitEngineer method of Boss, visitBoss method of Boss, visitManager method of Boss, which visits a Engineer to, which visits a Boss to, which visits a Manager to. EngineerVisitor acts as a visitor for element Engineer, which overrides visitEngineer method of Engineer, visitBoss method of Engineer, visitManager method of Engineer, which visits a Engineer to, which visits a Boss to, which visits a Manager to. EngineerVisitor acts as a visitor for element Unit, which overrides visitEngineer method of Unit, visitBoss method of Unit, visitManager method of Unit, which visits a Engineer to, which visits a Boss to, which visits a Manager to. It is a public class that extends UnitVisitor and that implements UnitVisitor. The 3 methods of EngineerVisitor are visitEngineer (void), visitBoss (void) and visitManager (void). No methods call visitEngineer and visitEngineer calls no methods. No methods call visitBoss and visitBoss calls no methods. No methods call visitManager and visitManager calls no methods.\n\n\nApplication.java: It is a public class. The only method of Application is main (void). No methods call main and main calls no methods.\n\n\n",
+	"JamesZBL/visitor" : {
+		"Boss" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 2,
+				"EXTENDSFROM" : [ "Unit" ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Boss",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ {
+					"PARAMETERNAME" : "children",
+					"PARAMETERTYPE" : "Unit..."
+				} ]
+			} ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "beVisited",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "visitor",
+					"PARAMETERTYPE" : "UnitVisitor"
+				} ]
+			}, {
+				"METHODNAME" : "toString",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"Engineer" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 2,
+				"EXTENDSFROM" : [ "Unit" ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Engineer",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ {
+					"PARAMETERNAME" : "children",
+					"PARAMETERTYPE" : "Unit..."
+				} ]
+			} ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "beVisited",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "visitor",
+					"PARAMETERTYPE" : "UnitVisitor"
+				} ]
+			}, {
+				"METHODNAME" : "toString",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"ManagerVisitor" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "Logger",
+				"FIELDMODIFIERTYPE" : [ "private", "static", "final" ],
+				"FIELDDECLARATION" : [ "LOGGER = LoggerFactory.getLogger(ManagerVisitor.class)" ],
+				"FIELDDATATYPE" : "Logger",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 2,
+				"EXTENDSFROM" : [ "UnitVisitor" ],
+				"IMPLEMENTSFROM" : [ "UnitVisitor" ],
+				"CLASSNAME" : "ManagerVisitor",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "visitEngineer",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "engineer",
+					"PARAMETERTYPE" : "Engineer"
+				} ]
+			}, {
+				"METHODNAME" : "visitBoss",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "boss",
+					"PARAMETERTYPE" : "Boss"
+				} ]
+			}, {
+				"METHODNAME" : "visitManager",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "manager",
+					"PARAMETERTYPE" : "Manager"
+				} ]
+			} ]
+		},
+		"UnitVisitor" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "UnitVisitor",
+				"ISINTERFACEORNOT" : true,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "visitEngineer",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "engineer",
+					"PARAMETERTYPE" : "Engineer"
+				} ]
+			}, {
+				"METHODNAME" : "visitBoss",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "boss",
+					"PARAMETERTYPE" : "Boss"
+				} ]
+			}, {
+				"METHODNAME" : "visitManager",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "manager",
+					"PARAMETERTYPE" : "Manager"
+				} ]
+			} ]
+		},
+		"Manager" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 2,
+				"EXTENDSFROM" : [ "Unit" ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Manager",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ {
+					"PARAMETERNAME" : "children",
+					"PARAMETERTYPE" : "Unit..."
+				} ]
+			} ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "beVisited",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "visitor",
+					"PARAMETERTYPE" : "UnitVisitor"
+				} ]
+			}, {
+				"METHODNAME" : "toString",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"BossVisitor" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "Logger",
+				"FIELDMODIFIERTYPE" : [ "private", "static", "final" ],
+				"FIELDDECLARATION" : [ "LOGGER = LoggerFactory.getLogger(BossVisitor.class)" ],
+				"FIELDDATATYPE" : "Logger",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 2,
+				"EXTENDSFROM" : [ "UnitVisitor" ],
+				"IMPLEMENTSFROM" : [ "UnitVisitor" ],
+				"CLASSNAME" : "BossVisitor",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "visitEngineer",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "engineer",
+					"PARAMETERTYPE" : "Engineer"
+				} ]
+			}, {
+				"METHODNAME" : "visitBoss",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "boss",
+					"PARAMETERTYPE" : "Boss"
+				} ]
+			}, {
+				"METHODNAME" : "visitManager",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "manager",
+					"PARAMETERTYPE" : "Manager"
+				} ]
+			} ]
+		},
+		"Unit" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "Unit[]",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "children" ],
+				"FIELDDATATYPE" : "Unit",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 1,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Unit",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : true,
+				"CLASSMODIFIERTYPE" : [ "public", "abstract" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ {
+					"PARAMETERNAME" : "children",
+					"PARAMETERTYPE" : "Unit..."
+				} ]
+			} ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "childUnit" ],
+				"VARIABLECOMMONTYPE" : "Unit",
+				"VARIABLEELEMENTTYPE" : "Unit"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "beVisited",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "LOOP" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "visitor",
+					"PARAMETERTYPE" : "UnitVisitor"
+				} ]
+			} ]
+		},
+		"EngineerVisitor" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "Logger",
+				"FIELDMODIFIERTYPE" : [ "private", "static", "final" ],
+				"FIELDDECLARATION" : [ "LOGGER = LoggerFactory.getLogger(EngineerVisitor.class)" ],
+				"FIELDDATATYPE" : "Logger",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 2,
+				"EXTENDSFROM" : [ "UnitVisitor" ],
+				"IMPLEMENTSFROM" : [ "UnitVisitor" ],
+				"CLASSNAME" : "EngineerVisitor",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "visitEngineer",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "engineer",
+					"PARAMETERTYPE" : "Engineer"
+				} ]
+			}, {
+				"METHODNAME" : "visitBoss",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "boss",
+					"PARAMETERTYPE" : "Boss"
+				} ]
+			}, {
+				"METHODNAME" : "visitManager",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "manager",
+					"PARAMETERTYPE" : "Manager"
+				} ]
+			} ]
+		},
+		"Application" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 3,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Application",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "boss = new Boss(new Manager(new Engineer(), new Engineer(), new Engineer()), new Manager(new Engineer(), new Engineer()), new Manager(new Engineer()))" ],
+				"VARIABLECOMMONTYPE" : "Boss",
+				"VARIABLEELEMENTTYPE" : "Boss"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "main",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public", "static" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 1,
+				"NUMBEROFOUTGOINGMETHODS" : 3,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 4,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "args",
+					"PARAMETERTYPE" : "String[]"
+				} ]
+			} ]
+		}
+	},
+	"design_pattern" : [ {
+		"visitor" : {
+			"Boss" : {
+				"visitor" : {
+					"UnitVisitor" : [ "ManagerVisitor", "BossVisitor", "EngineerVisitor" ]
+				}
+			},
+			"Engineer" : {
+				"visitor" : {
+					"UnitVisitor" : [ "ManagerVisitor", "BossVisitor", "EngineerVisitor" ]
+				}
+			},
+			"Manager" : {
+				"visitor" : {
+					"UnitVisitor" : [ "ManagerVisitor", "BossVisitor", "EngineerVisitor" ]
+				}
+			},
+			"Unit" : {
+				"visitor" : {
+					"UnitVisitor" : [ "ManagerVisitor", "BossVisitor", "EngineerVisitor" ]
+				}
+			}
+		}
+	} ],
+	"summary_NLG" : {
+		"visitor" : {
+			"Boss" : [ "Boss acts as an element for visitor UnitVisitor, which is inherited by, which is a Visited to, which tos a String to." ],
+			"Engineer" : [ "Engineer acts as an element for visitor UnitVisitor, which is inherited by, which is a Visited to, which tos a String to." ],
+			"ManagerVisitor" : [ "ManagerVisitor acts as a visitor for element Boss, which overrides visitEngineer method of Boss, visitBoss method of Boss, visitManager method of Boss, which visits a Engineer to, which visits a Boss to, which visits a Manager to.", "ManagerVisitor acts as a visitor for element Engineer, which overrides visitEngineer method of Engineer, visitBoss method of Engineer, visitManager method of Engineer, which visits a Engineer to, which visits a Boss to, which visits a Manager to.", "ManagerVisitor acts as a visitor for element Manager, which overrides visitEngineer method of Manager, visitBoss method of Manager, visitManager method of Manager, which visits a Engineer to, which visits a Boss to, which visits a Manager to.", "ManagerVisitor acts as a visitor for element Unit, which overrides visitEngineer method of Unit, visitBoss method of Unit, visitManager method of Unit, which visits a Engineer to, which visits a Boss to, which visits a Manager to." ],
+			"UnitVisitor" : [ "UnitVisitor acts as a visitor for element Manager, which is inherited by ManagerVisitor, BossVisitor, EngineerVisitor, which visits a Engineer to, which visits a Boss to, which visits a Manager to.", "UnitVisitor acts as a visitor for element Engineer, which is inherited by ManagerVisitor, BossVisitor, EngineerVisitor, which visits a Engineer to, which visits a Boss to, which visits a Manager to.", "UnitVisitor acts as a visitor for element Boss, which is inherited by ManagerVisitor, BossVisitor, EngineerVisitor, which visits a Engineer to, which visits a Boss to, which visits a Manager to.", "UnitVisitor acts as a visitor for element Unit, which is inherited by ManagerVisitor, BossVisitor, EngineerVisitor, which visits a Engineer to, which visits a Boss to, which visits a Manager to." ],
+			"BossVisitor" : [ "BossVisitor acts as a visitor for element Boss, which overrides visitEngineer method of Boss, visitBoss method of Boss, visitManager method of Boss, which visits a Engineer to, which visits a Boss to, which visits a Manager to.", "BossVisitor acts as a visitor for element Manager, which overrides visitEngineer method of Manager, visitBoss method of Manager, visitManager method of Manager, which visits a Engineer to, which visits a Boss to, which visits a Manager to.", "BossVisitor acts as a visitor for element Engineer, which overrides visitEngineer method of Engineer, visitBoss method of Engineer, visitManager method of Engineer, which visits a Engineer to, which visits a Boss to, which visits a Manager to.", "BossVisitor acts as a visitor for element Unit, which overrides visitEngineer method of Unit, visitBoss method of Unit, visitManager method of Unit, which visits a Engineer to, which visits a Boss to, which visits a Manager to." ],
+			"EngineerVisitor" : [ "EngineerVisitor acts as a visitor for element Manager, which overrides visitEngineer method of Manager, visitBoss method of Manager, visitManager method of Manager, which visits a Engineer to, which visits a Boss to, which visits a Manager to.", "EngineerVisitor acts as a visitor for element Boss, which overrides visitEngineer method of Boss, visitBoss method of Boss, visitManager method of Boss, which visits a Engineer to, which visits a Boss to, which visits a Manager to.", "EngineerVisitor acts as a visitor for element Engineer, which overrides visitEngineer method of Engineer, visitBoss method of Engineer, visitManager method of Engineer, which visits a Engineer to, which visits a Boss to, which visits a Manager to.", "EngineerVisitor acts as a visitor for element Unit, which overrides visitEngineer method of Unit, visitBoss method of Unit, visitManager method of Unit, which visits a Engineer to, which visits a Boss to, which visits a Manager to." ],
+			"Manager" : [ "Manager acts as an element for visitor UnitVisitor, which is inherited by, which is a Visited to, which tos a String to." ],
+			"Unit" : [ "Unit acts as an element for visitor UnitVisitor, which is inherited by, which is a Visited to." ]
+		}
+	},
+	"project_identifier" : "JamesZBL/visitor"
+}

@@ -1,0 +1,15 @@
+Summary Length Statistics (words and non-whitespace characters)
+Shows averages and ranges for each source file.
+
+Source                 | Count | AvgWords | MinWords | MaxWords | AvgChars | MinChars | MaxChars
+------------------------------------------------------------------------------------------------
+LLM_GEMINI_NC_SUMMARY  |   150 |     5.73 |        1 |       11 |    35.94 |        8 |       75
+LLM_GEMINI_SUMMARY     |   150 |     6.17 |        1 |       11 |    38.39 |       12 |       68
+swum_summaries         |   150 |    13.61 |        3 |       31 |    76.31 |       13 |      173
+LLM_MISTRAL_SUMMARY    |   150 |    41.09 |       30 |       58 |   271.61 |      187 |      385
+LLM_GPT_SUMMARY        |   150 |    41.44 |       30 |       49 |   259.65 |      184 |      397
+LLM_MISTRAL_NC_SUMMARY |   150 |    41.67 |       29 |       54 |   275.09 |      197 |      363
+LLM_GPT_NC_SUMMARY     |   150 |    41.75 |       35 |       49 |   264.27 |      198 |      383
+LLM_CLAUDE_SUMMARY     |   150 |    42.60 |       32 |       49 |   291.97 |      197 |      392
+LLM_CLAUDE_NC_SUMMARY  |   150 |    43.37 |       35 |       52 |   295.40 |      205 |      392
+nlg_summaries          |   150 |    57.51 |       12 |      151 |   372.79 |       54 |      934

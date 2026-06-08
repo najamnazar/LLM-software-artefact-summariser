@@ -1,0 +1,409 @@
+{
+	"AbdurRKhalid/Facade" : {
+		"Codec" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Codec",
+				"ISINTERFACEORNOT" : true,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ ]
+		},
+		"Test" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 1,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Test",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "converter = new VideoConversionFacade()" ],
+				"VARIABLECOMMONTYPE" : "VideoConversionFacade",
+				"VARIABLEELEMENTTYPE" : "VideoConversionFacade"
+			}, {
+				"VARIABLEDECLARATION" : [ "mp4Video = converter.convertVideo(\"example.ogg\", \"mp4\")" ],
+				"VARIABLECOMMONTYPE" : "File",
+				"VARIABLEELEMENTTYPE" : "File"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "main",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public", "static" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 2,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "VideoConversionFacade",
+					"CALLEEMETHODNAME" : "convertVideo"
+				} ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "args",
+					"PARAMETERTYPE" : "String[]"
+				} ]
+			} ]
+		},
+		"OggCompressionCodec" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "String",
+				"FIELDMODIFIERTYPE" : [ "public" ],
+				"FIELDDECLARATION" : [ "type = \"ogg\"" ],
+				"FIELDDATATYPE" : "String",
+				"FIELDACCESSSPECIFIER" : "PUBLIC"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ "Codec" ],
+				"CLASSNAME" : "OggCompressionCodec",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ ]
+		},
+		"VideoConversionFacade" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 7,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "VideoConversionFacade",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "file = new VideoFile(fileName)" ],
+				"VARIABLECOMMONTYPE" : "VideoFile",
+				"VARIABLEELEMENTTYPE" : "VideoFile"
+			}, {
+				"VARIABLEDECLARATION" : [ "sourceCodec = CodecFactory.extract(file)" ],
+				"VARIABLECOMMONTYPE" : "Codec",
+				"VARIABLEELEMENTTYPE" : "Codec"
+			}, {
+				"VARIABLEDECLARATION" : [ "destinationCodec" ],
+				"VARIABLECOMMONTYPE" : "Codec",
+				"VARIABLEELEMENTTYPE" : "Codec"
+			}, {
+				"VARIABLEDECLARATION" : [ "buffer = BitrateReader.read(file, sourceCodec)" ],
+				"VARIABLECOMMONTYPE" : "VideoFile",
+				"VARIABLEELEMENTTYPE" : "VideoFile"
+			}, {
+				"VARIABLEDECLARATION" : [ "intermediateResult = BitrateReader.convert(buffer, destinationCodec)" ],
+				"VARIABLECOMMONTYPE" : "VideoFile",
+				"VARIABLEELEMENTTYPE" : "VideoFile"
+			}, {
+				"VARIABLEDECLARATION" : [ "result = (new AudioMixer()).fix(intermediateResult)" ],
+				"VARIABLECOMMONTYPE" : "File",
+				"VARIABLEELEMENTTYPE" : "File"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "convertVideo",
+				"NUMBEROFINCOMINGMETHODS" : 1,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "Test"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "IF", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 6,
+				"NUMBEROFOUTGOINGMETHODS" : 7,
+				"METHODRETURNTYPE" : "File",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "CodecFactory",
+					"CALLEEMETHODNAME" : "extract"
+				}, {
+					"CALLEECLASS" : "BitrateReader",
+					"CALLEEMETHODNAME" : "read"
+				}, {
+					"CALLEECLASS" : "BitrateReader",
+					"CALLEEMETHODNAME" : "convert"
+				}, {
+					"CALLEECLASS" : "AudioMixer",
+					"CALLEEMETHODNAME" : "fix"
+				} ],
+				"NUMBEROFMETHODLINES" : 10,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "fileName",
+					"PARAMETERTYPE" : "String"
+				}, {
+					"PARAMETERNAME" : "format",
+					"PARAMETERTYPE" : "String"
+				} ]
+			} ]
+		},
+		"VideoFile" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "String",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "name" ],
+				"FIELDDATATYPE" : "String",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "String",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "codecType" ],
+				"FIELDDATATYPE" : "String",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 2,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "VideoFile",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ {
+					"PARAMETERNAME" : "name",
+					"PARAMETERTYPE" : "String"
+				} ]
+			} ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getCodecType",
+				"NUMBEROFINCOMINGMETHODS" : 1,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "extract",
+					"CALLEDCLASS" : "CodecFactory"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "getName",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"AudioMixer" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 1,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "AudioMixer",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "fix",
+				"NUMBEROFINCOMINGMETHODS" : 1,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "convertVideo",
+					"CALLEDCLASS" : "VideoConversionFacade"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "File",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "result",
+					"PARAMETERTYPE" : "VideoFile"
+				} ]
+			} ]
+		},
+		"CodecFactory" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 4,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "CodecFactory",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "type = file.getCodecType()" ],
+				"VARIABLECOMMONTYPE" : "String",
+				"VARIABLEELEMENTTYPE" : "String"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "extract",
+				"NUMBEROFINCOMINGMETHODS" : 1,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "convertVideo",
+					"CALLEDCLASS" : "VideoConversionFacade"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public", "static" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "IF" ],
+				"NUMBEROFMETHODVARIABLES" : 1,
+				"NUMBEROFOUTGOINGMETHODS" : 4,
+				"METHODRETURNTYPE" : "Codec",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "VideoFile",
+					"CALLEEMETHODNAME" : "getCodecType"
+				} ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "file",
+					"PARAMETERTYPE" : "VideoFile"
+				} ]
+			} ]
+		},
+		"MPEG4CompressionCodec" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "String",
+				"FIELDMODIFIERTYPE" : [ "public" ],
+				"FIELDDECLARATION" : [ "type = \"mp4\"" ],
+				"FIELDDATATYPE" : "String",
+				"FIELDACCESSSPECIFIER" : "PUBLIC"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ "Codec" ],
+				"CLASSNAME" : "MPEG4CompressionCodec",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ ]
+		},
+		"BitrateReader" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 2,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "BitrateReader",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "read",
+				"NUMBEROFINCOMINGMETHODS" : 1,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "convertVideo",
+					"CALLEDCLASS" : "VideoConversionFacade"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public", "static" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "VideoFile",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "file",
+					"PARAMETERTYPE" : "VideoFile"
+				}, {
+					"PARAMETERNAME" : "codec",
+					"PARAMETERTYPE" : "Codec"
+				} ]
+			}, {
+				"METHODNAME" : "convert",
+				"NUMBEROFINCOMINGMETHODS" : 1,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "convertVideo",
+					"CALLEDCLASS" : "VideoConversionFacade"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public", "static" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "VideoFile",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "buffer",
+					"PARAMETERTYPE" : "VideoFile"
+				}, {
+					"PARAMETERNAME" : "codec",
+					"PARAMETERTYPE" : "Codec"
+				} ]
+			} ]
+		}
+	},
+	"final_summary" : "Codec.java: It is a public interface.\nTest.java: facade: Test acts as a facade for subsystem VideoConversionFacade, which main calls convertVideo method of VideoConversionFacade. It is a public class. The only method of Test is main (void). No methods call main and main calls only one method : convertVideo method of class VideoConversionFacade.\n\n\nOggCompressionCodec.java: It is a public class that implements Codec.\nVideoConversionFacade.java: facade: VideoConversionFacade acts as a subsystem for facade Test, which main method of Test calls convertVideo. VideoConversionFacade acts as a facade for subsystem CodecFactory, AudioMixer, BitrateReader, which convertVideo calls extract method of CodecFactory, read method of BitrateReader, convert method of BitrateReader, fix method of AudioMixer. It is a public class. The only method of VideoConversionFacade is convertVideo (File). Only one method ( main method of class Test ) calls convertVideo and convertVideo calls 4 methods : read method of class BitrateReader, extract method of class CodecFactory, convert method of class BitrateReader and fix method of class AudioMixer.\n\n\nVideoFile.java: facade: VideoFile acts as a subsystem for facade CodecFactory, which extract method of CodecFactory calls getCodecType. It is a public class. The 2 methods of VideoFile are getCodecType (String) and getName (String). Only one method ( extract method of class CodecFactory ) calls getCodecType and getCodecType calls no methods. No methods call getName and getName calls no methods.\n\n\nAudioMixer.java: facade: AudioMixer acts as a subsystem for facade VideoConversionFacade, which convertVideo method of VideoConversionFacade calls fix. It is a public class. The only method of AudioMixer is fix (File). Only one method ( convertVideo method of class VideoConversionFacade ) calls fix and fix calls no methods.\n\n\nCodecFactory.java: facade: CodecFactory acts as a facade for subsystem VideoFile, which extract calls getCodecType method of VideoFile. CodecFactory acts as a subsystem for facade VideoConversionFacade, which convertVideo method of VideoConversionFacade calls extract. It is a public class. The only method of CodecFactory is extract (Codec). Only one method ( convertVideo method of class VideoConversionFacade ) calls extract and extract calls only one method : getCodecType method of class VideoFile.\n\n\nMPEG4CompressionCodec.java: It is a public class that implements Codec.\nBitrateReader.java: facade: BitrateReader acts as a subsystem for facade VideoConversionFacade, which convertVideo method of VideoConversionFacade calls read, which convertVideo method of VideoConversionFacade calls convert. It is a public class. The 2 methods of BitrateReader are read (VideoFile) and convert (VideoFile). Only one method ( convertVideo method of class VideoConversionFacade ) calls read and read calls no methods. Only one method ( convertVideo method of class VideoConversionFacade ) calls convert and convert calls no methods.\n\n\n",
+	"design_pattern" : [ {
+		"facade" : {
+			"Test" : [ "VideoConversionFacade" ],
+			"VideoConversionFacade" : [ "CodecFactory", "AudioMixer", "BitrateReader" ],
+			"CodecFactory" : [ "VideoFile" ]
+		}
+	} ],
+	"summary_NLG" : {
+		"facade" : {
+			"VideoConversionFacade" : [ "VideoConversionFacade acts as a subsystem for facade Test, which main method of Test calls convertVideo.", "VideoConversionFacade acts as a facade for subsystem CodecFactory, AudioMixer, BitrateReader, which convertVideo calls extract method of CodecFactory, read method of BitrateReader, convert method of BitrateReader, fix method of AudioMixer." ],
+			"Test" : [ "Test acts as a facade for subsystem VideoConversionFacade, which main calls convertVideo method of VideoConversionFacade." ],
+			"VideoFile" : [ "VideoFile acts as a subsystem for facade CodecFactory, which extract method of CodecFactory calls getCodecType." ],
+			"CodecFactory" : [ "CodecFactory acts as a facade for subsystem VideoFile, which extract calls getCodecType method of VideoFile.", "CodecFactory acts as a subsystem for facade VideoConversionFacade, which convertVideo method of VideoConversionFacade calls extract." ],
+			"AudioMixer" : [ "AudioMixer acts as a subsystem for facade VideoConversionFacade, which convertVideo method of VideoConversionFacade calls fix." ],
+			"BitrateReader" : [ "BitrateReader acts as a subsystem for facade VideoConversionFacade, which convertVideo method of VideoConversionFacade calls read, which convertVideo method of VideoConversionFacade calls convert." ]
+		}
+	},
+	"project_identifier" : "AbdurRKhalid/Facade"
+}

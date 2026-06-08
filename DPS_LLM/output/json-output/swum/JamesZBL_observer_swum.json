@@ -1,0 +1,149 @@
+{
+  "project_name" : "JamesZBL/observer",
+  "swum_version" : "1.0",
+  "generated_timestamp" : 1780917880846,
+  "class_summaries" : {
+    "Northern" : {
+      "class_name" : "Northern",
+      "class_type" : "class",
+      "method_summaries" : {
+        "update" : {
+          "method_name" : "update",
+          "return_type" : "void",
+          "parameters" : "TimePoint",
+          "swum_summary" : "This method receives updates from publisher as part of the observer pattern.",
+          "swum_actions" : "update",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE update)"
+        }
+      },
+      "swum_class_summary" : "The Northern class acts as a concrete observer in the observer pattern and acts as a visitor in the visitor pattern and provides methods to update."
+    },
+    "TimePoint" : {
+      "class_name" : "TimePoint",
+      "class_type" : "class",
+      "method_summaries" : {
+        "toString" : {
+          "method_name" : "toString",
+          "return_type" : "String",
+          "parameters" : "",
+          "swum_summary" : "This method performs and returns a String.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE to String)"
+        }
+      },
+      "swum_class_summary" : "The TimePoint class."
+    },
+    "Time" : {
+      "class_name" : "Time",
+      "class_type" : "class",
+      "method_summaries" : {
+        "addObserver" : {
+          "method_name" : "addObserver",
+          "return_type" : "void",
+          "parameters" : "TimeObserver",
+          "swum_summary" : "This method subscribes observers as part of the observer pattern.",
+          "swum_actions" : "add",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE add (OBJECT Observer))"
+        },
+        "removeObserver" : {
+          "method_name" : "removeObserver",
+          "return_type" : "void",
+          "parameters" : "TimeObserver",
+          "swum_summary" : "This method unsubscribes observers as part of the observer pattern.",
+          "swum_actions" : "remove",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE remove (OBJECT Observer))"
+        },
+        "passing" : {
+          "method_name" : "passing",
+          "return_type" : "void",
+          "parameters" : "",
+          "swum_summary" : "This method performs. The Time class acts as a publisher in the observer pattern and acts as an element in the visitor pattern.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE passing)"
+        },
+        "notifyObservers" : {
+          "method_name" : "notifyObservers",
+          "return_type" : "void",
+          "parameters" : "",
+          "swum_summary" : "This method notifies all subscribers as part of the observer pattern.",
+          "swum_actions" : "notify",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE notify (OBJECT Observers))"
+        }
+      },
+      "swum_class_summary" : "The Time class acts as a publisher in the observer pattern and acts as an element in the visitor pattern and provides methods to add, remove, notify."
+    },
+    "Southern" : {
+      "class_name" : "Southern",
+      "class_type" : "class",
+      "method_summaries" : {
+        "update" : {
+          "method_name" : "update",
+          "return_type" : "void",
+          "parameters" : "TimePoint",
+          "swum_summary" : "This method receives updates from publisher as part of the observer pattern.",
+          "swum_actions" : "update",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE update)"
+        }
+      },
+      "swum_class_summary" : "The Southern class acts as a concrete observer in the observer pattern and acts as a visitor in the visitor pattern and provides methods to update."
+    },
+    "TimeObserver" : {
+      "class_name" : "TimeObserver",
+      "class_type" : "interface",
+      "method_summaries" : {
+        "update" : {
+          "method_name" : "update",
+          "return_type" : "void",
+          "parameters" : "TimePoint",
+          "swum_summary" : "This method notifies all subscribers as part of the observer pattern.",
+          "swum_actions" : "update",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE update)"
+        }
+      },
+      "swum_class_summary" : "The TimeObserver class acts as a publisher in the observer pattern and acts as a visitor in the visitor pattern and provides methods to update."
+    },
+    "Application" : {
+      "class_name" : "Application",
+      "class_type" : "class",
+      "method_summaries" : {
+        "main" : {
+          "method_name" : "main",
+          "return_type" : "void",
+          "parameters" : "String[]",
+          "swum_summary" : "This method performs using a parameter.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE main)"
+        }
+      },
+      "swum_class_summary" : "The Application class."
+    }
+  },
+  "swum_project_summary" : "This software project contains 6 classes with 9 methods. The system implements multiple design patterns including observer, visitor. Primary operations include add, notify, remove, update.",
+  "swum_design_pattern" : [ {
+    "visitor" : {
+      "Time" : {
+        "visitor" : {
+          "TimeObserver" : [ "Northern", "Southern" ]
+        }
+      }
+    }
+  }, {
+    "observer" : {
+      "TimeObserver" : {
+        "concrete_observer" : [ "Northern", "Southern" ],
+        "publisher" : {
+          "Time" : [ ]
+        }
+      }
+    }
+  } ]
+}

@@ -1,0 +1,704 @@
+{
+	"final_summary" : "ApplicationEventPublisher.java: It is a public interface. The 2 methods of ApplicationEventPublisher are publishEvent (void) and publishEvent (void). No methods call publishEvent and publishEvent calls no methods. No methods call publishEvent and publishEvent calls no methods.\n\n\nApplicationListener.java: It is a public interface that extends EventListener. The 3 methods of ApplicationListener are onApplicationEvent (void), supportsAsyncExecution (boolean) and forPayload (ApplicationListener<PayloadApplicationEvent<T>>). No methods call onApplicationEvent and onApplicationEvent calls no methods. No methods call supportsAsyncExecution and supportsAsyncExecution calls no methods. No methods call forPayload and forPayload calls no methods.\n\n\nAbstractApplicationEventMulticaster.java: It is a public abstract class that implements ApplicationEventMulticaster, BeanClassLoaderAware and BeanFactoryAware. The 22 methods of AbstractApplicationEventMulticaster are setBeanClassLoader (void), setBeanFactory (void), getBeanFactory (ConfigurableBeanFactory), addApplicationListener (void), addApplicationListenerBean (void), removeApplicationListener (void), removeApplicationListenerBean (void), removeApplicationListeners (void), removeApplicationListenerBeans (void), removeAllListeners (void), getApplicationListeners (Collection<ApplicationListener<?>>), getApplicationListeners (Collection<ApplicationListener<?>>), retrieveApplicationListeners (Collection<ApplicationListener<?>>), supportsEvent (boolean), supportsEvent (boolean), supportsEvent (boolean), equals (boolean), hashCode (int), toString (String), compareTo (int), getApplicationListeners (Collection<ApplicationListener<?>>) and getApplicationListeners (Collection<ApplicationListener<?>>). No methods call setBeanClassLoader and setBeanClassLoader calls no methods. No methods call setBeanFactory and setBeanFactory calls no methods. No methods call getBeanFactory and getBeanFactory calls no methods. No methods call addApplicationListener and addApplicationListener calls no methods. No methods call addApplicationListenerBean and addApplicationListenerBean calls no methods. No methods call removeApplicationListener and removeApplicationListener calls no methods. No methods call removeApplicationListenerBean and removeApplicationListenerBean calls no methods. No methods call removeApplicationListeners and removeApplicationListeners calls no methods. No methods call removeApplicationListenerBeans and removeApplicationListenerBeans calls no methods. No methods call removeAllListeners and removeAllListeners calls no methods. No methods call getApplicationListeners and getApplicationListeners calls only one method : getApplicationListeners method of class DefaultListenerRetriever. No methods call getApplicationListeners and getApplicationListeners calls only one method : getApplicationListeners method of class DefaultListenerRetriever. No methods call retrieveApplicationListeners and retrieveApplicationListeners calls no methods. No methods call supportsEvent and supportsEvent calls no methods. No methods call supportsEvent and supportsEvent calls no methods. No methods call supportsEvent and supportsEvent calls no methods. No methods call equals and equals calls no methods. No methods call hashCode and hashCode calls no methods. No methods call toString and toString calls no methods. No methods call compareTo and compareTo calls no methods. No methods call getApplicationListeners and getApplicationListeners calls only one method : getApplicationListeners method of class DefaultListenerRetriever. No methods call getApplicationListeners and getApplicationListeners calls only one method : getApplicationListeners method of class DefaultListenerRetriever.\n\n\n",
+	"design_pattern" : [ ],
+	"summary_NLG" : { },
+	"spring-framework/Observer" : {
+		"ApplicationEventPublisher" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 1,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "ApplicationEventPublisher",
+				"ISINTERFACEORNOT" : true,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "publishEvent",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "default" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "event",
+					"PARAMETERTYPE" : "ApplicationEvent"
+				} ]
+			}, {
+				"METHODNAME" : "publishEvent",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "event",
+					"PARAMETERTYPE" : "Object"
+				} ]
+			} ]
+		},
+		"ApplicationListener" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 2,
+				"EXTENDSFROM" : [ "EventListener" ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "ApplicationListener",
+				"ISINTERFACEORNOT" : true,
+				"CLASSTYPEPARAMS" : [ "E extends ApplicationEvent" ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "onApplicationEvent",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "event",
+					"PARAMETERTYPE" : "E"
+				} ]
+			}, {
+				"METHODNAME" : "supportsAsyncExecution",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "default" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "boolean",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "forPayload",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "static" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "ApplicationListener<PayloadApplicationEvent<T>>",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "consumer",
+					"PARAMETERTYPE" : "Consumer<T>"
+				} ]
+			} ]
+		},
+		"AbstractApplicationEventMulticaster" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "DefaultListenerRetriever",
+				"FIELDMODIFIERTYPE" : [ "private", "final" ],
+				"FIELDDECLARATION" : [ "defaultRetriever = new DefaultListenerRetriever()" ],
+				"FIELDDATATYPE" : "DefaultListenerRetriever",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "Map<ListenerCacheKey, CachedListenerRetriever>",
+				"FIELDMODIFIERTYPE" : [ "final" ],
+				"FIELDDECLARATION" : [ "retrieverCache = new ConcurrentHashMap<>(64)" ],
+				"FIELDDATATYPE" : "Map<ListenerCacheKey, CachedListenerRetriever>",
+				"FIELDACCESSSPECIFIER" : "NONE"
+			}, {
+				"FIELDCOMMONTYPE" : "ClassLoader",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "beanClassLoader" ],
+				"FIELDDATATYPE" : "ClassLoader",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "ConfigurableBeanFactory",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "beanFactory" ],
+				"FIELDDATATYPE" : "ConfigurableBeanFactory",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "ResolvableType",
+				"FIELDMODIFIERTYPE" : [ "private", "final" ],
+				"FIELDDECLARATION" : [ "eventType" ],
+				"FIELDDATATYPE" : "ResolvableType",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "Class<?>",
+				"FIELDMODIFIERTYPE" : [ "private", "final" ],
+				"FIELDDECLARATION" : [ "sourceType" ],
+				"FIELDDATATYPE" : "Class<?>",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "Set<ApplicationListener<?>>",
+				"FIELDMODIFIERTYPE" : [ "public", "volatile" ],
+				"FIELDDECLARATION" : [ "applicationListeners" ],
+				"FIELDDATATYPE" : "Set<ApplicationListener<?>>",
+				"FIELDACCESSSPECIFIER" : "PUBLIC"
+			}, {
+				"FIELDCOMMONTYPE" : "Set<String>",
+				"FIELDMODIFIERTYPE" : [ "public", "volatile" ],
+				"FIELDDECLARATION" : [ "applicationListenerBeans" ],
+				"FIELDDATATYPE" : "Set<String>",
+				"FIELDACCESSSPECIFIER" : "PUBLIC"
+			}, {
+				"FIELDCOMMONTYPE" : "Set<ApplicationListener<?>>",
+				"FIELDMODIFIERTYPE" : [ "public", "final" ],
+				"FIELDDECLARATION" : [ "applicationListeners = new LinkedHashSet<>()" ],
+				"FIELDDATATYPE" : "Set<ApplicationListener<?>>",
+				"FIELDACCESSSPECIFIER" : "PUBLIC"
+			}, {
+				"FIELDCOMMONTYPE" : "Set<String>",
+				"FIELDMODIFIERTYPE" : [ "public", "final" ],
+				"FIELDDECLARATION" : [ "applicationListenerBeans = new LinkedHashSet<>()" ],
+				"FIELDDATATYPE" : "Set<String>",
+				"FIELDACCESSSPECIFIER" : "PUBLIC"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 94,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ "ApplicationEventMulticaster", "BeanClassLoaderAware", "BeanFactoryAware" ],
+				"CLASSNAME" : "AbstractApplicationEventMulticaster",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : true,
+				"CLASSMODIFIERTYPE" : [ "public", "abstract" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ {
+					"PARAMETERNAME" : "eventType",
+					"PARAMETERTYPE" : "ResolvableType"
+				}, {
+					"PARAMETERNAME" : "Class<?>",
+					"PARAMETERTYPE" : "@Nullable"
+				} ]
+			} ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "singletonTarget = AopProxyUtils.getSingletonTarget(listener)" ],
+				"VARIABLECOMMONTYPE" : "Object",
+				"VARIABLEELEMENTTYPE" : "Object"
+			}, {
+				"VARIABLEDECLARATION" : [ "source = event.getSource()" ],
+				"VARIABLECOMMONTYPE" : "Object",
+				"VARIABLEELEMENTTYPE" : "Object"
+			}, {
+				"VARIABLEDECLARATION" : [ "sourceType = (source != null ? source.getClass() : null)" ],
+				"VARIABLECOMMONTYPE" : "Class<?>",
+				"VARIABLEELEMENTTYPE" : "Class<?>"
+			}, {
+				"VARIABLEDECLARATION" : [ "cacheKey = new ListenerCacheKey(eventType, sourceType)" ],
+				"VARIABLECOMMONTYPE" : "ListenerCacheKey",
+				"VARIABLEELEMENTTYPE" : "ListenerCacheKey"
+			}, {
+				"VARIABLEDECLARATION" : [ "newRetriever = null" ],
+				"VARIABLECOMMONTYPE" : "CachedListenerRetriever",
+				"VARIABLEELEMENTTYPE" : "CachedListenerRetriever"
+			}, {
+				"VARIABLEDECLARATION" : [ "existingRetriever = this.retrieverCache.get(cacheKey)" ],
+				"VARIABLECOMMONTYPE" : "CachedListenerRetriever",
+				"VARIABLEELEMENTTYPE" : "CachedListenerRetriever"
+			}, {
+				"VARIABLEDECLARATION" : [ "result = existingRetriever.getApplicationListeners()" ],
+				"VARIABLECOMMONTYPE" : "Collection<ApplicationListener<?>>",
+				"VARIABLEELEMENTTYPE" : "Collection<ApplicationListener<?>>"
+			}, {
+				"VARIABLEDECLARATION" : [ "allListeners = new ArrayList<>()" ],
+				"VARIABLECOMMONTYPE" : "List<ApplicationListener<?>>",
+				"VARIABLEELEMENTTYPE" : "List<ApplicationListener<?>>"
+			}, {
+				"VARIABLEDECLARATION" : [ "filteredListeners = (retriever != null ? new LinkedHashSet<>() : null)" ],
+				"VARIABLECOMMONTYPE" : "Set<ApplicationListener<?>>",
+				"VARIABLEELEMENTTYPE" : "Set<ApplicationListener<?>>"
+			}, {
+				"VARIABLEDECLARATION" : [ "filteredListenerBeans = (retriever != null ? new LinkedHashSet<>() : null)" ],
+				"VARIABLECOMMONTYPE" : "Set<String>",
+				"VARIABLEELEMENTTYPE" : "Set<String>"
+			}, {
+				"VARIABLEDECLARATION" : [ "listeners" ],
+				"VARIABLECOMMONTYPE" : "Set<ApplicationListener<?>>",
+				"VARIABLEELEMENTTYPE" : "Set<ApplicationListener<?>>"
+			}, {
+				"VARIABLEDECLARATION" : [ "listenerBeans" ],
+				"VARIABLECOMMONTYPE" : "Set<String>",
+				"VARIABLEELEMENTTYPE" : "Set<String>"
+			}, {
+				"VARIABLEDECLARATION" : [ "listener" ],
+				"VARIABLECOMMONTYPE" : "ApplicationListener<?>",
+				"VARIABLEELEMENTTYPE" : "ApplicationListener<?>"
+			}, {
+				"VARIABLEDECLARATION" : [ "beanFactory = getBeanFactory()" ],
+				"VARIABLECOMMONTYPE" : "ConfigurableBeanFactory",
+				"VARIABLEELEMENTTYPE" : "ConfigurableBeanFactory"
+			}, {
+				"VARIABLEDECLARATION" : [ "listener = beanFactory.getSingleton(listenerBeanName)" ],
+				"VARIABLECOMMONTYPE" : "Object",
+				"VARIABLEELEMENTTYPE" : "Object"
+			}, {
+				"VARIABLEDECLARATION" : [ "listener = beanFactory.getBean(listenerBeanName, ApplicationListener.class)" ],
+				"VARIABLECOMMONTYPE" : "ApplicationListener<?>",
+				"VARIABLEELEMENTTYPE" : "ApplicationListener<?>"
+			}, {
+				"VARIABLEDECLARATION" : [ "unwrappedListener = (ApplicationListener<?>) AopProxyUtils.getSingletonTarget(listener)" ],
+				"VARIABLECOMMONTYPE" : "ApplicationListener<?>",
+				"VARIABLEELEMENTTYPE" : "ApplicationListener<?>"
+			}, {
+				"VARIABLEDECLARATION" : [ "listenerBeanName" ],
+				"VARIABLECOMMONTYPE" : "String",
+				"VARIABLEELEMENTTYPE" : "String"
+			}, {
+				"VARIABLEDECLARATION" : [ "listenerType = beanFactory.getType(listenerBeanName)" ],
+				"VARIABLECOMMONTYPE" : "Class<?>",
+				"VARIABLEELEMENTTYPE" : "Class<?>"
+			}, {
+				"VARIABLEDECLARATION" : [ "bd = beanFactory.getMergedBeanDefinition(listenerBeanName)" ],
+				"VARIABLECOMMONTYPE" : "BeanDefinition",
+				"VARIABLEELEMENTTYPE" : "BeanDefinition"
+			}, {
+				"VARIABLEDECLARATION" : [ "genericEventType = bd.getResolvableType().as(ApplicationListener.class).getGeneric()" ],
+				"VARIABLECOMMONTYPE" : "ResolvableType",
+				"VARIABLEELEMENTTYPE" : "ResolvableType"
+			}, {
+				"VARIABLEDECLARATION" : [ "declaredEventType = GenericApplicationListenerAdapter.resolveDeclaredEventType(listenerType)" ],
+				"VARIABLECOMMONTYPE" : "ResolvableType",
+				"VARIABLEELEMENTTYPE" : "ResolvableType"
+			}, {
+				"VARIABLEDECLARATION" : [ "smartListener = (listener instanceof GenericApplicationListener gal ? gal : new GenericApplicationListenerAdapter(listener))" ],
+				"VARIABLECOMMONTYPE" : "GenericApplicationListener",
+				"VARIABLEELEMENTTYPE" : "GenericApplicationListener"
+			}, {
+				"VARIABLEDECLARATION" : [ "result = this.eventType.toString().compareTo(other.eventType.toString())" ],
+				"VARIABLECOMMONTYPE" : "int",
+				"VARIABLEELEMENTTYPE" : "int"
+			}, {
+				"VARIABLEDECLARATION" : [ "applicationListeners = this.applicationListeners" ],
+				"VARIABLECOMMONTYPE" : "Set<ApplicationListener<?>>",
+				"VARIABLEELEMENTTYPE" : "Set<ApplicationListener<?>>"
+			}, {
+				"VARIABLEDECLARATION" : [ "applicationListenerBeans = this.applicationListenerBeans" ],
+				"VARIABLECOMMONTYPE" : "Set<String>",
+				"VARIABLEELEMENTTYPE" : "Set<String>"
+			}, {
+				"VARIABLEDECLARATION" : [ "allListeners = new ArrayList<>(applicationListeners.size() + applicationListenerBeans.size())" ],
+				"VARIABLECOMMONTYPE" : "List<ApplicationListener<?>>",
+				"VARIABLEELEMENTTYPE" : "List<ApplicationListener<?>>"
+			}, {
+				"VARIABLEDECLARATION" : [ "beanFactory = getBeanFactory()" ],
+				"VARIABLECOMMONTYPE" : "BeanFactory",
+				"VARIABLEELEMENTTYPE" : "BeanFactory"
+			}, {
+				"VARIABLEDECLARATION" : [ "listenerBeanName" ],
+				"VARIABLECOMMONTYPE" : "String",
+				"VARIABLEELEMENTTYPE" : "String"
+			}, {
+				"VARIABLEDECLARATION" : [ "allListeners = new ArrayList<>(this.applicationListeners.size() + this.applicationListenerBeans.size())" ],
+				"VARIABLECOMMONTYPE" : "List<ApplicationListener<?>>",
+				"VARIABLEELEMENTTYPE" : "List<ApplicationListener<?>>"
+			}, {
+				"VARIABLEDECLARATION" : [ "beanFactory = getBeanFactory()" ],
+				"VARIABLECOMMONTYPE" : "BeanFactory",
+				"VARIABLEELEMENTTYPE" : "BeanFactory"
+			}, {
+				"VARIABLEDECLARATION" : [ "listener = beanFactory.getBean(listenerBeanName, ApplicationListener.class)" ],
+				"VARIABLECOMMONTYPE" : "ApplicationListener<?>",
+				"VARIABLEELEMENTTYPE" : "ApplicationListener<?>"
+			}, {
+				"VARIABLEDECLARATION" : [ "listenerBeanName" ],
+				"VARIABLECOMMONTYPE" : "String",
+				"VARIABLEELEMENTTYPE" : "String"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "setBeanClassLoader",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "classLoader",
+					"PARAMETERTYPE" : "ClassLoader"
+				} ]
+			}, {
+				"METHODNAME" : "setBeanFactory",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "IF", "EXPRESSION", "IF" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 3,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "beanFactory",
+					"PARAMETERTYPE" : "BeanFactory"
+				} ]
+			}, {
+				"METHODNAME" : "getBeanFactory",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "private" ],
+				"METHODBODYLINETYPE" : [ "IF", "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "ConfigurableBeanFactory",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "addApplicationListener",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "OTHER" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 4,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "listener",
+					"PARAMETERTYPE" : "ApplicationListener<?>"
+				} ]
+			}, {
+				"METHODNAME" : "addApplicationListenerBean",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "OTHER" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "listenerBeanName",
+					"PARAMETERTYPE" : "String"
+				} ]
+			}, {
+				"METHODNAME" : "removeApplicationListener",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "OTHER" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "listener",
+					"PARAMETERTYPE" : "ApplicationListener<?>"
+				} ]
+			}, {
+				"METHODNAME" : "removeApplicationListenerBean",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "OTHER" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "listenerBeanName",
+					"PARAMETERTYPE" : "String"
+				} ]
+			}, {
+				"METHODNAME" : "removeApplicationListeners",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "OTHER" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "predicate",
+					"PARAMETERTYPE" : "Predicate<ApplicationListener<?>>"
+				} ]
+			}, {
+				"METHODNAME" : "removeApplicationListenerBeans",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "OTHER" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "predicate",
+					"PARAMETERTYPE" : "Predicate<String>"
+				} ]
+			}, {
+				"METHODNAME" : "removeAllListeners",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "OTHER" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 3,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "getApplicationListeners",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "protected" ],
+				"METHODBODYLINETYPE" : [ "OTHER" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "Collection<ApplicationListener<?>>",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "DefaultListenerRetriever",
+					"CALLEEMETHODNAME" : "getApplicationListeners"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "getApplicationListeners",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "protected" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "IF", "IF", "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 5,
+				"NUMBEROFOUTGOINGMETHODS" : 9,
+				"METHODRETURNTYPE" : "Collection<ApplicationListener<?>>",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "DefaultListenerRetriever",
+					"CALLEEMETHODNAME" : "getApplicationListeners"
+				} ],
+				"NUMBEROFMETHODLINES" : 8,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "event",
+					"PARAMETERTYPE" : "ApplicationEvent"
+				}, {
+					"PARAMETERNAME" : "eventType",
+					"PARAMETERTYPE" : "ResolvableType"
+				} ]
+			}, {
+				"METHODNAME" : "retrieveApplicationListeners",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "private" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "OTHER", "LOOP", "IF", "EXPRESSION", "IF", "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 5,
+				"NUMBEROFOUTGOINGMETHODS" : 25,
+				"METHODRETURNTYPE" : "Collection<ApplicationListener<?>>",
+				"METHODOVERRIDE" : [ "// Dataflow analysis limitation\n@SuppressWarnings(\"NullAway\")" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 11,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "eventType",
+					"PARAMETERTYPE" : "ResolvableType"
+				}, {
+					"PARAMETERNAME" : "Class<?>",
+					"PARAMETERTYPE" : "@Nullable"
+				}, {
+					"PARAMETERNAME" : "CachedListenerRetriever",
+					"PARAMETERTYPE" : "@Nullable"
+				} ]
+			}, {
+				"METHODNAME" : "supportsEvent",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "private" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "IF", "IF", "OTHER" ],
+				"NUMBEROFMETHODVARIABLES" : 1,
+				"NUMBEROFOUTGOINGMETHODS" : 9,
+				"METHODRETURNTYPE" : "boolean",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 4,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "beanFactory",
+					"PARAMETERTYPE" : "ConfigurableBeanFactory"
+				}, {
+					"PARAMETERNAME" : "listenerBeanName",
+					"PARAMETERTYPE" : "String"
+				}, {
+					"PARAMETERNAME" : "eventType",
+					"PARAMETERTYPE" : "ResolvableType"
+				} ]
+			}, {
+				"METHODNAME" : "supportsEvent",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "protected" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 1,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "boolean",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "listenerType",
+					"PARAMETERTYPE" : "Class<?>"
+				}, {
+					"PARAMETERNAME" : "eventType",
+					"PARAMETERTYPE" : "ResolvableType"
+				} ]
+			}, {
+				"METHODNAME" : "supportsEvent",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "protected" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 1,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "boolean",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "listener",
+					"PARAMETERTYPE" : "ApplicationListener<?>"
+				}, {
+					"PARAMETERNAME" : "eventType",
+					"PARAMETERTYPE" : "ResolvableType"
+				}, {
+					"PARAMETERNAME" : "Class<?>",
+					"PARAMETERTYPE" : "@Nullable"
+				} ]
+			}, {
+				"METHODNAME" : "equals",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "boolean",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "Object",
+					"PARAMETERTYPE" : "@Nullable"
+				} ]
+			}, {
+				"METHODNAME" : "hashCode",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "int",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "toString",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "compareTo",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "IF", "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 1,
+				"NUMBEROFOUTGOINGMETHODS" : 6,
+				"METHODRETURNTYPE" : "int",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 3,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "other",
+					"PARAMETERTYPE" : "ListenerCacheKey"
+				} ]
+			}, {
+				"METHODNAME" : "getApplicationListeners",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "IF", "EXPRESSION", "EXPRESSION", "IF", "IF", "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 3,
+				"NUMBEROFOUTGOINGMETHODS" : 9,
+				"METHODRETURNTYPE" : "Collection<ApplicationListener<?>>",
+				"METHODOVERRIDE" : [ "@Nullable" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "DefaultListenerRetriever",
+					"CALLEEMETHODNAME" : "getApplicationListeners"
+				} ],
+				"NUMBEROFMETHODLINES" : 8,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "getApplicationListeners",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "IF", "EXPRESSION", "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 1,
+				"NUMBEROFOUTGOINGMETHODS" : 9,
+				"METHODRETURNTYPE" : "Collection<ApplicationListener<?>>",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "DefaultListenerRetriever",
+					"CALLEEMETHODNAME" : "getApplicationListeners"
+				} ],
+				"NUMBEROFMETHODLINES" : 5,
+				"METHODPARAMETER" : [ ]
+			} ]
+		}
+	},
+	"project_identifier" : "spring-framework/Observer"
+}

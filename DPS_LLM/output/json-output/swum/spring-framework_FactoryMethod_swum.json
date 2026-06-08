@@ -1,0 +1,908 @@
+{
+  "project_name" : "spring-framework/FactoryMethod",
+  "swum_version" : "1.0",
+  "generated_timestamp" : 1780917880882,
+  "class_summaries" : {
+    "CronTriggerFactoryBean" : {
+      "class_name" : "CronTriggerFactoryBean",
+      "class_type" : "class",
+      "method_summaries" : {
+        "setName" : {
+          "method_name" : "setName",
+          "return_type" : "void",
+          "parameters" : "String",
+          "swum_summary" : "This method sets using a parameter as part of the Factory pattern.",
+          "swum_actions" : "set",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE set (OBJECT Name))"
+        },
+        "setGroup" : {
+          "method_name" : "setGroup",
+          "return_type" : "void",
+          "parameters" : "String",
+          "swum_summary" : "This method sets using a parameter as part of the Factory pattern.",
+          "swum_actions" : "set",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE set (OBJECT Group))"
+        },
+        "setJobDetail" : {
+          "method_name" : "setJobDetail",
+          "return_type" : "void",
+          "parameters" : "JobDetail",
+          "swum_summary" : "This method sets using a parameter as part of the Factory pattern.",
+          "swum_actions" : "set",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE set (OBJECT Job Detail))"
+        },
+        "setJobDataMap" : {
+          "method_name" : "setJobDataMap",
+          "return_type" : "void",
+          "parameters" : "JobDataMap",
+          "swum_summary" : "This method sets Data, Map using a parameter as part of the Factory pattern.",
+          "swum_actions" : "set",
+          "swum_objects" : "Data, Map",
+          "swum_parse_tree" : "(VERB_PHRASE set (OBJECT Job Data Map))"
+        },
+        "getJobDataMap" : {
+          "method_name" : "getJobDataMap",
+          "return_type" : "JobDataMap",
+          "parameters" : "",
+          "swum_summary" : "This method retrieves Data, Map and returns an object as part of the Factory pattern.",
+          "swum_actions" : "get",
+          "swum_objects" : "Data, Map",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Job Data Map))"
+        },
+        "setJobDataAsMap" : {
+          "method_name" : "setJobDataAsMap",
+          "return_type" : "void",
+          "parameters" : "Map<String,",
+          "swum_summary" : "This method sets Data, Map using a parameter as part of the Factory pattern.",
+          "swum_actions" : "set",
+          "swum_objects" : "Data, Map",
+          "swum_parse_tree" : "(VERB_PHRASE set (OBJECT Job Data As Map))"
+        },
+        "setStartTime" : {
+          "method_name" : "setStartTime",
+          "return_type" : "void",
+          "parameters" : "Date",
+          "swum_summary" : "This method sets operations using a parameter as part of the Factory pattern.",
+          "swum_actions" : "set, Start",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE set (OBJECT Start Time))"
+        },
+        "setStartDelay" : {
+          "method_name" : "setStartDelay",
+          "return_type" : "void",
+          "parameters" : "long",
+          "swum_summary" : "This method sets operations using a parameter as part of the Factory pattern.",
+          "swum_actions" : "set, Start",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE set (OBJECT Start Delay))"
+        },
+        "setCronExpression" : {
+          "method_name" : "setCronExpression",
+          "return_type" : "void",
+          "parameters" : "String",
+          "swum_summary" : "This method sets using a parameter as part of the Factory pattern.",
+          "swum_actions" : "set",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE set (OBJECT Cron Expression))"
+        },
+        "setTimeZone" : {
+          "method_name" : "setTimeZone",
+          "return_type" : "void",
+          "parameters" : "TimeZone",
+          "swum_summary" : "This method sets using a parameter as part of the Factory pattern.",
+          "swum_actions" : "set",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE set (OBJECT Time Zone))"
+        },
+        "setCalendarName" : {
+          "method_name" : "setCalendarName",
+          "return_type" : "void",
+          "parameters" : "String",
+          "swum_summary" : "This method sets using a parameter as part of the Factory pattern.",
+          "swum_actions" : "set",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE set (OBJECT Calendar Name))"
+        },
+        "setPriority" : {
+          "method_name" : "setPriority",
+          "return_type" : "void",
+          "parameters" : "int",
+          "swum_summary" : "This method sets using a parameter as part of the Factory pattern.",
+          "swum_actions" : "set",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE set (OBJECT Priority))"
+        },
+        "setMisfireInstruction" : {
+          "method_name" : "setMisfireInstruction",
+          "return_type" : "void",
+          "parameters" : "int",
+          "swum_summary" : "This method sets using a parameter as part of the Factory pattern.",
+          "swum_actions" : "set",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE set (OBJECT Misfire Instruction))"
+        },
+        "setMisfireInstructionName" : {
+          "method_name" : "setMisfireInstructionName",
+          "return_type" : "void",
+          "parameters" : "String",
+          "swum_summary" : "This method sets using a parameter as part of the Factory pattern.",
+          "swum_actions" : "set",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE set (OBJECT Misfire Instruction Name))"
+        },
+        "setDescription" : {
+          "method_name" : "setDescription",
+          "return_type" : "void",
+          "parameters" : "String",
+          "swum_summary" : "This method sets using a parameter as part of the Factory pattern.",
+          "swum_actions" : "set",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE set (OBJECT Description))"
+        },
+        "setBeanName" : {
+          "method_name" : "setBeanName",
+          "return_type" : "void",
+          "parameters" : "String",
+          "swum_summary" : "This method sets using a parameter as part of the Factory pattern.",
+          "swum_actions" : "set",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE set (OBJECT Bean Name))"
+        },
+        "afterPropertiesSet" : {
+          "method_name" : "afterPropertiesSet",
+          "return_type" : "void",
+          "parameters" : "",
+          "swum_summary" : "This method sets as part of the Factory pattern.",
+          "swum_actions" : "Set",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE (SUBJECT after Properties) Set)"
+        },
+        "getObject" : {
+          "method_name" : "getObject",
+          "return_type" : "CronTrigger",
+          "parameters" : "",
+          "swum_summary" : "This method retrieves an object and returns an object as part of the Factory pattern.",
+          "swum_actions" : "get",
+          "swum_objects" : "Object",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Object))"
+        },
+        "getObjectType" : {
+          "method_name" : "getObjectType",
+          "return_type" : "Class<?>",
+          "parameters" : "",
+          "swum_summary" : "This method retrieves an object and returns an object as part of the Factory pattern.",
+          "swum_actions" : "get",
+          "swum_objects" : "Object",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Object Type))"
+        },
+        "isSingleton" : {
+          "method_name" : "isSingleton",
+          "return_type" : "boolean",
+          "parameters" : "",
+          "swum_summary" : "This method performs and returns a boolean as part of the Factory pattern.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE is Singleton)"
+        }
+      },
+      "swum_class_summary" : "The CronTriggerFactoryBean class is part of the Factory pattern provides 21 methods including storage and modification, retrieval and registration and lifecycle."
+    },
+    "SchedulerFactoryBean" : {
+      "class_name" : "SchedulerFactoryBean",
+      "class_type" : "class",
+      "method_summaries" : {
+        "getConfigTimeResourceLoader" : {
+          "method_name" : "getConfigTimeResourceLoader",
+          "return_type" : "ResourceLoader",
+          "parameters" : "",
+          "swum_summary" : "This method retrieves and returns an object as part of the Factory pattern.",
+          "swum_actions" : "get",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Config Time Resource Loader))"
+        },
+        "getConfigTimeTaskExecutor" : {
+          "method_name" : "getConfigTimeTaskExecutor",
+          "return_type" : "Executor",
+          "parameters" : "",
+          "swum_summary" : "This method retrieves and returns an object as part of the Factory pattern.",
+          "swum_actions" : "get",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Config Time Task Executor))"
+        },
+        "getConfigTimeDataSource" : {
+          "method_name" : "getConfigTimeDataSource",
+          "return_type" : "DataSource",
+          "parameters" : "",
+          "swum_summary" : "This method retrieves a data and returns an object as part of the Factory pattern.",
+          "swum_actions" : "get",
+          "swum_objects" : "Data",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Config Time Data Source))"
+        },
+        "getConfigTimeNonTransactionalDataSource" : {
+          "method_name" : "getConfigTimeNonTransactionalDataSource",
+          "return_type" : "DataSource",
+          "parameters" : "",
+          "swum_summary" : "This method retrieves a data and returns an object as part of the Factory pattern.",
+          "swum_actions" : "get",
+          "swum_objects" : "Data",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Config Time Non Transactional Data Source))"
+        },
+        "setSchedulerFactory" : {
+          "method_name" : "setSchedulerFactory",
+          "return_type" : "void",
+          "parameters" : "SchedulerFactory",
+          "swum_summary" : "This method sets using a parameter as part of the Factory pattern.",
+          "swum_actions" : "set",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE set (OBJECT Scheduler Factory))"
+        },
+        "setSchedulerFactoryClass" : {
+          "method_name" : "setSchedulerFactoryClass",
+          "return_type" : "void",
+          "parameters" : "Class<?",
+          "swum_summary" : "This method sets using a parameter as part of the Factory pattern.",
+          "swum_actions" : "set",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE set (OBJECT Scheduler Factory Class))"
+        },
+        "setSchedulerName" : {
+          "method_name" : "setSchedulerName",
+          "return_type" : "void",
+          "parameters" : "String",
+          "swum_summary" : "This method sets using a parameter as part of the Factory pattern.",
+          "swum_actions" : "set",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE set (OBJECT Scheduler Name))"
+        },
+        "setConfigLocation" : {
+          "method_name" : "setConfigLocation",
+          "return_type" : "void",
+          "parameters" : "Resource",
+          "swum_summary" : "This method sets using a parameter as part of the Factory pattern.",
+          "swum_actions" : "set",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE set (OBJECT Config Location))"
+        },
+        "setQuartzProperties" : {
+          "method_name" : "setQuartzProperties",
+          "return_type" : "void",
+          "parameters" : "Properties",
+          "swum_summary" : "This method sets using a parameter as part of the Factory pattern.",
+          "swum_actions" : "set",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE set (OBJECT Quartz Properties))"
+        },
+        "setTaskExecutor" : {
+          "method_name" : "setTaskExecutor",
+          "return_type" : "void",
+          "parameters" : "Executor",
+          "swum_summary" : "This method sets using a parameter as part of the Factory pattern.",
+          "swum_actions" : "set",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE set (OBJECT Task Executor))"
+        },
+        "setDataSource" : {
+          "method_name" : "setDataSource",
+          "return_type" : "void",
+          "parameters" : "DataSource",
+          "swum_summary" : "This method sets a data using a parameter as part of the Factory pattern.",
+          "swum_actions" : "set",
+          "swum_objects" : "Data",
+          "swum_parse_tree" : "(VERB_PHRASE set (OBJECT Data Source))"
+        },
+        "setNonTransactionalDataSource" : {
+          "method_name" : "setNonTransactionalDataSource",
+          "return_type" : "void",
+          "parameters" : "DataSource",
+          "swum_summary" : "This method sets a data using a parameter as part of the Factory pattern.",
+          "swum_actions" : "set",
+          "swum_objects" : "Data",
+          "swum_parse_tree" : "(VERB_PHRASE set (OBJECT Non Transactional Data Source))"
+        },
+        "setSchedulerContextAsMap" : {
+          "method_name" : "setSchedulerContextAsMap",
+          "return_type" : "void",
+          "parameters" : "Map<String,",
+          "swum_summary" : "This method sets a map using a parameter as part of the Factory pattern.",
+          "swum_actions" : "set",
+          "swum_objects" : "Map",
+          "swum_parse_tree" : "(VERB_PHRASE set (OBJECT Scheduler Context As Map))"
+        },
+        "setApplicationContextSchedulerContextKey" : {
+          "method_name" : "setApplicationContextSchedulerContextKey",
+          "return_type" : "void",
+          "parameters" : "String",
+          "swum_summary" : "This method sets using a parameter as part of the Factory pattern.",
+          "swum_actions" : "set",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE set (OBJECT Application Context Scheduler Context Key))"
+        },
+        "setJobFactory" : {
+          "method_name" : "setJobFactory",
+          "return_type" : "void",
+          "parameters" : "JobFactory",
+          "swum_summary" : "This method sets using a parameter as part of the Factory pattern.",
+          "swum_actions" : "set",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE set (OBJECT Job Factory))"
+        },
+        "setAutoStartup" : {
+          "method_name" : "setAutoStartup",
+          "return_type" : "void",
+          "parameters" : "boolean",
+          "swum_summary" : "This method sets using a parameter as part of the Factory pattern.",
+          "swum_actions" : "set",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE set (OBJECT Auto Startup))"
+        },
+        "isAutoStartup" : {
+          "method_name" : "isAutoStartup",
+          "return_type" : "boolean",
+          "parameters" : "",
+          "swum_summary" : "This method performs and returns a boolean as part of the Factory pattern.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE is Auto Startup)"
+        },
+        "setPhase" : {
+          "method_name" : "setPhase",
+          "return_type" : "void",
+          "parameters" : "int",
+          "swum_summary" : "This method sets using a parameter as part of the Factory pattern.",
+          "swum_actions" : "set",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE set (OBJECT Phase))"
+        },
+        "getPhase" : {
+          "method_name" : "getPhase",
+          "return_type" : "int",
+          "parameters" : "",
+          "swum_summary" : "This method retrieves and returns a number as part of the Factory pattern.",
+          "swum_actions" : "get",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Phase))"
+        },
+        "setStartupDelay" : {
+          "method_name" : "setStartupDelay",
+          "return_type" : "void",
+          "parameters" : "int",
+          "swum_summary" : "This method sets using a parameter as part of the Factory pattern.",
+          "swum_actions" : "set",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE set (OBJECT Startup Delay))"
+        },
+        "setExposeSchedulerInRepository" : {
+          "method_name" : "setExposeSchedulerInRepository",
+          "return_type" : "void",
+          "parameters" : "boolean",
+          "swum_summary" : "This method sets using a parameter as part of the Factory pattern.",
+          "swum_actions" : "set",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE set (OBJECT Expose Scheduler In Repository))"
+        },
+        "setWaitForJobsToCompleteOnShutdown" : {
+          "method_name" : "setWaitForJobsToCompleteOnShutdown",
+          "return_type" : "void",
+          "parameters" : "boolean",
+          "swum_summary" : "This method sets using a parameter as part of the Factory pattern.",
+          "swum_actions" : "set",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE set (OBJECT Wait For Jobs To Complete On Shutdown))"
+        },
+        "setBeanName" : {
+          "method_name" : "setBeanName",
+          "return_type" : "void",
+          "parameters" : "String",
+          "swum_summary" : "This method sets using a parameter as part of the Factory pattern.",
+          "swum_actions" : "set",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE set (OBJECT Bean Name))"
+        },
+        "setApplicationContext" : {
+          "method_name" : "setApplicationContext",
+          "return_type" : "void",
+          "parameters" : "ApplicationContext",
+          "swum_summary" : "This method sets using a parameter as part of the Factory pattern.",
+          "swum_actions" : "set",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE set (OBJECT Application Context))"
+        },
+        "afterPropertiesSet" : {
+          "method_name" : "afterPropertiesSet",
+          "return_type" : "void",
+          "parameters" : "",
+          "swum_summary" : "This method sets as part of the Factory pattern.",
+          "swum_actions" : "Set",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE (SUBJECT after Properties) Set)"
+        },
+        "prepareSchedulerFactory" : {
+          "method_name" : "prepareSchedulerFactory",
+          "return_type" : "SchedulerFactory",
+          "parameters" : "",
+          "swum_summary" : "This method performs and returns an object as part of the Factory pattern.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE prepare Scheduler Factory)"
+        },
+        "initSchedulerFactory" : {
+          "method_name" : "initSchedulerFactory",
+          "return_type" : "void",
+          "parameters" : "StdSchedulerFactory",
+          "swum_summary" : "This method inits using a parameter as part of the Factory pattern.",
+          "swum_actions" : "init",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE init (OBJECT Scheduler Factory))"
+        },
+        "prepareScheduler" : {
+          "method_name" : "prepareScheduler",
+          "return_type" : "Scheduler",
+          "parameters" : "SchedulerFactory",
+          "swum_summary" : "This method performs using a parameter and returns an object as part of the Factory pattern.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE prepare Scheduler)"
+        },
+        "createScheduler" : {
+          "method_name" : "createScheduler",
+          "return_type" : "Scheduler",
+          "parameters" : "SchedulerFactory, @Nullable",
+          "swum_summary" : "This method creates using 2 parameters and returns an object as part of the Factory pattern.",
+          "swum_actions" : "create",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE create (OBJECT Scheduler))"
+        },
+        "populateSchedulerContext" : {
+          "method_name" : "populateSchedulerContext",
+          "return_type" : "void",
+          "parameters" : "Scheduler",
+          "swum_summary" : "This method performs using a parameter as part of the Factory pattern.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE populate Scheduler Context)"
+        },
+        "startScheduler" : {
+          "method_name" : "startScheduler",
+          "return_type" : "void",
+          "parameters" : "final, final",
+          "swum_summary" : "This method starts using 2 parameters as part of the Factory pattern.",
+          "swum_actions" : "start",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE start (OBJECT Scheduler))"
+        },
+        "getScheduler" : {
+          "method_name" : "getScheduler",
+          "return_type" : "Scheduler",
+          "parameters" : "",
+          "swum_summary" : "This method retrieves and returns an object as part of the Factory pattern.",
+          "swum_actions" : "get",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Scheduler))"
+        },
+        "getObject" : {
+          "method_name" : "getObject",
+          "return_type" : "Scheduler",
+          "parameters" : "",
+          "swum_summary" : "This method retrieves an object and returns an object as part of the Factory pattern.",
+          "swum_actions" : "get",
+          "swum_objects" : "Object",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Object))"
+        },
+        "getObjectType" : {
+          "method_name" : "getObjectType",
+          "return_type" : "Class<? extends Scheduler>",
+          "parameters" : "",
+          "swum_summary" : "This method retrieves an object and returns an object as part of the Factory pattern.",
+          "swum_actions" : "get",
+          "swum_objects" : "Object",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Object Type))"
+        },
+        "isSingleton" : {
+          "method_name" : "isSingleton",
+          "return_type" : "boolean",
+          "parameters" : "",
+          "swum_summary" : "This method performs and returns a boolean as part of the Factory pattern.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE is Singleton)"
+        },
+        "start" : {
+          "method_name" : "start",
+          "return_type" : "void",
+          "parameters" : "",
+          "swum_summary" : "This method starts as part of the Factory pattern.",
+          "swum_actions" : "start",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE start)"
+        },
+        "stop" : {
+          "method_name" : "stop",
+          "return_type" : "void",
+          "parameters" : "",
+          "swum_summary" : "This method stops as part of the Factory pattern.",
+          "swum_actions" : "stop",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE stop)"
+        },
+        "isRunning" : {
+          "method_name" : "isRunning",
+          "return_type" : "boolean",
+          "parameters" : "",
+          "swum_summary" : "This method performs and returns a boolean as part of the Factory pattern.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE is Running)"
+        },
+        "destroy" : {
+          "method_name" : "destroy",
+          "return_type" : "void",
+          "parameters" : "",
+          "swum_summary" : "This method performs as part of the Factory pattern.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE destroy)"
+        },
+        "instantiate" : {
+          "method_name" : "instantiate",
+          "return_type" : "Scheduler",
+          "parameters" : "QuartzSchedulerResources, QuartzScheduler",
+          "swum_summary" : "This method performs using 2 parameters and returns an object as part of the Factory pattern.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE instantiate)"
+        }
+      },
+      "swum_class_summary" : "The SchedulerFactoryBean class is part of the Factory pattern provides 32 methods including storage and modification, retrieval, registration and lifecycle and other operations."
+    },
+    "AdaptableJobFactory" : {
+      "class_name" : "AdaptableJobFactory",
+      "class_type" : "class",
+      "method_summaries" : {
+        "newJob" : {
+          "method_name" : "newJob",
+          "return_type" : "Job",
+          "parameters" : "TriggerFiredBundle, Scheduler",
+          "swum_summary" : "This method performs using 2 parameters and returns an object as part of the Factory pattern.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE new Job)"
+        },
+        "createJobInstance" : {
+          "method_name" : "createJobInstance",
+          "return_type" : "Object",
+          "parameters" : "TriggerFiredBundle",
+          "swum_summary" : "This method creates an instance using a parameter and returns an object as part of the Factory pattern.",
+          "swum_actions" : "create",
+          "swum_objects" : "Instance",
+          "swum_parse_tree" : "(VERB_PHRASE create (OBJECT Job Instance))"
+        },
+        "adaptJob" : {
+          "method_name" : "adaptJob",
+          "return_type" : "Job",
+          "parameters" : "Object",
+          "swum_summary" : "This method performs using a parameter and returns an object as part of the Factory pattern.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE adapt Job)"
+        }
+      },
+      "swum_class_summary" : "The AdaptableJobFactory class is part of the Factory pattern and provides methods to create."
+    },
+    "JobDetailFactoryBean" : {
+      "class_name" : "JobDetailFactoryBean",
+      "class_type" : "class",
+      "method_summaries" : {
+        "setName" : {
+          "method_name" : "setName",
+          "return_type" : "void",
+          "parameters" : "String",
+          "swum_summary" : "This method sets using a parameter as part of the Factory pattern.",
+          "swum_actions" : "set",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE set (OBJECT Name))"
+        },
+        "setGroup" : {
+          "method_name" : "setGroup",
+          "return_type" : "void",
+          "parameters" : "String",
+          "swum_summary" : "This method sets using a parameter as part of the Factory pattern.",
+          "swum_actions" : "set",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE set (OBJECT Group))"
+        },
+        "setJobClass" : {
+          "method_name" : "setJobClass",
+          "return_type" : "void",
+          "parameters" : "Class<?",
+          "swum_summary" : "This method sets using a parameter as part of the Factory pattern.",
+          "swum_actions" : "set",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE set (OBJECT Job Class))"
+        },
+        "setJobDataMap" : {
+          "method_name" : "setJobDataMap",
+          "return_type" : "void",
+          "parameters" : "JobDataMap",
+          "swum_summary" : "This method sets Data, Map using a parameter as part of the Factory pattern.",
+          "swum_actions" : "set",
+          "swum_objects" : "Data, Map",
+          "swum_parse_tree" : "(VERB_PHRASE set (OBJECT Job Data Map))"
+        },
+        "getJobDataMap" : {
+          "method_name" : "getJobDataMap",
+          "return_type" : "JobDataMap",
+          "parameters" : "",
+          "swum_summary" : "This method retrieves Data, Map and returns an object as part of the Factory pattern.",
+          "swum_actions" : "get",
+          "swum_objects" : "Data, Map",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Job Data Map))"
+        },
+        "setJobDataAsMap" : {
+          "method_name" : "setJobDataAsMap",
+          "return_type" : "void",
+          "parameters" : "Map<String,",
+          "swum_summary" : "This method sets Data, Map using a parameter as part of the Factory pattern.",
+          "swum_actions" : "set",
+          "swum_objects" : "Data, Map",
+          "swum_parse_tree" : "(VERB_PHRASE set (OBJECT Job Data As Map))"
+        },
+        "setDurability" : {
+          "method_name" : "setDurability",
+          "return_type" : "void",
+          "parameters" : "boolean",
+          "swum_summary" : "This method sets using a parameter as part of the Factory pattern.",
+          "swum_actions" : "set",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE set (OBJECT Durability))"
+        },
+        "setRequestsRecovery" : {
+          "method_name" : "setRequestsRecovery",
+          "return_type" : "void",
+          "parameters" : "boolean",
+          "swum_summary" : "This method sets using a parameter as part of the Factory pattern.",
+          "swum_actions" : "set",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE set (OBJECT Requests Recovery))"
+        },
+        "setDescription" : {
+          "method_name" : "setDescription",
+          "return_type" : "void",
+          "parameters" : "String",
+          "swum_summary" : "This method sets using a parameter as part of the Factory pattern.",
+          "swum_actions" : "set",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE set (OBJECT Description))"
+        },
+        "setBeanName" : {
+          "method_name" : "setBeanName",
+          "return_type" : "void",
+          "parameters" : "String",
+          "swum_summary" : "This method sets using a parameter as part of the Factory pattern.",
+          "swum_actions" : "set",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE set (OBJECT Bean Name))"
+        },
+        "setApplicationContext" : {
+          "method_name" : "setApplicationContext",
+          "return_type" : "void",
+          "parameters" : "ApplicationContext",
+          "swum_summary" : "This method sets using a parameter as part of the Factory pattern.",
+          "swum_actions" : "set",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE set (OBJECT Application Context))"
+        },
+        "setApplicationContextJobDataKey" : {
+          "method_name" : "setApplicationContextJobDataKey",
+          "return_type" : "void",
+          "parameters" : "String",
+          "swum_summary" : "This method sets a data using a parameter as part of the Factory pattern.",
+          "swum_actions" : "set",
+          "swum_objects" : "Data",
+          "swum_parse_tree" : "(VERB_PHRASE set (OBJECT Application Context Job Data Key))"
+        },
+        "afterPropertiesSet" : {
+          "method_name" : "afterPropertiesSet",
+          "return_type" : "void",
+          "parameters" : "",
+          "swum_summary" : "This method sets as part of the Factory pattern.",
+          "swum_actions" : "Set",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE (SUBJECT after Properties) Set)"
+        },
+        "getObject" : {
+          "method_name" : "getObject",
+          "return_type" : "JobDetail",
+          "parameters" : "",
+          "swum_summary" : "This method retrieves an object and returns an object as part of the Factory pattern.",
+          "swum_actions" : "get",
+          "swum_objects" : "Object",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Object))"
+        },
+        "getObjectType" : {
+          "method_name" : "getObjectType",
+          "return_type" : "Class<?>",
+          "parameters" : "",
+          "swum_summary" : "This method retrieves an object and returns an object as part of the Factory pattern.",
+          "swum_actions" : "get",
+          "swum_objects" : "Object",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Object Type))"
+        },
+        "isSingleton" : {
+          "method_name" : "isSingleton",
+          "return_type" : "boolean",
+          "parameters" : "",
+          "swum_summary" : "This method performs and returns a boolean as part of the Factory pattern.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE is Singleton)"
+        }
+      },
+      "swum_class_summary" : "The JobDetailFactoryBean class is part of the Factory pattern provides 12 methods for storage and modification and 3 for retrieval."
+    },
+    "MethodInvokingJobDetailFactoryBean" : {
+      "class_name" : "MethodInvokingJobDetailFactoryBean",
+      "class_type" : "class",
+      "method_summaries" : {
+        "setName" : {
+          "method_name" : "setName",
+          "return_type" : "void",
+          "parameters" : "String",
+          "swum_summary" : "This method sets using a parameter as part of the Factory pattern.",
+          "swum_actions" : "set",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE set (OBJECT Name))"
+        },
+        "setGroup" : {
+          "method_name" : "setGroup",
+          "return_type" : "void",
+          "parameters" : "String",
+          "swum_summary" : "This method sets using a parameter as part of the Factory pattern.",
+          "swum_actions" : "set",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE set (OBJECT Group))"
+        },
+        "setConcurrent" : {
+          "method_name" : "setConcurrent",
+          "return_type" : "void",
+          "parameters" : "boolean",
+          "swum_summary" : "This method sets using a parameter as part of the Factory pattern.",
+          "swum_actions" : "set",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE set (OBJECT Concurrent))"
+        },
+        "setTargetBeanName" : {
+          "method_name" : "setTargetBeanName",
+          "return_type" : "void",
+          "parameters" : "String",
+          "swum_summary" : "This method sets using a parameter as part of the Factory pattern.",
+          "swum_actions" : "set",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE set (OBJECT Target Bean Name))"
+        },
+        "setBeanName" : {
+          "method_name" : "setBeanName",
+          "return_type" : "void",
+          "parameters" : "String",
+          "swum_summary" : "This method sets using a parameter as part of the Factory pattern.",
+          "swum_actions" : "set",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE set (OBJECT Bean Name))"
+        },
+        "setBeanClassLoader" : {
+          "method_name" : "setBeanClassLoader",
+          "return_type" : "void",
+          "parameters" : "ClassLoader",
+          "swum_summary" : "This method sets using a parameter as part of the Factory pattern.",
+          "swum_actions" : "set",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE set (OBJECT Bean Class Loader))"
+        },
+        "setBeanFactory" : {
+          "method_name" : "setBeanFactory",
+          "return_type" : "void",
+          "parameters" : "BeanFactory",
+          "swum_summary" : "This method sets using a parameter as part of the Factory pattern.",
+          "swum_actions" : "set",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE set (OBJECT Bean Factory))"
+        },
+        "resolveClassName" : {
+          "method_name" : "resolveClassName",
+          "return_type" : "Class<?>",
+          "parameters" : "String",
+          "swum_summary" : "This method performs using a parameter and returns an object as part of the Factory pattern.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE resolve Class Name)"
+        },
+        "afterPropertiesSet" : {
+          "method_name" : "afterPropertiesSet",
+          "return_type" : "void",
+          "parameters" : "",
+          "swum_summary" : "This method sets as part of the Factory pattern.",
+          "swum_actions" : "Set",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE (SUBJECT after Properties) Set)"
+        },
+        "postProcessJobDetail" : {
+          "method_name" : "postProcessJobDetail",
+          "return_type" : "void",
+          "parameters" : "JobDetail",
+          "swum_summary" : "This method processes using a parameter as part of the Factory pattern.",
+          "swum_actions" : "Process",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE (SUBJECT post) Process (OBJECT Job Detail))"
+        },
+        "getTargetClass" : {
+          "method_name" : "getTargetClass",
+          "return_type" : "Class<?>",
+          "parameters" : "",
+          "swum_summary" : "This method retrieves and returns an object as part of the Factory pattern.",
+          "swum_actions" : "get",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Target Class))"
+        },
+        "getTargetObject" : {
+          "method_name" : "getTargetObject",
+          "return_type" : "Object",
+          "parameters" : "",
+          "swum_summary" : "This method retrieves an object and returns an object as part of the Factory pattern.",
+          "swum_actions" : "get",
+          "swum_objects" : "Object",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Target Object))"
+        },
+        "getObject" : {
+          "method_name" : "getObject",
+          "return_type" : "JobDetail",
+          "parameters" : "",
+          "swum_summary" : "This method retrieves an object and returns an object as part of the Factory pattern.",
+          "swum_actions" : "get",
+          "swum_objects" : "Object",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Object))"
+        },
+        "getObjectType" : {
+          "method_name" : "getObjectType",
+          "return_type" : "Class<? extends JobDetail>",
+          "parameters" : "",
+          "swum_summary" : "This method retrieves an object and returns an object as part of the Factory pattern.",
+          "swum_actions" : "get",
+          "swum_objects" : "Object",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Object Type))"
+        },
+        "isSingleton" : {
+          "method_name" : "isSingleton",
+          "return_type" : "boolean",
+          "parameters" : "",
+          "swum_summary" : "This method performs and returns a boolean as part of the Factory pattern.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE is Singleton)"
+        },
+        "setMethodInvoker" : {
+          "method_name" : "setMethodInvoker",
+          "return_type" : "void",
+          "parameters" : "MethodInvoker",
+          "swum_summary" : "This method sets using a parameter as part of the Factory pattern.",
+          "swum_actions" : "set",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE set (OBJECT Method Invoker))"
+        },
+        "executeInternal" : {
+          "method_name" : "executeInternal",
+          "return_type" : "void",
+          "parameters" : "JobExecutionContext",
+          "swum_summary" : "This method executes using a parameter as part of the Factory pattern.",
+          "swum_actions" : "execute",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE execute (OBJECT Internal))"
+        }
+      },
+      "swum_class_summary" : "The MethodInvokingJobDetailFactoryBean class is part of the Factory pattern provides 15 methods including storage and modification, retrieval and processing."
+    }
+  },
+  "swum_project_summary" : "This software project contains 5 classes with 96 methods. Primary operations include Process, Set, Start, create, execute. Key objects manipulated are Data, Instance, Map, Object.",
+  "swum_design_pattern" : [ ]
+}

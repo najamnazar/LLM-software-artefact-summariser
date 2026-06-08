@@ -1,0 +1,114 @@
+{
+  "project_name" : "AbdurRKhalid/Adapter",
+  "swum_version" : "1.0",
+  "generated_timestamp" : 1780917880754,
+  "class_summaries" : {
+    "RoundHole" : {
+      "class_name" : "RoundHole",
+      "class_type" : "class",
+      "method_summaries" : {
+        "getRadius" : {
+          "method_name" : "getRadius",
+          "return_type" : "double",
+          "parameters" : "",
+          "swum_summary" : "This method retrieves and returns a number.",
+          "swum_actions" : "get",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Radius))"
+        },
+        "fits" : {
+          "method_name" : "fits",
+          "return_type" : "boolean",
+          "parameters" : "RoundPeg",
+          "swum_summary" : "This method performs using a parameter and returns a boolean.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE fits)"
+        }
+      },
+      "swum_class_summary" : "The RoundHole class provides methods to get."
+    },
+    "RoundPeg" : {
+      "class_name" : "RoundPeg",
+      "class_type" : "class",
+      "method_summaries" : {
+        "getRadius" : {
+          "method_name" : "getRadius",
+          "return_type" : "double",
+          "parameters" : "",
+          "swum_summary" : "This method retrieves and returns a number. The RoundPeg class acts as a target in the adapter pattern.",
+          "swum_actions" : "get",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Radius))"
+        }
+      },
+      "swum_class_summary" : "The RoundPeg class acts as a target in the adapter pattern and provides methods to get."
+    },
+    "Test" : {
+      "class_name" : "Test",
+      "class_type" : "class",
+      "method_summaries" : {
+        "main" : {
+          "method_name" : "main",
+          "return_type" : "void",
+          "parameters" : "String[]",
+          "swum_summary" : "This method performs using a parameter.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE main)"
+        }
+      },
+      "swum_class_summary" : "The Test class."
+    },
+    "SquarePegAdapter" : {
+      "class_name" : "SquarePegAdapter",
+      "class_type" : "class",
+      "method_summaries" : {
+        "getRadius" : {
+          "method_name" : "getRadius",
+          "return_type" : "double",
+          "parameters" : "",
+          "swum_summary" : "This method retrieves and returns a number. The SquarePegAdapter class acts as an adapter in the adapter pattern.",
+          "swum_actions" : "get",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Radius))"
+        }
+      },
+      "swum_class_summary" : "The SquarePegAdapter class acts as an adapter in the adapter pattern and provides methods to get."
+    },
+    "SquarePeg" : {
+      "class_name" : "SquarePeg",
+      "class_type" : "class",
+      "method_summaries" : {
+        "getWidth" : {
+          "method_name" : "getWidth",
+          "return_type" : "double",
+          "parameters" : "",
+          "swum_summary" : "This method retrieves and returns a number. The SquarePeg class acts as an adaptee in the adapter pattern.",
+          "swum_actions" : "get",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Width))"
+        },
+        "getSquare" : {
+          "method_name" : "getSquare",
+          "return_type" : "double",
+          "parameters" : "",
+          "swum_summary" : "This method retrieves and returns a number. The SquarePeg class acts as an adaptee in the adapter pattern.",
+          "swum_actions" : "get",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Square))"
+        }
+      },
+      "swum_class_summary" : "The SquarePeg class acts as an adaptee in the adapter pattern and provides methods to get, get."
+    }
+  },
+  "swum_project_summary" : "This software project contains 5 classes with 7 methods. The system implements the adapter design pattern. Primary operations include get.",
+  "swum_design_pattern" : [ {
+    "adapter" : {
+      "SquarePegAdapter" : {
+        "adaptee" : [ "SquarePeg" ],
+        "target" : [ "RoundPeg" ]
+      }
+    }
+  } ]
+}

@@ -1,0 +1,273 @@
+{
+  "project_name" : "spring-framework/Memento",
+  "swum_version" : "1.0",
+  "generated_timestamp" : 1780917880887,
+  "class_summaries" : {
+    "SimpleApplicationEventMulticaster" : {
+      "class_name" : "SimpleApplicationEventMulticaster",
+      "class_type" : "class",
+      "method_summaries" : {
+        "setTaskExecutor" : {
+          "method_name" : "setTaskExecutor",
+          "return_type" : "void",
+          "parameters" : "@Nullable",
+          "swum_summary" : "This method sets using a parameter.",
+          "swum_actions" : "set",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE set (OBJECT Task Executor))"
+        },
+        "getTaskExecutor" : {
+          "method_name" : "getTaskExecutor",
+          "return_type" : "Executor",
+          "parameters" : "",
+          "swum_summary" : "This method retrieves and returns an object.",
+          "swum_actions" : "get",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Task Executor))"
+        },
+        "setErrorHandler" : {
+          "method_name" : "setErrorHandler",
+          "return_type" : "void",
+          "parameters" : "@Nullable",
+          "swum_summary" : "This method sets using a parameter.",
+          "swum_actions" : "set",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE set (OBJECT Error Handler))"
+        },
+        "getErrorHandler" : {
+          "method_name" : "getErrorHandler",
+          "return_type" : "ErrorHandler",
+          "parameters" : "",
+          "swum_summary" : "This method retrieves and returns an object.",
+          "swum_actions" : "get",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Error Handler))"
+        },
+        "multicastEvent" : {
+          "method_name" : "multicastEvent",
+          "return_type" : "void",
+          "parameters" : "ApplicationEvent, @Nullable",
+          "swum_summary" : "This method performs an event using 2 parameters.",
+          "swum_actions" : "",
+          "swum_objects" : "Event",
+          "swum_parse_tree" : "(NOUN_PHRASE multicast Event)"
+        },
+        "invokeListener" : {
+          "method_name" : "invokeListener",
+          "return_type" : "void",
+          "parameters" : "ApplicationListener<?>, ApplicationEvent",
+          "swum_summary" : "This method invokes using 2 parameters.",
+          "swum_actions" : "invoke",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE invoke (OBJECT Listener))"
+        },
+        "doInvokeListener" : {
+          "method_name" : "doInvokeListener",
+          "return_type" : "void",
+          "parameters" : "ApplicationListener, ApplicationEvent",
+          "swum_summary" : "This method invokes using 2 parameters.",
+          "swum_actions" : "Invoke",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE (SUBJECT do) Invoke (OBJECT Listener))"
+        },
+        "matchesClassCastMessage" : {
+          "method_name" : "matchesClassCastMessage",
+          "return_type" : "boolean",
+          "parameters" : "String, Class<?>",
+          "swum_summary" : "This method performs a message using 2 parameters and returns a boolean.",
+          "swum_actions" : "",
+          "swum_objects" : "Message",
+          "swum_parse_tree" : "(NOUN_PHRASE matches Class Cast Message)"
+        }
+      },
+      "swum_class_summary" : "The SimpleApplicationEventMulticaster class provides methods to set, get, set, get, invoke, invoke for managing event."
+    },
+    "SavepointManager" : {
+      "class_name" : "SavepointManager",
+      "class_type" : "interface",
+      "method_summaries" : {
+        "createSavepoint" : {
+          "method_name" : "createSavepoint",
+          "return_type" : "Object",
+          "parameters" : "",
+          "swum_summary" : "This method creates and returns an object.",
+          "swum_actions" : "create",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE create (OBJECT Savepoint))"
+        },
+        "rollbackToSavepoint" : {
+          "method_name" : "rollbackToSavepoint",
+          "return_type" : "void",
+          "parameters" : "Object",
+          "swum_summary" : "This method performs using a parameter.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE rollback To Savepoint)"
+        },
+        "releaseSavepoint" : {
+          "method_name" : "releaseSavepoint",
+          "return_type" : "void",
+          "parameters" : "Object",
+          "swum_summary" : "This method performs using a parameter.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE release Savepoint)"
+        }
+      },
+      "swum_class_summary" : "The SavepointManager class provides methods to create."
+    },
+    "AbstractTransactionStatus" : {
+      "class_name" : "AbstractTransactionStatus",
+      "class_type" : "class",
+      "method_summaries" : {
+        "setRollbackOnly" : {
+          "method_name" : "setRollbackOnly",
+          "return_type" : "void",
+          "parameters" : "",
+          "swum_summary" : "This method sets.",
+          "swum_actions" : "set",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE set (OBJECT Rollback Only))"
+        },
+        "isRollbackOnly" : {
+          "method_name" : "isRollbackOnly",
+          "return_type" : "boolean",
+          "parameters" : "",
+          "swum_summary" : "This method performs and returns a boolean.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE is Rollback Only)"
+        },
+        "isLocalRollbackOnly" : {
+          "method_name" : "isLocalRollbackOnly",
+          "return_type" : "boolean",
+          "parameters" : "",
+          "swum_summary" : "This method performs and returns a boolean.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE is Local Rollback Only)"
+        },
+        "isGlobalRollbackOnly" : {
+          "method_name" : "isGlobalRollbackOnly",
+          "return_type" : "boolean",
+          "parameters" : "",
+          "swum_summary" : "This method performs and returns a boolean.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE is Global Rollback Only)"
+        },
+        "setCompleted" : {
+          "method_name" : "setCompleted",
+          "return_type" : "void",
+          "parameters" : "",
+          "swum_summary" : "This method sets.",
+          "swum_actions" : "set",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE set (OBJECT Completed))"
+        },
+        "isCompleted" : {
+          "method_name" : "isCompleted",
+          "return_type" : "boolean",
+          "parameters" : "",
+          "swum_summary" : "This method performs and returns a boolean.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE is Completed)"
+        },
+        "hasSavepoint" : {
+          "method_name" : "hasSavepoint",
+          "return_type" : "boolean",
+          "parameters" : "",
+          "swum_summary" : "This method performs and returns a boolean.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE has Savepoint)"
+        },
+        "setSavepoint" : {
+          "method_name" : "setSavepoint",
+          "return_type" : "void",
+          "parameters" : "@Nullable",
+          "swum_summary" : "This method sets using a parameter.",
+          "swum_actions" : "set",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE set (OBJECT Savepoint))"
+        },
+        "getSavepoint" : {
+          "method_name" : "getSavepoint",
+          "return_type" : "Object",
+          "parameters" : "",
+          "swum_summary" : "This method retrieves and returns an object.",
+          "swum_actions" : "get",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Savepoint))"
+        },
+        "createAndHoldSavepoint" : {
+          "method_name" : "createAndHoldSavepoint",
+          "return_type" : "void",
+          "parameters" : "",
+          "swum_summary" : "This method creates.",
+          "swum_actions" : "create",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE create (OBJECT And Hold Savepoint))"
+        },
+        "rollbackToHeldSavepoint" : {
+          "method_name" : "rollbackToHeldSavepoint",
+          "return_type" : "void",
+          "parameters" : "",
+          "swum_summary" : "This method performs.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE rollback To Held Savepoint)"
+        },
+        "releaseHeldSavepoint" : {
+          "method_name" : "releaseHeldSavepoint",
+          "return_type" : "void",
+          "parameters" : "",
+          "swum_summary" : "This method performs.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE release Held Savepoint)"
+        },
+        "createSavepoint" : {
+          "method_name" : "createSavepoint",
+          "return_type" : "Object",
+          "parameters" : "",
+          "swum_summary" : "This method creates and returns an object.",
+          "swum_actions" : "create",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE create (OBJECT Savepoint))"
+        },
+        "rollbackToSavepoint" : {
+          "method_name" : "rollbackToSavepoint",
+          "return_type" : "void",
+          "parameters" : "Object",
+          "swum_summary" : "This method performs using a parameter.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE rollback To Savepoint)"
+        },
+        "releaseSavepoint" : {
+          "method_name" : "releaseSavepoint",
+          "return_type" : "void",
+          "parameters" : "Object",
+          "swum_summary" : "This method performs using a parameter.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE release Savepoint)"
+        },
+        "getSavepointManager" : {
+          "method_name" : "getSavepointManager",
+          "return_type" : "SavepointManager",
+          "parameters" : "",
+          "swum_summary" : "This method retrieves and returns a number.",
+          "swum_actions" : "get",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Savepoint Manager))"
+        }
+      },
+      "swum_class_summary" : "The AbstractTransactionStatus class provides methods to set, set, set, get, create, create, get."
+    }
+  },
+  "swum_project_summary" : "This software project contains 3 classes with 27 methods. Primary operations include Invoke, create, get, invoke, set. Key objects manipulated are Event, Message.",
+  "swum_design_pattern" : [ ]
+}

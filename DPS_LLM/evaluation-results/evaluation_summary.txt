@@ -1,0 +1,46 @@
+============================================================
+EVALUATION SUMMARY: Generated vs Human Summaries
+============================================================
+
+
+NLG:
+  Classes Evaluated: 150
+  Avg Cosine Similarity: 0.1657 (±0.0797)
+  Avg BERT Precision: 0.8396
+  Avg BERT Recall: 0.8617
+  Avg BERT F1: 0.8501 (±0.0232)
+
+SWUM:
+  Classes Evaluated: 150
+  Avg Cosine Similarity: 0.2532 (±0.1014)
+  Avg BERT Precision: 0.8968
+  Avg BERT Recall: 0.8617
+  Avg BERT F1: 0.8786 (±0.0175)
+
+LLM (Claude) (Claude Sonnet 4.6):
+  Classes Evaluated: 150
+  Avg Cosine Similarity: 0.3078 (±0.1155)
+  Avg BERT Precision: 0.8543
+  Avg BERT Recall: 0.8951
+  Avg BERT F1: 0.8741 (±0.0179)
+
+LLM (Gemini) (Gemini 3.5 Flash):
+  Classes Evaluated: 150
+  Avg Cosine Similarity: 0.1686 (±0.1200)
+  Avg BERT Precision: 0.8547
+  Avg BERT Recall: 0.8317
+  Avg BERT F1: 0.8428 (±0.0298)
+
+LLM (GPT) (GPT-5.4 Mini):
+  Classes Evaluated: 150
+  Avg Cosine Similarity: 0.2586 (±0.0961)
+  Avg BERT Precision: 0.8690
+  Avg BERT Recall: 0.8866
+  Avg BERT F1: 0.8776 (±0.0165)
+
+LLM (Mistral) (Mistral Small 2603):
+  Classes Evaluated: 150
+  Avg Cosine Similarity: 0.3049 (±0.1201)
+  Avg BERT Precision: 0.8639
+  Avg BERT Recall: 0.8924
+  Avg BERT F1: 0.8778 (±0.0181)

@@ -1,0 +1,121 @@
+======================================================================
+MODEL COMPARISON RANKING RESULTS (NLG vs MODEL vs SWUM)
+======================================================================
+
+Per-Comparison Summary:
+----------------------------------------------------------------------
+
+Comparison: NLG vs CLAUDE vs SWUM
+  Source file (B): LLM_CLAUDE_SUMMARY.csv
+  Ranked: 150, Skipped: 0
+  Average Points: A(NLG)=11.58, B(CLAUDE)=10.94, C(SWUM)=7.48
+  Ranking by Criterion:
+    ACCURACY:
+      NLG: 74 first, 35 second, 41 third
+      CLAUDE: 58 first, 85 second, 7 third
+      SWUM: 18 first, 30 second, 102 third
+    CONCISENESS:
+      NLG: 65 first, 44 second, 41 third
+      CLAUDE: 65 first, 41 second, 44 third
+      SWUM: 20 first, 65 second, 65 third
+    ADEQUACY:
+      NLG: 121 first, 9 second, 20 third
+      CLAUDE: 20 first, 130 second, 0 third
+      SWUM: 9 first, 11 second, 130 third
+    CODE_CONTEXT:
+      NLG: 94 first, 31 second, 25 third
+      CLAUDE: 36 first, 105 second, 9 third
+      SWUM: 20 first, 14 second, 116 third
+    DESIGN_PATTERNS:
+      NLG: 29 first, 102 second, 19 third
+      CLAUDE: 62 first, 48 second, 40 third
+      SWUM: 59 first, 0 second, 91 third
+
+Comparison: NLG vs GEMINI vs SWUM
+  Source file (B): LLM_GEMINI_SUMMARY.csv
+  Ranked: 150, Skipped: 0
+  Average Points: A(NLG)=10.24, B(GEMINI)=8.43, C(SWUM)=10.69
+  Ranking by Criterion:
+    ACCURACY:
+      NLG: 79 first, 15 second, 50 third
+      GEMINI: 22 first, 44 second, 78 third
+      SWUM: 43 first, 85 second, 16 third
+    CONCISENESS:
+      NLG: 33 first, 39 second, 78 third
+      GEMINI: 71 first, 12 second, 67 third
+      SWUM: 46 first, 99 second, 5 third
+    ADEQUACY:
+      NLG: 117 first, 5 second, 25 third
+      GEMINI: 17 first, 36 second, 94 third
+      SWUM: 13 first, 106 second, 28 third
+    CODE_CONTEXT:
+      NLG: 70 first, 15 second, 60 third
+      GEMINI: 22 first, 61 second, 62 third
+      SWUM: 53 first, 69 second, 23 third
+    DESIGN_PATTERNS:
+      NLG: 55 first, 20 second, 73 third
+      GEMINI: 17 first, 80 second, 51 third
+      SWUM: 76 first, 48 second, 24 third
+
+Comparison: NLG vs GPT vs SWUM
+  Source file (B): LLM_GPT_SUMMARY.csv
+  Ranked: 150, Skipped: 0
+  Average Points: A(NLG)=10.92, B(GPT)=10.83, C(SWUM)=8.25
+  Ranking by Criterion:
+    ACCURACY:
+      NLG: 53 first, 53 second, 44 third
+      GPT: 65 first, 62 second, 23 third
+      SWUM: 32 first, 35 second, 83 third
+    CONCISENESS:
+      NLG: 56 first, 35 second, 59 third
+      GPT: 60 first, 40 second, 50 third
+      SWUM: 34 first, 75 second, 41 third
+    ADEQUACY:
+      NLG: 115 first, 8 second, 27 third
+      GPT: 24 first, 123 second, 3 third
+      SWUM: 11 first, 19 second, 120 third
+    CODE_CONTEXT:
+      NLG: 79 first, 38 second, 33 third
+      GPT: 45 first, 92 second, 13 third
+      SWUM: 26 first, 20 second, 104 third
+    DESIGN_PATTERNS:
+      NLG: 31 first, 86 second, 33 third
+      GPT: 55 first, 60 second, 35 third
+      SWUM: 64 first, 4 second, 82 third
+
+Comparison: NLG vs MISTRAL vs SWUM
+  Source file (B): LLM_MISTRAL_SUMMARY.csv
+  Ranked: 150, Skipped: 0
+  Average Points: A(NLG)=11.63, B(MISTRAL)=10.35, C(SWUM)=7.98
+  Ranking by Criterion:
+    ACCURACY:
+      NLG: 73 first, 50 second, 27 third
+      MISTRAL: 40 first, 79 second, 31 third
+      SWUM: 37 first, 21 second, 92 third
+    CONCISENESS:
+      NLG: 71 first, 23 second, 55 third
+      MISTRAL: 50 first, 50 second, 49 third
+      SWUM: 28 first, 76 second, 45 third
+    ADEQUACY:
+      NLG: 131 first, 4 second, 15 third
+      MISTRAL: 9 first, 134 second, 7 third
+      SWUM: 10 first, 12 second, 128 third
+    CODE_CONTEXT:
+      NLG: 91 first, 36 second, 23 third
+      MISTRAL: 35 first, 99 second, 16 third
+      SWUM: 24 first, 15 second, 111 third
+    DESIGN_PATTERNS:
+      NLG: 26 first, 99 second, 25 third
+      MISTRAL: 63 first, 47 second, 40 third
+      SWUM: 61 first, 4 second, 85 third
+
+----------------------------------------------------------------------
+Aggregate Statistics (Min/Max/Avg across all 4 comparisons):
+----------------------------------------------------------------------
+
+Overall Average Points:
+  A (NLG): min=10.24, max=11.63, avg=11.09
+  B (Model): min=8.43, max=10.94, avg=10.14
+  C (SWUM): min=7.48, max=10.69, avg=8.60
+
+======================================================================

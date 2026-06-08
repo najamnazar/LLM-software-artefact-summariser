@@ -1,0 +1,96 @@
+{
+  "project_name" : "AbdurRKhalid/Memento",
+  "swum_version" : "1.0",
+  "generated_timestamp" : 1780917880768,
+  "class_summaries" : {
+    "TextEditor" : {
+      "class_name" : "TextEditor",
+      "class_type" : "class",
+      "method_summaries" : {
+        "hitSave" : {
+          "method_name" : "hitSave",
+          "return_type" : "void",
+          "parameters" : "",
+          "swum_summary" : "This method saves. The TextEditor class acts as a caretaker in the memento pattern.",
+          "swum_actions" : "Save",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE (SUBJECT hit) Save)"
+        },
+        "hitUndo" : {
+          "method_name" : "hitUndo",
+          "return_type" : "void",
+          "parameters" : "",
+          "swum_summary" : "This method undos. The TextEditor class acts as a caretaker in the memento pattern.",
+          "swum_actions" : "Undo",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE (SUBJECT hit) Undo)"
+        }
+      },
+      "swum_class_summary" : "The TextEditor class acts as a caretaker in the memento pattern and provides methods to save, undo for managing text."
+    },
+    "TextWindow" : {
+      "class_name" : "TextWindow",
+      "class_type" : "class",
+      "method_summaries" : {
+        "addText" : {
+          "method_name" : "addText",
+          "return_type" : "void",
+          "parameters" : "String",
+          "swum_summary" : "This method adds a text using a parameter. The TextWindow class acts as an originator in the memento pattern.",
+          "swum_actions" : "add",
+          "swum_objects" : "Text",
+          "swum_parse_tree" : "(VERB_PHRASE add (OBJECT Text))"
+        },
+        "save" : {
+          "method_name" : "save",
+          "return_type" : "TextWindowState",
+          "parameters" : "",
+          "swum_summary" : "This method saves and returns an object. The TextWindow class acts as an originator in the memento pattern.",
+          "swum_actions" : "save",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE save)"
+        },
+        "restore" : {
+          "method_name" : "restore",
+          "return_type" : "void",
+          "parameters" : "TextWindowState",
+          "swum_summary" : "This method restores using a parameter. The TextWindow class acts as an originator in the memento pattern.",
+          "swum_actions" : "restore",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE restore)"
+        }
+      },
+      "swum_class_summary" : "The TextWindow class acts as an originator in the memento pattern and provides methods to add, save, restore for managing text, window."
+    },
+    "TextWindowState" : {
+      "class_name" : "TextWindowState",
+      "class_type" : "class",
+      "method_summaries" : {
+        "getText" : {
+          "method_name" : "getText",
+          "return_type" : "String",
+          "parameters" : "",
+          "swum_summary" : "This method retrieves a text and returns a String. The TextWindowState class acts as a memento in the memento pattern.",
+          "swum_actions" : "get",
+          "swum_objects" : "Text",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Text))"
+        }
+      },
+      "swum_class_summary" : "The TextWindowState class acts as a memento in the memento pattern and provides methods to get for managing text, window."
+    }
+  },
+  "swum_project_summary" : "This software project contains 3 classes with 6 methods. The system implements the memento design pattern. Primary operations include Save, Undo, add, get, restore. Key objects manipulated are Text.",
+  "swum_design_pattern" : [ {
+    "memento" : {
+      "TextWindowState" : {
+        "caretaker" : {
+          "TextEditor" : [ ]
+        },
+        "originator" : {
+          "TextWindow" : [ ]
+        },
+        "concrete_memento" : [ ]
+      }
+    }
+  } ]
+}

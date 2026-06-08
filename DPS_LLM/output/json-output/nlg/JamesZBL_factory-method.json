@@ -1,0 +1,428 @@
+{
+	"final_summary" : "ChineseCook.java: abstract_factory: ChineseCook acts as a factory for Cook, which overrides cookFood method of Cook. It is a public class that extends Cook and that implements Cook. The only method of ChineseCook is cookFood (Food). No methods call cookFood and cookFood calls no methods.\n\n factory_method: ChineseCook acts as a factory for Cook, which overrides. It is a public class that extends Cook and that implements Cook. The only method of ChineseCook is cookFood (Food). No methods call cookFood and cookFood calls no methods.\n\n\nFoodType.java: adapter: FoodType acts as an adaptee for adapter ChineseFood, which adapts to Food. FoodType acts as an adaptee for adapter WesternFood, which adapts to Food. It is a public class. The only method of FoodType is getName (String). No methods call getName and getName calls no methods.\n\n\nWesternFood.java: adapter: WesternFood acts as an adapter, which adapts to Food, which adapts to Food. It is a public class that extends Food and that implements Food. The 2 methods of WesternFood are getFoodType (FoodType) and toString (String). No methods call getFoodType and getFoodType calls no methods. No methods call toString and toString calls no methods.\n\n abstract_factory: WesternFood acts as a factory for Food, which overrides getFoodType method of Food. WesternFood acts as a product for Cook, which overrides getFoodType method of Food. It is a public class that extends Food and that implements Food. The 2 methods of WesternFood are getFoodType (FoodType) and toString (String). No methods call getFoodType and getFoodType calls no methods. No methods call toString and toString calls no methods.\n\n factory_method: WesternFood acts as a product for Cook, which overrides getFoodType method of Food. It is a public class that extends Food and that implements Food. The 2 methods of WesternFood are getFoodType (FoodType) and toString (String). No methods call getFoodType and getFoodType calls no methods. No methods call toString and toString calls no methods.\n\n\nCook.java: abstract_factory: Cook acts as an abstract factory for Food, which is inherited by ChineseCook, WesternCook. It is a public interface. The only method of Cook is cookFood (Food). No methods call cookFood and cookFood calls no methods.\n\n factory_method: Cook acts as a factory method for Food, which is inherited by ChineseCook, WesternCook. It is a public interface. The only method of Cook is cookFood (Food). No methods call cookFood and cookFood calls no methods.\n\n\nChineseFood.java: adapter: ChineseFood acts as an adapter, which adapts to Food, which adapts to Food. It is a public class that extends Food and that implements Food. The 2 methods of ChineseFood are getFoodType (FoodType) and toString (String). No methods call getFoodType and getFoodType calls no methods. No methods call toString and toString calls no methods.\n\n abstract_factory: ChineseFood acts as a product for Cook, which overrides getFoodType method of Food. ChineseFood acts as a factory for Food, which overrides getFoodType method of Food. It is a public class that extends Food and that implements Food. The 2 methods of ChineseFood are getFoodType (FoodType) and toString (String). No methods call getFoodType and getFoodType calls no methods. No methods call toString and toString calls no methods.\n\n factory_method: ChineseFood acts as a product for Cook, which overrides getFoodType method of Food. It is a public class that extends Food and that implements Food. The 2 methods of ChineseFood are getFoodType (FoodType) and toString (String). No methods call getFoodType and getFoodType calls no methods. No methods call toString and toString calls no methods.\n\n\nApplication.java: It is a public class. The 2 methods of Application are main (void) and makeFood (void). No methods call main and main calls only one method : makeFood method of class Application. Only one method ( main method of class Application ) calls makeFood and makeFood calls no methods.\n\n\nWesternCook.java: abstract_factory: WesternCook acts as a factory for Cook, which overrides cookFood method of Cook. It is a public class that extends Cook and that implements Cook. The only method of WesternCook is cookFood (Food). No methods call cookFood and cookFood calls no methods.\n\n factory_method: WesternCook acts as a factory for Cook, which overrides. It is a public class that extends Cook and that implements Cook. The only method of WesternCook is cookFood (Food). No methods call cookFood and cookFood calls no methods.\n\n\nFood.java: adapter: Food acts as a target for adapter ChineseFood, which adapts to Food. Food acts as a target for adapter WesternFood, which adapts to Food. It is a public interface. The only method of Food is getFoodType (FoodType). No methods call getFoodType and getFoodType calls no methods.\n\n abstract_factory: Food acts as an abstract product for Food, which is inherited by WesternFood, ChineseFood. Food acts as an abstract factory for, which is inherited by WesternFood, ChineseFood. It is a public interface. The only method of Food is getFoodType (FoodType). No methods call getFoodType and getFoodType calls no methods.\n\n factory_method: Food acts as an abstract product for Cook, which is inherited by WesternFood, ChineseFood. It is a public interface. The only method of Food is getFoodType (FoodType). No methods call getFoodType and getFoodType calls no methods.\n\n\n",
+	"design_pattern" : [ {
+		"factory_method" : {
+			"Cook" : {
+				"concrete_product" : [ "WesternFood", "ChineseFood" ],
+				"abstract_product" : "Food",
+				"concrete_factory" : [ "ChineseCook", "WesternCook" ]
+			}
+		}
+	}, {
+		"abstract_factory" : {
+			"Cook" : {
+				"abstract_product" : {
+					"Food" : [ "WesternFood", "ChineseFood" ]
+				},
+				"concrete_factory" : [ "ChineseCook", "WesternCook" ]
+			},
+			"Food" : {
+				"abstract_product" : { },
+				"concrete_factory" : [ "WesternFood", "ChineseFood" ]
+			}
+		}
+	}, {
+		"adapter" : {
+			"WesternFood" : {
+				"adaptee" : [ "FoodType" ],
+				"target" : [ "Food" ]
+			},
+			"ChineseFood" : {
+				"adaptee" : [ "FoodType" ],
+				"target" : [ "Food" ]
+			}
+		}
+	} ],
+	"JamesZBL/factory-method" : {
+		"ChineseCook" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ "Cook" ],
+				"IMPLEMENTSFROM" : [ "Cook" ],
+				"CLASSNAME" : "ChineseCook",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "cookFood",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "Food",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "foodType",
+					"PARAMETERTYPE" : "FoodType"
+				} ]
+			} ]
+		},
+		"FoodType" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "String",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "name" ],
+				"FIELDDATATYPE" : "String",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "FoodType",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ ],
+				"CONSTRUCTORPARAMETER" : [ {
+					"PARAMETERNAME" : "foodType",
+					"PARAMETERTYPE" : "String"
+				} ]
+			} ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getName",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"WesternFood" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "FoodType",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "foodType" ],
+				"FIELDDATATYPE" : "FoodType",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 1,
+				"EXTENDSFROM" : [ "Food" ],
+				"IMPLEMENTSFROM" : [ "Food" ],
+				"CLASSNAME" : "WesternFood",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ {
+					"PARAMETERNAME" : "foodType",
+					"PARAMETERTYPE" : "FoodType"
+				} ]
+			} ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getFoodType",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "FoodType",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "toString",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"Cook" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Cook",
+				"ISINTERFACEORNOT" : true,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "cookFood",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "Food",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "foodType",
+					"PARAMETERTYPE" : "FoodType"
+				} ]
+			} ]
+		},
+		"ChineseFood" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "FoodType",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "foodType" ],
+				"FIELDDATATYPE" : "FoodType",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 1,
+				"EXTENDSFROM" : [ "Food" ],
+				"IMPLEMENTSFROM" : [ "Food" ],
+				"CLASSNAME" : "ChineseFood",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ {
+					"PARAMETERNAME" : "foodType",
+					"PARAMETERTYPE" : "FoodType"
+				} ]
+			} ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getFoodType",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "FoodType",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "toString",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"Application" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "Cook",
+				"FIELDMODIFIERTYPE" : [ "private", "final" ],
+				"FIELDDECLARATION" : [ "cook" ],
+				"FIELDDATATYPE" : "Cook",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "Logger",
+				"FIELDMODIFIERTYPE" : [ "private", "static", "final" ],
+				"FIELDDECLARATION" : [ "LOGGER = LoggerFactory.getLogger(Application.class)" ],
+				"FIELDDATATYPE" : "Logger",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 9,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Application",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "private" ],
+				"CONSTRUCTORPARAMETER" : [ {
+					"PARAMETERNAME" : "cook",
+					"PARAMETERTYPE" : "Cook"
+				} ]
+			} ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "app = new Application(new WesternCook())" ],
+				"VARIABLECOMMONTYPE" : "Application",
+				"VARIABLEELEMENTTYPE" : "Application"
+			}, {
+				"VARIABLEDECLARATION" : [ "food" ],
+				"VARIABLECOMMONTYPE" : "Food",
+				"VARIABLEELEMENTTYPE" : "Food"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "main",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public", "static" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 1,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "Application",
+					"CALLEEMETHODNAME" : "makeFood"
+				}, {
+					"CALLEECLASS" : "Application",
+					"CALLEEMETHODNAME" : "makeFood"
+				} ],
+				"NUMBEROFMETHODLINES" : 4,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "args",
+					"PARAMETERTYPE" : "String[]"
+				} ]
+			}, {
+				"METHODNAME" : "makeFood",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "Application"
+				}, {
+					"CALLEDMETHODNAME" : "main",
+					"CALLEDCLASS" : "Application"
+				} ],
+				"METHODMODIFIERTYPE" : [ "private" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 1,
+				"NUMBEROFOUTGOINGMETHODS" : 6,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 5,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"WesternCook" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ "Cook" ],
+				"IMPLEMENTSFROM" : [ "Cook" ],
+				"CLASSNAME" : "WesternCook",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "cookFood",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "Food",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "foodType",
+					"PARAMETERTYPE" : "FoodType"
+				} ]
+			} ]
+		},
+		"Food" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Food",
+				"ISINTERFACEORNOT" : true,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getFoodType",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "FoodType",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ ]
+			} ]
+		}
+	},
+	"summary_NLG" : {
+		"adapter" : {
+			"FoodType" : [ "FoodType acts as an adaptee for adapter ChineseFood, which adapts to Food.", "FoodType acts as an adaptee for adapter WesternFood, which adapts to Food." ],
+			"WesternFood" : [ "WesternFood acts as an adapter, which adapts to Food, which adapts to Food." ],
+			"ChineseFood" : [ "ChineseFood acts as an adapter, which adapts to Food, which adapts to Food." ],
+			"Food" : [ "Food acts as a target for adapter ChineseFood, which adapts to Food.", "Food acts as a target for adapter WesternFood, which adapts to Food." ]
+		},
+		"abstract_factory" : {
+			"ChineseCook" : [ "ChineseCook acts as a factory for Cook, which overrides cookFood method of Cook." ],
+			"WesternFood" : [ "WesternFood acts as a factory for Food, which overrides getFoodType method of Food.", "WesternFood acts as a product for Cook, which overrides getFoodType method of Food." ],
+			"Cook" : [ "Cook acts as an abstract factory for Food, which is inherited by ChineseCook, WesternCook." ],
+			"ChineseFood" : [ "ChineseFood acts as a product for Cook, which overrides getFoodType method of Food.", "ChineseFood acts as a factory for Food, which overrides getFoodType method of Food." ],
+			"WesternCook" : [ "WesternCook acts as a factory for Cook, which overrides cookFood method of Cook." ],
+			"Food" : [ "Food acts as an abstract product for Food, which is inherited by WesternFood, ChineseFood.", "Food acts as an abstract factory for, which is inherited by WesternFood, ChineseFood." ]
+		},
+		"factory_method" : {
+			"ChineseCook" : [ "ChineseCook acts as a factory for Cook, which overrides." ],
+			"WesternFood" : [ "WesternFood acts as a product for Cook, which overrides getFoodType method of Food." ],
+			"Cook" : [ "Cook acts as a factory method for Food, which is inherited by ChineseCook, WesternCook." ],
+			"ChineseFood" : [ "ChineseFood acts as a product for Cook, which overrides getFoodType method of Food." ],
+			"WesternCook" : [ "WesternCook acts as a factory for Cook, which overrides." ],
+			"Food" : [ "Food acts as an abstract product for Cook, which is inherited by WesternFood, ChineseFood." ]
+		}
+	},
+	"project_identifier" : "JamesZBL/factory-method"
+}

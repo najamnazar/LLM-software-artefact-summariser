@@ -1,0 +1,1414 @@
+{
+  "project_name" : "project_identifier",
+  "swum_version" : "1.0",
+  "generated_timestamp" : 1780917880870,
+  "class_summaries" : {
+    "TransactionTemplate" : {
+      "class_name" : "TransactionTemplate",
+      "class_type" : "class",
+      "method_summaries" : {
+        "setTransactionManager" : {
+          "method_name" : "setTransactionManager",
+          "return_type" : "void",
+          "parameters" : "@Nullable",
+          "swum_summary" : "This method sets using a parameter.",
+          "swum_actions" : "set",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE set (OBJECT Transaction Manager))"
+        },
+        "getTransactionManager" : {
+          "method_name" : "getTransactionManager",
+          "return_type" : "PlatformTransactionManager",
+          "parameters" : "",
+          "swum_summary" : "This method retrieves and returns an object.",
+          "swum_actions" : "get",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Transaction Manager))"
+        },
+        "afterPropertiesSet" : {
+          "method_name" : "afterPropertiesSet",
+          "return_type" : "void",
+          "parameters" : "",
+          "swum_summary" : "This method sets.",
+          "swum_actions" : "Set",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE (SUBJECT after Properties) Set)"
+        },
+        "execute" : {
+          "method_name" : "execute",
+          "return_type" : "T",
+          "parameters" : "TransactionCallback<T>",
+          "swum_summary" : "This method executes using a parameter and returns an object.",
+          "swum_actions" : "execute",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE execute)"
+        },
+        "rollbackOnException" : {
+          "method_name" : "rollbackOnException",
+          "return_type" : "void",
+          "parameters" : "TransactionStatus, Throwable",
+          "swum_summary" : "This method performs using 2 parameters.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE rollback On Exception)"
+        },
+        "equals" : {
+          "method_name" : "equals",
+          "return_type" : "boolean",
+          "parameters" : "@Nullable",
+          "swum_summary" : "This method performs using a parameter and returns a boolean.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE equals)"
+        }
+      },
+      "swum_class_summary" : "The TransactionTemplate class provides methods to set, get, set, execute."
+    },
+    "RestTemplate" : {
+      "class_name" : "RestTemplate",
+      "class_type" : "class",
+      "method_summaries" : {
+        "updateErrorHandlerConverters" : {
+          "method_name" : "updateErrorHandlerConverters",
+          "return_type" : "void",
+          "parameters" : "",
+          "swum_summary" : "This method updates.",
+          "swum_actions" : "update",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE update (OBJECT Error Handler Converters))"
+        },
+        "initUriTemplateHandler" : {
+          "method_name" : "initUriTemplateHandler",
+          "return_type" : "DefaultUriBuilderFactory",
+          "parameters" : "",
+          "swum_summary" : "This method inits and returns an object.",
+          "swum_actions" : "init",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE init (OBJECT Uri Template Handler))"
+        },
+        "setMessageConverters" : {
+          "method_name" : "setMessageConverters",
+          "return_type" : "void",
+          "parameters" : "List<HttpMessageConverter<?>>",
+          "swum_summary" : "This method sets a message using a parameter.",
+          "swum_actions" : "set",
+          "swum_objects" : "Message",
+          "swum_parse_tree" : "(VERB_PHRASE set (OBJECT Message Converters))"
+        },
+        "validateConverters" : {
+          "method_name" : "validateConverters",
+          "return_type" : "void",
+          "parameters" : "Iterable<HttpMessageConverter<?>>",
+          "swum_summary" : "This method validates using a parameter.",
+          "swum_actions" : "validate",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE validate (OBJECT Converters))"
+        },
+        "getMessageConverters" : {
+          "method_name" : "getMessageConverters",
+          "return_type" : "List<HttpMessageConverter<?>>",
+          "parameters" : "",
+          "swum_summary" : "This method retrieves a message and returns a collection.",
+          "swum_actions" : "get",
+          "swum_objects" : "Message",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Message Converters))"
+        },
+        "setErrorHandler" : {
+          "method_name" : "setErrorHandler",
+          "return_type" : "void",
+          "parameters" : "ResponseErrorHandler",
+          "swum_summary" : "This method sets using a parameter.",
+          "swum_actions" : "set",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE set (OBJECT Error Handler))"
+        },
+        "getErrorHandler" : {
+          "method_name" : "getErrorHandler",
+          "return_type" : "ResponseErrorHandler",
+          "parameters" : "",
+          "swum_summary" : "This method retrieves and returns an object.",
+          "swum_actions" : "get",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Error Handler))"
+        },
+        "setDefaultUriVariables" : {
+          "method_name" : "setDefaultUriVariables",
+          "return_type" : "void",
+          "parameters" : "Map<String,",
+          "swum_summary" : "This method sets using a parameter.",
+          "swum_actions" : "set",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE set (OBJECT Default Uri Variables))"
+        },
+        "setUriTemplateHandler" : {
+          "method_name" : "setUriTemplateHandler",
+          "return_type" : "void",
+          "parameters" : "UriTemplateHandler",
+          "swum_summary" : "This method sets using a parameter.",
+          "swum_actions" : "set",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE set (OBJECT Uri Template Handler))"
+        },
+        "getUriTemplateHandler" : {
+          "method_name" : "getUriTemplateHandler",
+          "return_type" : "UriTemplateHandler",
+          "parameters" : "",
+          "swum_summary" : "This method retrieves and returns an object.",
+          "swum_actions" : "get",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Uri Template Handler))"
+        },
+        "setObservationRegistry" : {
+          "method_name" : "setObservationRegistry",
+          "return_type" : "void",
+          "parameters" : "ObservationRegistry",
+          "swum_summary" : "This method sets using a parameter.",
+          "swum_actions" : "set",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE set (OBJECT Observation Registry))"
+        },
+        "getObservationRegistry" : {
+          "method_name" : "getObservationRegistry",
+          "return_type" : "ObservationRegistry",
+          "parameters" : "",
+          "swum_summary" : "This method retrieves and returns an object.",
+          "swum_actions" : "get",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Observation Registry))"
+        },
+        "setObservationConvention" : {
+          "method_name" : "setObservationConvention",
+          "return_type" : "void",
+          "parameters" : "ClientRequestObservationConvention",
+          "swum_summary" : "This method sets using a parameter.",
+          "swum_actions" : "set",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE set (OBJECT Observation Convention))"
+        },
+        "getObservationConvention" : {
+          "method_name" : "getObservationConvention",
+          "return_type" : "ClientRequestObservationConvention",
+          "parameters" : "",
+          "swum_summary" : "This method retrieves and returns an object.",
+          "swum_actions" : "get",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Observation Convention))"
+        },
+        "getForObject" : {
+          "method_name" : "getForObject",
+          "return_type" : "T",
+          "parameters" : "URI, Class<T>",
+          "swum_summary" : "This method retrieves an object using 2 parameters and returns an object.",
+          "swum_actions" : "get",
+          "swum_objects" : "Object",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT For Object))"
+        },
+        "getForEntity" : {
+          "method_name" : "getForEntity",
+          "return_type" : "ResponseEntity<T>",
+          "parameters" : "URI, Class<T>",
+          "swum_summary" : "This method retrieves using 2 parameters and returns an object.",
+          "swum_actions" : "get",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT For Entity))"
+        },
+        "headForHeaders" : {
+          "method_name" : "headForHeaders",
+          "return_type" : "HttpHeaders",
+          "parameters" : "URI",
+          "swum_summary" : "This method performs using a parameter and returns an object.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE head For Headers)"
+        },
+        "postForLocation" : {
+          "method_name" : "postForLocation",
+          "return_type" : "URI",
+          "parameters" : "URI, @Nullable",
+          "swum_summary" : "This method performs using 2 parameters and returns an object.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE post For Location)"
+        },
+        "postForObject" : {
+          "method_name" : "postForObject",
+          "return_type" : "T",
+          "parameters" : "URI, @Nullable, Class<T>",
+          "swum_summary" : "This method performs an object using 3 parameters and returns an object.",
+          "swum_actions" : "",
+          "swum_objects" : "Object",
+          "swum_parse_tree" : "(NOUN_PHRASE post For Object)"
+        },
+        "postForEntity" : {
+          "method_name" : "postForEntity",
+          "return_type" : "ResponseEntity<T>",
+          "parameters" : "URI, @Nullable, Class<T>",
+          "swum_summary" : "This method performs using 3 parameters and returns an object.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE post For Entity)"
+        },
+        "put" : {
+          "method_name" : "put",
+          "return_type" : "void",
+          "parameters" : "URI, @Nullable",
+          "swum_summary" : "This method puts using 2 parameters.",
+          "swum_actions" : "put",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE put)"
+        },
+        "patchForObject" : {
+          "method_name" : "patchForObject",
+          "return_type" : "T",
+          "parameters" : "URI, @Nullable, Class<T>",
+          "swum_summary" : "This method performs an object using 3 parameters and returns an object.",
+          "swum_actions" : "",
+          "swum_objects" : "Object",
+          "swum_parse_tree" : "(NOUN_PHRASE patch For Object)"
+        },
+        "delete" : {
+          "method_name" : "delete",
+          "return_type" : "void",
+          "parameters" : "URI",
+          "swum_summary" : "This method deletes using a parameter.",
+          "swum_actions" : "delete",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE delete)"
+        },
+        "optionsForAllow" : {
+          "method_name" : "optionsForAllow",
+          "return_type" : "Set<HttpMethod>",
+          "parameters" : "URI",
+          "swum_summary" : "This method performs using a parameter and returns an object.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE options For Allow)"
+        },
+        "exchange" : {
+          "method_name" : "exchange",
+          "return_type" : "ResponseEntity<T>",
+          "parameters" : "RequestEntity<?>, ParameterizedTypeReference<T>",
+          "swum_summary" : "This method performs using 2 parameters and returns an object.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE exchange)"
+        },
+        "resolveUrl" : {
+          "method_name" : "resolveUrl",
+          "return_type" : "URI",
+          "parameters" : "RequestEntity<?>",
+          "swum_summary" : "This method performs using a parameter and returns an object.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE resolve Url)"
+        },
+        "resolveUriTemplate" : {
+          "method_name" : "resolveUriTemplate",
+          "return_type" : "String",
+          "parameters" : "RequestEntity<?>",
+          "swum_summary" : "This method performs using a parameter and returns a String.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE resolve Uri Template)"
+        },
+        "execute" : {
+          "method_name" : "execute",
+          "return_type" : "T",
+          "parameters" : "URI, HttpMethod, @Nullable, @Nullable",
+          "swum_summary" : "This method executes using 4 parameters and returns an object.",
+          "swum_actions" : "execute",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE execute)"
+        },
+        "doExecute" : {
+          "method_name" : "doExecute",
+          "return_type" : "T",
+          "parameters" : "URI, @Nullable, @Nullable, @Nullable, @Nullable",
+          "swum_summary" : "This method executes using 5 parameters and returns an object.",
+          "swum_actions" : "Execute",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE (SUBJECT do) Execute)"
+        },
+        "createResourceAccessException" : {
+          "method_name" : "createResourceAccessException",
+          "return_type" : "ResourceAccessException",
+          "parameters" : "URI, HttpMethod, IOException",
+          "swum_summary" : "This method creates using 3 parameters and returns an object.",
+          "swum_actions" : "create",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE create (OBJECT Resource Access Exception))"
+        },
+        "handleResponse" : {
+          "method_name" : "handleResponse",
+          "return_type" : "void",
+          "parameters" : "URI, HttpMethod, ClientHttpResponse",
+          "swum_summary" : "This method handles a response using 3 parameters.",
+          "swum_actions" : "handle",
+          "swum_objects" : "Response",
+          "swum_parse_tree" : "(VERB_PHRASE handle (OBJECT Response))"
+        },
+        "acceptHeaderRequestCallback" : {
+          "method_name" : "acceptHeaderRequestCallback",
+          "return_type" : "RequestCallback",
+          "parameters" : "Class<T>",
+          "swum_summary" : "This method accepts a request using a parameter and returns an object.",
+          "swum_actions" : "accept",
+          "swum_objects" : "Request",
+          "swum_parse_tree" : "(VERB_PHRASE accept (OBJECT Header Request Callback))"
+        },
+        "httpEntityCallback" : {
+          "method_name" : "httpEntityCallback",
+          "return_type" : "RequestCallback",
+          "parameters" : "@Nullable, Type",
+          "swum_summary" : "This method performs using 2 parameters and returns an object.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE http Entity Callback)"
+        },
+        "responseEntityExtractor" : {
+          "method_name" : "responseEntityExtractor",
+          "return_type" : "ResponseExtractor<ResponseEntity<T>>",
+          "parameters" : "Type",
+          "swum_summary" : "This method performs a response using a parameter and returns an object.",
+          "swum_actions" : "",
+          "swum_objects" : "response",
+          "swum_parse_tree" : "(NOUN_PHRASE response Entity Extractor)"
+        },
+        "headersExtractor" : {
+          "method_name" : "headersExtractor",
+          "return_type" : "ResponseExtractor<HttpHeaders>",
+          "parameters" : "",
+          "swum_summary" : "This method performs and returns an object.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE headers Extractor)"
+        },
+        "nonNull" : {
+          "method_name" : "nonNull",
+          "return_type" : "T",
+          "parameters" : "@Nullable",
+          "swum_summary" : "This method performs using a parameter and returns an object.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE non Null)"
+        },
+        "doWithRequest" : {
+          "method_name" : "doWithRequest",
+          "return_type" : "void",
+          "parameters" : "ClientHttpRequest",
+          "swum_summary" : "This method performs a request using a parameter.",
+          "swum_actions" : "",
+          "swum_objects" : "Request",
+          "swum_parse_tree" : "(NOUN_PHRASE do With Request)"
+        },
+        "canReadResponse" : {
+          "method_name" : "canReadResponse",
+          "return_type" : "boolean",
+          "parameters" : "Type, HttpMessageConverter<?>",
+          "swum_summary" : "This method reads a response using 2 parameters and returns a boolean.",
+          "swum_actions" : "Read",
+          "swum_objects" : "Response",
+          "swum_parse_tree" : "(VERB_PHRASE (SUBJECT can) Read (OBJECT Response))"
+        },
+        "getSupportedMediaTypes" : {
+          "method_name" : "getSupportedMediaTypes",
+          "return_type" : "Stream<MediaType>",
+          "parameters" : "Type, HttpMessageConverter<?>",
+          "swum_summary" : "This method retrieves using 2 parameters and returns an object.",
+          "swum_actions" : "get",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Supported Media Types))"
+        },
+        "logBody" : {
+          "method_name" : "logBody",
+          "return_type" : "void",
+          "parameters" : "Object, @Nullable, HttpMessageConverter<?>",
+          "swum_summary" : "This method logs using 3 parameters.",
+          "swum_actions" : "log",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE log (OBJECT Body))"
+        },
+        "extractData" : {
+          "method_name" : "extractData",
+          "return_type" : "HttpHeaders",
+          "parameters" : "ClientHttpResponse",
+          "swum_summary" : "This method performs a data using a parameter and returns an object.",
+          "swum_actions" : "",
+          "swum_objects" : "Data",
+          "swum_parse_tree" : "(NOUN_PHRASE extract Data)"
+        }
+      },
+      "swum_class_summary" : "The RestTemplate class provides 36 methods including retrieval, storage and modification, processing and other operations."
+    },
+    "JmsTemplate" : {
+      "class_name" : "JmsTemplate",
+      "class_type" : "class",
+      "method_summaries" : {
+        "setDefaultDestination" : {
+          "method_name" : "setDefaultDestination",
+          "return_type" : "void",
+          "parameters" : "@Nullable",
+          "swum_summary" : "This method sets using a parameter.",
+          "swum_actions" : "set",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE set (OBJECT Default Destination))"
+        },
+        "getDefaultDestination" : {
+          "method_name" : "getDefaultDestination",
+          "return_type" : "Destination",
+          "parameters" : "",
+          "swum_summary" : "This method retrieves and returns an object.",
+          "swum_actions" : "get",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Default Destination))"
+        },
+        "getDefaultQueue" : {
+          "method_name" : "getDefaultQueue",
+          "return_type" : "Queue",
+          "parameters" : "",
+          "swum_summary" : "This method retrieves and returns an object.",
+          "swum_actions" : "get",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Default Queue))"
+        },
+        "setDefaultDestinationName" : {
+          "method_name" : "setDefaultDestinationName",
+          "return_type" : "void",
+          "parameters" : "@Nullable",
+          "swum_summary" : "This method sets using a parameter.",
+          "swum_actions" : "set",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE set (OBJECT Default Destination Name))"
+        },
+        "getDefaultDestinationName" : {
+          "method_name" : "getDefaultDestinationName",
+          "return_type" : "String",
+          "parameters" : "",
+          "swum_summary" : "This method retrieves and returns a String.",
+          "swum_actions" : "get",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Default Destination Name))"
+        },
+        "getRequiredDefaultDestinationName" : {
+          "method_name" : "getRequiredDefaultDestinationName",
+          "return_type" : "String",
+          "parameters" : "",
+          "swum_summary" : "This method retrieves and returns a String.",
+          "swum_actions" : "get",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Required Default Destination Name))"
+        },
+        "setMessageConverter" : {
+          "method_name" : "setMessageConverter",
+          "return_type" : "void",
+          "parameters" : "MessageConverter",
+          "swum_summary" : "This method sets a message using a parameter.",
+          "swum_actions" : "set",
+          "swum_objects" : "Message",
+          "swum_parse_tree" : "(VERB_PHRASE set (OBJECT Message Converter))"
+        },
+        "getMessageConverter" : {
+          "method_name" : "getMessageConverter",
+          "return_type" : "MessageConverter",
+          "parameters" : "",
+          "swum_summary" : "This method retrieves a message and returns an object.",
+          "swum_actions" : "get",
+          "swum_objects" : "Message",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Message Converter))"
+        },
+        "setMessageIdEnabled" : {
+          "method_name" : "setMessageIdEnabled",
+          "return_type" : "void",
+          "parameters" : "boolean",
+          "swum_summary" : "This method sets a message using a parameter.",
+          "swum_actions" : "set",
+          "swum_objects" : "Message",
+          "swum_parse_tree" : "(VERB_PHRASE set (OBJECT Message Id Enabled))"
+        },
+        "isMessageIdEnabled" : {
+          "method_name" : "isMessageIdEnabled",
+          "return_type" : "boolean",
+          "parameters" : "",
+          "swum_summary" : "This method performs a message and returns a boolean.",
+          "swum_actions" : "",
+          "swum_objects" : "Message",
+          "swum_parse_tree" : "(NOUN_PHRASE is Message Id Enabled)"
+        },
+        "setMessageTimestampEnabled" : {
+          "method_name" : "setMessageTimestampEnabled",
+          "return_type" : "void",
+          "parameters" : "boolean",
+          "swum_summary" : "This method sets a message using a parameter.",
+          "swum_actions" : "set",
+          "swum_objects" : "Message",
+          "swum_parse_tree" : "(VERB_PHRASE set (OBJECT Message Timestamp Enabled))"
+        },
+        "isMessageTimestampEnabled" : {
+          "method_name" : "isMessageTimestampEnabled",
+          "return_type" : "boolean",
+          "parameters" : "",
+          "swum_summary" : "This method performs a message and returns a boolean.",
+          "swum_actions" : "",
+          "swum_objects" : "Message",
+          "swum_parse_tree" : "(NOUN_PHRASE is Message Timestamp Enabled)"
+        },
+        "setPubSubNoLocal" : {
+          "method_name" : "setPubSubNoLocal",
+          "return_type" : "void",
+          "parameters" : "boolean",
+          "swum_summary" : "This method sets using a parameter.",
+          "swum_actions" : "set",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE set (OBJECT Pub Sub No Local))"
+        },
+        "isPubSubNoLocal" : {
+          "method_name" : "isPubSubNoLocal",
+          "return_type" : "boolean",
+          "parameters" : "",
+          "swum_summary" : "This method performs and returns a boolean.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE is Pub Sub No Local)"
+        },
+        "setReceiveTimeout" : {
+          "method_name" : "setReceiveTimeout",
+          "return_type" : "void",
+          "parameters" : "long",
+          "swum_summary" : "This method sets operations using a parameter.",
+          "swum_actions" : "set, Receive",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE set (OBJECT Receive Timeout))"
+        },
+        "getReceiveTimeout" : {
+          "method_name" : "getReceiveTimeout",
+          "return_type" : "long",
+          "parameters" : "",
+          "swum_summary" : "This method retrieves operations and returns a number.",
+          "swum_actions" : "get, Receive",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Receive Timeout))"
+        },
+        "setDeliveryDelay" : {
+          "method_name" : "setDeliveryDelay",
+          "return_type" : "void",
+          "parameters" : "long",
+          "swum_summary" : "This method sets using a parameter.",
+          "swum_actions" : "set",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE set (OBJECT Delivery Delay))"
+        },
+        "getDeliveryDelay" : {
+          "method_name" : "getDeliveryDelay",
+          "return_type" : "long",
+          "parameters" : "",
+          "swum_summary" : "This method retrieves and returns a number.",
+          "swum_actions" : "get",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Delivery Delay))"
+        },
+        "setExplicitQosEnabled" : {
+          "method_name" : "setExplicitQosEnabled",
+          "return_type" : "void",
+          "parameters" : "boolean",
+          "swum_summary" : "This method sets using a parameter.",
+          "swum_actions" : "set",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE set (OBJECT Explicit Qos Enabled))"
+        },
+        "isExplicitQosEnabled" : {
+          "method_name" : "isExplicitQosEnabled",
+          "return_type" : "boolean",
+          "parameters" : "",
+          "swum_summary" : "This method performs and returns a boolean.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE is Explicit Qos Enabled)"
+        },
+        "setQosSettings" : {
+          "method_name" : "setQosSettings",
+          "return_type" : "void",
+          "parameters" : "QosSettings",
+          "swum_summary" : "This method sets using a parameter.",
+          "swum_actions" : "set",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE set (OBJECT Qos Settings))"
+        },
+        "setDeliveryPersistent" : {
+          "method_name" : "setDeliveryPersistent",
+          "return_type" : "void",
+          "parameters" : "boolean",
+          "swum_summary" : "This method sets using a parameter.",
+          "swum_actions" : "set",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE set (OBJECT Delivery Persistent))"
+        },
+        "setDeliveryMode" : {
+          "method_name" : "setDeliveryMode",
+          "return_type" : "void",
+          "parameters" : "int",
+          "swum_summary" : "This method sets using a parameter.",
+          "swum_actions" : "set",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE set (OBJECT Delivery Mode))"
+        },
+        "getDeliveryMode" : {
+          "method_name" : "getDeliveryMode",
+          "return_type" : "int",
+          "parameters" : "",
+          "swum_summary" : "This method retrieves and returns a number.",
+          "swum_actions" : "get",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Delivery Mode))"
+        },
+        "setPriority" : {
+          "method_name" : "setPriority",
+          "return_type" : "void",
+          "parameters" : "int",
+          "swum_summary" : "This method sets using a parameter.",
+          "swum_actions" : "set",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE set (OBJECT Priority))"
+        },
+        "getPriority" : {
+          "method_name" : "getPriority",
+          "return_type" : "int",
+          "parameters" : "",
+          "swum_summary" : "This method retrieves and returns a number.",
+          "swum_actions" : "get",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Priority))"
+        },
+        "setTimeToLive" : {
+          "method_name" : "setTimeToLive",
+          "return_type" : "void",
+          "parameters" : "long",
+          "swum_summary" : "This method sets using a parameter.",
+          "swum_actions" : "set",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE set (OBJECT Time To Live))"
+        },
+        "getTimeToLive" : {
+          "method_name" : "getTimeToLive",
+          "return_type" : "long",
+          "parameters" : "",
+          "swum_summary" : "This method retrieves and returns a number.",
+          "swum_actions" : "get",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Time To Live))"
+        },
+        "setObservationRegistry" : {
+          "method_name" : "setObservationRegistry",
+          "return_type" : "void",
+          "parameters" : "@Nullable",
+          "swum_summary" : "This method sets using a parameter.",
+          "swum_actions" : "set",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE set (OBJECT Observation Registry))"
+        },
+        "getObservationRegistry" : {
+          "method_name" : "getObservationRegistry",
+          "return_type" : "ObservationRegistry",
+          "parameters" : "",
+          "swum_summary" : "This method retrieves and returns an object.",
+          "swum_actions" : "get",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Observation Registry))"
+        },
+        "execute" : {
+          "method_name" : "execute",
+          "return_type" : "T",
+          "parameters" : "String, ProducerCallback<T>",
+          "swum_summary" : "This method executes using 2 parameters and returns an object.",
+          "swum_actions" : "execute",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE execute)"
+        },
+        "send" : {
+          "method_name" : "send",
+          "return_type" : "void",
+          "parameters" : "String, MessageCreator",
+          "swum_summary" : "This method sends using 2 parameters.",
+          "swum_actions" : "send",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE send)"
+        },
+        "doSend" : {
+          "method_name" : "doSend",
+          "return_type" : "void",
+          "parameters" : "MessageProducer, Message",
+          "swum_summary" : "This method sends using 2 parameters.",
+          "swum_actions" : "Send",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE (SUBJECT do) Send)"
+        },
+        "convertAndSend" : {
+          "method_name" : "convertAndSend",
+          "return_type" : "void",
+          "parameters" : "String, Object, MessagePostProcessor",
+          "swum_summary" : "This method converts operations using 3 parameters.",
+          "swum_actions" : "convert, Send",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE convert (OBJECT And Send))"
+        },
+        "receive" : {
+          "method_name" : "receive",
+          "return_type" : "Message",
+          "parameters" : "String",
+          "swum_summary" : "This method receives using a parameter and returns an object.",
+          "swum_actions" : "receive",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE receive)"
+        },
+        "receiveSelected" : {
+          "method_name" : "receiveSelected",
+          "return_type" : "Message",
+          "parameters" : "String, @Nullable",
+          "swum_summary" : "This method receives using 2 parameters and returns an object.",
+          "swum_actions" : "receive",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE receive (OBJECT Selected))"
+        },
+        "doReceive" : {
+          "method_name" : "doReceive",
+          "return_type" : "Message",
+          "parameters" : "Session, MessageConsumer",
+          "swum_summary" : "This method receives using 2 parameters and returns an object.",
+          "swum_actions" : "Receive",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE (SUBJECT do) Receive)"
+        },
+        "receiveAndConvert" : {
+          "method_name" : "receiveAndConvert",
+          "return_type" : "Object",
+          "parameters" : "String",
+          "swum_summary" : "This method receives operations using a parameter and returns an object.",
+          "swum_actions" : "receive, Convert",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE receive (OBJECT And Convert))"
+        },
+        "receiveSelectedAndConvert" : {
+          "method_name" : "receiveSelectedAndConvert",
+          "return_type" : "Object",
+          "parameters" : "String, @Nullable",
+          "swum_summary" : "This method receives operations using 2 parameters and returns an object.",
+          "swum_actions" : "receive, Convert",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE receive (OBJECT Selected And Convert))"
+        },
+        "doConvertFromMessage" : {
+          "method_name" : "doConvertFromMessage",
+          "return_type" : "Object",
+          "parameters" : "@Nullable",
+          "swum_summary" : "This method converts a message using a parameter and returns an object.",
+          "swum_actions" : "Convert",
+          "swum_objects" : "Message",
+          "swum_parse_tree" : "(VERB_PHRASE (SUBJECT do) Convert (OBJECT From Message))"
+        },
+        "sendAndReceive" : {
+          "method_name" : "sendAndReceive",
+          "return_type" : "Message",
+          "parameters" : "String, MessageCreator",
+          "swum_summary" : "This method sends operations using 2 parameters and returns an object.",
+          "swum_actions" : "send, Receive",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE send (OBJECT And Receive))"
+        },
+        "doSendAndReceive" : {
+          "method_name" : "doSendAndReceive",
+          "return_type" : "Message",
+          "parameters" : "Session, Destination, MessageCreator",
+          "swum_summary" : "This method sends operations using 3 parameters and returns an object.",
+          "swum_actions" : "Send, Receive",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE (SUBJECT do) Send (OBJECT And Receive))"
+        },
+        "executeLocal" : {
+          "method_name" : "executeLocal",
+          "return_type" : "T",
+          "parameters" : "SessionCallback<T>, boolean",
+          "swum_summary" : "This method executes using 2 parameters and returns an object.",
+          "swum_actions" : "execute",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE execute (OBJECT Local))"
+        },
+        "browse" : {
+          "method_name" : "browse",
+          "return_type" : "T",
+          "parameters" : "String, BrowserCallback<T>",
+          "swum_summary" : "This method performs using 2 parameters and returns an object.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE browse)"
+        },
+        "browseSelected" : {
+          "method_name" : "browseSelected",
+          "return_type" : "T",
+          "parameters" : "String, @Nullable, BrowserCallback<T>",
+          "swum_summary" : "This method performs using 3 parameters and returns an object.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE browse Selected)"
+        },
+        "getConnection" : {
+          "method_name" : "getConnection",
+          "return_type" : "Connection",
+          "parameters" : "JmsResourceHolder",
+          "swum_summary" : "This method retrieves a connection using a parameter and returns an object.",
+          "swum_actions" : "get",
+          "swum_objects" : "Connection",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Connection))"
+        },
+        "getSession" : {
+          "method_name" : "getSession",
+          "return_type" : "Session",
+          "parameters" : "JmsResourceHolder",
+          "swum_summary" : "This method retrieves a session using a parameter and returns an object.",
+          "swum_actions" : "get",
+          "swum_objects" : "Session",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Session))"
+        },
+        "isSessionLocallyTransacted" : {
+          "method_name" : "isSessionLocallyTransacted",
+          "return_type" : "boolean",
+          "parameters" : "Session",
+          "swum_summary" : "This method performs a session using a parameter and returns a boolean.",
+          "swum_actions" : "",
+          "swum_objects" : "Session",
+          "swum_parse_tree" : "(NOUN_PHRASE is Session Locally Transacted)"
+        },
+        "createProducer" : {
+          "method_name" : "createProducer",
+          "return_type" : "MessageProducer",
+          "parameters" : "Session, @Nullable",
+          "swum_summary" : "This method creates using 2 parameters and returns an object.",
+          "swum_actions" : "create",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE create (OBJECT Producer))"
+        },
+        "doCreateProducer" : {
+          "method_name" : "doCreateProducer",
+          "return_type" : "MessageProducer",
+          "parameters" : "Session, @Nullable",
+          "swum_summary" : "This method creates using 2 parameters and returns an object.",
+          "swum_actions" : "Create",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE (SUBJECT do) Create (OBJECT Producer))"
+        },
+        "createConsumer" : {
+          "method_name" : "createConsumer",
+          "return_type" : "MessageConsumer",
+          "parameters" : "Session, Destination, @Nullable",
+          "swum_summary" : "This method creates using 3 parameters and returns an object.",
+          "swum_actions" : "create",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE create (OBJECT Consumer))"
+        },
+        "createBrowser" : {
+          "method_name" : "createBrowser",
+          "return_type" : "QueueBrowser",
+          "parameters" : "Session, Queue, @Nullable",
+          "swum_summary" : "This method creates using 3 parameters and returns an object.",
+          "swum_actions" : "create",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE create (OBJECT Browser))"
+        },
+        "createConnection" : {
+          "method_name" : "createConnection",
+          "return_type" : "Connection",
+          "parameters" : "",
+          "swum_summary" : "This method creates a connection and returns an object.",
+          "swum_actions" : "create",
+          "swum_objects" : "Connection",
+          "swum_parse_tree" : "(VERB_PHRASE create (OBJECT Connection))"
+        },
+        "createSession" : {
+          "method_name" : "createSession",
+          "return_type" : "Session",
+          "parameters" : "Connection",
+          "swum_summary" : "This method creates a session using a parameter and returns an object.",
+          "swum_actions" : "create",
+          "swum_objects" : "Session",
+          "swum_parse_tree" : "(VERB_PHRASE create (OBJECT Session))"
+        },
+        "isSynchedLocalTransactionAllowed" : {
+          "method_name" : "isSynchedLocalTransactionAllowed",
+          "return_type" : "boolean",
+          "parameters" : "",
+          "swum_summary" : "This method performs and returns a boolean.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE is Synched Local Transaction Allowed)"
+        },
+        "instrumentSession" : {
+          "method_name" : "instrumentSession",
+          "return_type" : "Session",
+          "parameters" : "Session, ObservationRegistry",
+          "swum_summary" : "This method performs a session using 2 parameters and returns an object.",
+          "swum_actions" : "",
+          "swum_objects" : "Session",
+          "swum_parse_tree" : "(NOUN_PHRASE instrument Session)"
+        }
+      },
+      "swum_class_summary" : "The JmsTemplate class provides 90 methods including notification, storage and modification, retrieval and other operations."
+    },
+    "JdbcTemplate" : {
+      "class_name" : "JdbcTemplate",
+      "class_type" : "class",
+      "method_summaries" : {
+        "setIgnoreWarnings" : {
+          "method_name" : "setIgnoreWarnings",
+          "return_type" : "void",
+          "parameters" : "boolean",
+          "swum_summary" : "This method sets using a parameter.",
+          "swum_actions" : "set",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE set (OBJECT Ignore Warnings))"
+        },
+        "isIgnoreWarnings" : {
+          "method_name" : "isIgnoreWarnings",
+          "return_type" : "boolean",
+          "parameters" : "",
+          "swum_summary" : "This method performs and returns a boolean.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE is Ignore Warnings)"
+        },
+        "setFetchSize" : {
+          "method_name" : "setFetchSize",
+          "return_type" : "void",
+          "parameters" : "int",
+          "swum_summary" : "This method sets operations using a parameter.",
+          "swum_actions" : "set, Fetch",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE set (OBJECT Fetch Size))"
+        },
+        "getFetchSize" : {
+          "method_name" : "getFetchSize",
+          "return_type" : "int",
+          "parameters" : "",
+          "swum_summary" : "This method retrieves operations and returns a number.",
+          "swum_actions" : "get, Fetch",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Fetch Size))"
+        },
+        "setMaxRows" : {
+          "method_name" : "setMaxRows",
+          "return_type" : "void",
+          "parameters" : "int",
+          "swum_summary" : "This method sets using a parameter.",
+          "swum_actions" : "set",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE set (OBJECT Max Rows))"
+        },
+        "getMaxRows" : {
+          "method_name" : "getMaxRows",
+          "return_type" : "int",
+          "parameters" : "",
+          "swum_summary" : "This method retrieves and returns a number.",
+          "swum_actions" : "get",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Max Rows))"
+        },
+        "setQueryTimeout" : {
+          "method_name" : "setQueryTimeout",
+          "return_type" : "void",
+          "parameters" : "int",
+          "swum_summary" : "This method sets using a parameter.",
+          "swum_actions" : "set",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE set (OBJECT Query Timeout))"
+        },
+        "getQueryTimeout" : {
+          "method_name" : "getQueryTimeout",
+          "return_type" : "int",
+          "parameters" : "",
+          "swum_summary" : "This method retrieves and returns a number.",
+          "swum_actions" : "get",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Query Timeout))"
+        },
+        "setSkipResultsProcessing" : {
+          "method_name" : "setSkipResultsProcessing",
+          "return_type" : "void",
+          "parameters" : "boolean",
+          "swum_summary" : "This method sets using a parameter.",
+          "swum_actions" : "set",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE set (OBJECT Skip Results Processing))"
+        },
+        "isSkipResultsProcessing" : {
+          "method_name" : "isSkipResultsProcessing",
+          "return_type" : "boolean",
+          "parameters" : "",
+          "swum_summary" : "This method performs and returns a boolean.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE is Skip Results Processing)"
+        },
+        "setSkipUndeclaredResults" : {
+          "method_name" : "setSkipUndeclaredResults",
+          "return_type" : "void",
+          "parameters" : "boolean",
+          "swum_summary" : "This method sets using a parameter.",
+          "swum_actions" : "set",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE set (OBJECT Skip Undeclared Results))"
+        },
+        "isSkipUndeclaredResults" : {
+          "method_name" : "isSkipUndeclaredResults",
+          "return_type" : "boolean",
+          "parameters" : "",
+          "swum_summary" : "This method performs and returns a boolean.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE is Skip Undeclared Results)"
+        },
+        "setResultsMapCaseInsensitive" : {
+          "method_name" : "setResultsMapCaseInsensitive",
+          "return_type" : "void",
+          "parameters" : "boolean",
+          "swum_summary" : "This method sets a map using a parameter.",
+          "swum_actions" : "set",
+          "swum_objects" : "Map",
+          "swum_parse_tree" : "(VERB_PHRASE set (OBJECT Results Map Case Insensitive))"
+        },
+        "isResultsMapCaseInsensitive" : {
+          "method_name" : "isResultsMapCaseInsensitive",
+          "return_type" : "boolean",
+          "parameters" : "",
+          "swum_summary" : "This method performs a map and returns a boolean.",
+          "swum_actions" : "",
+          "swum_objects" : "Map",
+          "swum_parse_tree" : "(NOUN_PHRASE is Results Map Case Insensitive)"
+        },
+        "execute" : {
+          "method_name" : "execute",
+          "return_type" : "T",
+          "parameters" : "String, CallableStatementCallback<T>",
+          "swum_summary" : "This method executes using 2 parameters and returns an object.",
+          "swum_actions" : "execute",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE execute)"
+        },
+        "createConnectionProxy" : {
+          "method_name" : "createConnectionProxy",
+          "return_type" : "Connection",
+          "parameters" : "Connection",
+          "swum_summary" : "This method creates a connection using a parameter and returns an object.",
+          "swum_actions" : "create",
+          "swum_objects" : "Connection",
+          "swum_parse_tree" : "(VERB_PHRASE create (OBJECT Connection Proxy))"
+        },
+        "query" : {
+          "method_name" : "query",
+          "return_type" : "List<T>",
+          "parameters" : "String, RowMapper<T>, @Nullable",
+          "swum_summary" : "This method performs using 3 parameters and returns a collection.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE query)"
+        },
+        "queryForStream" : {
+          "method_name" : "queryForStream",
+          "return_type" : "Stream<T>",
+          "parameters" : "String, RowMapper<T>, @Nullable",
+          "swum_summary" : "This method performs using 3 parameters and returns an object.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE query For Stream)"
+        },
+        "queryForMap" : {
+          "method_name" : "queryForMap",
+          "return_type" : "Map<String,Object>",
+          "parameters" : "String, @Nullable",
+          "swum_summary" : "This method performs a map using 2 parameters and returns a String.",
+          "swum_actions" : "",
+          "swum_objects" : "Map",
+          "swum_parse_tree" : "(NOUN_PHRASE query For Map)"
+        },
+        "queryForObject" : {
+          "method_name" : "queryForObject",
+          "return_type" : "T",
+          "parameters" : "String, Class<T>, @Nullable",
+          "swum_summary" : "This method performs an object using 3 parameters and returns an object.",
+          "swum_actions" : "",
+          "swum_objects" : "Object",
+          "swum_parse_tree" : "(NOUN_PHRASE query For Object)"
+        },
+        "queryForList" : {
+          "method_name" : "queryForList",
+          "return_type" : "List<Map<String,Object>>",
+          "parameters" : "String, @Nullable",
+          "swum_summary" : "This method performs a list using 2 parameters and returns a String.",
+          "swum_actions" : "",
+          "swum_objects" : "List",
+          "swum_parse_tree" : "(NOUN_PHRASE query For List)"
+        },
+        "queryForRowSet" : {
+          "method_name" : "queryForRowSet",
+          "return_type" : "SqlRowSet",
+          "parameters" : "String, @Nullable",
+          "swum_summary" : "This method sets a row using 2 parameters and returns an object.",
+          "swum_actions" : "Set",
+          "swum_objects" : "Row",
+          "swum_parse_tree" : "(VERB_PHRASE (SUBJECT query For Row) Set)"
+        },
+        "update" : {
+          "method_name" : "update",
+          "return_type" : "int",
+          "parameters" : "String, @Nullable",
+          "swum_summary" : "This method updates using 2 parameters and returns a number.",
+          "swum_actions" : "update",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE update)"
+        },
+        "batchUpdate" : {
+          "method_name" : "batchUpdate",
+          "return_type" : "int[][]",
+          "parameters" : "String, Collection<T>, int, ParameterizedPreparedStatementSetter<T>",
+          "swum_summary" : "This method updates using 4 parameters and returns a number.",
+          "swum_actions" : "Update",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE (SUBJECT batch) Update)"
+        },
+        "call" : {
+          "method_name" : "call",
+          "return_type" : "Map<String,Object>",
+          "parameters" : "CallableStatementCreator, List<SqlParameter>",
+          "swum_summary" : "This method performs using 2 parameters and returns a String.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE call)"
+        },
+        "extractReturnedResults" : {
+          "method_name" : "extractReturnedResults",
+          "return_type" : "Map<String,Object>",
+          "parameters" : "CallableStatement, @Nullable, @Nullable, int",
+          "swum_summary" : "This method performs using 4 parameters and returns a String.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE extract Returned Results)"
+        },
+        "extractOutputParameters" : {
+          "method_name" : "extractOutputParameters",
+          "return_type" : "Map<String,Object>",
+          "parameters" : "CallableStatement, List<SqlParameter>",
+          "swum_summary" : "This method performs using 2 parameters and returns a String.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE extract Output Parameters)"
+        },
+        "processResultSet" : {
+          "method_name" : "processResultSet",
+          "return_type" : "Map<String,Object>",
+          "parameters" : "@Nullable, ResultSetSupportingSqlParameter",
+          "swum_summary" : "This method processes operations using 2 parameters and returns a String.",
+          "swum_actions" : "process, Set",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE process (OBJECT Result Set))"
+        },
+        "getColumnMapRowMapper" : {
+          "method_name" : "getColumnMapRowMapper",
+          "return_type" : "RowMapper<Map<String,Object>>",
+          "parameters" : "",
+          "swum_summary" : "This method retrieves Column, Map, Row and returns a String.",
+          "swum_actions" : "get",
+          "swum_objects" : "Column, Map, Row",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Column Map Row Mapper))"
+        },
+        "getSingleColumnRowMapper" : {
+          "method_name" : "getSingleColumnRowMapper",
+          "return_type" : "RowMapper<T>",
+          "parameters" : "Class<T>",
+          "swum_summary" : "This method retrieves Column, Row using a parameter and returns an object.",
+          "swum_actions" : "get",
+          "swum_objects" : "Column, Row",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Single Column Row Mapper))"
+        },
+        "createResultsMap" : {
+          "method_name" : "createResultsMap",
+          "return_type" : "Map<String,Object>",
+          "parameters" : "",
+          "swum_summary" : "This method creates a map and returns a String.",
+          "swum_actions" : "create",
+          "swum_objects" : "Map",
+          "swum_parse_tree" : "(VERB_PHRASE create (OBJECT Results Map))"
+        },
+        "applyStatementSettings" : {
+          "method_name" : "applyStatementSettings",
+          "return_type" : "void",
+          "parameters" : "Statement",
+          "swum_summary" : "This method performs using a parameter.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE apply Statement Settings)"
+        },
+        "newArgPreparedStatementSetter" : {
+          "method_name" : "newArgPreparedStatementSetter",
+          "return_type" : "PreparedStatementSetter",
+          "parameters" : "@Nullable",
+          "swum_summary" : "This method performs using a parameter and returns an object.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE new Arg Prepared Statement Setter)"
+        },
+        "newArgTypePreparedStatementSetter" : {
+          "method_name" : "newArgTypePreparedStatementSetter",
+          "return_type" : "PreparedStatementSetter",
+          "parameters" : "@Nullable, int[]",
+          "swum_summary" : "This method performs using 2 parameters and returns an object.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE new Arg Type Prepared Statement Setter)"
+        },
+        "handleWarnings" : {
+          "method_name" : "handleWarnings",
+          "return_type" : "void",
+          "parameters" : "@Nullable",
+          "swum_summary" : "This method handles using a parameter.",
+          "swum_actions" : "handle",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE handle (OBJECT Warnings))"
+        },
+        "translateException" : {
+          "method_name" : "translateException",
+          "return_type" : "DataAccessException",
+          "parameters" : "String, @Nullable, SQLException",
+          "swum_summary" : "This method performs using 3 parameters and returns an object.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE translate Exception)"
+        },
+        "getSql" : {
+          "method_name" : "getSql",
+          "return_type" : "String",
+          "parameters" : "",
+          "swum_summary" : "This method retrieves and returns a String.",
+          "swum_actions" : "get",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Sql))"
+        },
+        "result" : {
+          "method_name" : "result",
+          "return_type" : "T",
+          "parameters" : "@Nullable",
+          "swum_summary" : "This method performs using a parameter and returns an object.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE result)"
+        },
+        "updateCount" : {
+          "method_name" : "updateCount",
+          "return_type" : "int",
+          "parameters" : "@Nullable",
+          "swum_summary" : "This method updates using a parameter and returns a number.",
+          "swum_actions" : "update",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE update (OBJECT Count))"
+        },
+        "storeGeneratedKeys" : {
+          "method_name" : "storeGeneratedKeys",
+          "return_type" : "void",
+          "parameters" : "KeyHolder, PreparedStatement, int",
+          "swum_summary" : "This method stores using 3 parameters.",
+          "swum_actions" : "store",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE store (OBJECT Generated Keys))"
+        },
+        "getPreparedStatementCallback" : {
+          "method_name" : "getPreparedStatementCallback",
+          "return_type" : "PreparedStatementCallback<int[]>",
+          "parameters" : "BatchPreparedStatementSetter, @Nullable",
+          "swum_summary" : "This method retrieves using 2 parameters and returns a number.",
+          "swum_actions" : "get",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Prepared Statement Callback))"
+        },
+        "invoke" : {
+          "method_name" : "invoke",
+          "return_type" : "Object",
+          "parameters" : "Object, Method, Object[]",
+          "swum_summary" : "This method invokes using 3 parameters and returns an object.",
+          "swum_actions" : "invoke",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE invoke)"
+        },
+        "createPreparedStatement" : {
+          "method_name" : "createPreparedStatement",
+          "return_type" : "PreparedStatement",
+          "parameters" : "Connection",
+          "swum_summary" : "This method creates using a parameter and returns an object.",
+          "swum_actions" : "create",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE create (OBJECT Prepared Statement))"
+        },
+        "createCallableStatement" : {
+          "method_name" : "createCallableStatement",
+          "return_type" : "CallableStatement",
+          "parameters" : "Connection",
+          "swum_summary" : "This method creates using a parameter and returns an object.",
+          "swum_actions" : "create",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE create (OBJECT Callable Statement))"
+        },
+        "extractData" : {
+          "method_name" : "extractData",
+          "return_type" : "Object",
+          "parameters" : "ResultSet",
+          "swum_summary" : "This method performs a data using a parameter and returns an object.",
+          "swum_actions" : "",
+          "swum_objects" : "Data",
+          "swum_parse_tree" : "(NOUN_PHRASE extract Data)"
+        },
+        "tryAdvance" : {
+          "method_name" : "tryAdvance",
+          "return_type" : "boolean",
+          "parameters" : "Consumer<?",
+          "swum_summary" : "This method performs using a parameter and returns a boolean.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE try Advance)"
+        },
+        "trySplit" : {
+          "method_name" : "trySplit",
+          "return_type" : "Spliterator<T>",
+          "parameters" : "",
+          "swum_summary" : "This method performs and returns an object.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE try Split)"
+        },
+        "estimateSize" : {
+          "method_name" : "estimateSize",
+          "return_type" : "long",
+          "parameters" : "",
+          "swum_summary" : "This method performs and returns a number.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE estimate Size)"
+        },
+        "characteristics" : {
+          "method_name" : "characteristics",
+          "return_type" : "int",
+          "parameters" : "",
+          "swum_summary" : "This method performs and returns a number.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE characteristics)"
+        },
+        "stream" : {
+          "method_name" : "stream",
+          "return_type" : "Stream<T>",
+          "parameters" : "",
+          "swum_summary" : "This method performs and returns an object.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE stream)"
+        }
+      },
+      "swum_class_summary" : "The JdbcTemplate class provides 55 methods including storage and modification, processing, retrieval and other operations."
+    }
+  },
+  "swum_project_summary" : "This software project contains 4 classes with 153 methods. Primary operations include Convert, Create, Execute, Fetch, Read. Key objects manipulated are Column, Connection, Data, List, Map.",
+  "swum_design_pattern" : [ ]
+}

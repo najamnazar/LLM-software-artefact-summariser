@@ -1,0 +1,334 @@
+{
+  "project_name" : "project_identifier",
+  "swum_version" : "1.0",
+  "generated_timestamp" : 1780917880858,
+  "class_summaries" : {
+    "BufferingClientHttpResponseWrapper" : {
+      "class_name" : "BufferingClientHttpResponseWrapper",
+      "class_type" : "class",
+      "method_summaries" : {
+        "getStatusCode" : {
+          "method_name" : "getStatusCode",
+          "return_type" : "HttpStatusCode",
+          "parameters" : "",
+          "swum_summary" : "This method retrieves and returns an object.",
+          "swum_actions" : "get",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Status Code))"
+        },
+        "getStatusText" : {
+          "method_name" : "getStatusText",
+          "return_type" : "String",
+          "parameters" : "",
+          "swum_summary" : "This method retrieves a text and returns a String.",
+          "swum_actions" : "get",
+          "swum_objects" : "Text",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Status Text))"
+        },
+        "getHeaders" : {
+          "method_name" : "getHeaders",
+          "return_type" : "HttpHeaders",
+          "parameters" : "",
+          "swum_summary" : "This method retrieves and returns an object.",
+          "swum_actions" : "get",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Headers))"
+        },
+        "getBody" : {
+          "method_name" : "getBody",
+          "return_type" : "InputStream",
+          "parameters" : "",
+          "swum_summary" : "This method retrieves and returns an object.",
+          "swum_actions" : "get",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Body))"
+        },
+        "close" : {
+          "method_name" : "close",
+          "return_type" : "void",
+          "parameters" : "",
+          "swum_summary" : "This method closes.",
+          "swum_actions" : "close",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE close)"
+        }
+      },
+      "swum_class_summary" : "The BufferingClientHttpResponseWrapper class provides methods to get, get, get, get, close for managing client, response."
+    },
+    "ScopedProxyBeanDefinitionDecorator" : {
+      "class_name" : "ScopedProxyBeanDefinitionDecorator",
+      "class_type" : "class",
+      "method_summaries" : {
+        "decorate" : {
+          "method_name" : "decorate",
+          "return_type" : "BeanDefinitionHolder",
+          "parameters" : "Node, BeanDefinitionHolder, ParserContext",
+          "swum_summary" : "This method performs using 3 parameters and returns an object as part of the Decorator pattern.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE decorate)"
+        }
+      },
+      "swum_class_summary" : "The ScopedProxyBeanDefinitionDecorator class is part of the Decorator pattern."
+    },
+    "ContentCachingRequestWrapper" : {
+      "class_name" : "ContentCachingRequestWrapper",
+      "class_type" : "class",
+      "method_summaries" : {
+        "getInputStream" : {
+          "method_name" : "getInputStream",
+          "return_type" : "ServletInputStream",
+          "parameters" : "",
+          "swum_summary" : "This method retrieves and returns an object.",
+          "swum_actions" : "get",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Input Stream))"
+        },
+        "getCharacterEncoding" : {
+          "method_name" : "getCharacterEncoding",
+          "return_type" : "String",
+          "parameters" : "",
+          "swum_summary" : "This method retrieves and returns a String.",
+          "swum_actions" : "get",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Character Encoding))"
+        },
+        "getReader" : {
+          "method_name" : "getReader",
+          "return_type" : "BufferedReader",
+          "parameters" : "",
+          "swum_summary" : "This method retrieves and returns an object.",
+          "swum_actions" : "get",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Reader))"
+        },
+        "getParameter" : {
+          "method_name" : "getParameter",
+          "return_type" : "String",
+          "parameters" : "String",
+          "swum_summary" : "This method retrieves using a parameter and returns a String.",
+          "swum_actions" : "get",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Parameter))"
+        },
+        "getParameterMap" : {
+          "method_name" : "getParameterMap",
+          "return_type" : "Map<String,String[]>",
+          "parameters" : "",
+          "swum_summary" : "This method retrieves a map and returns a String.",
+          "swum_actions" : "get",
+          "swum_objects" : "Map",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Parameter Map))"
+        },
+        "getParameterNames" : {
+          "method_name" : "getParameterNames",
+          "return_type" : "Enumeration<String>",
+          "parameters" : "",
+          "swum_summary" : "This method retrieves and returns a String.",
+          "swum_actions" : "get",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Parameter Names))"
+        },
+        "getParameterValues" : {
+          "method_name" : "getParameterValues",
+          "return_type" : "String[]",
+          "parameters" : "String",
+          "swum_summary" : "This method retrieves using a parameter and returns a String.",
+          "swum_actions" : "get",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Parameter Values))"
+        },
+        "isFormPost" : {
+          "method_name" : "isFormPost",
+          "return_type" : "boolean",
+          "parameters" : "",
+          "swum_summary" : "This method performs and returns a boolean.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE is Form Post)"
+        },
+        "writeRequestParametersToCachedContent" : {
+          "method_name" : "writeRequestParametersToCachedContent",
+          "return_type" : "void",
+          "parameters" : "",
+          "swum_summary" : "This method writes Request, Content.",
+          "swum_actions" : "write",
+          "swum_objects" : "Request, Content",
+          "swum_parse_tree" : "(VERB_PHRASE write (OBJECT Request Parameters To Cached Content))"
+        },
+        "getContentAsByteArray" : {
+          "method_name" : "getContentAsByteArray",
+          "return_type" : "byte[]",
+          "parameters" : "",
+          "swum_summary" : "This method retrieves Content, Array and returns an object.",
+          "swum_actions" : "get",
+          "swum_objects" : "Content, Array",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Content As Byte Array))"
+        },
+        "getContentAsString" : {
+          "method_name" : "getContentAsString",
+          "return_type" : "String",
+          "parameters" : "",
+          "swum_summary" : "This method retrieves a content and returns a String.",
+          "swum_actions" : "get",
+          "swum_objects" : "Content",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Content As String))"
+        },
+        "handleContentOverflow" : {
+          "method_name" : "handleContentOverflow",
+          "return_type" : "void",
+          "parameters" : "int",
+          "swum_summary" : "This method handles a content using a parameter.",
+          "swum_actions" : "handle",
+          "swum_objects" : "Content",
+          "swum_parse_tree" : "(VERB_PHRASE handle (OBJECT Content Overflow))"
+        },
+        "read" : {
+          "method_name" : "read",
+          "return_type" : "int",
+          "parameters" : "final, final, final",
+          "swum_summary" : "This method reads using 3 parameters and returns a number.",
+          "swum_actions" : "read",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE read)"
+        },
+        "writeToCache" : {
+          "method_name" : "writeToCache",
+          "return_type" : "void",
+          "parameters" : "final, final, int",
+          "swum_summary" : "This method writes using 3 parameters.",
+          "swum_actions" : "write",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE write (OBJECT To Cache))"
+        },
+        "readLine" : {
+          "method_name" : "readLine",
+          "return_type" : "int",
+          "parameters" : "final, final, final",
+          "swum_summary" : "This method reads using 3 parameters and returns a number.",
+          "swum_actions" : "read",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE read (OBJECT Line))"
+        },
+        "isFinished" : {
+          "method_name" : "isFinished",
+          "return_type" : "boolean",
+          "parameters" : "",
+          "swum_summary" : "This method performs and returns a boolean.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE is Finished)"
+        },
+        "isReady" : {
+          "method_name" : "isReady",
+          "return_type" : "boolean",
+          "parameters" : "",
+          "swum_summary" : "This method performs and returns a boolean.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE is Ready)"
+        },
+        "setReadListener" : {
+          "method_name" : "setReadListener",
+          "return_type" : "void",
+          "parameters" : "ReadListener",
+          "swum_summary" : "This method sets operations using a parameter.",
+          "swum_actions" : "set, Read",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE set (OBJECT Read Listener))"
+        }
+      },
+      "swum_class_summary" : "The ContentCachingRequestWrapper class provides 18 methods including retrieval, storage and modification and processing for managing content, request."
+    },
+    "WebSocketHandlerDecorator" : {
+      "class_name" : "WebSocketHandlerDecorator",
+      "class_type" : "class",
+      "method_summaries" : {
+        "getDelegate" : {
+          "method_name" : "getDelegate",
+          "return_type" : "WebSocketHandler",
+          "parameters" : "",
+          "swum_summary" : "This method retrieves and returns an object as part of the Decorator pattern.",
+          "swum_actions" : "get",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Delegate))"
+        },
+        "getLastHandler" : {
+          "method_name" : "getLastHandler",
+          "return_type" : "WebSocketHandler",
+          "parameters" : "",
+          "swum_summary" : "This method retrieves and returns an object as part of the Decorator pattern.",
+          "swum_actions" : "get",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Last Handler))"
+        },
+        "unwrap" : {
+          "method_name" : "unwrap",
+          "return_type" : "WebSocketHandler",
+          "parameters" : "WebSocketHandler",
+          "swum_summary" : "This method performs using a parameter and returns an object as part of the Decorator pattern.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE unwrap)"
+        },
+        "afterConnectionEstablished" : {
+          "method_name" : "afterConnectionEstablished",
+          "return_type" : "void",
+          "parameters" : "WebSocketSession",
+          "swum_summary" : "This method performs a connection using a parameter as part of the Decorator pattern.",
+          "swum_actions" : "",
+          "swum_objects" : "Connection",
+          "swum_parse_tree" : "(NOUN_PHRASE after Connection Established)"
+        },
+        "handleMessage" : {
+          "method_name" : "handleMessage",
+          "return_type" : "void",
+          "parameters" : "WebSocketSession, WebSocketMessage<?>",
+          "swum_summary" : "This method handles a message using 2 parameters as part of the Decorator pattern.",
+          "swum_actions" : "handle",
+          "swum_objects" : "Message",
+          "swum_parse_tree" : "(VERB_PHRASE handle (OBJECT Message))"
+        },
+        "handleTransportError" : {
+          "method_name" : "handleTransportError",
+          "return_type" : "void",
+          "parameters" : "WebSocketSession, Throwable",
+          "swum_summary" : "This method handles using 2 parameters as part of the Decorator pattern.",
+          "swum_actions" : "handle",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE handle (OBJECT Transport Error))"
+        },
+        "afterConnectionClosed" : {
+          "method_name" : "afterConnectionClosed",
+          "return_type" : "void",
+          "parameters" : "WebSocketSession, CloseStatus",
+          "swum_summary" : "This method performs a connection using 2 parameters as part of the Decorator pattern.",
+          "swum_actions" : "",
+          "swum_objects" : "Connection",
+          "swum_parse_tree" : "(NOUN_PHRASE after Connection Closed)"
+        },
+        "supportsPartialMessages" : {
+          "method_name" : "supportsPartialMessages",
+          "return_type" : "boolean",
+          "parameters" : "",
+          "swum_summary" : "This method performs and returns a boolean as part of the Decorator pattern.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE supports Partial Messages)"
+        },
+        "toString" : {
+          "method_name" : "toString",
+          "return_type" : "String",
+          "parameters" : "",
+          "swum_summary" : "This method performs and returns a String as part of the Decorator pattern.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE to String)"
+        }
+      },
+      "swum_class_summary" : "The WebSocketHandlerDecorator class is part of the Decorator pattern and provides methods to get, get, handle, handle."
+    }
+  },
+  "swum_project_summary" : "This software project contains 4 classes with 33 methods. Primary operations include Read, close, get, handle, read. Key objects manipulated are Array, Connection, Content, Map, Message.",
+  "swum_design_pattern" : [ ]
+}

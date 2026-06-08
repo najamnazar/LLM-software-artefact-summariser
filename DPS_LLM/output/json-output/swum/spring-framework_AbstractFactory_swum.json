@@ -1,0 +1,271 @@
+{
+  "project_name" : "spring-framework/AbstractFactory",
+  "swum_version" : "1.0",
+  "generated_timestamp" : 1780917880853,
+  "class_summaries" : {
+    "ClientHttpRequestFactory" : {
+      "class_name" : "ClientHttpRequestFactory",
+      "class_type" : "interface",
+      "method_summaries" : {
+        "createRequest" : {
+          "method_name" : "createRequest",
+          "return_type" : "ClientHttpRequest",
+          "parameters" : "URI, HttpMethod",
+          "swum_summary" : "This method creates a request using 2 parameters and returns an object as part of the Factory pattern.",
+          "swum_actions" : "create",
+          "swum_objects" : "Request",
+          "swum_parse_tree" : "(VERB_PHRASE create (OBJECT Request))"
+        }
+      },
+      "swum_class_summary" : "The ClientHttpRequestFactory class is part of the Factory pattern and provides methods to create for managing client, request."
+    },
+    "AutowireCapableBeanFactory" : {
+      "class_name" : "AutowireCapableBeanFactory",
+      "class_type" : "interface",
+      "method_summaries" : {
+        "createBean" : {
+          "method_name" : "createBean",
+          "return_type" : "Object",
+          "parameters" : "Class<?>, int, boolean",
+          "swum_summary" : "This method creates using 3 parameters and returns an object as part of the Factory pattern.",
+          "swum_actions" : "create",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE create (OBJECT Bean))"
+        },
+        "autowireBean" : {
+          "method_name" : "autowireBean",
+          "return_type" : "void",
+          "parameters" : "Object",
+          "swum_summary" : "This method performs using a parameter as part of the Factory pattern.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE autowire Bean)"
+        },
+        "configureBean" : {
+          "method_name" : "configureBean",
+          "return_type" : "Object",
+          "parameters" : "Object, String",
+          "swum_summary" : "This method performs using 2 parameters and returns an object as part of the Factory pattern.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE configure Bean)"
+        },
+        "autowire" : {
+          "method_name" : "autowire",
+          "return_type" : "Object",
+          "parameters" : "Class<?>, int, boolean",
+          "swum_summary" : "This method performs using 3 parameters and returns an object as part of the Factory pattern.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE autowire)"
+        },
+        "autowireBeanProperties" : {
+          "method_name" : "autowireBeanProperties",
+          "return_type" : "void",
+          "parameters" : "Object, int, boolean",
+          "swum_summary" : "This method performs using 3 parameters as part of the Factory pattern.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE autowire Bean Properties)"
+        },
+        "applyBeanPropertyValues" : {
+          "method_name" : "applyBeanPropertyValues",
+          "return_type" : "void",
+          "parameters" : "Object, String",
+          "swum_summary" : "This method performs using 2 parameters as part of the Factory pattern.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE apply Bean Property Values)"
+        },
+        "initializeBean" : {
+          "method_name" : "initializeBean",
+          "return_type" : "Object",
+          "parameters" : "Object, String",
+          "swum_summary" : "This method initializes using 2 parameters and returns an object as part of the Factory pattern.",
+          "swum_actions" : "initialize",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE initialize (OBJECT Bean))"
+        },
+        "applyBeanPostProcessorsBeforeInitialization" : {
+          "method_name" : "applyBeanPostProcessorsBeforeInitialization",
+          "return_type" : "Object",
+          "parameters" : "Object, String",
+          "swum_summary" : "This method performs using 2 parameters and returns an object as part of the Factory pattern.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE apply Bean Post Processors Before Initialization)"
+        },
+        "applyBeanPostProcessorsAfterInitialization" : {
+          "method_name" : "applyBeanPostProcessorsAfterInitialization",
+          "return_type" : "Object",
+          "parameters" : "Object, String",
+          "swum_summary" : "This method performs using 2 parameters and returns an object as part of the Factory pattern.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE apply Bean Post Processors After Initialization)"
+        },
+        "destroyBean" : {
+          "method_name" : "destroyBean",
+          "return_type" : "void",
+          "parameters" : "Object",
+          "swum_summary" : "This method performs using a parameter as part of the Factory pattern.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE destroy Bean)"
+        },
+        "resolveNamedBean" : {
+          "method_name" : "resolveNamedBean",
+          "return_type" : "NamedBeanHolder<T>",
+          "parameters" : "Class<T>",
+          "swum_summary" : "This method performs using a parameter and returns an object as part of the Factory pattern.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE resolve Named Bean)"
+        },
+        "resolveBeanByName" : {
+          "method_name" : "resolveBeanByName",
+          "return_type" : "Object",
+          "parameters" : "String, DependencyDescriptor",
+          "swum_summary" : "This method performs using 2 parameters and returns an object as part of the Factory pattern.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE resolve Bean By Name)"
+        },
+        "resolveDependency" : {
+          "method_name" : "resolveDependency",
+          "return_type" : "Object",
+          "parameters" : "DependencyDescriptor, @Nullable, @Nullable, @Nullable",
+          "swum_summary" : "This method performs using 4 parameters and returns an object as part of the Factory pattern.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE resolve Dependency)"
+        }
+      },
+      "swum_class_summary" : "The AutowireCapableBeanFactory class is part of the Factory pattern and provides methods to create, create, initialize."
+    },
+    "HierarchicalBeanFactory" : {
+      "class_name" : "HierarchicalBeanFactory",
+      "class_type" : "interface",
+      "method_summaries" : {
+        "getParentBeanFactory" : {
+          "method_name" : "getParentBeanFactory",
+          "return_type" : "BeanFactory",
+          "parameters" : "",
+          "swum_summary" : "This method retrieves and returns an object as part of the Factory pattern.",
+          "swum_actions" : "get",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Parent Bean Factory))"
+        },
+        "containsLocalBean" : {
+          "method_name" : "containsLocalBean",
+          "return_type" : "boolean",
+          "parameters" : "String",
+          "swum_summary" : "This method performs using a parameter and returns a boolean as part of the Factory pattern.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE contains Local Bean)"
+        }
+      },
+      "swum_class_summary" : "The HierarchicalBeanFactory class is part of the Factory pattern and provides methods to get."
+    },
+    "ListableBeanFactory" : {
+      "class_name" : "ListableBeanFactory",
+      "class_type" : "interface",
+      "method_summaries" : {
+        "containsBeanDefinition" : {
+          "method_name" : "containsBeanDefinition",
+          "return_type" : "boolean",
+          "parameters" : "String",
+          "swum_summary" : "This method performs using a parameter and returns a boolean as part of the Factory pattern.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE contains Bean Definition)"
+        },
+        "getBeanDefinitionCount" : {
+          "method_name" : "getBeanDefinitionCount",
+          "return_type" : "int",
+          "parameters" : "",
+          "swum_summary" : "This method retrieves and returns a number as part of the Factory pattern.",
+          "swum_actions" : "get",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Bean Definition Count))"
+        },
+        "getBeanDefinitionNames" : {
+          "method_name" : "getBeanDefinitionNames",
+          "return_type" : "String[]",
+          "parameters" : "",
+          "swum_summary" : "This method retrieves and returns a String as part of the Factory pattern.",
+          "swum_actions" : "get",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Bean Definition Names))"
+        },
+        "getBeanProvider" : {
+          "method_name" : "getBeanProvider",
+          "return_type" : "ObjectProvider<T>",
+          "parameters" : "ResolvableType, boolean",
+          "swum_summary" : "This method retrieves using 2 parameters and returns an object as part of the Factory pattern.",
+          "swum_actions" : "get",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Bean Provider))"
+        },
+        "getBeanNamesForType" : {
+          "method_name" : "getBeanNamesForType",
+          "return_type" : "String[]",
+          "parameters" : "@Nullable, boolean, boolean",
+          "swum_summary" : "This method retrieves using 3 parameters and returns a String as part of the Factory pattern.",
+          "swum_actions" : "get",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Bean Names For Type))"
+        },
+        "getBeansOfType" : {
+          "method_name" : "getBeansOfType",
+          "return_type" : "Map<String,T>",
+          "parameters" : "@Nullable, boolean, boolean",
+          "swum_summary" : "This method retrieves using 3 parameters and returns a String as part of the Factory pattern.",
+          "swum_actions" : "get",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Beans Of Type))"
+        },
+        "getBeanNamesForAnnotation" : {
+          "method_name" : "getBeanNamesForAnnotation",
+          "return_type" : "String[]",
+          "parameters" : "Class<?",
+          "swum_summary" : "This method retrieves using a parameter and returns a String as part of the Factory pattern.",
+          "swum_actions" : "get",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Bean Names For Annotation))"
+        },
+        "getBeansWithAnnotation" : {
+          "method_name" : "getBeansWithAnnotation",
+          "return_type" : "Map<String,Object>",
+          "parameters" : "Class<?",
+          "swum_summary" : "This method retrieves using a parameter and returns a String as part of the Factory pattern.",
+          "swum_actions" : "get",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Beans With Annotation))"
+        },
+        "findAnnotationOnBean" : {
+          "method_name" : "findAnnotationOnBean",
+          "return_type" : "A",
+          "parameters" : "String, Class<A>, boolean",
+          "swum_summary" : "This method finds using 3 parameters and returns an object as part of the Factory pattern.",
+          "swum_actions" : "find",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE find (OBJECT Annotation On Bean))"
+        },
+        "findAllAnnotationsOnBean" : {
+          "method_name" : "findAllAnnotationsOnBean",
+          "return_type" : "Set<A>",
+          "parameters" : "String, Class<A>, boolean",
+          "swum_summary" : "This method finds using 3 parameters and returns an object as part of the Factory pattern.",
+          "swum_actions" : "find",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE find (OBJECT All Annotations On Bean))"
+        }
+      },
+      "swum_class_summary" : "The ListableBeanFactory class is part of the Factory pattern provides 15 methods for retrieval."
+    }
+  },
+  "swum_project_summary" : "This software project contains 4 classes with 26 methods. Primary operations include create, find, get, initialize. Key objects manipulated are Request.",
+  "swum_design_pattern" : [ ]
+}

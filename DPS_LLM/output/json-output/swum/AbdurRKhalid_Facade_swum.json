@@ -1,0 +1,147 @@
+{
+  "project_name" : "AbdurRKhalid/Facade",
+  "swum_version" : "1.0",
+  "generated_timestamp" : 1780917880763,
+  "class_summaries" : {
+    "Codec" : {
+      "class_name" : "Codec",
+      "class_type" : "interface",
+      "method_summaries" : { },
+      "swum_class_summary" : "The Codec class."
+    },
+    "Test" : {
+      "class_name" : "Test",
+      "class_type" : "class",
+      "method_summaries" : {
+        "main" : {
+          "method_name" : "main",
+          "return_type" : "void",
+          "parameters" : "String[]",
+          "swum_summary" : "This method performs using a parameter. The Test class acts as a facade in the facade pattern.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE main)"
+        }
+      },
+      "swum_class_summary" : "The Test class acts as a facade in the facade pattern."
+    },
+    "OggCompressionCodec" : {
+      "class_name" : "OggCompressionCodec",
+      "class_type" : "class",
+      "method_summaries" : { },
+      "swum_class_summary" : "The OggCompressionCodec class."
+    },
+    "VideoConversionFacade" : {
+      "class_name" : "VideoConversionFacade",
+      "class_type" : "class",
+      "method_summaries" : {
+        "convertVideo" : {
+          "method_name" : "convertVideo",
+          "return_type" : "File",
+          "parameters" : "String, String",
+          "swum_summary" : "This method converts using 2 parameters and returns an object. The VideoConversionFacade class acts as a facade in the facade pattern.",
+          "swum_actions" : "convert",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE convert (OBJECT Video))"
+        }
+      },
+      "swum_class_summary" : "The VideoConversionFacade class acts as a facade in the facade pattern and provides methods to convert."
+    },
+    "VideoFile" : {
+      "class_name" : "VideoFile",
+      "class_type" : "class",
+      "method_summaries" : {
+        "getCodecType" : {
+          "method_name" : "getCodecType",
+          "return_type" : "String",
+          "parameters" : "",
+          "swum_summary" : "This method retrieves and returns a String.",
+          "swum_actions" : "get",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Codec Type))"
+        },
+        "getName" : {
+          "method_name" : "getName",
+          "return_type" : "String",
+          "parameters" : "",
+          "swum_summary" : "This method retrieves and returns a String.",
+          "swum_actions" : "get",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Name))"
+        }
+      },
+      "swum_class_summary" : "The VideoFile class provides methods to get, get for managing file."
+    },
+    "AudioMixer" : {
+      "class_name" : "AudioMixer",
+      "class_type" : "class",
+      "method_summaries" : {
+        "fix" : {
+          "method_name" : "fix",
+          "return_type" : "File",
+          "parameters" : "VideoFile",
+          "swum_summary" : "This method performs using a parameter and returns an object.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE fix)"
+        }
+      },
+      "swum_class_summary" : "The AudioMixer class."
+    },
+    "CodecFactory" : {
+      "class_name" : "CodecFactory",
+      "class_type" : "class",
+      "method_summaries" : {
+        "extract" : {
+          "method_name" : "extract",
+          "return_type" : "Codec",
+          "parameters" : "VideoFile",
+          "swum_summary" : "This method performs using a parameter and returns an object. The CodecFactory class acts as a facade in the facade pattern.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE extract)"
+        }
+      },
+      "swum_class_summary" : "The CodecFactory class acts as a facade in the facade pattern."
+    },
+    "MPEG4CompressionCodec" : {
+      "class_name" : "MPEG4CompressionCodec",
+      "class_type" : "class",
+      "method_summaries" : { },
+      "swum_class_summary" : "The MPEG4CompressionCodec class."
+    },
+    "BitrateReader" : {
+      "class_name" : "BitrateReader",
+      "class_type" : "class",
+      "method_summaries" : {
+        "read" : {
+          "method_name" : "read",
+          "return_type" : "VideoFile",
+          "parameters" : "VideoFile, Codec",
+          "swum_summary" : "This method reads using 2 parameters and returns an object.",
+          "swum_actions" : "read",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE read)"
+        },
+        "convert" : {
+          "method_name" : "convert",
+          "return_type" : "VideoFile",
+          "parameters" : "VideoFile, Codec",
+          "swum_summary" : "This method converts using 2 parameters and returns an object.",
+          "swum_actions" : "convert",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE convert)"
+        }
+      },
+      "swum_class_summary" : "The BitrateReader class provides methods to read, convert."
+    }
+  },
+  "swum_project_summary" : "This software project contains 9 classes with 8 methods. The system implements the facade design pattern. Primary operations include convert, get, read.",
+  "swum_design_pattern" : [ {
+    "facade" : {
+      "Test" : [ "VideoConversionFacade" ],
+      "VideoConversionFacade" : [ "CodecFactory", "AudioMixer", "BitrateReader" ],
+      "CodecFactory" : [ "VideoFile" ]
+    }
+  } ]
+}

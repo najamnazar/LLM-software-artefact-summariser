@@ -1,0 +1,212 @@
+{
+  "project_name" : "JamesZBL/memento",
+  "swum_version" : "1.0",
+  "generated_timestamp" : 1780917880842,
+  "class_summaries" : {
+    "Plant" : {
+      "class_name" : "Plant",
+      "class_type" : "interface",
+      "method_summaries" : {
+        "getWeight" : {
+          "method_name" : "getWeight",
+          "return_type" : "int",
+          "parameters" : "",
+          "swum_summary" : "This method creates product objects as part of the abstract_factory pattern.",
+          "swum_actions" : "get",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Weight))"
+        },
+        "getHeight" : {
+          "method_name" : "getHeight",
+          "return_type" : "int",
+          "parameters" : "",
+          "swum_summary" : "This method creates product objects as part of the abstract_factory pattern.",
+          "swum_actions" : "get",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Height))"
+        },
+        "getType" : {
+          "method_name" : "getType",
+          "return_type" : "FlowerType",
+          "parameters" : "",
+          "swum_summary" : "This method creates product objects as part of the abstract_factory pattern.",
+          "swum_actions" : "get",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Type))"
+        }
+      },
+      "swum_class_summary" : "The Plant class acts as a target in the adapter pattern, acts as a factory in the abstract_factory pattern and acts as a visitor in the visitor pattern and provides methods to get, get, get."
+    },
+    "Flower" : {
+      "class_name" : "Flower",
+      "class_type" : "class",
+      "method_summaries" : {
+        "growing" : {
+          "method_name" : "growing",
+          "return_type" : "void",
+          "parameters" : "",
+          "swum_summary" : "This method performs. The Flower class acts as a publisher in the observer pattern, acts as an adapter in the adapter pattern and acts as an element in the visitor pattern.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE growing)"
+        },
+        "getMemento" : {
+          "method_name" : "getMemento",
+          "return_type" : "FlowerMemento",
+          "parameters" : "",
+          "swum_summary" : "This method retrieves and returns an object. The Flower class acts as a publisher in the observer pattern, acts as an adapter in the adapter pattern and acts as an element in the visitor pattern.",
+          "swum_actions" : "get",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Memento))"
+        },
+        "setMemento" : {
+          "method_name" : "setMemento",
+          "return_type" : "void",
+          "parameters" : "Plant",
+          "swum_summary" : "This method sets using a parameter. The Flower class acts as a publisher in the observer pattern, acts as an adapter in the adapter pattern and acts as an element in the visitor pattern.",
+          "swum_actions" : "set",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE set (OBJECT Memento))"
+        },
+        "toString" : {
+          "method_name" : "toString",
+          "return_type" : "String",
+          "parameters" : "",
+          "swum_summary" : "This method performs and returns a String. The Flower class acts as a publisher in the observer pattern, acts as an adapter in the adapter pattern and acts as an element in the visitor pattern.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE to String)"
+        },
+        "getName" : {
+          "method_name" : "getName",
+          "return_type" : "String",
+          "parameters" : "",
+          "swum_summary" : "This method retrieves and returns a String. The Flower class acts as a publisher in the observer pattern, acts as an adapter in the adapter pattern and acts as an element in the visitor pattern.",
+          "swum_actions" : "get",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Name))"
+        },
+        "getWeight" : {
+          "method_name" : "getWeight",
+          "return_type" : "int",
+          "parameters" : "",
+          "swum_summary" : "This method retrieves and returns a number. The Flower class acts as a publisher in the observer pattern, acts as an adapter in the adapter pattern and acts as an element in the visitor pattern.",
+          "swum_actions" : "get",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Weight))"
+        },
+        "getHeight" : {
+          "method_name" : "getHeight",
+          "return_type" : "int",
+          "parameters" : "",
+          "swum_summary" : "This method retrieves and returns a number. The Flower class acts as a publisher in the observer pattern, acts as an adapter in the adapter pattern and acts as an element in the visitor pattern.",
+          "swum_actions" : "get",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Height))"
+        },
+        "getType" : {
+          "method_name" : "getType",
+          "return_type" : "FlowerType",
+          "parameters" : "",
+          "swum_summary" : "This method retrieves and returns an object. The Flower class acts as a publisher in the observer pattern, acts as an adapter in the adapter pattern and acts as an element in the visitor pattern.",
+          "swum_actions" : "get",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Type))"
+        },
+        "setType" : {
+          "method_name" : "setType",
+          "return_type" : "void",
+          "parameters" : "FlowerType",
+          "swum_summary" : "This method sets using a parameter. The Flower class acts as a publisher in the observer pattern, acts as an adapter in the adapter pattern and acts as an element in the visitor pattern.",
+          "swum_actions" : "set",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE set (OBJECT Type))"
+        },
+        "setHeight" : {
+          "method_name" : "setHeight",
+          "return_type" : "void",
+          "parameters" : "int",
+          "swum_summary" : "This method sets using a parameter. The Flower class acts as a publisher in the observer pattern, acts as an adapter in the adapter pattern and acts as an element in the visitor pattern.",
+          "swum_actions" : "set",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE set (OBJECT Height))"
+        },
+        "setWeight" : {
+          "method_name" : "setWeight",
+          "return_type" : "void",
+          "parameters" : "int",
+          "swum_summary" : "This method sets using a parameter. The Flower class acts as a publisher in the observer pattern, acts as an adapter in the adapter pattern and acts as an element in the visitor pattern.",
+          "swum_actions" : "set",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE set (OBJECT Weight))"
+        }
+      },
+      "swum_class_summary" : "The Flower class acts as a publisher in the observer pattern, acts as an adapter in the adapter pattern and acts as an element in the visitor pattern provides 8 methods for retrieval and 4 for storage and modification."
+    },
+    "FlowerType" : {
+      "class_name" : "FlowerType",
+      "class_type" : "class",
+      "method_summaries" : {
+        "toString" : {
+          "method_name" : "toString",
+          "return_type" : "String",
+          "parameters" : "",
+          "swum_summary" : "This method performs and returns a String. The FlowerType class acts as a publisher in the observer pattern and acts as an adaptee in the adapter pattern.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE to String)"
+        }
+      },
+      "swum_class_summary" : "The FlowerType class acts as a publisher in the observer pattern and acts as an adaptee in the adapter pattern."
+    },
+    "Application" : {
+      "class_name" : "Application",
+      "class_type" : "class",
+      "method_summaries" : {
+        "main" : {
+          "method_name" : "main",
+          "return_type" : "void",
+          "parameters" : "String[]",
+          "swum_summary" : "This method performs using a parameter.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE main)"
+        }
+      },
+      "swum_class_summary" : "The Application class."
+    }
+  },
+  "swum_project_summary" : "This software project contains 4 classes with 16 methods. The system implements multiple design patterns including observer, adapter, abstract_factory, visitor. Primary operations include get, set.",
+  "swum_design_pattern" : [ {
+    "abstract_factory" : {
+      "Plant" : {
+        "abstract_product" : { },
+        "concrete_factory" : [ "Flower" ]
+      }
+    }
+  }, {
+    "adapter" : {
+      "Flower" : {
+        "adaptee" : [ "FlowerType" ],
+        "target" : [ "Plant" ]
+      }
+    }
+  }, {
+    "visitor" : {
+      "Flower" : {
+        "visitor" : {
+          "Plant" : [ "Flower" ]
+        }
+      }
+    }
+  }, {
+    "observer" : {
+      "FlowerType" : {
+        "concrete_observer" : [ ],
+        "publisher" : {
+          "Flower" : [ ]
+        }
+      }
+    }
+  } ]
+}

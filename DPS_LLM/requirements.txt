@@ -1,0 +1,45 @@
+# Python dependencies for Design Pattern Summariser evaluation pipeline
+
+# Core data processing
+pandas>=2.0.0
+numpy>=1.24.0
+scipy>=1.10.0          # Friedman test, Wilcoxon signed-rank test
+
+# Future-proof pandas Arrow backend (suppresses pandas >=3.0 DeprecationWarning)
+pyarrow>=12.0.0
+
+# Configuration management
+python-dotenv>=1.0.0
+
+# HTTP requests for LLM API (OpenRouter)
+requests>=2.31.0
+
+# Progress bars
+tqdm>=4.65.0
+
+# Machine Learning / NLP
+scikit-learn>=1.3.0    # TF-IDF, cosine similarity
+bert-score>=0.3.13     # Semantic similarity (requires torch + transformers)
+transformers>=4.30.0   # Required by bert-score
+nltk>=3.8.1
+rouge-score>=0.1.2
+
+# Visualization
+matplotlib>=3.7.0
+seaborn>=0.12.0
+
+# PyTorch (required by bert-score and transformers)
+# Install ONE of the lines below by running it directly — do NOT use -r with GPU variants.
+#
+#   CPU only (default — works on all machines):
+torch>=2.0.0
+#
+#   CUDA 11.8 (NVIDIA GPU):
+#     pip install torch>=2.0.0+cu118 --index-url https://download.pytorch.org/whl/cu118
+#
+#   CUDA 12.1 (NVIDIA GPU):
+#     pip install torch>=2.0.0+cu121 --index-url https://download.pytorch.org/whl/cu121
+
+# Optional — FrugalScore metric used by evaluate_nlg_additional_metrics.py
+# The script degrades gracefully if this is not installed (metric returns NaN).
+# frugalscore>=0.0.4

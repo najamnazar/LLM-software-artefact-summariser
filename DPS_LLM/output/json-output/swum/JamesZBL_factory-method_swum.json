@@ -1,0 +1,196 @@
+{
+  "project_name" : "JamesZBL/factory-method",
+  "swum_version" : "1.0",
+  "generated_timestamp" : 1780917880838,
+  "class_summaries" : {
+    "ChineseCook" : {
+      "class_name" : "ChineseCook",
+      "class_type" : "class",
+      "method_summaries" : {
+        "cookFood" : {
+          "method_name" : "cookFood",
+          "return_type" : "Food",
+          "parameters" : "FoodType",
+          "swum_summary" : "This method performs using a parameter and returns an object.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE cook Food)"
+        }
+      },
+      "swum_class_summary" : "The ChineseCook class."
+    },
+    "FoodType" : {
+      "class_name" : "FoodType",
+      "class_type" : "class",
+      "method_summaries" : {
+        "getName" : {
+          "method_name" : "getName",
+          "return_type" : "String",
+          "parameters" : "",
+          "swum_summary" : "This method retrieves and returns a String. The FoodType class acts as an adaptee in the adapter pattern.",
+          "swum_actions" : "get",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Name))"
+        }
+      },
+      "swum_class_summary" : "The FoodType class acts as an adaptee in the adapter pattern and provides methods to get."
+    },
+    "WesternFood" : {
+      "class_name" : "WesternFood",
+      "class_type" : "class",
+      "method_summaries" : {
+        "getFoodType" : {
+          "method_name" : "getFoodType",
+          "return_type" : "FoodType",
+          "parameters" : "",
+          "swum_summary" : "This method retrieves and returns an object. The WesternFood class acts as an adapter in the adapter pattern, acts as an abstract product in the abstract_factory pattern and acts as a concrete product in the factory_method pattern.",
+          "swum_actions" : "get",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Food Type))"
+        },
+        "toString" : {
+          "method_name" : "toString",
+          "return_type" : "String",
+          "parameters" : "",
+          "swum_summary" : "This method performs and returns a String. The WesternFood class acts as an adapter in the adapter pattern, acts as an abstract product in the abstract_factory pattern and acts as a concrete product in the factory_method pattern.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE to String)"
+        }
+      },
+      "swum_class_summary" : "The WesternFood class acts as an adapter in the adapter pattern, acts as an abstract product in the abstract_factory pattern and acts as a concrete product in the factory_method pattern and provides methods to get."
+    },
+    "Cook" : {
+      "class_name" : "Cook",
+      "class_type" : "interface",
+      "method_summaries" : {
+        "cookFood" : {
+          "method_name" : "cookFood",
+          "return_type" : "Food",
+          "parameters" : "FoodType",
+          "swum_summary" : "This method performs using a parameter and returns an object. The Cook class acts as a factory in the abstract_factory pattern.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE cook Food)"
+        }
+      },
+      "swum_class_summary" : "The Cook class acts as a factory in the abstract_factory pattern."
+    },
+    "ChineseFood" : {
+      "class_name" : "ChineseFood",
+      "class_type" : "class",
+      "method_summaries" : {
+        "getFoodType" : {
+          "method_name" : "getFoodType",
+          "return_type" : "FoodType",
+          "parameters" : "",
+          "swum_summary" : "This method retrieves and returns an object. The ChineseFood class acts as an adapter in the adapter pattern, acts as an abstract product in the abstract_factory pattern and acts as a concrete product in the factory_method pattern.",
+          "swum_actions" : "get",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Food Type))"
+        },
+        "toString" : {
+          "method_name" : "toString",
+          "return_type" : "String",
+          "parameters" : "",
+          "swum_summary" : "This method performs and returns a String. The ChineseFood class acts as an adapter in the adapter pattern, acts as an abstract product in the abstract_factory pattern and acts as a concrete product in the factory_method pattern.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE to String)"
+        }
+      },
+      "swum_class_summary" : "The ChineseFood class acts as an adapter in the adapter pattern, acts as an abstract product in the abstract_factory pattern and acts as a concrete product in the factory_method pattern and provides methods to get."
+    },
+    "Application" : {
+      "class_name" : "Application",
+      "class_type" : "class",
+      "method_summaries" : {
+        "main" : {
+          "method_name" : "main",
+          "return_type" : "void",
+          "parameters" : "String[]",
+          "swum_summary" : "This method performs using a parameter.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE main)"
+        },
+        "makeFood" : {
+          "method_name" : "makeFood",
+          "return_type" : "void",
+          "parameters" : "",
+          "swum_summary" : "This method makes.",
+          "swum_actions" : "make",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE make (OBJECT Food))"
+        }
+      },
+      "swum_class_summary" : "The Application class provides methods to make."
+    },
+    "WesternCook" : {
+      "class_name" : "WesternCook",
+      "class_type" : "class",
+      "method_summaries" : {
+        "cookFood" : {
+          "method_name" : "cookFood",
+          "return_type" : "Food",
+          "parameters" : "FoodType",
+          "swum_summary" : "This method performs using a parameter and returns an object.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE cook Food)"
+        }
+      },
+      "swum_class_summary" : "The WesternCook class."
+    },
+    "Food" : {
+      "class_name" : "Food",
+      "class_type" : "interface",
+      "method_summaries" : {
+        "getFoodType" : {
+          "method_name" : "getFoodType",
+          "return_type" : "FoodType",
+          "parameters" : "",
+          "swum_summary" : "This method creates product objects as part of the abstract_factory pattern.",
+          "swum_actions" : "get",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE get (OBJECT Food Type))"
+        }
+      },
+      "swum_class_summary" : "The Food class acts as a target in the adapter pattern and acts as a factory in the abstract_factory pattern and provides methods to get."
+    }
+  },
+  "swum_project_summary" : "This software project contains 8 classes with 11 methods. The system implements multiple design patterns including adapter, abstract_factory, factory_method. Primary operations include get, make.",
+  "swum_design_pattern" : [ {
+    "factory_method" : {
+      "Cook" : {
+        "concrete_product" : [ "WesternFood", "ChineseFood" ],
+        "abstract_product" : "Food",
+        "concrete_factory" : [ "ChineseCook", "WesternCook" ]
+      }
+    }
+  }, {
+    "abstract_factory" : {
+      "Cook" : {
+        "abstract_product" : {
+          "Food" : [ "WesternFood", "ChineseFood" ]
+        },
+        "concrete_factory" : [ "ChineseCook", "WesternCook" ]
+      },
+      "Food" : {
+        "abstract_product" : { },
+        "concrete_factory" : [ "WesternFood", "ChineseFood" ]
+      }
+    }
+  }, {
+    "adapter" : {
+      "WesternFood" : {
+        "adaptee" : [ "FoodType" ],
+        "target" : [ "Food" ]
+      },
+      "ChineseFood" : {
+        "adaptee" : [ "FoodType" ],
+        "target" : [ "Food" ]
+      }
+    }
+  } ]
+}

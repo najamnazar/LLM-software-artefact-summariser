@@ -1,0 +1,138 @@
+{
+  "project_name" : "JamesZBL/decorator",
+  "swum_version" : "1.0",
+  "generated_timestamp" : 1780917880830,
+  "class_summaries" : {
+    "HammerSmithOperation" : {
+      "class_name" : "HammerSmithOperation",
+      "class_type" : "class",
+      "method_summaries" : {
+        "checkBefore" : {
+          "method_name" : "checkBefore",
+          "return_type" : "void",
+          "parameters" : "",
+          "swum_summary" : "This method checks. The HammerSmithOperation class acts as a decorator in the decorator pattern.",
+          "swum_actions" : "check",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE check (OBJECT Before))"
+        },
+        "join" : {
+          "method_name" : "join",
+          "return_type" : "void",
+          "parameters" : "",
+          "swum_summary" : "This method performs. The HammerSmithOperation class acts as a decorator in the decorator pattern.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE join)"
+        },
+        "chekcAfter" : {
+          "method_name" : "chekcAfter",
+          "return_type" : "void",
+          "parameters" : "",
+          "swum_summary" : "This method performs. The HammerSmithOperation class acts as a decorator in the decorator pattern.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE chekc After)"
+        }
+      },
+      "swum_class_summary" : "The HammerSmithOperation class acts as a decorator in the decorator pattern and provides methods to check."
+    },
+    "Operation" : {
+      "class_name" : "Operation",
+      "class_type" : "interface",
+      "method_summaries" : {
+        "checkBefore" : {
+          "method_name" : "checkBefore",
+          "return_type" : "void",
+          "parameters" : "",
+          "swum_summary" : "This method checks. The Operation class acts as a component in the decorator pattern.",
+          "swum_actions" : "check",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE check (OBJECT Before))"
+        },
+        "join" : {
+          "method_name" : "join",
+          "return_type" : "void",
+          "parameters" : "",
+          "swum_summary" : "This method performs. The Operation class acts as a component in the decorator pattern.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE join)"
+        },
+        "chekcAfter" : {
+          "method_name" : "chekcAfter",
+          "return_type" : "void",
+          "parameters" : "",
+          "swum_summary" : "This method performs. The Operation class acts as a component in the decorator pattern.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE chekc After)"
+        }
+      },
+      "swum_class_summary" : "The Operation class acts as a component in the decorator pattern and provides methods to check."
+    },
+    "CarpenterOperation" : {
+      "class_name" : "CarpenterOperation",
+      "class_type" : "class",
+      "method_summaries" : {
+        "checkBefore" : {
+          "method_name" : "checkBefore",
+          "return_type" : "void",
+          "parameters" : "",
+          "swum_summary" : "This method checks. The CarpenterOperation class acts as a concrete component in the decorator pattern.",
+          "swum_actions" : "check",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(VERB_PHRASE check (OBJECT Before))"
+        },
+        "join" : {
+          "method_name" : "join",
+          "return_type" : "void",
+          "parameters" : "",
+          "swum_summary" : "This method performs. The CarpenterOperation class acts as a concrete component in the decorator pattern.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE join)"
+        },
+        "chekcAfter" : {
+          "method_name" : "chekcAfter",
+          "return_type" : "void",
+          "parameters" : "",
+          "swum_summary" : "This method performs. The CarpenterOperation class acts as a concrete component in the decorator pattern.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE chekc After)"
+        }
+      },
+      "swum_class_summary" : "The CarpenterOperation class acts as a concrete component in the decorator pattern and provides methods to check."
+    },
+    "Application" : {
+      "class_name" : "Application",
+      "class_type" : "class",
+      "method_summaries" : {
+        "main" : {
+          "method_name" : "main",
+          "return_type" : "void",
+          "parameters" : "String[]",
+          "swum_summary" : "This method performs using a parameter.",
+          "swum_actions" : "",
+          "swum_objects" : "",
+          "swum_parse_tree" : "(NOUN_PHRASE main)"
+        }
+      },
+      "swum_class_summary" : "The Application class."
+    }
+  },
+  "swum_project_summary" : "This software project contains 4 classes with 10 methods. The system implements the decorator design pattern. Primary operations include check.",
+  "swum_design_pattern" : [ {
+    "decorator" : {
+      "HammerSmithOperation" : {
+        "component" : {
+          "Operation" : {
+            "concrete_component" : [ "CarpenterOperation", "CarpenterOperation", "CarpenterOperation" ]
+          }
+        },
+        "concrete_decorator" : [ ]
+      }
+    }
+  } ]
+}

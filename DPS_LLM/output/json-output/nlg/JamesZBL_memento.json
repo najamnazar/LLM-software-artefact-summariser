@@ -1,0 +1,588 @@
+{
+	"final_summary" : "Plant.java: adapter: Plant acts as a target for adapter Flower, which adapts to Plant, which adapts to Plant, which adapts to Plant. It is a public interface. The 3 methods of Plant are getWeight (int), getHeight (int) and getType (FlowerType). No methods call getWeight and getWeight calls no methods. No methods call getHeight and getHeight calls no methods. No methods call getType and getType calls no methods.\n\n abstract_factory: Plant acts as an abstract factory for, which is inherited by Flower. It is a public interface. The 3 methods of Plant are getWeight (int), getHeight (int) and getType (FlowerType). No methods call getWeight and getWeight calls no methods. No methods call getHeight and getHeight calls no methods. No methods call getType and getType calls no methods.\n\n visitor: Plant acts as a visitor for element Flower, which is inherited by Flower, which gets a Weight to, which gets a Height to, which gets a Type to. It is a public interface. The 3 methods of Plant are getWeight (int), getHeight (int) and getType (FlowerType). No methods call getWeight and getWeight calls no methods. No methods call getHeight and getHeight calls no methods. No methods call getType and getType calls no methods.\n\n\nFlower.java: observer: Flower acts as a publisher for observer FlowerType, which is inherited by, which grows, which gets Memento, which sets Plant parameter of plant Memento, which tos String, which gets Name, which gets Weight, which gets Height, which gets Type, which sets FlowerType parameter of type Type, which sets int parameter of height Height, which sets int parameter of weight Weight, which gets Weight, which gets Height, which gets Type. It is a public class that extends Plant and that implements Plant. The 14 methods of Flower are growing (void), getMemento (FlowerMemento), setMemento (void), toString (String), getName (String), getWeight (int), getHeight (int), getType (FlowerType), setType (void), setHeight (void), setWeight (void), getWeight (int), getHeight (int) and getType (FlowerType). No methods call growing and growing calls 4 methods : setHeight method of class Flower, getHeight method of class Flower, getWeight method of class Flower and setWeight method of class Flower. No methods call getMemento and getMemento calls 3 methods : getHeight method of class Flower, getWeight method of class Flower and getType method of class Flower. No methods call setMemento and setMemento calls no methods. No methods call toString and toString calls 4 methods : getName method of class Flower, getHeight method of class Flower, getWeight method of class Flower and getType method of class Flower. Only one method ( toString method of class Flower ) calls getName and getName calls no methods. 3 methods ( toString method of class Flower, getMemento method of class Flower and growing method of class Flower ) call getWeight and getWeight calls no methods. 3 methods ( toString method of class Flower, getMemento method of class Flower and growing method of class Flower ) call getHeight and getHeight calls no methods. 2 methods ( toString method of class Flower and getMemento method of class Flower ) call getType and getType calls no methods. No methods call setType and setType calls no methods. Only one method ( growing method of class Flower ) calls setHeight and setHeight calls no methods. Only one method ( growing method of class Flower ) calls setWeight and setWeight calls no methods. 3 methods ( toString method of class Flower, getMemento method of class Flower and growing method of class Flower ) call getWeight and getWeight calls no methods. 3 methods ( toString method of class Flower, getMemento method of class Flower and growing method of class Flower ) call getHeight and getHeight calls no methods. 2 methods ( toString method of class Flower and getMemento method of class Flower ) call getType and getType calls no methods.\n\n adapter: Flower acts as an adapter, which adapts to Plant, which adapts to Plant, which adapts to Plant, which adapts to Plant, which adapts getName method of FlowerType to Plant, which adapts getWeight method of FlowerType, getWeight method of FlowerType, getWeight method of FlowerType to Plant, which adapts getHeight method of FlowerType, getHeight method of FlowerType, getHeight method of FlowerType to Plant, which adapts getType method of FlowerType, getType method of FlowerType to Plant, which adapts to Plant, which adapts setHeight method of FlowerType, setHeight method of FlowerType to Plant, which adapts setWeight method of FlowerType, setWeight method of FlowerType to Plant, which adapts getWeight method of FlowerType, getWeight method of FlowerType, getWeight method of FlowerType to Plant, which adapts getHeight method of FlowerType, getHeight method of FlowerType, getHeight method of FlowerType to Plant, which adapts getType method of FlowerType, getType method of FlowerType to Plant. It is a public class that extends Plant and that implements Plant. The 14 methods of Flower are growing (void), getMemento (FlowerMemento), setMemento (void), toString (String), getName (String), getWeight (int), getHeight (int), getType (FlowerType), setType (void), setHeight (void), setWeight (void), getWeight (int), getHeight (int) and getType (FlowerType). No methods call growing and growing calls 4 methods : setHeight method of class Flower, getHeight method of class Flower, getWeight method of class Flower and setWeight method of class Flower. No methods call getMemento and getMemento calls 3 methods : getHeight method of class Flower, getWeight method of class Flower and getType method of class Flower. No methods call setMemento and setMemento calls no methods. No methods call toString and toString calls 4 methods : getName method of class Flower, getHeight method of class Flower, getWeight method of class Flower and getType method of class Flower. Only one method ( toString method of class Flower ) calls getName and getName calls no methods. 3 methods ( toString method of class Flower, getMemento method of class Flower and growing method of class Flower ) call getWeight and getWeight calls no methods. 3 methods ( toString method of class Flower, getMemento method of class Flower and growing method of class Flower ) call getHeight and getHeight calls no methods. 2 methods ( toString method of class Flower and getMemento method of class Flower ) call getType and getType calls no methods. No methods call setType and setType calls no methods. Only one method ( growing method of class Flower ) calls setHeight and setHeight calls no methods. Only one method ( growing method of class Flower ) calls setWeight and setWeight calls no methods. 3 methods ( toString method of class Flower, getMemento method of class Flower and growing method of class Flower ) call getWeight and getWeight calls no methods. 3 methods ( toString method of class Flower, getMemento method of class Flower and growing method of class Flower ) call getHeight and getHeight calls no methods. 2 methods ( toString method of class Flower and getMemento method of class Flower ) call getType and getType calls no methods.\n\n abstract_factory: Flower acts as a factory for Plant, which overrides getWeight method of Plant, getHeight method of Plant, getType method of Plant, getWeight method of Plant, getHeight method of Plant, getType method of Plant. It is a public class that extends Plant and that implements Plant. The 14 methods of Flower are growing (void), getMemento (FlowerMemento), setMemento (void), toString (String), getName (String), getWeight (int), getHeight (int), getType (FlowerType), setType (void), setHeight (void), setWeight (void), getWeight (int), getHeight (int) and getType (FlowerType). No methods call growing and growing calls 4 methods : setHeight method of class Flower, getHeight method of class Flower, getWeight method of class Flower and setWeight method of class Flower. No methods call getMemento and getMemento calls 3 methods : getHeight method of class Flower, getWeight method of class Flower and getType method of class Flower. No methods call setMemento and setMemento calls no methods. No methods call toString and toString calls 4 methods : getName method of class Flower, getHeight method of class Flower, getWeight method of class Flower and getType method of class Flower. Only one method ( toString method of class Flower ) calls getName and getName calls no methods. 3 methods ( toString method of class Flower, getMemento method of class Flower and growing method of class Flower ) call getWeight and getWeight calls no methods. 3 methods ( toString method of class Flower, getMemento method of class Flower and growing method of class Flower ) call getHeight and getHeight calls no methods. 2 methods ( toString method of class Flower and getMemento method of class Flower ) call getType and getType calls no methods. No methods call setType and setType calls no methods. Only one method ( growing method of class Flower ) calls setHeight and setHeight calls no methods. Only one method ( growing method of class Flower ) calls setWeight and setWeight calls no methods. 3 methods ( toString method of class Flower, getMemento method of class Flower and growing method of class Flower ) call getWeight and getWeight calls no methods. 3 methods ( toString method of class Flower, getMemento method of class Flower and growing method of class Flower ) call getHeight and getHeight calls no methods. 2 methods ( toString method of class Flower and getMemento method of class Flower ) call getType and getType calls no methods.\n\n visitor: Flower acts as an element for visitor Plant, which is inherited by, which grows, which gets a Memento to, which sets a Memento to, which tos a String to, which gets a Name to, which gets a Weight to, which gets a Height to, which gets a Type to, which sets a Type to, which sets a Height to, which sets a Weight to, which gets a Weight to, which gets a Height to, which gets a Type to. Flower acts as a visitor for element Flower, which overrides getWeight method of Flower, getHeight method of Flower, getType method of Flower, getWeight method of Flower, getHeight method of Flower, getType method of Flower, which grows, which gets a Memento to, which sets a Memento to, which tos a String to, which gets a Name to, which gets a Weight to, which gets a Height to, which gets a Type to, which sets a Type to, which sets a Height to, which sets a Weight to, which gets a Weight to, which gets a Height to, which gets a Type to. It is a public class that extends Plant and that implements Plant. The 14 methods of Flower are growing (void), getMemento (FlowerMemento), setMemento (void), toString (String), getName (String), getWeight (int), getHeight (int), getType (FlowerType), setType (void), setHeight (void), setWeight (void), getWeight (int), getHeight (int) and getType (FlowerType). No methods call growing and growing calls 4 methods : setHeight method of class Flower, getHeight method of class Flower, getWeight method of class Flower and setWeight method of class Flower. No methods call getMemento and getMemento calls 3 methods : getHeight method of class Flower, getWeight method of class Flower and getType method of class Flower. No methods call setMemento and setMemento calls no methods. No methods call toString and toString calls 4 methods : getName method of class Flower, getHeight method of class Flower, getWeight method of class Flower and getType method of class Flower. Only one method ( toString method of class Flower ) calls getName and getName calls no methods. 3 methods ( toString method of class Flower, getMemento method of class Flower and growing method of class Flower ) call getWeight and getWeight calls no methods. 3 methods ( toString method of class Flower, getMemento method of class Flower and growing method of class Flower ) call getHeight and getHeight calls no methods. 2 methods ( toString method of class Flower and getMemento method of class Flower ) call getType and getType calls no methods. No methods call setType and setType calls no methods. Only one method ( growing method of class Flower ) calls setHeight and setHeight calls no methods. Only one method ( growing method of class Flower ) calls setWeight and setWeight calls no methods. 3 methods ( toString method of class Flower, getMemento method of class Flower and growing method of class Flower ) call getWeight and getWeight calls no methods. 3 methods ( toString method of class Flower, getMemento method of class Flower and growing method of class Flower ) call getHeight and getHeight calls no methods. 2 methods ( toString method of class Flower and getMemento method of class Flower ) call getType and getType calls no methods.\n\n\nFlowerType.java: observer: FlowerType acts as an observer for publisher Flower, which is inherited by, which tos String. It is a public class. The only method of FlowerType is toString (String). No methods call toString and toString calls no methods.\n\n adapter: FlowerType acts as an adaptee for adapter Flower, which adapts to Plant. It is a public class. The only method of FlowerType is toString (String). No methods call toString and toString calls no methods.\n\n\nApplication.java: It is a public class. The only method of Application is main (void). No methods call main and main calls no methods.\n\n\n",
+	"JamesZBL/memento" : {
+		"Plant" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Plant",
+				"ISINTERFACEORNOT" : true,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getWeight",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "int",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "getHeight",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "int",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "getType",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "FlowerType",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"Flower" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "FlowerType",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "type" ],
+				"FIELDDATATYPE" : "FlowerType",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "String",
+				"FIELDMODIFIERTYPE" : [ "private", "final" ],
+				"FIELDDECLARATION" : [ "name" ],
+				"FIELDDATATYPE" : "String",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "int",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "height" ],
+				"FIELDDATATYPE" : "int",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "int",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "weight" ],
+				"FIELDDATATYPE" : "int",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "FlowerType",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "type" ],
+				"FIELDDATATYPE" : "FlowerType",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "int",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "height" ],
+				"FIELDDATATYPE" : "int",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "int",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "weight" ],
+				"FIELDDATATYPE" : "int",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 24,
+				"EXTENDSFROM" : [ "Plant", "Plant" ],
+				"IMPLEMENTSFROM" : [ "Plant" ],
+				"CLASSNAME" : "Flower",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ {
+					"PARAMETERNAME" : "type",
+					"PARAMETERTYPE" : "FlowerType"
+				}, {
+					"PARAMETERNAME" : "name",
+					"PARAMETERTYPE" : "String"
+				}, {
+					"PARAMETERNAME" : "height",
+					"PARAMETERTYPE" : "int"
+				}, {
+					"PARAMETERNAME" : "weight",
+					"PARAMETERTYPE" : "int"
+				} ]
+			}, {
+				"CONSTRUCTORMODIFIER" : [ "private" ],
+				"CONSTRUCTORPARAMETER" : [ {
+					"PARAMETERNAME" : "type",
+					"PARAMETERTYPE" : "FlowerType"
+				}, {
+					"PARAMETERNAME" : "height",
+					"PARAMETERTYPE" : "int"
+				}, {
+					"PARAMETERNAME" : "weight",
+					"PARAMETERTYPE" : "int"
+				} ]
+			} ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "flowerMemento = (FlowerMemento) plant" ],
+				"VARIABLECOMMONTYPE" : "FlowerMemento",
+				"VARIABLEELEMENTTYPE" : "FlowerMemento"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "growing",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "SWITCH" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 10,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "Flower",
+					"CALLEEMETHODNAME" : "setWeight"
+				}, {
+					"CALLEECLASS" : "Flower",
+					"CALLEEMETHODNAME" : "getWeight"
+				}, {
+					"CALLEECLASS" : "Flower",
+					"CALLEEMETHODNAME" : "setHeight"
+				}, {
+					"CALLEECLASS" : "Flower",
+					"CALLEEMETHODNAME" : "getHeight"
+				}, {
+					"CALLEECLASS" : "Flower",
+					"CALLEEMETHODNAME" : "setHeight"
+				}, {
+					"CALLEECLASS" : "Flower",
+					"CALLEEMETHODNAME" : "setWeight"
+				} ],
+				"NUMBEROFMETHODLINES" : 3,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "getMemento",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 3,
+				"METHODRETURNTYPE" : "FlowerMemento",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "Flower",
+					"CALLEEMETHODNAME" : "getType"
+				}, {
+					"CALLEECLASS" : "Flower",
+					"CALLEEMETHODNAME" : "getHeight"
+				}, {
+					"CALLEECLASS" : "Flower",
+					"CALLEEMETHODNAME" : "getWeight"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "setMemento",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 1,
+				"NUMBEROFOUTGOINGMETHODS" : 6,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 4,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "plant",
+					"PARAMETERTYPE" : "Plant"
+				} ]
+			}, {
+				"METHODNAME" : "toString",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 5,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "Flower",
+					"CALLEEMETHODNAME" : "getName"
+				}, {
+					"CALLEECLASS" : "Flower",
+					"CALLEEMETHODNAME" : "getType"
+				}, {
+					"CALLEECLASS" : "Flower",
+					"CALLEEMETHODNAME" : "getWeight"
+				}, {
+					"CALLEECLASS" : "Flower",
+					"CALLEEMETHODNAME" : "getHeight"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "getName",
+				"NUMBEROFINCOMINGMETHODS" : 1,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "toString",
+					"CALLEDCLASS" : "Flower"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "getWeight",
+				"NUMBEROFINCOMINGMETHODS" : 3,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "growing",
+					"CALLEDCLASS" : "Flower"
+				}, {
+					"CALLEDMETHODNAME" : "toString",
+					"CALLEDCLASS" : "Flower"
+				}, {
+					"CALLEDMETHODNAME" : "getMemento",
+					"CALLEDCLASS" : "Flower"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "int",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "getHeight",
+				"NUMBEROFINCOMINGMETHODS" : 3,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "growing",
+					"CALLEDCLASS" : "Flower"
+				}, {
+					"CALLEDMETHODNAME" : "toString",
+					"CALLEDCLASS" : "Flower"
+				}, {
+					"CALLEDMETHODNAME" : "getMemento",
+					"CALLEDCLASS" : "Flower"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "int",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "getType",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "toString",
+					"CALLEDCLASS" : "Flower"
+				}, {
+					"CALLEDMETHODNAME" : "getMemento",
+					"CALLEDCLASS" : "Flower"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "FlowerType",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "setType",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "type",
+					"PARAMETERTYPE" : "FlowerType"
+				} ]
+			}, {
+				"METHODNAME" : "setHeight",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "growing",
+					"CALLEDCLASS" : "Flower"
+				}, {
+					"CALLEDMETHODNAME" : "growing",
+					"CALLEDCLASS" : "Flower"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "height",
+					"PARAMETERTYPE" : "int"
+				} ]
+			}, {
+				"METHODNAME" : "setWeight",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "growing",
+					"CALLEDCLASS" : "Flower"
+				}, {
+					"CALLEDMETHODNAME" : "growing",
+					"CALLEDCLASS" : "Flower"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "weight",
+					"PARAMETERTYPE" : "int"
+				} ]
+			}, {
+				"METHODNAME" : "getWeight",
+				"NUMBEROFINCOMINGMETHODS" : 3,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "growing",
+					"CALLEDCLASS" : "Flower"
+				}, {
+					"CALLEDMETHODNAME" : "toString",
+					"CALLEDCLASS" : "Flower"
+				}, {
+					"CALLEDMETHODNAME" : "getMemento",
+					"CALLEDCLASS" : "Flower"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "int",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "getHeight",
+				"NUMBEROFINCOMINGMETHODS" : 3,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "growing",
+					"CALLEDCLASS" : "Flower"
+				}, {
+					"CALLEDMETHODNAME" : "toString",
+					"CALLEDCLASS" : "Flower"
+				}, {
+					"CALLEDMETHODNAME" : "getMemento",
+					"CALLEDCLASS" : "Flower"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "int",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "getType",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "toString",
+					"CALLEDCLASS" : "Flower"
+				}, {
+					"CALLEDMETHODNAME" : "getMemento",
+					"CALLEDCLASS" : "Flower"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "FlowerType",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"FlowerType" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "String",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "name" ],
+				"FIELDDATATYPE" : "String",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "FlowerType",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ ],
+				"CONSTRUCTORPARAMETER" : [ {
+					"PARAMETERNAME" : "name",
+					"PARAMETERTYPE" : "String"
+				} ]
+			} ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "toString",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"Application" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "Logger",
+				"FIELDMODIFIERTYPE" : [ "private", "static", "final" ],
+				"FIELDDECLARATION" : [ "LOGGER = LoggerFactory.getLogger(Application.class)" ],
+				"FIELDDATATYPE" : "Logger",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 35,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Application",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "stack = new Stack<>()" ],
+				"VARIABLECOMMONTYPE" : "Stack<Plant>",
+				"VARIABLEELEMENTTYPE" : "Stack<Plant>"
+			}, {
+				"VARIABLEDECLARATION" : [ "flower = new Flower(FlowerType.SEED, \"水仙花\", 1, 2)" ],
+				"VARIABLECOMMONTYPE" : "Flower",
+				"VARIABLEELEMENTTYPE" : "Flower"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "main",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public", "static" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "LOOP" ],
+				"NUMBEROFMETHODVARIABLES" : 2,
+				"NUMBEROFOUTGOINGMETHODS" : 34,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 20,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "args",
+					"PARAMETERTYPE" : "String[]"
+				} ]
+			} ]
+		}
+	},
+	"design_pattern" : [ {
+		"abstract_factory" : {
+			"Plant" : {
+				"abstract_product" : { },
+				"concrete_factory" : [ "Flower" ]
+			}
+		}
+	}, {
+		"adapter" : {
+			"Flower" : {
+				"adaptee" : [ "FlowerType" ],
+				"target" : [ "Plant" ]
+			}
+		}
+	}, {
+		"visitor" : {
+			"Flower" : {
+				"visitor" : {
+					"Plant" : [ "Flower" ]
+				}
+			}
+		}
+	}, {
+		"observer" : {
+			"FlowerType" : {
+				"concrete_observer" : [ ],
+				"publisher" : {
+					"Flower" : [ ]
+				}
+			}
+		}
+	} ],
+	"summary_NLG" : {
+		"observer" : {
+			"Flower" : [ "Flower acts as a publisher for observer FlowerType, which is inherited by, which grows, which gets Memento, which sets Plant parameter of plant Memento, which tos String, which gets Name, which gets Weight, which gets Height, which gets Type, which sets FlowerType parameter of type Type, which sets int parameter of height Height, which sets int parameter of weight Weight, which gets Weight, which gets Height, which gets Type." ],
+			"FlowerType" : [ "FlowerType acts as an observer for publisher Flower, which is inherited by, which tos String." ]
+		},
+		"adapter" : {
+			"Plant" : [ "Plant acts as a target for adapter Flower, which adapts to Plant, which adapts to Plant, which adapts to Plant." ],
+			"Flower" : [ "Flower acts as an adapter, which adapts to Plant, which adapts to Plant, which adapts to Plant, which adapts to Plant, which adapts getName method of FlowerType to Plant, which adapts getWeight method of FlowerType, getWeight method of FlowerType, getWeight method of FlowerType to Plant, which adapts getHeight method of FlowerType, getHeight method of FlowerType, getHeight method of FlowerType to Plant, which adapts getType method of FlowerType, getType method of FlowerType to Plant, which adapts to Plant, which adapts setHeight method of FlowerType, setHeight method of FlowerType to Plant, which adapts setWeight method of FlowerType, setWeight method of FlowerType to Plant, which adapts getWeight method of FlowerType, getWeight method of FlowerType, getWeight method of FlowerType to Plant, which adapts getHeight method of FlowerType, getHeight method of FlowerType, getHeight method of FlowerType to Plant, which adapts getType method of FlowerType, getType method of FlowerType to Plant." ],
+			"FlowerType" : [ "FlowerType acts as an adaptee for adapter Flower, which adapts to Plant." ]
+		},
+		"abstract_factory" : {
+			"Flower" : [ "Flower acts as a factory for Plant, which overrides getWeight method of Plant, getHeight method of Plant, getType method of Plant, getWeight method of Plant, getHeight method of Plant, getType method of Plant." ],
+			"Plant" : [ "Plant acts as an abstract factory for, which is inherited by Flower." ]
+		},
+		"visitor" : {
+			"Flower" : [ "Flower acts as an element for visitor Plant, which is inherited by, which grows, which gets a Memento to, which sets a Memento to, which tos a String to, which gets a Name to, which gets a Weight to, which gets a Height to, which gets a Type to, which sets a Type to, which sets a Height to, which sets a Weight to, which gets a Weight to, which gets a Height to, which gets a Type to.", "Flower acts as a visitor for element Flower, which overrides getWeight method of Flower, getHeight method of Flower, getType method of Flower, getWeight method of Flower, getHeight method of Flower, getType method of Flower, which grows, which gets a Memento to, which sets a Memento to, which tos a String to, which gets a Name to, which gets a Weight to, which gets a Height to, which gets a Type to, which sets a Type to, which sets a Height to, which sets a Weight to, which gets a Weight to, which gets a Height to, which gets a Type to." ],
+			"Plant" : [ "Plant acts as a visitor for element Flower, which is inherited by Flower, which gets a Weight to, which gets a Height to, which gets a Type to." ]
+		}
+	},
+	"project_identifier" : "JamesZBL/memento"
+}
