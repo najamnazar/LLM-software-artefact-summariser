@@ -1,7 +1,5 @@
 {
-	"final_summary" : "",
-	"design_pattern" : [ ],
-	"Singleton" : {
+	"AbdurRKhalid/Singleton" : {
 		"Test" : {
 			"FIELDDETAIL" : [ ],
 			"CLASSORINTERFACEDETAIL" : [ {
@@ -95,5 +93,10 @@
 			} ]
 		}
 	},
-	"summary_NLG" : { }
+	"final_summary" : "",
+	"design_pattern" : [ {
+		"singleton" : [ "Singleton" ]
+	} ],
+	"summary_NLG" : { },
+	"project_identifier" : "AbdurRKhalid/Singleton"
 }

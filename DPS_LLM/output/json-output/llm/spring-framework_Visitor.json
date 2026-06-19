@@ -1,6 +1,8 @@
 {
 	"final_summary" : "",
-	"Visitor" : {
+	"design_pattern" : [ ],
+	"summary_NLG" : { },
+	"spring-framework/Visitor" : {
 		"BeanDefinitionVisitor" : {
 			"FIELDDETAIL" : [ {
 				"FIELDCOMMONTYPE" : "StringValueResolver",
@@ -819,6 +821,5 @@
 			} ]
 		}
 	},
-	"design_pattern" : [ ],
-	"summary_NLG" : { }
+	"project_identifier" : "spring-framework/Visitor"
 }

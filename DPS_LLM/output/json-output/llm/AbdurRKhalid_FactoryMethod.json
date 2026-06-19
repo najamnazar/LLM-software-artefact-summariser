@@ -1,11 +1,22 @@
 {
-	"FactoryMethod" : {
+	"final_summary" : "",
+	"design_pattern" : [ {
+		"factory_method" : {
+			"Dialog" : {
+				"concrete_product" : [ "WindowsButton", "HtmlButton" ],
+				"abstract_product" : "Button",
+				"concrete_factory" : [ "WindowsDialog", "HtmlDialog" ]
+			}
+		}
+	} ],
+	"summary_NLG" : { },
+	"AbdurRKhalid/FactoryMethod" : {
 		"WindowsButton" : {
 			"FIELDDETAIL" : [ ],
 			"CLASSORINTERFACEDETAIL" : [ {
 				"CLASSACCESSSPECIFIER" : "PUBLIC",
 				"NUMBEROFMETHODCALLS" : 3,
-				"EXTENDSFROM" : [ ],
+				"EXTENDSFROM" : [ "Button" ],
 				"IMPLEMENTSFROM" : [ "Button" ],
 				"CLASSNAME" : "WindowsButton",
 				"ISINTERFACEORNOT" : false,
@@ -253,7 +264,7 @@
 			"CLASSORINTERFACEDETAIL" : [ {
 				"CLASSACCESSSPECIFIER" : "PUBLIC",
 				"NUMBEROFMETHODCALLS" : 3,
-				"EXTENDSFROM" : [ ],
+				"EXTENDSFROM" : [ "Button" ],
 				"IMPLEMENTSFROM" : [ "Button" ],
 				"CLASSNAME" : "HtmlButton",
 				"ISINTERFACEORNOT" : false,
@@ -298,15 +309,5 @@
 			} ]
 		}
 	},
-	"final_summary" : "",
-	"design_pattern" : [ {
-		"factory_method" : {
-			"Dialog" : {
-				"concrete_product" : [ "WindowsButton", "HtmlButton" ],
-				"abstract_product" : "Button",
-				"concrete_factory" : [ "WindowsDialog", "HtmlDialog" ]
-			}
-		}
-	} ],
-	"summary_NLG" : { }
+	"project_identifier" : "AbdurRKhalid/FactoryMethod"
 }

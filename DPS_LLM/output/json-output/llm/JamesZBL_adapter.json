@@ -1,6 +1,25 @@
 {
 	"final_summary" : "",
-	"adapter" : {
+	"design_pattern" : [ {
+		"adapter" : {
+			"BusAdapter" : {
+				"adaptee" : [ "Bus" ],
+				"target" : [ "Car" ]
+			}
+		}
+	}, {
+		"decorator" : {
+			"Driver" : {
+				"component" : {
+					"Car" : {
+						"concrete_component" : [ "BusAdapter" ]
+					}
+				},
+				"concrete_decorator" : [ ]
+			}
+		}
+	} ],
+	"JamesZBL/adapter" : {
 		"Bus" : {
 			"FIELDDETAIL" : [ {
 				"FIELDCOMMONTYPE" : "Logger",
@@ -78,7 +97,7 @@
 			"CLASSORINTERFACEDETAIL" : [ {
 				"CLASSACCESSSPECIFIER" : "PUBLIC",
 				"NUMBEROFMETHODCALLS" : 1,
-				"EXTENDSFROM" : [ ],
+				"EXTENDSFROM" : [ "Car" ],
 				"IMPLEMENTSFROM" : [ "Car" ],
 				"CLASSNAME" : "Driver",
 				"ISINTERFACEORNOT" : false,
@@ -120,7 +139,7 @@
 			"CLASSORINTERFACEDETAIL" : [ {
 				"CLASSACCESSSPECIFIER" : "PUBLIC",
 				"NUMBEROFMETHODCALLS" : 1,
-				"EXTENDSFROM" : [ ],
+				"EXTENDSFROM" : [ "Car" ],
 				"IMPLEMENTSFROM" : [ "Car" ],
 				"CLASSNAME" : "BusAdapter",
 				"ISINTERFACEORNOT" : false,
@@ -186,17 +205,6 @@
 			} ]
 		}
 	},
-	"design_pattern" : [ {
-		"decorator" : {
-			"Driver" : {
-				"component" : {
-					"Car" : {
-						"concrete_component" : [ "BusAdapter" ]
-					}
-				},
-				"concrete_decorator" : [ ]
-			}
-		}
-	} ],
-	"summary_NLG" : { }
+	"summary_NLG" : { },
+	"project_identifier" : "JamesZBL/adapter"
 }

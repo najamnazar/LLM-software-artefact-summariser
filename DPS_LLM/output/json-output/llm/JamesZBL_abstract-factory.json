@@ -33,8 +33,7 @@
 			}
 		}
 	} ],
-	"summary_NLG" : { },
-	"abstract-factory" : {
+	"JamesZBL/abstract-factory" : {
 		"YoungSailor" : {
 			"FIELDDETAIL" : [ {
 				"FIELDCOMMONTYPE" : "String",
@@ -112,7 +111,7 @@
 			"CLASSORINTERFACEDETAIL" : [ {
 				"CLASSACCESSSPECIFIER" : "PUBLIC",
 				"NUMBEROFMETHODCALLS" : 0,
-				"EXTENDSFROM" : [ ],
+				"EXTENDSFROM" : [ "TeamFactory" ],
 				"IMPLEMENTSFROM" : [ "TeamFactory" ],
 				"CLASSNAME" : "YoungTeamFactory",
 				"ISINTERFACEORNOT" : false,
@@ -293,7 +292,7 @@
 			"CLASSORINTERFACEDETAIL" : [ {
 				"CLASSACCESSSPECIFIER" : "PUBLIC",
 				"NUMBEROFMETHODCALLS" : 0,
-				"EXTENDSFROM" : [ ],
+				"EXTENDSFROM" : [ "TeamFactory" ],
 				"IMPLEMENTSFROM" : [ "TeamFactory" ],
 				"CLASSNAME" : "PermanentTeamFactory",
 				"ISINTERFACEORNOT" : false,
@@ -700,5 +699,7 @@
 			"VARIABLEDETAIL" : [ ],
 			"METHODDETAIL" : [ ]
 		}
-	}
+	},
+	"summary_NLG" : { },
+	"project_identifier" : "JamesZBL/abstract-factory"
 }

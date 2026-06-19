@@ -1,0 +1,13 @@
+======================================================================
+DESIGN PATTERN RANKING PIPELINE
+======================================================================
+Running model comparisons: NLG vs {QWEN, GPT, CLAUDE, MISTRAL} vs SWUM
+
+Detailed rankings saved to: /home/najam/Documents/Repository/TOSEM/DPS_LLM/evaluation-results/design_pattern_model_comparisons_detail.csv
+Pattern summary saved to: /home/najam/Documents/Repository/TOSEM/DPS_LLM/evaluation-results/design_pattern_model_comparisons_summary.csv
+Pattern report saved to: /home/najam/Documents/Repository/TOSEM/DPS_LLM/evaluation-results/design_pattern_model_comparisons_report.txt
+Results appended to: /home/najam/Documents/Repository/TOSEM/DPS_LLM/evaluation-results/results.txt
+
+======================================================================
+DESIGN PATTERN RANKING COMPLETE
+======================================================================

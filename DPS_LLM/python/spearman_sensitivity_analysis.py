@@ -97,6 +97,8 @@ def compute_spearman_sensitivity_from_df(df: pd.DataFrame) -> list[CriterionResu
                 rows.append((points[system_id], float(total_points)))
 
         data = pd.DataFrame(rows, columns=["criterion_points", "total_points"])
+        if len(data) < 2:
+            continue
         rho, p_value = spearmanr(data["criterion_points"], data["total_points"])
 
         results.append(
@@ -167,7 +169,7 @@ def main() -> None:
         "--comparison",
         type=str,
         default=None,
-        help="Run only one comparison value (e.g., GEMINI, GPT, CLAUDE, MISTRAL)",
+        help="Run only one comparison value (e.g., QWEN, GPT, CLAUDE, MISTRAL)",
     )
     parser.add_argument(
         "--append-to",

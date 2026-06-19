@@ -1,5 +1,19 @@
 {
-	"Memento" : {
+	"final_summary" : "",
+	"design_pattern" : [ {
+		"memento" : {
+			"TextWindowState" : {
+				"caretaker" : {
+					"TextEditor" : [ ]
+				},
+				"originator" : {
+					"TextWindow" : [ ]
+				},
+				"concrete_memento" : [ ]
+			}
+		}
+	} ],
+	"AbdurRKhalid/Memento" : {
 		"TextEditor" : {
 			"FIELDDETAIL" : [ {
 				"FIELDCOMMONTYPE" : "TextWindow",
@@ -175,7 +189,6 @@
 			} ]
 		}
 	},
-	"final_summary" : "",
-	"design_pattern" : [ ],
-	"summary_NLG" : { }
+	"summary_NLG" : { },
+	"project_identifier" : "AbdurRKhalid/Memento"
 }

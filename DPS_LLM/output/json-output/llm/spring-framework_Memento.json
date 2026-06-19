@@ -1,5 +1,7 @@
 {
-	"Memento" : {
+	"final_summary" : "",
+	"design_pattern" : [ ],
+	"spring-framework/Memento" : {
 		"SimpleApplicationEventMulticaster" : {
 			"FIELDDETAIL" : [ {
 				"FIELDCOMMONTYPE" : "Executor",
@@ -637,7 +639,6 @@
 			} ]
 		}
 	},
-	"final_summary" : "",
-	"design_pattern" : [ ],
-	"summary_NLG" : { }
+	"summary_NLG" : { },
+	"project_identifier" : "spring-framework/Memento"
 }

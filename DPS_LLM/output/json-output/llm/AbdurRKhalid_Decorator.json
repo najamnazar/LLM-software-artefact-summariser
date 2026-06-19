@@ -1,5 +1,5 @@
 {
-	"Decorator" : {
+	"AbdurRKhalid/Decorator" : {
 		"DataSourceDecorator" : {
 			"FIELDDETAIL" : [ {
 				"FIELDCOMMONTYPE" : "DataSource",
@@ -11,7 +11,7 @@
 			"CLASSORINTERFACEDETAIL" : [ {
 				"CLASSACCESSSPECIFIER" : "PUBLIC",
 				"NUMBEROFMETHODCALLS" : 2,
-				"EXTENDSFROM" : [ ],
+				"EXTENDSFROM" : [ "DataSource" ],
 				"IMPLEMENTSFROM" : [ "DataSource" ],
 				"CLASSNAME" : "DataSourceDecorator",
 				"ISINTERFACEORNOT" : false,
@@ -392,7 +392,7 @@
 			"CLASSORINTERFACEDETAIL" : [ {
 				"CLASSACCESSSPECIFIER" : "PUBLIC",
 				"NUMBEROFMETHODCALLS" : 9,
-				"EXTENDSFROM" : [ ],
+				"EXTENDSFROM" : [ "DataSource" ],
 				"IMPLEMENTSFROM" : [ "DataSource" ],
 				"CLASSNAME" : "FileDataSource",
 				"ISINTERFACEORNOT" : false,
@@ -510,6 +510,22 @@
 		}
 	},
 	"final_summary" : "",
-	"design_pattern" : [ ],
-	"summary_NLG" : { }
+	"design_pattern" : [ {
+		"decorator" : {
+			"DataSourceDecorator" : {
+				"component" : {
+					"DataSource" : {
+						"concrete_component" : [ "FileDataSource", "FileDataSource" ]
+					}
+				},
+				"concrete_decorator" : [ "EncryptionDecorator", "CompressionDecorator" ]
+			}
+		}
+	}, {
+		"facade" : {
+			"Test" : [ "DataSourceDecorator", "DataSource" ]
+		}
+	} ],
+	"summary_NLG" : { },
+	"project_identifier" : "AbdurRKhalid/Decorator"
 }

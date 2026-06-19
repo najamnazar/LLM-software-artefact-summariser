@@ -1,0 +1,146 @@
+
+
+======================================================================
+DESIGN PATTERN RANKING RESULTS (NLG vs MODEL vs SWUM)
+======================================================================
+
+Comparison: NLG vs QWEN vs SWUM
+----------------------------------------------------------------------
+Total ranked samples: 150
+Total skipped samples: 0
+Global rank order (all ranked rows): B>A>C
+Patterns matching global order exactly: 6/9 (66.7%)
+Patterns with same top-1 system (B): 66.7%
+  Pattern: Abstract Factory (n=38)
+    Mean Points -> A(NLG)=2.25, B(QWEN)=2.30, C(SWUM)=1.45
+    Rank Order: B>A>C
+  Pattern: Visitor (n=24)
+    Mean Points -> A(NLG)=2.04, B(QWEN)=2.30, C(SWUM)=1.66
+    Rank Order: B>A>C
+  Pattern: Facade (n=16)
+    Mean Points -> A(NLG)=2.50, B(QWEN)=2.25, C(SWUM)=1.25
+    Rank Order: A>B>C
+  Pattern: Factory Method (n=16)
+    Mean Points -> A(NLG)=2.38, B(QWEN)=2.40, C(SWUM)=1.22
+    Rank Order: B>A>C
+  Pattern: Observer (n=13)
+    Mean Points -> A(NLG)=2.05, B(QWEN)=2.62, C(SWUM)=1.34
+    Rank Order: B>A>C
+  Pattern: Adapter (n=12)
+    Mean Points -> A(NLG)=2.68, B(QWEN)=2.00, C(SWUM)=1.32
+    Rank Order: A>B>C
+  Pattern: Decorator (n=12)
+    Mean Points -> A(NLG)=2.18, B(QWEN)=2.27, C(SWUM)=1.55
+    Rank Order: B>A>C
+  Pattern: Singleton (n=10)
+    Mean Points -> A(NLG)=2.46, B(QWEN)=2.42, C(SWUM)=1.12
+    Rank Order: A>B>C
+  Pattern: Memento (n=9)
+    Mean Points -> A(NLG)=2.09, B(QWEN)=2.44, C(SWUM)=1.47
+    Rank Order: B>A>C
+
+Comparison: NLG vs GPT vs SWUM
+----------------------------------------------------------------------
+Total ranked samples: 150
+Total skipped samples: 0
+Global rank order (all ranked rows): B>A>C
+Patterns matching global order exactly: 6/9 (66.7%)
+Patterns with same top-1 system (B): 66.7%
+  Pattern: Abstract Factory (n=38)
+    Mean Points -> A(NLG)=2.16, B(GPT)=2.33, C(SWUM)=1.51
+    Rank Order: B>A>C
+  Pattern: Visitor (n=24)
+    Mean Points -> A(NLG)=2.11, B(GPT)=2.29, C(SWUM)=1.60
+    Rank Order: B>A>C
+  Pattern: Facade (n=16)
+    Mean Points -> A(NLG)=2.54, B(GPT)=2.29, C(SWUM)=1.17
+    Rank Order: A>B>C
+  Pattern: Factory Method (n=16)
+    Mean Points -> A(NLG)=2.26, B(GPT)=2.42, C(SWUM)=1.31
+    Rank Order: B>A>C
+  Pattern: Observer (n=13)
+    Mean Points -> A(NLG)=1.95, B(GPT)=2.58, C(SWUM)=1.46
+    Rank Order: B>A>C
+  Pattern: Adapter (n=12)
+    Mean Points -> A(NLG)=2.45, B(GPT)=2.25, C(SWUM)=1.30
+    Rank Order: A>B>C
+  Pattern: Decorator (n=12)
+    Mean Points -> A(NLG)=2.07, B(GPT)=2.45, C(SWUM)=1.48
+    Rank Order: B>A>C
+  Pattern: Singleton (n=10)
+    Mean Points -> A(NLG)=2.42, B(GPT)=2.40, C(SWUM)=1.18
+    Rank Order: A>B>C
+  Pattern: Memento (n=9)
+    Mean Points -> A(NLG)=2.16, B(GPT)=2.49, C(SWUM)=1.36
+    Rank Order: B>A>C
+
+Comparison: NLG vs CLAUDE vs SWUM
+----------------------------------------------------------------------
+Total ranked samples: 150
+Total skipped samples: 0
+Global rank order (all ranked rows): A>B>C
+Patterns matching global order exactly: 7/9 (77.8%)
+Patterns with same top-1 system (A): 77.8%
+  Pattern: Abstract Factory (n=38)
+    Mean Points -> A(NLG)=2.31, B(CLAUDE)=2.26, C(SWUM)=1.43
+    Rank Order: A>B>C
+  Pattern: Visitor (n=24)
+    Mean Points -> A(NLG)=2.31, B(CLAUDE)=2.21, C(SWUM)=1.48
+    Rank Order: A>B>C
+  Pattern: Facade (n=16)
+    Mean Points -> A(NLG)=2.66, B(CLAUDE)=2.24, C(SWUM)=1.10
+    Rank Order: A>B>C
+  Pattern: Factory Method (n=16)
+    Mean Points -> A(NLG)=2.47, B(CLAUDE)=2.42, C(SWUM)=1.10
+    Rank Order: A>B>C
+  Pattern: Observer (n=13)
+    Mean Points -> A(NLG)=2.20, B(CLAUDE)=2.55, C(SWUM)=1.25
+    Rank Order: B>A>C
+  Pattern: Adapter (n=12)
+    Mean Points -> A(NLG)=2.68, B(CLAUDE)=2.22, C(SWUM)=1.10
+    Rank Order: A>B>C
+  Pattern: Decorator (n=12)
+    Mean Points -> A(NLG)=2.37, B(CLAUDE)=2.33, C(SWUM)=1.30
+    Rank Order: A>B>C
+  Pattern: Singleton (n=10)
+    Mean Points -> A(NLG)=2.60, B(CLAUDE)=2.36, C(SWUM)=1.04
+    Rank Order: A>B>C
+  Pattern: Memento (n=9)
+    Mean Points -> A(NLG)=2.22, B(CLAUDE)=2.49, C(SWUM)=1.29
+    Rank Order: B>A>C
+
+Comparison: NLG vs MISTRAL vs SWUM
+----------------------------------------------------------------------
+Total ranked samples: 150
+Total skipped samples: 0
+Global rank order (all ranked rows): B>A>C
+Patterns matching global order exactly: 6/9 (66.7%)
+Patterns with same top-1 system (B): 66.7%
+  Pattern: Abstract Factory (n=38)
+    Mean Points -> A(NLG)=2.31, B(MISTRAL)=2.26, C(SWUM)=1.43
+    Rank Order: A>B>C
+  Pattern: Visitor (n=24)
+    Mean Points -> A(NLG)=2.14, B(MISTRAL)=2.29, C(SWUM)=1.57
+    Rank Order: B>A>C
+  Pattern: Facade (n=16)
+    Mean Points -> A(NLG)=2.50, B(MISTRAL)=2.28, C(SWUM)=1.22
+    Rank Order: A>B>C
+  Pattern: Factory Method (n=16)
+    Mean Points -> A(NLG)=2.30, B(MISTRAL)=2.36, C(SWUM)=1.34
+    Rank Order: B>A>C
+  Pattern: Observer (n=13)
+    Mean Points -> A(NLG)=2.26, B(MISTRAL)=2.38, C(SWUM)=1.35
+    Rank Order: B>A>C
+  Pattern: Adapter (n=12)
+    Mean Points -> A(NLG)=2.50, B(MISTRAL)=2.10, C(SWUM)=1.40
+    Rank Order: A>B>C
+  Pattern: Decorator (n=12)
+    Mean Points -> A(NLG)=2.03, B(MISTRAL)=2.45, C(SWUM)=1.52
+    Rank Order: B>A>C
+  Pattern: Singleton (n=10)
+    Mean Points -> A(NLG)=2.40, B(MISTRAL)=2.42, C(SWUM)=1.18
+    Rank Order: B>A>C
+  Pattern: Memento (n=9)
+    Mean Points -> A(NLG)=2.09, B(MISTRAL)=2.49, C(SWUM)=1.42
+    Rank Order: B>A>C
+======================================================================

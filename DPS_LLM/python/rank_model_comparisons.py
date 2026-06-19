@@ -5,16 +5,16 @@ This script runs four single-pass comparisons using the shared multi-criteria
 ranking logic from rank_summaries.py:
 
 - NLG vs Claude vs SWUM
-- NLG vs Gemini vs SWUM
+- NLG vs Qwen vs SWUM
 - NLG vs GPT vs SWUM
 - NLG vs Mistral vs SWUM
 
 Ranking criteria (via resources/prompts.json -> summary_ranking):
-1. Accuracy
-2. Conciseness
-3. Adequacy
-4. Code Context
-5. Design Pattern Recognition
+1. Accuracy - How factually correct and faithful the summary is to the source code.
+2. Conciseness - How clearly the summary conveys key points without unnecessary detail.
+3. Adequacy - How completely the summary covers the important functionality and intent.
+4. Code Context - How well the summary reflects surrounding implementation details and relationships.
+5. Design Pattern Recognition - How accurately the summary identifies and explains relevant design patterns.
 
 Ranking model is resolved from:
 - CLI positional override (optional)
@@ -22,6 +22,7 @@ Ranking model is resolved from:
 """
 
 import argparse
+import importlib
 import json
 import os
 import sys
@@ -29,11 +30,212 @@ from pathlib import Path
 from typing import Dict, List
 
 import pandas as pd
+import requests
 from dotenv import load_dotenv
 
-# Reuse ranking engine and matching logic from existing script.
+# Reuse ranking engine and matching logic from the shared script when available.
+# Fall back to a local implementation if the sibling module is not present in this workspace.
 sys.path.insert(0, str(Path(__file__).parent))
-from rank_summaries import MultiCriteriaRanker, build_match_key, resolve_ranking_model
+try:
+    _shared_rank_summaries = importlib.import_module('rank_summaries')
+    MultiCriteriaRanker = _shared_rank_summaries.MultiCriteriaRanker
+    build_match_key = _shared_rank_summaries.build_match_key
+    resolve_ranking_model = _shared_rank_summaries.resolve_ranking_model
+except ModuleNotFoundError:
+    import re
+
+    def _strip_extension(filename: str) -> str:
+        if not isinstance(filename, str):
+            return ""
+        return re.sub(r"\.(java|txt|md)$", "", filename.strip(), flags=re.IGNORECASE)
+
+    def _normalize_component(value: str) -> str:
+        if not isinstance(value, str):
+            return ""
+        value = _strip_extension(value)
+        value = value.lower().strip()
+        value = re.sub(r"\s+", "", value)
+        return re.sub(r"[^a-z0-9]", "", value)
+
+    def build_match_key(project: str, filename: str) -> str:
+        return f"{_normalize_component(project)}::{_normalize_component(filename)}"
+
+    def _first_non_blank(*values: str | None) -> str | None:
+        for value in values:
+            if value is None:
+                continue
+            text = str(value).strip()
+            if text:
+                return text
+        return None
+
+    def resolve_ranking_model(model_override: str | None = None) -> str:
+        model = _first_non_blank(model_override, os.getenv('RANK_SUMMARIES_MODEL'))
+        if not model:
+            raise ValueError('RANK_SUMMARIES_MODEL not found in .env file')
+        return model
+
+    class MultiCriteriaRanker:
+        CRITERIA = {
+            'accuracy': 'accuracy',
+            'conciseness': 'conciseness',
+            'adequacy': 'adequacy',
+            'code_context': 'context',
+            'design_patterns': 'pattern',
+        }
+
+        def __init__(self, api_key: str, api_url: str, model: str, prompts: dict[str, str], max_tokens: int) -> None:
+            self.prompts = prompts
+            self.api_key = api_key
+            self.api_url = api_url
+            self.model = model
+            self.max_tokens = max_tokens
+
+        def rank_single_criterion(self, human_summary, summary_a, summary_b, summary_c, criterion_name, criterion_key):
+            template = self.prompts.get(criterion_name)
+            if not template:
+                template = 'Rank summaries 1, 2, 3 from best to worst. Output only the ranking.'
+            prompt = template.format(
+                human_summary=human_summary,
+                summary_a=summary_a,
+                summary_b=summary_b,
+                summary_c=summary_c,
+            )
+
+            headers = {
+                'Authorization': f'Bearer {self.api_key}',
+                'Content-Type': 'application/json',
+            }
+
+            data = {
+                'model': self.model,
+                'messages': [{'role': 'user', 'content': prompt}],
+                'temperature': 0.0,
+            }
+            if self.max_tokens is not None:
+                data['max_tokens'] = self.max_tokens
+
+            print(f'Calling ranking model: {self.model}')
+
+            attempts = 0
+            last_error = None
+            while attempts < 3:
+                attempts += 1
+                try:
+                    response = requests.post(self.api_url, headers=headers, json=data, timeout=45)
+                    response.raise_for_status()
+                    result = response.json()
+                    content = result['choices'][0]['message']['content'].strip()
+                    rankings = self._parse_ranking_output(content)
+                    if rankings is None:
+                        print('invalid parse; skipping criterion')
+                        return None
+                    return rankings
+                except Exception as exc:
+                    last_error = exc
+            print(f"    ERROR calling API: {str(last_error)}")
+            return None
+
+        def _parse_ranking_output(self, content):
+            text = (content or '').strip()
+            if not text:
+                return None
+
+            numbers = re.findall(r"[123]", text)
+            if len(numbers) >= 3:
+                ranks = numbers[:3]
+                if set(ranks) == {'1', '2', '3'}:
+                    position_mapping = {ranks[0]: '1', ranks[1]: '2', ranks[2]: '3'}
+                    position_mapping['reasoning'] = text
+                    return position_mapping
+
+            ordered = re.findall(r"1(?:st)?\D*([123]).*?2(?:nd)?\D*([123]).*?3(?:rd)?\D*([123])", text, flags=re.IGNORECASE | re.DOTALL)
+            if ordered:
+                a, b, c = ordered[0]
+                if set([a, b, c]) == {'1', '2', '3'}:
+                    position_mapping = {'1': a, '2': b, '3': c, 'reasoning': text}
+                    return position_mapping
+
+            return None
+
+        def rank_summaries_all_criteria(self, human_summary, summary_a, summary_b, summary_c, file_name, project_name):
+            print(f"\n  Ranking: {file_name} (Project: {project_name})")
+
+            results = {
+                'project': project_name,
+                'file': file_name,
+                'human_summary': human_summary,
+                'summary_a': summary_a,
+                'summary_b': summary_b,
+                'summary_c': summary_c,
+            }
+
+            total_points = {'A': 0, 'B': 0, 'C': 0}
+
+            for idx, (criterion_name, criterion_key) in enumerate(self.CRITERIA.items(), 1):
+                print(f"    [{idx}/5] Evaluating {criterion_name}...", end=' ')
+
+                ranking = self.rank_single_criterion(
+                    human_summary, summary_a, summary_b, summary_c,
+                    criterion_name, criterion_key,
+                )
+
+                if ranking is None:
+                    results[f'{criterion_name}_rank_1st'] = ''
+                    results[f'{criterion_name}_rank_2nd'] = ''
+                    results[f'{criterion_name}_rank_3rd'] = ''
+                    results[f'{criterion_name}_reasoning'] = 'Invalid or error response; criterion skipped'
+                    print('skipped')
+                    continue
+
+                first_place = ranking.get('1')
+                second_place = ranking.get('2')
+                third_place = ranking.get('3')
+
+                results[f'{criterion_name}_rank_1st'] = first_place
+                results[f'{criterion_name}_rank_2nd'] = second_place
+                results[f'{criterion_name}_rank_3rd'] = third_place
+                results[f'{criterion_name}_reasoning'] = ranking.get('reasoning', '')
+
+                if first_place == '1':
+                    total_points['A'] += 3
+                elif first_place == '2':
+                    total_points['B'] += 3
+                elif first_place == '3':
+                    total_points['C'] += 3
+
+                if second_place == '1':
+                    total_points['A'] += 2
+                elif second_place == '2':
+                    total_points['B'] += 2
+                elif second_place == '3':
+                    total_points['C'] += 2
+
+                if third_place == '1':
+                    total_points['A'] += 1
+                elif third_place == '2':
+                    total_points['B'] += 1
+                elif third_place == '3':
+                    total_points['C'] += 1
+
+                print(f"1st={first_place}, 2nd={second_place}, 3rd={third_place}")
+
+            results['total_points_a'] = total_points['A']
+            results['total_points_b'] = total_points['B']
+            results['total_points_c'] = total_points['C']
+
+            results['avg_points_a'] = round(total_points['A'] / 5, 2)
+            results['avg_points_b'] = round(total_points['B'] / 5, 2)
+            results['avg_points_c'] = round(total_points['C'] / 5, 2)
+
+            max_points = max(total_points.values())
+            winners = [k for k, v in total_points.items() if v == max_points]
+            results['winner'] = ', '.join(winners) if len(winners) > 1 else winners[0]
+
+            print(f"    Total Points: A={total_points['A']}, B={total_points['B']}, C={total_points['C']}")
+            print(f"    Winner: {results['winner']}")
+
+            return results
 
 
 class ModelComparisonRankingPipeline:
@@ -41,10 +243,9 @@ class ModelComparisonRankingPipeline:
 
     CRITERIA = ['accuracy', 'conciseness', 'adequacy', 'code_context', 'design_patterns']
 
-    # A is always NLG, B is model-under-test, C is always SWUM.
     COMPARISONS = [
         ('CLAUDE', 'LLM_CLAUDE_SUMMARY.csv'),
-        ('GEMINI', 'LLM_GEMINI_SUMMARY.csv'),
+        ('QWEN', 'LLM_QWEN_SUMMARY.csv'),
         ('GPT', 'LLM_GPT_SUMMARY.csv'),
         ('MISTRAL', 'LLM_MISTRAL_SUMMARY.csv'),
     ]
@@ -75,7 +276,11 @@ class ModelComparisonRankingPipeline:
         ranking_model = resolve_ranking_model(model_override)
         print(f'Using ranking model: {ranking_model}')
 
-        max_tokens_raw = os.getenv('RANK_SUMMARIES_MAX_TOKENS', '50')
+        # Require explicit .env configuration so ranking behavior is environment-driven
+        # and never silently falls back to an in-code default token budget.
+        max_tokens_raw = os.getenv('RANK_SUMMARIES_MAX_TOKENS')
+        if not max_tokens_raw:
+            raise ValueError('RANK_SUMMARIES_MAX_TOKENS not found in .env file')
         try:
             max_tokens = int(max_tokens_raw)
         except ValueError as exc:

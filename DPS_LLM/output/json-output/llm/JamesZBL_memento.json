@@ -1,23 +1,6 @@
 {
 	"final_summary" : "",
-	"design_pattern" : [ {
-		"abstract_factory" : {
-			"Plant" : {
-				"abstract_product" : { },
-				"concrete_factory" : [ "Flower" ]
-			}
-		}
-	}, {
-		"observer" : {
-			"FlowerType" : {
-				"concrete_observer" : [ ],
-				"publisher" : {
-					"Flower" : [ ]
-				}
-			}
-		}
-	} ],
-	"memento" : {
+	"JamesZBL/memento" : {
 		"Plant" : {
 			"FIELDDETAIL" : [ ],
 			"CLASSORINTERFACEDETAIL" : [ {
@@ -121,7 +104,7 @@
 			"CLASSORINTERFACEDETAIL" : [ {
 				"CLASSACCESSSPECIFIER" : "PUBLIC",
 				"NUMBEROFMETHODCALLS" : 24,
-				"EXTENDSFROM" : [ "Plant" ],
+				"EXTENDSFROM" : [ "Plant", "Plant" ],
 				"IMPLEMENTSFROM" : [ "Plant" ],
 				"CLASSNAME" : "Flower",
 				"ISINTERFACEORNOT" : false,
@@ -550,5 +533,38 @@
 			} ]
 		}
 	},
-	"summary_NLG" : { }
+	"design_pattern" : [ {
+		"abstract_factory" : {
+			"Plant" : {
+				"abstract_product" : { },
+				"concrete_factory" : [ "Flower" ]
+			}
+		}
+	}, {
+		"adapter" : {
+			"Flower" : {
+				"adaptee" : [ "FlowerType" ],
+				"target" : [ "Plant" ]
+			}
+		}
+	}, {
+		"visitor" : {
+			"Flower" : {
+				"visitor" : {
+					"Plant" : [ "Flower" ]
+				}
+			}
+		}
+	}, {
+		"observer" : {
+			"FlowerType" : {
+				"concrete_observer" : [ ],
+				"publisher" : {
+					"Flower" : [ ]
+				}
+			}
+		}
+	} ],
+	"summary_NLG" : { },
+	"project_identifier" : "JamesZBL/memento"
 }

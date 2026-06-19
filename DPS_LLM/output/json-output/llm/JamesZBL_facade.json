@@ -1,7 +1,6 @@
 {
 	"final_summary" : "",
-	"design_pattern" : [ ],
-	"facade" : {
+	"JamesZBL/facade" : {
 		"CourseFacade" : {
 			"FIELDDETAIL" : [ {
 				"FIELDCOMMONTYPE" : "List<CourseParticipator>",
@@ -422,5 +421,7 @@
 			} ]
 		}
 	},
-	"summary_NLG" : { }
+	"design_pattern" : [ ],
+	"summary_NLG" : { },
+	"project_identifier" : "JamesZBL/facade"
 }

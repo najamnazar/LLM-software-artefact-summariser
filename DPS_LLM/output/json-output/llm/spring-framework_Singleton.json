@@ -1,7 +1,8 @@
 {
 	"final_summary" : "",
 	"design_pattern" : [ ],
-	"Singleton" : {
+	"summary_NLG" : { },
+	"spring-framework/Singleton" : {
 		"SmartInitializingSingleton" : {
 			"FIELDDETAIL" : [ ],
 			"CLASSORINTERFACEDETAIL" : [ {
@@ -157,7 +158,7 @@
 			"CLASSORINTERFACEDETAIL" : [ {
 				"CLASSACCESSSPECIFIER" : "PUBLIC",
 				"NUMBEROFMETHODCALLS" : 167,
-				"EXTENDSFROM" : [ "SimpleAliasRegistry" ],
+				"EXTENDSFROM" : [ "SimpleAliasRegistry", "SingletonBeanRegistry" ],
 				"IMPLEMENTSFROM" : [ "SingletonBeanRegistry" ],
 				"CLASSNAME" : "DefaultSingletonBeanRegistry",
 				"ISINTERFACEORNOT" : false,
@@ -1274,5 +1275,5 @@
 			} ]
 		}
 	},
-	"summary_NLG" : { }
+	"project_identifier" : "spring-framework/Singleton"
 }

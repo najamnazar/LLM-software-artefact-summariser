@@ -1,8 +1,6 @@
 {
 	"final_summary" : "",
-	"design_pattern" : [ ],
-	"summary_NLG" : { },
-	"AbstractFactory" : {
+	"spring-framework/AbstractFactory" : {
 		"ClientHttpRequestFactory" : {
 			"FIELDDETAIL" : [ ],
 			"CLASSORINTERFACEDETAIL" : [ {
@@ -732,5 +730,8 @@
 				} ]
 			} ]
 		}
-	}
+	},
+	"design_pattern" : [ ],
+	"summary_NLG" : { },
+	"project_identifier" : "spring-framework/AbstractFactory"
 }

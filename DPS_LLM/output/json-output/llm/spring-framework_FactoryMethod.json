@@ -1,5 +1,5 @@
 {
-	"FactoryMethod" : {
+	"spring-framework/FactoryMethod" : {
 		"CronTriggerFactoryBean" : {
 			"FIELDDETAIL" : [ {
 				"FIELDCOMMONTYPE" : "Map<String, Integer>",
@@ -2020,5 +2020,6 @@
 	},
 	"final_summary" : "",
 	"design_pattern" : [ ],
-	"summary_NLG" : { }
+	"summary_NLG" : { },
+	"project_identifier" : "spring-framework/FactoryMethod"
 }

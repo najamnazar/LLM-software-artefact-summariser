@@ -1,5 +1,5 @@
 {
-	"decorator" : {
+	"JamesZBL/decorator" : {
 		"HammerSmithOperation" : {
 			"FIELDDETAIL" : [ {
 				"FIELDCOMMONTYPE" : "Logger",
@@ -17,7 +17,7 @@
 			"CLASSORINTERFACEDETAIL" : [ {
 				"CLASSACCESSSPECIFIER" : "PUBLIC",
 				"NUMBEROFMETHODCALLS" : 7,
-				"EXTENDSFROM" : [ ],
+				"EXTENDSFROM" : [ "Operation" ],
 				"IMPLEMENTSFROM" : [ "Operation" ],
 				"CLASSNAME" : "HammerSmithOperation",
 				"ISINTERFACEORNOT" : false,
@@ -141,7 +141,7 @@
 			"CLASSORINTERFACEDETAIL" : [ {
 				"CLASSACCESSSPECIFIER" : "PUBLIC",
 				"NUMBEROFMETHODCALLS" : 4,
-				"EXTENDSFROM" : [ ],
+				"EXTENDSFROM" : [ "Operation" ],
 				"IMPLEMENTSFROM" : [ "Operation" ],
 				"CLASSNAME" : "CarpenterOperation",
 				"ISINTERFACEORNOT" : false,
@@ -253,5 +253,6 @@
 			}
 		}
 	} ],
-	"summary_NLG" : { }
+	"summary_NLG" : { },
+	"project_identifier" : "JamesZBL/decorator"
 }

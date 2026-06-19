@@ -5,42 +5,70 @@ EVALUATION SUMMARY: Generated vs Human Summaries
 
 NLG:
   Classes Evaluated: 150
-  Avg Cosine Similarity: 0.1657 (±0.0797)
-  Avg BERT Precision: 0.8396
-  Avg BERT Recall: 0.8617
-  Avg BERT F1: 0.8501 (±0.0232)
+  Avg Cosine Similarity: 0.1749 (±0.0907)
+  Avg BERT Precision: 0.8327
+  Avg BERT Recall: 0.8576
+  Avg BERT F1: 0.8446 (±0.0237)
 
 SWUM:
   Classes Evaluated: 150
-  Avg Cosine Similarity: 0.2532 (±0.1014)
-  Avg BERT Precision: 0.8968
-  Avg BERT Recall: 0.8617
-  Avg BERT F1: 0.8786 (±0.0175)
+  Avg Cosine Similarity: 0.2525 (±0.1103)
+  Avg BERT Precision: 0.8965
+  Avg BERT Recall: 0.8645
+  Avg BERT F1: 0.8799 (±0.0175)
 
 LLM (Claude) (Claude Sonnet 4.6):
   Classes Evaluated: 150
-  Avg Cosine Similarity: 0.3078 (±0.1155)
-  Avg BERT Precision: 0.8543
-  Avg BERT Recall: 0.8951
-  Avg BERT F1: 0.8741 (±0.0179)
-
-LLM (Gemini) (Gemini 3.5 Flash):
-  Classes Evaluated: 150
-  Avg Cosine Similarity: 0.1686 (±0.1200)
-  Avg BERT Precision: 0.8547
-  Avg BERT Recall: 0.8317
-  Avg BERT F1: 0.8428 (±0.0298)
+  Avg Cosine Similarity: 0.3111 (±0.1150)
+  Avg BERT Precision: 0.8532
+  Avg BERT Recall: 0.8956
+  Avg BERT F1: 0.8738 (±0.0183)
 
 LLM (GPT) (GPT-5.4 Mini):
   Classes Evaluated: 150
-  Avg Cosine Similarity: 0.2586 (±0.0961)
-  Avg BERT Precision: 0.8690
-  Avg BERT Recall: 0.8866
-  Avg BERT F1: 0.8776 (±0.0165)
+  Avg Cosine Similarity: 0.2582 (±0.0992)
+  Avg BERT Precision: 0.8685
+  Avg BERT Recall: 0.8863
+  Avg BERT F1: 0.8772 (±0.0167)
 
 LLM (Mistral) (Mistral Small 2603):
   Classes Evaluated: 150
-  Avg Cosine Similarity: 0.3049 (±0.1201)
-  Avg BERT Precision: 0.8639
-  Avg BERT Recall: 0.8924
-  Avg BERT F1: 0.8778 (±0.0181)
+  Avg Cosine Similarity: 0.3071 (±0.1167)
+  Avg BERT Precision: 0.8618
+  Avg BERT Recall: 0.8925
+  Avg BERT F1: 0.8768 (±0.0169)
+
+LLM (Qwen) (Qwen3.7):
+  Classes Evaluated: 150
+  Avg Cosine Similarity: 0.2974 (±0.1186)
+  Avg BERT Precision: 0.8590
+  Avg BERT Recall: 0.8897
+  Avg BERT F1: 0.8740 (±0.0173)
+
+LLM (Claude NC):
+  Classes Evaluated: 150
+  Avg Cosine Similarity: 0.3042 (±0.1092)
+  Avg BERT Precision: 0.8527
+  Avg BERT Recall: 0.8944
+  Avg BERT F1: 0.8730 (±0.0169)
+
+LLM (GPT NC):
+  Classes Evaluated: 150
+  Avg Cosine Similarity: 0.2590 (±0.1003)
+  Avg BERT Precision: 0.8695
+  Avg BERT Recall: 0.8865
+  Avg BERT F1: 0.8778 (±0.0174)
+
+LLM (Mistral NC):
+  Classes Evaluated: 150
+  Avg Cosine Similarity: 0.3041 (±0.1096)
+  Avg BERT Precision: 0.8635
+  Avg BERT Recall: 0.8930
+  Avg BERT F1: 0.8779 (±0.0168)
+
+LLM (Qwen NC):
+  Classes Evaluated: 149
+  Avg Cosine Similarity: 0.2959 (±0.1191)
+  Avg BERT Precision: 0.8603
+  Avg BERT Recall: 0.8904
+  Avg BERT F1: 0.8750 (±0.0181)

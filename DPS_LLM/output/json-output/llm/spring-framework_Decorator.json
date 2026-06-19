@@ -1,5 +1,9 @@
 {
-	"Decorator" : {
+	"final_summary" : "",
+	"design_pattern" : [ ],
+	"summary_NLG" : { },
+	"project_identifier" : "spring-framework/Decorator",
+	"spring-framework/Decorator" : {
 		"BufferingClientHttpResponseWrapper" : {
 			"FIELDDETAIL" : [ {
 				"FIELDCOMMONTYPE" : "ClientHttpResponse",
@@ -839,8 +843,5 @@
 				"METHODPARAMETER" : [ ]
 			} ]
 		}
-	},
-	"final_summary" : "",
-	"design_pattern" : [ ],
-	"summary_NLG" : { }
+	}
 }

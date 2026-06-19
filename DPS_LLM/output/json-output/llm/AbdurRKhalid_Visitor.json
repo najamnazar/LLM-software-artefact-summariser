@@ -1,6 +1,37 @@
 {
 	"final_summary" : "",
-	"Visitor" : {
+	"design_pattern" : [ {
+		"visitor" : {
+			"ComputerPart" : {
+				"concrete_element" : [ "Monitor", "Mouse", "Keyboard", "Computer" ],
+				"visitor" : {
+					"ComputerPartVisitor" : [ "ComputerPartDisplayVisitor" ]
+				}
+			},
+			"Monitor" : {
+				"visitor" : {
+					"ComputerPartVisitor" : [ "ComputerPartDisplayVisitor" ]
+				}
+			},
+			"Mouse" : {
+				"visitor" : {
+					"ComputerPartVisitor" : [ "ComputerPartDisplayVisitor" ]
+				}
+			},
+			"Keyboard" : {
+				"visitor" : {
+					"ComputerPartVisitor" : [ "ComputerPartDisplayVisitor" ]
+				}
+			},
+			"Computer" : {
+				"visitor" : {
+					"ComputerPartVisitor" : [ "ComputerPartDisplayVisitor" ]
+				}
+			}
+		}
+	} ],
+	"summary_NLG" : { },
+	"AbdurRKhalid/Visitor" : {
 		"ComputerPart" : {
 			"FIELDDETAIL" : [ ],
 			"CLASSORINTERFACEDETAIL" : [ {
@@ -451,15 +482,5 @@
 			} ]
 		}
 	},
-	"design_pattern" : [ {
-		"visitor" : {
-			"ComputerPart" : {
-				"concrete_element" : [ "Monitor", "Mouse", "Keyboard", "Computer" ],
-				"visitor" : {
-					"ComputerPartVisitor" : [ "ComputerPartDisplayVisitor" ]
-				}
-			}
-		}
-	} ],
-	"summary_NLG" : { }
+	"project_identifier" : "AbdurRKhalid/Visitor"
 }

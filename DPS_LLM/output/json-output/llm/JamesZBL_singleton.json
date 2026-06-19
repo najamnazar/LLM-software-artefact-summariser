@@ -1,5 +1,6 @@
 {
-	"singleton" : {
+	"final_summary" : "",
+	"JamesZBL/singleton" : {
 		"ThreadSafeDoubleCheckLocking" : {
 			"FIELDDETAIL" : [ {
 				"FIELDCOMMONTYPE" : "ThreadSafeDoubleCheckLocking",
@@ -270,9 +271,9 @@
 			} ]
 		}
 	},
-	"final_summary" : "",
 	"design_pattern" : [ {
 		"singleton" : [ "ThreadSafeDoubleCheckLocking", "LazyInitializationDirector", "Director", "ThreadSafeLazyLoadDirector" ]
 	} ],
-	"summary_NLG" : { }
+	"summary_NLG" : { },
+	"project_identifier" : "JamesZBL/singleton"
 }

@@ -10,15 +10,18 @@
 				"concrete_factory" : [ "WindowsOSFactory", "MacOSFactory" ]
 			}
 		}
+	}, {
+		"facade" : {
+			"Test" : [ "Application" ]
+		}
 	} ],
-	"summary_NLG" : { },
-	"AbstractFactory" : {
+	"AbdurRKhalid/AbstractFactory" : {
 		"WindowsOSFactory" : {
 			"FIELDDETAIL" : [ ],
 			"CLASSORINTERFACEDETAIL" : [ {
 				"CLASSACCESSSPECIFIER" : "PUBLIC",
 				"NUMBEROFMETHODCALLS" : 0,
-				"EXTENDSFROM" : [ ],
+				"EXTENDSFROM" : [ "GUIFactory" ],
 				"IMPLEMENTSFROM" : [ "GUIFactory" ],
 				"CLASSNAME" : "WindowsOSFactory",
 				"ISINTERFACEORNOT" : false,
@@ -61,7 +64,7 @@
 			"CLASSORINTERFACEDETAIL" : [ {
 				"CLASSACCESSSPECIFIER" : "PUBLIC",
 				"NUMBEROFMETHODCALLS" : 1,
-				"EXTENDSFROM" : [ ],
+				"EXTENDSFROM" : [ "Button" ],
 				"IMPLEMENTSFROM" : [ "Button" ],
 				"CLASSNAME" : "WindowsButton",
 				"ISINTERFACEORNOT" : false,
@@ -195,7 +198,7 @@
 			"CLASSORINTERFACEDETAIL" : [ {
 				"CLASSACCESSSPECIFIER" : "PUBLIC",
 				"NUMBEROFMETHODCALLS" : 0,
-				"EXTENDSFROM" : [ ],
+				"EXTENDSFROM" : [ "GUIFactory" ],
 				"IMPLEMENTSFROM" : [ "GUIFactory" ],
 				"CLASSNAME" : "MacOSFactory",
 				"ISINTERFACEORNOT" : false,
@@ -238,7 +241,7 @@
 			"CLASSORINTERFACEDETAIL" : [ {
 				"CLASSACCESSSPECIFIER" : "PUBLIC",
 				"NUMBEROFMETHODCALLS" : 1,
-				"EXTENDSFROM" : [ ],
+				"EXTENDSFROM" : [ "Button" ],
 				"IMPLEMENTSFROM" : [ "Button" ],
 				"CLASSNAME" : "MacOSButton",
 				"ISINTERFACEORNOT" : false,
@@ -268,7 +271,7 @@
 			"CLASSORINTERFACEDETAIL" : [ {
 				"CLASSACCESSSPECIFIER" : "PUBLIC",
 				"NUMBEROFMETHODCALLS" : 1,
-				"EXTENDSFROM" : [ ],
+				"EXTENDSFROM" : [ "CheckBox" ],
 				"IMPLEMENTSFROM" : [ "CheckBox" ],
 				"CLASSNAME" : "WindowsCheckBox",
 				"ISINTERFACEORNOT" : false,
@@ -349,7 +352,7 @@
 			"CLASSORINTERFACEDETAIL" : [ {
 				"CLASSACCESSSPECIFIER" : "PUBLIC",
 				"NUMBEROFMETHODCALLS" : 1,
-				"EXTENDSFROM" : [ ],
+				"EXTENDSFROM" : [ "CheckBox" ],
 				"IMPLEMENTSFROM" : [ "CheckBox" ],
 				"CLASSNAME" : "MacOSCheckBox",
 				"ISINTERFACEORNOT" : false,
@@ -417,5 +420,7 @@
 				"METHODPARAMETER" : [ ]
 			} ]
 		}
-	}
+	},
+	"summary_NLG" : { },
+	"project_identifier" : "AbdurRKhalid/AbstractFactory"
 }

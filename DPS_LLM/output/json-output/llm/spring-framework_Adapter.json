@@ -1,7 +1,7 @@
 {
 	"final_summary" : "",
 	"design_pattern" : [ ],
-	"Adapter" : {
+	"spring-framework/Adapter" : {
 		"IsolationLevelDataSourceAdapter" : {
 			"FIELDDETAIL" : [ {
 				"FIELDCOMMONTYPE" : "Map<String, Integer>",
@@ -333,5 +333,6 @@
 			} ]
 		}
 	},
-	"summary_NLG" : { }
+	"summary_NLG" : { },
+	"project_identifier" : "spring-framework/Adapter"
 }

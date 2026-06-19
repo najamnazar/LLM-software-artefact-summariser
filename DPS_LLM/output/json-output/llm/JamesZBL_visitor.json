@@ -1,8 +1,6 @@
 {
 	"final_summary" : "",
-	"design_pattern" : [ ],
-	"summary_NLG" : { },
-	"visitor" : {
+	"JamesZBL/visitor" : {
 		"Boss" : {
 			"FIELDDETAIL" : [ ],
 			"CLASSORINTERFACEDETAIL" : [ {
@@ -118,7 +116,7 @@
 			"CLASSORINTERFACEDETAIL" : [ {
 				"CLASSACCESSSPECIFIER" : "PUBLIC",
 				"NUMBEROFMETHODCALLS" : 2,
-				"EXTENDSFROM" : [ ],
+				"EXTENDSFROM" : [ "UnitVisitor" ],
 				"IMPLEMENTSFROM" : [ "UnitVisitor" ],
 				"CLASSNAME" : "ManagerVisitor",
 				"ISINTERFACEORNOT" : false,
@@ -306,7 +304,7 @@
 			"CLASSORINTERFACEDETAIL" : [ {
 				"CLASSACCESSSPECIFIER" : "PUBLIC",
 				"NUMBEROFMETHODCALLS" : 2,
-				"EXTENDSFROM" : [ ],
+				"EXTENDSFROM" : [ "UnitVisitor" ],
 				"IMPLEMENTSFROM" : [ "UnitVisitor" ],
 				"CLASSNAME" : "BossVisitor",
 				"ISINTERFACEORNOT" : false,
@@ -426,7 +424,7 @@
 			"CLASSORINTERFACEDETAIL" : [ {
 				"CLASSACCESSSPECIFIER" : "PUBLIC",
 				"NUMBEROFMETHODCALLS" : 2,
-				"EXTENDSFROM" : [ ],
+				"EXTENDSFROM" : [ "UnitVisitor" ],
 				"IMPLEMENTSFROM" : [ "UnitVisitor" ],
 				"CLASSNAME" : "EngineerVisitor",
 				"ISINTERFACEORNOT" : false,
@@ -523,5 +521,31 @@
 				} ]
 			} ]
 		}
-	}
+	},
+	"design_pattern" : [ {
+		"visitor" : {
+			"Boss" : {
+				"visitor" : {
+					"UnitVisitor" : [ "ManagerVisitor", "BossVisitor", "EngineerVisitor" ]
+				}
+			},
+			"Engineer" : {
+				"visitor" : {
+					"UnitVisitor" : [ "ManagerVisitor", "BossVisitor", "EngineerVisitor" ]
+				}
+			},
+			"Manager" : {
+				"visitor" : {
+					"UnitVisitor" : [ "ManagerVisitor", "BossVisitor", "EngineerVisitor" ]
+				}
+			},
+			"Unit" : {
+				"visitor" : {
+					"UnitVisitor" : [ "ManagerVisitor", "BossVisitor", "EngineerVisitor" ]
+				}
+			}
+		}
+	} ],
+	"summary_NLG" : { },
+	"project_identifier" : "JamesZBL/visitor"
 }

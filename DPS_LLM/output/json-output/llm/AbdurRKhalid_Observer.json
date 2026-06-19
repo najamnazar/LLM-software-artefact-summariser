@@ -1,6 +1,14 @@
 {
 	"final_summary" : "",
 	"design_pattern" : [ {
+		"visitor" : {
+			"EventManager" : {
+				"visitor" : {
+					"EventListener" : [ "EmailNotificationListener", "LogOpenListener" ]
+				}
+			}
+		}
+	}, {
 		"observer" : {
 			"EventListener" : {
 				"concrete_observer" : [ "EmailNotificationListener", "LogOpenListener" ],
@@ -10,7 +18,8 @@
 			}
 		}
 	} ],
-	"Observer" : {
+	"summary_NLG" : { },
+	"AbdurRKhalid/Observer" : {
 		"EmailNotificationListener" : {
 			"FIELDDETAIL" : [ {
 				"FIELDCOMMONTYPE" : "String",
@@ -22,7 +31,7 @@
 			"CLASSORINTERFACEDETAIL" : [ {
 				"CLASSACCESSSPECIFIER" : "PUBLIC",
 				"NUMBEROFMETHODCALLS" : 2,
-				"EXTENDSFROM" : [ ],
+				"EXTENDSFROM" : [ "EventListener" ],
 				"IMPLEMENTSFROM" : [ "EventListener" ],
 				"CLASSNAME" : "EmailNotificationListener",
 				"ISINTERFACEORNOT" : false,
@@ -273,7 +282,7 @@
 			"CLASSORINTERFACEDETAIL" : [ {
 				"CLASSACCESSSPECIFIER" : "PUBLIC",
 				"NUMBEROFMETHODCALLS" : 2,
-				"EXTENDSFROM" : [ ],
+				"EXTENDSFROM" : [ "EventListener" ],
 				"IMPLEMENTSFROM" : [ "EventListener" ],
 				"CLASSNAME" : "LogOpenListener",
 				"ISINTERFACEORNOT" : false,
@@ -311,5 +320,5 @@
 			} ]
 		}
 	},
-	"summary_NLG" : { }
+	"project_identifier" : "AbdurRKhalid/Observer"
 }

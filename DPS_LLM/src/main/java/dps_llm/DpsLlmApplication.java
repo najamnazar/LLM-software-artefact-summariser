@@ -47,7 +47,7 @@ import java.util.Map;
  */
 public class DpsLlmApplication {
 
-    private static final String DEFAULT_LLM_SUMMARY_PATH = "output/summary-output/llm_summaries.csv"; // Default path for standard 50-word summaries
+    private static final String DEFAULT_LLM_SUMMARY_PATH = "output/summary-output/LLM_SUMMARY.csv"; // Fallback path used only when model cannot be identified
     // private static final String DEFAULT_LLM_SUMMARY_PATH = "output/summary-output/llm_summaries_nonconcise.csv"; // Non-concise path retained for quick reactivation when required
     private static final String DEFAULT_PROMPT_ALIAS = "SENIOR_ANALYST_50_WORDS"; // Fallback prompt alias when no overrides are provided
     // private static final String DEFAULT_PROMPT_ALIAS = "SENIOR_ANALYST_50_WORDS_NON_CONCISE"; // Alternate alias kept for runs that require non-concise summaries
@@ -127,10 +127,11 @@ public class DpsLlmApplication {
                 resolveValue(dotEnv, "MISTRAL_MODEL"),
                 resolveValue(dotEnv, "GPT_MODEL"),
                 resolveValue(dotEnv, "CLAUDE_MODEL"),
+                resolveValue(dotEnv, "QWEN_MODEL")
                 //resolveValue(dotEnv, "GEMINI_MODEL")
         );
         if (model == null) {
-            System.out.println("No summary model found in .env. Set DEEPSEEK_MODEL, MISTRAL_MODEL, GPT_MODEL, CLAUDE_MODEL, or GEMINI_MODEL before running the LLM pipeline.");
+            System.out.println("No summary model found in .env. Set DEEPSEEK_MODEL, MISTRAL_MODEL, GPT_MODEL, CLAUDE_MODEL, QWEN_MODEL, or GEMINI_MODEL before running the LLM pipeline.");
             return;
         }
 
@@ -186,13 +187,15 @@ public class DpsLlmApplication {
         // int totalSkipped = 0;
         Map<String, SummaryAccumulator> perPromptTotals = new LinkedHashMap<>(); // Tracks per-alias aggregates for multi-prompt runs
 
-        // Resolve output CSV path (env/.env takes precedence; fallback to JVM property; else default)
+        // Resolve output CSV path: explicit override wins; otherwise derive from the active model
+        // so each model writes to its own file (e.g. LLM_DEEPSEEK_SUMMARY.csv, LLM_GPT_SUMMARY.csv).
         String configuredOutput = resolveValue(dotEnv, "LLM_SUMMARY_PATH");
         if (configuredOutput == null) {
             String sysProp = System.getProperty("llm.summary.path");
             configuredOutput = firstNonBlank(sysProp);
         }
-        String outputCsvPath = configuredOutput != null ? configuredOutput : DEFAULT_LLM_SUMMARY_PATH;
+        String outputCsvPath = configuredOutput != null ? configuredOutput
+                : buildModelOutputPath(resolveModelLabel(dotEnv, model));
 
         /*
          * Previous multi-prompt execution retained for reference. Uncomment to regenerate the
@@ -391,7 +394,11 @@ public class DpsLlmApplication {
         jsonWriter.writeValue(new File("output/json-output/llm/" + projectIdentifier + ".json"), parsedProject);
 
         for (PromptRunContext context : promptRuns) {
-            SummaryStats stats = context.summaryService.generateSummaries(parsedProject, projectDir.getName(), projectIdentifier, context.writer);
+            // Bug fix: ParseProject.parseProject() stores data under the full relative path key
+            // (e.g., "AbdurRKhalid/AbstractFactory") since the Bug 2 fix — projectDir.getName()
+            // returned only the leaf name ("AbstractFactory") and caused parsedProject.get() to
+            // return null, silently skipping all classes. relativePath matches the stored key.
+            SummaryStats stats = context.summaryService.generateSummaries(parsedProject, relativePath, projectIdentifier, context.writer);
             results.put(context.alias, stats);
             if (stats.hasResults()) {
                 System.out.printf("  [%s] Project summary: %d classes processed, %d summaries generated, %d failed, %d skipped.%n",
@@ -471,8 +478,35 @@ public class DpsLlmApplication {
     }
 
     /**
+     * Derives a short model label (DEEPSEEK, GPT, CLAUDE, MISTRAL, GEMINI) by matching
+     * the resolved model string against the per-model .env keys.  Returns "LLM" if no
+     * key matches (e.g. a CLI override with an unrecognised provider string).
+     */
+    private String resolveModelLabel(Map<String, String> dotEnv, String resolvedModel) {
+        String[][] candidates = {
+            {"DEEPSEEK_MODEL", "DEEPSEEK"},
+            {"MISTRAL_MODEL",  "MISTRAL"},
+            {"GPT_MODEL",      "GPT"},
+            {"CLAUDE_MODEL",   "CLAUDE"},
+            {"QWEN_MODEL",     "QWEN"},
+            {"GEMINI_MODEL",   "GEMINI"}
+        };
+        for (String[] pair : candidates) {
+            if (resolvedModel.equals(resolveValue(dotEnv, pair[0]))) {
+                return pair[1];
+            }
+        }
+        return "LLM";
+    }
+
+    /** Builds the model-specific CSV output path, e.g. output/summary-output/LLM_DEEPSEEK_SUMMARY.csv */
+    private String buildModelOutputPath(String modelLabel) {
+        return "output/summary-output/LLM_" + modelLabel + "_SUMMARY.csv";
+    }
+
+    /**
      * Resolves the project limit from configuration.
-     * 
+     *
      * @param dotEnv configuration map from .env file
      * @return maximum number of projects to process, or 0 for unlimited
      */

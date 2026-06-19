@@ -105,6 +105,9 @@ public class LlmClient {
      * @return an Optional containing the generated summary, or empty if no content returned
      * @throws LlmClientException if the API request fails or returns an error
      */
+    // Backoff delays (seconds) between successive 429 retries; length also determines max retry count.
+    private static final int[] RETRY_DELAY_SECONDS = {15, 30, 60};
+
     public Optional<String> createSummary(String systemPrompt, String userPrompt) throws LlmClientException {
         if (systemPrompt == null) {
             throw new IllegalArgumentException("systemPrompt must not be null");
@@ -131,7 +134,16 @@ public class LlmClient {
                 requestBuilder.header("X-Title", title);
             }
 
-            HttpResponse<String> response = httpClient.send(requestBuilder.build(), HttpResponse.BodyHandlers.ofString());
+            HttpRequest request = requestBuilder.build();
+            HttpResponse<String> response = httpClient.send(request, HttpResponse.BodyHandlers.ofString());
+            for (int attempt = 0; attempt < RETRY_DELAY_SECONDS.length && response.statusCode() == 429; attempt++) {
+                int delay = RETRY_DELAY_SECONDS[attempt];
+                System.out.printf("  Rate limited (429). Waiting %ds before retry %d/%d...%n",
+                        delay, attempt + 1, RETRY_DELAY_SECONDS.length);
+                Thread.sleep(delay * 1000L);
+                response = httpClient.send(request, HttpResponse.BodyHandlers.ofString());
+            }
+
             if (response.statusCode() < 200 || response.statusCode() >= 300) {
                 throw new LlmClientException(String.format("LLM request failed (%d): %s", response.statusCode(), response.body()));
             }
@@ -200,6 +212,8 @@ public class LlmClient {
             return Optional.empty();
         }
         String content = messageNode.path("content").asText().trim();
-        return content.isEmpty() ? Optional.empty() : Optional.of(content);
+        // DeepSeek returns the literal string "null" for near-empty prompts (sparse class data);
+        // treat it as no content so it counts as a failed summary rather than polluting the CSV.
+        return (content.isEmpty() || content.equalsIgnoreCase("null")) ? Optional.empty() : Optional.of(content);
     }
 }

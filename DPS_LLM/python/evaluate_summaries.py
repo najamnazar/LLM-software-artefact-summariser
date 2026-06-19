@@ -43,17 +43,25 @@ hf_logging.set_verbosity_error()
 
 
 def normalize_project_identifier(value: str) -> str:
-    """Normalize project identifiers (case-fold, remove all special characters including hyphens)."""
+    """Normalise a project name for key matching.
+
+    Lowercases, strips whitespace, and removes every non-alphanumeric character
+    (hyphens, underscores, spaces) so that 'AbdurRKhalid', 'abdur-r-khalid', and
+    'abdur_r_khalid' all collapse to the same canonical key.
+    """
     if not isinstance(value, str):
         return ""
     cleaned = value.strip().lower()
-    # Remove all non-alphanumeric characters (including hyphens, spaces, underscores)
     cleaned = re.sub(r"[^a-z0-9]+", "", cleaned)
     return cleaned
 
 
 def normalize_filename(value: str) -> str:
-    """Normalize filenames by lowercasing, trimming paths, and removing extensions."""
+    """Normalise a file-name for key matching.
+
+    Strips the directory path, lowercases the bare filename, and removes the
+    file extension so that 'src/Foo.java', 'Foo.java', and 'foo' all map to 'foo'.
+    """
     if not isinstance(value, str):
         return ""
     cleaned = value.strip().lower().replace('\\', '/').split('/')[-1]
@@ -61,7 +69,12 @@ def normalize_filename(value: str) -> str:
 
 
 def extract_full_project_path_from_url(url: str, base_project: str) -> str:
-    """Extract the full project path from a GitHub URL, falling back to the base project on failure."""
+    """Derive a full project path from a GitHub blob URL.
+
+    Walks the URL segments after the base project name, drops VCS artefacts
+    ('blob', 'main'), and reconstructs a slash-separated path.  Falls back to
+    ``base_project`` when the URL cannot be parsed.
+    """
     try:
         if base_project in url:
             after_project = url.split(base_project)[1]
@@ -77,7 +90,12 @@ def extract_full_project_path_from_url(url: str, base_project: str) -> str:
 
 
 def extract_base_project_name(project_path: str) -> str:
-    """Return the top-level project identifier, ignoring nested folders and suffixes."""
+    """Return the top-level (owner/repository) segment from a project path.
+
+    Handles both slash-separated paths ('AbdurRKhalid/Observer') and legacy
+    underscore-separated values ('AbdurRKhalid_Observer') by treating the first
+    underscore as a path separator when no slash is present.
+    """
     if not isinstance(project_path, str):
         return ""
     cleaned = project_path.strip().replace('\\', '/').replace('"', '')
@@ -130,10 +148,20 @@ def canonicalize_design_pattern(raw_value: str) -> str:
 
 
 class MetricsCalculator:
-    """Provides text similarity metrics used throughout the evaluation pipeline."""
+    """Stateless helper that computes text-similarity metrics for summary pairs.
+
+    All methods are static so the class acts as a namespace rather than requiring
+    instantiation — callers can inject the class itself or a subclass for testing.
+    """
 
     @staticmethod
     def cosine_similarity(text_a: str, text_b: str) -> float:
+        """Compute TF-IDF cosine similarity between two text strings.
+
+        Fits a fresh TfidfVectorizer on the pair to avoid vocabulary leakage
+        from other pairs.  Returns 0.0 when either string is empty or contains
+        only stop-words (sklearn raises ValueError in that case).
+        """
         vectorizer = TfidfVectorizer()
         try:
             tfidf = vectorizer.fit_transform([text_a, text_b])
@@ -144,6 +172,13 @@ class MetricsCalculator:
 
     @staticmethod
     def bert_scores(candidates: List[str], references: List[str]) -> Tuple[np.ndarray, np.ndarray, np.ndarray]:
+        """Compute BERTScore precision, recall, and F1 for a batch of text pairs.
+
+        Uses the default ``roberta-large`` model with English language settings.
+        Baseline rescaling is disabled so raw contextual-embedding cosine distances
+        are returned directly.  Raises RuntimeError (wrapping the underlying
+        exception) on failure so callers can handle it uniformly.
+        """
         try:
             precision, recall, f1 = bert_score(
                 candidates,
@@ -158,10 +193,21 @@ class MetricsCalculator:
 
 
 class SummaryDataLoader:
-    """Responsible for reading and normalising summary CSV inputs."""
+    """Reads and normalises the CSV inputs for human and generated summaries.
+
+    Both loaders return a DataFrame with consistent column names so the
+    evaluator can merge them without knowing the original column layout.
+    """
 
     @staticmethod
     def load_human_summaries(csv_path: Path) -> pd.DataFrame:
+        """Load the ground-truth human summary CSV.
+
+        Expected columns: Project, File Name, Human Summary, URL, and
+        optionally Design Pattern (used as the folder key for matching).
+        Returns a DataFrame with columns: project, base_project, filename,
+        folder, summary.
+        """
         try:
             df = pd.read_csv(csv_path)
         except FileNotFoundError as exc:
@@ -207,6 +253,15 @@ class SummaryDataLoader:
 
     @staticmethod
     def load_generated_summaries(csv_path: Path, summary_col_name: str) -> pd.DataFrame:
+        """Load a generated-summary CSV produced by any summarisation method.
+
+        Detects the project, folder, filename, and summary columns by matching
+        against a set of known synonyms, so the same loader works for NLG,
+        SWUM, and every LLM variant.  ``summary_col_name`` is the exact or
+        case-insensitive name of the column that holds the summary text.
+        Returns a DataFrame with columns: project, base_project, folder,
+        filename, summary.
+        """
         try:
             df = pd.read_csv(csv_path)
         except FileNotFoundError as exc:
@@ -264,7 +319,17 @@ class SummaryDataLoader:
 
 @dataclass
 class MethodEvaluationResult:
-    """Container for per-method evaluation artefacts."""
+    """Bundles every artefact produced for a single summarisation method.
+
+    Attributes:
+        method: Short display name used as a CSV/plot label (e.g. 'LLM (Claude NC)').
+        metrics: Corpus-level scalar scores (avg cosine, avg BERT F1, std, …).
+        project_stats: Per-project aggregated scores DataFrame.
+        pattern_stats: Per-design-pattern aggregated scores DataFrame.
+        pattern_metrics: Macro/micro averages across design patterns.
+        merged: The inner-joined DataFrame of (human, method) pairs with all
+                per-class scores attached — used directly for violin plots.
+    """
 
     method: str
     metrics: Dict[str, float]
@@ -276,7 +341,13 @@ class MethodEvaluationResult:
 
 @dataclass
 class EvaluationConfig:
-    """CLI configuration mapped into a strongly-typed structure."""
+    """Strongly-typed holder for all CLI inputs passed to the pipeline.
+
+    Mandatory paths (human CSV, NLG, SWUM) are positional-style required
+    fields.  Every LLM CSV is optional; absent ones are silently skipped by
+    ``method_sources``.  NC (Narrative Context) variants follow the same
+    naming convention as their base counterparts with an '_nc' suffix.
+    """
 
     human_csv: Path
     nlg_csv: Path
@@ -286,13 +357,25 @@ class EvaluationConfig:
     llm_gemini_csv: Optional[Path] = None
     llm_gpt_csv: Optional[Path] = None
     llm_mistral_csv: Optional[Path] = None
-    dps_llm_csv: Optional[Path] = None  # Optional legacy Mixtral summaries
-    dps_llm_nonconcise_csv: Optional[Path] = None  # Optional additional LLM summaries (e.g., non-concise alias)
+    llm_qwen_csv: Optional[Path] = None
+    dps_llm_csv: Optional[Path] = None        # Legacy Mixtral summaries
+    dps_llm_nonconcise_csv: Optional[Path] = None  # Legacy non-concise alias
+    llm_claude_nc_csv: Optional[Path] = None  # Claude with Narrative Context
+    llm_gpt_nc_csv: Optional[Path] = None     # GPT with Narrative Context
+    llm_mistral_nc_csv: Optional[Path] = None # Mistral with Narrative Context
+    llm_qwen_nc_csv: Optional[Path] = None    # Qwen with Narrative Context
 
     def ensure_output_dir(self) -> None:
+        """Create the output directory (and any parents) if it does not exist."""
         self.output_dir.mkdir(parents=True, exist_ok=True)
 
     def method_sources(self) -> List[Tuple[str, Path]]:
+        """Return an ordered list of (display-name, csv-path) tuples.
+
+        NLG and SWUM are always first.  LLM variants (including NC) are
+        appended only when their path is not None, preserving a deterministic
+        order for violin-plot x-axis labels.
+        """
         sources = [
             ('NLG', self.nlg_csv),
             ('SWUM', self.swum_csv),
@@ -306,15 +389,31 @@ class EvaluationConfig:
             sources.append(('LLM (GPT)', self.llm_gpt_csv))
         if self.llm_mistral_csv is not None:
             sources.append(('LLM (Mistral)', self.llm_mistral_csv))
+        if self.llm_qwen_csv is not None:
+            sources.append(('LLM (Qwen)', self.llm_qwen_csv))
         if self.dps_llm_csv is not None:
             sources.append(('LLM (Mixtral)', self.dps_llm_csv))
         if self.dps_llm_nonconcise_csv is not None:
             sources.append(('LLM (Non-Concise 50)', self.dps_llm_nonconcise_csv))
+        # NC (Narrative Context) variants — evaluated separately in violin plots
+        if self.llm_claude_nc_csv is not None:
+            sources.append(('LLM (Claude NC)', self.llm_claude_nc_csv))
+        if self.llm_gpt_nc_csv is not None:
+            sources.append(('LLM (GPT NC)', self.llm_gpt_nc_csv))
+        if self.llm_mistral_nc_csv is not None:
+            sources.append(('LLM (Mistral NC)', self.llm_mistral_nc_csv))
+        if self.llm_qwen_nc_csv is not None:
+            sources.append(('LLM (Qwen NC)', self.llm_qwen_nc_csv))
         return sources
 
 
 class SummaryEvaluator:
-    """Handles similarity scoring and persistence for a single method."""
+    """Scores generated summaries against human ground-truth for one method.
+
+    The evaluator holds a fixed copy of the human-summary DataFrame and
+    reuses the same ``MetricsCalculator`` instance for every method it
+    evaluates, keeping model weights loaded between calls for speed.
+    """
 
     def __init__(self, human_df: pd.DataFrame, output_dir: Path, metrics: MetricsCalculator) -> None:
         self.human_df = human_df.copy()
@@ -327,6 +426,14 @@ class SummaryEvaluator:
         method_df: pd.DataFrame,
         display_name: Optional[str] = None,
     ) -> Optional[MethodEvaluationResult]:
+        """Score one set of generated summaries against the human ground truth.
+
+        Normalises both DataFrames, builds a compound match key
+        (base_project::folder::filename), performs a 1-to-1 inner join,
+        then computes cosine similarity and BERTScore for every matched
+        pair.  Saves three CSVs (class-level, project-level, pattern-level)
+        and returns a ``MethodEvaluationResult`` or None if no pairs matched.
+        """
         friendly_name = display_name or method_name
         print(f"\n{'='*60}")
         print(f"Evaluating {friendly_name} vs Human Summaries")
@@ -518,8 +625,54 @@ class SummaryEvaluator:
         )
 
 
+_NC_SUFFIX = ' NC'
+_NC_METHODS = {'LLM (Claude NC)', 'LLM (GPT NC)', 'LLM (Mistral NC)', 'LLM (Qwen NC)'}
+_NON_NC_LLM_METHODS = {'LLM (Claude)', 'LLM (GPT)', 'LLM (Mistral)', 'LLM (Qwen)'}
+
+_METHOD_COLORS = {
+    'NLG': '#e74c3c',
+    'SWUM': '#3498db',
+    'LLM (Claude)': '#16a085',
+    'LLM (Gemini)': '#8e44ad',
+    'LLM (GPT)': '#d35400',
+    'LLM (Mistral)': '#2c3e50',
+    'LLM (Qwen)': '#27ae60',
+    'LLM (Mixtral)': '#f39c12',
+    'LLM (Non-Concise 50)': '#7f8c8d',
+    # NC variants — lighter/complementary shades of the base model colour
+    'LLM (Claude NC)': '#1abc9c',
+    'LLM (GPT NC)': '#e67e22',
+    'LLM (Mistral NC)': '#7f8c8d',
+    'LLM (Qwen NC)': '#2ecc71',
+}
+
+# Short-label colour map used by plots that display model names without the 'LLM (…)' wrapper.
+# NC and non-NC variants of the same model share a colour because their labels are identical.
+_SHORT_LABEL_COLORS = {
+    'NLG': '#e74c3c',
+    'SWUM': '#3498db',
+    'Claude': '#16a085',
+    'GPT': '#d35400',
+    'Mistral': '#2c3e50',
+    'Qwen': '#27ae60',
+    'Gemini': '#8e44ad',
+    'Mixtral': '#f39c12',
+}
+
+
 class VisualizationManager:
-    """Creates all violin plots for method and LLM comparisons."""
+    """Produces violin-plot figures for every combination of evaluation results.
+
+    Four figures are generated when both NC and non-NC LLM results are present:
+      1. ``concise_all_methods_violin.png``  — NLG, SWUM, and the 4 concise LLMs.
+      2. ``nc_all_methods_violin.png``       — NLG, SWUM, and the 4 NC LLMs
+                                              (same short model names; title marks NC).
+      3. ``nc_llm_only_violin.png``          — 4 NC LLMs only, no baselines.
+      4. ``concise_llm_only_violin.png``     — 4 concise LLMs only, no baselines.
+
+    Each figure shows cosine similarity on the left and BERTScore F1 on the
+    right, with a mean-marker (diamond) overlaid on every violin.
+    """
 
     def __init__(self, metrics: MetricsCalculator) -> None:
         self.metrics = metrics
@@ -529,113 +682,172 @@ class VisualizationManager:
         results: List[MethodEvaluationResult],
         output_dir: Path,
     ) -> None:
+        """Dispatch all four violin-plot figures for the full result set.
+
+        Separates results into NLG/SWUM baselines, non-NC concise LLMs, and NC
+        LLMs, then calls ``_create_labeled_violin`` four times with the
+        appropriate groupings and titles.
+        """
         if len(results) < 2:
             print("Insufficient data for comparison visualization (need at least 2 methods)")
             return
 
-        self._create_all_methods_violin(results, output_dir)
+        nc_results = [r for r in results if r.method in _NC_METHODS]
+        non_nc_results = [r for r in results if r.method in _NON_NC_LLM_METHODS]
+        baseline_results = [r for r in results if r.method in {'NLG', 'SWUM'}]
 
-    def _create_all_methods_violin(
+        def _short(method: str) -> str:
+            """Strip 'LLM (' prefix, trailing ')', and ' NC' suffix for display."""
+            return method.replace('LLM (', '').rstrip(')').replace(' NC', '')
+
+        # Plot 1: NLG + SWUM + 4 concise LLMs
+        plot1 = baseline_results + non_nc_results
+        if plot1:
+            self._create_labeled_violin(
+                plot1, output_dir,
+                title='Concise Summaries Evaluation: Score Distributions',
+                filename='concise_all_methods_violin.png',
+                label_fn=_short,
+            )
+
+        # Plot 2: NLG + SWUM + 4 NC LLMs — same short model names, different title
+        plot2 = baseline_results + nc_results
+        if plot2:
+            self._create_labeled_violin(
+                plot2, output_dir,
+                title='Non-Concise Summaries Evaluation: Score Distributions',
+                filename='nc_all_methods_violin.png',
+                label_fn=_short,
+            )
+
+        # Plot 3: 4 NC LLMs only (no baselines), same short names and title as plot 2
+        if nc_results:
+            self._create_labeled_violin(
+                nc_results, output_dir,
+                title='Non-Concise Summaries Evaluation: Score Distributions',
+                filename='nc_llm_only_violin.png',
+                label_fn=_short,
+            )
+
+        # Plot 4: 4 concise LLMs only (no baselines)
+        if non_nc_results:
+            self._create_labeled_violin(
+                non_nc_results, output_dir,
+                title='Concise Summaries Evaluation: Score Distributions',
+                filename='concise_llm_only_violin.png',
+                label_fn=_short,
+            )
+
+    # ------------------------------------------------------------------
+    # Internal helpers
+    # ------------------------------------------------------------------
+
+    @staticmethod
+    def _add_mean_markers(ax: plt.Axes, all_data: pd.DataFrame, method_order: List[str], metric: str) -> None:
+        """Overlay a red diamond at the mean value on each violin."""
+        for idx, method in enumerate(method_order):
+            mean_val = all_data.loc[all_data['method'] == method, metric].mean()
+            ax.plot(
+                idx,
+                mean_val,
+                marker='D',
+                markersize=8,
+                color='darkred',
+                zorder=3,
+                label='Mean' if idx == 0 else '',
+            )
+        ax.legend(loc='upper left')
+
+    @staticmethod
+    def _violin_subplot(
+        ax: plt.Axes,
+        data: pd.DataFrame,
+        metric: str,
+        method_order: List[str],
+        title: str,
+        ylabel: str,
+        palette: Optional[dict],
+    ) -> None:
+        """Draw a single violin plot panel on ``ax`` for the given metric."""
+        sns.violinplot(
+            data=data,
+            x='method',
+            y=metric,
+            ax=ax,
+            order=method_order,
+            palette=palette,
+            hue='method',
+            legend=False,
+        )
+        ax.set_title(title, fontsize=13, fontweight='bold')
+        ax.set_xlabel('Method', fontsize=11)
+        ax.set_ylabel(ylabel, fontsize=11)
+        ax.grid(axis='y', alpha=0.3)
+        VisualizationManager._add_mean_markers(ax, data, method_order, metric)
+
+    def _create_labeled_violin(
         self,
         results: List[MethodEvaluationResult],
         output_dir: Path,
+        title: str,
+        filename: str,
+        label_fn,
     ) -> None:
-        combined_data = []
-        method_order = []
-        for result in results:
-            if not result.merged.empty:
-                subset = result.merged[['cosine_similarity', 'bert_f1']].copy()
-                subset['method'] = result.method
-                combined_data.append(subset)
-                method_order.append(result.method)
+        """Save a 1×2 violin figure with custom display labels derived from ``label_fn``.
 
-        if not combined_data:
-            print("No merged data available for visualization")
+        ``label_fn`` maps an internal method name (e.g. 'LLM (Claude NC)') to
+        the short x-axis label (e.g. 'Claude').  NC and non-NC variants of the
+        same model share a colour via ``_SHORT_LABEL_COLORS`` when their labels
+        are identical.
+        """
+        rows, order = [], []
+        for r in results:
+            if not r.merged.empty:
+                subset = r.merged[['cosine_similarity', 'bert_f1']].copy()
+                label = label_fn(r.method)
+                subset['method'] = label
+                rows.append(subset)
+                if label not in order:
+                    order.append(label)
+
+        if not rows:
+            print(f"Skipping {filename}: no data available")
             return
 
-        all_data = pd.concat(combined_data, ignore_index=True)
+        data = pd.concat(rows, ignore_index=True)
+        palette = {lbl: _SHORT_LABEL_COLORS[lbl] for lbl in order if lbl in _SHORT_LABEL_COLORS}
 
-        fig, axes = plt.subplots(1, 2, figsize=(16, 6))
-        colors = {
-            'NLG': '#e74c3c',
-            'SWUM': '#3498db',
-            'LLM (Claude)': '#16a085',
-            'LLM (Gemini)': '#8e44ad',
-            'LLM (GPT)': '#d35400',
-            'LLM (Mistral)': '#2c3e50',
-            'LLM (Mixtral)': '#f39c12',
-            'LLM (Non-Concise 50)': '#7f8c8d',
-        }
-        # plot_palette = colors  # Original fixed palette usage retained for reference per user instructions
-        plot_palette = colors if set(method_order).issubset(colors.keys()) else None
+        n_methods = len(order)
+        fig, axes = plt.subplots(1, 2, figsize=(max(12, n_methods * 2.5), 6))
+        fig.suptitle(title, fontsize=14, fontweight='bold')
 
-        sns.violinplot(
-            data=all_data,
-            x='method',
-            y='cosine_similarity',
-            ax=axes[0],
-            order=method_order,
-            palette=plot_palette,
-            hue='method',
-            legend=False,
+        self._violin_subplot(
+            axes[0], data, 'cosine_similarity', order,
+            'Cosine Similarity', 'Cosine Similarity Score', palette or None,
         )
-        axes[0].set_title('Cosine Similarity Distribution by Method', fontsize=14, fontweight='bold')
-        axes[0].set_xlabel('Method', fontsize=12)
-        axes[0].set_ylabel('Cosine Similarity Score', fontsize=12)
-        axes[0].grid(axis='y', alpha=0.3)
-        for method in method_order:
-            method_data = all_data[all_data['method'] == method]
-            mean_val = method_data['cosine_similarity'].mean()
-            x_pos = method_order.index(method)
-            axes[0].plot(
-                x_pos,
-                mean_val,
-                marker='D',
-                markersize=8,
-                color='darkred',
-                zorder=3,
-                label='Mean' if method == method_order[0] else '',
-            )
-        axes[0].legend(loc='upper left')
-
-        sns.violinplot(
-            data=all_data,
-            x='method',
-            y='bert_f1',
-            ax=axes[1],
-            order=method_order,
-            palette=plot_palette,
-            hue='method',
-            legend=False,
+        self._violin_subplot(
+            axes[1], data, 'bert_f1', order,
+            'BERTScore F1', 'BERTScore F1 Score', palette or None,
         )
-        axes[1].set_title('BERTScore F1 Distribution by Method', fontsize=14, fontweight='bold')
-        axes[1].set_xlabel('Method', fontsize=12)
-        axes[1].set_ylabel('BERTScore F1 Score', fontsize=12)
-        axes[1].grid(axis='y', alpha=0.3)
-        for method in method_order:
-            method_data = all_data[all_data['method'] == method]
-            mean_val = method_data['bert_f1'].mean()
-            x_pos = method_order.index(method)
-            axes[1].plot(
-                x_pos,
-                mean_val,
-                marker='D',
-                markersize=8,
-                color='darkred',
-                zorder=3,
-                label='Mean' if method == method_order[0] else '',
-            )
-        axes[1].legend(loc='upper left')
 
         plt.tight_layout()
-        violin_file = output_dir / 'methods_comparison_violin_plots.png'
-        plt.savefig(violin_file, dpi=300, bbox_inches='tight')
-        print(f"Saved: {violin_file}")
+        out_file = output_dir / filename
+        plt.savefig(out_file, dpi=300, bbox_inches='tight')
+        print(f"Saved: {out_file}")
         plt.close()
 
 
 class SummaryEvaluationPipeline:
-    """Coordinates the end-to-end evaluation process."""
+    """Orchestrates the complete evaluation workflow from CSV loading to output.
+
+    Responsibilities in order:
+      1. Load human ground-truth summaries.
+      2. Iterate over every configured method (NLG, SWUM, LLM variants, NC
+         variants), load their summaries, and score them via ``SummaryEvaluator``.
+      3. Persist per-class, per-project, and per-pattern score CSVs.
+      4. Write an overall comparison CSV and a human-readable summary text file.
+      5. Delegate violin-plot generation to ``VisualizationManager``.
+    """
 
     def __init__(self, config: EvaluationConfig) -> None:
         self.config = config
@@ -644,6 +856,7 @@ class SummaryEvaluationPipeline:
         self.visualizer = VisualizationManager(self.metrics)
 
     def run(self) -> None:
+        """Execute the full evaluation pipeline end to end."""
         print(f"\n{'='*60}")
         print("Summary Evaluation Against Human Summaries")
         print(f"{'='*60}")
@@ -693,6 +906,7 @@ class SummaryEvaluationPipeline:
         self._print_completion(results)
 
     def _load_human_data(self) -> Optional[pd.DataFrame]:
+        """Load and return the human-summary DataFrame, or None on failure."""
         print(f"\nLoading human summaries from: {self.config.human_csv}")
         try:
             return self.loader.load_human_summaries(self.config.human_csv)
@@ -701,13 +915,14 @@ class SummaryEvaluationPipeline:
             return None
 
     def _save_overall_comparison(self, results: List[MethodEvaluationResult]) -> None:
+        """Write one row per method with corpus-level scores to overall_comparison.csv."""
         overall_df = pd.DataFrame(result.metrics for result in results)
         overall_csv = self.config.output_dir / 'overall_comparison.csv'
         overall_df.to_csv(overall_csv, index=False)
         print(f"\nSaved overall comparison: {overall_csv}")
 
     def _save_pattern_overall_comparison(self, results: List[MethodEvaluationResult]) -> None:
-        """Persist cross-method per-pattern table for side-by-side comparison."""
+        """Persist a cross-method per-design-pattern table for side-by-side comparison."""
         all_pattern_rows: List[pd.DataFrame] = []
         for result in results:
             if result.pattern_stats.empty:
@@ -726,6 +941,12 @@ class SummaryEvaluationPipeline:
         print(f"Saved per-pattern comparison: {out_csv}")
 
     def _write_summary_files(self, results: List[MethodEvaluationResult]) -> None:
+        """Write evaluation_summary.txt (overwrite) and append to results.txt.
+
+        ``evaluation_summary.txt`` — concise per-method scores for quick review.
+        ``results.txt``            — append-mode log with timestamped corpus-level
+                                     and per-design-pattern breakdowns.
+        """
         summary_file = self.config.output_dir / 'evaluation_summary.txt'
         results_file = self.config.output_dir / 'results.txt'
 
@@ -741,6 +962,7 @@ class SummaryEvaluationPipeline:
                         'LLM (Gemini)': ' (Gemini 3.5 Flash)',
                         'LLM (GPT)': ' (GPT-5.4 Mini)',
                         'LLM (Mistral)': ' (Mistral Small 2603)',
+                        'LLM (Qwen)': ' (Qwen3.7)',
                     }
                     method_info = method_info_map.get(result.method, "")
                     metrics = result.metrics
@@ -784,6 +1006,7 @@ class SummaryEvaluationPipeline:
                         'LLM (Gemini)': ' (Gemini 3.5 Flash)',
                         'LLM (GPT)': ' (GPT-5.4 Mini)',
                         'LLM (Mistral)': ' (Mistral Small 2603)',
+                        'LLM (Qwen)': ' (Qwen3.7)',
                     }
                     method_info = method_info_map.get(result.method, "")
                     metrics = result.metrics
@@ -839,6 +1062,7 @@ class SummaryEvaluationPipeline:
         print(f"Saved overall analysis: {results_file}")
 
     def _print_completion(self, results: List[MethodEvaluationResult]) -> None:
+        """Print a final summary listing every output file that was generated."""
         print(f"\n{'='*60}")
         print("EVALUATION COMPLETE!")
         print(f"{'='*60}")
@@ -847,7 +1071,17 @@ class SummaryEvaluationPipeline:
         print("  - overall_comparison.csv")
         print("  - evaluation_summary.txt")
         print("  - pattern_overall_comparison.csv")
-        print("  - methods_comparison_violin_plots.png")
+        has_nc = any(r.method in _NC_METHODS for r in results)
+        has_non_nc = any(r.method in _NON_NC_LLM_METHODS for r in results)
+        has_baselines = any(r.method in {'NLG', 'SWUM'} for r in results)
+        if has_baselines and has_non_nc:
+            print("  - concise_all_methods_violin.png")
+        if has_baselines and has_nc:
+            print("  - nc_all_methods_violin.png")
+        if has_nc:
+            print("  - nc_llm_only_violin.png")
+        if has_non_nc:
+            print("  - concise_llm_only_violin.png")
         for result in results:
             method = result.method.lower()
             print(f"  - {method}_vs_human_class_scores.csv")
@@ -890,8 +1124,8 @@ def parse_arguments(argv: Optional[List[str]]) -> argparse.Namespace:
     parser.add_argument(
         '--llm-gemini-csv',
         type=Path,
-        default=Path('output/summary-output/LLM_GEMINI_SUMMARY.csv'),
-        help='Path to Gemini LLM summaries CSV file',
+        default=None,
+        help='Optional path to Gemini LLM summaries CSV file',
     )
     parser.add_argument(
         '--llm-gpt-csv',
@@ -906,10 +1140,40 @@ def parse_arguments(argv: Optional[List[str]]) -> argparse.Namespace:
         help='Path to Mistral LLM summaries CSV file',
     )
     parser.add_argument(
+        '--llm-qwen-csv',
+        type=Path,
+        default=Path('output/summary-output/LLM_QWEN_SUMMARY.csv'),
+        help='Path to Qwen LLM summaries CSV file',
+    )
+    parser.add_argument(
         '--dps-llm-nonconcise-csv',
         type=Path,
         default=None,
         help='Optional path to LLM non-concise summaries CSV file',
+    )
+    parser.add_argument(
+        '--llm-claude-nc-csv',
+        type=Path,
+        default=Path('output/summary-output/LLM_CLAUDE_NC_SUMMARY.csv'),
+        help='Path to Claude NC summaries CSV file',
+    )
+    parser.add_argument(
+        '--llm-gpt-nc-csv',
+        type=Path,
+        default=Path('output/summary-output/LLM_GPT_NC_SUMMARY.csv'),
+        help='Path to GPT NC summaries CSV file',
+    )
+    parser.add_argument(
+        '--llm-mistral-nc-csv',
+        type=Path,
+        default=Path('output/summary-output/LLM_MISTRAL_NC_SUMMARY.csv'),
+        help='Path to Mistral NC summaries CSV file',
+    )
+    parser.add_argument(
+        '--llm-qwen-nc-csv',
+        type=Path,
+        default=Path('output/summary-output/LLM_QWEN_NC_SUMMARY.csv'),
+        help='Path to Qwen NC summaries CSV file',
     )
     parser.add_argument(
         '--output-dir',
@@ -931,8 +1195,13 @@ def main(argv: Optional[List[str]] = None) -> None:
         llm_gemini_csv=args.llm_gemini_csv,
         llm_gpt_csv=args.llm_gpt_csv,
         llm_mistral_csv=args.llm_mistral_csv,
+        llm_qwen_csv=args.llm_qwen_csv,
         dps_llm_csv=args.dps_llm_csv,
         dps_llm_nonconcise_csv=args.dps_llm_nonconcise_csv,
+        llm_claude_nc_csv=args.llm_claude_nc_csv,
+        llm_gpt_nc_csv=args.llm_gpt_nc_csv,
+        llm_mistral_nc_csv=args.llm_mistral_nc_csv,
+        llm_qwen_nc_csv=args.llm_qwen_nc_csv,
     )
     pipeline = SummaryEvaluationPipeline(config)
     pipeline.run()

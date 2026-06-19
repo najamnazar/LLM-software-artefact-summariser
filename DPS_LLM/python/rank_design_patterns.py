@@ -1,13 +1,10 @@
 """
 rank_design_patterns.py - Design-pattern-focused ranking pipeline
 
-This script originally performed one ranking iteration (A vs B vs C) using
-the same multi-criteria LLM ranker as rank_summaries.py, then reported
-performance separately per design pattern.
-
-The current flow keeps that logic in this file (see run()) and now aggregates
-design-pattern performance for model comparisons from:
-- NLG vs LLM (Gemini) vs SWUM
+Loads pre-computed model comparison rankings from model_comparisons_ranking_detail.csv
+(produced by rank_model_comparisons.py), attaches canonical design-pattern labels, and
+aggregates per-pattern performance for each model comparison:
+- NLG vs LLM (Qwen) vs SWUM
 - NLG vs LLM (GPT) vs SWUM
 - NLG vs LLM (Claude) vs SWUM
 - NLG vs LLM (Mistral) vs SWUM
@@ -79,7 +76,7 @@ class DesignPatternRankingPipeline:
 
     CRITERIA = ["accuracy", "conciseness", "adequacy", "code_context", "design_patterns"]
     COMPARISONS = [
-        ("GEMINI", "LLM_GEMINI_SUMMARY.csv"),
+        ("QWEN", "LLM_QWEN_SUMMARY.csv"),
         ("GPT", "LLM_GPT_SUMMARY.csv"),
         ("CLAUDE", "LLM_CLAUDE_SUMMARY.csv"),
         ("MISTRAL", "LLM_MISTRAL_SUMMARY.csv"),
@@ -502,10 +499,6 @@ class DesignPatternRankingPipeline:
         else:
             lines.append("Interpretation: ranking trends vary across design patterns; inspect pattern-level rows for differences.")
 
-        lines.append(
-            "Verdict: most design patterns follow B>A>C, and only Decorator differs with B>C>A."
-        )
-
         lines.append("=" * 70)
         return "\n".join(lines)
 
@@ -705,7 +698,7 @@ class DesignPatternRankingPipeline:
         print("=" * 70)
         print("DESIGN PATTERN RANKING PIPELINE")
         print("=" * 70)
-        print("Running model comparisons: NLG vs {GEMINI, GPT, CLAUDE, MISTRAL} vs SWUM")
+        print("Running model comparisons: NLG vs {QWEN, GPT, CLAUDE, MISTRAL} vs SWUM")
 
         # Old single-run flow retained intentionally (commented, not deleted):
         # print("Running one ranking iteration: A vs B vs C")

@@ -1,5 +1,9 @@
 {
-	"Facade" : {
+	"final_summary" : "",
+	"design_pattern" : [ ],
+	"summary_NLG" : { },
+	"project_identifier" : "spring-framework/Facade",
+	"spring-framework/Facade" : {
 		"TransactionTemplate" : {
 			"FIELDDETAIL" : [ {
 				"FIELDCOMMONTYPE" : "Log",
@@ -8470,8 +8474,5 @@
 				"METHODPARAMETER" : [ ]
 			} ]
 		}
-	},
-	"final_summary" : "",
-	"design_pattern" : [ ],
-	"summary_NLG" : { }
+	}
 }

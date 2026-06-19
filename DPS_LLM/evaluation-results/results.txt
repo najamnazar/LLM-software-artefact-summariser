@@ -1,1516 +1,238 @@
+CONSOLIDATED EVALUATION RESULTS
 ======================================================================
-SECTIONED RESULTS OVERVIEW (EVALUATION + RANKING + STATISTICS)
-======================================================================
-Generated at: 2026-06-03 11:50:00
-Status: Evaluation and ranking results are present (not deleted).
+Generated at: 2026-06-11
+Scope: all result files under evaluation-results/
+Notes: values are rounded for readability; detailed per-sample CSVs remain in the companion files.
 
-[SECTION 1] EVALUATION RESULTS
+[1] HUMAN VS GENERATED SUMMARY METRICS
 ----------------------------------------------------------------------
-Sources:
-  - evaluation_summary.txt
-  - overall_comparison.csv
+Source files: evaluation_summary.txt, overall_comparison.csv
 
-Overall Metrics (Generated vs Human summaries):
-  NLG:
-    Classes Evaluated: 150
-    Avg Cosine Similarity: 0.1657 (+/-0.0797)
-    Avg BERT Precision: 0.8396
-    Avg BERT Recall: 0.8617
-    Avg BERT F1: 0.8501 (+/-0.0232)
+Method            | Projects | Classes | Cosine mean +/- std | BERT Precision | BERT Recall | BERT F1 mean +/- std
+------------------|----------|---------|---------------------|----------------|-------------|----------------------
+NLG               | 3        | 150     | 0.1749 +/- 0.0907   | 0.8327         | 0.8576      | 0.8446 +/- 0.0237
+SWUM              | 3        | 150     | 0.2525 +/- 0.1103   | 0.8965         | 0.8645      | 0.8799 +/- 0.0175
+LLM (Claude)      | 3        | 150     | 0.3111 +/- 0.1150   | 0.8532         | 0.8956      | 0.8738 +/- 0.0183
+LLM (GPT)         | 3        | 150     | 0.2582 +/- 0.0992   | 0.8685         | 0.8863      | 0.8772 +/- 0.0167
+LLM (Mistral)     | 3        | 150     | 0.3071 +/- 0.1167   | 0.8618         | 0.8925      | 0.8768 +/- 0.0169
+LLM (Qwen)        | 3        | 150     | 0.2974 +/- 0.1186   | 0.8590         | 0.8897      | 0.8740 +/- 0.0173
+LLM (Claude NC)   | 3        | 150     | 0.3042 +/- 0.1092   | 0.8527         | 0.8944      | 0.8730 +/- 0.0169
+LLM (GPT NC)      | 3        | 150     | 0.2590 +/- 0.1003   | 0.8695         | 0.8865      | 0.8778 +/- 0.0174
+LLM (Mistral NC)  | 3        | 150     | 0.3041 +/- 0.1096   | 0.8635         | 0.8930      | 0.8779 +/- 0.0168
+LLM (Qwen NC)     | 3        | 149     | 0.2959 +/- 0.1191   | 0.8603         | 0.8904      | 0.8750 +/- 0.0181
 
-  SWUM:
-    Classes Evaluated: 150
-    Avg Cosine Similarity: 0.2532 (+/-0.1014)
-    Avg BERT Precision: 0.8968
-    Avg BERT Recall: 0.8617
-    Avg BERT F1: 0.8786 (+/-0.0175)
+Metric winners:
+  - Best cosine similarity: LLM (Claude)
+  - Best BERT precision: SWUM
+  - Best BERT recall: LLM (Claude)
+  - Best BERT F1: LLM (Mistral NC)
 
-  LLM (Claude):
-    Classes Evaluated: 150
-    Avg Cosine Similarity: 0.3078 (+/-0.1155)
-    Avg BERT Precision: 0.8543
-    Avg BERT Recall: 0.8951
-    Avg BERT F1: 0.8741 (+/-0.0179)
-
-  LLM (Gemini):
-    Classes Evaluated: 150
-    Avg Cosine Similarity: 0.1686 (+/-0.1200)
-    Avg BERT Precision: 0.8547
-    Avg BERT Recall: 0.8317
-    Avg BERT F1: 0.8428 (+/-0.0298)
-
-  LLM (GPT):
-    Classes Evaluated: 150
-    Avg Cosine Similarity: 0.2586 (+/-0.0961)
-    Avg BERT Precision: 0.8690
-    Avg BERT Recall: 0.8866
-    Avg BERT F1: 0.8776 (+/-0.0165)
-
-  LLM (Mistral):
-    Classes Evaluated: 150
-    Avg Cosine Similarity: 0.3049 (+/-0.1201)
-    Avg BERT Precision: 0.8639
-    Avg BERT Recall: 0.8924
-    Avg BERT F1: 0.8778 (+/-0.0181)
-
-[SECTION 2] RANKING RESULTS
+[2] NLG-ONLY ADDITIONAL METRICS
 ----------------------------------------------------------------------
-Sources:
-  - model_comparisons_ranking_report.txt
-  - model_comparisons_ranking_summary.csv
-  - design_pattern_model_comparisons_report.txt
+Source files: nlg_vs_human_additional_metrics.csv, nlg_vs_human_additional_metrics_summary.csv
 
-2A) Model Comparison Ranking (NLG vs Model vs SWUM)
-  CLAUDE : A(NLG)=11.58, B(CLAUDE)=10.94, C(SWUM)=7.48
-  GEMINI : A(NLG)=10.24, B(GEMINI)=8.43, C(SWUM)=10.69
-  GPT    : A(NLG)=10.92, B(GPT)=10.83, C(SWUM)=8.25
-  MISTRAL: A(NLG)=11.63, B(MISTRAL)=10.35, C(SWUM)=7.98
+Metric       | Mean      | Std       | Min       | Max
+-------------|-----------|-----------|-----------|-----------
+bleu_4       | 0.0198    | 0.0097    | 0.0040    | 0.0426
+nist_4       | 0.7989    | 0.4261    | 0.0302    | 1.9514
+rouge_l_f    | 0.1553    | 0.0544    | 0.0360    | 0.2857
+frugal_score | 0.6148    | 0.0659    | 0.4572    | 0.7524
 
-2B) Design Pattern Ranking Consistency Summary
-  NLG vs GEMINI vs SWUM:
-    Global rank order: C>A>B
-    Patterns matching global order exactly: 4/9 (44.4%)
-    Patterns with same top-1 system: 55.6%
-
-  NLG vs GPT vs SWUM:
-    Global rank order: A>B>C
-    Patterns matching global order exactly: 5/9 (55.6%)
-    Patterns with same top-1 system: 55.6%
-
-  NLG vs CLAUDE vs SWUM:
-    Global rank order: A>B>C
-    Patterns matching global order exactly: 8/9 (88.9%)
-    Patterns with same top-1 system: 88.9%
-
-  NLG vs MISTRAL vs SWUM:
-    Global rank order: A>B>C
-    Patterns matching global order exactly: 8/9 (88.9%)
-    Patterns with same top-1 system: 100.0%
-
-[SECTION 3] STATISTICAL TEST RESULTS
+[3] SUMMARY LENGTH STATISTICS
 ----------------------------------------------------------------------
-Detailed Wilcoxon, Friedman, and Spearman outputs are preserved below.
+Source file: summary_length_stats.txt
 
-======================================================================
+Source                 | Count | AvgWords | MinWords | MaxWords | AvgChars | MinChars | MaxChars
+-----------------------|-------|----------|----------|----------|----------|----------|----------
+LLM_GEMINI_NC_SUMMARY  | 150   | 5.73     | 1        | 11       | 35.94    | 8        | 75
+LLM_GEMINI_SUMMARY     | 150   | 6.17     | 1        | 11       | 38.39    | 12       | 68
+swum_summaries         | 150   | 13.61    | 3        | 31       | 76.31    | 13       | 173
+LLM_MISTRAL_SUMMARY    | 150   | 41.09    | 30       | 58       | 271.61   | 187      | 385
+LLM_GPT_SUMMARY        | 150   | 41.44    | 30       | 49       | 259.65   | 184      | 397
+LLM_MISTRAL_NC_SUMMARY | 150   | 41.67    | 29       | 54       | 275.09   | 197      | 363
+LLM_GPT_NC_SUMMARY     | 150   | 41.75    | 35       | 49       | 264.27   | 198      | 383
+LLM_CLAUDE_SUMMARY     | 150   | 42.60    | 32       | 49       | 291.97   | 197      | 392
+LLM_CLAUDE_NC_SUMMARY  | 150   | 43.37    | 35       | 52       | 295.40   | 205      | 392
+nlg_summaries          | 150   | 57.51    | 12       | 151      | 372.79   | 54       | 934
 
-WILCOXON SIGNED-RANK TESTS (PAIRED)
-============================================================
-Generated at: 2026-03-14 19:25:28
-Dataset: paired per-file class scores
-Significance level (alpha): 0.05
-Tests: two-sided; metrics = cosine_similarity, bert_f1
+Takeaway: NLG summaries are the longest and most variable; Gemini summaries are the shortest.
 
-Matched pairs before NaN filtering:
-  - DPS_NLG vs DPS_LLM: 149
-  - DPS_SWUM vs DPS_LLM: 149
-
-comparison           metric              n_pairs   W_stat        p_value       median_diff   interpretation
-----------------------------------------------------------------------------------------------------------------------
-DPS_NLG vs DPS_LLM   cosine_similarity      149   151.0000   6.85176e-25    -0.164673 significant; DPS_LLM tends higher
-DPS_SWUM vs DPS_LLM  cosine_similarity      149  1481.0000    7.1267e-15    -0.084550 significant; DPS_LLM tends higher
-DPS_NLG vs DPS_LLM   bert_f1                149   251.0000   4.82904e-24    -0.026175 significant; DPS_LLM tends higher
-DPS_SWUM vs DPS_LLM  bert_f1                149  5460.0000      0.809071     0.001340 not-significant; DPS_SWUM tends higher
-
-========================================================================
-FRIEDMAN TEST ANALYSIS — DPS_NLG vs DPS_LLM vs DPS_SWUM
-========================================================================
-  Run date   : 2026-03-16 14:09:17
-  Data file  : multi_criteria_rankings.csv
-  Total rows : 150  |  Rows used (status=ranked): 150
-
-  Systems    :  A = DPS_NLG   |  B = DPS_LLM   |  C = DPS_SWUM
-  Scoring    :  1st place = 3 pts  |  2nd = 2 pts  |  3rd = 1 pt
-  Alpha      :  0.05
-  Post-hoc   :  Wilcoxon signed-rank, Bonferroni α_adj = 0.0167
-
-  H0 (each Friedman test): no significant difference in scores
-  among the three systems under the given criterion / criteria.
-
-========================================================================
-PART 1: PER-CRITERION FRIEDMAN TESTS  (class files as blocks)
-========================================================================
-
-  Test design : one Friedman test per criterion
-  Blocks      : individual class files  (n ≈ 150 per test)
-  Treatments  : k = 3 systems  (DPS_NLG, DPS_LLM, DPS_SWUM)
-  Scoring     : 1st = 3 pts | 2nd = 2 pts | 3rd = 1 pt
-  H0          : no significant difference among the 3 systems
-  α           : 0.05  |  post-hoc Bonferroni α_adj = 0.0167
-
-------------------------------------------------------------------------
-  Criterion      : ACCURACY
-  N (blocks)     : 149 class files
-  Friedman chi²  = 201.3557
-  p-value        = 0.000000    < 0.05  →  REJECT H0 *
-  Kendall's W    = 0.6757  (strong concordance)
-  Significant    : YES
-
-  Mean scores per system (higher = better ranked):
-    DPS_NLG      : 1.5906
-    DPS_LLM      : 2.9463  <-- best
-    DPS_SWUM     : 1.4631
-
-  Post-hoc pairwise Wilcoxon signed-rank tests (Bonferroni α_adj = 0.0167):
-  Comparison                     W-stat      p (raw)      p (adj)   Sig?  Direction
-  ----------------------------------------------------------------------------------
-  DPS_NLG  vs DPS_LLM            389.50     0.000000     0.000000  YES *  DPS_LLM > DPS_NLG
-  DPS_NLG  vs DPS_SWUM          4875.00     0.119580     0.358739     no  DPS_NLG > DPS_SWUM
-  DPS_LLM  vs DPS_SWUM           210.50     0.000000     0.000000  YES *  DPS_LLM > DPS_SWUM
-
-------------------------------------------------------------------------
-  Criterion      : CONCISENESS
-  N (blocks)     : 149 class files
-  Friedman chi²  = 11.9329
-  p-value        = 0.002563    < 0.05  →  REJECT H0 *
-  Kendall's W    = 0.0400  (weak concordance)
-  Significant    : YES
-
-  Mean scores per system (higher = better ranked):
-    DPS_NLG      : 2.2148  <-- best
-    DPS_LLM      : 1.9664
-    DPS_SWUM     : 1.8188
-
-  Post-hoc pairwise Wilcoxon signed-rank tests (Bonferroni α_adj = 0.0167):
-  Comparison                     W-stat      p (raw)      p (adj)   Sig?  Direction
-  ----------------------------------------------------------------------------------
-  DPS_NLG  vs DPS_LLM           4596.00     0.043825     0.131474     no  DPS_NLG > DPS_LLM
-  DPS_NLG  vs DPS_SWUM          3504.50     0.000010     0.000030  YES *  DPS_NLG > DPS_SWUM
-  DPS_LLM  vs DPS_SWUM          4781.50     0.094633     0.283900     no  DPS_LLM > DPS_SWUM
-
-------------------------------------------------------------------------
-  Criterion      : ADEQUACY
-  N (blocks)     : 150 class files
-  Friedman chi²  = 206.4400
-  p-value        = 0.000000    < 0.05  →  REJECT H0 *
-  Kendall's W    = 0.6881  (strong concordance)
-  Significant    : YES
-
-  Mean scores per system (higher = better ranked):
-    DPS_NLG      : 1.7467
-    DPS_LLM      : 2.9267  <-- best
-    DPS_SWUM     : 1.3267
-
-  Post-hoc pairwise Wilcoxon signed-rank tests (Bonferroni α_adj = 0.0167):
-  Comparison                     W-stat      p (raw)      p (adj)   Sig?  Direction
-  ----------------------------------------------------------------------------------
-  DPS_NLG  vs DPS_LLM            612.00     0.000000     0.000000  YES *  DPS_LLM > DPS_NLG
-  DPS_NLG  vs DPS_SWUM          3300.00     0.000000     0.000001  YES *  DPS_NLG > DPS_SWUM
-  DPS_LLM  vs DPS_SWUM           197.50     0.000000     0.000000  YES *  DPS_LLM > DPS_SWUM
-
-------------------------------------------------------------------------
-  Criterion      : CODE CONTEXT
-  N (blocks)     : 149 class files
-  Friedman chi²  = 196.5638
-  p-value        = 0.000000    < 0.05  →  REJECT H0 *
-  Kendall's W    = 0.6596  (strong concordance)
-  Significant    : YES
-
-  Mean scores per system (higher = better ranked):
-    DPS_NLG      : 1.6644
-    DPS_LLM      : 2.9262  <-- best
-    DPS_SWUM     : 1.4094
-
-  Post-hoc pairwise Wilcoxon signed-rank tests (Bonferroni α_adj = 0.0167):
-  Comparison                     W-stat      p (raw)      p (adj)   Sig?  Direction
-  ----------------------------------------------------------------------------------
-  DPS_NLG  vs DPS_LLM            461.00     0.000000     0.000000  YES *  DPS_LLM > DPS_NLG
-  DPS_NLG  vs DPS_SWUM          4172.00     0.002055     0.006164  YES *  DPS_NLG > DPS_SWUM
-  DPS_LLM  vs DPS_SWUM           320.00     0.000000     0.000000  YES *  DPS_LLM > DPS_SWUM
-
-------------------------------------------------------------------------
-  Criterion      : DESIGN PATTERN
-  N (blocks)     : 147 class files
-  Friedman chi²  = 152.3810
-  p-value        = 0.000000    < 0.05  →  REJECT H0 *
-  Kendall's W    = 0.5183  (strong concordance)
-  Significant    : YES
-
-  Mean scores per system (higher = better ranked):
-    DPS_NLG      : 1.7279
-    DPS_LLM      : 2.8163  <-- best
-    DPS_SWUM     : 1.4558
-
-  Post-hoc pairwise Wilcoxon signed-rank tests (Bonferroni α_adj = 0.0167):
-  Comparison                     W-stat      p (raw)      p (adj)   Sig?  Direction
-  ----------------------------------------------------------------------------------
-  DPS_NLG  vs DPS_LLM           1071.50     0.000000     0.000000  YES *  DPS_LLM > DPS_NLG
-  DPS_NLG  vs DPS_SWUM          3969.00     0.001091     0.003273  YES *  DPS_NLG > DPS_SWUM
-  DPS_LLM  vs DPS_SWUM           885.50     0.000000     0.000000  YES *  DPS_LLM > DPS_SWUM
-
-========================================================================
-PART 2: CROSS-CRITERIA FRIEDMAN TEST  (criteria as blocks)
-========================================================================
-
-  Test design : one Friedman test across all criteria
-  Blocks      : n = 5 criteria  (ACCURACY, CONCISENESS, ADEQUACY,
-                                  CODE CONTEXT, DESIGN PATTERN)
-  Treatments  : k = 3 systems  (DPS_NLG, DPS_LLM, DPS_SWUM)
-  Cell value  : mean score of system on criterion across all class files
-  H0          : rank ordering of systems does not differ across criteria
-  α           : 0.05
-
-  Mean score matrix:
-  Criterion                 DPS_NLG    DPS_LLM   DPS_SWUM
-  ------------------------------------------------------
-  ACCURACY                  1.5906    2.9463 *    1.4631
-  CONCISENESS               2.2148 *    1.9664    1.8188
-  ADEQUACY                  1.7467    2.9267 *    1.3267
-  CODE CONTEXT              1.6644    2.9262 *    1.4094
-  DESIGN PATTERN            1.7279    2.8163 *    1.4558
-  ------------------------------------------------------
-  COLUMN MEAN                1.7889     2.7164     1.4947
-  (* = best system for that criterion)
-
-  Friedman chi²  = 8.4000
-  p-value        = 0.014996    < 0.05  →  REJECT H0 *
-  Kendall's W    = 0.8400  (very strong concordance)
-  Significant    : YES
-
-  Note: n = 5 blocks — Wilcoxon signed-rank requires n >= 6.
-  Pairwise mean-score differences (descriptive):
-  Comparison                  Mean diff  Direction
-  ----------------------------------------------------
-  DPS_NLG  vs DPS_LLM           -0.9275  DPS_LLM > DPS_NLG
-  DPS_NLG  vs DPS_SWUM          +0.2941  DPS_NLG > DPS_SWUM
-  DPS_LLM  vs DPS_SWUM          +1.2216  DPS_LLM > DPS_SWUM
-
-========================================================================
-SUMMARY TABLE — PER-CRITERION FRIEDMAN RESULTS
-========================================================================
-
-  Criterion                  n       chi²      p-value  Kendall W  Sig?  Best System
-  ----------------------------------------------------------------------------
-  ACCURACY                 149   201.3557     0.000000     0.6757 YES *  DPS_LLM
-  CONCISENESS              149    11.9329     0.002563     0.0400 YES *  DPS_NLG
-  ADEQUACY                 150   206.4400     0.000000     0.6881 YES *  DPS_LLM
-  CODE CONTEXT             149   196.5638     0.000000     0.6596 YES *  DPS_LLM
-  DESIGN PATTERN           147   152.3810     0.000000     0.5183 YES *  DPS_LLM
-
-  α = 0.05  |  post-hoc Bonferroni α_adj = 0.0167
-  Kendall's W : 0.1 weak | 0.3 moderate | 0.5 strong | 0.7 very strong
-
-========================================================================
-SENSITIVITY ANALYSIS — SPEARMAN CORRELATION (PER CRITERION)
-========================================================================
-
-  Run date   : 2026-03-18
-  Data file  : multi_criteria_rankings.csv
-  Rows used  : status = ranked
-
-  Definition:
-  For each criterion, Spearman's rho is computed between:
-    X = criterion points per system per class file (1st=3, 2nd=2, 3rd=1)
-    Y = total points of that same system on that same class file
-  This quantifies how strongly each criterion aligns with overall ranking outcomes.
-
-------------------------------------------------------------------------
-  Criterion                  blocks   n(obs)   Spearman rho      p-value   Sig?
-  -------------------------------------------------------------------------------
-  ACCURACY                     149      447        0.911782   4.21150e-174  YES *
-  CONCISENESS                  149      447        0.399847    1.37040e-18  YES *
-  ADEQUACY                     150      450        0.915324   4.51395e-179  YES *
-  CODE CONTEXT                 149      447        0.901330   8.29156e-164  YES *
-  DESIGN PATTERN               147      441        0.881275   5.49174e-145  YES *
-
-  α = 0.05
-
-  Interpretation (effect size guideline for |rho|):
-    0.00-0.19 very weak | 0.20-0.39 weak | 0.40-0.59 moderate |
-    0.60-0.79 strong | 0.80-1.00 very strong
-
-  Sensitivity takeaway:
-    Adequacy, Accuracy, Code Context, and Design Pattern show very strong
-    monotonic association with total points; Conciseness shows a moderate
-    association, indicating lower sensitivity relative to the other criteria.
-
-======================================================================
-UPDATED CONSOLIDATED RESULTS (BERT/COSINE + ALL RANKINGS)
-======================================================================
-Generated at: 2026-06-03 11:29:04
-
-LATEST BERT/COSINE METRICS (overall_comparison.csv)
+[4] PATTERN-LEVEL AGGREGATE COMPARISON
 ----------------------------------------------------------------------
-       method  projects_evaluated  classes_evaluated avg_cosine avg_bert_precision avg_bert_recall avg_bert_f1 cosine_std bert_f1_std
-          NLG                   3                150     0.1657             0.8396          0.8617      0.8501     0.0797      0.0232
-         SWUM                   3                150     0.2532             0.8968          0.8617      0.8786     0.1014      0.0175
- LLM (Claude)                   3                150     0.3078             0.8543          0.8951      0.8741     0.1155      0.0179
- LLM (Gemini)                   3                150     0.1686             0.8547          0.8317      0.8428     0.1200      0.0298
-    LLM (GPT)                   3                150     0.2586             0.8690          0.8866      0.8776     0.0961      0.0165
-LLM (Mistral)                   3                150     0.3049             0.8639          0.8924      0.8778     0.1201      0.0181
+Source file: pattern_overall_comparison.csv
 
-======================================================================
-MODEL COMPARISON RANKING REPORT (FULL)
-======================================================================
-======================================================================
-MODEL COMPARISON RANKING RESULTS (NLG vs MODEL vs SWUM)
-======================================================================
+Method            | Patterns | Avg Cosine | Avg Precision | Avg Recall | Avg F1
+------------------|----------|------------|---------------|------------|--------
+NLG               | 9        | 0.1730     | 0.8328        | 0.8561     | 0.8439
+SWUM              | 9        | 0.2486     | 0.8966        | 0.8626     | 0.8790
+LLM (Claude NC)   | 9        | 0.2972     | 0.8528        | 0.8924     | 0.8721
+LLM (Claude)      | 9        | 0.3043     | 0.8531        | 0.8936     | 0.8728
+LLM (GPT NC)      | 9        | 0.2531     | 0.8691        | 0.8843     | 0.8765
+LLM (GPT)         | 9        | 0.2551     | 0.8682        | 0.8841     | 0.8760
+LLM (Mistral NC)  | 9        | 0.2984     | 0.8634        | 0.8909     | 0.8769
+LLM (Mistral)     | 9        | 0.3024     | 0.8621        | 0.8904     | 0.8759
+LLM (Qwen NC)     | 9        | 0.2878     | 0.8596        | 0.8881     | 0.8735
+LLM (Qwen)        | 9        | 0.2887     | 0.8590        | 0.8873     | 0.8729
 
-Per-Comparison Summary:
+[5] MODEL COMPARISON RANKING SUMMARY
+----------------------------------------------------------------------
+Source files: model_comparisons_ranking_summary.csv, model_comparisons_ranking_report.txt
+
+Comparison             | NLG avg | Middle model avg | SWUM avg | Winner order         | Exact match | Top-1 share
+-----------------------|---------|------------------|---------|----------------------|-------------|------------
+NLG vs CLAUDE vs SWUM  | 11.99   | 11.52            | 6.33    | NLG > CLAUDE > SWUM  | 8/9         | 88.9%
+NLG vs QWEN vs SWUM    | 11.32   | 11.54            | 6.94    | QWEN > NLG > SWUM    | 6/9         | 66.7%
+NLG vs GPT vs SWUM     | 11.02   | 11.75            | 6.95    | GPT > NLG > SWUM     | 6/9         | 66.7%
+NLG vs MISTRAL vs SWUM | 11.35   | 11.49            | 6.91    | NLG > MISTRAL > SWUM | 8/9         | 100.0%
+
+Aggregate across the four comparisons:
+  - NLG: min=11.02, max=11.99, avg=11.42
+  - Middle model: min=11.49, max=11.75, avg=11.57
+  - SWUM: min=6.33, max=6.95, avg=6.79
+
+[6] DESIGN PATTERN RANKING DETAILS
+----------------------------------------------------------------------
+Source files: design_pattern_model_comparisons_summary.csv, design_pattern_model_comparisons_report.txt
+
+6A) Comparison summary
+
+Comparison             | NLG avg | Middle model avg | SWUM avg | Winner order         | Exact match | Top-1 share
+-----------------------|---------|------------------|---------|----------------------|-------------|------------
+NLG vs CLAUDE vs SWUM  | 11.99   | 11.52            | 6.33    | NLG > CLAUDE > SWUM  | 8/9         | 88.9%
+NLG vs QWEN vs SWUM    | 11.32   | 11.54            | 6.94    | QWEN > NLG > SWUM    | 6/9         | 66.7%
+NLG vs GPT vs SWUM     | 11.02   | 11.75            | 6.95    | GPT > NLG > SWUM     | 6/9         | 66.7%
+NLG vs MISTRAL vs SWUM | 11.35   | 11.49            | 6.91    | NLG > MISTRAL > SWUM | 8/9         | 100.0%
+
+6B) NLG vs CLAUDE vs SWUM
+
+Pattern            | Mean NLG | Mean CLAUDE | Mean SWUM | Rank order           | Most frequent winner
+------------------|----------|-------------|----------|----------------------|---------------------
+Abstract Factory  | 2.3132   | 2.2592      | 1.4276   | NLG > CLAUDE > SWUM  | NLG (55.3%)
+Visitor           | 2.3083   | 2.2083      | 1.4833   | NLG > CLAUDE > SWUM  | NLG (50.0%)
+Facade            | 2.6625   | 2.2375      | 1.1000   | NLG > CLAUDE > SWUM  | NLG (87.5%)
+Factory Method    | 2.4750   | 2.4250      | 1.1000   | NLG > CLAUDE > SWUM  | CLAUDE (50.0%)
+Observer          | 2.2000   | 2.5538      | 1.2462   | CLAUDE > NLG > SWUM  | CLAUDE (61.5%)
+Adapter           | 2.6833   | 2.2167      | 1.1000   | NLG > CLAUDE > SWUM  | NLG (91.7%)
+Decorator         | 2.3667   | 2.3333      | 1.3000   | NLG > CLAUDE > SWUM  | NLG (50.0%)
+Singleton         | 2.6000   | 2.3600      | 1.0400   | NLG > CLAUDE > SWUM  | NLG (80.0%)
+Memento           | 2.2222   | 2.4889      | 1.2889   | CLAUDE > NLG > SWUM  | CLAUDE (66.7%)
+Global stability: NLG > CLAUDE > SWUM, 8/9 patterns match exactly, top-1 share 88.9%
+
+6C) NLG vs QWEN vs SWUM
+
+Pattern            | Mean NLG | Mean QWEN | Mean SWUM | Rank order        | Most frequent winner
+------------------|----------|-----------|----------|-------------------|---------------------
+Abstract Factory  | 2.2500   | 2.2987    | 1.4513   | QWEN > NLG > SWUM | NLG (44.7%)
+Visitor           | 2.0417   | 2.3000    | 1.6583   | QWEN > NLG > SWUM | QWEN (41.7%)
+Facade            | 2.5000   | 2.2500    | 1.2500   | NLG > QWEN > SWUM | NLG (50.0%)
+Factory Method    | 2.3750   | 2.4000    | 1.2250   | QWEN > NLG > SWUM | QWEN (50.0%)
+Observer          | 2.0462   | 2.6154    | 1.3385   | QWEN > NLG > SWUM | QWEN (92.3%)
+Adapter           | 2.6833   | 2.0000    | 1.3167   | NLG > QWEN > SWUM | NLG (83.3%)
+Decorator         | 2.1833   | 2.2667    | 1.5500   | QWEN > NLG > SWUM | QWEN (41.7%)
+Singleton         | 2.4600   | 2.4200    | 1.1200   | NLG > QWEN > SWUM | NLG (50.0%)
+Memento           | 2.0889   | 2.4444    | 1.4667   | QWEN > NLG > SWUM | QWEN (55.6%)
+Global stability: QWEN > NLG > SWUM, 6/9 patterns match exactly, top-1 share 66.7%
+
+6D) NLG vs GPT vs SWUM
+
+Pattern            | Mean NLG | Mean GPT | Mean SWUM | Rank order       | Most frequent winner
+------------------|----------|----------|----------|------------------|---------------------
+Abstract Factory  | 2.1632   | 2.3316   | 1.5053   | GPT > NLG > SWUM | NLG (50.0%)
+Visitor           | 2.1083   | 2.2896   | 1.6021   | GPT > NLG > SWUM | GPT (45.8%)
+Facade            | 2.5375   | 2.2875   | 1.1750   | NLG > GPT > SWUM | NLG (56.3%)
+Factory Method    | 2.2625   | 2.4250   | 1.3125   | GPT > NLG > SWUM | GPT (50.0%)
+Observer          | 1.9538   | 2.5846   | 1.4615   | GPT > NLG > SWUM | GPT (61.5%)
+Adapter           | 2.4500   | 2.2500   | 1.3000   | NLG > GPT > SWUM | NLG (66.7%)
+Decorator         | 2.0667   | 2.4500   | 1.4833   | GPT > NLG > SWUM | GPT (58.3%)
+Singleton         | 2.4200   | 2.4000   | 1.1800   | NLG > GPT > SWUM | NLG (40.0%)
+Memento           | 2.1556   | 2.4889   | 1.3556   | GPT > NLG > SWUM | GPT (66.7%)
+Global stability: GPT > NLG > SWUM, 6/9 patterns match exactly, top-1 share 66.7%
+
+6E) NLG vs MISTRAL vs SWUM
+
+Pattern            | Mean NLG | Mean MISTRAL | Mean SWUM | Rank order          | Most frequent winner
+------------------|----------|--------------|----------|---------------------|---------------------
+Abstract Factory  | 2.3105   | 2.2553       | 1.4342   | NLG > MISTRAL > SWUM | NLG (42.1%)
+Visitor           | 2.1417   | 2.2917       | 1.5667   | MISTRAL > NLG > SWUM | MISTRAL (37.5%)
+Facade            | 2.5000   | 2.2750       | 1.2250   | NLG > MISTRAL > SWUM | NLG (68.8%)
+Factory Method    | 2.3000   | 2.3625       | 1.3375   | MISTRAL > NLG > SWUM | NLG (50.0%)
+Observer          | 2.2615   | 2.3846       | 1.3538   | MISTRAL > NLG > SWUM | MISTRAL (61.5%)
+Adapter           | 2.5000   | 2.1000       | 1.4000   | NLG > MISTRAL > SWUM | NLG (58.3%)
+Decorator         | 2.0333   | 2.4500       | 1.5167   | MISTRAL > NLG > SWUM | MISTRAL (66.7%)
+Singleton         | 2.4000   | 2.4200       | 1.1800   | MISTRAL > NLG > SWUM | NLG (50.0%)
+Memento           | 2.0889   | 2.4889       | 1.4222   | MISTRAL > NLG > SWUM | MISTRAL (77.8%)
+Global stability: NLG > MISTRAL > SWUM, 8/9 patterns match exactly, top-1 share 100.0%
+
+[7] STATISTICAL TESTS
 ----------------------------------------------------------------------
 
-Comparison: NLG vs CLAUDE vs SWUM
-  Source file (B): LLM_CLAUDE_SUMMARY.csv
-  Ranked: 150, Skipped: 0
-  Average Points: A(NLG)=11.58, B(CLAUDE)=10.94, C(SWUM)=7.48
-  Ranking by Criterion:
-    ACCURACY:
-      NLG: 74 first, 35 second, 41 third
-      CLAUDE: 58 first, 85 second, 7 third
-      SWUM: 18 first, 30 second, 102 third
-    CONCISENESS:
-      NLG: 65 first, 44 second, 41 third
-      CLAUDE: 65 first, 41 second, 44 third
-      SWUM: 20 first, 65 second, 65 third
-    ADEQUACY:
-      NLG: 121 first, 9 second, 20 third
-      CLAUDE: 20 first, 130 second, 0 third
-      SWUM: 9 first, 11 second, 130 third
-    CODE_CONTEXT:
-      NLG: 94 first, 31 second, 25 third
-      CLAUDE: 36 first, 105 second, 9 third
-      SWUM: 20 first, 14 second, 116 third
-    DESIGN_PATTERNS:
-      NLG: 29 first, 102 second, 19 third
-      CLAUDE: 62 first, 48 second, 40 third
-      SWUM: 59 first, 0 second, 91 third
+7A) Paired Wilcoxon signed-rank tests
 
-Comparison: NLG vs GEMINI vs SWUM
-  Source file (B): LLM_GEMINI_SUMMARY.csv
-  Ranked: 150, Skipped: 0
-  Average Points: A(NLG)=10.24, B(GEMINI)=8.43, C(SWUM)=10.69
-  Ranking by Criterion:
-    ACCURACY:
-      NLG: 79 first, 15 second, 50 third
-      GEMINI: 22 first, 44 second, 78 third
-      SWUM: 43 first, 85 second, 16 third
-    CONCISENESS:
-      NLG: 33 first, 39 second, 78 third
-      GEMINI: 71 first, 12 second, 67 third
-      SWUM: 46 first, 99 second, 5 third
-    ADEQUACY:
-      NLG: 117 first, 5 second, 25 third
-      GEMINI: 17 first, 36 second, 94 third
-      SWUM: 13 first, 106 second, 28 third
-    CODE_CONTEXT:
-      NLG: 70 first, 15 second, 60 third
-      GEMINI: 22 first, 61 second, 62 third
-      SWUM: 53 first, 69 second, 23 third
-    DESIGN_PATTERNS:
-      NLG: 55 first, 20 second, 73 third
-      GEMINI: 17 first, 80 second, 51 third
-      SWUM: 76 first, 48 second, 24 third
+Comparison            | Metric             | n_pairs | W stat  | p-value      | Median diff | Interpretation
+---------------------|--------------------|---------|---------|--------------|-------------|-----------------------------
+DPS_NLG vs DPS_LLM   | cosine_similarity  | 149     | 151.00  | 6.85176e-25  | -0.164673   | significant; DPS_LLM higher
+DPS_SWUM vs DPS_LLM  | cosine_similarity  | 149     | 1481.00 | 7.12670e-15  | -0.084550   | significant; DPS_LLM higher
+DPS_NLG vs DPS_LLM   | bert_f1            | 149     | 251.00  | 4.82904e-24  | -0.026175   | significant; DPS_LLM higher
+DPS_SWUM vs DPS_LLM  | bert_f1            | 149     | 5460.00 | 0.809071     | 0.001340    | not significant
 
-Comparison: NLG vs GPT vs SWUM
-  Source file (B): LLM_GPT_SUMMARY.csv
-  Ranked: 150, Skipped: 0
-  Average Points: A(NLG)=10.92, B(GPT)=10.83, C(SWUM)=8.25
-  Ranking by Criterion:
-    ACCURACY:
-      NLG: 53 first, 53 second, 44 third
-      GPT: 65 first, 62 second, 23 third
-      SWUM: 32 first, 35 second, 83 third
-    CONCISENESS:
-      NLG: 56 first, 35 second, 59 third
-      GPT: 60 first, 40 second, 50 third
-      SWUM: 34 first, 75 second, 41 third
-    ADEQUACY:
-      NLG: 115 first, 8 second, 27 third
-      GPT: 24 first, 123 second, 3 third
-      SWUM: 11 first, 19 second, 120 third
-    CODE_CONTEXT:
-      NLG: 79 first, 38 second, 33 third
-      GPT: 45 first, 92 second, 13 third
-      SWUM: 26 first, 20 second, 104 third
-    DESIGN_PATTERNS:
-      NLG: 31 first, 86 second, 33 third
-      GPT: 55 first, 60 second, 35 third
-      SWUM: 64 first, 4 second, 82 third
+7B) Friedman tests by criterion
 
-Comparison: NLG vs MISTRAL vs SWUM
-  Source file (B): LLM_MISTRAL_SUMMARY.csv
-  Ranked: 150, Skipped: 0
-  Average Points: A(NLG)=11.63, B(MISTRAL)=10.35, C(SWUM)=7.98
-  Ranking by Criterion:
-    ACCURACY:
-      NLG: 73 first, 50 second, 27 third
-      MISTRAL: 40 first, 79 second, 31 third
-      SWUM: 37 first, 21 second, 92 third
-    CONCISENESS:
-      NLG: 71 first, 23 second, 55 third
-      MISTRAL: 50 first, 50 second, 49 third
-      SWUM: 28 first, 76 second, 45 third
-    ADEQUACY:
-      NLG: 131 first, 4 second, 15 third
-      MISTRAL: 9 first, 134 second, 7 third
-      SWUM: 10 first, 12 second, 128 third
-    CODE_CONTEXT:
-      NLG: 91 first, 36 second, 23 third
-      MISTRAL: 35 first, 99 second, 16 third
-      SWUM: 24 first, 15 second, 111 third
-    DESIGN_PATTERNS:
-      NLG: 26 first, 99 second, 25 third
-      MISTRAL: 63 first, 47 second, 40 third
-      SWUM: 61 first, 4 second, 85 third
+Criterion       | n   | chi^2    | p-value   | Kendall W | Significant | Best system | Mean scores (NLG / LLM / SWUM)
+---------------|-----|----------|-----------|-----------|-------------|-------------|---------------------------------
+ACCURACY       | 149 | 201.3557 | <0.000001 | 0.6757    | yes         | DPS_LLM     | 1.5906 / 2.9463 / 1.4631
+CONCISENESS    | 149 | 11.9329  | 0.002563  | 0.0400    | yes         | DPS_NLG     | 2.2148 / 1.9664 / 1.8188
+ADEQUACY       | 150 | 206.4400 | <0.000001 | 0.6881    | yes         | DPS_LLM     | 1.7467 / 2.9267 / 1.3267
+CODE CONTEXT   | 149 | 196.5638 | <0.000001 | 0.6596    | yes         | DPS_LLM     | 1.6644 / 2.9262 / 1.4094
+DESIGN PATTERN | 147 | 152.3810 | <0.000001 | 0.5183    | yes         | DPS_LLM     | 1.7279 / 2.8163 / 1.4558
 
+7C) Cross-criteria Friedman test
+
+Criterion       | NLG    | LLM    | SWUM
+---------------|--------|--------|--------
+ACCURACY       | 1.5906 | 2.9463 | 1.4631
+CONCISENESS    | 2.2148 | 1.9664 | 1.8188
+ADEQUACY       | 1.7467 | 2.9267 | 1.3267
+CODE CONTEXT   | 1.6644 | 2.9262 | 1.4094
+DESIGN PATTERN | 1.7279 | 2.8163 | 1.4558
+COLUMN MEAN    | 1.7889 | 2.7164 | 1.4947
+
+Result: Friedman chi^2 = 8.4000, p = 0.014996, Kendall W = 0.8400, significant = yes
+Pairwise mean-score differences:
+  - NLG vs LLM: -0.9275  (LLM > NLG)
+  - NLG vs SWUM: +0.2941 (NLG > SWUM)
+  - LLM vs SWUM: +1.2216  (LLM > SWUM)
+
+7D) Spearman sensitivity analysis
+
+Model             | Accuracy rho (p)          | Conciseness rho (p)       | Adequacy rho (p)          | Code Context rho (p)      | Design Pattern rho (p)
+------------------|---------------------------|---------------------------|---------------------------|---------------------------|----------------------
+CLAUDE            | 0.8169 (3.9e-109)         | 0.6789 (4.3e-62)          | 0.7825 (3.1e-94)          | 0.8228 (5.4e-112)         | 0.6367 (1.6e-52)
+GEMINI            | 0.8124 (9.1e-103)         | 0.3568 (5.9e-15)          | 0.5989 (2.8e-44)          | 0.7557 (1.3e-81)          | 0.7285 (1.3e-74)
+GPT               | 0.7424 (6.2e-80)          | 0.4694 (4.8e-26)          | 0.6754 (3.1e-61)          | 0.7955 (1.6e-99)          | 0.6476 (7.5e-55)
+MISTRAL           | 0.7736 (8.0e-91)          | 0.5483 (1.9e-36)          | 0.7332 (4.9e-77)          | 0.7944 (4.5e-99)          | 0.6535 (3.8e-56)
+
+All reported Spearman correlations are significant at alpha = 0.05.
+
+[8] ARTIFACT INDEX
 ----------------------------------------------------------------------
-Aggregate Statistics (Min/Max/Avg across all 4 comparisons):
-----------------------------------------------------------------------
-
-Overall Average Points:
-  A (NLG): min=10.24, max=11.63, avg=11.09
-  B (Model): min=8.43, max=10.94, avg=10.14
-  C (SWUM): min=7.48, max=10.69, avg=8.60
-
-======================================================================
-
-======================================================================
-UPDATED DESIGN PATTERN RANKINGS IN PRIOR TABLE FORMAT
-======================================================================
-
-======================================================================
-DESIGN PATTERN RANKING RESULTS (NLG vs GEMINI vs SWUM)
-======================================================================
-Total ranked samples: 150
-Total skipped samples: 0
-
-Per-Pattern Rank Distribution (same format, grouped by design pattern):
-----------------------------------------------------------------------
-Design Pattern       Corpus A (1st/2nd/3rd)   Corpus B (1st/2nd/3rd)   Corpus C (1st/2nd/3rd)   Total (1st/2nd/3rd) 
---------------------------------------------------------------------------------------------------------------------
-(Computed per sample using total_points_a/b/c; ties broken deterministically as A > B > C.)
-Abstract Factory     20 / 9 / 9               3 / 15 / 20              15 / 14 / 9              38 / 38 / 38        
-Visitor              11 / 4 / 9               4 / 7 / 13               9 / 13 / 2               24 / 24 / 24        
-Facade               3 / 4 / 9                3 / 9 / 4                10 / 3 / 3               16 / 16 / 16        
-Factory Method       8 / 3 / 5                4 / 7 / 5                4 / 6 / 6                16 / 16 / 16        
-Observer             9 / 1 / 3                0 / 5 / 8                4 / 7 / 2                13 / 13 / 13        
-Adapter              9 / 1 / 2                2 / 1 / 9                1 / 10 / 1               12 / 12 / 12        
-Decorator            7 / 2 / 3                0 / 3 / 9                5 / 7 / 0                12 / 12 / 12        
-Singleton            4 / 2 / 4                2 / 2 / 6                4 / 6 / 0                10 / 10 / 10        
-Memento              2 / 5 / 2                1 / 3 / 5                6 / 1 / 2                9 / 9 / 9           
-
-Per-Pattern Performance Summary:
-----------------------------------------------------------------------
-Pattern: Abstract Factory (n=38)
-  Mean Points -> A=2.13, B=1.64, C=2.04
-  Rank Order: A>C>B
-  Most Frequent Winner: A (share=52.6%)
-Pattern: Visitor (n=24)
-  Mean Points -> A=2.03, B=1.74, C=2.23
-  Rank Order: C>A>B
-  Most Frequent Winner: C (share=37.5%)
-Pattern: Facade (n=16)
-  Mean Points -> A=1.75, B=1.99, C=2.26
-  Rank Order: C>B>A
-  Most Frequent Winner: C (share=62.5%)
-Pattern: Factory Method (n=16)
-  Mean Points -> A=1.86, B=1.66, C=1.73
-  Rank Order: A>C>B
-  Most Frequent Winner: A (share=50.0%)
-Pattern: Observer (n=13)
-  Mean Points -> A=2.29, B=1.55, C=2.15
-  Rank Order: A>C>B
-  Most Frequent Winner: A (share=61.5%)
-Pattern: Adapter (n=12)
-  Mean Points -> A=2.23, B=1.70, C=2.07
-  Rank Order: A>C>B
-  Most Frequent Winner: A (share=50.0%)
-Pattern: Decorator (n=12)
-  Mean Points -> A=2.17, B=1.52, C=2.32
-  Rank Order: C>A>B
-  Most Frequent Winner: A (share=41.7%)
-Pattern: Singleton (n=10)
-  Mean Points -> A=1.96, B=1.64, C=2.40
-  Rank Order: C>A>B
-  Most Frequent Winner: C (share=40.0%)
-Pattern: Memento (n=9)
-  Mean Points -> A=1.93, B=1.71, C=2.36
-  Rank Order: C>A>B
-  Most Frequent Winner: C (share=66.7%)
-
-Stability Across Design Patterns:
-----------------------------------------------------------------------
-Global rank order (all ranked rows): C>A>B
-Patterns matching global order exactly: 4/9 (44.4%)
-Patterns with same top-1 system (C): 55.6%
-
-======================================================================
-DESIGN PATTERN RANKING RESULTS (NLG vs GPT vs SWUM)
-======================================================================
-Total ranked samples: 150
-Total skipped samples: 0
-
-Per-Pattern Rank Distribution (same format, grouped by design pattern):
-----------------------------------------------------------------------
-Design Pattern       Corpus A (1st/2nd/3rd)   Corpus B (1st/2nd/3rd)   Corpus C (1st/2nd/3rd)   Total (1st/2nd/3rd) 
---------------------------------------------------------------------------------------------------------------------
-(Computed per sample using total_points_a/b/c; ties broken deterministically as A > B > C.)
-Abstract Factory     18 / 9 / 11              9 / 27 / 2               11 / 2 / 25              38 / 38 / 38        
-Visitor              10 / 9 / 5               8 / 12 / 4               6 / 3 / 15               24 / 24 / 24        
-Facade               10 / 5 / 1               6 / 10 / 0               0 / 1 / 15               16 / 16 / 16        
-Factory Method       6 / 9 / 1                7 / 5 / 4                3 / 2 / 11               16 / 16 / 16        
-Observer             9 / 4 / 0                3 / 9 / 1                1 / 0 / 12               13 / 13 / 13        
-Adapter              8 / 2 / 2                4 / 7 / 1                0 / 3 / 9                12 / 12 / 12        
-Decorator            9 / 0 / 3                1 / 11 / 0               2 / 1 / 9                12 / 12 / 12        
-Singleton            5 / 3 / 2                5 / 4 / 1                0 / 3 / 7                10 / 10 / 10        
-Memento              4 / 5 / 0                4 / 4 / 1                1 / 0 / 8                9 / 9 / 9           
-
-Per-Pattern Performance Summary:
-----------------------------------------------------------------------
-Pattern: Abstract Factory (n=38)
-  Mean Points -> A=2.13, B=2.20, C=1.67
-  Rank Order: B>A>C
-  Most Frequent Winner: A (share=44.7%)
-Pattern: Visitor (n=24)
-  Mean Points -> A=1.99, B=2.12, C=1.89
-  Rank Order: B>A>C
-  Most Frequent Winner: B (share=33.3%)
-Pattern: Facade (n=16)
-  Mean Points -> A=2.26, B=2.19, C=1.55
-  Rank Order: A>B>C
-  Most Frequent Winner: A (share=43.8%)
-Pattern: Factory Method (n=16)
-  Mean Points -> A=2.30, B=2.17, C=1.52
-  Rank Order: A>B>C
-  Most Frequent Winner: A (share=37.5%)
-Pattern: Observer (n=13)
-  Mean Points -> A=2.40, B=2.06, C=1.54
-  Rank Order: A>B>C
-  Most Frequent Winner: A (share=53.8%)
-Pattern: Adapter (n=12)
-  Mean Points -> A=2.27, B=2.23, C=1.50
-  Rank Order: A>B>C
-  Most Frequent Winner: A (share=41.7%)
-Pattern: Decorator (n=12)
-  Mean Points -> A=2.13, B=2.02, C=1.85
-  Rank Order: A>B>C
-  Most Frequent Winner: A (share=50.0%)
-Pattern: Singleton (n=10)
-  Mean Points -> A=2.20, B=2.28, C=1.52
-  Rank Order: B>A>C
-  Most Frequent Winner: B (share=40.0%)
-Pattern: Memento (n=9)
-  Mean Points -> A=2.20, B=2.24, C=1.56
-  Rank Order: B>A>C
-  Most Frequent Winner: B (share=44.4%)
-
-Stability Across Design Patterns:
-----------------------------------------------------------------------
-Global rank order (all ranked rows): A>B>C
-Patterns matching global order exactly: 5/9 (55.6%)
-Patterns with same top-1 system (A): 55.6%
-
-======================================================================
-DESIGN PATTERN RANKING RESULTS (NLG vs CLAUDE vs SWUM)
-======================================================================
-Total ranked samples: 150
-Total skipped samples: 0
-
-Per-Pattern Rank Distribution (same format, grouped by design pattern):
-----------------------------------------------------------------------
-Design Pattern       Corpus A (1st/2nd/3rd)   Corpus B (1st/2nd/3rd)   Corpus C (1st/2nd/3rd)   Total (1st/2nd/3rd) 
---------------------------------------------------------------------------------------------------------------------
-(Computed per sample using total_points_a/b/c; ties broken deterministically as A > B > C.)
-Abstract Factory     19 / 10 / 9              9 / 27 / 2               10 / 1 / 27              38 / 38 / 38        
-Visitor              15 / 4 / 5               4 / 18 / 2               5 / 2 / 17               24 / 24 / 24        
-Facade               14 / 2 / 0               2 / 14 / 0               0 / 0 / 16               16 / 16 / 16        
-Factory Method       6 / 6 / 4                7 / 8 / 1                3 / 2 / 11               16 / 16 / 16        
-Observer             9 / 4 / 0                4 / 9 / 0                0 / 0 / 13               13 / 13 / 13        
-Adapter              9 / 2 / 1                3 / 9 / 0                0 / 1 / 11               12 / 12 / 12        
-Decorator            8 / 2 / 2                2 / 10 / 0               2 / 0 / 10               12 / 12 / 12        
-Singleton            6 / 3 / 1                4 / 5 / 1                0 / 2 / 8                10 / 10 / 10        
-Memento              6 / 3 / 0                3 / 6 / 0                0 / 0 / 9                9 / 9 / 9           
-
-Per-Pattern Performance Summary:
-----------------------------------------------------------------------
-Pattern: Abstract Factory (n=38)
-  Mean Points -> A=2.21, B=2.19, C=1.61
-  Rank Order: A>B>C
-  Most Frequent Winner: A (share=44.7%)
-Pattern: Visitor (n=24)
-  Mean Points -> A=2.12, B=2.06, C=1.82
-  Rank Order: A>B>C
-  Most Frequent Winner: A (share=41.7%)
-Pattern: Facade (n=16)
-  Mean Points -> A=2.60, B=2.24, C=1.16
-  Rank Order: A>B>C
-  Most Frequent Winner: A (share=75.0%)
-Pattern: Factory Method (n=16)
-  Mean Points -> A=2.20, B=2.31, C=1.49
-  Rank Order: B>A>C
-  Most Frequent Winner: B (share=37.5%)
-Pattern: Observer (n=13)
-  Mean Points -> A=2.60, B=2.11, C=1.29
-  Rank Order: A>B>C
-  Most Frequent Winner: A (share=69.2%)
-Pattern: Adapter (n=12)
-  Mean Points -> A=2.53, B=2.20, C=1.27
-  Rank Order: A>B>C
-  Most Frequent Winner: A (share=75.0%)
-Pattern: Decorator (n=12)
-  Mean Points -> A=2.20, B=2.15, C=1.65
-  Rank Order: A>B>C
-  Most Frequent Winner: A (share=58.3%)
-Pattern: Singleton (n=10)
-  Mean Points -> A=2.38, B=2.28, C=1.34
-  Rank Order: A>B>C
-  Most Frequent Winner: A (share=60.0%)
-Pattern: Memento (n=9)
-  Mean Points -> A=2.40, B=2.27, C=1.33
-  Rank Order: A>B>C
-  Most Frequent Winner: A (share=55.6%)
-
-Stability Across Design Patterns:
-----------------------------------------------------------------------
-Global rank order (all ranked rows): A>B>C
-Patterns matching global order exactly: 8/9 (88.9%)
-Patterns with same top-1 system (A): 88.9%
-
-======================================================================
-DESIGN PATTERN RANKING RESULTS (NLG vs MISTRAL vs SWUM)
-======================================================================
-Total ranked samples: 150
-Total skipped samples: 0
-
-Per-Pattern Rank Distribution (same format, grouped by design pattern):
-----------------------------------------------------------------------
-Design Pattern       Corpus A (1st/2nd/3rd)   Corpus B (1st/2nd/3rd)   Corpus C (1st/2nd/3rd)   Total (1st/2nd/3rd) 
---------------------------------------------------------------------------------------------------------------------
-(Computed per sample using total_points_a/b/c; ties broken deterministically as A > B > C.)
-Abstract Factory     19 / 10 / 9              7 / 27 / 4               12 / 1 / 25              38 / 38 / 38        
-Visitor              21 / 1 / 2               0 / 17 / 7               3 / 6 / 15               24 / 24 / 24        
-Facade               11 / 5 / 0               5 / 10 / 1               0 / 1 / 15               16 / 16 / 16        
-Factory Method       8 / 6 / 2                4 / 9 / 3                4 / 1 / 11               16 / 16 / 16        
-Observer             9 / 4 / 0                3 / 9 / 1                1 / 0 / 12               13 / 13 / 13        
-Adapter              9 / 1 / 2                3 / 7 / 2                0 / 4 / 8                12 / 12 / 12        
-Decorator            8 / 2 / 2                2 / 4 / 6                2 / 6 / 4                12 / 12 / 12        
-Singleton            6 / 4 / 0                4 / 5 / 1                0 / 1 / 9                10 / 10 / 10        
-Memento              6 / 3 / 0                2 / 5 / 2                1 / 1 / 7                9 / 9 / 9           
-
-Per-Pattern Performance Summary:
-----------------------------------------------------------------------
-Pattern: Abstract Factory (n=38)
-  Mean Points -> A=2.17, B=2.16, C=1.67
-  Rank Order: A>B>C
-  Most Frequent Winner: A (share=39.5%)
-Pattern: Visitor (n=24)
-  Mean Points -> A=2.40, B=1.81, C=1.79
-  Rank Order: A>B>C
-  Most Frequent Winner: A (share=70.8%)
-Pattern: Facade (n=16)
-  Mean Points -> A=2.38, B=2.20, C=1.43
-  Rank Order: A>B>C
-  Most Frequent Winner: A (share=50.0%)
-Pattern: Factory Method (n=16)
-  Mean Points -> A=2.27, B=2.14, C=1.59
-  Rank Order: A>B>C
-  Most Frequent Winner: A (share=37.5%)
-Pattern: Observer (n=13)
-  Mean Points -> A=2.45, B=2.15, C=1.40
-  Rank Order: A>B>C
-  Most Frequent Winner: A (share=61.5%)
-Pattern: Adapter (n=12)
-  Mean Points -> A=2.42, B=2.02, C=1.47
-  Rank Order: A>B>C
-  Most Frequent Winner: A (share=75.0%)
-Pattern: Decorator (n=12)
-  Mean Points -> A=2.28, B=1.85, C=1.87
-  Rank Order: A>C>B
-  Most Frequent Winner: A (share=50.0%)
-Pattern: Singleton (n=10)
-  Mean Points -> A=2.40, B=2.30, C=1.30
-  Rank Order: A>B>C
-  Most Frequent Winner: A (share=60.0%)
-Pattern: Memento (n=9)
-  Mean Points -> A=2.47, B=2.02, C=1.51
-  Rank Order: A>B>C
-  Most Frequent Winner: A (share=66.7%)
-
-Stability Across Design Patterns:
-----------------------------------------------------------------------
-Global rank order (all ranked rows): A>B>C
-Patterns matching global order exactly: 8/9 (88.9%)
-Patterns with same top-1 system (A): 100.0%
-======================================================================
-
-========================================================================
-SENSITIVITY ANALYSIS — SPEARMAN CORRELATION (PER CRITERION) [CLAUDE]
-========================================================================
-
-  Definition:
-  For each criterion, Spearman's rho is computed between:
-    X = criterion points per system per class file (1st=3, 2nd=2, 3rd=1)
-    Y = total points of that same system on that same class file
-  This quantifies how strongly each criterion aligns with overall ranking outcomes.
-
-------------------------------------------------------------------------
-  Criterion                  blocks   n(obs)   Spearman rho      p-value   Sig?
-  -------------------------------------------------------------------------------
-  ACCURACY                     150      450        0.816904   3.92435e-109  YES *
-  CONCISENESS                  150      450        0.678928    4.25794e-62  YES *
-  ADEQUACY                     150      450        0.782542    3.06884e-94  YES *
-  CODE CONTEXT                 150      450        0.822775   5.42007e-112  YES *
-  DESIGN PATTERN               150      450        0.636724    1.56414e-52  YES *
-
-  α = 0.05
-
-
-========================================================================
-SENSITIVITY ANALYSIS — SPEARMAN CORRELATION (PER CRITERION) [GEMINI]
-========================================================================
-
-  Definition:
-  For each criterion, Spearman's rho is computed between:
-    X = criterion points per system per class file (1st=3, 2nd=2, 3rd=1)
-    Y = total points of that same system on that same class file
-  This quantifies how strongly each criterion aligns with overall ranking outcomes.
-
-------------------------------------------------------------------------
-  Criterion                  blocks   n(obs)   Spearman rho      p-value   Sig?
-  -------------------------------------------------------------------------------
-  ACCURACY                     144      432        0.812369   9.08488e-103  YES *
-  CONCISENESS                  150      450        0.356833    5.85653e-15  YES *
-  ADEQUACY                     147      441        0.598928    2.81290e-44  YES *
-  CODE CONTEXT                 145      435        0.755728    1.27019e-81  YES *
-  DESIGN PATTERN               148      444        0.728492    1.27726e-74  YES *
-
-  α = 0.05
-
-
-========================================================================
-SENSITIVITY ANALYSIS — SPEARMAN CORRELATION (PER CRITERION) [GPT]
-========================================================================
-
-  Definition:
-  For each criterion, Spearman's rho is computed between:
-    X = criterion points per system per class file (1st=3, 2nd=2, 3rd=1)
-    Y = total points of that same system on that same class file
-  This quantifies how strongly each criterion aligns with overall ranking outcomes.
-
-------------------------------------------------------------------------
-  Criterion                  blocks   n(obs)   Spearman rho      p-value   Sig?
-  -------------------------------------------------------------------------------
-  ACCURACY                     150      450        0.742352    6.15198e-80  YES *
-  CONCISENESS                  150      450        0.469434    4.83535e-26  YES *
-  ADEQUACY                     150      450        0.675378    3.12871e-61  YES *
-  CODE CONTEXT                 150      450        0.795489    1.63065e-99  YES *
-  DESIGN PATTERN               150      450        0.647596    7.49955e-55  YES *
-
-  α = 0.05
-
-
-========================================================================
-SENSITIVITY ANALYSIS — SPEARMAN CORRELATION (PER CRITERION) [MISTRAL]
-========================================================================
-
-  Definition:
-  For each criterion, Spearman's rho is computed between:
-    X = criterion points per system per class file (1st=3, 2nd=2, 3rd=1)
-    Y = total points of that same system on that same class file
-  This quantifies how strongly each criterion aligns with overall ranking outcomes.
-
-------------------------------------------------------------------------
-  Criterion                  blocks   n(obs)   Spearman rho      p-value   Sig?
-  -------------------------------------------------------------------------------
-  ACCURACY                     150      450        0.773649    8.02315e-91  YES *
-  CONCISENESS                  149      447        0.548312    1.91165e-36  YES *
-  ADEQUACY                     150      450        0.733161    4.89523e-77  YES *
-  CODE CONTEXT                 150      450        0.794431    4.54627e-99  YES *
-  DESIGN PATTERN               150      450        0.653490    3.78193e-56  YES *
-
-  α = 0.05
-
-
-========================================================================
-FRIEDMAN TEST ANALYSIS — NLG vs CLAUDE vs SWUM
-========================================================================
-  Run date   : 2026-06-03 11:42:02
-  Data file  : model_comparisons_ranking_detail.csv
-  Rows used  : 150
-
-  Systems    :  A = NLG   |  B = CLAUDE   |  C = SWUM
-  Scoring    :  1st place = 3 pts  |  2nd = 2 pts  |  3rd = 1 pt
-  Alpha      :  0.05
-  Post-hoc   :  Wilcoxon signed-rank, Bonferroni α_adj = 0.0167
-
-  H0 (each Friedman test): no significant difference in scores
-  among the three systems under the given criterion / criteria.
-
-========================================================================
-PART 1: PER-CRITERION FRIEDMAN TESTS  (class files as blocks)
-========================================================================
-
-  Test design : one Friedman test per criterion
-  Blocks      : individual class files  (n ≈ 150 per test)
-  Treatments  : k = 3 systems  (NLG, CLAUDE, SWUM)
-  Scoring     : 1st = 3 pts | 2nd = 2 pts | 3rd = 1 pt
-  H0          : no significant difference among the 3 systems
-  α           : 0.05  |  post-hoc Bonferroni α_adj = 0.0167
-
-------------------------------------------------------------------------
-  Criterion      : ACCURACY
-  N (blocks)     : 150 class files
-  Friedman chi²  = 71.6400
-  p-value        = 0.000000    < 0.05  →  REJECT H0 *
-  Kendall's W    = 0.2388  (weak concordance)
-  Significant    : YES
-
-  Mean scores per system (higher = better ranked):
-    NLG          : 2.2200
-    CLAUDE       : 2.3400  <-- best
-    SWUM         : 1.4400
-
-  Post-hoc pairwise Wilcoxon signed-rank tests (Bonferroni α_adj = 0.0167):
-  Comparison                     W-stat      p (raw)      p (adj)   Sig?  Direction
-  ----------------------------------------------------------------------------------
-  NLG      vs CLAUDE            4915.00     0.132967     0.398902     no  NLG > CLAUDE
-  NLG      vs SWUM              2451.00     0.000000     0.000000  YES *  NLG > SWUM
-  CLAUDE   vs SWUM              1552.00     0.000000     0.000000  YES *  CLAUDE > SWUM
-
-------------------------------------------------------------------------
-  Criterion      : CONCISENESS
-  N (blocks)     : 150 class files
-  Friedman chi²  = 20.2800
-  p-value        = 0.000039    < 0.05  →  REJECT H0 *
-  Kendall's W    = 0.0676  (weak concordance)
-  Significant    : YES
-
-  Mean scores per system (higher = better ranked):
-    NLG          : 2.1600  <-- best
-    CLAUDE       : 2.1400
-    SWUM         : 1.7000
-
-  Post-hoc pairwise Wilcoxon signed-rank tests (Bonferroni α_adj = 0.0167):
-  Comparison                     W-stat      p (raw)      p (adj)   Sig?  Direction
-  ----------------------------------------------------------------------------------
-  NLG      vs CLAUDE            5422.00     0.640715     1.000000     no  CLAUDE > NLG
-  NLG      vs SWUM              3635.00     0.000061     0.000182  YES *  NLG > SWUM
-  CLAUDE   vs SWUM              3553.00     0.000032     0.000097  YES *  CLAUDE > SWUM
-
-------------------------------------------------------------------------
-  Criterion      : ADEQUACY
-  N (blocks)     : 150 class files
-  Friedman chi²  = 168.2800
-  p-value        = 0.000000    < 0.05  →  REJECT H0 *
-  Kendall's W    = 0.5609  (strong concordance)
-  Significant    : YES
-
-  Mean scores per system (higher = better ranked):
-    NLG          : 2.6733  <-- best
-    CLAUDE       : 2.1333
-    SWUM         : 1.1933
-
-  Post-hoc pairwise Wilcoxon signed-rank tests (Bonferroni α_adj = 0.0167):
-  Comparison                     W-stat      p (raw)      p (adj)   Sig?  Direction
-  ----------------------------------------------------------------------------------
-  NLG      vs CLAUDE            2855.00     0.000000     0.000000  YES *  NLG > CLAUDE
-  NLG      vs SWUM               885.00     0.000000     0.000000  YES *  NLG > SWUM
-  CLAUDE   vs SWUM               639.00     0.000000     0.000000  YES *  CLAUDE > SWUM
-
-------------------------------------------------------------------------
-  Criterion      : CODE CONTEXT
-  N (blocks)     : 150 class files
-  Friedman chi²  = 98.0400
-  p-value        = 0.000000    < 0.05  →  REJECT H0 *
-  Kendall's W    = 0.3268  (moderate concordance)
-  Significant    : YES
-
-  Mean scores per system (higher = better ranked):
-    NLG          : 2.4600  <-- best
-    CLAUDE       : 2.1800
-    SWUM         : 1.3600
-
-  Post-hoc pairwise Wilcoxon signed-rank tests (Bonferroni α_adj = 0.0167):
-  Comparison                     W-stat      p (raw)      p (adj)   Sig?  Direction
-  ----------------------------------------------------------------------------------
-  NLG      vs CLAUDE            4269.50     0.003798     0.011393  YES *  NLG > CLAUDE
-  NLG      vs SWUM              1607.00     0.000000     0.000000  YES *  NLG > SWUM
-  CLAUDE   vs SWUM              1875.00     0.000000     0.000000  YES *  CLAUDE > SWUM
-
-------------------------------------------------------------------------
-  Criterion      : DESIGN PATTERN
-  N (blocks)     : 150 class files
-  Friedman chi²  = 10.7200
-  p-value        = 0.004701    < 0.05  →  REJECT H0 *
-  Kendall's W    = 0.0357  (weak concordance)
-  Significant    : YES
-
-  Mean scores per system (higher = better ranked):
-    NLG          : 2.0667
-    CLAUDE       : 2.1467  <-- best
-    SWUM         : 1.7867
-
-  Post-hoc pairwise Wilcoxon signed-rank tests (Bonferroni α_adj = 0.0167):
-  Comparison                     W-stat      p (raw)      p (adj)   Sig?  Direction
-  ----------------------------------------------------------------------------------
-  NLG      vs CLAUDE            5209.50     0.327187     0.981561     no  CLAUDE > NLG
-  NLG      vs SWUM              4463.50     0.018624     0.055872     no  NLG > SWUM
-  CLAUDE   vs SWUM              4445.50     0.016927     0.050780     no  CLAUDE > SWUM
-
-========================================================================
-PART 2: CROSS-CRITERIA FRIEDMAN TEST  (criteria as blocks)
-========================================================================
-
-  Test design : one Friedman test across all criteria
-  Blocks      : n = 5 criteria  (ACCURACY, CONCISENESS, ADEQUACY,
-                                  CODE CONTEXT, DESIGN PATTERN)
-  Treatments  : k = 3 systems  (NLG, CLAUDE, SWUM)
-  Cell value  : mean score of system on criterion across all class files
-  H0          : rank ordering of systems does not differ across criteria
-  α           : 0.05
-
-  Mean score matrix:
-  Criterion                     NLG     CLAUDE       SWUM
-  ------------------------------------------------------
-  ACCURACY                  2.2200    2.3400 *    1.4400
-  CONCISENESS               2.1600 *    2.1400    1.7000
-  ADEQUACY                  2.6733 *    2.1333    1.1933
-  CODE CONTEXT              2.4600 *    2.1800    1.3600
-  DESIGN PATTERN            2.0667    2.1467 *    1.7867
-  ------------------------------------------------------
-  COLUMN MEAN                2.3160     2.1880     1.4960
-  (* = best system for that criterion)
-
-  Friedman chi²  = 7.6000
-  p-value        = 0.022371    < 0.05  →  REJECT H0 *
-  Kendall's W    = 0.7600  (very strong concordance)
-  Significant    : YES
-
-  Note: n = 5 blocks — Wilcoxon signed-rank requires n >= 6.
-  Pairwise mean-score differences (descriptive):
-  Comparison                  Mean diff  Direction
-  ----------------------------------------------------
-  NLG      vs CLAUDE            +0.1280  NLG > CLAUDE
-  NLG      vs SWUM              +0.8200  NLG > SWUM
-  CLAUDE   vs SWUM              +0.6920  CLAUDE > SWUM
-
-========================================================================
-SUMMARY TABLE — PER-CRITERION FRIEDMAN RESULTS
-========================================================================
-
-  Criterion                  n       chi²      p-value  Kendall W  Sig?  Best System
-  ----------------------------------------------------------------------------
-  ACCURACY                 150    71.6400     0.000000     0.2388 YES *  CLAUDE
-  CONCISENESS              150    20.2800     0.000039     0.0676 YES *  NLG
-  ADEQUACY                 150   168.2800     0.000000     0.5609 YES *  NLG
-  CODE CONTEXT             150    98.0400     0.000000     0.3268 YES *  NLG
-  DESIGN PATTERN           150    10.7200     0.004701     0.0357 YES *  CLAUDE
-
-  α = 0.05  |  post-hoc Bonferroni α_adj = 0.0167
-  Kendall's W : 0.1 weak | 0.3 moderate | 0.5 strong | 0.7 very strong
-
-
-========================================================================
-FRIEDMAN TEST ANALYSIS — NLG vs GEMINI vs SWUM
-========================================================================
-  Run date   : 2026-06-03 11:42:02
-  Data file  : model_comparisons_ranking_detail.csv
-  Rows used  : 150
-
-  Systems    :  A = NLG   |  B = GEMINI   |  C = SWUM
-  Scoring    :  1st place = 3 pts  |  2nd = 2 pts  |  3rd = 1 pt
-  Alpha      :  0.05
-  Post-hoc   :  Wilcoxon signed-rank, Bonferroni α_adj = 0.0167
-
-  H0 (each Friedman test): no significant difference in scores
-  among the three systems under the given criterion / criteria.
-
-========================================================================
-PART 1: PER-CRITERION FRIEDMAN TESTS  (class files as blocks)
-========================================================================
-
-  Test design : one Friedman test per criterion
-  Blocks      : individual class files  (n ≈ 150 per test)
-  Treatments  : k = 3 systems  (NLG, GEMINI, SWUM)
-  Scoring     : 1st = 3 pts | 2nd = 2 pts | 3rd = 1 pt
-  H0          : no significant difference among the 3 systems
-  α           : 0.05  |  post-hoc Bonferroni α_adj = 0.0167
-
-------------------------------------------------------------------------
-  Criterion      : ACCURACY
-  N (blocks)     : 144 class files
-  Friedman chi²  = 32.6806
-  p-value        = 0.000000    < 0.05  →  REJECT H0 *
-  Kendall's W    = 0.1135  (weak concordance)
-  Significant    : YES
-
-  Mean scores per system (higher = better ranked):
-    NLG          : 2.2014  <-- best
-    GEMINI       : 1.6111
-    SWUM         : 2.1875
-
-  Post-hoc pairwise Wilcoxon signed-rank tests (Bonferroni α_adj = 0.0167):
-  Comparison                     W-stat      p (raw)      p (adj)   Sig?  Direction
-  ----------------------------------------------------------------------------------
-  NLG      vs GEMINI            2874.00     0.000001     0.000004  YES *  NLG > GEMINI
-  NLG      vs SWUM              5034.00     0.697401     1.000000     no  NLG > SWUM
-  GEMINI   vs SWUM              2505.00     0.000000     0.000000  YES *  SWUM > GEMINI
-
-------------------------------------------------------------------------
-  Criterion      : CONCISENESS
-  N (blocks)     : 150 class files
-  Friedman chi²  = 24.8133
-  p-value        = 0.000004    < 0.05  →  REJECT H0 *
-  Kendall's W    = 0.0827  (weak concordance)
-  Significant    : YES
-
-  Mean scores per system (higher = better ranked):
-    NLG          : 1.7000
-    GEMINI       : 2.0267
-    SWUM         : 2.2733  <-- best
-
-  Post-hoc pairwise Wilcoxon signed-rank tests (Bonferroni α_adj = 0.0167):
-  Comparison                     W-stat      p (raw)      p (adj)   Sig?  Direction
-  ----------------------------------------------------------------------------------
-  NLG      vs GEMINI            4168.00     0.003447     0.010340  YES *  GEMINI > NLG
-  NLG      vs SWUM              2646.50     0.000000     0.000000  YES *  SWUM > NLG
-  GEMINI   vs SWUM              4332.00     0.008335     0.025006  YES *  SWUM > GEMINI
-
-------------------------------------------------------------------------
-  Criterion      : ADEQUACY
-  N (blocks)     : 147 class files
-  Friedman chi²  = 99.4422
-  p-value        = 0.000000    < 0.05  →  REJECT H0 *
-  Kendall's W    = 0.3382  (moderate concordance)
-  Significant    : YES
-
-  Mean scores per system (higher = better ranked):
-    NLG          : 2.6259  <-- best
-    GEMINI       : 1.4762
-    SWUM         : 1.8980
-
-  Post-hoc pairwise Wilcoxon signed-rank tests (Bonferroni α_adj = 0.0167):
-  Comparison                     W-stat      p (raw)      p (adj)   Sig?  Direction
-  ----------------------------------------------------------------------------------
-  NLG      vs GEMINI            1617.00     0.000000     0.000000  YES *  NLG > GEMINI
-  NLG      vs SWUM              2320.50     0.000000     0.000000  YES *  NLG > SWUM
-  GEMINI   vs SWUM              3223.50     0.000001     0.000004  YES *  SWUM > GEMINI
-
-------------------------------------------------------------------------
-  Criterion      : CODE CONTEXT
-  N (blocks)     : 145 class files
-  Friedman chi²  = 17.9310
-  p-value        = 0.000128    < 0.05  →  REJECT H0 *
-  Kendall's W    = 0.0618  (weak concordance)
-  Significant    : YES
-
-  Mean scores per system (higher = better ranked):
-    NLG          : 2.0690
-    GEMINI       : 1.7241
-    SWUM         : 2.2069  <-- best
-
-  Post-hoc pairwise Wilcoxon signed-rank tests (Bonferroni α_adj = 0.0167):
-  Comparison                     W-stat      p (raw)      p (adj)   Sig?  Direction
-  ----------------------------------------------------------------------------------
-  NLG      vs GEMINI            3735.00     0.001500     0.004501  YES *  NLG > GEMINI
-  NLG      vs SWUM              4492.50     0.102193     0.306579     no  NLG > SWUM
-  GEMINI   vs SWUM              2982.50     0.000000     0.000001  YES *  SWUM > GEMINI
-
-------------------------------------------------------------------------
-  Criterion      : DESIGN PATTERN
-  N (blocks)     : 148 class files
-  Friedman chi²  = 28.2703
-  p-value        = 0.000001    < 0.05  →  REJECT H0 *
-  Kendall's W    = 0.0955  (weak concordance)
-  Significant    : YES
-
-  Mean scores per system (higher = better ranked):
-    NLG          : 1.8784
-    GEMINI       : 1.7703
-    SWUM         : 2.3514  <-- best
-
-  Post-hoc pairwise Wilcoxon signed-rank tests (Bonferroni α_adj = 0.0167):
-  Comparison                     W-stat      p (raw)      p (adj)   Sig?  Direction
-  ----------------------------------------------------------------------------------
-  NLG      vs GEMINI            4827.00     0.169858     0.509573     no  GEMINI > NLG
-  NLG      vs SWUM              3476.00     0.000056     0.000168  YES *  SWUM > NLG
-  GEMINI   vs SWUM              2692.00     0.000000     0.000000  YES *  SWUM > GEMINI
-
-========================================================================
-PART 2: CROSS-CRITERIA FRIEDMAN TEST  (criteria as blocks)
-========================================================================
-
-  Test design : one Friedman test across all criteria
-  Blocks      : n = 5 criteria  (ACCURACY, CONCISENESS, ADEQUACY,
-                                  CODE CONTEXT, DESIGN PATTERN)
-  Treatments  : k = 3 systems  (NLG, GEMINI, SWUM)
-  Cell value  : mean score of system on criterion across all class files
-  H0          : rank ordering of systems does not differ across criteria
-  α           : 0.05
-
-  Mean score matrix:
-  Criterion                     NLG     GEMINI       SWUM
-  ------------------------------------------------------
-  ACCURACY                  2.2014 *    1.6111    2.1875
-  CONCISENESS               1.7000    2.0267    2.2733 *
-  ADEQUACY                  2.6259 *    1.4762    1.8980
-  CODE CONTEXT              2.0690    1.7241    2.2069 *
-  DESIGN PATTERN            1.8784    1.7703    2.3514 *
-  ------------------------------------------------------
-  COLUMN MEAN                2.0949     1.7217     2.1834
-  (* = best system for that criterion)
-
-  Friedman chi²  = 5.2000
-  p-value        = 0.074274    >= 0.05  →  fail to reject H0
-  Kendall's W    = 0.5200  (strong concordance)
-  Significant    : NO
-
-  Post-hoc : not conducted (overall Friedman not significant)
-
-========================================================================
-SUMMARY TABLE — PER-CRITERION FRIEDMAN RESULTS
-========================================================================
-
-  Criterion                  n       chi²      p-value  Kendall W  Sig?  Best System
-  ----------------------------------------------------------------------------
-  ACCURACY                 144    32.6806     0.000000     0.1135 YES *  NLG
-  CONCISENESS              150    24.8133     0.000004     0.0827 YES *  SWUM
-  ADEQUACY                 147    99.4422     0.000000     0.3382 YES *  NLG
-  CODE CONTEXT             145    17.9310     0.000128     0.0618 YES *  SWUM
-  DESIGN PATTERN           148    28.2703     0.000001     0.0955 YES *  SWUM
-
-  α = 0.05  |  post-hoc Bonferroni α_adj = 0.0167
-  Kendall's W : 0.1 weak | 0.3 moderate | 0.5 strong | 0.7 very strong
-
-
-========================================================================
-FRIEDMAN TEST ANALYSIS — NLG vs GPT vs SWUM
-========================================================================
-  Run date   : 2026-06-03 11:42:02
-  Data file  : model_comparisons_ranking_detail.csv
-  Rows used  : 150
-
-  Systems    :  A = NLG   |  B = GPT   |  C = SWUM
-  Scoring    :  1st place = 3 pts  |  2nd = 2 pts  |  3rd = 1 pt
-  Alpha      :  0.05
-  Post-hoc   :  Wilcoxon signed-rank, Bonferroni α_adj = 0.0167
-
-  H0 (each Friedman test): no significant difference in scores
-  among the three systems under the given criterion / criteria.
-
-========================================================================
-PART 1: PER-CRITERION FRIEDMAN TESTS  (class files as blocks)
-========================================================================
-
-  Test design : one Friedman test per criterion
-  Blocks      : individual class files  (n ≈ 150 per test)
-  Treatments  : k = 3 systems  (NLG, GPT, SWUM)
-  Scoring     : 1st = 3 pts | 2nd = 2 pts | 3rd = 1 pt
-  H0          : no significant difference among the 3 systems
-  α           : 0.05  |  post-hoc Bonferroni α_adj = 0.0167
-
-------------------------------------------------------------------------
-  Criterion      : ACCURACY
-  N (blocks)     : 150 class files
-  Friedman chi²  = 29.6400
-  p-value        = 0.000000    < 0.05  →  REJECT H0 *
-  Kendall's W    = 0.0988  (weak concordance)
-  Significant    : YES
-
-  Mean scores per system (higher = better ranked):
-    NLG          : 2.0600
-    GPT          : 2.2800  <-- best
-    SWUM         : 1.6600
-
-  Post-hoc pairwise Wilcoxon signed-rank tests (Bonferroni α_adj = 0.0167):
-  Comparison                     W-stat      p (raw)      p (adj)   Sig?  Direction
-  ----------------------------------------------------------------------------------
-  NLG      vs GPT               4442.00     0.014944     0.044831  YES *  GPT > NLG
-  NLG      vs SWUM              3717.50     0.000157     0.000472  YES *  NLG > SWUM
-  GPT      vs SWUM              3241.00     0.000002     0.000007  YES *  GPT > SWUM
-
-------------------------------------------------------------------------
-  Criterion      : CONCISENESS
-  N (blocks)     : 150 class files
-  Friedman chi²  = 1.0533
-  p-value        = 0.590570    >= 0.05  →  fail to reject H0
-  Kendall's W    = 0.0035  (weak concordance)
-  Significant    : NO
-
-  Mean scores per system (higher = better ranked):
-    NLG          : 1.9800
-    GPT          : 2.0667  <-- best
-    SWUM         : 1.9533
-
-  Post-hoc tests : not conducted (overall Friedman not significant)
-
-------------------------------------------------------------------------
-  Criterion      : ADEQUACY
-  N (blocks)     : 150 class files
-  Friedman chi²  = 133.7733
-  p-value        = 0.000000    < 0.05  →  REJECT H0 *
-  Kendall's W    = 0.4459  (moderate concordance)
-  Significant    : YES
-
-  Mean scores per system (higher = better ranked):
-    NLG          : 2.5867  <-- best
-    GPT          : 2.1400
-    SWUM         : 1.2733
-
-  Post-hoc pairwise Wilcoxon signed-rank tests (Bonferroni α_adj = 0.0167):
-  Comparison                     W-stat      p (raw)      p (adj)   Sig?  Direction
-  ----------------------------------------------------------------------------------
-  NLG      vs GPT               3537.00     0.000013     0.000038  YES *  NLG > GPT
-  NLG      vs SWUM              1020.00     0.000000     0.000000  YES *  NLG > SWUM
-  GPT      vs SWUM              1011.50     0.000000     0.000000  YES *  GPT > SWUM
-
-------------------------------------------------------------------------
-  Criterion      : CODE CONTEXT
-  N (blocks)     : 150 class files
-  Friedman chi²  = 61.4933
-  p-value        = 0.000000    < 0.05  →  REJECT H0 *
-  Kendall's W    = 0.2050  (weak concordance)
-  Significant    : YES
-
-  Mean scores per system (higher = better ranked):
-    NLG          : 2.3067  <-- best
-    GPT          : 2.2133
-    SWUM         : 1.4800
-
-  Post-hoc pairwise Wilcoxon signed-rank tests (Bonferroni α_adj = 0.0167):
-  Comparison                     W-stat      p (raw)      p (adj)   Sig?  Direction
-  ----------------------------------------------------------------------------------
-  NLG      vs GPT               5299.00     0.456337     1.000000     no  NLG > GPT
-  NLG      vs SWUM              2332.00     0.000000     0.000000  YES *  NLG > SWUM
-  GPT      vs SWUM              2444.00     0.000000     0.000000  YES *  GPT > SWUM
-
-------------------------------------------------------------------------
-  Criterion      : DESIGN PATTERN
-  N (blocks)     : 150 class files
-  Friedman chi²  = 4.8533
-  p-value        = 0.088331    >= 0.05  →  fail to reject H0
-  Kendall's W    = 0.0162  (weak concordance)
-  Significant    : NO
-
-  Mean scores per system (higher = better ranked):
-    NLG          : 1.9867
-    GPT          : 2.1333  <-- best
-    SWUM         : 1.8800
-
-  Post-hoc tests : not conducted (overall Friedman not significant)
-
-========================================================================
-PART 2: CROSS-CRITERIA FRIEDMAN TEST  (criteria as blocks)
-========================================================================
-
-  Test design : one Friedman test across all criteria
-  Blocks      : n = 5 criteria  (ACCURACY, CONCISENESS, ADEQUACY,
-                                  CODE CONTEXT, DESIGN PATTERN)
-  Treatments  : k = 3 systems  (NLG, GPT, SWUM)
-  Cell value  : mean score of system on criterion across all class files
-  H0          : rank ordering of systems does not differ across criteria
-  α           : 0.05
-
-  Mean score matrix:
-  Criterion                     NLG        GPT       SWUM
-  ------------------------------------------------------
-  ACCURACY                  2.0600    2.2800 *    1.6600
-  CONCISENESS               1.9800    2.0667 *    1.9533
-  ADEQUACY                  2.5867 *    2.1400    1.2733
-  CODE CONTEXT              2.3067 *    2.2133    1.4800
-  DESIGN PATTERN            1.9867    2.1333 *    1.8800
-  ------------------------------------------------------
-  COLUMN MEAN                2.1840     2.1667     1.6493
-  (* = best system for that criterion)
-
-  Friedman chi²  = 7.6000
-  p-value        = 0.022371    < 0.05  →  REJECT H0 *
-  Kendall's W    = 0.7600  (very strong concordance)
-  Significant    : YES
-
-  Note: n = 5 blocks — Wilcoxon signed-rank requires n >= 6.
-  Pairwise mean-score differences (descriptive):
-  Comparison                  Mean diff  Direction
-  ----------------------------------------------------
-  NLG      vs GPT               +0.0173  NLG > GPT
-  NLG      vs SWUM              +0.5347  NLG > SWUM
-  GPT      vs SWUM              +0.5173  GPT > SWUM
-
-========================================================================
-SUMMARY TABLE — PER-CRITERION FRIEDMAN RESULTS
-========================================================================
-
-  Criterion                  n       chi²      p-value  Kendall W  Sig?  Best System
-  ----------------------------------------------------------------------------
-  ACCURACY                 150    29.6400     0.000000     0.0988 YES *  GPT
-  CONCISENESS              150     1.0533     0.590570     0.0035    no  GPT
-  ADEQUACY                 150   133.7733     0.000000     0.4459 YES *  NLG
-  CODE CONTEXT             150    61.4933     0.000000     0.2050 YES *  NLG
-  DESIGN PATTERN           150     4.8533     0.088331     0.0162    no  GPT
-
-  α = 0.05  |  post-hoc Bonferroni α_adj = 0.0167
-  Kendall's W : 0.1 weak | 0.3 moderate | 0.5 strong | 0.7 very strong
-
-
-========================================================================
-FRIEDMAN TEST ANALYSIS — NLG vs MISTRAL vs SWUM
-========================================================================
-  Run date   : 2026-06-03 11:42:02
-  Data file  : model_comparisons_ranking_detail.csv
-  Rows used  : 150
-
-  Systems    :  A = NLG   |  B = MISTRAL   |  C = SWUM
-  Scoring    :  1st place = 3 pts  |  2nd = 2 pts  |  3rd = 1 pt
-  Alpha      :  0.05
-  Post-hoc   :  Wilcoxon signed-rank, Bonferroni α_adj = 0.0167
-
-  H0 (each Friedman test): no significant difference in scores
-  among the three systems under the given criterion / criteria.
-
-========================================================================
-PART 1: PER-CRITERION FRIEDMAN TESTS  (class files as blocks)
-========================================================================
-
-  Test design : one Friedman test per criterion
-  Blocks      : individual class files  (n ≈ 150 per test)
-  Treatments  : k = 3 systems  (NLG, MISTRAL, SWUM)
-  Scoring     : 1st = 3 pts | 2nd = 2 pts | 3rd = 1 pt
-  H0          : no significant difference among the 3 systems
-  α           : 0.05  |  post-hoc Bonferroni α_adj = 0.0167
-
-------------------------------------------------------------------------
-  Criterion      : ACCURACY
-  N (blocks)     : 150 class files
-  Friedman chi²  = 34.8133
-  p-value        = 0.000000    < 0.05  →  REJECT H0 *
-  Kendall's W    = 0.1160  (weak concordance)
-  Significant    : YES
-
-  Mean scores per system (higher = better ranked):
-    NLG          : 2.3067  <-- best
-    MISTRAL      : 2.0600
-    SWUM         : 1.6333
-
-  Post-hoc pairwise Wilcoxon signed-rank tests (Bonferroni α_adj = 0.0167):
-  Comparison                     W-stat      p (raw)      p (adj)   Sig?  Direction
-  ----------------------------------------------------------------------------------
-  NLG      vs MISTRAL           4515.00     0.018953     0.056859     no  NLG > MISTRAL
-  NLG      vs SWUM              2733.00     0.000000     0.000000  YES *  NLG > SWUM
-  MISTRAL  vs SWUM              4071.00     0.001825     0.005474  YES *  MISTRAL > SWUM
-
-------------------------------------------------------------------------
-  Criterion      : CONCISENESS
-  N (blocks)     : 149 class files
-  Friedman chi²  = 3.6644
-  p-value        = 0.160059    >= 0.05  →  fail to reject H0
-  Kendall's W    = 0.0123  (weak concordance)
-  Significant    : NO
-
-  Mean scores per system (higher = better ranked):
-    NLG          : 2.1074  <-- best
-    MISTRAL      : 2.0067
-    SWUM         : 1.8859
-
-  Post-hoc tests : not conducted (overall Friedman not significant)
-
-------------------------------------------------------------------------
-  Criterion      : ADEQUACY
-  N (blocks)     : 150 class files
-  Friedman chi²  = 182.5600
-  p-value        = 0.000000    < 0.05  →  REJECT H0 *
-  Kendall's W    = 0.6085  (strong concordance)
-  Significant    : YES
-
-  Mean scores per system (higher = better ranked):
-    NLG          : 2.7733  <-- best
-    MISTRAL      : 2.0133
-    SWUM         : 1.2133
-
-  Post-hoc pairwise Wilcoxon signed-rank tests (Bonferroni α_adj = 0.0167):
-  Comparison                     W-stat      p (raw)      p (adj)   Sig?  Direction
-  ----------------------------------------------------------------------------------
-  NLG      vs MISTRAL           1706.50     0.000000     0.000000  YES *  NLG > MISTRAL
-  NLG      vs SWUM               744.50     0.000000     0.000000  YES *  NLG > SWUM
-  MISTRAL  vs SWUM              1252.50     0.000000     0.000000  YES *  MISTRAL > SWUM
-
-------------------------------------------------------------------------
-  Criterion      : CODE CONTEXT
-  N (blocks)     : 150 class files
-  Friedman chi²  = 83.6933
-  p-value        = 0.000000    < 0.05  →  REJECT H0 *
-  Kendall's W    = 0.2790  (weak concordance)
-  Significant    : YES
-
-  Mean scores per system (higher = better ranked):
-    NLG          : 2.4533  <-- best
-    MISTRAL      : 2.1267
-    SWUM         : 1.4200
-
-  Post-hoc pairwise Wilcoxon signed-rank tests (Bonferroni α_adj = 0.0167):
-  Comparison                     W-stat      p (raw)      p (adj)   Sig?  Direction
-  ----------------------------------------------------------------------------------
-  NLG      vs MISTRAL           4028.00     0.000704     0.002112  YES *  NLG > MISTRAL
-  NLG      vs SWUM              1761.00     0.000000     0.000000  YES *  NLG > SWUM
-  MISTRAL  vs SWUM              2527.50     0.000000     0.000000  YES *  MISTRAL > SWUM
-
-------------------------------------------------------------------------
-  Criterion      : DESIGN PATTERN
-  N (blocks)     : 150 class files
-  Friedman chi²  = 7.3733
-  p-value        = 0.025055    < 0.05  →  REJECT H0 *
-  Kendall's W    = 0.0246  (weak concordance)
-  Significant    : YES
-
-  Mean scores per system (higher = better ranked):
-    NLG          : 2.0067
-    MISTRAL      : 2.1533  <-- best
-    SWUM         : 1.8400
-
-  Post-hoc pairwise Wilcoxon signed-rank tests (Bonferroni α_adj = 0.0167):
-  Comparison                     W-stat      p (raw)      p (adj)   Sig?  Direction
-  ----------------------------------------------------------------------------------
-  NLG      vs MISTRAL           4854.00     0.084215     0.252646     no  MISTRAL > NLG
-  NLG      vs SWUM              5001.00     0.193790     0.581369     no  NLG > SWUM
-  MISTRAL  vs SWUM              4488.00     0.021530     0.064591     no  MISTRAL > SWUM
-
-========================================================================
-PART 2: CROSS-CRITERIA FRIEDMAN TEST  (criteria as blocks)
-========================================================================
-
-  Test design : one Friedman test across all criteria
-  Blocks      : n = 5 criteria  (ACCURACY, CONCISENESS, ADEQUACY,
-                                  CODE CONTEXT, DESIGN PATTERN)
-  Treatments  : k = 3 systems  (NLG, MISTRAL, SWUM)
-  Cell value  : mean score of system on criterion across all class files
-  H0          : rank ordering of systems does not differ across criteria
-  α           : 0.05
-
-  Mean score matrix:
-  Criterion                     NLG    MISTRAL       SWUM
-  ------------------------------------------------------
-  ACCURACY                  2.3067 *    2.0600    1.6333
-  CONCISENESS               2.1074 *    2.0067    1.8859
-  ADEQUACY                  2.7733 *    2.0133    1.2133
-  CODE CONTEXT              2.4533 *    2.1267    1.4200
-  DESIGN PATTERN            2.0067    2.1533 *    1.8400
-  ------------------------------------------------------
-  COLUMN MEAN                2.3295     2.0720     1.5985
-  (* = best system for that criterion)
-
-  Friedman chi²  = 8.4000
-  p-value        = 0.014996    < 0.05  →  REJECT H0 *
-  Kendall's W    = 0.8400  (very strong concordance)
-  Significant    : YES
-
-  Note: n = 5 blocks — Wilcoxon signed-rank requires n >= 6.
-  Pairwise mean-score differences (descriptive):
-  Comparison                  Mean diff  Direction
-  ----------------------------------------------------
-  NLG      vs MISTRAL           +0.2575  NLG > MISTRAL
-  NLG      vs SWUM              +0.7310  NLG > SWUM
-  MISTRAL  vs SWUM              +0.4735  MISTRAL > SWUM
-
-========================================================================
-SUMMARY TABLE — PER-CRITERION FRIEDMAN RESULTS
-========================================================================
-
-  Criterion                  n       chi²      p-value  Kendall W  Sig?  Best System
-  ----------------------------------------------------------------------------
-  ACCURACY                 150    34.8133     0.000000     0.1160 YES *  NLG
-  CONCISENESS              149     3.6644     0.160059     0.0123    no  NLG
-  ADEQUACY                 150   182.5600     0.000000     0.6085 YES *  NLG
-  CODE CONTEXT             150    83.6933     0.000000     0.2790 YES *  NLG
-  DESIGN PATTERN           150     7.3733     0.025055     0.0246 YES *  MISTRAL
-
-  α = 0.05  |  post-hoc Bonferroni α_adj = 0.0167
-  Kendall's W : 0.1 weak | 0.3 moderate | 0.5 strong | 0.7 very strong
-
+File family                      | Count | Typical rows per file | What it contains
+---------------------------------|-------|------------------------|----------------------------------------------
+Class score CSVs                 | 10    | 149-150                | per-class cosine and BERT scores vs human
+Pattern score CSVs               | 10    | 9                      | per-design-pattern aggregates
+Project score CSVs               | 10    | 3                      | per-project aggregates
+Additional metric CSVs           | 2     | 4 / 150                | BLEU, NIST, ROUGE-L, frugal score
+Ranking detail CSVs              | 2     | 600                    | sample-level ranking traces
+Ranking summary CSVs             | 2     | 4 / 36                 | rolled-up ranking tables
+Aggregate comparison CSVs        | 2     | 10 / 90                | overall and pattern-level method comparisons
+Text reports and logs            | 9     | -                      | evaluation, ranking, stats, and pipeline summaries
+
+Representative files covered above include:
+  - evaluation-summary: evaluation_summary.txt
+  - overall metrics: overall_comparison.csv
+  - pattern aggregates: pattern_overall_comparison.csv
+  - ranking summaries: model_comparisons_ranking_summary.csv, design_pattern_model_comparisons_summary.csv
+  - detailed reports: model_comparisons_ranking_report.txt, design_pattern_model_comparisons_report.txt
+  - statistical logs: ranking_console_output.txt, model_comparisons_ranking_console_output.txt, design_pattern_ranking_console_output.txt
+  - pipeline notes: pipeline_summary.txt
+
+END OF CONSOLIDATED RESULTS

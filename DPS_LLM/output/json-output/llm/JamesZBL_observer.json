@@ -1,5 +1,5 @@
 {
-	"observer" : {
+	"JamesZBL/observer" : {
 		"Northern" : {
 			"FIELDDETAIL" : [ {
 				"FIELDCOMMONTYPE" : "Logger",
@@ -11,7 +11,7 @@
 			"CLASSORINTERFACEDETAIL" : [ {
 				"CLASSACCESSSPECIFIER" : "PUBLIC",
 				"NUMBEROFMETHODCALLS" : 6,
-				"EXTENDSFROM" : [ ],
+				"EXTENDSFROM" : [ "TimeObserver" ],
 				"IMPLEMENTSFROM" : [ "TimeObserver" ],
 				"CLASSNAME" : "Northern",
 				"ISINTERFACEORNOT" : false,
@@ -202,7 +202,7 @@
 			"CLASSORINTERFACEDETAIL" : [ {
 				"CLASSACCESSSPECIFIER" : "PUBLIC",
 				"NUMBEROFMETHODCALLS" : 6,
-				"EXTENDSFROM" : [ ],
+				"EXTENDSFROM" : [ "TimeObserver" ],
 				"IMPLEMENTSFROM" : [ "TimeObserver" ],
 				"CLASSNAME" : "Southern",
 				"ISINTERFACEORNOT" : false,
@@ -303,6 +303,14 @@
 	},
 	"final_summary" : "",
 	"design_pattern" : [ {
+		"visitor" : {
+			"Time" : {
+				"visitor" : {
+					"TimeObserver" : [ "Northern", "Southern" ]
+				}
+			}
+		}
+	}, {
 		"observer" : {
 			"TimeObserver" : {
 				"concrete_observer" : [ "Northern", "Southern" ],
@@ -312,5 +320,6 @@
 			}
 		}
 	} ],
-	"summary_NLG" : { }
+	"summary_NLG" : { },
+	"project_identifier" : "JamesZBL/observer"
 }

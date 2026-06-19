@@ -1,11 +1,45 @@
 {
-	"factory-method" : {
+	"final_summary" : "",
+	"design_pattern" : [ {
+		"factory_method" : {
+			"Cook" : {
+				"concrete_product" : [ "WesternFood", "ChineseFood" ],
+				"abstract_product" : "Food",
+				"concrete_factory" : [ "ChineseCook", "WesternCook" ]
+			}
+		}
+	}, {
+		"abstract_factory" : {
+			"Cook" : {
+				"abstract_product" : {
+					"Food" : [ "WesternFood", "ChineseFood" ]
+				},
+				"concrete_factory" : [ "ChineseCook", "WesternCook" ]
+			},
+			"Food" : {
+				"abstract_product" : { },
+				"concrete_factory" : [ "WesternFood", "ChineseFood" ]
+			}
+		}
+	}, {
+		"adapter" : {
+			"WesternFood" : {
+				"adaptee" : [ "FoodType" ],
+				"target" : [ "Food" ]
+			},
+			"ChineseFood" : {
+				"adaptee" : [ "FoodType" ],
+				"target" : [ "Food" ]
+			}
+		}
+	} ],
+	"JamesZBL/factory-method" : {
 		"ChineseCook" : {
 			"FIELDDETAIL" : [ ],
 			"CLASSORINTERFACEDETAIL" : [ {
 				"CLASSACCESSSPECIFIER" : "PUBLIC",
 				"NUMBEROFMETHODCALLS" : 0,
-				"EXTENDSFROM" : [ ],
+				"EXTENDSFROM" : [ "Cook" ],
 				"IMPLEMENTSFROM" : [ "Cook" ],
 				"CLASSNAME" : "ChineseCook",
 				"ISINTERFACEORNOT" : false,
@@ -86,7 +120,7 @@
 			"CLASSORINTERFACEDETAIL" : [ {
 				"CLASSACCESSSPECIFIER" : "PUBLIC",
 				"NUMBEROFMETHODCALLS" : 1,
-				"EXTENDSFROM" : [ ],
+				"EXTENDSFROM" : [ "Food" ],
 				"IMPLEMENTSFROM" : [ "Food" ],
 				"CLASSNAME" : "WesternFood",
 				"ISINTERFACEORNOT" : false,
@@ -174,7 +208,7 @@
 			"CLASSORINTERFACEDETAIL" : [ {
 				"CLASSACCESSSPECIFIER" : "PUBLIC",
 				"NUMBEROFMETHODCALLS" : 1,
-				"EXTENDSFROM" : [ ],
+				"EXTENDSFROM" : [ "Food" ],
 				"IMPLEMENTSFROM" : [ "Food" ],
 				"CLASSNAME" : "ChineseFood",
 				"ISINTERFACEORNOT" : false,
@@ -307,7 +341,7 @@
 			"CLASSORINTERFACEDETAIL" : [ {
 				"CLASSACCESSSPECIFIER" : "PUBLIC",
 				"NUMBEROFMETHODCALLS" : 0,
-				"EXTENDSFROM" : [ ],
+				"EXTENDSFROM" : [ "Cook" ],
 				"IMPLEMENTSFROM" : [ "Cook" ],
 				"CLASSNAME" : "WesternCook",
 				"ISINTERFACEORNOT" : false,
@@ -366,28 +400,6 @@
 			} ]
 		}
 	},
-	"final_summary" : "",
-	"design_pattern" : [ {
-		"factory_method" : {
-			"Cook" : {
-				"concrete_product" : [ "WesternFood", "ChineseFood" ],
-				"abstract_product" : "Food",
-				"concrete_factory" : [ "ChineseCook", "WesternCook" ]
-			}
-		}
-	}, {
-		"abstract_factory" : {
-			"Cook" : {
-				"abstract_product" : {
-					"Food" : [ "WesternFood", "ChineseFood" ]
-				},
-				"concrete_factory" : [ "ChineseCook", "WesternCook" ]
-			},
-			"Food" : {
-				"abstract_product" : { },
-				"concrete_factory" : [ "WesternFood", "ChineseFood" ]
-			}
-		}
-	} ],
-	"summary_NLG" : { }
+	"summary_NLG" : { },
+	"project_identifier" : "JamesZBL/factory-method"
 }

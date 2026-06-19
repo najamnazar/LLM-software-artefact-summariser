@@ -1,11 +1,11 @@
 """Compute paired Wilcoxon signed-rank tests for DPS approaches.
 
-This script compares per-file metric scores between:
-- DPS_NLG vs DPS_LLM
-- DPS_SWUM vs DPS_LLM
+This script compares per-file metric scores (cosine similarity, BERTScore F1)
+for each of the four LLM model comparisons:
+  - NLG vs LLM (QWEN, GPT, CLAUDE, MISTRAL)
+  - SWUM vs LLM (QWEN, GPT, CLAUDE, MISTRAL)
 
-It runs tests for both cosine similarity and BERTScore F1, then appends
-results to evaluation-results/results.txt.
+Results are appended to evaluation-results/results.txt.
 """
 
 from __future__ import annotations
@@ -21,6 +21,13 @@ from scipy.stats import wilcoxon
 
 
 ALPHA = 0.05
+
+MODELS = [
+    ("QWEN", "llm (qwen)_vs_human_class_scores.csv"),
+    ("GPT", "llm (gpt)_vs_human_class_scores.csv"),
+    ("CLAUDE", "llm (claude)_vs_human_class_scores.csv"),
+    ("MISTRAL", "llm (mistral)_vs_human_class_scores.csv"),
+]
 
 
 @dataclass
@@ -257,25 +264,26 @@ def main() -> None:
 
     nlg_csv = eval_dir / "nlg_vs_human_class_scores.csv"
     swum_csv = eval_dir / "swum_vs_human_class_scores.csv"
-    llm_csv = eval_dir / "dps_llm_vs_human_class_scores.csv"
     results_txt = eval_dir / "results.txt"
 
-    nlg = prepare_frame(nlg_csv, "DPS_NLG")
-    swum = prepare_frame(swum_csv, "DPS_SWUM")
-    llm = prepare_frame(llm_csv, "DPS_LLM")
+    nlg = prepare_frame(nlg_csv, "NLG")
+    swum = prepare_frame(swum_csv, "SWUM")
 
-    nlg_vs_llm = merge_pairwise(nlg, llm, "DPS_NLG", "DPS_LLM")
-    swum_vs_llm = merge_pairwise(swum, llm, "DPS_SWUM", "DPS_LLM")
-
-    matched_info = {
-        "DPS_NLG vs DPS_LLM": int(len(nlg_vs_llm)),
-        "DPS_SWUM vs DPS_LLM": int(len(swum_vs_llm)),
-    }
-
+    matched_info: Dict[str, int] = {}
     test_results: List[TestResult] = []
-    for metric in ("cosine_similarity", "bert_f1"):
-        test_results.append(run_wilcoxon_test(nlg_vs_llm, metric, "DPS_NLG", "DPS_LLM"))
-        test_results.append(run_wilcoxon_test(swum_vs_llm, metric, "DPS_SWUM", "DPS_LLM"))
+
+    for model_name, model_csv_name in MODELS:
+        llm = prepare_frame(eval_dir / model_csv_name, model_name)
+
+        nlg_vs_llm = merge_pairwise(nlg, llm, "NLG", model_name)
+        swum_vs_llm = merge_pairwise(swum, llm, "SWUM", model_name)
+
+        matched_info[f"NLG vs {model_name}"] = int(len(nlg_vs_llm))
+        matched_info[f"SWUM vs {model_name}"] = int(len(swum_vs_llm))
+
+        for metric in ("cosine_similarity", "bert_f1"):
+            test_results.append(run_wilcoxon_test(nlg_vs_llm, metric, "NLG", model_name))
+            test_results.append(run_wilcoxon_test(swum_vs_llm, metric, "SWUM", model_name))
 
     section = format_results_section(test_results, matched_info)
     with results_txt.open("a", encoding="utf-8") as fh:
