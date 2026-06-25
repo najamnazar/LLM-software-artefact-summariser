@@ -1,0 +1,7 @@
+... when
+updatelibrary is called with notify=true ( currently done when a library message
+is received ) .
+in this case , we attempt to update any fans , or fail gracefully
+if no fans are created .
+fixed bug where fan could not get back to connect page after host has
+disconnected .

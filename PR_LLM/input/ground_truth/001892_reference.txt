@@ -1,0 +1,3 @@
+in preparation for the new feature ' instant session start ' , this patch
+move parts of the archive type to the abstract class and prevent code
+duplication .

@@ -1,0 +1,2 @@
+- moving methods to developer client from researcher client as consents are now based on developer permissions ;
+- re-enabled study consent test , using a temporary subpopulation to do the test ( so consents can be deleted ) ;

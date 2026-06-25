@@ -1,0 +1,3 @@
+the finally clause of dowork ( ) releases the mutex .
+in an interrupted situation this would always fail causing the failed delete manager to handle the work resulting in slightly slower deletions and spurious log messaged .
+this fixes this by clearing the thread interrupted state prior to releasing the mutex and then resetting afterwards if needed .

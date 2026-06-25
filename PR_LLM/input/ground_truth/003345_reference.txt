@@ -1,0 +1,3 @@
+circular wsdl imports are not prohibited by ws-i basic profile .
+however , they are currently causing wsdl import to fail in an endless recursion .
+the present fix corrects this condition and ensures that wsdl documents are not imported more than once .

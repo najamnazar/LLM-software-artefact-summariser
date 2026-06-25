@@ -1,0 +1,6 @@
+motiviation :
+http2framecodectest and http2multiplexcodectest were quite fragile and often not went through the whole pipeline which made testing sometimes hard and error-prone .
+modification :
+- refactor tests to have data flow through the whole pipeline and so made the test more robust ( by testing the while implementation ) .
+result :
+easier to write tests for the codecs in the future and more robust testing in general .

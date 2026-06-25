@@ -1,0 +1,7 @@
+the use of the getbyindex api should fail whenever the index has not
+been specified for the given table .
+this should be followed by the
+proper exception and logging .
+in addition we add a message field to
+the transaction aborted exception info in case a message for the cause
+of abort is available .

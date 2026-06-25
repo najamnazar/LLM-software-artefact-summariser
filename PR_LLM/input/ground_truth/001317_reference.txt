@@ -1,0 +1,3 @@
+indexapi ( and graphql ) has apparently had no method to filter away calls in stoptimes that have no boarding ( picluptype = 0 ) .
+this change ignores these stops in stoptimesforstop ( ) .
+if some implementations still need to show these calls , we can of course make it configurable .

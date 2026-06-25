@@ -1,0 +1,3 @@
+this version adds a parameter , duplicationhint , which controls which structure gets internally duplicated .
+by default the shorter structure is duplicated , which improves performance slightly and can better handle large terminal insertions .
+this also adds a runcecp.sh script to the protein comparison tool module .

@@ -1,0 +1,7 @@
+before , the time in the quoted message of a reply was always in the
+local timezone , even when the ' hide timezone ' setting was selected .
+now ,
+when the option is enabled , that is changed to utc just like the time in
+headers .
+i also changed the description for the option in the english
+strings.xml to better describe the new behavior .

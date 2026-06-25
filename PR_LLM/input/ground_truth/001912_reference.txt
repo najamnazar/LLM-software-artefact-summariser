@@ -1,0 +1,4 @@
+there are 0 caches : rolescache and fallbackrolescache .
+roles put in the former are evicted after few minutes , so that role membership changes in ldap are reflected reasonably quickly .
+roles put in the latter are evicted after few hours .
+fallbackrolescache is read only when ldap failure is identified ( circuit breaker pattern ) .

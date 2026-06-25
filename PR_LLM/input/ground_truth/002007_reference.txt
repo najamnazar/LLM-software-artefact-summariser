@@ -1,0 +1,7 @@
+` multipartuploadslicingalgorithm ` creates multiple equal-sized parts and
+a remaining amount .
+` baseblobstore.putmultipartblob ` used this
+interface incorrectly , which could create more parts than intended
+since the remaining size could be larger than the part size .
+this
+manifested with google cloud storage which only allows 0 parts .

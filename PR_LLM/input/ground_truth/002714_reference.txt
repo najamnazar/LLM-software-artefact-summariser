@@ -1,0 +1,6 @@
+- hide the addemptyrow from java to support future stable id .
+- add bulk insertion benchmark .
+this wo n't be the final design of internal object creation api , when
+integration of os object accessor , the internal api might be changed a
+bit since it does n't look nice at all -- 0 params for the jni call to
+create an object with integer primary key !

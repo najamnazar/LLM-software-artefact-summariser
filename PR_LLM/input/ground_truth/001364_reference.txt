@@ -1,0 +1,4 @@
+reviewed module-info.java files .
+for those that have a ' requires static ' added a comment about
+why the dependency is optional .
+rearranged directives in alphabetical order .

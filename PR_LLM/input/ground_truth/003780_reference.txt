@@ -1,0 +1,2 @@
+changed ddloot to use the correct item ids when adding dd items to chests .
+moved loot chest registration from init ( ) to postinit ( ) in the hopes that we 'll be able to catch the loot of other mods that also hook into vanilla chests .

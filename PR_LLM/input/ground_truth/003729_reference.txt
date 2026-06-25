@@ -1,0 +1,7 @@
+this commit modify trigger in order to automaticly add indexes on stats
+tables .
+it will create index when ' rotating ' logs : when a new table is
+created , indexes will be added to previous table .
+this commit also remove patch of postgres entrypoint .
+instead , a script
+was added to clear *-data.sql file if ignore_data=yes .

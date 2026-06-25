@@ -1,0 +1,7 @@
+dumps the yaml document into an extra environment property
+and uses a yamlconfigurationvalidator bean to validate
+it later in the application context .
+uses a snakeyaml constructor to bind the yml document
+to a configuration java bean ( uaaconfiguration for the uaa ) .
+the bean is annotated with basic jsr303 validation annotations
+for additional checking .

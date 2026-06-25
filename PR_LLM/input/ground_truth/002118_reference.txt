@@ -1,0 +1,5 @@
+r and friends from htsjdk .
+notable changes :
+a ) use of multiple downsampling strategies
+b ) now always include secondary and supplemental records with other records for a template
+c ) removed the option to discard unmapped reads ( better handled in other programs )

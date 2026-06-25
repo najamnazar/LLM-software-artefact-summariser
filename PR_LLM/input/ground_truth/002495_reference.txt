@@ -1,0 +1,4 @@
+added ` screenmappingratio ` setter and getter to ` arcballcamera ` , value is 0 ,
+setting this ratio to -0 accomodates the use case of looking at all sides small object
+from the outside , without having an environment to give context to the camera movement .
+values from -0 to 0 are accepted , setting to 0 locks the ` arcballcamera ` at the current orientation .

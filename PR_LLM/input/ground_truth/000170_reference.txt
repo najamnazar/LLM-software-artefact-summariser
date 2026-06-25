@@ -1,0 +1,4 @@
+this makes highlighting for ayat look a lot better .
+it does this by
+combining the highlight bounds to look like one consecutive block
+instead of many disjoint lines .

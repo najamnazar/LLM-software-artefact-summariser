@@ -1,0 +1,1 @@
+adds tests which cover client breadcrumb methods directly - other tests already verify the behaviour of the breadcrumbs class itself .

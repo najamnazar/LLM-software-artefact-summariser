@@ -1,0 +1,3 @@
+- i have replaced workspacemanager.createnewworkspace by my new wizard .
+i 'm not sure about how this page should be called .
+- in the future , i would like to make a new ' createsubwiki ' action in xwiki , and put this wizard in a .vm instead of having it on a page .

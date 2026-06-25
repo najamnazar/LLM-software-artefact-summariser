@@ -1,0 +1,5 @@
+this will allow enabling error prone on jdk 10+ ( after
+updating the net.ltgt.errorprone plugin ) , and is also a
+prerequisite to that plugin update .
+also remove net.ltgt.apt plugin , as gradle has native
+support for annotationprocessor .

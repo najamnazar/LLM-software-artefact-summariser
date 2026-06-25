@@ -1,0 +1,4 @@
+fix issue when validating the token 's issuer ( iss ) coming back from an external identity provider .
+previously the tokenurl was used as the value the issuer was compared against .
+this may not always be the case and so a new configuration item ( issuer ) .
+if ' issuer ' is set it will be used instead of the tokenurl .

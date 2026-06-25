@@ -1,0 +1,2 @@
+this commit adds a factory method to ` lookupresult ` which can be used by jackson to deserialize an instance of ` lookupresult ` from json .
+additionally , the derived field ' empty ' ( via ` lookupresult # isempty ( ) ` ) is being ignored and thus not part of the serialized or deserialized representation of ` lookupresult ` .

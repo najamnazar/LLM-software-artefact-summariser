@@ -1,0 +1,7 @@
+add code to update the styles of the rows when they are selected .
+also added
+code to so the all visible row are selected when clicked on the infinity sign
+and not all of the rows are selected and to deselected all row if all the rows
+are already selected .
+also updated the styling of the action bar and update the
+layout of the action bar .

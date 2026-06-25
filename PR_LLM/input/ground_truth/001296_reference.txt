@@ -1,0 +1,5 @@
+the verification checks are used in restart scenarios to help determine whether
+or not a change , such as creating a table , has already been applied .
+applying
+the schema change and updating the changelog table can not be done atomically
+so we need to do some extra work to make sure we are in a known , good state .

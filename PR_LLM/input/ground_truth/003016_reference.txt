@@ -1,0 +1,6 @@
+jbake explicitly supports adding complex metadata in the form of string
+encoded json objects .
+this support was missing from metadata sourced
+from native asciidoc headers .
+the support is only added for explicit
+' jbake- ' headers , to not interfere with normal asciidoc operation .

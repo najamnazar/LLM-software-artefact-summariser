@@ -1,0 +1,6 @@
+move the meta-inf folder defining the plugin structure into the
+resources directory to match the normal structure used by intellij
+plugins .
+furthermore , this allows the intellij code inspection to
+recognize the resources used in the plugin.xml file correctly .
+adds a plugin icon which will be displayed on the update site .

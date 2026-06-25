@@ -1,0 +1,4 @@
+adds a markdown version of the updated test
+script and workflows to github , so that it
+can be maintained by the entire team and reviewd
+by beta participants .

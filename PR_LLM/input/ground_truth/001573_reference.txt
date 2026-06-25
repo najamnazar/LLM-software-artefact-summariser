@@ -1,0 +1,1 @@
+bug fix - not to register trigger when the schedule is set , add feature to disable trigger status button when the nyxtrigger doesnot exist in the project pack , some ui updates etc

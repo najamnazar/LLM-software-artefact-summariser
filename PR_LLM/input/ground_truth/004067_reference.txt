@@ -1,0 +1,3 @@
+- cache.java , documentchange.java and revisioninternal.java - implemented missing methods
+- document.java - updated revisionadded ( ) method , and implemented missing method
+- database.java - implemented storageexitedtransaction and databasestoragechanged to notify document change during transaction , and also implemented missing method

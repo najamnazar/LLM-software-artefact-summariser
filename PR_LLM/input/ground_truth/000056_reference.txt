@@ -1,0 +1,6 @@
+we start a docker registry as a container and push to that .
+startup and teardown .
+at compile-time , but it 's hard to know what these parameters should be
+at compile-time .
+just do it the old-fashioned way with some code at the beginning and end
+of each pushit method .

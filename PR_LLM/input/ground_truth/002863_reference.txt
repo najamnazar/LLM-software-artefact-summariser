@@ -1,0 +1,6 @@
+when accumulo is configured to use kerberos for client authentication the
+administrative user is configured at security initialization .
+before this
+change the upgrade process would attempt to grant access to the system
+namespace to the ' root ' user rather than to the configured administrative
+user .

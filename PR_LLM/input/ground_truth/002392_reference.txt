@@ -1,0 +1,5 @@
+- add method for setting the typeface .
+- ~~remove the title 's top margin so that users can have less whitespace above the calendar if they want .
+instead add a nonzero default separation.~~
+- add option to hide the header row with week abbreviations .
+in our case we 'd like a global header row , not one for each month .

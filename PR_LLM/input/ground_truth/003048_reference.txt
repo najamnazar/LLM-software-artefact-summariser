@@ -1,0 +1,2 @@
+as looking up an empty string in the translations map wo n't ever result in a found translation and instead an exception is thrown that is of no use we instead pass empty string back .
+this is useful for example in the i18n macro of sirius-web as we very often use an empty string as default when no value is passed for an optional parameter .

@@ -1,0 +1,3 @@
+the original reason for this was that we expected a difference in cardinality of outputs between the task producing the output and the one consuming it .
+however , if we represent each entry in the collection as an indexed property , then unmatched cardinality will produce a different cache key anyway .
+thus there 's no need for this limitation .

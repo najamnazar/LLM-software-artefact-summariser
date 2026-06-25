@@ -1,0 +1,5 @@
+* point to the intellij 's guide .
+* users should be able to use import code style features instead .
+* advised against turning on ' remove unused suppress warning
+annotation ' option in the save actions plugin since it seems to be
+unreliable .

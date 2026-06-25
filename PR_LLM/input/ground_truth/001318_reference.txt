@@ -1,0 +1,4 @@
+filter range sliders now have the functionality to ' lock ' by value as well as percentage .
+this is set in the layer config file under property renderers [ ] .preservelegendrange = [ bool , bool ] .
+defaults to [ false , false ] .
+double clicking a filter slider handle will toggle the lock status .

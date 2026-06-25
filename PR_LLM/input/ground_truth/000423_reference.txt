@@ -1,0 +1,5 @@
+we had an issue where we were unable to click any items of the
+data grid .
+this was caused due to the ' no label ' container displaying
+over the data grid .
+adjusted the z-index to correct this .

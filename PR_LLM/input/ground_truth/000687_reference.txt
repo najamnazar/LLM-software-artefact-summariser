@@ -1,0 +1,4 @@
+allows implementers to customize or omit reporting a request trace to elasticsearch .
+to register one , implement the interface and place the canonical name of the
+implementation under ` meta-inf/services/org.stagemonitor.requestmonitor.reporter.elasticsearchrequesttracereporterinterceptor ` .
+would you prefer a registration method instead of the ` serviceloader ` mechanism

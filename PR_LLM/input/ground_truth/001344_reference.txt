@@ -1,0 +1,6 @@
+i moved the html stf classes from ui project to the new stf project .
+the
+saros eclipse project ( where the test are located ) now depends on the
+stf project .
+in addition i moved the intellijhtmlworkbenchbot to the stf
+project .

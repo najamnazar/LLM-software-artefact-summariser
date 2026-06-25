@@ -1,0 +1,2 @@
+the read status of the discussion thread object and row is immediately set to true upon row click , pending the response from the patch request .
+this provides immediate feedback to the user , though it might possibly be reverted later if the server returns an error for some reason or the request takes too long or times out .

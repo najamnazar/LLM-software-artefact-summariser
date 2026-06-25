@@ -1,0 +1,8 @@
+introduces a new configuration option gracefuldrainhealthwaitseconds
+which allows priam controlled stops to fail healthchecks for a
+configurable number of seconds before draining ( via nodetool drain ) and
+stopping cassandra ( via the stop script ) .
+for backwards compatibility
+this functionality is _disabled_ by default .
+if you want it change the
+configuration to a positive number .

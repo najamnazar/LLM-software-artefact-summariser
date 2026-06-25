@@ -1,0 +1,8 @@
+fixes :
+- if the export package is also imported , also display the import range .
+- change the search to look in source classpath entries rather than all
+package fragment roots which can be larger .
+also make sure to clear
+any property on packages outside of source path .
+- only decorate package in bndtools nature projects .
+- updated test.decoration project

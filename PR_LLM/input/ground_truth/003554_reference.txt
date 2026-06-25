@@ -1,0 +1,7 @@
+for many historical uses at netflix , the 0 status code
+is used to indicate throttling to the client .
+the ` ipcstatus `
+helper now maps ` 0 ` to ` throttled ` by default .
+a new
+method ` withhttpstatusstandard ` that follows the rfc more
+closely .

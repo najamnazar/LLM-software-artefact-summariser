@@ -1,0 +1,111 @@
+{
+  "PR_GPT_SUMMARY": {
+    "count": 150,
+    "avg_bert_precision": 0.8383069928487142,
+    "avg_bert_recall": 0.8570542375246684,
+    "avg_bert_f1": 0.8474145634969076,
+    "avg_cosine_similarity": 0.3798974948774836,
+    "rubric_evaluation": {
+      "accuracy_avg_points": 2.4712,
+      "accuracy_entries": 104,
+      "adequacy_avg_points": 2.5865,
+      "adequacy_entries": 133,
+      "conciseness_avg_points": 2.4122,
+      "conciseness_entries": 131,
+      "context_awareness_avg_points": 2.4574,
+      "context_awareness_entries": 94,
+      "clarity_avg_points": 2.3636,
+      "clarity_entries": 132,
+      "total_rubric_points": 1460,
+      "overall_avg_points": 2.4579
+    }
+  },
+  "PR_QWEN_SUMMARY": {
+    "count": 150,
+    "avg_bert_precision": 0.8490998796621958,
+    "avg_bert_recall": 0.8647132909297943,
+    "avg_bert_f1": 0.856565336783727,
+    "avg_cosine_similarity": 0.39977386148465005,
+    "rubric_evaluation": {
+      "accuracy_avg_points": 2.8077,
+      "accuracy_entries": 104,
+      "adequacy_avg_points": 2.7519,
+      "adequacy_entries": 133,
+      "conciseness_avg_points": 2.6183,
+      "conciseness_entries": 131,
+      "context_awareness_avg_points": 2.9681,
+      "context_awareness_entries": 94,
+      "clarity_avg_points": 2.7803,
+      "clarity_entries": 132,
+      "total_rubric_points": 1647,
+      "overall_avg_points": 2.7727
+    }
+  },
+  "PR_CLAUDE_SUMMARY": {
+    "count": 150,
+    "avg_bert_precision": 0.822606649796168,
+    "avg_bert_recall": 0.8618256505330404,
+    "avg_bert_f1": 0.8415939195950826,
+    "avg_cosine_similarity": 0.43140514223075077,
+    "rubric_evaluation": {
+      "accuracy_avg_points": 3.0673,
+      "accuracy_entries": 104,
+      "adequacy_avg_points": 2.9624,
+      "adequacy_entries": 133,
+      "conciseness_avg_points": 2.7176,
+      "conciseness_entries": 131,
+      "context_awareness_avg_points": 2.8617,
+      "context_awareness_entries": 94,
+      "clarity_avg_points": 2.9697,
+      "clarity_entries": 132,
+      "total_rubric_points": 1730,
+      "overall_avg_points": 2.9125
+    }
+  },
+  "PR_MISTRAL_SUMMARY": {
+    "count": 150,
+    "avg_bert_precision": 0.8423639484246572,
+    "avg_bert_recall": 0.8596447412172953,
+    "avg_bert_f1": 0.8506861380736033,
+    "avg_cosine_similarity": 0.36804998674999523,
+    "rubric_evaluation": {
+      "accuracy_avg_points": 1.6538,
+      "accuracy_entries": 104,
+      "adequacy_avg_points": 1.6992,
+      "adequacy_entries": 133,
+      "conciseness_avg_points": 2.2519,
+      "conciseness_entries": 131,
+      "context_awareness_avg_points": 1.7128,
+      "context_awareness_entries": 94,
+      "clarity_avg_points": 1.8864,
+      "clarity_entries": 132,
+      "total_rubric_points": 1103,
+      "overall_avg_points": 1.8569
+    }
+  },
+  "rubric_evaluation_meta": {
+    "judge_model": "meta-llama/llama-4-maverick",
+    "criteria": [
+      "accuracy",
+      "adequacy",
+      "conciseness",
+      "context_awareness",
+      "clarity"
+    ],
+    "criteria_descriptions": {
+      "accuracy": "Accuracy: Does the description correctly represent the changes in the pull request?",
+      "adequacy": "Adequacy: Does the description cover the main aspects of the change?",
+      "conciseness": "Conciseness: Is the description brief while still conveying the essential information?",
+      "context_awareness": "Context Awareness: Does the description reflect relevant information from the PR context (e.g., commits, rationale)?",
+      "clarity": "Clarity: Is the description easy for reviewers to understand?"
+    },
+    "total_entries_evaluated": 150,
+    "models_compared": [
+      "PR_GPT_SUMMARY",
+      "PR_QWEN_SUMMARY",
+      "PR_CLAUDE_SUMMARY",
+      "PR_MISTRAL_SUMMARY"
+    ],
+    "ranking_system": "1st=4pts, 2nd=3pts, 3rd=2pts, 4th=1pt"
+  }
+}

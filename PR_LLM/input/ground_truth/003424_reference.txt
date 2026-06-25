@@ -1,0 +1,2 @@
+allow the fastforwardreporter to be configured with additional attributes ( key-value pairs to send in each metric ) that might change at runtime .
+set up the agentservice to report the version of docker via the docker-client as an additional attribute in fastforwardreporter .

@@ -1,0 +1,4 @@
+- [ x ] gebruik een dependency management sectie in de parent pom om alle versie te zetten
+- [ x ] zet scope voor postgres en oracle jdbc drivers op provided
+- [ x ] sluit oracle jdbc driver uit van packaging en dus distributie in de brmo-loader command line tool
+**nb** voor de command-line loader moet je dus een oracle jdbc driver in de classpath opnemen

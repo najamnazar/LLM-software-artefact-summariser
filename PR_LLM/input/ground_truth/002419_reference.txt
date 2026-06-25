@@ -1,0 +1,6 @@
+corfu server daemon uses a shell script wrapper to launch the java
+program .
+when the daemon exits , the java program is still running ,
+so the init script ca n't stop corfu server .
+this patch tries to find and terminate the java program so corfu
+server will be stopped properly .

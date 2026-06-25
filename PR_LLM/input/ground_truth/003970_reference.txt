@@ -1,0 +1,7 @@
+the responsebuilder ' guesses ' the best mimetype for the response by
+interpreting the accept headers from the request .
+when the client
+sets no preferation and xml is valid , the response will be interpreted
+as xml .
+if ff does n't find the xml root element in this case , which happens
+when the response is empty , a console error is printed out .

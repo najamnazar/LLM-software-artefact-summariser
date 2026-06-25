@@ -1,0 +1,9 @@
+- the legacy pattern matcher relied on determining bound entities at
+runtime by inspecting the execution context in a way not compatible
+with slottedexecutioncontext .
+this introduces a new method
+` boundentities ` on executioncontext , with an
+implementation that also works for slottedexecutioncontext .
+- we now also do slot allocation for the projection expression in
+a nestedplanexpression , since it can contain more nested
+plan expressions .

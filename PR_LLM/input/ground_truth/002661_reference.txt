@@ -1,0 +1,5 @@
+the problem here is that the ` repotemplatecontentprovider.getfirsttemplate `
+method returns ( aptly ) the first template , but that template might be
+filtered out by the ` viewerfilter ` associated with the ` treeviewer ` .
+so we jump through a few hoops to filter the ` contentprovider ` contents so
+that we select the first _visible_ template in the ` treeviewer ` .

@@ -1,0 +1,4 @@
+refactor out match hasteam ( ) to apply the fix everywhere .
+refactor out red/blue alliance/teams/score getters .
+( i almost made them instance methods but adjusting the exception-handling code would not be as local . )
+use the existing match # hasbeenplayed ( ) method .

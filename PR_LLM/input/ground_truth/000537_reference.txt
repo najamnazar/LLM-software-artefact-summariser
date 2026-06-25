@@ -1,0 +1,7 @@
+this appender wraps an avroappender and a parquetappender to provide
+durability by writing to avro in tandem with writing parquet files
+directly .
+after the file is closed , the avro copy is removed in a new
+cleanup phase in the appender .
+any failure requires recovery using the
+avro files .

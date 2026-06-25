@@ -1,0 +1,5 @@
+pom cleanup
+- removed redundant dependency declarations
+- moved log4j and slf4j-over-log4j to test scope , otherwise they end up in the jax-rs implementations war files
+- removed codehaus jackson from jax-rs version war file
+eliminate as much duplicated code as possible between jax-rs implementations .

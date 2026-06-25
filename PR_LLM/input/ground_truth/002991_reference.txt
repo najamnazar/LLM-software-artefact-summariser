@@ -1,0 +1,4 @@
+restore possibility of executing snapshot queries over bolt endpoint .
+do not expect results of specific type in transactionstatemachinespi .
+introduce interface that marks result that can supply queryresult instead .
+add additional rest endpoint integration test for snapshot execution .

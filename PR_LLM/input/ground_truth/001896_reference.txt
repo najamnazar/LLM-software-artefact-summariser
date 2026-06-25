@@ -1,0 +1,2 @@
+- moves up ' tdes ' signature to smadapter , deprecating actual signature .
+- adds exportpin to dukpt to assist in creating a pinblock to be used in a simulated client app ( eftpos device )

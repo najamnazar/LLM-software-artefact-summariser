@@ -1,0 +1,3 @@
+lots of unit tests assume that no ssh connection will be established when testing localhost entities .
+the addition of ` copy-pre-install-resources ` breaks the tests if local ssh is not configured properly .
+create install dir only if there are resources to copy ( and therefore the test expects it will try to ssh ) .

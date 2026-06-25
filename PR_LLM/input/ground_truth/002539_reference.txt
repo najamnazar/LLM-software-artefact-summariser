@@ -1,0 +1,6 @@
+fixed selecting snow blocks as a water source not working when they
+are more than 0 blocks away
+fixed densityshift turning lava into sand when you land softly
+fixed iceblast not working on tempblocks
+added firemanip particle options to config
+also removed a sneaky debug message

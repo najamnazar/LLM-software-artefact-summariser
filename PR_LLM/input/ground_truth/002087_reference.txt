@@ -1,0 +1,13 @@
+this commit deprecates some leniency from rest handling where we move to deprecate all requests that have a body where the body is not used during the course of handling the request .
+for example ,
+`` `
+delete /index
+{
+' query ' : {
+' term ' : {
+' field ' : ' value '
+}
+}
+}
+`` `
+is now deprecated .

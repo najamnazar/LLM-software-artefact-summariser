@@ -1,0 +1,3 @@
+... required to service the current request rather than all states transitively accessible from the state being registered .
+also improved de-registering logic to take into account that 0 states can be mapped to the same path based on different methods e.g .
+/path post vs. /path get .

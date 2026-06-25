@@ -1,0 +1,7 @@
+the sitemapapp outputs pages whose visibility depends on the user 's roles ,
+and not on her name .
+keying the cache on the role list should improve significantly
+the cache hit ratio when the site is accessed by authenticated users .
+add a test checking that page visibility is respected , and that the cache returns
+the same page content for the same role combination .
+adapt and reuse mokeluteceauthentication .

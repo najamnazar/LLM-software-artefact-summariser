@@ -1,0 +1,6 @@
+delete and close index actions threw illegalargumentexceptions when
+attempting to run against an index that has a snapshot in progress .
+this change introduces a dedicated snapshotinprogressexception for
+these scenarios .
+this is done to explicitly signal to clients that
+this is the reason the action failed , and it is a retryable error .

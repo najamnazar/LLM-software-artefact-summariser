@@ -1,0 +1,6 @@
+this pr exposes listen sockets to the channelz service .
+these sockets are not in the set of sockets discoverable via
+` getserversockets ` .
+server listen sockets differ from normal sockets in that only have
+a local address and socket options .
+fixed an issue of socket addresses not reporting the port .
