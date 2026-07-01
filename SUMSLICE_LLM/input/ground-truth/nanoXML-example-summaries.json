@@ -1,0 +1,156 @@
+{
+  "configFile": "nanoXML-example.xml",
+  "summaryCount": 25,
+  "summaries": [
+    {
+      "methodId": 414,
+      "methodName": "read",
+      "className": "IXMLReader",
+      "summary": "This method reads the IXML reader and returns a char. That char is used by methods that processes the element and that processes the doc type. Read() seems far more important than average because it is called by 7 methods. The method can be used in a procedural statement ; for example: \"if (!XMLUtil.checkLiteral(this.reader,\"OCTYPE\")) {\"."
+    },
+    {
+      "methodId": 417,
+      "methodName": "unread",
+      "className": "IXMLReader",
+      "summary": "This method handles the unread. Return data is used by a method that processes the entity. Return data is used by a method that processes the att list. Unread() seems far more important than average because it is called by 10 methods. The method can be used in a procedural statement ; for example: \"reader.unread(ch);\"."
+    },
+    {
+      "methodId": 263,
+      "methodName": "findAttribute",
+      "className": "XMLElement",
+      "summary": "This method finds the attribute and returns a XMLAttribute. That XMLAttribute is used by methods that gets the attribute and that gets the attribute. FindAttribute() seems far more important than average because it is called by 10 methods."
+    },
+    {
+      "methodId": 264,
+      "methodName": "findAttribute",
+      "className": "XMLElement",
+      "summary": "This method finds the attribute and returns a XMLAttribute. FindAttribute() seems far more important than average because it is not called by any methods."
+    },
+    {
+      "methodId": 418,
+      "methodName": "getLineNr",
+      "className": "IXMLReader",
+      "summary": "This method gets the line nr and returns an int. That int is used by methods that scans the data and that opens the external entity. GetLineNr() seems far more important than average because it is called by 10 methods. The method can be used in a procedural statement ; for example: \"throw new XMLParseException(parentSystemID,xmlReader.getLineNr(),\"Could not open external entity \" + \"at system ID: \" + systemID);\"."
+    },
+    {
+      "methodId": 425,
+      "methodName": "getSystemID",
+      "className": "IXMLReader",
+      "summary": "This method gets the system ID and returns a String. That String is used by methods that scans the data and that opens the external entity. GetSystemID() seems far more important than average because it is called by 10 methods. The method can be used in an assignment statement ; for example: \"String parentSystemID=xmlReader.getSystemID();\"."
+    },
+    {
+      "methodId": 215,
+      "methodName": "getNamespace",
+      "className": "XMLAttribute",
+      "summary": "This method gets the namespace and returns a String. That String is used by methods that finds the attribute and that finds the attribute. GetNamespace() seems far more important than average because it is called by 7 methods. The method can be used in a procedural statement ; for example: \"found&=(attr.getNamespace() == null);\"."
+    },
+    {
+      "methodId": 231,
+      "methodName": "PCDataAdded",
+      "className": "IXMLValidator",
+      "summary": "This method handles the data added. Return data is used by some methods that processes the element. Return data is used by some methods that processes the CDATA. PCDataAdded() seems far more important than average because it is called by 3 methods. The method can be used in a procedural statement ; for example: \"this.validator.PCDataAdded(this.reader.getSystemID(),this.reader.getLineNr());\"."
+    },
+    {
+      "methodId": 229,
+      "methodName": "attributeAdded",
+      "className": "IXMLValidator",
+      "summary": "This method handles the attribute added. Return data is used by some methods that processes the attribute. Return data is used by some methods that handles the attribute added. AttributeAdded() seems far more important than average because it is called by 2 methods. The method can be used in a procedural statement ; for example: \"this.validator.attributeAdded(key,value,this.reader.getSystemID(),this.reader.getLineNr());\"."
+    },
+    {
+      "methodId": 226,
+      "methodName": "parseDTD",
+      "className": "IXMLValidator",
+      "summary": "This method parses the DTD. Return data is used by a method that parses the DTD. Return data is used by a method that processes the doc type. ParseDTD() seems far more important than average because it is called by 2 methods. The method can be used in a procedural statement ; for example: \"this.validator.parseDTD(publicID.toString(),this.reader,this.entityResolver,false);\"."
+    },
+    {
+      "methodId": 227,
+      "methodName": "elementStarted",
+      "className": "IXMLValidator",
+      "summary": "This method handles the element started. Return data is used by some methods that processes the element. Return data is used by some methods that handles the element started. ElementStarted() seems far more important than average because it is called by 2 methods. The method can be used in a procedural statement ; for example: \"this.validator.elementStarted(fullName,this.reader.getSystemID(),this.reader.getLineNr());\"."
+    },
+    {
+      "methodId": 228,
+      "methodName": "elementEnded",
+      "className": "IXMLValidator",
+      "summary": "This method handles the element ended. Return data is used by some methods that handles the element ended. Return data is used by some methods that processes the element. ElementEnded() seems far more important than average because it is called by 2 methods. The method can be used in a procedural statement ; for example: \"this.validator.elementEnded(name,this.reader.getSystemID(),this.reader.getLineNr());\"."
+    },
+    {
+      "methodId": 230,
+      "methodName": "elementAttributesProcessed",
+      "className": "IXMLValidator",
+      "summary": "This method handles the element attributes processed. Return data is used by some methods that handles the element attributes processed. Return data is used by some methods that processes the element. ElementAttributesProcessed() seems far more important than average because it is called by 2 methods. The method can be used in a procedural statement ; for example: \"this.validator.elementAttributesProcessed(fullName,extraAttributes,this.reader.getSystemID(),this.reader.getLineNr());\"."
+    },
+    {
+      "methodId": 224,
+      "methodName": "setParameterEntityResolver",
+      "className": "IXMLValidator",
+      "summary": "This method sets the parameter entity resolver. Return data is used by some methods that sets the parameter entity resolver. SetParameterEntityResolver() seems far more important than average because it is called by 1 method. The method can be used in a procedural statement ; for example: \"this.delegate.setParameterEntityResolver(resolver);\"."
+    },
+    {
+      "methodId": 225,
+      "methodName": "getParameterEntityResolver",
+      "className": "IXMLValidator",
+      "summary": "This method gets the parameter entity resolver and returns an IXMLEntityResolver. That IXMLEntityResolver is used by a method that gets the parameter entity resolver. GetParameterEntityResolver() seems far more important than average because it is called by 1 method. The method can be used in a procedural statement ; for example: \"return this.delegate.getParameterEntityResolver();\"."
+    },
+    {
+      "methodId": 288,
+      "methodName": "equalsXMLElement",
+      "className": "XMLElement",
+      "summary": "This method equals the EQUIV[XML element IXML element and returns a boolean. That boolean is used by some methods that equals the object. EqualsXMLElement() seems far more important than average because it is called by 1 method. The method can be used in a procedural statement ; for example: \"return this.equalsXMLElement((IXMLElement)rawElement);\"."
+    },
+    {
+      "methodId": 402,
+      "methodName": "finalize",
+      "className": "XMLException",
+      "summary": "This method finalizes the XML exception. Return data is used by some methods that finalizes the XML validation exception. Finalize() seems far more important than average because it is called by 1 method. The method can be used in a procedural statement ; for example: \"super.finalize();\"."
+    },
+    {
+      "methodId": 213,
+      "methodName": "getFullName",
+      "className": "XMLAttribute",
+      "summary": "This method gets the full name and returns a String. That String is used by methods that finds the attribute and that finds the attribute. GetFullName() seems far more important than average because it is called by 6 methods."
+    },
+    {
+      "methodId": 214,
+      "methodName": "getName",
+      "className": "XMLAttribute",
+      "summary": "This method gets the name and returns a String. That String is used by methods that finds the attribute and that finds the attribute. GetName() seems far more important than average because it is called by 6 methods. The method can be used in an assignment statement ; for example: \"boolean found=attr.getName().equals(name);\"."
+    },
+    {
+      "methodId": 56,
+      "methodName": "getName",
+      "className": "IXMLElement",
+      "summary": "This method gets the name and returns a String. That String is used by methods that equals the EQUIV[XML element IXML element and that writes the (NM) xml. GetName() seems far more important than average because it is called by 10 methods. The method can be used in a procedural statement ; for example: \"if (!this.name.equals(elt.getName())) {\"."
+    },
+    {
+      "methodId": 218,
+      "methodName": "getType",
+      "className": "XMLAttribute",
+      "summary": "This method gets the type and returns a String. That String is used by methods that gets the attribute type and that equals the EQUIV[XML element IXML element. GetType() seems far more important than average because it is called by 3 methods. The method can be used in a procedural statement ; for example: \"if (!attr.getType().equals(type)) {\"."
+    },
+    {
+      "methodId": 216,
+      "methodName": "getValue",
+      "className": "XMLAttribute",
+      "summary": "This method gets the value and returns a String. That String is used by methods that gets the attribute and that equals the EQUIV[XML element IXML element. GetValue() seems far more important than average because it is called by 8 methods. The method can be used in a procedural statement ; for example: \"if (!attr.getValue().equals(value)) {\"."
+    },
+    {
+      "methodId": 94,
+      "methodName": "setContent",
+      "className": "IXMLElement",
+      "summary": "This method sets the content. Return data is used by some methods that adds the PC data. Return data is used by some methods that ends the element. SetContent() seems far more important than average because it is called by 4 methods. The method can be used in a procedural statement ; for example: \"lastChild.setContent(lastChild.getContent() + child.getContent());\"."
+    },
+    {
+      "methodId": 93,
+      "methodName": "getContent",
+      "className": "IXMLElement",
+      "summary": "This method gets the content and returns a String. That String is used by methods that writes the (NM) xml and that writes the (NM) xml. GetContent() seems far more important than average because it is called by 7 methods. The method can be used in an assignment statement ; for example: \"if (xml.getContent() != null) {\"."
+    },
+    {
+      "methodId": 160,
+      "methodName": "startNewStream",
+      "className": "StdXMLReader",
+      "summary": "This method starts the new stream. Return data is used by some methods that starts the new stream. Return data is used by some methods that starts the new stream. StartNewStream() seems far more important than average because it is called by 2 methods."
+    }
+  ]
+}

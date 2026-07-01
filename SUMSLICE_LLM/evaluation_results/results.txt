@@ -1,0 +1,64 @@
+
+============================================================
+SUMSLICE LLM EVALUATION — 2026-07-01 12:58:13
+============================================================
+
+Claude
+  Methods Evaluated:  138
+  Avg Cosine:         0.2068
+  Avg BERT Precision: 0.8633
+  Avg BERT Recall:    0.8434
+  Avg BERT F1:        0.8530
+
+GPT
+  Methods Evaluated:  138
+  Avg Cosine:         0.2252
+  Avg BERT Precision: 0.8700
+  Avg BERT Recall:    0.8542
+  Avg BERT F1:        0.8619
+
+Mistral
+  Methods Evaluated:  138
+  Avg Cosine:         0.2207
+  Avg BERT Precision: 0.8667
+  Avg BERT Recall:    0.8502
+  Avg BERT F1:        0.8582
+
+Qwen
+  Methods Evaluated:  138
+  Avg Cosine:         0.2448
+  Avg BERT Precision: 0.8753
+  Avg BERT Recall:    0.8482
+  Avg BERT F1:        0.8614
+
+============================================================
+SUMSLICE LLM EVALUATION — 2026-07-01 13:11:22
+============================================================
+
+Claude
+  Methods Evaluated:  150
+  Avg Cosine:         0.2038
+  Avg BERT Precision: 0.8630
+  Avg BERT Recall:    0.8439
+  Avg BERT F1:        0.8532
+
+GPT
+  Methods Evaluated:  150
+  Avg Cosine:         0.2233
+  Avg BERT Precision: 0.8691
+  Avg BERT Recall:    0.8544
+  Avg BERT F1:        0.8616
+
+Mistral
+  Methods Evaluated:  150
+  Avg Cosine:         0.2205
+  Avg BERT Precision: 0.8668
+  Avg BERT Recall:    0.8511
+  Avg BERT F1:        0.8587
+
+Qwen
+  Methods Evaluated:  150
+  Avg Cosine:         0.2430
+  Avg BERT Precision: 0.8747
+  Avg BERT Recall:    0.8486
+  Avg BERT F1:        0.8613

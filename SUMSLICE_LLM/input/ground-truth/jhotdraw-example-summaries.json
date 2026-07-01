@@ -1,0 +1,156 @@
+{
+  "configFile": "jhotdraw-example.xml",
+  "summaryCount": 25,
+  "summaries": [
+    {
+      "methodId": 1286,
+      "methodName": "ZoomDrawingView",
+      "className": "ZoomDrawingView",
+      "summary": "This method creates the zoom drawing view and returns a zoomdrawingview. ZoomDrawingView() seems less important than average because it is not called by any methods."
+    },
+    {
+      "methodId": 274,
+      "methodName": "getComponent",
+      "className": "ComponentFigure",
+      "summary": "This method gets the component and returns a Component. GetComponent() seems less important than average because it is called by 1 method. The method can be used in a procedural statement ; for example: \"getComponent().setBounds(displayBox());\"."
+    },
+    {
+      "methodId": 3339,
+      "methodName": "getPrototypeFigure",
+      "className": "CreationTool",
+      "summary": "This method gets the prototype figure and returns a Figure. GetPrototypeFigure() seems less important than average because it is called by 1 method. The method can be used in a procedural statement ; for example: \"if (getPrototypeFigure() == null) {\"."
+    },
+    {
+      "methodId": 2928,
+      "methodName": "findConnectionTarget",
+      "className": "ConnectionHandle",
+      "summary": "This method finds the connection target and returns a Connector. FindConnectionTarget() seems less important than average because it is called by 2 methods. The method can be used in an assignment statement ; for example: \"Connector target=findConnectionTarget(x,y,view.drawing());\"."
+    },
+    {
+      "methodId": 2571,
+      "methodName": "keyTyped",
+      "className": "StandardDrawingView",
+      "summary": "This method handles the key typed. KeyTyped() seems less important than average because it is not called by any methods."
+    },
+    {
+      "methodId": 1659,
+      "methodName": "getTypingTarget",
+      "className": "TextTool",
+      "summary": "This method gets the typing target and returns a TextHolder. GetTypingTarget() seems less important than average because it is called by 5 methods. The method can be used in a procedural statement ; for example: \"return new TextTool.UndoActivity(view(),getTypingTarget().getText());\"."
+    },
+    {
+      "methodId": 1177,
+      "methodName": "AttributeFigureContentProducer",
+      "className": "AttributeFigureContentProducer",
+      "summary": "This method creates the attribute figure content producer and returns an attributefigurecontentproducer. AttributeFigureContentProducer() seems less important than average because it is not called by any methods."
+    },
+    {
+      "methodId": 5931,
+      "methodName": "commandExecuted",
+      "className": "UndoableCommand",
+      "summary": "This method handles the command executed. CommandExecuted() seems less important than average because it is not called by any methods."
+    },
+    {
+      "methodId": 1014,
+      "methodName": "setURL",
+      "className": "URLContentProducer",
+      "summary": "This method sets the URL. SetURL() seems less important than average because it is called by 1 method. The method can be used in a procedural statement ; for example: \"setURL(new URL(dr.readString()));\"."
+    },
+    {
+      "methodId": 4800,
+      "methodName": "NullToolTest",
+      "className": "NullToolTest",
+      "summary": "This method creates the null tool test and returns a nulltooltest. NullToolTest() seems less important than average because it is not called by any methods."
+    },
+    {
+      "methodId": 366,
+      "methodName": "getCommand",
+      "className": "CommandMenuItem",
+      "summary": "This method gets the command and returns a Command. GetCommand() seems less important than average because it is called by 1 method. The method can be used in a procedural statement ; for example: \"getCommand().execute();\"."
+    },
+    {
+      "methodId": 342,
+      "methodName": "invokeEnd",
+      "className": "TriangleRotationHandle",
+      "summary": "This method invokes the end. InvokeEnd() seems less important than average because it is not called by any methods."
+    },
+    {
+      "methodId": 1089,
+      "methodName": "markFontDirty",
+      "className": "HTMLTextAreaFigure",
+      "summary": "This method marks the font dirty. MarkFontDirty() seems less important than average because it is called by 1 method. The method can be used in a procedural statement ; for example: \"markFontDirty();\"."
+    },
+    {
+      "methodId": 2534,
+      "methodName": "selectionHandles",
+      "className": "StandardDrawingView",
+      "summary": "This method gets the selection handles and returns a HandleEnumeration. SelectionHandles() seems less important than average because it is called by 2 methods. The method can be used in an assignment statement ; for example: \"HandleEnumeration he=selectionHandles();\"."
+    },
+    {
+      "methodId": 2746,
+      "methodName": "deactivate",
+      "className": "AbstractTool",
+      "summary": "This method deactivates the abstract tool. Deactivate() seems less important than average because it is called by 9 methods. The method can be used in a procedural statement ; for example: \"super.deactivate();\"."
+    },
+    {
+      "methodId": 5548,
+      "methodName": "setUp",
+      "className": "ClipboardTest",
+      "summary": "This method sets up the clipboard test. SetUp() seems less important than average because it is not called by any methods."
+    },
+    {
+      "methodId": 297,
+      "methodName": "createUndoActivity",
+      "className": "PolygonScaleHandle",
+      "summary": "This method creates the undo activity and returns an Undoable. CreateUndoActivity() seems less important than average because it is called by 1 method. The method can be used in an assignment statement ; for example: \"PolygonScaleHandle.UndoActivity activity=(PolygonScaleHandle.UndoActivity)createUndoActivity(view);\"."
+    },
+    {
+      "methodId": 6123,
+      "methodName": "addStorageFormat",
+      "className": "StorageFormatManager",
+      "summary": "This method adds the storage format storage format -. AddStorageFormat() seems less important than average because it is called by 1 method. The method can be used in a procedural statement ; for example: \"storageFormatManager.addStorageFormat(format);\"."
+    },
+    {
+      "methodId": 2321,
+      "methodName": "createButtons",
+      "className": "JavaDrawApplet",
+      "summary": "This method creates the buttons. CreateButtons() seems less important than average because it is not called by any methods."
+    },
+    {
+      "methodId": 5925,
+      "methodName": "setUndoActivity",
+      "className": "UndoableCommand",
+      "summary": "This method sets the undo activity. SetUndoActivity() seems less important than average because it is not called by any methods."
+    },
+    {
+      "methodId": 4777,
+      "methodName": "StandardFigureSelectionTest",
+      "className": "StandardFigureSelectionTest",
+      "summary": "This method creates the standard figure selection test and returns a standardfigureselectiontest. StandardFigureSelectionTest() seems less important than average because it is not called by any methods."
+    },
+    {
+      "methodId": 2548,
+      "methodName": "drawingInvalidated",
+      "className": "StandardDrawingView",
+      "summary": "This method handles the drawing invalidated. DrawingInvalidated() seems less important than average because it is not called by any methods."
+    },
+    {
+      "methodId": 5040,
+      "methodName": "testVault",
+      "className": "OffsetLocatorTest",
+      "summary": "This method tests the vault. TestVault() seems less important than average because it is not called by any methods."
+    },
+    {
+      "methodId": 3380,
+      "methodName": "findConnectableFigure",
+      "className": "ChangeConnectionHandle",
+      "summary": "This method finds the connectable figure and returns a Figure. FindConnectableFigure() seems less important than average because it is called by 2 methods. The method can be used in an assignment statement ; for example: \"Figure target=findConnectableFigure(x,y,drawing);\"."
+    },
+    {
+      "methodId": 70,
+      "methodName": "createAlignmentMenu",
+      "className": "DrawApplication",
+      "summary": "This method creates the alignment menu and returns a JMenu. CreateAlignmentMenu() seems less important than average because it is not called by any methods."
+    }
+  ]
+}

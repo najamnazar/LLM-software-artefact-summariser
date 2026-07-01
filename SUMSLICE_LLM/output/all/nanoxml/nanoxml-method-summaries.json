@@ -1,0 +1,1720 @@
+{
+  "summaries": [
+    {
+      "id": 0,
+      "name": "CDATAReader",
+      "class": "CDATAReader",
+      "summary": "This constructor creates a new CDATAReader instance, intended for reading CDATA sections in XML documents, and is used when a specialized reader for CDATA content is needed."
+    },
+    {
+      "id": 1,
+      "name": "finalize",
+      "class": "CDATAReader",
+      "summary": "This method is intended to perform cleanup operations before the CDATAReader object is garbage collected, typically used to release resources. It is automatically called by the Java Virtual Machine when the object is no longer reachable."
+    },
+    {
+      "id": 2,
+      "name": "read",
+      "class": "CDATAReader",
+      "summary": "This method is intended to read a value from the CDATAReader. It is used when you need to extract data from a CDATA section in an XML document."
+    },
+    {
+      "id": 3,
+      "name": "close",
+      "class": "CDATAReader",
+      "summary": "This method is intended to close the CDATAReader and release any associated resources. It should be used when the reader is no longer needed to ensure proper cleanup."
+    },
+    {
+      "id": 4,
+      "name": "ContentReader",
+      "class": "ContentReader",
+      "summary": "This method creates a new ContentReader instance, intended for reading content with specified parameters. It is used when a new reader needs to be initialized with a given reader, entity resolver, and buffer string."
+    },
+    {
+      "id": 5,
+      "name": "finalize",
+      "class": "ContentReader",
+      "summary": "This method is intended to perform cleanup operations before the ContentReader object is garbage collected. It is typically used in the context of resource management to release resources that the ContentReader might be holding."
+    },
+    {
+      "id": 6,
+      "name": "read",
+      "class": "ContentReader",
+      "summary": "This method is intended to read a value and return it as an integer. It is used within the ContentReader class, and its specific usage context is currently unknown."
+    },
+    {
+      "id": 7,
+      "name": "close",
+      "class": "ContentReader",
+      "summary": "This method is intended to close the current content reader and release any associated resources. It should be used when the content reader is no longer needed, such as when finishing processing a file or stream."
+    },
+    {
+      "id": 8,
+      "name": "startBuilding",
+      "class": "IXMLBuilder",
+      "summary": "This method is intended to initiate the building process of an XML structure. It is used when you need to begin constructing an XML document using the IXMLBuilder class."
+    },
+    {
+      "id": 9,
+      "name": "newProcessingInstruction",
+      "class": "IXMLBuilder",
+      "summary": "This method is intended to create a new processing instruction in an XML document. It is used within the IXMLBuilder class to construct XML content."
+    },
+    {
+      "id": 10,
+      "name": "startElement",
+      "class": "IXMLBuilder",
+      "summary": "This method is intended to initiate the creation of a new XML element. It is used when constructing XML documents programmatically."
+    },
+    {
+      "id": 11,
+      "name": "addAttribute",
+      "class": "IXMLBuilder",
+      "summary": "This method is intended to add an attribute to an XML element being built. It is used within the IXMLBuilder class for constructing XML structures."
+    },
+    {
+      "id": 12,
+      "name": "elementAttributesProcessed",
+      "class": "IXMLBuilder",
+      "summary": "This method is intended to process attributes of an XML element, likely used during XML document construction or parsing. It is part of the IXMLBuilder class, which suggests it may be used in contexts where XML elements are being built or manipulated."
+    },
+    {
+      "id": 13,
+      "name": "endElement",
+      "class": "IXMLBuilder",
+      "summary": "This method is intended to close or finalize an XML element within a document. It is used in the context of building or manipulating XML structures."
+    },
+    {
+      "id": 14,
+      "name": "addPCData",
+      "class": "IXMLBuilder",
+      "summary": "This method is intended to add PCData (parsed character data) to an XML structure. It is used within the IXMLBuilder class for constructing XML documents."
+    },
+    {
+      "id": 15,
+      "name": "getResult",
+      "class": "IXMLBuilder",
+      "summary": "This method is intended to retrieve the result object constructed by the XML builder. It is typically used after building or parsing XML data to obtain the final result."
+    },
+    {
+      "id": 16,
+      "name": "createPCDataElement",
+      "class": "IXMLElement",
+      "summary": "This method is intended to create a new PCData (Parsed Character Data) element in an XML document. It is typically used when a developer needs to insert raw text content that should not be parsed as markup."
+    },
+    {
+      "id": 17,
+      "name": "createElement",
+      "class": "IXMLElement",
+      "summary": "This method is intended to create a new XML element. It is used within the context of XML document manipulation."
+    },
+    {
+      "id": 18,
+      "name": "createElement",
+      "class": "IXMLElement",
+      "summary": "This method is intended to create a new XML element. It is used when you need to generate or manipulate XML data structures."
+    },
+    {
+      "id": 19,
+      "name": "createElement",
+      "class": "IXMLElement",
+      "summary": "This method is intended to create a new XML element. It is used within the context of XML document manipulation."
+    },
+    {
+      "id": 20,
+      "name": "createElement",
+      "class": "IXMLElement",
+      "summary": "This method is intended to create a new XML element. It is used when you need to generate or manipulate XML data structures."
+    },
+    {
+      "id": 21,
+      "name": "getParent",
+      "class": "IXMLElement",
+      "summary": "This method retrieves the parent element of the current XML element, useful when navigating or traversing an XML document structure. It is typically used in scenarios where you need to access or manipulate the hierarchical relationships between XML elements."
+    },
+    {
+      "id": 22,
+      "name": "getFullName",
+      "class": "IXMLElement",
+      "summary": "This method retrieves the full name of an XML element, intended for use when the complete hierarchical name of the element is needed."
+    },
+    {
+      "id": 23,
+      "name": "getName",
+      "class": "IXMLElement",
+      "summary": "This method retrieves the name of an XML element, intended for use when developers need to access or manipulate the element's name within their code."
+    },
+    {
+      "id": 24,
+      "name": "getNamespace",
+      "class": "IXMLElement",
+      "summary": "This method retrieves the namespace of an XML element, intended for use when working with XML data to access or manipulate namespaces. It can be used in any context where XML elements are processed or analyzed."
+    },
+    {
+      "id": 25,
+      "name": "setName",
+      "class": "IXMLElement",
+      "summary": "This method is intended to set the name of an XML element. It is used when you need to modify or specify the name of an element in an XML document."
+    },
+    {
+      "id": 26,
+      "name": "setName",
+      "class": "IXMLElement",
+      "summary": "This method is intended to set the name of an XML element. It is used when you need to modify or specify the name of an element in an XML document."
+    },
+    {
+      "id": 27,
+      "name": "addChild",
+      "class": "IXMLElement",
+      "summary": "This method is intended to add a child element to the current XML element. It is used when you need to build or modify an XML structure by appending a new child element."
+    },
+    {
+      "id": 28,
+      "name": "removeChild",
+      "class": "IXMLElement",
+      "summary": "This method is intended to remove a child element from the current XML element. It is used when you need to delete a specific child element from the XML structure."
+    },
+    {
+      "id": 29,
+      "name": "removeChildAtIndex",
+      "class": "IXMLElement",
+      "summary": "This method is intended to remove a child element at a specified index from the XML element. It is used when you need to delete a specific child element based on its position within the parent element."
+    },
+    {
+      "id": 30,
+      "name": "enumerateChildren",
+      "class": "IXMLElement",
+      "summary": "This method is intended to enumerate the child elements of an XML element, providing a way to iterate through them. It is used when you need to process or examine all children of a specific XML element."
+    },
+    {
+      "id": 31,
+      "name": "isLeaf",
+      "class": "IXMLElement",
+      "summary": "This method checks if an XML element is a leaf node, which is an element without any child elements. It is used to determine the structure of an XML document."
+    },
+    {
+      "id": 32,
+      "name": "hasChildren",
+      "class": "IXMLElement",
+      "summary": "This method checks if an XML element has any child elements, useful for traversing or validating XML structures."
+    },
+    {
+      "id": 33,
+      "name": "getChildrenCount",
+      "class": "IXMLElement",
+      "summary": "This method retrieves the number of child elements for an XML element, useful when you need to know the size of the element's child list."
+    },
+    {
+      "id": 34,
+      "name": "getChildren",
+      "class": "IXMLElement",
+      "summary": "This method retrieves the child elements of an XML element, returning them as a Vector. It is used when you need to access or manipulate the children of a specific XML element in a document."
+    },
+    {
+      "id": 35,
+      "name": "getChildAtIndex",
+      "class": "IXMLElement",
+      "summary": "This method retrieves a child element at a specific index from the current XML element, intended for navigating or manipulating XML structures. It is used when you need to access a particular child element by its position within the parent."
+    },
+    {
+      "id": 36,
+      "name": "getFirstChildNamed",
+      "class": "IXMLElement",
+      "summary": "This method retrieves the first child element with a specified name from an XML element, intended for navigating and querying XML structures. It is used when you need to access a specific child element by name within an XML document."
+    },
+    {
+      "id": 37,
+      "name": "getFirstChildNamed",
+      "class": "IXMLElement",
+      "summary": "This method retrieves the first child element with a specified name from an XML element, intended for navigating and querying XML structures. It is used when you need to access a specific child element directly."
+    },
+    {
+      "id": 38,
+      "name": "getChildrenNamed",
+      "class": "IXMLElement",
+      "summary": "This method retrieves a vector of child elements with a specific name from an XML element, intended for querying and manipulating XML data structures. It is typically used when you need to access or process specific child elements within an XML document."
+    },
+    {
+      "id": 39,
+      "name": "getChildrenNamed",
+      "class": "IXMLElement",
+      "summary": "This method retrieves a vector of child elements with a specific name from an XML element, intended for querying nested XML structures. It is used when you need to access specific child elements by their name within an XML document."
+    },
+    {
+      "id": 40,
+      "name": "getAttributeCount",
+      "class": "IXMLElement",
+      "summary": "This method retrieves the number of attributes in an XML element, useful for developers analyzing or manipulating XML data."
+    },
+    {
+      "id": 41,
+      "name": "getAttribute",
+      "class": "IXMLElement",
+      "summary": "This method retrieves the value of a specified attribute from an XML element, intended for parsing or extracting data from XML structures. It is used when you need to access attribute values within an XML document."
+    },
+    {
+      "id": 42,
+      "name": "getAttribute",
+      "class": "IXMLElement",
+      "summary": "This method retrieves the value of a specified attribute from an XML element, intended for use when parsing or processing XML data."
+    },
+    {
+      "id": 43,
+      "name": "getAttribute",
+      "class": "IXMLElement",
+      "summary": "This method retrieves the value of a specified attribute from an XML element, intended for parsing or extracting data from XML documents. It is used when you need to access attribute values within an XML structure."
+    },
+    {
+      "id": 44,
+      "name": "getAttribute",
+      "class": "IXMLElement",
+      "summary": "This method retrieves the integer value of a specified attribute from an XML element, intended for parsing and processing XML data. It is used when you need to access attribute values during XML document manipulation or data extraction."
+    },
+    {
+      "id": 45,
+      "name": "getAttribute",
+      "class": "IXMLElement",
+      "summary": "This method retrieves the integer value of a specified attribute from an XML element, intended for parsing and processing XML data. It is used when you need to access attribute values during XML manipulation or data extraction."
+    },
+    {
+      "id": 46,
+      "name": "getAttributeType",
+      "class": "IXMLElement",
+      "summary": "This method retrieves the type of an attribute from an XML element, intended for use when analyzing or processing XML data structures."
+    },
+    {
+      "id": 47,
+      "name": "getAttributeNamespace",
+      "class": "IXMLElement",
+      "summary": "This method retrieves the namespace of an attribute within an XML element, useful when processing XML data to understand the context or origin of attributes."
+    },
+    {
+      "id": 48,
+      "name": "getAttributeType",
+      "class": "IXMLElement",
+      "summary": "This method retrieves the type of an attribute from an XML element, intended for use when the attribute type needs to be checked or processed."
+    },
+    {
+      "id": 49,
+      "name": "setAttribute",
+      "class": "IXMLElement",
+      "summary": "This method is intended to set an attribute value for an XML element. It is used when you need to modify or add an attribute to an XML element in the document."
+    },
+    {
+      "id": 50,
+      "name": "setAttribute",
+      "class": "IXMLElement",
+      "summary": "This method is intended to set an attribute on an XML element. It is used when you need to modify or add an attribute to an element in an XML document."
+    },
+    {
+      "id": 51,
+      "name": "removeAttribute",
+      "class": "IXMLElement",
+      "summary": "This method is intended to remove an attribute from an XML element. It is used when you need to delete a specific attribute from an IXMLElement instance."
+    },
+    {
+      "id": 52,
+      "name": "removeAttribute",
+      "class": "IXMLElement",
+      "summary": "This method is intended to remove an attribute from an XML element. It is used when you need to modify an XML element by eliminating a specific attribute."
+    },
+    {
+      "id": 53,
+      "name": "enumerateAttributeNames",
+      "class": "IXMLElement",
+      "summary": "This method is intended to enumerate the attribute names of an XML element, providing a way to iterate through them. It is used when you need to access or manipulate the attributes of an IXMLElement."
+    },
+    {
+      "id": 54,
+      "name": "hasAttribute",
+      "class": "IXMLElement",
+      "summary": "This method checks if an XML element has a specific attribute. It is used when you need to verify the presence of an attribute before accessing or manipulating it."
+    },
+    {
+      "id": 55,
+      "name": "hasAttribute",
+      "class": "IXMLElement",
+      "summary": "This method checks if an XML element has a specific attribute. It is used to verify the presence of an attribute before accessing or manipulating it."
+    },
+    {
+      "id": 56,
+      "name": "getAttributes",
+      "class": "IXMLElement",
+      "summary": "This method retrieves the attributes of an XML element as a set of properties. It is used when you need to access or manipulate the attributes of an XML element in a Java application."
+    },
+    {
+      "id": 57,
+      "name": "getAttributesInNamespace",
+      "class": "IXMLElement",
+      "summary": "This method retrieves a collection of attributes within a specific namespace from an XML element, intended for use when inspecting or manipulating XML data."
+    },
+    {
+      "id": 58,
+      "name": "getSystemID",
+      "class": "IXMLElement",
+      "summary": "This method retrieves the system identifier of an XML element, useful for accessing the element's location or source information. It is typically used when processing XML data to understand the origin or context of the element."
+    },
+    {
+      "id": 59,
+      "name": "getLineNr",
+      "class": "IXMLElement",
+      "summary": "This method retrieves the line number of an XML element, useful for debugging or logging purposes. It can be used in any context where the line number of an XML element is needed."
+    },
+    {
+      "id": 60,
+      "name": "getContent",
+      "class": "IXMLElement",
+      "summary": "This method retrieves the content of an XML element, intended for accessing the inner text or value of the element. It is used when you need to extract the data contained within an XML element's tags."
+    },
+    {
+      "id": 61,
+      "name": "setContent",
+      "class": "IXMLElement",
+      "summary": "This method is intended to set the content of an XML element. It is used when you need to update or specify the content within an XML element tag."
+    },
+    {
+      "id": 62,
+      "name": "equals",
+      "class": "IXMLElement",
+      "summary": "This method is intended to compare an IXMLElement object with another value to check for equality. It is used when you need to determine if two objects are the same in terms of their content and structure."
+    },
+    {
+      "id": 63,
+      "name": "equalsXMLElement",
+      "class": "IXMLElement",
+      "summary": "This method is intended to check if the current IXMLElement object is equal to another IXMLElement object, typically used for comparison purposes in XML element processing."
+    },
+    {
+      "id": 64,
+      "name": "addInternalEntity",
+      "class": "IXMLEntityResolver",
+      "summary": "This method is intended to add an internal entity to the XML entity resolver. It is used when custom entity resolution is required during XML parsing."
+    },
+    {
+      "id": 65,
+      "name": "addExternalEntity",
+      "class": "IXMLEntityResolver",
+      "summary": "This method is intended to add an external entity to the XML entity resolver. It is used when resolving external entities in XML processing."
+    },
+    {
+      "id": 66,
+      "name": "getEntity",
+      "class": "IXMLEntityResolver",
+      "summary": "This method is intended to retrieve an entity as a Reader. It is used within the IXMLEntityResolver class to handle entity resolution during XML parsing."
+    },
+    {
+      "id": 67,
+      "name": "isExternalEntity",
+      "class": "IXMLEntityResolver",
+      "summary": "This method checks whether an entity is an external entity. It is used in XML parsing to determine the type of entity being processed."
+    },
+    {
+      "id": 68,
+      "name": "setReader",
+      "class": "IXMLParser",
+      "summary": "This method is intended to set the reader for parsing XML data, typically used when initializing or configuring the IXMLParser instance."
+    },
+    {
+      "id": 69,
+      "name": "getReader",
+      "class": "IXMLParser",
+      "summary": "This method is intended to retrieve an IXMLReader instance for parsing XML data. It is typically used when a developer needs to process or interpret XML content within the application."
+    },
+    {
+      "id": 70,
+      "name": "setBuilder",
+      "class": "IXMLParser",
+      "summary": "This method is intended to set the builder used for parsing XML. It should be used when configuring the IXMLParser instance with a specific builder implementation."
+    },
+    {
+      "id": 71,
+      "name": "getBuilder",
+      "class": "IXMLParser",
+      "summary": "This method is intended to retrieve an IXMLBuilder instance. It is used within the IXMLParser class to provide a builder for XML parsing tasks."
+    },
+    {
+      "id": 72,
+      "name": "setValidator",
+      "class": "IXMLParser",
+      "summary": "This method is intended to set a validator for the XML parser. It is used when you need to specify a validator to ensure the XML data being parsed adheres to certain rules or schemas."
+    },
+    {
+      "id": 73,
+      "name": "getValidator",
+      "class": "IXMLParser",
+      "summary": "This method retrieves an XML validator instance for validating XML content. It is intended to be used within the IXMLParser class to ensure parsed XML data adheres to specified rules or schemas."
+    },
+    {
+      "id": 74,
+      "name": "setResolver",
+      "class": "IXMLParser",
+      "summary": "This method is intended to set a resolver for handling external entities during XML parsing. It is used within the IXMLParser class to configure the parser's behavior when encountering external references."
+    },
+    {
+      "id": 75,
+      "name": "getResolver",
+      "class": "IXMLParser",
+      "summary": "This method is intended to retrieve an XML entity resolver for handling external entities in XML documents, typically used when parsing XML data."
+    },
+    {
+      "id": 76,
+      "name": "parse",
+      "class": "IXMLParser",
+      "summary": "This method is intended to parse a given value and return an object. It is used when you need to convert XML data into a usable object format."
+    },
+    {
+      "id": 77,
+      "name": "read",
+      "class": "IXMLReader",
+      "summary": "This method is intended to read a single character value from an XML source. It is used within the IXMLReader class to parse and process XML data."
+    },
+    {
+      "id": 78,
+      "name": "atEOFOfCurrentStream",
+      "class": "IXMLReader",
+      "summary": "This method checks if the end of the current stream has been reached, intended for use when parsing XML data. It returns a boolean value indicating whether the end of the stream has been reached."
+    },
+    {
+      "id": 79,
+      "name": "atEOF",
+      "class": "IXMLReader",
+      "summary": "This method checks if the end of the file has been reached. It is used within the IXMLReader class to determine the current position in the file being read."
+    },
+    {
+      "id": 80,
+      "name": "unread",
+      "class": "IXMLReader",
+      "summary": "This method is intended to reverse the reading of a value, effectively undoing any processing done by the reader. It is used when you need to revert the state of the reader to a previous point, typically after encountering an error or needing to backtrack."
+    },
+    {
+      "id": 81,
+      "name": "getLineNr",
+      "class": "IXMLReader",
+      "summary": "This method retrieves the current line number in the XML document being read, useful for tracking or debugging purposes during XML parsing."
+    },
+    {
+      "id": 82,
+      "name": "openStream",
+      "class": "IXMLReader",
+      "summary": "This method is intended to open a stream for reading XML data. It is used when you need to parse or process XML content from a specific source."
+    },
+    {
+      "id": 83,
+      "name": "startNewStream",
+      "class": "IXMLReader",
+      "summary": "This method is intended to initiate a new stream for reading XML data. It is used when a new XML stream needs to be processed or parsed."
+    },
+    {
+      "id": 84,
+      "name": "startNewStream",
+      "class": "IXMLReader",
+      "summary": "This method is intended to initiate a new stream for reading XML data. It is used when a new XML stream needs to be started for parsing or processing."
+    },
+    {
+      "id": 85,
+      "name": "getStreamLevel",
+      "class": "IXMLReader",
+      "summary": "This method retrieves the current level of the stream being read, useful for tracking nested structures in XML parsing. It is intended for use within the IXMLReader class to monitor the depth of XML elements during parsing."
+    },
+    {
+      "id": 86,
+      "name": "setSystemID",
+      "class": "IXMLReader",
+      "summary": "This method is intended to set the system ID for the XML reader, typically used when parsing XML documents with a specific system identifier."
+    },
+    {
+      "id": 87,
+      "name": "setPublicID",
+      "class": "IXMLReader",
+      "summary": "This method is intended to set the public identifier for the XML reader. It is used when configuring an XML reader to process documents with a specific public identifier."
+    },
+    {
+      "id": 88,
+      "name": "getSystemID",
+      "class": "IXMLReader",
+      "summary": "This method retrieves the system identifier of the current entity in an XML document, typically used when parsing XML files to identify the location of the entity."
+    },
+    {
+      "id": 89,
+      "name": "getPublicID",
+      "class": "IXMLReader",
+      "summary": "This method retrieves the public identifier from an XML resource, intended for use when parsing or processing XML documents."
+    },
+    {
+      "id": 90,
+      "name": "setParameterEntityResolver",
+      "class": "IXMLValidator",
+      "summary": "This method is intended to set the parameter entity resolver for XML validation. It is used when configuring the IXMLValidator to handle parameter entities during XML parsing."
+    },
+    {
+      "id": 91,
+      "name": "getParameterEntityResolver",
+      "class": "IXMLValidator",
+      "summary": "This method retrieves a parameter entity resolver for XML validation, intended for use in XML processing tasks where custom entity resolution is required."
+    },
+    {
+      "id": 92,
+      "name": "parseDTD",
+      "class": "IXMLValidator",
+      "summary": "This method is intended to parse a Document Type Definition (DTD). It is used when validating XML documents against a specified DTD structure."
+    },
+    {
+      "id": 93,
+      "name": "elementStarted",
+      "class": "IXMLValidator",
+      "summary": "This method is intended to handle the event when an XML element starts during parsing, typically used in an XML parser or validator to process the beginning of an element. It is called when the parser encounters the start of an XML element."
+    },
+    {
+      "id": 94,
+      "name": "elementEnded",
+      "class": "IXMLValidator",
+      "summary": "This method is intended to handle the event when an XML element has ended during validation. It is used within the IXMLValidator class to process the conclusion of an XML element."
+    },
+    {
+      "id": 95,
+      "name": "attributeAdded",
+      "class": "IXMLValidator",
+      "summary": "This method is intended to handle the addition of an attribute. It is likely used in the context of XML validation or manipulation."
+    },
+    {
+      "id": 96,
+      "name": "elementAttributesProcessed",
+      "class": "IXMLValidator",
+      "summary": "This method is intended to process the attributes of an XML element. It is used within the IXMLValidator class to handle attribute processing during XML validation."
+    },
+    {
+      "id": 97,
+      "name": "PCDataAdded",
+      "class": "IXMLValidator",
+      "summary": "This method is intended to handle the addition of parsed character data (PCData) in an XML validation context, typically used when processing XML documents to manage and validate text content."
+    },
+    {
+      "id": 98,
+      "name": "NonValidator",
+      "class": "NonValidator",
+      "summary": "This method creates a new NonValidator instance, intended for use as a validator in contexts where validation is not required. It is typically used when a no-op validator is needed."
+    },
+    {
+      "id": 99,
+      "name": "finalize",
+      "class": "NonValidator",
+      "summary": "This method is intended to perform cleanup operations before an object is garbage collected. It is typically used in the context of resource management to release resources that the object might hold."
+    },
+    {
+      "id": 100,
+      "name": "setParameterEntityResolver",
+      "class": "NonValidator",
+      "summary": "This method is intended to set the parameter entity resolver for the NonValidator class, typically used when parsing XML documents to resolve external entities."
+    },
+    {
+      "id": 101,
+      "name": "getParameterEntityResolver",
+      "class": "NonValidator",
+      "summary": "This method retrieves a parameter entity resolver for XML processing. It is intended for use in XML parsing or processing contexts where custom entity resolution is required."
+    },
+    {
+      "id": 102,
+      "name": "parseDTD",
+      "class": "NonValidator",
+      "summary": "This method is intended to parse a Document Type Definition (DTD). It is used within the `NonValidator` class and calls another method during its execution."
+    },
+    {
+      "id": 103,
+      "name": "processElement",
+      "class": "NonValidator",
+      "summary": "This method is intended to process an element, likely parsing or transforming it. It is used procedurally within the class, as demonstrated by the example calling it with a reader and an entity resolver."
+    },
+    {
+      "id": 104,
+      "name": "processConditionalSection",
+      "class": "NonValidator",
+      "summary": "This method is intended to process a conditional section within a document. It is used in a procedural context, typically with a reader and an entity resolver as parameters."
+    },
+    {
+      "id": 105,
+      "name": "processIgnoreSection",
+      "class": "NonValidator",
+      "summary": "This method is intended to process an ignore section, likely skipping or bypassing certain parts of input data. It is used procedurally within the context of parsing or reading data, as seen in the example where it's called with a reader and an entity resolver."
+    },
+    {
+      "id": 106,
+      "name": "processAttList",
+      "class": "NonValidator",
+      "summary": "This method is intended to process an attribute list, typically used when parsing XML or similar markup languages. It is called with a reader and an entity resolver to handle the attribute list data."
+    },
+    {
+      "id": 107,
+      "name": "processEntity",
+      "class": "NonValidator",
+      "summary": "This method is intended to process an entity, likely performing some form of validation or transformation. It is used procedurally within the class, as demonstrated by the example calling it with a reader and an entity resolver."
+    },
+    {
+      "id": 108,
+      "name": "elementStarted",
+      "class": "NonValidator",
+      "summary": "This method is intended to handle the event when an element is started, likely used in a parsing or processing context to initiate actions upon encountering a new element."
+    },
+    {
+      "id": 109,
+      "name": "elementEnded",
+      "class": "NonValidator",
+      "summary": "This method is intended to handle the event when an element has ended. It is used in contexts where tracking the completion of elements is necessary, such as in parsing or processing tasks."
+    },
+    {
+      "id": 110,
+      "name": "elementAttributesProcessed",
+      "class": "NonValidator",
+      "summary": "This method is intended to process attributes of an element. It is used in contexts where element attributes need to be validated or manipulated."
+    },
+    {
+      "id": 111,
+      "name": "attributeAdded",
+      "class": "NonValidator",
+      "summary": "This method is intended to handle the addition of an attribute. It is likely used in contexts where dynamic attribute management is required, such as in frameworks or libraries that support extensible objects or configurations."
+    },
+    {
+      "id": 112,
+      "name": "PCDataAdded",
+      "class": "NonValidator",
+      "summary": "This method is intended to handle the addition of parsed character data (PCData) in an XML context, typically used when processing XML documents to manage text content between tags."
+    },
+    {
+      "id": 113,
+      "name": "PIReader",
+      "class": "PIReader",
+      "summary": "This method creates a new PIReader instance, intended for reading data. It is used when initializing a new Reader object with an existing reader."
+    },
+    {
+      "id": 114,
+      "name": "finalize",
+      "class": "PIReader",
+      "summary": "This method is intended to finalize the value, likely for cleanup or resource release. It is used when the object is about to be garbage collected."
+    },
+    {
+      "id": 115,
+      "name": "read",
+      "class": "PIReader",
+      "summary": "This method is intended to read a value and return it as an integer. It is used within the PIReader class, and its specific usage context is currently unknown."
+    },
+    {
+      "id": 116,
+      "name": "close",
+      "class": "PIReader",
+      "summary": "This method is intended to close the current PIReader instance to release resources. It should be used when the reader is no longer needed, typically at the end of its usage or during cleanup processes."
+    },
+    {
+      "id": 117,
+      "name": "StdXMLBuilder",
+      "class": "StdXMLBuilder",
+      "summary": "This method creates a new instance of an XML builder. It is typically used when developers need to construct or manipulate XML documents."
+    },
+    {
+      "id": 118,
+      "name": "StdXMLBuilder",
+      "class": "StdXMLBuilder",
+      "summary": "This method creates a new instance of an XML builder. It is typically used when developers need to start building or manipulating XML documents."
+    },
+    {
+      "id": 119,
+      "name": "finalize",
+      "class": "StdXMLBuilder",
+      "summary": "This method is intended to finalize the value in the StdXMLBuilder. It is used when the builder needs to complete the construction of the XML structure."
+    },
+    {
+      "id": 120,
+      "name": "startBuilding",
+      "class": "StdXMLBuilder",
+      "summary": "This method is intended to initiate the process of constructing an XML structure. It is used when you need to begin building an XML document from scratch."
+    },
+    {
+      "id": 121,
+      "name": "newProcessingInstruction",
+      "class": "StdXMLBuilder",
+      "summary": "This method is intended to create a new processing instruction in an XML document. It is used within the context of building or manipulating XML structures."
+    },
+    {
+      "id": 122,
+      "name": "startElement",
+      "class": "StdXMLBuilder",
+      "summary": "This method is intended to initiate the creation of a new XML element. It is used within the context of building XML structures programmatically."
+    },
+    {
+      "id": 123,
+      "name": "elementAttributesProcessed",
+      "class": "StdXMLBuilder",
+      "summary": "This method is intended to process attributes for an XML element. It is used within the `StdXMLBuilder` class to handle attribute processing during XML element creation or manipulation."
+    },
+    {
+      "id": 124,
+      "name": "endElement",
+      "class": "StdXMLBuilder",
+      "summary": "This method is intended to close or finalize the current XML element being built. It is used within the context of constructing XML documents to properly terminate an element."
+    },
+    {
+      "id": 125,
+      "name": "addAttribute",
+      "class": "StdXMLBuilder",
+      "summary": "This method is intended to add an attribute to an XML element. It is used within the `StdXMLBuilder` class to construct XML structures."
+    },
+    {
+      "id": 126,
+      "name": "addPCData",
+      "class": "StdXMLBuilder",
+      "summary": "This method is intended to add plain character data (PCData) to an XML structure. It is used within the `StdXMLBuilder` class to construct XML content."
+    },
+    {
+      "id": 127,
+      "name": "getResult",
+      "class": "StdXMLBuilder",
+      "summary": "This method is intended to retrieve the result object constructed by the StdXMLBuilder. It is used when the XML building process is complete and the result needs to be accessed."
+    },
+    {
+      "id": 128,
+      "name": "StdXMLParser",
+      "class": "StdXMLParser",
+      "summary": "This method is intended to create a new instance of the StdXMLParser. It is used when a developer needs to initialize a standard XML parser for processing XML data."
+    },
+    {
+      "id": 129,
+      "name": "finalize",
+      "class": "StdXMLParser",
+      "summary": "This method is intended to finalize the parsing process and clean up resources. It is typically used at the end of XML parsing to ensure proper release of system resources."
+    },
+    {
+      "id": 130,
+      "name": "setBuilder",
+      "class": "StdXMLParser",
+      "summary": "This method is intended to set the builder used by the StdXMLParser for parsing XML. It should be used when configuring the parser with a specific builder instance."
+    },
+    {
+      "id": 131,
+      "name": "getBuilder",
+      "class": "StdXMLParser",
+      "summary": "This method retrieves an XML builder instance for constructing XML documents, typically used when developers need to create or manipulate XML data structures programmatically."
+    },
+    {
+      "id": 132,
+      "name": "setValidator",
+      "class": "StdXMLParser",
+      "summary": "This method is intended to set a validator for the XML parser. It is used when you need to specify a custom validator to ensure the XML data adheres to certain rules or schemas."
+    },
+    {
+      "id": 133,
+      "name": "getValidator",
+      "class": "StdXMLParser",
+      "summary": "This method retrieves an XML validator instance for validating XML documents. It is intended to be used within the context of XML parsing and validation."
+    },
+    {
+      "id": 134,
+      "name": "setResolver",
+      "class": "StdXMLParser",
+      "summary": "This method is intended to set a resolver for the XML parser, typically used when initializing or configuring the parser for handling external entities or other XML-specific resolutions."
+    },
+    {
+      "id": 135,
+      "name": "getResolver",
+      "class": "StdXMLParser",
+      "summary": "This method is intended to retrieve an XML entity resolver for handling external entities. It is used when parsing XML documents that require custom entity resolution."
+    },
+    {
+      "id": 136,
+      "name": "setReader",
+      "class": "StdXMLParser",
+      "summary": "This method is intended to set the reader for parsing XML data. It is used when initializing or reconfiguring the StdXMLParser instance."
+    },
+    {
+      "id": 137,
+      "name": "getReader",
+      "class": "StdXMLParser",
+      "summary": "This method is intended to retrieve an XML reader for parsing XML data. It is used within the `StdXMLParser` class to obtain an instance of `IXMLReader`."
+    },
+    {
+      "id": 138,
+      "name": "parse",
+      "class": "StdXMLParser",
+      "summary": "This method is intended to parse a given value and return an object. It is used within the StdXMLParser class to process and interpret XML data."
+    },
+    {
+      "id": 139,
+      "name": "scanData",
+      "class": "StdXMLParser",
+      "summary": "This method is intended to scan data within an XML document. It is used procedurally within the `StdXMLParser` class to process and extract information from XML data."
+    },
+    {
+      "id": 140,
+      "name": "scanSomeTag",
+      "class": "StdXMLParser",
+      "summary": "This method is intended to scan a specific tag in an XML document. It is used procedurally within the class, typically with a boolean flag, a null value, and a Properties object as arguments."
+    },
+    {
+      "id": 141,
+      "name": "processPI",
+      "class": "StdXMLParser",
+      "summary": "This method is intended to process a processing instruction (PI) in an XML document. It is used within the `StdXMLParser` class to handle PI nodes during XML parsing."
+    },
+    {
+      "id": 142,
+      "name": "processSpecialTag",
+      "class": "StdXMLParser",
+      "summary": "This method is intended to process a special tag within an XML document, handling any CDATA sections if allowed. It is used procedurally within the StdXMLParser class."
+    },
+    {
+      "id": 143,
+      "name": "processCDATA",
+      "class": "StdXMLParser",
+      "summary": "This method is intended to process CDATA sections within an XML document. It is used within the `StdXMLParser` class to handle CDATA content during XML parsing."
+    },
+    {
+      "id": 144,
+      "name": "processDocType",
+      "class": "StdXMLParser",
+      "summary": "This method is intended to process the document type declaration in an XML document. It is used within the `StdXMLParser` class to handle the DOCTYPE section during XML parsing."
+    },
+    {
+      "id": 145,
+      "name": "processElement",
+      "class": "StdXMLParser",
+      "summary": "This method is intended to process an XML element with the given namespaces. It is used within the `StdXMLParser` class to handle element processing during XML parsing."
+    },
+    {
+      "id": 146,
+      "name": "processAttribute",
+      "class": "StdXMLParser",
+      "summary": "This method is intended to process an attribute by handling its name, value, and type. It is used within the `StdXMLParser` class to manage attribute data during XML parsing."
+    },
+    {
+      "id": 147,
+      "name": "stringReader",
+      "class": "StdXMLReader",
+      "summary": "This method creates an XML reader from a string, intended for parsing XML content provided as a string input. It is used internally within the class, as indicated by the callsCount."
+    },
+    {
+      "id": 148,
+      "name": "fileReader",
+      "class": "StdXMLReader",
+      "summary": "This method is intended to create and return an XML reader for a file. It is used internally within the class, as it is not called by other methods."
+    },
+    {
+      "id": 149,
+      "name": "StdXMLReader",
+      "class": "StdXMLReader",
+      "summary": "This method creates a new instance of an XML reader. It is typically used when initializing XML parsing operations."
+    },
+    {
+      "id": 150,
+      "name": "StdXMLReader",
+      "class": "StdXMLReader",
+      "summary": "This method creates a new instance of StdXMLReader, intended for reading XML data from a string source. It is used in procedural contexts where XML data needs to be parsed from a string input."
+    },
+    {
+      "id": 151,
+      "name": "finalize",
+      "class": "StdXMLReader",
+      "summary": "This method is intended to perform cleanup operations before the `StdXMLReader` object is garbage collected, typically releasing resources. It is automatically called by the Java Virtual Machine (JVM) when the object is no longer reachable."
+    },
+    {
+      "id": 152,
+      "name": "getEncoding",
+      "class": "StdXMLReader",
+      "summary": "This method retrieves the encoding of the XML document being read, intended for use when the encoding needs to be determined or applied elsewhere in the code. It is typically used in the context of XML parsing, where the encoding of the document is required for further processing."
+    },
+    {
+      "id": 153,
+      "name": "stream2reader",
+      "class": "StdXMLReader",
+      "summary": "This method converts a stream into a Reader object, allowing for easier text processing. It is used when you need to read character data from a stream in a more convenient way."
+    },
+    {
+      "id": 154,
+      "name": "StdXMLReader",
+      "class": "StdXMLReader",
+      "summary": "This method creates a new instance of an XML reader. It is used when initializing a new XML reader object with a string input."
+    },
+    {
+      "id": 155,
+      "name": "read",
+      "class": "StdXMLReader",
+      "summary": "This method is intended to read a single character value from a stream. It is used in contexts where a character needs to be assigned from a stream, such as in the example `int b=pbstream.read();`."
+    },
+    {
+      "id": 156,
+      "name": "atEOFOfCurrentStream",
+      "class": "StdXMLReader",
+      "summary": "This method checks if the end of the current stream has been reached, intended for use when processing XML data. It returns a boolean value indicating whether the end of the stream has been reached."
+    },
+    {
+      "id": 157,
+      "name": "atEOF",
+      "class": "StdXMLReader",
+      "summary": "This method checks if the end of the file has been reached. It is used internally by the StdXMLReader class to manage file reading operations."
+    },
+    {
+      "id": 158,
+      "name": "unread",
+      "class": "StdXMLReader",
+      "summary": "This method is intended to revert the reading of a value in an XML stream, effectively putting the value back for future reads. It is used when you need to undo the last read operation on the stream, such as when you've read past the desired data."
+    },
+    {
+      "id": 159,
+      "name": "openStream",
+      "class": "StdXMLReader",
+      "summary": "This method is intended to open and return a stream for reading XML content. It is used when you need to read XML data from a specified public ID and system ID as a URL string."
+    },
+    {
+      "id": 160,
+      "name": "startNewStream",
+      "class": "StdXMLReader",
+      "summary": "This method is intended to initiate a new stream for reading XML data. It is used when a new source of XML data needs to be processed, such as when switching between different XML inputs."
+    },
+    {
+      "id": 161,
+      "name": "startNewStream",
+      "class": "StdXMLReader",
+      "summary": "This method is intended to initiate a new stream for reading. It is used within the context of XML reading operations, as demonstrated by the example `this.startNewStream(reader, false)`."
+    },
+    {
+      "id": 162,
+      "name": "getStreamLevel",
+      "class": "StdXMLReader",
+      "summary": "This method retrieves the current level of the stream in the XML reader, useful for tracking the depth of nested elements during parsing."
+    },
+    {
+      "id": 163,
+      "name": "getLineNr",
+      "class": "StdXMLReader",
+      "summary": "This method retrieves the current line number in the XML document being read, useful for tracking or debugging purposes during XML parsing."
+    },
+    {
+      "id": 164,
+      "name": "setSystemID",
+      "class": "StdXMLReader",
+      "summary": "This method is used to set the system identifier for the XML reader, typically used when initializing or configuring the reader with a specific file or resource. It is called during the setup phase of the XML reading process."
+    },
+    {
+      "id": 165,
+      "name": "setPublicID",
+      "class": "StdXMLReader",
+      "summary": "This method is intended to set the public identifier for the XML reader. It is used when configuring the XML reader to process documents with a specific public identifier."
+    },
+    {
+      "id": 166,
+      "name": "getSystemID",
+      "class": "StdXMLReader",
+      "summary": "This method is intended to retrieve the system identifier (system ID) of the XML document being read. It is used within the `StdXMLReader` class to access the system ID when parsing XML data."
+    },
+    {
+      "id": 167,
+      "name": "getPublicID",
+      "class": "StdXMLReader",
+      "summary": "This method retrieves the public identifier from an XML document, intended for use when parsing or validating XML data."
+    },
+    {
+      "id": 168,
+      "name": "ValidatorPlugin",
+      "class": "ValidatorPlugin",
+      "summary": "This method is intended to create a new ValidatorPlugin instance. It is typically used when initializing a new validation plugin in the system."
+    },
+    {
+      "id": 169,
+      "name": "finalize",
+      "class": "ValidatorPlugin",
+      "summary": "This method is intended to finalize a value, completing any necessary validation or processing. It is used within the ValidatorPlugin class to ensure values are properly validated before further use."
+    },
+    {
+      "id": 170,
+      "name": "getDelegate",
+      "class": "ValidatorPlugin",
+      "summary": "This method retrieves the delegate XML validator instance for further use in validation processes. It is intended to be used within the ValidatorPlugin class to access the underlying validator."
+    },
+    {
+      "id": 171,
+      "name": "setDelegate",
+      "class": "ValidatorPlugin",
+      "summary": "This method is intended to assign a delegate to the ValidatorPlugin. It should be used when configuring the plugin to delegate validation tasks."
+    },
+    {
+      "id": 172,
+      "name": "setParameterEntityResolver",
+      "class": "ValidatorPlugin",
+      "summary": "This method is intended to set the entity resolver for parameter validation. It is used within the ValidatorPlugin class to configure how external entities are resolved during validation."
+    },
+    {
+      "id": 173,
+      "name": "getParameterEntityResolver",
+      "class": "ValidatorPlugin",
+      "summary": "This method is intended to retrieve a parameter entity resolver for XML processing. It is used within the ValidatorPlugin class to provide an IXMLEntityResolver instance."
+    },
+    {
+      "id": 174,
+      "name": "parseDTD",
+      "class": "ValidatorPlugin",
+      "summary": "This method is intended to parse a Document Type Definition (DTD). It is used within the ValidatorPlugin class to process and validate the structure of XML documents based on their DTD."
+    },
+    {
+      "id": 175,
+      "name": "elementStarted",
+      "class": "ValidatorPlugin",
+      "summary": "This method is intended to handle the event when an XML element starts, typically used in a validator plugin to process or validate the beginning of an XML element during parsing."
+    },
+    {
+      "id": 176,
+      "name": "elementEnded",
+      "class": "ValidatorPlugin",
+      "summary": "This method is intended to handle the event when an element has ended, typically used in validation processes to perform actions upon the completion of an element. It is likely called in contexts where element lifecycle events need to be monitored or validated."
+    },
+    {
+      "id": 177,
+      "name": "elementAttributesProcessed",
+      "class": "ValidatorPlugin",
+      "summary": "This method is intended to process the attributes of an element, likely for validation purposes. It is part of the ValidatorPlugin class and should be used when element attributes need to be checked or manipulated."
+    },
+    {
+      "id": 178,
+      "name": "attributeAdded",
+      "class": "ValidatorPlugin",
+      "summary": "This method is intended to handle the addition of an attribute, likely within a validation context. It is used when a new attribute is added to a system or object that requires validation."
+    },
+    {
+      "id": 179,
+      "name": "PCDataAdded",
+      "class": "ValidatorPlugin",
+      "summary": "This method is intended to validate or process the addition of parsed character data (PCData) in an XML context. It is likely used when handling XML document parsing or manipulation tasks."
+    },
+    {
+      "id": 180,
+      "name": "missingElement",
+      "class": "ValidatorPlugin",
+      "summary": "This method is intended to validate the presence of an element, ensuring it is not missing. It should be used when checking for required components or data in a validation context."
+    },
+    {
+      "id": 181,
+      "name": "unexpectedElement",
+      "class": "ValidatorPlugin",
+      "summary": "This method is intended to handle or report unexpected elements, likely within a validation context, such as parsing or data processing. It is used when an element is encountered that does not conform to the expected structure or schema."
+    },
+    {
+      "id": 182,
+      "name": "missingAttribute",
+      "class": "ValidatorPlugin",
+      "summary": "This method is intended to handle the absence of a required attribute, likely validating or processing data. It is used in contexts where attribute validation is necessary, such as data processing or input validation."
+    },
+    {
+      "id": 183,
+      "name": "unexpectedAttribute",
+      "class": "ValidatorPlugin",
+      "summary": "This method is intended to handle or report an unexpected attribute encountered during validation. It is likely used within a validation context where attributes are checked for correctness."
+    },
+    {
+      "id": 184,
+      "name": "invalidAttributeValue",
+      "class": "ValidatorPlugin",
+      "summary": "This method is intended to invalidate an attribute value, typically used when the value does not meet the required criteria or constraints. It is likely called within a validation context to handle invalid data scenarios."
+    },
+    {
+      "id": 185,
+      "name": "missingPCData",
+      "class": "ValidatorPlugin",
+      "summary": "This method is intended to handle or report missing PCData (Parsed Character Data) in the validation process. It is likely used within a validation plugin to manage or log instances where expected PCData is absent."
+    },
+    {
+      "id": 186,
+      "name": "unexpectedPCData",
+      "class": "ValidatorPlugin",
+      "summary": "This method is intended to handle unexpected PCDATA (Parsed Character Data) in an XML document. It is likely used within a validation context to manage or report unanticipated character data during XML processing."
+    },
+    {
+      "id": 187,
+      "name": "validationError",
+      "class": "ValidatorPlugin",
+      "summary": "This method is intended to handle or process validation errors within the ValidatorPlugin class. It is likely used when a validation check fails, requiring appropriate error handling or logging."
+    },
+    {
+      "id": 188,
+      "name": "XMLAttribute",
+      "class": "XMLAttribute",
+      "summary": "This method creates a new XMLAttribute object with a specified value. It is used when you need to assign a new attribute to an XML element."
+    },
+    {
+      "id": 189,
+      "name": "getFullName",
+      "class": "XMLAttribute",
+      "summary": "This method retrieves the full name of an XML attribute, intended for use when the complete attribute name, including any namespace prefix, is required."
+    },
+    {
+      "id": 190,
+      "name": "getName",
+      "class": "XMLAttribute",
+      "summary": "This method retrieves the name of an XML attribute, intended for use when processing or manipulating XML data."
+    },
+    {
+      "id": 191,
+      "name": "getNamespace",
+      "class": "XMLAttribute",
+      "summary": "This method retrieves the namespace of an XML attribute, intended for use when processing or validating XML data."
+    },
+    {
+      "id": 192,
+      "name": "getValue",
+      "class": "XMLAttribute",
+      "summary": "This method is intended to retrieve the string value of an XML attribute. It is used when you need to access the value stored in an XML attribute object."
+    },
+    {
+      "id": 193,
+      "name": "setValue",
+      "class": "XMLAttribute",
+      "summary": "This method is used to set the value of an XML attribute. It is typically used when configuring or modifying an XML attribute object in procedural code."
+    },
+    {
+      "id": 194,
+      "name": "getType",
+      "class": "XMLAttribute",
+      "summary": "This method retrieves the type of an XML attribute, intended for use when processing or validating XML data. It is called in contexts where the attribute's type needs to be checked or utilized."
+    },
+    {
+      "id": 195,
+      "name": "XMLElement",
+      "class": "XMLElement",
+      "summary": "This method creates a new XMLElement instance, intended for initializing a new XML element object. It is used procedurally, as shown in the example where it is called with `this(new XMLElement())`."
+    },
+    {
+      "id": 196,
+      "name": "XMLElement",
+      "class": "XMLElement",
+      "summary": "This method creates a new XMLElement with the specified full name, intended for initializing XML elements in a procedural context."
+    },
+    {
+      "id": 197,
+      "name": "XMLElement",
+      "class": "XMLElement",
+      "summary": "This method creates a new XMLElement object with specified attributes. It is used when initializing a new XML element with a full name, system ID, and line number."
+    },
+    {
+      "id": 198,
+      "name": "XMLElement",
+      "class": "XMLElement",
+      "summary": "This method creates a new XMLElement with the specified full name and namespace, intended for initializing XML elements in procedural contexts."
+    },
+    {
+      "id": 199,
+      "name": "XMLElement",
+      "class": "XMLElement",
+      "summary": "This method creates a new XMLElement with the specified parameters, intended for use when initializing a new XML element in a procedural context."
+    },
+    {
+      "id": 200,
+      "name": "createPCDataElement",
+      "class": "XMLElement",
+      "summary": "This method is intended to create a PCData (Parsed Character Data) element within an XML document. It is used when you need to insert raw text content that should not be parsed by the XML parser."
+    },
+    {
+      "id": 201,
+      "name": "createElement",
+      "class": "XMLElement",
+      "summary": "This method is intended to create a new element within the XML structure. It is used when a new `IXMLElement` needs to be instantiated within the `XMLElement` class."
+    },
+    {
+      "id": 202,
+      "name": "createElement",
+      "class": "XMLElement",
+      "summary": "This method is intended to create a new XMLElement instance. It is used within the context of XML document manipulation."
+    },
+    {
+      "id": 203,
+      "name": "createElement",
+      "class": "XMLElement",
+      "summary": "This method is intended to create a new XML element. It is used within the context of XML document manipulation."
+    },
+    {
+      "id": 204,
+      "name": "createElement",
+      "class": "XMLElement",
+      "summary": "This method is intended to create a new XML element. It is used within the context of XML document manipulation."
+    },
+    {
+      "id": 205,
+      "name": "finalize",
+      "class": "XMLElement",
+      "summary": "This method is intended to finalize the value of an XMLElement, ensuring it is in a consistent state. It is typically used when the element is about to be processed or serialized."
+    },
+    {
+      "id": 206,
+      "name": "getParent",
+      "class": "XMLElement",
+      "summary": "This method retrieves the parent element of the current XML element, intended for use when navigating or manipulating XML document structures."
+    },
+    {
+      "id": 207,
+      "name": "getFullName",
+      "class": "XMLElement",
+      "summary": "This method retrieves the full name of an XML element, intended for use when you need to access or assign the complete name of an element in XML processing."
+    },
+    {
+      "id": 208,
+      "name": "getName",
+      "class": "XMLElement",
+      "summary": "This method retrieves the name of an XML element, intended for use in conditional checks to determine element properties or structure. It is typically used to validate or process XML elements based on their names."
+    },
+    {
+      "id": 209,
+      "name": "getNamespace",
+      "class": "XMLElement",
+      "summary": "This method retrieves the namespace of an XML element, intended for use when you need to access or manipulate the namespace of a specific element in an XML document."
+    },
+    {
+      "id": 210,
+      "name": "setName",
+      "class": "XMLElement",
+      "summary": "This method is intended to set the name of an XMLElement. It should be used when you need to assign or change the name attribute of an XML element in your code."
+    },
+    {
+      "id": 211,
+      "name": "setName",
+      "class": "XMLElement",
+      "summary": "This method is intended to set the name of an XMLElement. It should be used when you need to assign or change the name attribute of an XML element in your code."
+    },
+    {
+      "id": 212,
+      "name": "addChild",
+      "class": "XMLElement",
+      "summary": "This method is intended to add a child element to the current XML element, and it is typically used when constructing or modifying an XML document structure."
+    },
+    {
+      "id": 213,
+      "name": "insertChild",
+      "class": "XMLElement",
+      "summary": "This method is intended to insert a child element into the current XML element. It is used within the context of XML document manipulation, specifically when building or modifying XML structures."
+    },
+    {
+      "id": 214,
+      "name": "removeChild",
+      "class": "XMLElement",
+      "summary": "This method is intended to remove a child element from an XML element. It is used when you need to delete a specific child node from the current XML element."
+    },
+    {
+      "id": 215,
+      "name": "removeChildAtIndex",
+      "class": "XMLElement",
+      "summary": "This method is intended to remove a child element at a specified index from an XML element. It is used when you need to delete a specific child element from the XML structure."
+    },
+    {
+      "id": 216,
+      "name": "enumerateChildren",
+      "class": "XMLElement",
+      "summary": "This method is intended to enumerate the children of an XMLElement. It is used when you need to iterate over the child elements of a specific XML element."
+    },
+    {
+      "id": 217,
+      "name": "isLeaf",
+      "class": "XMLElement",
+      "summary": "This method checks if an XML element is a leaf node, which is useful for determining if the element contains no child elements. It can be used in XML parsing or manipulation tasks to identify terminal nodes."
+    },
+    {
+      "id": 218,
+      "name": "hasChildren",
+      "class": "XMLElement",
+      "summary": "This method checks if an XML element has any child elements, useful for parsing or traversing XML structures."
+    },
+    {
+      "id": 219,
+      "name": "getChildrenCount",
+      "class": "XMLElement",
+      "summary": "This method retrieves the number of child elements for intent of comparison or validation. It is used in conditional statements to check if the current element's children count matches the expected count."
+    },
+    {
+      "id": 220,
+      "name": "getChildren",
+      "class": "XMLElement",
+      "summary": "This method retrieves the child elements of an XML element, returning them as a Vector. It is used when you need to access or manipulate the children of a specific XML element."
+    },
+    {
+      "id": 221,
+      "name": "getChildAtIndex",
+      "class": "XMLElement",
+      "summary": "This method retrieves a child element at a specified index from the current XML element, intended for accessing specific child nodes within an XML structure. It is used in contexts where direct assignment of a child element is required, such as iterating through or manipulating child nodes."
+    },
+    {
+      "id": 222,
+      "name": "getFirstChildNamed",
+      "class": "XMLElement",
+      "summary": "This method retrieves the first child element with a specific name from an XML element, intended for navigating and querying XML structures. It is used when you need to access a particular child element by its name."
+    },
+    {
+      "id": 223,
+      "name": "getFirstChildNamed",
+      "class": "XMLElement",
+      "summary": "This method retrieves the first child element with a specific name from the current XML element, intended for navigating and querying XML structures. It is used when you need to access a particular child element by its name."
+    },
+    {
+      "id": 224,
+      "name": "getChildrenNamed",
+      "class": "XMLElement",
+      "summary": "This method retrieves a vector of child elements with a specific name from an XML element, intended for querying and manipulating XML data structures. It is typically used when you need to access or process specific child elements within an XML document."
+    },
+    {
+      "id": 225,
+      "name": "getChildrenNamed",
+      "class": "XMLElement",
+      "summary": "This method retrieves a vector of child elements with a specific name from an XML element, intended for querying and manipulating XML data structures. It is used internally within the class to process and traverse XML content."
+    },
+    {
+      "id": 226,
+      "name": "findAttribute",
+      "class": "XMLElement",
+      "summary": "This method is intended to locate and return an XML attribute within an XMLElement. It is used when you need to assign a specific attribute to a variable for further processing."
+    },
+    {
+      "id": 227,
+      "name": "findAttribute",
+      "class": "XMLElement",
+      "summary": "This method is intended to locate and return a specific XML attribute within an XMLElement. It is used when you need to access an attribute by its name and namespace for further processing or manipulation."
+    },
+    {
+      "id": 228,
+      "name": "getAttributeCount",
+      "class": "XMLElement",
+      "summary": "This method is intended to retrieve the number of attributes in an XML element, which can be used to check if the attribute count has changed. It is typically used in conditional statements to compare the current attribute count with a previously known value."
+    },
+    {
+      "id": 229,
+      "name": "getAttribute",
+      "class": "XMLElement",
+      "summary": "This method retrieves the value of an attribute from an XML element, intended for use when parsing or processing XML data. It is typically called when specific attribute values are needed for further operations or validations."
+    },
+    {
+      "id": 230,
+      "name": "getAttribute",
+      "class": "XMLElement",
+      "summary": "This method is intended to retrieve the value of an attribute from an XML element. It is used when you need to access a specific attribute's value within an XML element."
+    },
+    {
+      "id": 231,
+      "name": "getAttribute",
+      "class": "XMLElement",
+      "summary": "This method retrieves the value of an attribute from an XML element, intended for use when you need to access specific attribute data within an XML structure. It is typically used in contexts where XML parsing and attribute value extraction are required."
+    },
+    {
+      "id": 232,
+      "name": "getAttribute",
+      "class": "XMLElement",
+      "summary": "This method retrieves the integer value of a specified attribute from an XML element, intended for use when parsing or processing XML data. It is typically called with the attribute name and a default value if the attribute is not found."
+    },
+    {
+      "id": 233,
+      "name": "getAttribute",
+      "class": "XMLElement",
+      "summary": "This method retrieves the value of an attribute from an XML element, intended for use when validating or processing XML data. It is typically used in conditional statements to check or compare attribute values."
+    },
+    {
+      "id": 234,
+      "name": "getAttributeType",
+      "class": "XMLElement",
+      "summary": "This method retrieves the type of an attribute from an XML element, intended for use when processing or validating XML data."
+    },
+    {
+      "id": 235,
+      "name": "getAttributeNamespace",
+      "class": "XMLElement",
+      "summary": "This method retrieves the namespace of an attribute within an XML element, intended for use when processing or validating XML data. It is typically called during XML parsing or manipulation tasks."
+    },
+    {
+      "id": 236,
+      "name": "getAttributeType",
+      "class": "XMLElement",
+      "summary": "This method retrieves the type of an attribute, intended for use when the attribute's type needs to be checked or utilized. It is called with the attribute's name and namespace as arguments, typically when processing or validating XML elements."
+    },
+    {
+      "id": 237,
+      "name": "setAttribute",
+      "class": "XMLElement",
+      "summary": "This method is intended to set an attribute for an XML element. It is used when you need to modify or add an attribute to an XML element in the document."
+    },
+    {
+      "id": 238,
+      "name": "setAttribute",
+      "class": "XMLElement",
+      "summary": "This method is intended to set an attribute for an XML element, typically used when constructing or modifying XML documents."
+    },
+    {
+      "id": 239,
+      "name": "removeAttribute",
+      "class": "XMLElement",
+      "summary": "This method is intended to remove an attribute from an XML element. It is used when you need to delete a specific attribute from an XMLElement instance."
+    },
+    {
+      "id": 240,
+      "name": "removeAttribute",
+      "class": "XMLElement",
+      "summary": "This method is intended to remove an attribute from an XML element. It is used when you need to modify an XML element by deleting one of its attributes."
+    },
+    {
+      "id": 241,
+      "name": "enumerateAttributeNames",
+      "class": "XMLElement",
+      "summary": "This method is intended to enumerate the attribute names of an XML element, providing a way to iterate through them. It is used within the context of XML processing when attribute names need to be accessed or manipulated."
+    },
+    {
+      "id": 242,
+      "name": "hasAttribute",
+      "class": "XMLElement",
+      "summary": "This method checks if an XML element has a specific attribute, intended for validating or querying XML structure. It is typically used when processing or parsing XML data to determine the presence of certain attributes."
+    },
+    {
+      "id": 243,
+      "name": "hasAttribute",
+      "class": "XMLElement",
+      "summary": "This method checks if an XML element has a specific attribute, intended for use in conditional logic to determine attribute presence."
+    },
+    {
+      "id": 244,
+      "name": "getAttributes",
+      "class": "XMLElement",
+      "summary": "This method retrieves the attributes of an XML element, returning them as a Properties object. It is used internally within the class to access and manipulate element attributes."
+    },
+    {
+      "id": 245,
+      "name": "getAttributesInNamespace",
+      "class": "XMLElement",
+      "summary": "This method retrieves a collection of attributes within a specific namespace from an XML element, returning them as a Properties object. It is likely used when processing XML data to filter and access attributes based on their namespace."
+    },
+    {
+      "id": 246,
+      "name": "getSystemID",
+      "class": "XMLElement",
+      "summary": "This method retrieves the system identifier of an XML element, useful when processing XML documents to identify the source of the element."
+    },
+    {
+      "id": 247,
+      "name": "getLineNr",
+      "class": "XMLElement",
+      "summary": "This method retrieves the line number of an XML element, useful for debugging or logging purposes. It can be used in any context where the line number of an XML element is needed."
+    },
+    {
+      "id": 248,
+      "name": "getContent",
+      "class": "XMLElement",
+      "summary": "This method retrieves the content of an XMLElement, intended for use when you need to access or manipulate the content of an XML element, such as when concatenating content from different elements."
+    },
+    {
+      "id": 249,
+      "name": "setContent",
+      "class": "XMLElement",
+      "summary": "This method is intended to update the content of an XMLElement. It is used when you need to modify the content of a specific XML element, such as when combining content from multiple elements."
+    },
+    {
+      "id": 250,
+      "name": "equals",
+      "class": "XMLElement",
+      "summary": "This method is intended to check if an XMLElement is equal to a given value. It is typically used in conditional statements to compare the element with another value."
+    },
+    {
+      "id": 251,
+      "name": "equalsXMLElement",
+      "class": "XMLElement",
+      "summary": "This method is intended to compare the current XMLElement with another XMLElement for equality. It is used when you need to check if two XML elements are the same, such as when processing or manipulating XML data."
+    },
+    {
+      "id": 252,
+      "name": "XMLEntityResolver",
+      "class": "XMLEntityResolver",
+      "summary": "This method creates a new XMLEntityResolver instance, intended for resolving XML entity references. It is used when a custom entity resolver is needed for XML parsing."
+    },
+    {
+      "id": 253,
+      "name": "finalize",
+      "class": "XMLEntityResolver",
+      "summary": "This method is intended to perform cleanup operations before the XMLEntityResolver object is garbage collected, typically releasing resources. It is automatically invoked by the Java Virtual Machine's garbage collector."
+    },
+    {
+      "id": 254,
+      "name": "addInternalEntity",
+      "class": "XMLEntityResolver",
+      "summary": "This method is intended to add an internal entity to the XML entity resolver. It is used when configuring the resolver to handle specific internal entities in XML documents."
+    },
+    {
+      "id": 255,
+      "name": "addExternalEntity",
+      "class": "XMLEntityResolver",
+      "summary": "This method is intended to add an external entity to the XML entity resolver, typically used when parsing XML documents that reference external entities. It is used in the context of XML processing to manage and resolve external entities."
+    },
+    {
+      "id": 256,
+      "name": "getEntity",
+      "class": "XMLEntityResolver",
+      "summary": "This method is intended to retrieve an entity as a Reader. It is used within the XMLEntityResolver class to handle entity resolution during XML parsing."
+    },
+    {
+      "id": 257,
+      "name": "isExternalEntity",
+      "class": "XMLEntityResolver",
+      "summary": "This method checks whether an entity is an external entity. It is used within the XMLEntityResolver class to determine the type of entity being processed."
+    },
+    {
+      "id": 258,
+      "name": "openExternalEntity",
+      "class": "XMLEntityResolver",
+      "summary": "This method is intended to open an external entity and return a Reader for it, typically used in XML parsing to resolve external entities. It is called within the context of an XML reader, with parameters for the reader and entity identifiers."
+    },
+    {
+      "id": 259,
+      "name": "XMLException",
+      "class": "XMLException",
+      "summary": "This constructor creates an instance of the XMLException class, typically used to signal errors in XML processing. It is invoked when an XML-related error occurs, such as malformed XML or invalid XML content."
+    },
+    {
+      "id": 260,
+      "name": "XMLException",
+      "class": "XMLException",
+      "summary": "This constructor creates a new XMLException with a specified value, intended for signaling XML processing errors. Use it when you need to throw an exception to indicate an issue in XML handling."
+    },
+    {
+      "id": 261,
+      "name": "XMLException",
+      "class": "XMLException",
+      "summary": "This constructor creates an XMLException with a specified value, intended for handling XML-related errors in Java applications. It is used when an exception needs to be thrown to indicate a problem in XML processing."
+    },
+    {
+      "id": 262,
+      "name": "XMLException",
+      "class": "XMLException",
+      "summary": "This constructor creates a new XMLException with a specified value, intended for handling XML processing errors. It is used when an XML-related exception needs to be thrown or propagated."
+    },
+    {
+      "id": 263,
+      "name": "XMLException",
+      "class": "XMLException",
+      "summary": "This constructor creates a new XMLException with a specified value, intended for handling XML processing errors. It is used when an XML-related exception needs to be thrown or propagated."
+    },
+    {
+      "id": 264,
+      "name": "buildMessage",
+      "class": "XMLException",
+      "summary": "This method is intended to construct an error message for an XML exception, and it is used when creating an instance of the XMLException class."
+    },
+    {
+      "id": 265,
+      "name": "finalize",
+      "class": "XMLException",
+      "summary": "This method is intended to perform cleanup activities before the XMLException object is garbage collected. It is typically used in the context of resource management to ensure proper cleanup."
+    },
+    {
+      "id": 266,
+      "name": "getSystemID",
+      "class": "XMLException",
+      "summary": "This method retrieves the system identifier associated with the XML exception, intended for use when debugging or logging XML parsing errors. It is typically called in error handling contexts to provide additional context about the source of the exception."
+    },
+    {
+      "id": 267,
+      "name": "getLineNr",
+      "class": "XMLException",
+      "summary": "This method retrieves the line number where an XML parsing error occurred, intended for error handling and debugging in XML processing contexts."
+    },
+    {
+      "id": 268,
+      "name": "getException",
+      "class": "XMLException",
+      "summary": "This method retrieves the underlying exception that caused the XMLException, intended for error handling and debugging purposes. It is used when you need to access the original exception that triggered the XMLException."
+    },
+    {
+      "id": 269,
+      "name": "printStackTrace",
+      "class": "XMLException",
+      "summary": "This method is intended to print the stack trace of the exception to a specified stream, allowing developers to log or display detailed error information. It is used within exception handling blocks to provide debugging context."
+    },
+    {
+      "id": 270,
+      "name": "printStackTrace",
+      "class": "XMLException",
+      "summary": "This method is intended to print the stack trace of the exception to a specified writer. It is used within the context of exception handling, specifically when extending the XMLException class and needing to print the stack trace to a custom writer."
+    },
+    {
+      "id": 271,
+      "name": "printStackTrace",
+      "class": "XMLException",
+      "summary": "This method is intended to print the stack trace of the exception to the standard error stream, typically used for debugging purposes when an XMLException occurs. It is called in contexts where detailed error information needs to be logged or displayed."
+    },
+    {
+      "id": 272,
+      "name": "toString",
+      "class": "XMLException",
+      "summary": "This method is intended to convert the XMLException object to its string representation. It is typically used when a string representation of the exception is needed, such as for logging or display purposes."
+    },
+    {
+      "id": 273,
+      "name": "XMLValidationException",
+      "class": "XMLValidationException",
+      "summary": "This constructor creates an XMLValidationException, typically used to signal issues during XML validation processes. It is invoked when an error is detected in the XML structure or content."
+    },
+    {
+      "id": 274,
+      "name": "finalize",
+      "class": "XMLValidationException",
+      "summary": "This method is intended to perform cleanup activities before the XMLValidationException object is garbage collected, typically releasing resources. It is automatically called by the garbage collector and should not be explicitly invoked by developers."
+    },
+    {
+      "id": 275,
+      "name": "getElementName",
+      "class": "XMLValidationException",
+      "summary": "This method retrieves the name of the XML element that caused a validation exception, intended for error handling and debugging in XML processing contexts."
+    },
+    {
+      "id": 276,
+      "name": "getAttributeName",
+      "class": "XMLValidationException",
+      "summary": "This method retrieves the name of the attribute that caused an XML validation error, intended for use when handling XMLValidationException instances."
+    },
+    {
+      "id": 277,
+      "name": "getAttributeValue",
+      "class": "XMLValidationException",
+      "summary": "This method is intended to retrieve the value of an attribute from an XML validation exception. It is used when you need to access the specific attribute value that caused the validation error."
+    },
+    {
+      "id": 278,
+      "name": "XMLWriter",
+      "class": "XMLWriter",
+      "summary": "This method is intended to create a new XMLWriter instance. It is typically used when you need to start writing XML data."
+    },
+    {
+      "id": 279,
+      "name": "XMLWriter",
+      "class": "XMLWriter",
+      "summary": "This method creates a new XMLWriter instance, intended for initializing XML writing operations in applications that require XML data generation."
+    },
+    {
+      "id": 280,
+      "name": "finalize",
+      "class": "XMLWriter",
+      "summary": "This method is intended to finalize the XMLWriter, releasing any resources it holds. It should be called when the XMLWriter is no longer needed."
+    },
+    {
+      "id": 281,
+      "name": "write",
+      "class": "XMLWriter",
+      "summary": "This method is intended to write a value to an XML document. It is used within the XMLWriter class to output data in XML format."
+    },
+    {
+      "id": 282,
+      "name": "write",
+      "class": "XMLWriter",
+      "summary": "This method is intended to write a value to an XML document. It is used within the XMLWriter class to output data in XML format."
+    },
+    {
+      "id": 283,
+      "name": "write",
+      "class": "XMLWriter",
+      "summary": "This method is intended to write a value to an XML document. It is used within the XMLWriter class to output data in XML format."
+    },
+    {
+      "id": 284,
+      "name": "write",
+      "class": "XMLWriter",
+      "summary": "This method is intended to write a value to an XML document. It is used within the XMLWriter class to output data with specific formatting options."
+    },
+    {
+      "id": 285,
+      "name": "writeEncoded",
+      "class": "XMLWriter",
+      "summary": "This method is intended to write encoded content to the XML document. It is used when you need to include trimmed and encoded content from an XML object into the document being written."
+    }
+  ]
+}

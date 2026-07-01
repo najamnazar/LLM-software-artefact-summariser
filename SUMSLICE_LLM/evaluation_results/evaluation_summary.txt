@@ -1,0 +1,32 @@
+============================================================
+EVALUATION SUMMARY: SUMSLICE LLM vs Ground Truth
+============================================================
+
+
+Claude:
+  Methods Evaluated: 150
+  Avg Cosine:        0.2038 (±0.0666)
+  Avg BERT Precision:0.8630
+  Avg BERT Recall:   0.8439
+  Avg BERT F1:       0.8532 (±0.0130)
+
+GPT:
+  Methods Evaluated: 150
+  Avg Cosine:        0.2233 (±0.0679)
+  Avg BERT Precision:0.8691
+  Avg BERT Recall:   0.8544
+  Avg BERT F1:       0.8616 (±0.0140)
+
+Mistral:
+  Methods Evaluated: 150
+  Avg Cosine:        0.2205 (±0.0668)
+  Avg BERT Precision:0.8668
+  Avg BERT Recall:   0.8511
+  Avg BERT F1:       0.8587 (±0.0128)
+
+Qwen:
+  Methods Evaluated: 150
+  Avg Cosine:        0.2430 (±0.0657)
+  Avg BERT Precision:0.8747
+  Avg BERT Recall:   0.8486
+  Avg BERT F1:       0.8613 (±0.0137)

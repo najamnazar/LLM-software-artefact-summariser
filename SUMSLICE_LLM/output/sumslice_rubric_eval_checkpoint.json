@@ -1,0 +1,6512 @@
+{
+  "jEdit::BeginToken::JavaCharStream::0": {
+    "project": "jEdit",
+    "class_name": "JavaCharStream",
+    "method_name": "BeginToken",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 3,
+        "QWEN": 4
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 3,
+        "QWEN": 4
+      },
+      "why": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "how": {
+        "CLAUDE": 2,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 1
+      }
+    }
+  },
+  "jEdit::GetImage::JavaCharStream::0": {
+    "project": "jEdit",
+    "class_name": "JavaCharStream",
+    "method_name": "GetImage",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "why": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "how": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      }
+    }
+  },
+  "jEdit::backup::JavaCharStream::0": {
+    "project": "jEdit",
+    "class_name": "JavaCharStream",
+    "method_name": "backup",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "why": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "how": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      }
+    }
+  },
+  "jEdit::event::JThis::0": {
+    "project": "jEdit",
+    "class_name": "JThis",
+    "method_name": "event",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 4,
+        "QWEN": 2
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "why": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "how": {
+        "CLAUDE": 4,
+        "GPT": 3,
+        "MISTRAL": 2,
+        "QWEN": 1
+      }
+    }
+  },
+  "jEdit::getDefaultProperty::PropertyManager::0": {
+    "project": "jEdit",
+    "class_name": "PropertyManager",
+    "method_name": "getDefaultProperty",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "why": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "how": {
+        "CLAUDE": 2,
+        "GPT": 1,
+        "MISTRAL": 4,
+        "QWEN": 3
+      }
+    }
+  },
+  "jEdit::getEndColumn::JavaCharStream::0": {
+    "project": "jEdit",
+    "class_name": "JavaCharStream",
+    "method_name": "getEndColumn",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 2,
+        "QWEN": 4
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "what": {
+        "CLAUDE": 2,
+        "GPT": 3,
+        "MISTRAL": 1,
+        "QWEN": 4
+      },
+      "why": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 2,
+        "QWEN": 4
+      },
+      "how": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 2,
+        "QWEN": 4
+      }
+    }
+  },
+  "jEdit::getEndLine::JavaCharStream::0": {
+    "project": "jEdit",
+    "class_name": "JavaCharStream",
+    "method_name": "getEndLine",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 2,
+        "QWEN": 4
+      },
+      "why": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 2,
+        "QWEN": 4
+      },
+      "how": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      }
+    }
+  },
+  "jEdit::getFlag::Buffer::0": {
+    "project": "jEdit",
+    "class_name": "Buffer",
+    "method_name": "getFlag",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 3,
+        "QWEN": 4
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 3,
+        "QWEN": 4
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 3,
+        "QWEN": 4
+      },
+      "why": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 3,
+        "QWEN": 4
+      },
+      "how": {
+        "CLAUDE": 2,
+        "GPT": 3,
+        "MISTRAL": 4,
+        "QWEN": 1
+      }
+    }
+  },
+  "jEdit::getInputHandler::View::0": {
+    "project": "jEdit",
+    "class_name": "View",
+    "method_name": "getInputHandler",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "why": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "how": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      }
+    }
+  },
+  "jEdit::getLineCount::JEditBuffer::0": {
+    "project": "jEdit",
+    "class_name": "JEditBuffer",
+    "method_name": "getLineCount",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 3,
+        "QWEN": 4
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 3,
+        "QWEN": 4
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 4,
+        "QWEN": 2
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 3,
+        "QWEN": 4
+      },
+      "why": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 3,
+        "QWEN": 4
+      },
+      "how": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 3,
+        "QWEN": 4
+      }
+    }
+  },
+  "jEdit::getLineCount::LineManager::0": {
+    "project": "jEdit",
+    "class_name": "LineManager",
+    "method_name": "getLineCount",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 3,
+        "QWEN": 4
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 3,
+        "QWEN": 4
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 3,
+        "QWEN": 4
+      },
+      "why": {
+        "CLAUDE": 2,
+        "GPT": 1,
+        "MISTRAL": 3,
+        "QWEN": 4
+      },
+      "how": {
+        "CLAUDE": 2,
+        "GPT": 3,
+        "MISTRAL": 1,
+        "QWEN": 4
+      }
+    }
+  },
+  "jEdit::getLineStartOffset::JEditBuffer::0": {
+    "project": "jEdit",
+    "class_name": "JEditBuffer",
+    "method_name": "getLineStartOffset",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "why": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "how": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      }
+    }
+  },
+  "jEdit::getMethod::NameSpace::0": {
+    "project": "jEdit",
+    "class_name": "NameSpace",
+    "method_name": "getMethod",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "conciseness": {
+        "CLAUDE": 2,
+        "GPT": 4,
+        "MISTRAL": 1,
+        "QWEN": 3
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "why": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "how": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      }
+    }
+  },
+  "jEdit::getMethod::NameSpace::1": {
+    "project": "jEdit",
+    "class_name": "NameSpace",
+    "method_name": "getMethod",
+    "occurrence_index": 1,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 4,
+        "QWEN": 2
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "why": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "how": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      }
+    }
+  },
+  "jEdit::getNextToken::ParserTokenManager::0": {
+    "project": "jEdit",
+    "class_name": "ParserTokenManager",
+    "method_name": "getNextToken",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 2,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 1
+      },
+      "content": {
+        "CLAUDE": 2,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 1
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 4,
+        "QWEN": 2
+      },
+      "why": {
+        "CLAUDE": 3,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 1
+      },
+      "how": {
+        "CLAUDE": 2,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 1
+      }
+    }
+  },
+  "jEdit::getNode::NameSpace::0": {
+    "project": "jEdit",
+    "class_name": "NameSpace",
+    "method_name": "getNode",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 4,
+        "QWEN": 2
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 3,
+        "QWEN": 4
+      },
+      "why": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 2,
+        "QWEN": 4
+      },
+      "how": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      }
+    }
+  },
+  "jEdit::getProperty::PropertyManager::0": {
+    "project": "jEdit",
+    "class_name": "PropertyManager",
+    "method_name": "getProperty",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "why": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 3,
+        "QWEN": 4
+      },
+      "how": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      }
+    }
+  },
+  "jEdit::getSourceFile::SimpleNode::0": {
+    "project": "jEdit",
+    "class_name": "SimpleNode",
+    "method_name": "getSourceFile",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 3,
+        "QWEN": 4
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 2,
+        "QWEN": 4
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 3,
+        "QWEN": 4
+      },
+      "why": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 3,
+        "QWEN": 4
+      },
+      "how": {
+        "CLAUDE": 2,
+        "GPT": 3,
+        "MISTRAL": 4,
+        "QWEN": 1
+      }
+    }
+  },
+  "jEdit::getToken::Parser::0": {
+    "project": "jEdit",
+    "class_name": "Parser",
+    "method_name": "getToken",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "why": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "how": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      }
+    }
+  },
+  "jEdit::invoke::BshMethod::0": {
+    "project": "jEdit",
+    "class_name": "BshMethod",
+    "method_name": "invoke",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "content": {
+        "CLAUDE": 2,
+        "GPT": 3,
+        "MISTRAL": 4,
+        "QWEN": 1
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 4,
+        "QWEN": 2
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "why": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "how": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      }
+    }
+  },
+  "jEdit::invoke::BshMethod::1": {
+    "project": "jEdit",
+    "class_name": "BshMethod",
+    "method_name": "invoke",
+    "occurrence_index": 1,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "why": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "how": {
+        "CLAUDE": 2,
+        "GPT": 4,
+        "MISTRAL": 1,
+        "QWEN": 3
+      }
+    }
+  },
+  "jEdit::invoke::BshMethod::2": {
+    "project": "jEdit",
+    "class_name": "BshMethod",
+    "method_name": "invoke",
+    "occurrence_index": 2,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "content": {
+        "CLAUDE": 2,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 1
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "what": {
+        "CLAUDE": 2,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 1
+      },
+      "why": {
+        "CLAUDE": 2,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 1
+      },
+      "how": {
+        "CLAUDE": 2,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 1
+      }
+    }
+  },
+  "jEdit::jjFillToken::ParserTokenManager::0": {
+    "project": "jEdit",
+    "class_name": "ParserTokenManager",
+    "method_name": "jjFillToken",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 2,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 1
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "conciseness": {
+        "CLAUDE": 2,
+        "GPT": 4,
+        "MISTRAL": 1,
+        "QWEN": 3
+      },
+      "what": {
+        "CLAUDE": 2,
+        "GPT": 4,
+        "MISTRAL": 1,
+        "QWEN": 3
+      },
+      "why": {
+        "CLAUDE": 2,
+        "GPT": 4,
+        "MISTRAL": 1,
+        "QWEN": 3
+      },
+      "how": {
+        "CLAUDE": 2,
+        "GPT": 4,
+        "MISTRAL": 1,
+        "QWEN": 3
+      }
+    }
+  },
+  "jEdit::readChar::JavaCharStream::0": {
+    "project": "jEdit",
+    "class_name": "JavaCharStream",
+    "method_name": "readChar",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 2,
+        "QWEN": 4
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 2,
+        "QWEN": 4
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 2,
+        "QWEN": 4
+      },
+      "why": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 2,
+        "QWEN": 4
+      },
+      "how": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 4,
+        "QWEN": 2
+      }
+    }
+  },
+  "jEdit::setProperty::PropertyManager::0": {
+    "project": "jEdit",
+    "class_name": "PropertyManager",
+    "method_name": "setProperty",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 2,
+        "QWEN": 4
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 2,
+        "QWEN": 4
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "why": {
+        "CLAUDE": 2,
+        "GPT": 1,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "how": {
+        "CLAUDE": 2,
+        "GPT": 4,
+        "MISTRAL": 1,
+        "QWEN": 3
+      }
+    }
+  },
+  "jajuk::GenreManager::GenreManager::0": {
+    "project": "jajuk",
+    "class_name": "GenreManager",
+    "method_name": "GenreManager",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "why": {
+        "CLAUDE": 3,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 1
+      },
+      "how": {
+        "CLAUDE": 2,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 1
+      }
+    }
+  },
+  "jajuk::JajukJSplitPane::JajukJSplitPane::0": {
+    "project": "jajuk",
+    "class_name": "JajukJSplitPane",
+    "method_name": "JajukJSplitPane",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "content": {
+        "CLAUDE": 2,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 1
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "what": {
+        "CLAUDE": 3,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 1
+      },
+      "why": {
+        "CLAUDE": 2,
+        "GPT": 3,
+        "MISTRAL": 4,
+        "QWEN": 1
+      },
+      "how": {
+        "CLAUDE": 3,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 1
+      }
+    }
+  },
+  "jajuk::WindowGlobalKeystrokeManager::WindowGlobalKeystrokeManager::0": {
+    "project": "jajuk",
+    "class_name": "WindowGlobalKeystrokeManager",
+    "method_name": "WindowGlobalKeystrokeManager",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 3,
+        "QWEN": 4
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "why": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "how": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      }
+    }
+  },
+  "jajuk::closeSystray::JajukSystray::0": {
+    "project": "jajuk",
+    "class_name": "JajukSystray",
+    "method_name": "closeSystray",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 4,
+        "QWEN": 2
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 4,
+        "QWEN": 2
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 4,
+        "QWEN": 2
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 4,
+        "QWEN": 2
+      },
+      "why": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 4,
+        "QWEN": 2
+      },
+      "how": {
+        "CLAUDE": 2,
+        "GPT": 3,
+        "MISTRAL": 4,
+        "QWEN": 1
+      }
+    }
+  },
+  "jajuk::getArtistSimilarCacheDir::LastFmCache::0": {
+    "project": "jajuk",
+    "class_name": "LastFmCache",
+    "method_name": "getArtistSimilarCacheDir",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "why": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 2,
+        "QWEN": 4
+      },
+      "how": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      }
+    }
+  },
+  "jajuk::getDiscoveryDate::Track::0": {
+    "project": "jajuk",
+    "class_name": "Track",
+    "method_name": "getDiscoveryDate",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 2,
+        "QWEN": 4
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 4,
+        "QWEN": 2
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 2,
+        "QWEN": 4
+      },
+      "why": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 4,
+        "QWEN": 2
+      },
+      "how": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 2,
+        "QWEN": 4
+      }
+    }
+  },
+  "jajuk::getFileNameForArtistInfo::LastFmCache::0": {
+    "project": "jajuk",
+    "class_name": "LastFmCache",
+    "method_name": "getFileNameForArtistInfo",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 2,
+        "GPT": 4,
+        "MISTRAL": 1,
+        "QWEN": 3
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "conciseness": {
+        "CLAUDE": 2,
+        "GPT": 4,
+        "MISTRAL": 1,
+        "QWEN": 3
+      },
+      "what": {
+        "CLAUDE": 2,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 1
+      },
+      "why": {
+        "CLAUDE": 2,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 1
+      },
+      "how": {
+        "CLAUDE": 2,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 1
+      }
+    }
+  },
+  "jajuk::getGenre::AudioObject::0": {
+    "project": "jajuk",
+    "class_name": "AudioObject",
+    "method_name": "getGenre",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "why": {
+        "CLAUDE": 3,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 1
+      },
+      "how": {
+        "CLAUDE": 2,
+        "GPT": 4,
+        "MISTRAL": 1,
+        "QWEN": 3
+      }
+    }
+  },
+  "jajuk::getID::ViewAdapter::0": {
+    "project": "jajuk",
+    "class_name": "ViewAdapter",
+    "method_name": "getID",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "content": {
+        "CLAUDE": 2,
+        "GPT": 4,
+        "MISTRAL": 1,
+        "QWEN": 3
+      },
+      "conciseness": {
+        "CLAUDE": 2,
+        "GPT": 4,
+        "MISTRAL": 1,
+        "QWEN": 3
+      },
+      "what": {
+        "CLAUDE": 2,
+        "GPT": 4,
+        "MISTRAL": 1,
+        "QWEN": 3
+      },
+      "why": {
+        "CLAUDE": 2,
+        "GPT": 1,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "how": {
+        "CLAUDE": 2,
+        "GPT": 4,
+        "MISTRAL": 1,
+        "QWEN": 3
+      }
+    }
+  },
+  "jajuk::getItemAt::PlaylistTableModel::0": {
+    "project": "jajuk",
+    "class_name": "PlaylistTableModel",
+    "method_name": "getItemAt",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "content": {
+        "CLAUDE": 2,
+        "GPT": 4,
+        "MISTRAL": 1,
+        "QWEN": 3
+      },
+      "conciseness": {
+        "CLAUDE": 2,
+        "GPT": 1,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "what": {
+        "CLAUDE": 2,
+        "GPT": 1,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "why": {
+        "CLAUDE": 3,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 1
+      },
+      "how": {
+        "CLAUDE": 2,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 1
+      }
+    }
+  },
+  "jajuk::getNothingFoundPanel::SuggestionView::0": {
+    "project": "jajuk",
+    "class_name": "SuggestionView",
+    "method_name": "getNothingFoundPanel",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "why": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "how": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      }
+    }
+  },
+  "jajuk::getOptionPane::PasswordDialog::0": {
+    "project": "jajuk",
+    "class_name": "PasswordDialog",
+    "method_name": "getOptionPane",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "why": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "how": {
+        "CLAUDE": 2,
+        "GPT": 1,
+        "MISTRAL": 4,
+        "QWEN": 3
+      }
+    }
+  },
+  "jajuk::getType::PropertyMetaInformation::0": {
+    "project": "jajuk",
+    "class_name": "PropertyMetaInformation",
+    "method_name": "getType",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "what": {
+        "CLAUDE": 2,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 1
+      },
+      "why": {
+        "CLAUDE": 3,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 1
+      },
+      "how": {
+        "CLAUDE": 2,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 1
+      }
+    }
+  },
+  "jajuk::getURL::Cover::0": {
+    "project": "jajuk",
+    "class_name": "Cover",
+    "method_name": "getURL",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 2,
+        "QWEN": 4
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "what": {
+        "CLAUDE": 3,
+        "GPT": 1,
+        "MISTRAL": 2,
+        "QWEN": 4
+      },
+      "why": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "how": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 2,
+        "QWEN": 4
+      }
+    }
+  },
+  "jajuk::handleDirectories::Collection::0": {
+    "project": "jajuk",
+    "class_name": "Collection",
+    "method_name": "handleDirectories",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 2,
+        "QWEN": 4
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 3,
+        "QWEN": 4
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 3,
+        "QWEN": 4
+      },
+      "why": {
+        "CLAUDE": 2,
+        "GPT": 3,
+        "MISTRAL": 4,
+        "QWEN": 1
+      },
+      "how": {
+        "CLAUDE": 2,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 1
+      }
+    }
+  },
+  "jajuk::handleSave::CoverView::0": {
+    "project": "jajuk",
+    "class_name": "CoverView",
+    "method_name": "handleSave",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 2,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 1
+      },
+      "content": {
+        "CLAUDE": 2,
+        "GPT": 3,
+        "MISTRAL": 4,
+        "QWEN": 1
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "why": {
+        "CLAUDE": 2,
+        "GPT": 3,
+        "MISTRAL": 4,
+        "QWEN": 1
+      },
+      "how": {
+        "CLAUDE": 2,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 1
+      }
+    }
+  },
+  "jajuk::isAutocommit::TrackManager::0": {
+    "project": "jajuk",
+    "class_name": "TrackManager",
+    "method_name": "isAutocommit",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "content": {
+        "CLAUDE": 2,
+        "GPT": 3,
+        "MISTRAL": 4,
+        "QWEN": 1
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "what": {
+        "CLAUDE": 2,
+        "GPT": 3,
+        "MISTRAL": 4,
+        "QWEN": 1
+      },
+      "why": {
+        "CLAUDE": 2,
+        "GPT": 3,
+        "MISTRAL": 4,
+        "QWEN": 1
+      },
+      "how": {
+        "CLAUDE": 2,
+        "GPT": 3,
+        "MISTRAL": 4,
+        "QWEN": 1
+      }
+    }
+  },
+  "jajuk::paint::JajukJSplitPane::0": {
+    "project": "jajuk",
+    "class_name": "JajukJSplitPane",
+    "method_name": "paint",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 2,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 1
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 4,
+        "QWEN": 2
+      },
+      "why": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 2,
+        "QWEN": 4
+      },
+      "how": {
+        "CLAUDE": 2,
+        "GPT": 3,
+        "MISTRAL": 4,
+        "QWEN": 1
+      }
+    }
+  },
+  "jajuk::perform::GCAction::0": {
+    "project": "jajuk",
+    "class_name": "GCAction",
+    "method_name": "perform",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 3,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 1
+      },
+      "content": {
+        "CLAUDE": 2,
+        "GPT": 3,
+        "MISTRAL": 1,
+        "QWEN": 4
+      },
+      "conciseness": {
+        "CLAUDE": 3,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 1
+      },
+      "what": {
+        "CLAUDE": 2,
+        "GPT": 3,
+        "MISTRAL": 4,
+        "QWEN": 1
+      },
+      "why": null,
+      "how": {
+        "CLAUDE": 2,
+        "GPT": 3,
+        "MISTRAL": 4,
+        "QWEN": 1
+      }
+    }
+  },
+  "jajuk::popupMenuCanceled::DropDownButton::0": {
+    "project": "jajuk",
+    "class_name": "DropDownButton",
+    "method_name": "popupMenuCanceled",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "why": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "how": {
+        "CLAUDE": 2,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 1
+      }
+    }
+  },
+  "jajuk::process::XMLExporter::0": {
+    "project": "jajuk",
+    "class_name": "XMLExporter",
+    "method_name": "process",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 3,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 1
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 2,
+        "QWEN": 4
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 4,
+        "QWEN": 2
+      },
+      "why": {
+        "CLAUDE": 4,
+        "GPT": 1,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "how": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 4,
+        "QWEN": 2
+      }
+    }
+  },
+  "jajuk::setImage::ContextListener::0": {
+    "project": "jajuk",
+    "class_name": "ContextListener",
+    "method_name": "setImage",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 3,
+        "QWEN": 4
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "what": {
+        "CLAUDE": 2,
+        "GPT": 3,
+        "MISTRAL": 1,
+        "QWEN": 4
+      },
+      "why": {
+        "CLAUDE": 3,
+        "GPT": 2,
+        "MISTRAL": 1,
+        "QWEN": 4
+      },
+      "how": {
+        "CLAUDE": 2,
+        "GPT": 3,
+        "MISTRAL": 1,
+        "QWEN": 4
+      }
+    }
+  },
+  "jajuk::subList::QueueList::0": {
+    "project": "jajuk",
+    "class_name": "QueueList",
+    "method_name": "subList",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 2,
+        "GPT": 3,
+        "MISTRAL": 4,
+        "QWEN": 1
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 3,
+        "QWEN": 4
+      },
+      "conciseness": {
+        "CLAUDE": 2,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 1
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "why": {
+        "CLAUDE": 2,
+        "GPT": 3,
+        "MISTRAL": 1,
+        "QWEN": 4
+      },
+      "how": {
+        "CLAUDE": 2,
+        "GPT": 3,
+        "MISTRAL": 4,
+        "QWEN": 1
+      }
+    }
+  },
+  "jajuk::updateGUIFromConfCovers::ParameterViewGUIHelper::0": {
+    "project": "jajuk",
+    "class_name": "ParameterViewGUIHelper",
+    "method_name": "updateGUIFromConfCovers",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 4,
+        "QWEN": 2
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 4,
+        "QWEN": 2
+      },
+      "why": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 2,
+        "QWEN": 4
+      },
+      "how": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      }
+    }
+  },
+  "jajuk::updateRate::Track::0": {
+    "project": "jajuk",
+    "class_name": "Track",
+    "method_name": "updateRate",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "why": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 2,
+        "QWEN": 4
+      },
+      "how": {
+        "CLAUDE": 2,
+        "GPT": 3,
+        "MISTRAL": 4,
+        "QWEN": 1
+      }
+    }
+  },
+  "jhotdraw::AttributeFigureContentProducer::AttributeFigureContentProducer::0": {
+    "project": "jhotdraw",
+    "class_name": "AttributeFigureContentProducer",
+    "method_name": "AttributeFigureContentProducer",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "content": {
+        "CLAUDE": 2,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 1
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "what": {
+        "CLAUDE": 2,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 1
+      },
+      "why": {
+        "CLAUDE": 2,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 1
+      },
+      "how": {
+        "CLAUDE": 2,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 1
+      }
+    }
+  },
+  "jhotdraw::NullToolTest::NullToolTest::0": {
+    "project": "jhotdraw",
+    "class_name": "NullToolTest",
+    "method_name": "NullToolTest",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "content": {
+        "CLAUDE": 3,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 1
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "why": {
+        "CLAUDE": 3,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 1
+      },
+      "how": {
+        "CLAUDE": 2,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 1
+      }
+    }
+  },
+  "jhotdraw::StandardFigureSelectionTest::StandardFigureSelectionTest::0": {
+    "project": "jhotdraw",
+    "class_name": "StandardFigureSelectionTest",
+    "method_name": "StandardFigureSelectionTest",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "content": {
+        "CLAUDE": 2,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 1
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "why": {
+        "CLAUDE": 3,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 1
+      },
+      "how": {
+        "CLAUDE": 2,
+        "GPT": 3,
+        "MISTRAL": 4,
+        "QWEN": 1
+      }
+    }
+  },
+  "jhotdraw::ZoomDrawingView::ZoomDrawingView::0": {
+    "project": "jhotdraw",
+    "class_name": "ZoomDrawingView",
+    "method_name": "ZoomDrawingView",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "why": {
+        "CLAUDE": 4,
+        "GPT": 3,
+        "MISTRAL": 2,
+        "QWEN": 1
+      },
+      "how": {
+        "CLAUDE": 2,
+        "GPT": 3,
+        "MISTRAL": 4,
+        "QWEN": 1
+      }
+    }
+  },
+  "jhotdraw::addStorageFormat::StorageFormatManager::0": {
+    "project": "jhotdraw",
+    "class_name": "StorageFormatManager",
+    "method_name": "addStorageFormat",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "what": {
+        "CLAUDE": 2,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 1
+      },
+      "why": {
+        "CLAUDE": 2,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 1
+      },
+      "how": {
+        "CLAUDE": 2,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 1
+      }
+    }
+  },
+  "jhotdraw::commandExecuted::UndoableCommand::0": {
+    "project": "jhotdraw",
+    "class_name": "UndoableCommand",
+    "method_name": "commandExecuted",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "content": {
+        "CLAUDE": 2,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 1
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "what": {
+        "CLAUDE": 2,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 1
+      },
+      "why": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "how": {
+        "CLAUDE": 2,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 1
+      }
+    }
+  },
+  "jhotdraw::createAlignmentMenu::DrawApplication::0": {
+    "project": "jhotdraw",
+    "class_name": "DrawApplication",
+    "method_name": "createAlignmentMenu",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 2,
+        "QWEN": 4
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 4,
+        "QWEN": 2
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "what": {
+        "CLAUDE": 3,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 1
+      },
+      "why": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 2,
+        "QWEN": 4
+      },
+      "how": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 4,
+        "QWEN": 2
+      }
+    }
+  },
+  "jhotdraw::createButtons::JavaDrawApplet::0": {
+    "project": "jhotdraw",
+    "class_name": "JavaDrawApplet",
+    "method_name": "createButtons",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 2,
+        "QWEN": 4
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 2,
+        "QWEN": 4
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 4,
+        "QWEN": 2
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 2,
+        "QWEN": 4
+      },
+      "why": {
+        "CLAUDE": 2,
+        "GPT": 3,
+        "MISTRAL": 4,
+        "QWEN": 1
+      },
+      "how": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 2,
+        "QWEN": 4
+      }
+    }
+  },
+  "jhotdraw::createUndoActivity::PolygonScaleHandle::0": {
+    "project": "jhotdraw",
+    "class_name": "PolygonScaleHandle",
+    "method_name": "createUndoActivity",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "why": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "how": {
+        "CLAUDE": 2,
+        "GPT": 4,
+        "MISTRAL": 1,
+        "QWEN": 3
+      }
+    }
+  },
+  "jhotdraw::deactivate::AbstractTool::0": {
+    "project": "jhotdraw",
+    "class_name": "AbstractTool",
+    "method_name": "deactivate",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "content": null,
+      "conciseness": {
+        "CLAUDE": 3,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 1
+      },
+      "what": {
+        "CLAUDE": 2,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 1
+      },
+      "why": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 3,
+        "QWEN": 4
+      },
+      "how": {
+        "CLAUDE": 2,
+        "GPT": 3,
+        "MISTRAL": 4,
+        "QWEN": 1
+      }
+    }
+  },
+  "jhotdraw::drawingInvalidated::StandardDrawingView::0": {
+    "project": "jhotdraw",
+    "class_name": "StandardDrawingView",
+    "method_name": "drawingInvalidated",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 4,
+        "QWEN": 2
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 4,
+        "QWEN": 2
+      },
+      "why": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "how": {
+        "CLAUDE": 4,
+        "GPT": 1,
+        "MISTRAL": 3,
+        "QWEN": 2
+      }
+    }
+  },
+  "jhotdraw::findConnectableFigure::ChangeConnectionHandle::0": {
+    "project": "jhotdraw",
+    "class_name": "ChangeConnectionHandle",
+    "method_name": "findConnectableFigure",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 2,
+        "QWEN": 4
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 4,
+        "QWEN": 2
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 2,
+        "QWEN": 4
+      },
+      "why": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 2,
+        "QWEN": 4
+      },
+      "how": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      }
+    }
+  },
+  "jhotdraw::findConnectionTarget::ConnectionHandle::0": {
+    "project": "jhotdraw",
+    "class_name": "ConnectionHandle",
+    "method_name": "findConnectionTarget",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "why": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "how": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      }
+    }
+  },
+  "jhotdraw::getCommand::CommandMenuItem::0": {
+    "project": "jhotdraw",
+    "class_name": "CommandMenuItem",
+    "method_name": "getCommand",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "why": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "how": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      }
+    }
+  },
+  "jhotdraw::getComponent::ComponentFigure::0": {
+    "project": "jhotdraw",
+    "class_name": "ComponentFigure",
+    "method_name": "getComponent",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 3,
+        "QWEN": 4
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 3,
+        "QWEN": 4
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "what": {
+        "CLAUDE": 2,
+        "GPT": 1,
+        "MISTRAL": 3,
+        "QWEN": 4
+      },
+      "why": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 3,
+        "QWEN": 4
+      },
+      "how": {
+        "CLAUDE": 2,
+        "GPT": 1,
+        "MISTRAL": 3,
+        "QWEN": 4
+      }
+    }
+  },
+  "jhotdraw::getPrototypeFigure::CreationTool::0": {
+    "project": "jhotdraw",
+    "class_name": "CreationTool",
+    "method_name": "getPrototypeFigure",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "why": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "how": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      }
+    }
+  },
+  "jhotdraw::getTypingTarget::TextTool::0": {
+    "project": "jhotdraw",
+    "class_name": "TextTool",
+    "method_name": "getTypingTarget",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "why": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "how": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      }
+    }
+  },
+  "jhotdraw::invokeEnd::TriangleRotationHandle::0": {
+    "project": "jhotdraw",
+    "class_name": "TriangleRotationHandle",
+    "method_name": "invokeEnd",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 4,
+        "QWEN": 2
+      },
+      "why": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "how": {
+        "CLAUDE": 2,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 1
+      }
+    }
+  },
+  "jhotdraw::keyTyped::StandardDrawingView::0": {
+    "project": "jhotdraw",
+    "class_name": "StandardDrawingView",
+    "method_name": "keyTyped",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "content": {
+        "CLAUDE": 2,
+        "GPT": 1,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 3,
+        "QWEN": 4
+      },
+      "what": {
+        "CLAUDE": 3,
+        "GPT": 1,
+        "MISTRAL": 4,
+        "QWEN": 2
+      },
+      "why": {
+        "CLAUDE": 3,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 1
+      },
+      "how": {
+        "CLAUDE": 4,
+        "GPT": 1,
+        "MISTRAL": 2,
+        "QWEN": 3
+      }
+    }
+  },
+  "jhotdraw::markFontDirty::HTMLTextAreaFigure::0": {
+    "project": "jhotdraw",
+    "class_name": "HTMLTextAreaFigure",
+    "method_name": "markFontDirty",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "why": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "how": {
+        "CLAUDE": 2,
+        "GPT": 4,
+        "MISTRAL": 1,
+        "QWEN": 3
+      }
+    }
+  },
+  "jhotdraw::selectionHandles::StandardDrawingView::0": {
+    "project": "jhotdraw",
+    "class_name": "StandardDrawingView",
+    "method_name": "selectionHandles",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "what": {
+        "CLAUDE": 2,
+        "GPT": 4,
+        "MISTRAL": 1,
+        "QWEN": 3
+      },
+      "why": {
+        "CLAUDE": 2,
+        "GPT": 4,
+        "MISTRAL": 1,
+        "QWEN": 3
+      },
+      "how": {
+        "CLAUDE": 2,
+        "GPT": 4,
+        "MISTRAL": 1,
+        "QWEN": 3
+      }
+    }
+  },
+  "jhotdraw::setURL::URLContentProducer::0": {
+    "project": "jhotdraw",
+    "class_name": "URLContentProducer",
+    "method_name": "setURL",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "why": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "how": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      }
+    }
+  },
+  "jhotdraw::setUndoActivity::UndoableCommand::0": {
+    "project": "jhotdraw",
+    "class_name": "UndoableCommand",
+    "method_name": "setUndoActivity",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "what": {
+        "CLAUDE": 3,
+        "GPT": 1,
+        "MISTRAL": 4,
+        "QWEN": 2
+      },
+      "why": {
+        "CLAUDE": 2,
+        "GPT": 3,
+        "MISTRAL": 4,
+        "QWEN": 1
+      },
+      "how": {
+        "CLAUDE": 2,
+        "GPT": 3,
+        "MISTRAL": 4,
+        "QWEN": 1
+      }
+    }
+  },
+  "jhotdraw::setUp::ClipboardTest::0": {
+    "project": "jhotdraw",
+    "class_name": "ClipboardTest",
+    "method_name": "setUp",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 2,
+        "QWEN": 4
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "why": {
+        "CLAUDE": 2,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 1
+      },
+      "how": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      }
+    }
+  },
+  "jhotdraw::testVault::OffsetLocatorTest::0": {
+    "project": "jhotdraw",
+    "class_name": "OffsetLocatorTest",
+    "method_name": "testVault",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 3,
+        "GPT": 4,
+        "MISTRAL": 1,
+        "QWEN": 2
+      },
+      "content": {
+        "CLAUDE": 3,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 1
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "what": {
+        "CLAUDE": 2,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 1
+      },
+      "why": {
+        "CLAUDE": 3,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 1
+      },
+      "how": {
+        "CLAUDE": 4,
+        "GPT": 1,
+        "MISTRAL": 3,
+        "QWEN": 2
+      }
+    }
+  },
+  "jtopas::checkArgument::AbstractTokenizerProperties::0": {
+    "project": "jtopas",
+    "class_name": "AbstractTokenizerProperties",
+    "method_name": "checkArgument",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 2,
+        "QWEN": 4
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 2,
+        "QWEN": 4
+      },
+      "conciseness": {
+        "CLAUDE": 2,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 1
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 2,
+        "QWEN": 4
+      },
+      "why": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 3,
+        "QWEN": 4
+      },
+      "how": {
+        "CLAUDE": 2,
+        "GPT": 3,
+        "MISTRAL": 1,
+        "QWEN": 4
+      }
+    }
+  },
+  "jtopas::compare::SequenceStore::0": {
+    "project": "jtopas",
+    "class_name": "SequenceStore",
+    "method_name": "compare",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "why": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "how": {
+        "CLAUDE": 2,
+        "GPT": 4,
+        "MISTRAL": 1,
+        "QWEN": 3
+      }
+    }
+  },
+  "jtopas::compare::SequenceStore::1": {
+    "project": "jtopas",
+    "class_name": "SequenceStore",
+    "method_name": "compare",
+    "occurrence_index": 1,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 2,
+        "QWEN": 4
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 2,
+        "QWEN": 4
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 4,
+        "QWEN": 2
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 2,
+        "QWEN": 4
+      },
+      "why": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 2,
+        "QWEN": 4
+      },
+      "how": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 2,
+        "QWEN": 4
+      }
+    }
+  },
+  "jtopas::doGetProperty::AbstractTokenizerProperties::0": {
+    "project": "jtopas",
+    "class_name": "AbstractTokenizerProperties",
+    "method_name": "doGetProperty",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 3,
+        "QWEN": 4
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 3,
+        "QWEN": 4
+      },
+      "conciseness": {
+        "CLAUDE": 2,
+        "GPT": 1,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 3,
+        "QWEN": 4
+      },
+      "why": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 3,
+        "QWEN": 4
+      },
+      "how": {
+        "CLAUDE": 2,
+        "GPT": 1,
+        "MISTRAL": 3,
+        "QWEN": 4
+      }
+    }
+  },
+  "jtopas::getBaseDataProvider::AbstractTokenizer::0": {
+    "project": "jtopas",
+    "class_name": "AbstractTokenizer",
+    "method_name": "getBaseDataProvider",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "why": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "how": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      }
+    }
+  },
+  "jtopas::getBaseTokenizer::AbstractTokenizer::0": {
+    "project": "jtopas",
+    "class_name": "AbstractTokenizer",
+    "method_name": "getBaseTokenizer",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 4,
+        "QWEN": 2
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 4,
+        "QWEN": 2
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 2,
+        "QWEN": 4
+      },
+      "why": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 2,
+        "QWEN": 4
+      },
+      "how": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 2,
+        "QWEN": 4
+      }
+    }
+  },
+  "jtopas::getBlockComment::AbstractTokenizerProperties::0": {
+    "project": "jtopas",
+    "class_name": "AbstractTokenizerProperties",
+    "method_name": "getBlockComment",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 2,
+        "QWEN": 4
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 3,
+        "QWEN": 4
+      },
+      "conciseness": {
+        "CLAUDE": 2,
+        "GPT": 3,
+        "MISTRAL": 4,
+        "QWEN": 1
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 3,
+        "QWEN": 4
+      },
+      "why": {
+        "CLAUDE": 2,
+        "GPT": 3,
+        "MISTRAL": 1,
+        "QWEN": 4
+      },
+      "how": {
+        "CLAUDE": 4,
+        "GPT": 2,
+        "MISTRAL": 3,
+        "QWEN": 1
+      }
+    }
+  },
+  "jtopas::getCharAt::DataProvider::0": {
+    "project": "jtopas",
+    "class_name": "DataProvider",
+    "method_name": "getCharAt",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "conciseness": {
+        "CLAUDE": 2,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 1
+      },
+      "what": {
+        "CLAUDE": 2,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 1
+      },
+      "why": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "how": {
+        "CLAUDE": 2,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 1
+      }
+    }
+  },
+  "jtopas::getCompanion::TokenizerProperty::0": {
+    "project": "jtopas",
+    "class_name": "TokenizerProperty",
+    "method_name": "getCompanion",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 3,
+        "QWEN": 4
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "why": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 3,
+        "QWEN": 4
+      },
+      "how": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 3,
+        "QWEN": 4
+      }
+    }
+  },
+  "jtopas::getFlagMask::TokenizerProperty::0": {
+    "project": "jtopas",
+    "class_name": "TokenizerProperty",
+    "method_name": "getFlagMask",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 3,
+        "QWEN": 4
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 3,
+        "QWEN": 4
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 3,
+        "QWEN": 4
+      },
+      "why": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 3,
+        "QWEN": 4
+      },
+      "how": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 3,
+        "QWEN": 4
+      }
+    }
+  },
+  "jtopas::getImages::TokenizerProperty::0": {
+    "project": "jtopas",
+    "class_name": "TokenizerProperty",
+    "method_name": "getImages",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "content": null,
+      "conciseness": null,
+      "what": null,
+      "why": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "how": {
+        "CLAUDE": 2,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 1
+      }
+    }
+  },
+  "jtopas::getKeyword::AbstractTokenizerProperties::0": {
+    "project": "jtopas",
+    "class_name": "AbstractTokenizerProperties",
+    "method_name": "getKeyword",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "conciseness": {
+        "CLAUDE": 2,
+        "GPT": 4,
+        "MISTRAL": 1,
+        "QWEN": 3
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "why": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "how": {
+        "CLAUDE": 2,
+        "GPT": 1,
+        "MISTRAL": 4,
+        "QWEN": 3
+      }
+    }
+  },
+  "jtopas::getPattern::AbstractTokenizerProperties::0": {
+    "project": "jtopas",
+    "class_name": "AbstractTokenizerProperties",
+    "method_name": "getPattern",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 4,
+        "QWEN": 2
+      },
+      "why": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 4,
+        "QWEN": 2
+      },
+      "how": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      }
+    }
+  },
+  "jtopas::getSpecialSequence::AbstractTokenizerProperties::0": {
+    "project": "jtopas",
+    "class_name": "AbstractTokenizerProperties",
+    "method_name": "getSpecialSequence",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "why": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "how": {
+        "CLAUDE": 2,
+        "GPT": 4,
+        "MISTRAL": 1,
+        "QWEN": 3
+      }
+    }
+  },
+  "jtopas::getString::AbstractTokenizerProperties::0": {
+    "project": "jtopas",
+    "class_name": "AbstractTokenizerProperties",
+    "method_name": "getString",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 2,
+        "QWEN": 4
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 2,
+        "QWEN": 4
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "what": {
+        "CLAUDE": 3,
+        "GPT": 2,
+        "MISTRAL": 1,
+        "QWEN": 4
+      },
+      "why": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 2,
+        "QWEN": 4
+      },
+      "how": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 2,
+        "QWEN": 4
+      }
+    }
+  },
+  "jtopas::getTokenizerProperties::AbstractTokenizer::0": {
+    "project": "jtopas",
+    "class_name": "AbstractTokenizer",
+    "method_name": "getTokenizerProperties",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 3,
+        "QWEN": 4
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 3,
+        "QWEN": 4
+      },
+      "why": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 3,
+        "QWEN": 4
+      },
+      "how": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      }
+    }
+  },
+  "jtopas::getType::TokenizerProperty::0": {
+    "project": "jtopas",
+    "class_name": "TokenizerProperty",
+    "method_name": "getType",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 4,
+        "QWEN": 2
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 4,
+        "QWEN": 2
+      },
+      "why": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 4,
+        "QWEN": 2
+      },
+      "how": {
+        "CLAUDE": 2,
+        "GPT": 1,
+        "MISTRAL": 4,
+        "QWEN": 3
+      }
+    }
+  },
+  "jtopas::isFlagSet::AbstractTokenizer::0": {
+    "project": "jtopas",
+    "class_name": "AbstractTokenizer",
+    "method_name": "isFlagSet",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "conciseness": {
+        "CLAUDE": 2,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 1
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "why": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "how": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      }
+    }
+  },
+  "jtopas::isFlagSet::AbstractTokenizer::1": {
+    "project": "jtopas",
+    "class_name": "AbstractTokenizer",
+    "method_name": "isFlagSet",
+    "occurrence_index": 1,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 2,
+        "QWEN": 4
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "why": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "how": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      }
+    }
+  },
+  "jtopas::readMoreDataFromBase::AbstractTokenizer::0": {
+    "project": "jtopas",
+    "class_name": "AbstractTokenizer",
+    "method_name": "readMoreDataFromBase",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "why": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "how": {
+        "CLAUDE": 2,
+        "GPT": 3,
+        "MISTRAL": 4,
+        "QWEN": 1
+      }
+    }
+  },
+  "jtopas::removeProperty::AbstractTokenizerProperties::0": {
+    "project": "jtopas",
+    "class_name": "AbstractTokenizerProperties",
+    "method_name": "removeProperty",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "conciseness": {
+        "CLAUDE": 2,
+        "GPT": 1,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "why": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "how": {
+        "CLAUDE": 2,
+        "GPT": 1,
+        "MISTRAL": 4,
+        "QWEN": 3
+      }
+    }
+  },
+  "jtopas::searchString::SequenceStore::0": {
+    "project": "jtopas",
+    "class_name": "SequenceStore",
+    "method_name": "searchString",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "why": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 2,
+        "QWEN": 4
+      },
+      "how": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      }
+    }
+  },
+  "jtopas::setFlags::TokenizerProperty::0": {
+    "project": "jtopas",
+    "class_name": "TokenizerProperty",
+    "method_name": "setFlags",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "content": {
+        "CLAUDE": 3,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 1
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 2,
+        "QWEN": 4
+      },
+      "why": {
+        "CLAUDE": 3,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 1
+      },
+      "how": {
+        "CLAUDE": 2,
+        "GPT": 3,
+        "MISTRAL": 4,
+        "QWEN": 1
+      }
+    }
+  },
+  "jtopas::setFlags::TokenizerProperty::1": {
+    "project": "jtopas",
+    "class_name": "TokenizerProperty",
+    "method_name": "setFlags",
+    "occurrence_index": 1,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 4,
+        "QWEN": 2
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 4,
+        "QWEN": 2
+      },
+      "why": {
+        "CLAUDE": 3,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 1
+      },
+      "how": {
+        "CLAUDE": 3,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 1
+      }
+    }
+  },
+  "jtopas::startsWithSequenceCommentOrString::SequenceStore::0": {
+    "project": "jtopas",
+    "class_name": "SequenceStore",
+    "method_name": "startsWithSequenceCommentOrString",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 4,
+        "QWEN": 2
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 4,
+        "QWEN": 2
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 4,
+        "QWEN": 2
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 2,
+        "QWEN": 4
+      },
+      "why": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 2,
+        "QWEN": 4
+      },
+      "how": {
+        "CLAUDE": 2,
+        "GPT": 1,
+        "MISTRAL": 4,
+        "QWEN": 3
+      }
+    }
+  },
+  "nanoxml::PCDataAdded::IXMLValidator::0": {
+    "project": "nanoxml",
+    "class_name": "IXMLValidator",
+    "method_name": "PCDataAdded",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "content": {
+        "CLAUDE": 2,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 1
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "what": {
+        "CLAUDE": 2,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 1
+      },
+      "why": {
+        "CLAUDE": 3,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 1
+      },
+      "how": {
+        "CLAUDE": 2,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 1
+      }
+    }
+  },
+  "nanoxml::attributeAdded::IXMLValidator::0": {
+    "project": "nanoxml",
+    "class_name": "IXMLValidator",
+    "method_name": "attributeAdded",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "content": {
+        "CLAUDE": 2,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 1
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "what": {
+        "CLAUDE": 2,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 1
+      },
+      "why": {
+        "CLAUDE": 2,
+        "GPT": 4,
+        "MISTRAL": 1,
+        "QWEN": 3
+      },
+      "how": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      }
+    }
+  },
+  "nanoxml::elementAttributesProcessed::IXMLValidator::0": {
+    "project": "nanoxml",
+    "class_name": "IXMLValidator",
+    "method_name": "elementAttributesProcessed",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "content": {
+        "CLAUDE": 3,
+        "GPT": 1,
+        "MISTRAL": 2,
+        "QWEN": 4
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "why": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "how": {
+        "CLAUDE": 3,
+        "GPT": 1,
+        "MISTRAL": 2,
+        "QWEN": 4
+      }
+    }
+  },
+  "nanoxml::elementEnded::IXMLValidator::0": {
+    "project": "nanoxml",
+    "class_name": "IXMLValidator",
+    "method_name": "elementEnded",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 2,
+        "QWEN": 4
+      },
+      "why": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 4,
+        "QWEN": 2
+      },
+      "how": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 2,
+        "QWEN": 4
+      }
+    }
+  },
+  "nanoxml::elementStarted::IXMLValidator::0": {
+    "project": "nanoxml",
+    "class_name": "IXMLValidator",
+    "method_name": "elementStarted",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "why": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "how": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      }
+    }
+  },
+  "nanoxml::equalsXMLElement::XMLElement::0": {
+    "project": "nanoxml",
+    "class_name": "XMLElement",
+    "method_name": "equalsXMLElement",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 3,
+        "QWEN": 4
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 3,
+        "QWEN": 4
+      },
+      "conciseness": {
+        "CLAUDE": 2,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 1
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 3,
+        "QWEN": 4
+      },
+      "why": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 3,
+        "QWEN": 4
+      },
+      "how": {
+        "CLAUDE": 2,
+        "GPT": 3,
+        "MISTRAL": 4,
+        "QWEN": 1
+      }
+    }
+  },
+  "nanoxml::finalize::XMLException::0": {
+    "project": "nanoxml",
+    "class_name": "XMLException",
+    "method_name": "finalize",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "why": {
+        "CLAUDE": 2,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 1
+      },
+      "how": {
+        "CLAUDE": 3,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 1
+      }
+    }
+  },
+  "nanoxml::findAttribute::XMLElement::0": {
+    "project": "nanoxml",
+    "class_name": "XMLElement",
+    "method_name": "findAttribute",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "why": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 2,
+        "QWEN": 4
+      },
+      "how": {
+        "CLAUDE": 2,
+        "GPT": 1,
+        "MISTRAL": 4,
+        "QWEN": 3
+      }
+    }
+  },
+  "nanoxml::findAttribute::XMLElement::1": {
+    "project": "nanoxml",
+    "class_name": "XMLElement",
+    "method_name": "findAttribute",
+    "occurrence_index": 1,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 4,
+        "QWEN": 2
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 2,
+        "QWEN": 4
+      },
+      "why": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 2,
+        "QWEN": 4
+      },
+      "how": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 2,
+        "QWEN": 4
+      }
+    }
+  },
+  "nanoxml::getContent::IXMLElement::0": {
+    "project": "nanoxml",
+    "class_name": "IXMLElement",
+    "method_name": "getContent",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "content": {
+        "CLAUDE": 2,
+        "GPT": 3,
+        "MISTRAL": 4,
+        "QWEN": 1
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "what": {
+        "CLAUDE": 2,
+        "GPT": 1,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "why": {
+        "CLAUDE": 2,
+        "GPT": 3,
+        "MISTRAL": 4,
+        "QWEN": 1
+      },
+      "how": {
+        "CLAUDE": 2,
+        "GPT": 3,
+        "MISTRAL": 4,
+        "QWEN": 1
+      }
+    }
+  },
+  "nanoxml::getFullName::XMLAttribute::0": {
+    "project": "nanoxml",
+    "class_name": "XMLAttribute",
+    "method_name": "getFullName",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 2,
+        "QWEN": 4
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "what": {
+        "CLAUDE": 3,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 1
+      },
+      "why": {
+        "CLAUDE": 2,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 1
+      },
+      "how": {
+        "CLAUDE": 2,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 1
+      }
+    }
+  },
+  "nanoxml::getLineNr::IXMLReader::0": {
+    "project": "nanoxml",
+    "class_name": "IXMLReader",
+    "method_name": "getLineNr",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 2,
+        "QWEN": 4
+      },
+      "content": {
+        "CLAUDE": 2,
+        "GPT": 3,
+        "MISTRAL": 4,
+        "QWEN": 1
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 3,
+        "QWEN": 4
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 4,
+        "QWEN": 2
+      },
+      "why": {
+        "CLAUDE": 3,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 1
+      },
+      "how": {
+        "CLAUDE": 2,
+        "GPT": 3,
+        "MISTRAL": 4,
+        "QWEN": 1
+      }
+    }
+  },
+  "nanoxml::getName::IXMLElement::0": {
+    "project": "nanoxml",
+    "class_name": "IXMLElement",
+    "method_name": "getName",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "content": {
+        "CLAUDE": 2,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 1
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "what": {
+        "CLAUDE": 2,
+        "GPT": 1,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "why": {
+        "CLAUDE": 3,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 1
+      },
+      "how": {
+        "CLAUDE": 2,
+        "GPT": 3,
+        "MISTRAL": 4,
+        "QWEN": 1
+      }
+    }
+  },
+  "nanoxml::getName::XMLAttribute::0": {
+    "project": "nanoxml",
+    "class_name": "XMLAttribute",
+    "method_name": "getName",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "what": {
+        "CLAUDE": 2,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 1
+      },
+      "why": {
+        "CLAUDE": 2,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 1
+      },
+      "how": {
+        "CLAUDE": 2,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 1
+      }
+    }
+  },
+  "nanoxml::getNamespace::XMLAttribute::0": {
+    "project": "nanoxml",
+    "class_name": "XMLAttribute",
+    "method_name": "getNamespace",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 3,
+        "QWEN": 4
+      },
+      "conciseness": {
+        "CLAUDE": 2,
+        "GPT": 1,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "what": {
+        "CLAUDE": 2,
+        "GPT": 1,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "why": {
+        "CLAUDE": 2,
+        "GPT": 3,
+        "MISTRAL": 4,
+        "QWEN": 1
+      },
+      "how": {
+        "CLAUDE": 2,
+        "GPT": 3,
+        "MISTRAL": 4,
+        "QWEN": 1
+      }
+    }
+  },
+  "nanoxml::getParameterEntityResolver::IXMLValidator::0": {
+    "project": "nanoxml",
+    "class_name": "IXMLValidator",
+    "method_name": "getParameterEntityResolver",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "why": {
+        "CLAUDE": 2,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 1
+      },
+      "how": {
+        "CLAUDE": 2,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 1
+      }
+    }
+  },
+  "nanoxml::getSystemID::IXMLReader::0": {
+    "project": "nanoxml",
+    "class_name": "IXMLReader",
+    "method_name": "getSystemID",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "content": {
+        "CLAUDE": 2,
+        "GPT": 1,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 4,
+        "QWEN": 2
+      },
+      "why": {
+        "CLAUDE": 3,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 1
+      },
+      "how": {
+        "CLAUDE": 2,
+        "GPT": 3,
+        "MISTRAL": 1,
+        "QWEN": 4
+      }
+    }
+  },
+  "nanoxml::getType::XMLAttribute::0": {
+    "project": "nanoxml",
+    "class_name": "XMLAttribute",
+    "method_name": "getType",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 3,
+        "QWEN": 4
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 3,
+        "QWEN": 4
+      },
+      "conciseness": {
+        "CLAUDE": 2,
+        "GPT": 4,
+        "MISTRAL": 1,
+        "QWEN": 3
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 3,
+        "QWEN": 4
+      },
+      "why": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 3,
+        "QWEN": 4
+      },
+      "how": {
+        "CLAUDE": 2,
+        "GPT": 1,
+        "MISTRAL": 4,
+        "QWEN": 3
+      }
+    }
+  },
+  "nanoxml::getValue::XMLAttribute::0": {
+    "project": "nanoxml",
+    "class_name": "XMLAttribute",
+    "method_name": "getValue",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 3,
+        "QWEN": 4
+      },
+      "why": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 3,
+        "QWEN": 4
+      },
+      "how": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      }
+    }
+  },
+  "nanoxml::parseDTD::IXMLValidator::0": {
+    "project": "nanoxml",
+    "class_name": "IXMLValidator",
+    "method_name": "parseDTD",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "content": {
+        "CLAUDE": 2,
+        "GPT": 3,
+        "MISTRAL": 4,
+        "QWEN": 1
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 2,
+        "QWEN": 4
+      },
+      "why": {
+        "CLAUDE": 2,
+        "GPT": 3,
+        "MISTRAL": 4,
+        "QWEN": 1
+      },
+      "how": {
+        "CLAUDE": 2,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 1
+      }
+    }
+  },
+  "nanoxml::read::IXMLReader::0": {
+    "project": "nanoxml",
+    "class_name": "IXMLReader",
+    "method_name": "read",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 3,
+        "QWEN": 4
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "what": {
+        "CLAUDE": 2,
+        "GPT": 3,
+        "MISTRAL": 4,
+        "QWEN": 1
+      },
+      "why": {
+        "CLAUDE": 2,
+        "GPT": 3,
+        "MISTRAL": 4,
+        "QWEN": 1
+      },
+      "how": {
+        "CLAUDE": 2,
+        "GPT": 3,
+        "MISTRAL": 4,
+        "QWEN": 1
+      }
+    }
+  },
+  "nanoxml::setContent::IXMLElement::0": {
+    "project": "nanoxml",
+    "class_name": "IXMLElement",
+    "method_name": "setContent",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 2,
+        "GPT": 3,
+        "MISTRAL": 4,
+        "QWEN": 1
+      },
+      "content": {
+        "CLAUDE": 2,
+        "GPT": 3,
+        "MISTRAL": 4,
+        "QWEN": 1
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "what": {
+        "CLAUDE": 2,
+        "GPT": 3,
+        "MISTRAL": 4,
+        "QWEN": 1
+      },
+      "why": {
+        "CLAUDE": 3,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 1
+      },
+      "how": {
+        "CLAUDE": 2,
+        "GPT": 3,
+        "MISTRAL": 4,
+        "QWEN": 1
+      }
+    }
+  },
+  "nanoxml::setParameterEntityResolver::IXMLValidator::0": {
+    "project": "nanoxml",
+    "class_name": "IXMLValidator",
+    "method_name": "setParameterEntityResolver",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "what": {
+        "CLAUDE": 2,
+        "GPT": 1,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "why": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "how": {
+        "CLAUDE": 2,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 1
+      }
+    }
+  },
+  "nanoxml::startNewStream::StdXMLReader::0": {
+    "project": "nanoxml",
+    "class_name": "StdXMLReader",
+    "method_name": "startNewStream",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 3,
+        "QWEN": 4
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "what": {
+        "CLAUDE": 2,
+        "GPT": 3,
+        "MISTRAL": 4,
+        "QWEN": 1
+      },
+      "why": {
+        "CLAUDE": 3,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 1
+      },
+      "how": {
+        "CLAUDE": 3,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 1
+      }
+    }
+  },
+  "nanoxml::unread::IXMLReader::0": {
+    "project": "nanoxml",
+    "class_name": "IXMLReader",
+    "method_name": "unread",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "content": {
+        "CLAUDE": 2,
+        "GPT": 4,
+        "MISTRAL": 1,
+        "QWEN": 3
+      },
+      "conciseness": {
+        "CLAUDE": 2,
+        "GPT": 4,
+        "MISTRAL": 1,
+        "QWEN": 3
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "why": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "how": {
+        "CLAUDE": 2,
+        "GPT": 4,
+        "MISTRAL": 1,
+        "QWEN": 3
+      }
+    }
+  },
+  "siena-master::asBoolean::Json::0": {
+    "project": "siena-master",
+    "class_name": "Json",
+    "method_name": "asBoolean",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "content": {
+        "CLAUDE": 2,
+        "GPT": 3,
+        "MISTRAL": 4,
+        "QWEN": 1
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "what": {
+        "CLAUDE": 2,
+        "GPT": 1,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "why": {
+        "CLAUDE": 2,
+        "GPT": 3,
+        "MISTRAL": 4,
+        "QWEN": 1
+      },
+      "how": {
+        "CLAUDE": 2,
+        "GPT": 3,
+        "MISTRAL": 1,
+        "QWEN": 4
+      }
+    }
+  },
+  "siena-master::asString::Json::0": {
+    "project": "siena-master",
+    "class_name": "Json",
+    "method_name": "asString",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 3,
+        "QWEN": 4
+      },
+      "content": {
+        "CLAUDE": 2,
+        "GPT": 1,
+        "MISTRAL": 3,
+        "QWEN": 4
+      },
+      "conciseness": {
+        "CLAUDE": 2,
+        "GPT": 1,
+        "MISTRAL": 3,
+        "QWEN": 4
+      },
+      "what": {
+        "CLAUDE": 2,
+        "GPT": 1,
+        "MISTRAL": 3,
+        "QWEN": 4
+      },
+      "why": {
+        "CLAUDE": 2,
+        "GPT": 1,
+        "MISTRAL": 3,
+        "QWEN": 4
+      },
+      "how": {
+        "CLAUDE": 2,
+        "GPT": 3,
+        "MISTRAL": 1,
+        "QWEN": 4
+      }
+    }
+  },
+  "siena-master::containsKey::Json::0": {
+    "project": "siena-master",
+    "class_name": "Json",
+    "method_name": "containsKey",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 3,
+        "QWEN": 4
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 3,
+        "QWEN": 4
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 3,
+        "QWEN": 4
+      },
+      "why": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 3,
+        "QWEN": 4
+      },
+      "how": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 3,
+        "QWEN": 4
+      }
+    }
+  },
+  "siena-master::createQuery::PersistenceManager::0": {
+    "project": "siena-master",
+    "class_name": "PersistenceManager",
+    "method_name": "createQuery",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "why": {
+        "CLAUDE": 3,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 1
+      },
+      "how": {
+        "CLAUDE": 2,
+        "GPT": 1,
+        "MISTRAL": 4,
+        "QWEN": 3
+      }
+    }
+  },
+  "siena-master::createQuery::PersistenceManager::1": {
+    "project": "siena-master",
+    "class_name": "PersistenceManager",
+    "method_name": "createQuery",
+    "occurrence_index": 1,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "content": null,
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "what": {
+        "CLAUDE": 3,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 1
+      },
+      "why": {
+        "CLAUDE": 3,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 1
+      },
+      "how": {
+        "CLAUDE": 2,
+        "GPT": 3,
+        "MISTRAL": 4,
+        "QWEN": 1
+      }
+    }
+  },
+  "siena-master::createRequest::RemotePersistenceManager::0": {
+    "project": "siena-master",
+    "class_name": "RemotePersistenceManager",
+    "method_name": "createRequest",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 3,
+        "QWEN": 4
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 3,
+        "QWEN": 4
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 3,
+        "QWEN": 4
+      },
+      "why": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 3,
+        "QWEN": 4
+      },
+      "how": {
+        "CLAUDE": 2,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 1
+      }
+    }
+  },
+  "siena-master::createRequest::RemotePersistenceManager::1": {
+    "project": "siena-master",
+    "class_name": "RemotePersistenceManager",
+    "method_name": "createRequest",
+    "occurrence_index": 1,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 2,
+        "QWEN": 4
+      },
+      "why": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "how": null
+    }
+  },
+  "siena-master::createRequest::RemotePersistenceManager::2": {
+    "project": "siena-master",
+    "class_name": "RemotePersistenceManager",
+    "method_name": "createRequest",
+    "occurrence_index": 2,
+    "criteria": {
+      "accuracy": null,
+      "content": null,
+      "conciseness": null,
+      "what": null,
+      "why": null,
+      "how": null
+    }
+  },
+  "siena-master::deserialize::Serializer::0": {
+    "project": "siena-master",
+    "class_name": "Serializer",
+    "method_name": "deserialize",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": null,
+      "content": null,
+      "conciseness": null,
+      "what": null,
+      "why": null,
+      "how": {
+        "CLAUDE": 2,
+        "GPT": 1,
+        "MISTRAL": 4,
+        "QWEN": 3
+      }
+    }
+  },
+  "siena-master::fetch::Query::0": {
+    "project": "siena-master",
+    "class_name": "Query",
+    "method_name": "fetch",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "why": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "how": {
+        "CLAUDE": 2,
+        "GPT": 1,
+        "MISTRAL": 4,
+        "QWEN": 3
+      }
+    }
+  },
+  "siena-master::fetch::Query::1": {
+    "project": "siena-master",
+    "class_name": "Query",
+    "method_name": "fetch",
+    "occurrence_index": 1,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "why": {
+        "CLAUDE": 4,
+        "GPT": 3,
+        "MISTRAL": 2,
+        "QWEN": 1
+      },
+      "how": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      }
+    }
+  },
+  "siena-master::fetch::Query::2": {
+    "project": "siena-master",
+    "class_name": "Query",
+    "method_name": "fetch",
+    "occurrence_index": 2,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "why": {
+        "CLAUDE": 4,
+        "GPT": 3,
+        "MISTRAL": 2,
+        "QWEN": 1
+      },
+      "how": {
+        "CLAUDE": 2,
+        "GPT": 1,
+        "MISTRAL": 4,
+        "QWEN": 3
+      }
+    }
+  },
+  "siena-master::filter::Query::0": {
+    "project": "siena-master",
+    "class_name": "Query",
+    "method_name": "filter",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "why": {
+        "CLAUDE": 2,
+        "GPT": 4,
+        "MISTRAL": 1,
+        "QWEN": 3
+      },
+      "how": {
+        "CLAUDE": 2,
+        "GPT": 4,
+        "MISTRAL": 1,
+        "QWEN": 3
+      }
+    }
+  },
+  "siena-master::get::Json::0": {
+    "project": "siena-master",
+    "class_name": "Json",
+    "method_name": "get",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "content": {
+        "CLAUDE": 2,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 1
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "what": {
+        "CLAUDE": 2,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 1
+      },
+      "why": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 4,
+        "QWEN": 2
+      },
+      "how": {
+        "CLAUDE": 2,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 1
+      }
+    }
+  },
+  "siena-master::get::PersistenceManager::0": {
+    "project": "siena-master",
+    "class_name": "PersistenceManager",
+    "method_name": "get",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "content": {
+        "CLAUDE": 2,
+        "GPT": 4,
+        "MISTRAL": 1,
+        "QWEN": 3
+      },
+      "conciseness": {
+        "CLAUDE": 3,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 1
+      },
+      "what": {
+        "CLAUDE": 3,
+        "GPT": 4,
+        "MISTRAL": 1,
+        "QWEN": 2
+      },
+      "why": {
+        "CLAUDE": 2,
+        "GPT": 4,
+        "MISTRAL": 1,
+        "QWEN": 3
+      },
+      "how": {
+        "CLAUDE": 2,
+        "GPT": 4,
+        "MISTRAL": 1,
+        "QWEN": 3
+      }
+    }
+  },
+  "siena-master::get::PersistenceManagerFactory::0": {
+    "project": "siena-master",
+    "class_name": "PersistenceManagerFactory",
+    "method_name": "get",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "why": {
+        "CLAUDE": 3,
+        "GPT": 1,
+        "MISTRAL": 4,
+        "QWEN": 2
+      },
+      "how": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      }
+    }
+  },
+  "siena-master::getPersistenceManager::Model::0": {
+    "project": "siena-master",
+    "class_name": "Model",
+    "method_name": "getPersistenceManager",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "conciseness": {
+        "CLAUDE": 4,
+        "GPT": 3,
+        "MISTRAL": 2,
+        "QWEN": 1
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "why": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 3,
+        "QWEN": 4
+      },
+      "how": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      }
+    }
+  },
+  "siena-master::insert::PersistenceManager::0": {
+    "project": "siena-master",
+    "class_name": "PersistenceManager",
+    "method_name": "insert",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "content": {
+        "CLAUDE": 3,
+        "GPT": 2,
+        "MISTRAL": 1,
+        "QWEN": 4
+      },
+      "conciseness": {
+        "CLAUDE": 3,
+        "GPT": 1,
+        "MISTRAL": 2,
+        "QWEN": 4
+      },
+      "what": {
+        "CLAUDE": 3,
+        "GPT": 2,
+        "MISTRAL": 1,
+        "QWEN": 4
+      },
+      "why": {
+        "CLAUDE": 3,
+        "GPT": 2,
+        "MISTRAL": 1,
+        "QWEN": 4
+      },
+      "how": {
+        "CLAUDE": 3,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 1
+      }
+    }
+  },
+  "siena-master::keys::Json::0": {
+    "project": "siena-master",
+    "class_name": "Json",
+    "method_name": "keys",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 3,
+        "QWEN": 4
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 3,
+        "QWEN": 4
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 3,
+        "QWEN": 4
+      },
+      "why": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 3,
+        "QWEN": 4
+      },
+      "how": {
+        "CLAUDE": 2,
+        "GPT": 1,
+        "MISTRAL": 3,
+        "QWEN": 4
+      }
+    }
+  },
+  "siena-master::order::Query::0": {
+    "project": "siena-master",
+    "class_name": "Query",
+    "method_name": "order",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "conciseness": {
+        "CLAUDE": 2,
+        "GPT": 1,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "why": {
+        "CLAUDE": 2,
+        "GPT": 1,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "how": {
+        "CLAUDE": 2,
+        "GPT": 1,
+        "MISTRAL": 4,
+        "QWEN": 3
+      }
+    }
+  },
+  "siena-master::put::Json::0": {
+    "project": "siena-master",
+    "class_name": "Json",
+    "method_name": "put",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 2,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 1
+      },
+      "content": {
+        "CLAUDE": 2,
+        "GPT": 3,
+        "MISTRAL": 4,
+        "QWEN": 1
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 4,
+        "QWEN": 2
+      },
+      "why": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 4,
+        "QWEN": 2
+      },
+      "how": {
+        "CLAUDE": 2,
+        "GPT": 3,
+        "MISTRAL": 4,
+        "QWEN": 1
+      }
+    }
+  },
+  "siena-master::serialize::Serializer::0": {
+    "project": "siena-master",
+    "class_name": "Serializer",
+    "method_name": "serialize",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 3,
+        "QWEN": 4
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 3,
+        "QWEN": 4
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 3,
+        "QWEN": 4
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 3,
+        "QWEN": 4
+      },
+      "why": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 3,
+        "QWEN": 4
+      },
+      "how": {
+        "CLAUDE": 2,
+        "GPT": 3,
+        "MISTRAL": 1,
+        "QWEN": 4
+      }
+    }
+  },
+  "siena-master::simpleRequest::RemotePersistenceManager::0": {
+    "project": "siena-master",
+    "class_name": "RemotePersistenceManager",
+    "method_name": "simpleRequest",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 4,
+        "QWEN": 2
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 4,
+        "QWEN": 2
+      },
+      "why": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 4,
+        "QWEN": 2
+      },
+      "how": {
+        "CLAUDE": 2,
+        "GPT": 3,
+        "MISTRAL": 4,
+        "QWEN": 1
+      }
+    }
+  },
+  "siena-master::size::Json::0": {
+    "project": "siena-master",
+    "class_name": "Json",
+    "method_name": "size",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 2,
+        "QWEN": 3
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "why": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "how": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 3,
+        "QWEN": 4
+      }
+    }
+  },
+  "siena-master::wrap::Json::0": {
+    "project": "siena-master",
+    "class_name": "Json",
+    "method_name": "wrap",
+    "occurrence_index": 0,
+    "criteria": {
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 3,
+        "QWEN": 4
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 3,
+        "QWEN": 4
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 2,
+        "QWEN": 4
+      },
+      "why": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 2,
+        "QWEN": 4
+      },
+      "how": {
+        "CLAUDE": 2,
+        "GPT": 3,
+        "MISTRAL": 1,
+        "QWEN": 4
+      }
+    }
+  }
+}

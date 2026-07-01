@@ -1,0 +1,2698 @@
+{
+  "method_list": {
+    "averages": {
+      "called": 0,
+      "calls": 0
+    },
+    "method": [
+      {
+        "id": 0,
+        "name": "createPCDataElement",
+        "class": "IXMLElement",
+        "returntype": "IXMLElement",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "pcdata element",
+          "verb": "create"
+        }
+      },
+      {
+        "id": 1,
+        "name": "createElement",
+        "class": "IXMLElement",
+        "returntype": "IXMLElement",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "element",
+          "verb": "create"
+        }
+      },
+      {
+        "id": 2,
+        "name": "createElement",
+        "class": "IXMLElement",
+        "returntype": "IXMLElement",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "element",
+          "verb": "create"
+        }
+      },
+      {
+        "id": 3,
+        "name": "createElement",
+        "class": "IXMLElement",
+        "returntype": "IXMLElement",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "element",
+          "verb": "create"
+        }
+      },
+      {
+        "id": 4,
+        "name": "createElement",
+        "class": "IXMLElement",
+        "returntype": "IXMLElement",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "element",
+          "verb": "create"
+        }
+      },
+      {
+        "id": 5,
+        "name": "getParent",
+        "class": "IXMLElement",
+        "returntype": "IXMLElement",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "parent",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 6,
+        "name": "getFullName",
+        "class": "IXMLElement",
+        "returntype": "String",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "full name",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 7,
+        "name": "getName",
+        "class": "IXMLElement",
+        "returntype": "String",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "name",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 8,
+        "name": "getNamespace",
+        "class": "IXMLElement",
+        "returntype": "String",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "namespace",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 9,
+        "name": "setName",
+        "class": "IXMLElement",
+        "returntype": "void",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "name",
+          "verb": "set"
+        }
+      },
+      {
+        "id": 10,
+        "name": "setName",
+        "class": "IXMLElement",
+        "returntype": "void",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "name",
+          "verb": "set"
+        }
+      },
+      {
+        "id": 11,
+        "name": "addChild",
+        "class": "IXMLElement",
+        "returntype": "void",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "child",
+          "verb": "add"
+        }
+      },
+      {
+        "id": 12,
+        "name": "removeChild",
+        "class": "IXMLElement",
+        "returntype": "void",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "child",
+          "verb": "remove"
+        }
+      },
+      {
+        "id": 13,
+        "name": "removeChildAtIndex",
+        "class": "IXMLElement",
+        "returntype": "void",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "child at index",
+          "verb": "remove"
+        }
+      },
+      {
+        "id": 14,
+        "name": "enumerateChildren",
+        "class": "IXMLElement",
+        "returntype": "Enumeration",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "children",
+          "verb": "enumerate"
+        }
+      },
+      {
+        "id": 15,
+        "name": "isLeaf",
+        "class": "IXMLElement",
+        "returntype": "boolean",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "leaf",
+          "verb": "is"
+        }
+      },
+      {
+        "id": 16,
+        "name": "hasChildren",
+        "class": "IXMLElement",
+        "returntype": "boolean",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "children",
+          "verb": "has"
+        }
+      },
+      {
+        "id": 17,
+        "name": "getChildrenCount",
+        "class": "IXMLElement",
+        "returntype": "int",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "children count",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 18,
+        "name": "getChildren",
+        "class": "IXMLElement",
+        "returntype": "Vector",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "children",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 19,
+        "name": "getChildAtIndex",
+        "class": "IXMLElement",
+        "returntype": "IXMLElement",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "child at index",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 20,
+        "name": "getFirstChildNamed",
+        "class": "IXMLElement",
+        "returntype": "IXMLElement",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "first child named",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 21,
+        "name": "getFirstChildNamed",
+        "class": "IXMLElement",
+        "returntype": "IXMLElement",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "first child named",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 22,
+        "name": "getChildrenNamed",
+        "class": "IXMLElement",
+        "returntype": "Vector",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "children named",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 23,
+        "name": "getChildrenNamed",
+        "class": "IXMLElement",
+        "returntype": "Vector",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "children named",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 24,
+        "name": "getAttributeCount",
+        "class": "IXMLElement",
+        "returntype": "int",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "attribute count",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 25,
+        "name": "getAttribute",
+        "class": "IXMLElement",
+        "returntype": "String",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "attribute",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 26,
+        "name": "getAttribute",
+        "class": "IXMLElement",
+        "returntype": "String",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "attribute",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 27,
+        "name": "getAttribute",
+        "class": "IXMLElement",
+        "returntype": "String",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "attribute",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 28,
+        "name": "getAttribute",
+        "class": "IXMLElement",
+        "returntype": "int",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "attribute",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 29,
+        "name": "getAttribute",
+        "class": "IXMLElement",
+        "returntype": "int",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "attribute",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 30,
+        "name": "getAttributeType",
+        "class": "IXMLElement",
+        "returntype": "String",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "attribute type",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 31,
+        "name": "getAttributeNamespace",
+        "class": "IXMLElement",
+        "returntype": "String",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "attribute namespace",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 32,
+        "name": "getAttributeType",
+        "class": "IXMLElement",
+        "returntype": "String",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "attribute type",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 33,
+        "name": "setAttribute",
+        "class": "IXMLElement",
+        "returntype": "void",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "attribute",
+          "verb": "set"
+        }
+      },
+      {
+        "id": 34,
+        "name": "setAttribute",
+        "class": "IXMLElement",
+        "returntype": "void",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "attribute",
+          "verb": "set"
+        }
+      },
+      {
+        "id": 35,
+        "name": "removeAttribute",
+        "class": "IXMLElement",
+        "returntype": "void",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "attribute",
+          "verb": "remove"
+        }
+      },
+      {
+        "id": 36,
+        "name": "removeAttribute",
+        "class": "IXMLElement",
+        "returntype": "void",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "attribute",
+          "verb": "remove"
+        }
+      },
+      {
+        "id": 37,
+        "name": "enumerateAttributeNames",
+        "class": "IXMLElement",
+        "returntype": "Enumeration",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "attribute names",
+          "verb": "enumerate"
+        }
+      },
+      {
+        "id": 38,
+        "name": "hasAttribute",
+        "class": "IXMLElement",
+        "returntype": "boolean",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "attribute",
+          "verb": "has"
+        }
+      },
+      {
+        "id": 39,
+        "name": "hasAttribute",
+        "class": "IXMLElement",
+        "returntype": "boolean",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "attribute",
+          "verb": "has"
+        }
+      },
+      {
+        "id": 40,
+        "name": "getAttributes",
+        "class": "IXMLElement",
+        "returntype": "Properties",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "attributes",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 41,
+        "name": "getAttributesInNamespace",
+        "class": "IXMLElement",
+        "returntype": "Properties",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "attributes in namespace",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 42,
+        "name": "getSystemID",
+        "class": "IXMLElement",
+        "returntype": "String",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "system id",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 43,
+        "name": "getLineNr",
+        "class": "IXMLElement",
+        "returntype": "int",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "line nr",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 44,
+        "name": "getContent",
+        "class": "IXMLElement",
+        "returntype": "String",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "content",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 45,
+        "name": "setContent",
+        "class": "IXMLElement",
+        "returntype": "void",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "content",
+          "verb": "set"
+        }
+      },
+      {
+        "id": 46,
+        "name": "equals",
+        "class": "IXMLElement",
+        "returntype": "boolean",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "value",
+          "verb": "equals"
+        }
+      },
+      {
+        "id": 47,
+        "name": "equalsXMLElement",
+        "class": "IXMLElement",
+        "returntype": "boolean",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "xmlelement",
+          "verb": "equals"
+        }
+      },
+      {
+        "id": 48,
+        "name": "read",
+        "class": "IXMLReader",
+        "returntype": "char",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "value",
+          "verb": "read"
+        }
+      },
+      {
+        "id": 49,
+        "name": "atEOFOfCurrentStream",
+        "class": "IXMLReader",
+        "returntype": "boolean",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "eofof current stream",
+          "verb": "at"
+        }
+      },
+      {
+        "id": 50,
+        "name": "atEOF",
+        "class": "IXMLReader",
+        "returntype": "boolean",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "eof",
+          "verb": "at"
+        }
+      },
+      {
+        "id": 51,
+        "name": "unread",
+        "class": "IXMLReader",
+        "returntype": "void",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "value",
+          "verb": "unread"
+        }
+      },
+      {
+        "id": 52,
+        "name": "getLineNr",
+        "class": "IXMLReader",
+        "returntype": "int",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "line nr",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 53,
+        "name": "openStream",
+        "class": "IXMLReader",
+        "returntype": "Reader",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "stream",
+          "verb": "open"
+        }
+      },
+      {
+        "id": 54,
+        "name": "startNewStream",
+        "class": "IXMLReader",
+        "returntype": "void",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "new stream",
+          "verb": "start"
+        }
+      },
+      {
+        "id": 55,
+        "name": "startNewStream",
+        "class": "IXMLReader",
+        "returntype": "void",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "new stream",
+          "verb": "start"
+        }
+      },
+      {
+        "id": 56,
+        "name": "getStreamLevel",
+        "class": "IXMLReader",
+        "returntype": "int",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "stream level",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 57,
+        "name": "setSystemID",
+        "class": "IXMLReader",
+        "returntype": "void",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "system id",
+          "verb": "set"
+        }
+      },
+      {
+        "id": 58,
+        "name": "setPublicID",
+        "class": "IXMLReader",
+        "returntype": "void",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "public id",
+          "verb": "set"
+        }
+      },
+      {
+        "id": 59,
+        "name": "getSystemID",
+        "class": "IXMLReader",
+        "returntype": "String",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "system id",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 60,
+        "name": "getPublicID",
+        "class": "IXMLReader",
+        "returntype": "String",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "public id",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 61,
+        "name": "setParameterEntityResolver",
+        "class": "IXMLValidator",
+        "returntype": "void",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "parameter entity resolver",
+          "verb": "set"
+        }
+      },
+      {
+        "id": 62,
+        "name": "getParameterEntityResolver",
+        "class": "IXMLValidator",
+        "returntype": "IXMLEntityResolver",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "parameter entity resolver",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 63,
+        "name": "parseDTD",
+        "class": "IXMLValidator",
+        "returntype": "void",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "dtd",
+          "verb": "parse"
+        }
+      },
+      {
+        "id": 64,
+        "name": "elementStarted",
+        "class": "IXMLValidator",
+        "returntype": "void",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "started",
+          "verb": "element"
+        }
+      },
+      {
+        "id": 65,
+        "name": "elementEnded",
+        "class": "IXMLValidator",
+        "returntype": "void",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "ended",
+          "verb": "element"
+        }
+      },
+      {
+        "id": 66,
+        "name": "attributeAdded",
+        "class": "IXMLValidator",
+        "returntype": "void",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "added",
+          "verb": "attribute"
+        }
+      },
+      {
+        "id": 67,
+        "name": "elementAttributesProcessed",
+        "class": "IXMLValidator",
+        "returntype": "void",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "attributes processed",
+          "verb": "element"
+        }
+      },
+      {
+        "id": 68,
+        "name": "PCDataAdded",
+        "class": "IXMLValidator",
+        "returntype": "void",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "added",
+          "verb": "pcdata"
+        }
+      },
+      {
+        "id": 69,
+        "name": "stringReader",
+        "class": "StdXMLReader",
+        "returntype": "IXMLReader",
+        "called": [],
+        "calls": [72, 76],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "reader",
+          "verb": "string"
+        }
+      },
+      {
+        "id": 70,
+        "name": "fileReader",
+        "class": "StdXMLReader",
+        "returntype": "IXMLReader",
+        "called": [],
+        "calls": [72, 76, 86],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "reader",
+          "verb": "file"
+        }
+      },
+      {
+        "id": 71,
+        "name": "StdXMLReader",
+        "class": "StdXMLReader",
+        "returntype": "StdXMLReader",
+        "called": [],
+        "calls": [81, 167],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "xmlreader",
+          "verb": "create"
+        }
+      },
+      {
+        "id": 72,
+        "name": "StdXMLReader",
+        "class": "StdXMLReader",
+        "returntype": "StdXMLReader",
+        "called": [69, 70],
+        "calls": [],
+        "use": {
+          "type": "procedural",
+          "example": "return new StdXMLReader(new StringReader(str));"
+        },
+        "swum": {
+          "object": "xmlreader",
+          "verb": "create"
+        }
+      },
+      {
+        "id": 73,
+        "name": "finalize",
+        "class": "StdXMLReader",
+        "returntype": "void",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "value",
+          "verb": "finalize"
+        }
+      },
+      {
+        "id": 74,
+        "name": "getEncoding",
+        "class": "StdXMLReader",
+        "returntype": "String",
+        "called": [75],
+        "calls": [167],
+        "use": {
+          "type": "assignment",
+          "example": "String encoding=this.getEncoding(charsRead.toString());"
+        },
+        "swum": {
+          "object": "encoding",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 75,
+        "name": "stream2reader",
+        "class": "StdXMLReader",
+        "returntype": "Reader",
+        "called": [76, 81],
+        "calls": [77, 80, 74, 167],
+        "use": {
+          "type": "assignment",
+          "example": "Reader reader=this.stream2reader(stream,charsRead);"
+        },
+        "swum": {
+          "object": "value",
+          "verb": "stream2reader"
+        }
+      },
+      {
+        "id": 76,
+        "name": "StdXMLReader",
+        "class": "StdXMLReader",
+        "returntype": "StdXMLReader",
+        "called": [69, 70],
+        "calls": [75, 82, 167],
+        "use": {
+          "type": "procedural",
+          "example": "return new StdXMLReader(new StringReader(str));"
+        },
+        "swum": {
+          "object": "xmlreader",
+          "verb": "create"
+        }
+      },
+      {
+        "id": 77,
+        "name": "read",
+        "class": "StdXMLReader",
+        "returntype": "char",
+        "called": [75, 78, 79],
+        "calls": [],
+        "use": {
+          "type": "assignment",
+          "example": "int b=pbstream.read();"
+        },
+        "swum": {
+          "object": "value",
+          "verb": "read"
+        }
+      },
+      {
+        "id": 78,
+        "name": "atEOFOfCurrentStream",
+        "class": "StdXMLReader",
+        "returntype": "boolean",
+        "called": [],
+        "calls": [77, 80],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "eofof current stream",
+          "verb": "at"
+        }
+      },
+      {
+        "id": 79,
+        "name": "atEOF",
+        "class": "StdXMLReader",
+        "returntype": "boolean",
+        "called": [],
+        "calls": [77, 80],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "eof",
+          "verb": "at"
+        }
+      },
+      {
+        "id": 80,
+        "name": "unread",
+        "class": "StdXMLReader",
+        "returntype": "void",
+        "called": [75, 78, 79, 81],
+        "calls": [],
+        "use": {
+          "type": "procedural",
+          "example": "pbstream.unread(b);"
+        },
+        "swum": {
+          "object": "value",
+          "verb": "unread"
+        }
+      },
+      {
+        "id": 81,
+        "name": "openStream",
+        "class": "StdXMLReader",
+        "returntype": "Reader",
+        "called": [71],
+        "calls": [75, 167, 80],
+        "use": {
+          "type": "assignment",
+          "example": "Reader reader=this.openStream(publicID,systemIDasURL.toString());"
+        },
+        "swum": {
+          "object": "stream",
+          "verb": "open"
+        }
+      },
+      {
+        "id": 82,
+        "name": "startNewStream",
+        "class": "StdXMLReader",
+        "returntype": "void",
+        "called": [76],
+        "calls": [83],
+        "use": {
+          "type": "procedural",
+          "example": "this.startNewStream(new StringReader(charsRead.toString()));"
+        },
+        "swum": {
+          "object": "new stream",
+          "verb": "start"
+        }
+      },
+      {
+        "id": 83,
+        "name": "startNewStream",
+        "class": "StdXMLReader",
+        "returntype": "void",
+        "called": [82],
+        "calls": [],
+        "use": {
+          "type": "procedural",
+          "example": "this.startNewStream(reader,false);"
+        },
+        "swum": {
+          "object": "new stream",
+          "verb": "start"
+        }
+      },
+      {
+        "id": 84,
+        "name": "getStreamLevel",
+        "class": "StdXMLReader",
+        "returntype": "int",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "stream level",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 85,
+        "name": "getLineNr",
+        "class": "StdXMLReader",
+        "returntype": "int",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "line nr",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 86,
+        "name": "setSystemID",
+        "class": "StdXMLReader",
+        "returntype": "void",
+        "called": [70],
+        "calls": [],
+        "use": {
+          "type": "procedural",
+          "example": "r.setSystemID(filename);"
+        },
+        "swum": {
+          "object": "system id",
+          "verb": "set"
+        }
+      },
+      {
+        "id": 87,
+        "name": "setPublicID",
+        "class": "StdXMLReader",
+        "returntype": "void",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "public id",
+          "verb": "set"
+        }
+      },
+      {
+        "id": 88,
+        "name": "getSystemID",
+        "class": "StdXMLReader",
+        "returntype": "String",
+        "called": [],
+        "calls": [167],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "system id",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 89,
+        "name": "getPublicID",
+        "class": "StdXMLReader",
+        "returntype": "String",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "public id",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 90,
+        "name": "XMLAttribute",
+        "class": "XMLAttribute",
+        "returntype": "XMLAttribute",
+        "called": [139, 140],
+        "calls": [],
+        "use": {
+          "type": "assignment",
+          "example": "XMLAttribute attr=this.findAttribute(name);"
+        },
+        "swum": {
+          "object": "value",
+          "verb": "create"
+        }
+      },
+      {
+        "id": 91,
+        "name": "getFullName",
+        "class": "XMLAttribute",
+        "returntype": "String",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "full name",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 92,
+        "name": "getName",
+        "class": "XMLAttribute",
+        "returntype": "String",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "name",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 93,
+        "name": "getNamespace",
+        "class": "XMLAttribute",
+        "returntype": "String",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "namespace",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 94,
+        "name": "getValue",
+        "class": "XMLAttribute",
+        "returntype": "String",
+        "called": [132, 133, 146, 147, 153],
+        "calls": [],
+        "use": {
+          "type": "procedural",
+          "example": "return attr.getValue();"
+        },
+        "swum": {
+          "object": "value",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 95,
+        "name": "setValue",
+        "class": "XMLAttribute",
+        "returntype": "void",
+        "called": [139, 140],
+        "calls": [],
+        "use": {
+          "type": "procedural",
+          "example": "attr.setValue(value);"
+        },
+        "swum": {
+          "object": "value",
+          "verb": "set"
+        }
+      },
+      {
+        "id": 96,
+        "name": "getType",
+        "class": "XMLAttribute",
+        "returntype": "String",
+        "called": [136, 138, 153],
+        "calls": [],
+        "use": {
+          "type": "procedural",
+          "example": "return attr.getType();"
+        },
+        "swum": {
+          "object": "type",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 97,
+        "name": "XMLElement",
+        "class": "XMLElement",
+        "returntype": "XMLElement",
+        "called": [102],
+        "calls": [101],
+        "use": {
+          "type": "procedural",
+          "example": "return new XMLElement();"
+        },
+        "swum": {
+          "object": "value",
+          "verb": "create"
+        }
+      },
+      {
+        "id": 98,
+        "name": "XMLElement",
+        "class": "XMLElement",
+        "returntype": "XMLElement",
+        "called": [103],
+        "calls": [101],
+        "use": {
+          "type": "procedural",
+          "example": "return new XMLElement(fullName);"
+        },
+        "swum": {
+          "object": "value",
+          "verb": "create"
+        }
+      },
+      {
+        "id": 99,
+        "name": "XMLElement",
+        "class": "XMLElement",
+        "returntype": "XMLElement",
+        "called": [104],
+        "calls": [101],
+        "use": {
+          "type": "procedural",
+          "example": "return new XMLElement(fullName,systemID,lineNr);"
+        },
+        "swum": {
+          "object": "value",
+          "verb": "create"
+        }
+      },
+      {
+        "id": 100,
+        "name": "XMLElement",
+        "class": "XMLElement",
+        "returntype": "XMLElement",
+        "called": [105],
+        "calls": [101],
+        "use": {
+          "type": "procedural",
+          "example": "return new XMLElement(fullName,namespace);"
+        },
+        "swum": {
+          "object": "value",
+          "verb": "create"
+        }
+      },
+      {
+        "id": 101,
+        "name": "XMLElement",
+        "class": "XMLElement",
+        "returntype": "XMLElement",
+        "called": [97, 98, 99, 100, 106],
+        "calls": [],
+        "use": {
+          "type": "procedural",
+          "example": "return new XMLElement(fullName,namespace,systemID,lineNr);"
+        },
+        "swum": {
+          "object": "value",
+          "verb": "create"
+        }
+      },
+      {
+        "id": 102,
+        "name": "createPCDataElement",
+        "class": "XMLElement",
+        "returntype": "IXMLElement",
+        "called": [],
+        "calls": [97],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "pcdata element",
+          "verb": "create"
+        }
+      },
+      {
+        "id": 103,
+        "name": "createElement",
+        "class": "XMLElement",
+        "returntype": "IXMLElement",
+        "called": [],
+        "calls": [98],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "element",
+          "verb": "create"
+        }
+      },
+      {
+        "id": 104,
+        "name": "createElement",
+        "class": "XMLElement",
+        "returntype": "IXMLElement",
+        "called": [],
+        "calls": [99],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "element",
+          "verb": "create"
+        }
+      },
+      {
+        "id": 105,
+        "name": "createElement",
+        "class": "XMLElement",
+        "returntype": "IXMLElement",
+        "called": [],
+        "calls": [100],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "element",
+          "verb": "create"
+        }
+      },
+      {
+        "id": 106,
+        "name": "createElement",
+        "class": "XMLElement",
+        "returntype": "IXMLElement",
+        "called": [],
+        "calls": [101],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "element",
+          "verb": "create"
+        }
+      },
+      {
+        "id": 107,
+        "name": "finalize",
+        "class": "XMLElement",
+        "returntype": "void",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "value",
+          "verb": "finalize"
+        }
+      },
+      {
+        "id": 108,
+        "name": "getParent",
+        "class": "XMLElement",
+        "returntype": "IXMLElement",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "parent",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 109,
+        "name": "getFullName",
+        "class": "XMLElement",
+        "returntype": "String",
+        "called": [124, 126, 128, 141, 143, 146],
+        "calls": [],
+        "use": {
+          "type": "assignment",
+          "example": "String childName=child.getFullName();"
+        },
+        "swum": {
+          "object": "full name",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 110,
+        "name": "getName",
+        "class": "XMLElement",
+        "returntype": "String",
+        "called": [114, 115, 125, 127, 129, 142, 147, 153],
+        "calls": [],
+        "use": {
+          "type": "conditional",
+          "example": "if ((child.getName() == null) && (!this.children.isEmpty())) {"
+        },
+        "swum": {
+          "object": "name",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 111,
+        "name": "getNamespace",
+        "class": "XMLElement",
+        "returntype": "String",
+        "called": [125, 127, 129, 137, 142, 147, 153],
+        "calls": [],
+        "use": {
+          "type": "assignment",
+          "example": "str=child.getNamespace();"
+        },
+        "swum": {
+          "object": "namespace",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 112,
+        "name": "setName",
+        "class": "XMLElement",
+        "returntype": "void",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "name",
+          "verb": "set"
+        }
+      },
+      {
+        "id": 113,
+        "name": "setName",
+        "class": "XMLElement",
+        "returntype": "void",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "name",
+          "verb": "set"
+        }
+      },
+      {
+        "id": 114,
+        "name": "addChild",
+        "class": "XMLElement",
+        "returntype": "void",
+        "called": [],
+        "calls": [110, 151, 150],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "child",
+          "verb": "add"
+        }
+      },
+      {
+        "id": 115,
+        "name": "insertChild",
+        "class": "XMLElement",
+        "returntype": "void",
+        "called": [],
+        "calls": [110, 151, 150],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "child",
+          "verb": "insert"
+        }
+      },
+      {
+        "id": 116,
+        "name": "removeChild",
+        "class": "XMLElement",
+        "returntype": "void",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "child",
+          "verb": "remove"
+        }
+      },
+      {
+        "id": 117,
+        "name": "removeChildAtIndex",
+        "class": "XMLElement",
+        "returntype": "void",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "child at index",
+          "verb": "remove"
+        }
+      },
+      {
+        "id": 118,
+        "name": "enumerateChildren",
+        "class": "XMLElement",
+        "returntype": "Enumeration",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "children",
+          "verb": "enumerate"
+        }
+      },
+      {
+        "id": 119,
+        "name": "isLeaf",
+        "class": "XMLElement",
+        "returntype": "boolean",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "leaf",
+          "verb": "is"
+        }
+      },
+      {
+        "id": 120,
+        "name": "hasChildren",
+        "class": "XMLElement",
+        "returntype": "boolean",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "children",
+          "verb": "has"
+        }
+      },
+      {
+        "id": 121,
+        "name": "getChildrenCount",
+        "class": "XMLElement",
+        "returntype": "int",
+        "called": [153],
+        "calls": [],
+        "use": {
+          "type": "conditional",
+          "example": "if (this.children.size() != elt.getChildrenCount()) {"
+        },
+        "swum": {
+          "object": "children count",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 122,
+        "name": "getChildren",
+        "class": "XMLElement",
+        "returntype": "Vector",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "children",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 123,
+        "name": "getChildAtIndex",
+        "class": "XMLElement",
+        "returntype": "IXMLElement",
+        "called": [153],
+        "calls": [],
+        "use": {
+          "type": "assignment",
+          "example": "IXMLElement child1=this.getChildAtIndex(i);"
+        },
+        "swum": {
+          "object": "child at index",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 124,
+        "name": "getFirstChildNamed",
+        "class": "XMLElement",
+        "returntype": "IXMLElement",
+        "called": [],
+        "calls": [109, 152],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "first child named",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 125,
+        "name": "getFirstChildNamed",
+        "class": "XMLElement",
+        "returntype": "IXMLElement",
+        "called": [],
+        "calls": [110, 152, 111],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "first child named",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 126,
+        "name": "getChildrenNamed",
+        "class": "XMLElement",
+        "returntype": "Vector",
+        "called": [],
+        "calls": [109, 152],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "children named",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 127,
+        "name": "getChildrenNamed",
+        "class": "XMLElement",
+        "returntype": "Vector",
+        "called": [],
+        "calls": [110, 152, 111],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "children named",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 128,
+        "name": "findAttribute",
+        "class": "XMLElement",
+        "returntype": "XMLAttribute",
+        "called": [132, 136, 137, 139, 144],
+        "calls": [152, 109],
+        "use": {
+          "type": "assignment",
+          "example": "XMLAttribute attr=this.findAttribute(name);"
+        },
+        "swum": {
+          "object": "attribute",
+          "verb": "find"
+        }
+      },
+      {
+        "id": 129,
+        "name": "findAttribute",
+        "class": "XMLElement",
+        "returntype": "XMLAttribute",
+        "called": [133, 138, 140, 145],
+        "calls": [152, 110, 111],
+        "use": {
+          "type": "assignment",
+          "example": "XMLAttribute attr=this.findAttribute(name,namespace);"
+        },
+        "swum": {
+          "object": "attribute",
+          "verb": "find"
+        }
+      },
+      {
+        "id": 130,
+        "name": "getAttributeCount",
+        "class": "XMLElement",
+        "returntype": "int",
+        "called": [153],
+        "calls": [],
+        "use": {
+          "type": "conditional",
+          "example": "if (this.attributes.size() != elt.getAttributeCount()) {"
+        },
+        "swum": {
+          "object": "attribute count",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 131,
+        "name": "getAttribute",
+        "class": "XMLElement",
+        "returntype": "String",
+        "called": [],
+        "calls": [132, 134],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "attribute",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 132,
+        "name": "getAttribute",
+        "class": "XMLElement",
+        "returntype": "String",
+        "called": [131, 134],
+        "calls": [128, 94],
+        "use": {
+          "type": "procedural",
+          "example": "return this.getAttribute(name,null);"
+        },
+        "swum": {
+          "object": "attribute",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 133,
+        "name": "getAttribute",
+        "class": "XMLElement",
+        "returntype": "String",
+        "called": [135, 153],
+        "calls": [129, 94],
+        "use": {
+          "type": "assignment",
+          "example": "String value=this.getAttribute(name,namespace,Integer.toString(defaultValue));"
+        },
+        "swum": {
+          "object": "attribute",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 134,
+        "name": "getAttribute",
+        "class": "XMLElement",
+        "returntype": "int",
+        "called": [131],
+        "calls": [132],
+        "use": {
+          "type": "procedural",
+          "example": "return this.getAttribute(name,null);"
+        },
+        "swum": {
+          "object": "attribute",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 135,
+        "name": "getAttribute",
+        "class": "XMLElement",
+        "returntype": "int",
+        "called": [153],
+        "calls": [133],
+        "use": {
+          "type": "conditional",
+          "example": "if (this.attributes.size() != elt.getAttributeCount()) {"
+        },
+        "swum": {
+          "object": "attribute",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 136,
+        "name": "getAttributeType",
+        "class": "XMLElement",
+        "returntype": "String",
+        "called": [],
+        "calls": [128, 96],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "attribute type",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 137,
+        "name": "getAttributeNamespace",
+        "class": "XMLElement",
+        "returntype": "String",
+        "called": [],
+        "calls": [128, 111],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "attribute namespace",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 138,
+        "name": "getAttributeType",
+        "class": "XMLElement",
+        "returntype": "String",
+        "called": [153],
+        "calls": [129, 96],
+        "use": {
+          "type": "assignment",
+          "example": "String type=elt.getAttributeType(attr.getName(),attr.getNamespace());"
+        },
+        "swum": {
+          "object": "attribute type",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 139,
+        "name": "setAttribute",
+        "class": "XMLElement",
+        "returntype": "void",
+        "called": [],
+        "calls": [128, 90, 95],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "attribute",
+          "verb": "set"
+        }
+      },
+      {
+        "id": 140,
+        "name": "setAttribute",
+        "class": "XMLElement",
+        "returntype": "void",
+        "called": [],
+        "calls": [129, 90, 95],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "attribute",
+          "verb": "set"
+        }
+      },
+      {
+        "id": 141,
+        "name": "removeAttribute",
+        "class": "XMLElement",
+        "returntype": "void",
+        "called": [],
+        "calls": [152, 109],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "attribute",
+          "verb": "remove"
+        }
+      },
+      {
+        "id": 142,
+        "name": "removeAttribute",
+        "class": "XMLElement",
+        "returntype": "void",
+        "called": [],
+        "calls": [152, 110, 111],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "attribute",
+          "verb": "remove"
+        }
+      },
+      {
+        "id": 143,
+        "name": "enumerateAttributeNames",
+        "class": "XMLElement",
+        "returntype": "Enumeration",
+        "called": [],
+        "calls": [109],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "attribute names",
+          "verb": "enumerate"
+        }
+      },
+      {
+        "id": 144,
+        "name": "hasAttribute",
+        "class": "XMLElement",
+        "returntype": "boolean",
+        "called": [],
+        "calls": [128],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "attribute",
+          "verb": "has"
+        }
+      },
+      {
+        "id": 145,
+        "name": "hasAttribute",
+        "class": "XMLElement",
+        "returntype": "boolean",
+        "called": [153],
+        "calls": [129],
+        "use": {
+          "type": "conditional",
+          "example": "if (!elt.hasAttribute(attr.getName(),attr.getNamespace())) {"
+        },
+        "swum": {
+          "object": "attribute",
+          "verb": "has"
+        }
+      },
+      {
+        "id": 146,
+        "name": "getAttributes",
+        "class": "XMLElement",
+        "returntype": "Properties",
+        "called": [],
+        "calls": [109, 94],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "attributes",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 147,
+        "name": "getAttributesInNamespace",
+        "class": "XMLElement",
+        "returntype": "Properties",
+        "called": [],
+        "calls": [111, 110, 94, 152],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "attributes in namespace",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 148,
+        "name": "getSystemID",
+        "class": "XMLElement",
+        "returntype": "String",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "system id",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 149,
+        "name": "getLineNr",
+        "class": "XMLElement",
+        "returntype": "int",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "line nr",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 150,
+        "name": "getContent",
+        "class": "XMLElement",
+        "returntype": "String",
+        "called": [114, 115],
+        "calls": [],
+        "use": {
+          "type": "procedural",
+          "example": "lastChild.setContent(lastChild.getContent() + child.getContent());"
+        },
+        "swum": {
+          "object": "content",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 151,
+        "name": "setContent",
+        "class": "XMLElement",
+        "returntype": "void",
+        "called": [114, 115],
+        "calls": [],
+        "use": {
+          "type": "procedural",
+          "example": "lastChild.setContent(lastChild.getContent() + child.getContent());"
+        },
+        "swum": {
+          "object": "content",
+          "verb": "set"
+        }
+      },
+      {
+        "id": 152,
+        "name": "equals",
+        "class": "XMLElement",
+        "returntype": "boolean",
+        "called": [124, 125, 126, 127, 128, 129, 141, 142, 147, 153],
+        "calls": [153],
+        "use": {
+          "type": "conditional",
+          "example": "if ((childName != null) && childName.equals(name)) {"
+        },
+        "swum": {
+          "object": "value",
+          "verb": "equals"
+        }
+      },
+      {
+        "id": 153,
+        "name": "equalsXMLElement",
+        "class": "XMLElement",
+        "returntype": "boolean",
+        "called": [152],
+        "calls": [152, 110, 130, 145, 111, 133, 135, 94, 138, 96],
+        "use": {
+          "type": "procedural",
+          "example": "return this.equalsXMLElement((IXMLElement)rawElement);"
+        },
+        "swum": {
+          "object": "xmlelement",
+          "verb": "equals"
+        }
+      },
+      {
+        "id": 154,
+        "name": "XMLException",
+        "class": "XMLException",
+        "returntype": "XMLException",
+        "called": [],
+        "calls": [158],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "value",
+          "verb": "create"
+        }
+      },
+      {
+        "id": 155,
+        "name": "XMLException",
+        "class": "XMLException",
+        "returntype": "XMLException",
+        "called": [],
+        "calls": [158],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "value",
+          "verb": "create"
+        }
+      },
+      {
+        "id": 156,
+        "name": "XMLException",
+        "class": "XMLException",
+        "returntype": "XMLException",
+        "called": [],
+        "calls": [158],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "value",
+          "verb": "create"
+        }
+      },
+      {
+        "id": 157,
+        "name": "XMLException",
+        "class": "XMLException",
+        "returntype": "XMLException",
+        "called": [],
+        "calls": [158],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "value",
+          "verb": "create"
+        }
+      },
+      {
+        "id": 158,
+        "name": "XMLException",
+        "class": "XMLException",
+        "returntype": "XMLException",
+        "called": [154, 155, 156, 157],
+        "calls": [159],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "value",
+          "verb": "create"
+        }
+      },
+      {
+        "id": 159,
+        "name": "buildMessage",
+        "class": "XMLException",
+        "returntype": "String",
+        "called": [158],
+        "calls": [],
+        "use": {
+          "type": "procedural",
+          "example": "super(XMLException.buildMessage(systemID,lineNr,e,msg,reportParams));"
+        },
+        "swum": {
+          "object": "message",
+          "verb": "build"
+        }
+      },
+      {
+        "id": 160,
+        "name": "finalize",
+        "class": "XMLException",
+        "returntype": "void",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "value",
+          "verb": "finalize"
+        }
+      },
+      {
+        "id": 161,
+        "name": "getSystemID",
+        "class": "XMLException",
+        "returntype": "String",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "system id",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 162,
+        "name": "getLineNr",
+        "class": "XMLException",
+        "returntype": "int",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "line nr",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 163,
+        "name": "getException",
+        "class": "XMLException",
+        "returntype": "Exception",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "exception",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 164,
+        "name": "printStackTrace",
+        "class": "XMLException",
+        "returntype": "void",
+        "called": [165],
+        "calls": [165],
+        "use": {
+          "type": "procedural",
+          "example": "super.printStackTrace(stream);"
+        },
+        "swum": {
+          "object": "stack trace",
+          "verb": "print"
+        }
+      },
+      {
+        "id": 165,
+        "name": "printStackTrace",
+        "class": "XMLException",
+        "returntype": "void",
+        "called": [164],
+        "calls": [164],
+        "use": {
+          "type": "procedural",
+          "example": "super.printStackTrace(writer);"
+        },
+        "swum": {
+          "object": "stack trace",
+          "verb": "print"
+        }
+      },
+      {
+        "id": 166,
+        "name": "printStackTrace",
+        "class": "XMLException",
+        "returntype": "void",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "stack trace",
+          "verb": "print"
+        }
+      },
+      {
+        "id": 167,
+        "name": "toString",
+        "class": "XMLException",
+        "returntype": "String",
+        "called": [71, 74, 75, 76, 81, 88],
+        "calls": [],
+        "use": {
+          "type": "assignment",
+          "example": "Reader reader=this.openStream(publicID,systemIDasURL.toString());"
+        },
+        "swum": {
+          "object": "string",
+          "verb": "to"
+        }
+      }
+    ]
+  }
+}

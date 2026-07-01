@@ -1,0 +1,463 @@
+SPECIAL::get (V) | data provider (N) ++ :: DataProvider (N) :: abstracttokenizer (N) ::AbstractTokenizer_DataProvider_getDataProvider__int-int__
+BASE_VERB::read (V) | more data (N) ++ :: int (N) :: abstracttokenizer (N) ::AbstractTokenizer_int_readMoreData____
+CONSTRUCTOR::create (V) | tokenizer (N) ++ :: AbstractTokenizer (N) :: abstracttokenizer (N) ::AbstractTokenizer_AbstractTokenizer_AbstractTokenizer____
+CONSTRUCTOR::create (V) | tokenizer (N) ++ :: AbstractTokenizer (N) :: abstracttokenizer (N) ::AbstractTokenizer_AbstractTokenizer_AbstractTokenizer__TokenizerProperties__
+SPECIAL::set (V) | source (N) ++ :: void (N) :: abstracttokenizer (N) ::AbstractTokenizer_void_setSource__TokenizerSource__
+SPECIAL::set (V) | source (N) ++ :: void (N) :: abstracttokenizer (N) ::AbstractTokenizer_void_setSource__Reader__
+SPECIAL::get (V) | source (N) ++ :: TokenizerSource (N) :: abstracttokenizer (N) ::AbstractTokenizer_TokenizerSource_getSource____
+SPECIAL::set (V) | tokenizer properties (N) ++ :: void (N) :: abstracttokenizer (N) ::AbstractTokenizer_void_setTokenizerProperties__TokenizerProperties__
+SPECIAL::get (V) | tokenizer properties (N) ++ :: TokenizerProperties (N) :: abstracttokenizer (N) ::AbstractTokenizer_TokenizerProperties_getTokenizerProperties____
+BASE_VERB::change (V) | parse flags (N) ++ :: void (N) :: abstracttokenizer (N) ::AbstractTokenizer_void_changeParseFlags__int-int__
+SPECIAL::get (V) | parse flags (N) ++ :: int (N) :: abstracttokenizer (N) ::AbstractTokenizer_int_getParseFlags____
+SPECIAL::set (V) | keyword handler (N) ++ :: void (N) :: abstracttokenizer (N) ::AbstractTokenizer_void_setKeywordHandler__de.susebox.jtopas.spi.KeywordHandler__
+SPECIAL::get (V) | keyword handler (N) ++ :: de.susebox.jtopas.spi.KeywordHandler (N) :: abstracttokenizer (N) ::AbstractTokenizer_de.susebox.jtopas.spi.KeywordHandler_getKeywordHandler____
+SPECIAL::set (V) | whitespace handler (N) ++ :: void (N) :: abstracttokenizer (N) ::AbstractTokenizer_void_setWhitespaceHandler__de.susebox.jtopas.spi.WhitespaceHandler__
+SPECIAL::get (V) | whitespace handler (N) ++ :: de.susebox.jtopas.spi.WhitespaceHandler (N) :: abstracttokenizer (N) ::AbstractTokenizer_de.susebox.jtopas.spi.WhitespaceHandler_getWhitespaceHandler____
+SPECIAL::set (V) | separator handler (N) ++ :: void (N) :: abstracttokenizer (N) ::AbstractTokenizer_void_setSeparatorHandler__de.susebox.jtopas.spi.SeparatorHandler__
+SPECIAL::get (V) | separator handler (N) ++ :: de.susebox.jtopas.spi.SeparatorHandler (N) :: abstracttokenizer (N) ::AbstractTokenizer_de.susebox.jtopas.spi.SeparatorHandler_getSeparatorHandler____
+SPECIAL::set (V) | sequence handler (N) ++ :: void (N) :: abstracttokenizer (N) ::AbstractTokenizer_void_setSequenceHandler__de.susebox.jtopas.spi.SequenceHandler__
+SPECIAL::get (V) | sequence handler (N) ++ :: de.susebox.jtopas.spi.SequenceHandler (N) :: abstracttokenizer (N) ::AbstractTokenizer_de.susebox.jtopas.spi.SequenceHandler_getSequenceHandler____
+SPECIAL::set (V) | pattern handler (N) ++ :: void (N) :: abstracttokenizer (N) ::AbstractTokenizer_void_setPatternHandler__de.susebox.jtopas.spi.PatternHandler__
+SPECIAL::get (V) | pattern handler (N) ++ :: de.susebox.jtopas.spi.PatternHandler (N) :: abstracttokenizer (N) ::AbstractTokenizer_de.susebox.jtopas.spi.PatternHandler_getPatternHandler____
+SPECIAL::get (V) | current line (N) ++ :: int (N) :: abstracttokenizer (N) ::AbstractTokenizer_int_getCurrentLine____
+SPECIAL::get (V) | current column (N) ++ :: int (N) :: abstracttokenizer (N) ::AbstractTokenizer_int_getCurrentColumn____
+BASE_VERB::has (V) | more token (N) ++ :: boolean (N) :: abstracttokenizer (N) ::AbstractTokenizer_boolean_hasMoreToken____
+BASE_VERB::next (V) | token (N) ++ :: Token (N) :: abstracttokenizer (N) ::AbstractTokenizer_Token_nextToken____
+BASE_VERB::next (V) | image (N) ++ :: String (N) :: abstracttokenizer (N) ::AbstractTokenizer_String_nextImage____
+BASE_VERB::current (V) | token (N) ++ :: Token (N) :: abstracttokenizer (N) ::AbstractTokenizer_Token_currentToken____
+BASE_VERB::current (V) | image (N) ++ :: String (N) :: abstracttokenizer (N) ::AbstractTokenizer_String_currentImage____
+SPECIAL::get (V) | line number (N) ++ :: int (N) :: abstracttokenizer (N) ::AbstractTokenizer_int_getLineNumber____
+SPECIAL::get (V) | column number (N) ++ :: int (N) :: abstracttokenizer (N) ::AbstractTokenizer_int_getColumnNumber____
+SPECIAL::get (V) | read position (N) ++ :: int (N) :: abstracttokenizer (N) ::AbstractTokenizer_int_getReadPosition____
+BASE_VERB::currently (V) | available (N) ++ :: int (N) :: abstracttokenizer (N) ::AbstractTokenizer_int_currentlyAvailable____
+BASE_VERB::read (V) | more (N) ++ :: int (N) :: abstracttokenizer (N) ::AbstractTokenizer_int_readMore____
+SPECIAL::get (V) | char (N) ++ :: char (N) :: abstracttokenizer (N) ::AbstractTokenizer_char_getChar__int__
+SPECIAL::get (V) | text (N) ++ :: String (N) :: abstracttokenizer (N) ::AbstractTokenizer_String_getText__int-int__
+SPECIAL::set (V) | read position absolute (N) ++ :: void (N) :: abstracttokenizer (N) ::AbstractTokenizer_void_setReadPositionAbsolute__int__
+SPECIAL::set (V) | read position relative (N) ++ :: void (N) :: abstracttokenizer (N) ::AbstractTokenizer_void_setReadPositionRelative__int__
+BASE_VERB::close (V) | value (N) ++ :: void (N) :: abstracttokenizer (N) ::AbstractTokenizer_void_close____
+BASE_VERB::add (V) | tokenizer (N) ++ :: void (N) :: abstracttokenizer (N) ::AbstractTokenizer_void_addTokenizer__AbstractTokenizer__
+BASE_VERB::switch (V) | to (N) ++ :: void (N) :: abstracttokenizer (N) ::AbstractTokenizer_void_switchTo__AbstractTokenizer__
+SPECIAL::is (V) | whitespace (N) ++ :: boolean (N) :: abstracttokenizer (N) ::AbstractTokenizer_boolean_isWhitespace__char__
+BASE_VERB::read (V) | whitespaces (N) ++ :: int (N) :: abstracttokenizer (N) ::AbstractTokenizer_int_readWhitespaces__int-int__
+SPECIAL::is (V) | keyword (N) ++ :: TokenizerProperty (N) :: abstracttokenizer (N) ::AbstractTokenizer_TokenizerProperty_isKeyword__int-int__
+BASE_VERB::split (V) | into lines (N) ++ :: StringArray (N) :: abstracttokenizer (N) ::AbstractTokenizer_StringArray_splitIntoLines__String__
+BASE_VERB::split (V) | string (N) ++ :: StringArray (N) :: abstracttokenizer (N) ::AbstractTokenizer_StringArray_splitString__TokenizerProperty-String__
+BASE_VERB::split (V) | block comment (N) ++ :: StringArray (N) :: abstracttokenizer (N) ::AbstractTokenizer_StringArray_splitBlockComment__TokenizerProperty-String__
+BASE_VERB::property (V) | changed (N) ++ :: void (N) :: abstracttokenizer (N) ::AbstractTokenizer_void_propertyChanged__TokenizerPropertyEvent__
+SPECIAL::get (V) | base tokenizer (N) ++ :: AbstractTokenizer (N) :: abstracttokenizer (N) ::AbstractTokenizer_AbstractTokenizer_getBaseTokenizer____
+SPECIAL::get (V) | base data provider (N) ++ :: DataProvider (N) :: abstracttokenizer (N) ::AbstractTokenizer_DataProvider_getBaseDataProvider__int-int__
+BASE_VERB::read (V) | more data from base (N) ++ :: int (N) :: abstracttokenizer (N) ::AbstractTokenizer_int_readMoreDataFromBase____
+BASE_VERB::synchronize (V) | all (N) ++ :: void (N) :: abstracttokenizer (N) ::AbstractTokenizer_void_synchronizeAll____
+SPECIAL::is (V) | eof (N) ++ :: boolean (N) :: abstracttokenizer (N) ::AbstractTokenizer_boolean_isEOF__int__
+BASE_VERB::complete (V) | bounded token (N) ++ :: TokenizerProperty (N) :: abstracttokenizer (N) ::AbstractTokenizer_TokenizerProperty_completeBoundedToken__Token__
+BASE_VERB::complete (V) | whitespace (N) ++ :: int (N) :: abstracttokenizer (N) ::AbstractTokenizer_int_completeWhitespace____
+SPECIAL::is (V) | whitespace (N) ++ :: boolean (N) :: abstracttokenizer (N) ::AbstractTokenizer_boolean_isWhitespace__int__
+SPECIAL::is (V) | separator (N) ++ :: boolean (N) :: abstracttokenizer (N) ::AbstractTokenizer_boolean_isSeparator__int__
+SPECIAL::is (V) | pattern (N) ++ :: boolean (N) :: abstracttokenizer (N) ::AbstractTokenizer_boolean_isPattern__int-boolean__
+SPECIAL::is (V) | special sequence (N) ++ :: boolean (N) :: abstracttokenizer (N) ::AbstractTokenizer_boolean_isSpecialSequence__int__
+BASE_VERB::complete (V) | line comment (N) ++ :: int (N) :: abstracttokenizer (N) ::AbstractTokenizer_int_completeLineComment__TokenizerProperty__
+BASE_VERB::complete (V) | block comment (N) ++ :: int (N) :: abstracttokenizer (N) ::AbstractTokenizer_int_completeBlockComment__TokenizerProperty__
+BASE_VERB::complete (V) | string (N) ++ :: int (N) :: abstracttokenizer (N) ::AbstractTokenizer_int_completeString__TokenizerProperty__
+BASE_VERB::compare (V) | prefix (N) ++ :: int (N) :: abstracttokenizer (N) ::AbstractTokenizer_int_comparePrefix__int-String-boolean__
+BASE_VERB::adjust (V) | line and column (N) ++ :: void (N) :: abstracttokenizer (N) ::AbstractTokenizer_void_adjustLineAndColumn__int-int__
+BASE_VERB::put (V) | position (N) ++ :: void (N) :: abstracttokenizer (N) ::AbstractTokenizer_void_putPosition__int-int__
+SPECIAL::is (V) | flag set (N) ++ :: boolean (N) :: abstracttokenizer (N) ::AbstractTokenizer_boolean_isFlagSet__int__
+SPECIAL::is (V) | flag set (N) ++ :: boolean (N) :: abstracttokenizer (N) ::AbstractTokenizer_boolean_isFlagSet__TokenizerProperty-int__
+BASE_VERB::do (V) | add property (N) ++ :: TokenizerProperty (N) :: abstracttokenizerproperties (N) ::AbstractTokenizerProperties_TokenizerProperty_doAddProperty__TokenizerProperty__
+BASE_VERB::do (V) | remove property (N) ++ :: TokenizerProperty (N) :: abstracttokenizerproperties (N) ::AbstractTokenizerProperties_TokenizerProperty_doRemoveProperty__TokenizerProperty__
+BASE_VERB::do (V) | get property (N) ++ :: TokenizerProperty (N) :: abstracttokenizerproperties (N) ::AbstractTokenizerProperties_TokenizerProperty_doGetProperty__int-String__
+BASE_VERB::do (V) | set whitespaces (N) ++ :: String (N) :: abstracttokenizerproperties (N) ::AbstractTokenizerProperties_String_doSetWhitespaces__String__
+BASE_VERB::do (V) | set separators (N) ++ :: String (N) :: abstracttokenizerproperties (N) ::AbstractTokenizerProperties_String_doSetSeparators__String__
+SPECIAL::set (V) | parse flags (N) ++ :: void (N) :: abstracttokenizerproperties (N) ::AbstractTokenizerProperties_void_setParseFlags__int__
+SPECIAL::get (V) | parse flags (N) ++ :: int (N) :: abstracttokenizerproperties (N) ::AbstractTokenizerProperties_int_getParseFlags____
+SPECIAL::is (V) | flag set (N) ++ :: boolean (N) :: abstracttokenizerproperties (N) ::AbstractTokenizerProperties_boolean_isFlagSet__int__
+SPECIAL::is (V) | flag set (N) ++ :: boolean (N) :: abstracttokenizerproperties (N) ::AbstractTokenizerProperties_boolean_isFlagSet__TokenizerProperty-int__
+SPECIAL::set (V) | whitespaces (N) ++ :: void (N) :: abstracttokenizerproperties (N) ::AbstractTokenizerProperties_void_setWhitespaces__String__
+BASE_VERB::add (V) | whitespaces (N) ++ :: void (N) :: abstracttokenizerproperties (N) ::AbstractTokenizerProperties_void_addWhitespaces__String__
+BASE_VERB::remove (V) | whitespaces (N) ++ :: void (N) :: abstracttokenizerproperties (N) ::AbstractTokenizerProperties_void_removeWhitespaces__String__
+SPECIAL::set (V) | separators (N) ++ :: void (N) :: abstracttokenizerproperties (N) ::AbstractTokenizerProperties_void_setSeparators__String__
+BASE_VERB::add (V) | separators (N) ++ :: void (N) :: abstracttokenizerproperties (N) ::AbstractTokenizerProperties_void_addSeparators__String__
+BASE_VERB::remove (V) | separators (N) ++ :: void (N) :: abstracttokenizerproperties (N) ::AbstractTokenizerProperties_void_removeSeparators__String__
+BASE_VERB::add (V) | string (N) ++ :: void (N) :: abstracttokenizerproperties (N) ::AbstractTokenizerProperties_void_addString__String-String-String__
+BASE_VERB::add (V) | string (N) ++ :: void (N) :: abstracttokenizerproperties (N) ::AbstractTokenizerProperties_void_addString__String-String-String-Object__
+BASE_VERB::add (V) | string (N) ++ :: void (N) :: abstracttokenizerproperties (N) ::AbstractTokenizerProperties_void_addString__String-String-String-Object-int__
+BASE_VERB::add (V) | string (N) ++ :: void (N) :: abstracttokenizerproperties (N) ::AbstractTokenizerProperties_void_addString__String-String-String-Object-int-int__
+BASE_VERB::remove (V) | string (N) ++ :: void (N) :: abstracttokenizerproperties (N) ::AbstractTokenizerProperties_void_removeString__String__
+SPECIAL::get (V) | string companion (N) ++ :: Object (N) :: abstracttokenizerproperties (N) ::AbstractTokenizerProperties_Object_getStringCompanion__String__
+BASE_VERB::string (V) | exists (N) ++ :: boolean (N) :: abstracttokenizerproperties (N) ::AbstractTokenizerProperties_boolean_stringExists__String__
+SPECIAL::get (V) | string (N) ++ :: TokenizerProperty (N) :: abstracttokenizerproperties (N) ::AbstractTokenizerProperties_TokenizerProperty_getString__String__
+BASE_VERB::add (V) | line comment (N) ++ :: void (N) :: abstracttokenizerproperties (N) ::AbstractTokenizerProperties_void_addLineComment__String__
+BASE_VERB::add (V) | line comment (N) ++ :: void (N) :: abstracttokenizerproperties (N) ::AbstractTokenizerProperties_void_addLineComment__String-Object__
+BASE_VERB::add (V) | line comment (N) ++ :: void (N) :: abstracttokenizerproperties (N) ::AbstractTokenizerProperties_void_addLineComment__String-Object-int__
+BASE_VERB::add (V) | line comment (N) ++ :: void (N) :: abstracttokenizerproperties (N) ::AbstractTokenizerProperties_void_addLineComment__String-Object-int-int__
+BASE_VERB::remove (V) | line comment (N) ++ :: void (N) :: abstracttokenizerproperties (N) ::AbstractTokenizerProperties_void_removeLineComment__String__
+SPECIAL::get (V) | line comment companion (N) ++ :: Object (N) :: abstracttokenizerproperties (N) ::AbstractTokenizerProperties_Object_getLineCommentCompanion__String__
+BASE_VERB::line (V) | comment exists (N) ++ :: boolean (N) :: abstracttokenizerproperties (N) ::AbstractTokenizerProperties_boolean_lineCommentExists__String__
+SPECIAL::get (V) | line comment (N) ++ :: TokenizerProperty (N) :: abstracttokenizerproperties (N) ::AbstractTokenizerProperties_TokenizerProperty_getLineComment__String__
+BASE_VERB::add (V) | block comment (N) ++ :: void (N) :: abstracttokenizerproperties (N) ::AbstractTokenizerProperties_void_addBlockComment__String-String__
+BASE_VERB::add (V) | block comment (N) ++ :: void (N) :: abstracttokenizerproperties (N) ::AbstractTokenizerProperties_void_addBlockComment__String-String-Object__
+BASE_VERB::add (V) | block comment (N) ++ :: void (N) :: abstracttokenizerproperties (N) ::AbstractTokenizerProperties_void_addBlockComment__String-String-Object-int__
+BASE_VERB::add (V) | block comment (N) ++ :: void (N) :: abstracttokenizerproperties (N) ::AbstractTokenizerProperties_void_addBlockComment__String-String-Object-int-int__
+BASE_VERB::remove (V) | block comment (N) ++ :: void (N) :: abstracttokenizerproperties (N) ::AbstractTokenizerProperties_void_removeBlockComment__String__
+SPECIAL::get (V) | block comment companion (N) ++ :: Object (N) :: abstracttokenizerproperties (N) ::AbstractTokenizerProperties_Object_getBlockCommentCompanion__String__
+BASE_VERB::block (V) | comment exists (N) ++ :: boolean (N) :: abstracttokenizerproperties (N) ::AbstractTokenizerProperties_boolean_blockCommentExists__String__
+SPECIAL::get (V) | block comment (N) ++ :: TokenizerProperty (N) :: abstracttokenizerproperties (N) ::AbstractTokenizerProperties_TokenizerProperty_getBlockComment__String__
+BASE_VERB::add (V) | special sequence (N) ++ :: void (N) :: abstracttokenizerproperties (N) ::AbstractTokenizerProperties_void_addSpecialSequence__String__
+BASE_VERB::add (V) | special sequence (N) ++ :: void (N) :: abstracttokenizerproperties (N) ::AbstractTokenizerProperties_void_addSpecialSequence__String-Object__
+BASE_VERB::add (V) | special sequence (N) ++ :: void (N) :: abstracttokenizerproperties (N) ::AbstractTokenizerProperties_void_addSpecialSequence__String-Object-int__
+BASE_VERB::add (V) | special sequence (N) ++ :: void (N) :: abstracttokenizerproperties (N) ::AbstractTokenizerProperties_void_addSpecialSequence__String-Object-int-int__
+BASE_VERB::remove (V) | special sequence (N) ++ :: void (N) :: abstracttokenizerproperties (N) ::AbstractTokenizerProperties_void_removeSpecialSequence__String__
+SPECIAL::get (V) | special sequence companion (N) ++ :: Object (N) :: abstracttokenizerproperties (N) ::AbstractTokenizerProperties_Object_getSpecialSequenceCompanion__String__
+BASE_VERB::special (V) | sequence exists (N) ++ :: boolean (N) :: abstracttokenizerproperties (N) ::AbstractTokenizerProperties_boolean_specialSequenceExists__String__
+SPECIAL::get (V) | special sequence (N) ++ :: TokenizerProperty (N) :: abstracttokenizerproperties (N) ::AbstractTokenizerProperties_TokenizerProperty_getSpecialSequence__String__
+BASE_VERB::add (V) | keyword (N) ++ :: void (N) :: abstracttokenizerproperties (N) ::AbstractTokenizerProperties_void_addKeyword__String__
+BASE_VERB::add (V) | keyword (N) ++ :: void (N) :: abstracttokenizerproperties (N) ::AbstractTokenizerProperties_void_addKeyword__String-Object__
+BASE_VERB::add (V) | keyword (N) ++ :: void (N) :: abstracttokenizerproperties (N) ::AbstractTokenizerProperties_void_addKeyword__String-Object-int__
+BASE_VERB::add (V) | keyword (N) ++ :: void (N) :: abstracttokenizerproperties (N) ::AbstractTokenizerProperties_void_addKeyword__String-Object-int-int__
+BASE_VERB::remove (V) | keyword (N) ++ :: void (N) :: abstracttokenizerproperties (N) ::AbstractTokenizerProperties_void_removeKeyword__String__
+SPECIAL::get (V) | keyword companion (N) ++ :: Object (N) :: abstracttokenizerproperties (N) ::AbstractTokenizerProperties_Object_getKeywordCompanion__String__
+BASE_VERB::keyword (V) | exists (N) ++ :: boolean (N) :: abstracttokenizerproperties (N) ::AbstractTokenizerProperties_boolean_keywordExists__String__
+SPECIAL::get (V) | keyword (N) ++ :: TokenizerProperty (N) :: abstracttokenizerproperties (N) ::AbstractTokenizerProperties_TokenizerProperty_getKeyword__String__
+BASE_VERB::add (V) | pattern (N) ++ :: void (N) :: abstracttokenizerproperties (N) ::AbstractTokenizerProperties_void_addPattern__String__
+BASE_VERB::add (V) | pattern (N) ++ :: void (N) :: abstracttokenizerproperties (N) ::AbstractTokenizerProperties_void_addPattern__String-Object__
+BASE_VERB::add (V) | pattern (N) ++ :: void (N) :: abstracttokenizerproperties (N) ::AbstractTokenizerProperties_void_addPattern__String-Object-int__
+BASE_VERB::add (V) | pattern (N) ++ :: void (N) :: abstracttokenizerproperties (N) ::AbstractTokenizerProperties_void_addPattern__String-Object-int-int__
+BASE_VERB::remove (V) | pattern (N) ++ :: void (N) :: abstracttokenizerproperties (N) ::AbstractTokenizerProperties_void_removePattern__String__
+SPECIAL::get (V) | pattern companion (N) ++ :: Object (N) :: abstracttokenizerproperties (N) ::AbstractTokenizerProperties_Object_getPatternCompanion__String__
+BASE_VERB::pattern (V) | exists (N) ++ :: boolean (N) :: abstracttokenizerproperties (N) ::AbstractTokenizerProperties_boolean_patternExists__String__
+SPECIAL::get (V) | pattern (N) ++ :: TokenizerProperty (N) :: abstracttokenizerproperties (N) ::AbstractTokenizerProperties_TokenizerProperty_getPattern__String__
+BASE_VERB::add (V) | property (N) ++ :: void (N) :: abstracttokenizerproperties (N) ::AbstractTokenizerProperties_void_addProperty__TokenizerProperty__
+BASE_VERB::remove (V) | property (N) ++ :: void (N) :: abstracttokenizerproperties (N) ::AbstractTokenizerProperties_void_removeProperty__TokenizerProperty__
+BASE_VERB::property (V) | exists (N) ++ :: boolean (N) :: abstracttokenizerproperties (N) ::AbstractTokenizerProperties_boolean_propertyExists__TokenizerProperty__
+BASE_VERB::add (V) | tokenizer property listener (N) ++ :: void (N) :: abstracttokenizerproperties (N) ::AbstractTokenizerProperties_void_addTokenizerPropertyListener__TokenizerPropertyListener__
+BASE_VERB::remove (V) | tokenizer property listener (N) ++ :: void (N) :: abstracttokenizerproperties (N) ::AbstractTokenizerProperties_void_removeTokenizerPropertyListener__TokenizerPropertyListener__
+BASE_VERB::map (V) | character set (N) ++ :: void (N) :: abstracttokenizerproperties (N) ::AbstractTokenizerProperties_void_mapCharacterSet__Map-String-boolean__
+BASE_VERB::escape (V) | char (N) ++ :: boolean (N) :: abstracttokenizerproperties (N) ::AbstractTokenizerProperties_boolean_escapeChar__char__
+BASE_VERB::add (V) | range (N) ++ :: void (N) :: abstracttokenizerproperties (N) ::AbstractTokenizerProperties_void_addRange__StringBuffer-char-char__
+BASE_VERB::merge (V) | set (N) ++ :: String (N) :: abstracttokenizerproperties (N) ::AbstractTokenizerProperties_String_mergeSet__String-String-boolean__
+BASE_VERB::normalize (V) | flags (N) ++ :: int (N) :: abstracttokenizerproperties (N) ::AbstractTokenizerProperties_int_normalizeFlags__int-int__
+BASE_VERB::check (V) | argument (N) ++ :: void (N) :: abstracttokenizerproperties (N) ::AbstractTokenizerProperties_void_checkArgument__String-String__
+BASE_VERB::check (V) | property argument (N) ++ :: void (N) :: abstracttokenizerproperties (N) ::AbstractTokenizerProperties_void_checkPropertyArgument__TokenizerProperty__
+BASE_VERB::handle (V) | event (N) ++ :: void (N) :: abstracttokenizerproperties (N) ::AbstractTokenizerProperties_void_handleEvent__int-String-String__
+BASE_VERB::notify (V) | listeners (N) ++ :: void (N) :: abstracttokenizerproperties (N) ::AbstractTokenizerProperties_void_notifyListeners__TokenizerPropertyEvent__
+CONSTRUCTOR::create (V) | array source (N) ++ :: CharArraySource (N) :: chararraysource (N) ::CharArraySource_CharArraySource_CharArraySource__charArray__
+CONSTRUCTOR::create (V) | array source (N) ++ :: CharArraySource (N) :: chararraysource (N) ::CharArraySource_CharArraySource_CharArraySource__charArray-int-int__
+BASE_VERB::read (V) | value (N) ++ :: int (N) :: chararraysource (N) ::CharArraySource_int_read__charArray-int-int__
+BASE_VERB::char (V) | at (N) ++ :: char (N) :: chararraysource (N) ::CharArraySource_char_charAt__int__
+BASE_VERB::length (V) | value (N) ++ :: int (N) :: chararraysource (N) ::CharArraySource_int_length____
+BASE_VERB::sub (V) | sequence (N) ++ :: CharSequence (N) :: chararraysource (N) ::CharArraySource_CharSequence_subSequence__int-int__
+BASE_VERB::to (V) | string (N) ++ :: String (N) :: chararraysource (N) ::CharArraySource_String_toString____
+CONSTRUCTOR::create (V) | source (N) ++ :: ReaderSource (N) :: readersource (N) ::ReaderSource_ReaderSource_ReaderSource____
+CONSTRUCTOR::create (V) | source (N) ++ :: ReaderSource (N) :: readersource (N) ::ReaderSource_ReaderSource_ReaderSource__Reader__
+CONSTRUCTOR::create (V) | source (N) ++ :: ReaderSource (N) :: readersource (N) ::ReaderSource_ReaderSource_ReaderSource__InputStream__
+CONSTRUCTOR::create (V) | source (N) ++ :: ReaderSource (N) :: readersource (N) ::ReaderSource_ReaderSource_ReaderSource__File__
+CONSTRUCTOR::create (V) | source (N) ++ :: ReaderSource (N) :: readersource (N) ::ReaderSource_ReaderSource_ReaderSource__String__
+BASE_VERB::read (V) | value (N) ++ :: int (N) :: readersource (N) ::ReaderSource_int_read__charArray-int-int__
+BASE_VERB::close (V) | value (N) ++ :: void (N) :: readersource (N) ::ReaderSource_void_close____
+SPECIAL::set (V) | reader (N) ++ :: void (N) :: readersource (N) ::ReaderSource_void_setReader__Reader__
+SPECIAL::get (V) | reader (N) ++ :: Reader (N) :: readersource (N) ::ReaderSource_Reader_getReader____
+BASE_VERB::finalize (V) | value (N) ++ :: void (N) :: readersource (N) ::ReaderSource_void_finalize____
+CONSTRUCTOR::create (V) | tokenizer (N) ++ :: StandardTokenizer (N) :: standardtokenizer (N) ::StandardTokenizer_StandardTokenizer_StandardTokenizer____
+CONSTRUCTOR::create (V) | tokenizer (N) ++ :: StandardTokenizer (N) :: standardtokenizer (N) ::StandardTokenizer_StandardTokenizer_StandardTokenizer__TokenizerProperties__
+SPECIAL::get (V) | range start (N) ++ :: int (N) :: standardtokenizer (N) ::StandardTokenizer_int_getRangeStart____
+SPECIAL::set (V) | source (N) ++ :: void (N) :: standardtokenizer (N) ::StandardTokenizer_void_setSource__TokenizerSource__
+BASE_VERB::close (V) | value (N) ++ :: void (N) :: standardtokenizer (N) ::StandardTokenizer_void_close____
+SPECIAL::get (V) | data provider (N) ++ :: DataProvider (N) :: standardtokenizer (N) ::StandardTokenizer_DataProvider_getDataProvider__int-int__
+BASE_VERB::read (V) | more data (N) ++ :: int (N) :: standardtokenizer (N) ::StandardTokenizer_int_readMoreData____
+BASE_VERB::reorganize (V) | input buffer (N) ++ :: charArray (N) :: standardtokenizer (N) ::StandardTokenizer_charArray_reorganizeInputBuffer__charArray__
+CONSTRUCTOR::create (V) | data provider (N) ++ :: StandardTokenizer (N) :: standardtokenizer (N) ::StandardTokenizer_StandardTokenizer_AbstractDataProvider__int-int__
+SPECIAL::get (V) | start position (N) ++ :: int (N) :: standardtokenizer (N) ::StandardTokenizer_int_getStartPosition____
+SPECIAL::get (V) | length (N) ++ :: int (N) :: standardtokenizer (N) ::StandardTokenizer_int_getLength____
+SPECIAL::set (V) | data range (N) ++ :: void (N) :: standardtokenizer (N) ::StandardTokenizer_void_setDataRange__int-int__
+CONSTRUCTOR::create (V) | array data provider (N) ++ :: StandardTokenizer (N) :: standardtokenizer (N) ::StandardTokenizer_StandardTokenizer_CharArrayDataProvider__charArray-int-int__
+SPECIAL::get (V) | char at (N) ++ :: char (N) :: standardtokenizer (N) ::StandardTokenizer_char_getCharAt__int__
+SPECIAL::get (V) | data (N) ++ :: charArray (N) :: standardtokenizer (N) ::StandardTokenizer_charArray_getData____
+SPECIAL::get (V) | data copy (N) ++ :: charArray (N) :: standardtokenizer (N) ::StandardTokenizer_charArray_getDataCopy____
+BASE_VERB::to (V) | string (N) ++ :: String (N) :: standardtokenizer (N) ::StandardTokenizer_String_toString____
+SPECIAL::set (V) | data (N) ++ :: void (N) :: standardtokenizer (N) ::StandardTokenizer_void_setData__charArray__
+SPECIAL::set (V) | data range (N) ++ :: void (N) :: standardtokenizer (N) ::StandardTokenizer_void_setDataRange__int-int__
+CONSTRUCTOR::create (V) | data provider (N) ++ :: StandardTokenizer (N) :: standardtokenizer (N) ::StandardTokenizer_StandardTokenizer_StringDataProvider__CharSequenceTokenizerSource-int-int__
+SPECIAL::get (V) | char at (N) ++ :: char (N) :: standardtokenizer (N) ::StandardTokenizer_char_getCharAt__int__
+SPECIAL::get (V) | data (N) ++ :: charArray (N) :: standardtokenizer (N) ::StandardTokenizer_charArray_getData____
+SPECIAL::get (V) | data copy (N) ++ :: charArray (N) :: standardtokenizer (N) ::StandardTokenizer_charArray_getDataCopy____
+BASE_VERB::to (V) | string (N) ++ :: String (N) :: standardtokenizer (N) ::StandardTokenizer_String_toString____
+SPECIAL::set (V) | data (N) ++ :: void (N) :: standardtokenizer (N) ::StandardTokenizer_void_setData__CharSequenceTokenizerSource__
+CONSTRUCTOR::create (V) | tokenizer properties (N) ++ :: StandardTokenizerProperties (N) :: standardtokenizerproperties (N) ::StandardTokenizerProperties_StandardTokenizerProperties_StandardTokenizerProperties____
+CONSTRUCTOR::create (V) | tokenizer properties (N) ++ :: StandardTokenizerProperties (N) :: standardtokenizerproperties (N) ::StandardTokenizerProperties_StandardTokenizerProperties_StandardTokenizerProperties__int__
+CONSTRUCTOR::create (V) | tokenizer properties (N) ++ :: StandardTokenizerProperties (N) :: standardtokenizerproperties (N) ::StandardTokenizerProperties_StandardTokenizerProperties_StandardTokenizerProperties__int-String-String__
+BASE_VERB::do (V) | get property (N) ++ :: TokenizerProperty (N) :: standardtokenizerproperties (N) ::StandardTokenizerProperties_TokenizerProperty_doGetProperty__int-String__
+BASE_VERB::do (V) | set separators (N) ++ :: String (N) :: standardtokenizerproperties (N) ::StandardTokenizerProperties_String_doSetSeparators__String__
+BASE_VERB::do (V) | set whitespaces (N) ++ :: String (N) :: standardtokenizerproperties (N) ::StandardTokenizerProperties_String_doSetWhitespaces__String__
+BASE_VERB::do (V) | add property (N) ++ :: TokenizerProperty (N) :: standardtokenizerproperties (N) ::StandardTokenizerProperties_TokenizerProperty_doAddProperty__TokenizerProperty__
+BASE_VERB::do (V) | remove property (N) ++ :: TokenizerProperty (N) :: standardtokenizerproperties (N) ::StandardTokenizerProperties_TokenizerProperty_doRemoveProperty__TokenizerProperty__
+SPECIAL::get (V) | strings (N) ++ :: Iterator (N) :: standardtokenizerproperties (N) ::StandardTokenizerProperties_Iterator_getStrings____
+SPECIAL::get (V) | whitespaces (N) ++ :: String (N) :: standardtokenizerproperties (N) ::StandardTokenizerProperties_String_getWhitespaces____
+SPECIAL::get (V) | separators (N) ++ :: String (N) :: standardtokenizerproperties (N) ::StandardTokenizerProperties_String_getSeparators____
+SPECIAL::get (V) | line comments (N) ++ :: Iterator (N) :: standardtokenizerproperties (N) ::StandardTokenizerProperties_Iterator_getLineComments____
+SPECIAL::get (V) | block comments (N) ++ :: Iterator (N) :: standardtokenizerproperties (N) ::StandardTokenizerProperties_Iterator_getBlockComments____
+SPECIAL::get (V) | special sequences (N) ++ :: Iterator (N) :: standardtokenizerproperties (N) ::StandardTokenizerProperties_Iterator_getSpecialSequences____
+SPECIAL::get (V) | keywords (N) ++ :: Iterator (N) :: standardtokenizerproperties (N) ::StandardTokenizerProperties_Iterator_getKeywords____
+SPECIAL::get (V) | patterns (N) ++ :: Iterator (N) :: standardtokenizerproperties (N) ::StandardTokenizerProperties_Iterator_getPatterns____
+SPECIAL::get (V) | properties (N) ++ :: Iterator (N) :: standardtokenizerproperties (N) ::StandardTokenizerProperties_Iterator_getProperties____
+SPECIAL::set (V) | tokenizer properties (N) ++ :: void (N) :: standardtokenizerproperties (N) ::StandardTokenizerProperties_void_setTokenizerProperties__TokenizerProperties__
+SPECIAL::get (V) | tokenizer properties (N) ++ :: TokenizerProperties (N) :: standardtokenizerproperties (N) ::StandardTokenizerProperties_TokenizerProperties_getTokenizerProperties____
+SPECIAL::is (V) | whitespace (N) ++ :: boolean (N) :: standardtokenizerproperties (N) ::StandardTokenizerProperties_boolean_isWhitespace__char__
+BASE_VERB::count (V) | leading whitespaces (N) ++ :: int (N) :: standardtokenizerproperties (N) ::StandardTokenizerProperties_int_countLeadingWhitespaces__DataProvider__
+BASE_VERB::newline (V) | is whitespace (N) ++ :: boolean (N) :: standardtokenizerproperties (N) ::StandardTokenizerProperties_boolean_newlineIsWhitespace____
+SPECIAL::is (V) | separator (N) ++ :: boolean (N) :: standardtokenizerproperties (N) ::StandardTokenizerProperties_boolean_isSeparator__char__
+BASE_VERB::has (V) | sequence comment or string (N) ++ :: boolean (N) :: standardtokenizerproperties (N) ::StandardTokenizerProperties_boolean_hasSequenceCommentOrString____
+BASE_VERB::starts (V) | with sequence comment or string (N) ++ :: TokenizerProperty (N) :: standardtokenizerproperties (N) ::StandardTokenizerProperties_TokenizerProperty_startsWithSequenceCommentOrString__DataProvider__
+SPECIAL::get (V) | sequence max length (N) ++ :: int (N) :: standardtokenizerproperties (N) ::StandardTokenizerProperties_int_getSequenceMaxLength____
+BASE_VERB::has (V) | keywords (N) ++ :: boolean (N) :: standardtokenizerproperties (N) ::StandardTokenizerProperties_boolean_hasKeywords____
+SPECIAL::is (V) | keyword (N) ++ :: TokenizerProperty (N) :: standardtokenizerproperties (N) ::StandardTokenizerProperties_TokenizerProperty_isKeyword__DataProvider__
+BASE_VERB::has (V) | pattern (N) ++ :: boolean (N) :: standardtokenizerproperties (N) ::StandardTokenizerProperties_boolean_hasPattern____
+BASE_VERB::matches (V) | value (N) ++ :: PatternHandler.Result (N) :: standardtokenizerproperties (N) ::StandardTokenizerProperties_PatternHandler.Result_matches__DataProvider__
+BASE_VERB::add (V) | pattern (N) ++ :: TokenizerProperty (N) :: standardtokenizerproperties (N) ::StandardTokenizerProperties_TokenizerProperty_addPattern__TokenizerProperty__
+BASE_VERB::add (V) | keyword (N) ++ :: TokenizerProperty (N) :: standardtokenizerproperties (N) ::StandardTokenizerProperties_TokenizerProperty_addKeyword__TokenizerProperty__
+BASE_VERB::add (V) | special sequence (N) ++ :: TokenizerProperty (N) :: standardtokenizerproperties (N) ::StandardTokenizerProperties_TokenizerProperty_addSpecialSequence__TokenizerProperty__
+BASE_VERB::put (V) | char set (N) ++ :: void (N) :: standardtokenizerproperties (N) ::StandardTokenizerProperties_void_putCharSet__String-int-boolean__
+CONSTRUCTOR::create (V) | iterator (N) ++ :: StandardTokenizerProperties (N) :: standardtokenizerproperties (N) ::StandardTokenizerProperties_StandardTokenizerProperties_FullIterator__StandardTokenizerProperties__
+BASE_VERB::has (V) | next (N) ++ :: boolean (N) :: standardtokenizerproperties (N) ::StandardTokenizerProperties_boolean_hasNext____
+BASE_VERB::next (V) | value (N) ++ :: Object (N) :: standardtokenizerproperties (N) ::StandardTokenizerProperties_Object_next____
+BASE_VERB::remove (V) | value (N) ++ :: void (N) :: standardtokenizerproperties (N) ::StandardTokenizerProperties_void_remove____
+CONSTRUCTOR::create (V) | iterator (N) ++ :: StandardTokenizerProperties (N) :: standardtokenizerproperties (N) ::StandardTokenizerProperties_StandardTokenizerProperties_MapIterator__StandardTokenizerProperties-Map-Map__
+BASE_VERB::has (V) | next (N) ++ :: boolean (N) :: standardtokenizerproperties (N) ::StandardTokenizerProperties_boolean_hasNext____
+BASE_VERB::next (V) | value (N) ++ :: Object (N) :: standardtokenizerproperties (N) ::StandardTokenizerProperties_Object_next____
+BASE_VERB::remove (V) | value (N) ++ :: void (N) :: standardtokenizerproperties (N) ::StandardTokenizerProperties_void_remove____
+CONSTRUCTOR::create (V) | sequences iterator (N) ++ :: StandardTokenizerProperties (N) :: standardtokenizerproperties (N) ::StandardTokenizerProperties_StandardTokenizerProperties_SpecialSequencesIterator__StandardTokenizerProperties-SequenceStoreArray-int__
+BASE_VERB::has (V) | next (N) ++ :: boolean (N) :: standardtokenizerproperties (N) ::StandardTokenizerProperties_boolean_hasNext____
+BASE_VERB::next (V) | value (N) ++ :: Object (N) :: standardtokenizerproperties (N) ::StandardTokenizerProperties_Object_next____
+BASE_VERB::remove (V) | value (N) ++ :: void (N) :: standardtokenizerproperties (N) ::StandardTokenizerProperties_void_remove____
+CONSTRUCTOR::create (V) | iterator (N) ++ :: StandardTokenizerProperties (N) :: standardtokenizerproperties (N) ::StandardTokenizerProperties_StandardTokenizerProperties_PatternIterator__StandardTokenizerProperties__
+BASE_VERB::has (V) | next (N) ++ :: boolean (N) :: standardtokenizerproperties (N) ::StandardTokenizerProperties_boolean_hasNext____
+BASE_VERB::next (V) | value (N) ++ :: Object (N) :: standardtokenizerproperties (N) ::StandardTokenizerProperties_Object_next____
+BASE_VERB::remove (V) | value (N) ++ :: void (N) :: standardtokenizerproperties (N) ::StandardTokenizerProperties_void_remove____
+CONSTRUCTOR::create (V) | source (N) ++ :: StringSource (N) :: stringsource (N) ::StringSource_StringSource_StringSource__String__
+BASE_VERB::read (V) | value (N) ++ :: int (N) :: stringsource (N) ::StringSource_int_read__charArray-int-int__
+BASE_VERB::char (V) | at (N) ++ :: char (N) :: stringsource (N) ::StringSource_char_charAt__int__
+BASE_VERB::length (V) | value (N) ++ :: int (N) :: stringsource (N) ::StringSource_int_length____
+BASE_VERB::sub (V) | sequence (N) ++ :: CharSequence (N) :: stringsource (N) ::StringSource_CharSequence_subSequence__int-int__
+SPECIAL::set (V) | type (N) ++ :: void (N) :: token (N) ::Token_void_setType__int__
+SPECIAL::get (V) | type (N) ++ :: int (N) :: token (N) ::Token_int_getType____
+SPECIAL::set (V) | image (N) ++ :: void (N) :: token (N) ::Token_void_setImage__String__
+SPECIAL::get (V) | image (N) ++ :: String (N) :: token (N) ::Token_String_getImage____
+SPECIAL::get (V) | image parts (N) ++ :: StringArray (N) :: token (N) ::Token_StringArray_getImageParts____
+SPECIAL::set (V) | image parts (N) ++ :: void (N) :: token (N) ::Token_void_setImageParts__StringArray__
+SPECIAL::set (V) | length (N) ++ :: void (N) :: token (N) ::Token_void_setLength__int__
+SPECIAL::get (V) | length (N) ++ :: int (N) :: token (N) ::Token_int_getLength____
+SPECIAL::set (V) | companion (N) ++ :: void (N) :: token (N) ::Token_void_setCompanion__Object__
+SPECIAL::get (V) | companion (N) ++ :: Object (N) :: token (N) ::Token_Object_getCompanion____
+SPECIAL::set (V) | start position (N) ++ :: void (N) :: token (N) ::Token_void_setStartPosition__int__
+SPECIAL::get (V) | start position (N) ++ :: int (N) :: token (N) ::Token_int_getStartPosition____
+SPECIAL::set (V) | end position (N) ++ :: void (N) :: token (N) ::Token_void_setEndPosition__int__
+SPECIAL::get (V) | end position (N) ++ :: int (N) :: token (N) ::Token_int_getEndPosition____
+SPECIAL::set (V) | start line (N) ++ :: void (N) :: token (N) ::Token_void_setStartLine__int__
+SPECIAL::get (V) | start line (N) ++ :: int (N) :: token (N) ::Token_int_getStartLine____
+SPECIAL::set (V) | start column (N) ++ :: void (N) :: token (N) ::Token_void_setStartColumn__int__
+SPECIAL::get (V) | start column (N) ++ :: int (N) :: token (N) ::Token_int_getStartColumn____
+SPECIAL::set (V) | end line (N) ++ :: void (N) :: token (N) ::Token_void_setEndLine__int__
+SPECIAL::get (V) | end line (N) ++ :: int (N) :: token (N) ::Token_int_getEndLine____
+SPECIAL::set (V) | end column (N) ++ :: void (N) :: token (N) ::Token_void_setEndColumn__int__
+SPECIAL::get (V) | end column (N) ++ :: int (N) :: token (N) ::Token_int_getEndColumn____
+CONSTRUCTOR::create (V) | value (N) ++ :: Token (N) :: token (N) ::Token_Token_Token____
+CONSTRUCTOR::create (V) | value (N) ++ :: Token (N) :: token (N) ::Token_Token_Token__int__
+CONSTRUCTOR::create (V) | value (N) ++ :: Token (N) :: token (N) ::Token_Token_Token__int-String__
+CONSTRUCTOR::create (V) | value (N) ++ :: Token (N) :: token (N) ::Token_Token_Token__int-String-Object__
+BASE_VERB::equals (V) | value (N) ++ :: boolean (N) :: token (N) ::Token_boolean_equals__Object__
+BASE_VERB::to (V) | string (N) ++ :: String (N) :: token (N) ::Token_String_toString____
+SPECIAL::get (V) | type name (N) ++ :: String (N) :: token (N) ::Token_String_getTypeName__int__
+SPECIAL::get (V) | cause (N) ++ :: Throwable (N) :: tokenizerexception (N) ::TokenizerException_Throwable_getCause____
+BASE_VERB::next (V) | throwable (N) ++ :: Throwable (N) :: tokenizerexception (N) ::TokenizerException_Throwable_nextThrowable____
+SPECIAL::is (V) | wrapper (N) ++ :: boolean (N) :: tokenizerexception (N) ::TokenizerException_boolean_isWrapper____
+SPECIAL::get (V) | format (N) ++ :: String (N) :: tokenizerexception (N) ::TokenizerException_String_getFormat____
+SPECIAL::get (V) | arguments (N) ++ :: ObjectArray (N) :: tokenizerexception (N) ::TokenizerException_ObjectArray_getArguments____
+CONSTRUCTOR::create (V) | exception (N) ++ :: TokenizerException (N) :: tokenizerexception (N) ::TokenizerException_TokenizerException_TokenizerException__String__
+CONSTRUCTOR::create (V) | exception (N) ++ :: TokenizerException (N) :: tokenizerexception (N) ::TokenizerException_TokenizerException_TokenizerException__Throwable__
+CONSTRUCTOR::create (V) | exception (N) ++ :: TokenizerException (N) :: tokenizerexception (N) ::TokenizerException_TokenizerException_TokenizerException__Throwable-String__
+CONSTRUCTOR::create (V) | exception (N) ++ :: TokenizerException (N) :: tokenizerexception (N) ::TokenizerException_TokenizerException_TokenizerException__String-ObjectArray__
+CONSTRUCTOR::create (V) | exception (N) ++ :: TokenizerException (N) :: tokenizerexception (N) ::TokenizerException_TokenizerException_TokenizerException__Throwable-String-ObjectArray__
+SPECIAL::get (V) | message (N) ++ :: String (N) :: tokenizerexception (N) ::TokenizerException_String_getMessage____
+SPECIAL::set (V) | parse flags (N) ++ :: void (N) :: tokenizerproperties (N) ::TokenizerProperties_void_setParseFlags__int__
+SPECIAL::get (V) | parse flags (N) ++ :: int (N) :: tokenizerproperties (N) ::TokenizerProperties_int_getParseFlags____
+SPECIAL::is (V) | flag set (N) ++ :: boolean (N) :: tokenizerproperties (N) ::TokenizerProperties_boolean_isFlagSet__int__
+SPECIAL::is (V) | flag set (N) ++ :: boolean (N) :: tokenizerproperties (N) ::TokenizerProperties_boolean_isFlagSet__TokenizerProperty-int__
+SPECIAL::set (V) | whitespaces (N) ++ :: void (N) :: tokenizerproperties (N) ::TokenizerProperties_void_setWhitespaces__String__
+BASE_VERB::add (V) | whitespaces (N) ++ :: void (N) :: tokenizerproperties (N) ::TokenizerProperties_void_addWhitespaces__String__
+BASE_VERB::remove (V) | whitespaces (N) ++ :: void (N) :: tokenizerproperties (N) ::TokenizerProperties_void_removeWhitespaces__String__
+SPECIAL::get (V) | whitespaces (N) ++ :: String (N) :: tokenizerproperties (N) ::TokenizerProperties_String_getWhitespaces____
+SPECIAL::set (V) | separators (N) ++ :: void (N) :: tokenizerproperties (N) ::TokenizerProperties_void_setSeparators__String__
+BASE_VERB::add (V) | separators (N) ++ :: void (N) :: tokenizerproperties (N) ::TokenizerProperties_void_addSeparators__String__
+BASE_VERB::remove (V) | separators (N) ++ :: void (N) :: tokenizerproperties (N) ::TokenizerProperties_void_removeSeparators__String__
+SPECIAL::get (V) | separators (N) ++ :: String (N) :: tokenizerproperties (N) ::TokenizerProperties_String_getSeparators____
+BASE_VERB::add (V) | string (N) ++ :: void (N) :: tokenizerproperties (N) ::TokenizerProperties_void_addString__String-String-String__
+BASE_VERB::add (V) | string (N) ++ :: void (N) :: tokenizerproperties (N) ::TokenizerProperties_void_addString__String-String-String-Object__
+BASE_VERB::add (V) | string (N) ++ :: void (N) :: tokenizerproperties (N) ::TokenizerProperties_void_addString__String-String-String-Object-int__
+BASE_VERB::add (V) | string (N) ++ :: void (N) :: tokenizerproperties (N) ::TokenizerProperties_void_addString__String-String-String-Object-int-int__
+BASE_VERB::remove (V) | string (N) ++ :: void (N) :: tokenizerproperties (N) ::TokenizerProperties_void_removeString__String__
+SPECIAL::get (V) | string companion (N) ++ :: Object (N) :: tokenizerproperties (N) ::TokenizerProperties_Object_getStringCompanion__String__
+BASE_VERB::string (V) | exists (N) ++ :: boolean (N) :: tokenizerproperties (N) ::TokenizerProperties_boolean_stringExists__String__
+SPECIAL::get (V) | string (N) ++ :: TokenizerProperty (N) :: tokenizerproperties (N) ::TokenizerProperties_TokenizerProperty_getString__String__
+SPECIAL::get (V) | strings (N) ++ :: Iterator (N) :: tokenizerproperties (N) ::TokenizerProperties_Iterator_getStrings____
+BASE_VERB::add (V) | line comment (N) ++ :: void (N) :: tokenizerproperties (N) ::TokenizerProperties_void_addLineComment__String__
+BASE_VERB::add (V) | line comment (N) ++ :: void (N) :: tokenizerproperties (N) ::TokenizerProperties_void_addLineComment__String-Object__
+BASE_VERB::add (V) | line comment (N) ++ :: void (N) :: tokenizerproperties (N) ::TokenizerProperties_void_addLineComment__String-Object-int__
+BASE_VERB::add (V) | line comment (N) ++ :: void (N) :: tokenizerproperties (N) ::TokenizerProperties_void_addLineComment__String-Object-int-int__
+BASE_VERB::remove (V) | line comment (N) ++ :: void (N) :: tokenizerproperties (N) ::TokenizerProperties_void_removeLineComment__String__
+SPECIAL::get (V) | line comment companion (N) ++ :: Object (N) :: tokenizerproperties (N) ::TokenizerProperties_Object_getLineCommentCompanion__String__
+BASE_VERB::line (V) | comment exists (N) ++ :: boolean (N) :: tokenizerproperties (N) ::TokenizerProperties_boolean_lineCommentExists__String__
+SPECIAL::get (V) | line comment (N) ++ :: TokenizerProperty (N) :: tokenizerproperties (N) ::TokenizerProperties_TokenizerProperty_getLineComment__String__
+SPECIAL::get (V) | line comments (N) ++ :: Iterator (N) :: tokenizerproperties (N) ::TokenizerProperties_Iterator_getLineComments____
+BASE_VERB::add (V) | block comment (N) ++ :: void (N) :: tokenizerproperties (N) ::TokenizerProperties_void_addBlockComment__String-String__
+BASE_VERB::add (V) | block comment (N) ++ :: void (N) :: tokenizerproperties (N) ::TokenizerProperties_void_addBlockComment__String-String-Object__
+BASE_VERB::add (V) | block comment (N) ++ :: void (N) :: tokenizerproperties (N) ::TokenizerProperties_void_addBlockComment__String-String-Object-int__
+BASE_VERB::add (V) | block comment (N) ++ :: void (N) :: tokenizerproperties (N) ::TokenizerProperties_void_addBlockComment__String-String-Object-int-int__
+BASE_VERB::remove (V) | block comment (N) ++ :: void (N) :: tokenizerproperties (N) ::TokenizerProperties_void_removeBlockComment__String__
+SPECIAL::get (V) | block comment companion (N) ++ :: Object (N) :: tokenizerproperties (N) ::TokenizerProperties_Object_getBlockCommentCompanion__String__
+BASE_VERB::block (V) | comment exists (N) ++ :: boolean (N) :: tokenizerproperties (N) ::TokenizerProperties_boolean_blockCommentExists__String__
+SPECIAL::get (V) | block comment (N) ++ :: TokenizerProperty (N) :: tokenizerproperties (N) ::TokenizerProperties_TokenizerProperty_getBlockComment__String__
+SPECIAL::get (V) | block comments (N) ++ :: Iterator (N) :: tokenizerproperties (N) ::TokenizerProperties_Iterator_getBlockComments____
+BASE_VERB::add (V) | special sequence (N) ++ :: void (N) :: tokenizerproperties (N) ::TokenizerProperties_void_addSpecialSequence__String__
+BASE_VERB::add (V) | special sequence (N) ++ :: void (N) :: tokenizerproperties (N) ::TokenizerProperties_void_addSpecialSequence__String-Object__
+BASE_VERB::add (V) | special sequence (N) ++ :: void (N) :: tokenizerproperties (N) ::TokenizerProperties_void_addSpecialSequence__String-Object-int__
+BASE_VERB::add (V) | special sequence (N) ++ :: void (N) :: tokenizerproperties (N) ::TokenizerProperties_void_addSpecialSequence__String-Object-int-int__
+BASE_VERB::remove (V) | special sequence (N) ++ :: void (N) :: tokenizerproperties (N) ::TokenizerProperties_void_removeSpecialSequence__String__
+SPECIAL::get (V) | special sequence companion (N) ++ :: Object (N) :: tokenizerproperties (N) ::TokenizerProperties_Object_getSpecialSequenceCompanion__String__
+SPECIAL::get (V) | special sequences (N) ++ :: Iterator (N) :: tokenizerproperties (N) ::TokenizerProperties_Iterator_getSpecialSequences____
+BASE_VERB::special (V) | sequence exists (N) ++ :: boolean (N) :: tokenizerproperties (N) ::TokenizerProperties_boolean_specialSequenceExists__String__
+SPECIAL::get (V) | special sequence (N) ++ :: TokenizerProperty (N) :: tokenizerproperties (N) ::TokenizerProperties_TokenizerProperty_getSpecialSequence__String__
+BASE_VERB::add (V) | keyword (N) ++ :: void (N) :: tokenizerproperties (N) ::TokenizerProperties_void_addKeyword__String__
+BASE_VERB::add (V) | keyword (N) ++ :: void (N) :: tokenizerproperties (N) ::TokenizerProperties_void_addKeyword__String-Object__
+BASE_VERB::add (V) | keyword (N) ++ :: void (N) :: tokenizerproperties (N) ::TokenizerProperties_void_addKeyword__String-Object-int__
+BASE_VERB::add (V) | keyword (N) ++ :: void (N) :: tokenizerproperties (N) ::TokenizerProperties_void_addKeyword__String-Object-int-int__
+BASE_VERB::remove (V) | keyword (N) ++ :: void (N) :: tokenizerproperties (N) ::TokenizerProperties_void_removeKeyword__String__
+SPECIAL::get (V) | keyword companion (N) ++ :: Object (N) :: tokenizerproperties (N) ::TokenizerProperties_Object_getKeywordCompanion__String__
+SPECIAL::get (V) | keywords (N) ++ :: Iterator (N) :: tokenizerproperties (N) ::TokenizerProperties_Iterator_getKeywords____
+BASE_VERB::keyword (V) | exists (N) ++ :: boolean (N) :: tokenizerproperties (N) ::TokenizerProperties_boolean_keywordExists__String__
+SPECIAL::get (V) | keyword (N) ++ :: TokenizerProperty (N) :: tokenizerproperties (N) ::TokenizerProperties_TokenizerProperty_getKeyword__String__
+BASE_VERB::add (V) | pattern (N) ++ :: void (N) :: tokenizerproperties (N) ::TokenizerProperties_void_addPattern__String__
+BASE_VERB::add (V) | pattern (N) ++ :: void (N) :: tokenizerproperties (N) ::TokenizerProperties_void_addPattern__String-Object__
+BASE_VERB::add (V) | pattern (N) ++ :: void (N) :: tokenizerproperties (N) ::TokenizerProperties_void_addPattern__String-Object-int__
+BASE_VERB::add (V) | pattern (N) ++ :: void (N) :: tokenizerproperties (N) ::TokenizerProperties_void_addPattern__String-Object-int-int__
+BASE_VERB::remove (V) | pattern (N) ++ :: void (N) :: tokenizerproperties (N) ::TokenizerProperties_void_removePattern__String__
+SPECIAL::get (V) | pattern companion (N) ++ :: Object (N) :: tokenizerproperties (N) ::TokenizerProperties_Object_getPatternCompanion__String__
+BASE_VERB::pattern (V) | exists (N) ++ :: boolean (N) :: tokenizerproperties (N) ::TokenizerProperties_boolean_patternExists__String__
+SPECIAL::get (V) | pattern (N) ++ :: TokenizerProperty (N) :: tokenizerproperties (N) ::TokenizerProperties_TokenizerProperty_getPattern__String__
+SPECIAL::get (V) | patterns (N) ++ :: Iterator (N) :: tokenizerproperties (N) ::TokenizerProperties_Iterator_getPatterns____
+BASE_VERB::add (V) | property (N) ++ :: void (N) :: tokenizerproperties (N) ::TokenizerProperties_void_addProperty__TokenizerProperty__
+BASE_VERB::remove (V) | property (N) ++ :: void (N) :: tokenizerproperties (N) ::TokenizerProperties_void_removeProperty__TokenizerProperty__
+SPECIAL::get (V) | properties (N) ++ :: Iterator (N) :: tokenizerproperties (N) ::TokenizerProperties_Iterator_getProperties____
+BASE_VERB::property (V) | exists (N) ++ :: boolean (N) :: tokenizerproperties (N) ::TokenizerProperties_boolean_propertyExists__TokenizerProperty__
+BASE_VERB::add (V) | tokenizer property listener (N) ++ :: void (N) :: tokenizerproperties (N) ::TokenizerProperties_void_addTokenizerPropertyListener__TokenizerPropertyListener__
+BASE_VERB::remove (V) | tokenizer property listener (N) ++ :: void (N) :: tokenizerproperties (N) ::TokenizerProperties_void_removeTokenizerPropertyListener__TokenizerPropertyListener__
+SPECIAL::set (V) | type (N) ++ :: void (N) :: tokenizerproperty (N) ::TokenizerProperty_void_setType__int__
+SPECIAL::get (V) | type (N) ++ :: int (N) :: tokenizerproperty (N) ::TokenizerProperty_int_getType____
+SPECIAL::set (V) | flags (N) ++ :: void (N) :: tokenizerproperty (N) ::TokenizerProperty_void_setFlags__int__
+SPECIAL::set (V) | flags (N) ++ :: void (N) :: tokenizerproperty (N) ::TokenizerProperty_void_setFlags__int-int__
+SPECIAL::get (V) | flags (N) ++ :: int (N) :: tokenizerproperty (N) ::TokenizerProperty_int_getFlags____
+SPECIAL::get (V) | flag mask (N) ++ :: int (N) :: tokenizerproperty (N) ::TokenizerProperty_int_getFlagMask____
+SPECIAL::is (V) | flag set (N) ++ :: boolean (N) :: tokenizerproperty (N) ::TokenizerProperty_boolean_isFlagSet__int-boolean__
+BASE_VERB::contains (V) | flag (N) ++ :: boolean (N) :: tokenizerproperty (N) ::TokenizerProperty_boolean_containsFlag__int__
+SPECIAL::set (V) | images (N) ++ :: void (N) :: tokenizerproperty (N) ::TokenizerProperty_void_setImages__StringArray__
+SPECIAL::get (V) | images (N) ++ :: StringArray (N) :: tokenizerproperty (N) ::TokenizerProperty_StringArray_getImages____
+SPECIAL::set (V) | companion (N) ++ :: void (N) :: tokenizerproperty (N) ::TokenizerProperty_void_setCompanion__Object__
+SPECIAL::get (V) | companion (N) ++ :: Object (N) :: tokenizerproperty (N) ::TokenizerProperty_Object_getCompanion____
+CONSTRUCTOR::create (V) | property (N) ++ :: TokenizerProperty (N) :: tokenizerproperty (N) ::TokenizerProperty_TokenizerProperty_TokenizerProperty____
+CONSTRUCTOR::create (V) | property (N) ++ :: TokenizerProperty (N) :: tokenizerproperty (N) ::TokenizerProperty_TokenizerProperty_TokenizerProperty__int__
+CONSTRUCTOR::create (V) | property (N) ++ :: TokenizerProperty (N) :: tokenizerproperty (N) ::TokenizerProperty_TokenizerProperty_TokenizerProperty__int-StringArray__
+CONSTRUCTOR::create (V) | property (N) ++ :: TokenizerProperty (N) :: tokenizerproperty (N) ::TokenizerProperty_TokenizerProperty_TokenizerProperty__int-StringArray-Object__
+CONSTRUCTOR::create (V) | property (N) ++ :: TokenizerProperty (N) :: tokenizerproperty (N) ::TokenizerProperty_TokenizerProperty_TokenizerProperty__int-StringArray-Object-int__
+CONSTRUCTOR::create (V) | property (N) ++ :: TokenizerProperty (N) :: tokenizerproperty (N) ::TokenizerProperty_TokenizerProperty_TokenizerProperty__int-StringArray-Object-int-int__
+BASE_VERB::equals (V) | value (N) ++ :: boolean (N) :: tokenizerproperty (N) ::TokenizerProperty_boolean_equals__Object__
+BASE_VERB::to (V) | string (N) ++ :: String (N) :: tokenizerproperty (N) ::TokenizerProperty_String_toString____
+CONSTRUCTOR::create (V) | property event (N) ++ :: TokenizerPropertyEvent (N) :: tokenizerpropertyevent (N) ::TokenizerPropertyEvent_TokenizerPropertyEvent_TokenizerPropertyEvent____
+CONSTRUCTOR::create (V) | property event (N) ++ :: TokenizerPropertyEvent (N) :: tokenizerpropertyevent (N) ::TokenizerPropertyEvent_TokenizerPropertyEvent_TokenizerPropertyEvent__int-TokenizerProperty__
+CONSTRUCTOR::create (V) | property event (N) ++ :: TokenizerPropertyEvent (N) :: tokenizerpropertyevent (N) ::TokenizerPropertyEvent_TokenizerPropertyEvent_TokenizerPropertyEvent__int-TokenizerProperty-TokenizerProperty__
+SPECIAL::set (V) | type (N) ++ :: void (N) :: tokenizerpropertyevent (N) ::TokenizerPropertyEvent_void_setType__int__
+SPECIAL::get (V) | type (N) ++ :: int (N) :: tokenizerpropertyevent (N) ::TokenizerPropertyEvent_int_getType____
+SPECIAL::set (V) | property (N) ++ :: void (N) :: tokenizerpropertyevent (N) ::TokenizerPropertyEvent_void_setProperty__TokenizerProperty__
+SPECIAL::get (V) | property (N) ++ :: TokenizerProperty (N) :: tokenizerpropertyevent (N) ::TokenizerPropertyEvent_TokenizerProperty_getProperty____
+SPECIAL::set (V) | old property (N) ++ :: void (N) :: tokenizerpropertyevent (N) ::TokenizerPropertyEvent_void_setOldProperty__TokenizerProperty__
+SPECIAL::get (V) | old property (N) ++ :: TokenizerProperty (N) :: tokenizerpropertyevent (N) ::TokenizerPropertyEvent_TokenizerProperty_getOldProperty____
+BASE_VERB::equals (V) | value (N) ++ :: boolean (N) :: tokenizerpropertyevent (N) ::TokenizerPropertyEvent_boolean_equals__Object__
+BASE_VERB::to (V) | string (N) ++ :: String (N) :: tokenizerpropertyevent (N) ::TokenizerPropertyEvent_String_toString____
+BASE_VERB::property (V) | changed (N) ++ :: void (N) :: tokenizerpropertylistener (N) ::TokenizerPropertyListener_void_propertyChanged__TokenizerPropertyEvent__
+BASE_VERB::read (V) | value (N) ++ :: int (N) :: tokenizersource (N) ::TokenizerSource_int_read__charArray-int-int__
+CONSTRUCTOR::create (V) | case sequence store (N) ++ :: NoCaseSequenceStore (N) :: nocasesequencestore (N) ::NoCaseSequenceStore_NoCaseSequenceStore_NoCaseSequenceStore__boolean__
+SPECIAL::get (V) | start char (N) ++ :: char (N) :: nocasesequencestore (N) ::NoCaseSequenceStore_char_getStartChar__char__
+BASE_VERB::compare (V) | value (N) ++ :: int (N) :: nocasesequencestore (N) ::NoCaseSequenceStore_int_compare__char-char__
+CONSTRUCTOR::create (V) | matcher (N) ++ :: PatternMatcher (N) :: patternmatcher (N) ::PatternMatcher_PatternMatcher_PatternMatcher__TokenizerProperty-int__
+BASE_VERB::has (V) | pattern (N) ++ :: boolean (N) :: patternmatcher (N) ::PatternMatcher_boolean_hasPattern____
+BASE_VERB::matches (V) | value (N) ++ :: PatternHandler.Result (N) :: patternmatcher (N) ::PatternMatcher_PatternHandler.Result_matches__DataProvider__
+SPECIAL::set (V) | property (N) ++ :: void (N) :: patternmatcher (N) ::PatternMatcher_void_setProperty__TokenizerProperty__
+SPECIAL::get (V) | property (N) ++ :: TokenizerProperty (N) :: patternmatcher (N) ::PatternMatcher_TokenizerProperty_getProperty____
+CONSTRUCTOR::create (V) | result (N) ++ :: PatternMatcher (N) :: patternmatcher (N) ::PatternMatcher_PatternMatcher_LocalResult__TokenizerProperty-int-StringArray__
+SPECIAL::get (V) | groups (N) ++ :: StringArray (N) :: patternmatcher (N) ::PatternMatcher_StringArray_getGroups____
+SPECIAL::get (V) | length of match (N) ++ :: int (N) :: patternmatcher (N) ::PatternMatcher_int_getLengthOfMatch____
+SPECIAL::get (V) | property (N) ++ :: TokenizerProperty (N) :: patternmatcher (N) ::PatternMatcher_TokenizerProperty_getProperty____
+CONSTRUCTOR::create (V) | provider char sequence (N) ++ :: PatternMatcher (N) :: patternmatcher (N) ::PatternMatcher_PatternMatcher_DataProviderCharSequence__DataProvider__
+CONSTRUCTOR::create (V) | provider char sequence (N) ++ :: PatternMatcher (N) :: patternmatcher (N) ::PatternMatcher_PatternMatcher_DataProviderCharSequence__DataProvider-int-int__
+BASE_VERB::char (V) | at (N) ++ :: char (N) :: patternmatcher (N) ::PatternMatcher_char_charAt__int__
+BASE_VERB::length (V) | value (N) ++ :: int (N) :: patternmatcher (N) ::PatternMatcher_int_length____
+BASE_VERB::sub (V) | sequence (N) ++ :: CharSequence (N) :: patternmatcher (N) ::PatternMatcher_CharSequence_subSequence__int-int__
+BASE_VERB::to (V) | string (N) ++ :: String (N) :: patternmatcher (N) ::PatternMatcher_String_toString____
+CONSTRUCTOR::create (V) | store (N) ++ :: SequenceStore (N) :: sequencestore (N) ::SequenceStore_SequenceStore_SequenceStore__boolean__
+BASE_VERB::has (V) | sequence comment or string (N) ++ :: boolean (N) :: sequencestore (N) ::SequenceStore_boolean_hasSequenceCommentOrString____
+BASE_VERB::starts (V) | with sequence comment or string (N) ++ :: TokenizerProperty (N) :: sequencestore (N) ::SequenceStore_TokenizerProperty_startsWithSequenceCommentOrString__DataProvider__
+SPECIAL::get (V) | sequence max length (N) ++ :: int (N) :: sequencestore (N) ::SequenceStore_int_getSequenceMaxLength____
+BASE_VERB::has (V) | keywords (N) ++ :: boolean (N) :: sequencestore (N) ::SequenceStore_boolean_hasKeywords____
+SPECIAL::is (V) | keyword (N) ++ :: TokenizerProperty (N) :: sequencestore (N) ::SequenceStore_TokenizerProperty_isKeyword__DataProvider__
+SPECIAL::get (V) | start char (N) ++ :: char (N) :: sequencestore (N) ::SequenceStore_char_getStartChar__char__
+BASE_VERB::add (V) | special sequence (N) ++ :: TokenizerProperty (N) :: sequencestore (N) ::SequenceStore_TokenizerProperty_addSpecialSequence__TokenizerProperty__
+BASE_VERB::remove (V) | special sequence (N) ++ :: TokenizerProperty (N) :: sequencestore (N) ::SequenceStore_TokenizerProperty_removeSpecialSequence__String__
+SPECIAL::get (V) | special sequence (N) ++ :: TokenizerProperty (N) :: sequencestore (N) ::SequenceStore_TokenizerProperty_getSpecialSequence__String__
+SPECIAL::get (V) | special sequences (N) ++ :: Iterator (N) :: sequencestore (N) ::SequenceStore_Iterator_getSpecialSequences__int__
+BASE_VERB::add (V) | keyword (N) ++ :: TokenizerProperty (N) :: sequencestore (N) ::SequenceStore_TokenizerProperty_addKeyword__TokenizerProperty__
+BASE_VERB::remove (V) | keyword (N) ++ :: TokenizerProperty (N) :: sequencestore (N) ::SequenceStore_TokenizerProperty_removeKeyword__String__
+SPECIAL::get (V) | keyword (N) ++ :: TokenizerProperty (N) :: sequencestore (N) ::SequenceStore_TokenizerProperty_getKeyword__String__
+SPECIAL::get (V) | keywords (N) ++ :: Iterator (N) :: sequencestore (N) ::SequenceStore_Iterator_getKeywords____
+SPECIAL::get (V) | list (N) ++ :: PropertyList (N) :: sequencestore (N) ::SequenceStore_PropertyList_getList__char__
+BASE_VERB::search (V) | string (N) ++ :: TokenizerProperty (N) :: sequencestore (N) ::SequenceStore_TokenizerProperty_searchString__String-boolean__
+BASE_VERB::insert (V) | direct (N) ++ :: TokenizerProperty (N) :: sequencestore (N) ::SequenceStore_TokenizerProperty_insertDirect__char-TokenizerProperty__
+BASE_VERB::insert (V) | mapped (N) ++ :: TokenizerProperty (N) :: sequencestore (N) ::SequenceStore_TokenizerProperty_insertMapped__char-TokenizerProperty__
+BASE_VERB::put (V) | into list (N) ++ :: TokenizerProperty (N) :: sequencestore (N) ::SequenceStore_TokenizerProperty_putIntoList__PropertyList-TokenizerProperty__
+BASE_VERB::compare (V) | value (N) ++ :: int (N) :: sequencestore (N) ::SequenceStore_int_compare__String-String-int__
+BASE_VERB::compare (V) | prefix (N) ++ :: int (N) :: sequencestore (N) ::SequenceStore_int_comparePrefix__String-DataProvider-int__
+BASE_VERB::compare (V) | value (N) ++ :: int (N) :: sequencestore (N) ::SequenceStore_int_compare__char-char__
+CONSTRUCTOR::create (V) | list (N) ++ :: SequenceStore (N) :: sequencestore (N) ::SequenceStore_SequenceStore_PropertyList__TokenizerProperty__
+CONSTRUCTOR::create (V) | list (N) ++ :: SequenceStore (N) :: sequencestore (N) ::SequenceStore_SequenceStore_PropertyList__TokenizerProperty-PropertyList__
+CONSTRUCTOR::create (V) | sequences iterator (N) ++ :: SequenceStore (N) :: sequencestore (N) ::SequenceStore_SequenceStore_SpecialSequencesIterator__SequenceStore-int__
+BASE_VERB::list (V) | has next (N) ++ :: boolean (N) :: sequencestore (N) ::SequenceStore_boolean_listHasNext____
+BASE_VERB::has (V) | next (N) ++ :: boolean (N) :: sequencestore (N) ::SequenceStore_boolean_hasNext____
+BASE_VERB::next (V) | value (N) ++ :: Object (N) :: sequencestore (N) ::SequenceStore_Object_next____
+BASE_VERB::remove (V) | value (N) ++ :: void (N) :: sequencestore (N) ::SequenceStore_void_remove____
+SPECIAL::get (V) | char at (N) ++ :: char (N) :: dataprovider (N) ::DataProvider_char_getCharAt__int__
+SPECIAL::get (V) | data (N) ++ :: charArray (N) :: dataprovider (N) ::DataProvider_charArray_getData____
+SPECIAL::get (V) | data copy (N) ++ :: charArray (N) :: dataprovider (N) ::DataProvider_charArray_getDataCopy____
+SPECIAL::get (V) | start position (N) ++ :: int (N) :: dataprovider (N) ::DataProvider_int_getStartPosition____
+SPECIAL::get (V) | length (N) ++ :: int (N) :: dataprovider (N) ::DataProvider_int_getLength____
+BASE_VERB::has (V) | keywords (N) ++ :: boolean (N) :: keywordhandler (N) ::KeywordHandler_boolean_hasKeywords____
+SPECIAL::is (V) | keyword (N) ++ :: TokenizerProperty (N) :: keywordhandler (N) ::KeywordHandler_TokenizerProperty_isKeyword__DataProvider__
+SPECIAL::is (V) | separator (N) ++ :: boolean (N) :: separatorhandler (N) ::SeparatorHandler_boolean_isSeparator__char__
+BASE_VERB::has (V) | sequence comment or string (N) ++ :: boolean (N) :: sequencehandler (N) ::SequenceHandler_boolean_hasSequenceCommentOrString____
+BASE_VERB::starts (V) | with sequence comment or string (N) ++ :: TokenizerProperty (N) :: sequencehandler (N) ::SequenceHandler_TokenizerProperty_startsWithSequenceCommentOrString__DataProvider__
+SPECIAL::get (V) | sequence max length (N) ++ :: int (N) :: sequencehandler (N) ::SequenceHandler_int_getSequenceMaxLength____
+CONSTRUCTOR::create (V) | keyword handler (N) ++ :: StandardKeywordHandler (N) :: standardkeywordhandler (N) ::StandardKeywordHandler_StandardKeywordHandler_StandardKeywordHandler__TokenizerProperties__
+BASE_VERB::has (V) | keywords (N) ++ :: boolean (N) :: standardkeywordhandler (N) ::StandardKeywordHandler_boolean_hasKeywords____
+SPECIAL::is (V) | keyword (N) ++ :: TokenizerProperty (N) :: standardkeywordhandler (N) ::StandardKeywordHandler_TokenizerProperty_isKeyword__DataProvider__
+CONSTRUCTOR::create (V) | separator handler (N) ++ :: StandardSeparatorHandler (N) :: standardseparatorhandler (N) ::StandardSeparatorHandler_StandardSeparatorHandler_StandardSeparatorHandler__TokenizerProperties__
+SPECIAL::is (V) | separator (N) ++ :: boolean (N) :: standardseparatorhandler (N) ::StandardSeparatorHandler_boolean_isSeparator__char__
+CONSTRUCTOR::create (V) | sequence handler (N) ++ :: StandardSequenceHandler (N) :: standardsequencehandler (N) ::StandardSequenceHandler_StandardSequenceHandler_StandardSequenceHandler__TokenizerProperties__
+BASE_VERB::has (V) | sequence comment or string (N) ++ :: boolean (N) :: standardsequencehandler (N) ::StandardSequenceHandler_boolean_hasSequenceCommentOrString____
+BASE_VERB::starts (V) | with sequence comment or string (N) ++ :: TokenizerProperty (N) :: standardsequencehandler (N) ::StandardSequenceHandler_TokenizerProperty_startsWithSequenceCommentOrString__DataProvider__
+SPECIAL::get (V) | sequence max length (N) ++ :: int (N) :: standardsequencehandler (N) ::StandardSequenceHandler_int_getSequenceMaxLength____
+SPECIAL::get (V) | sequence max length (N) ++ :: int (N) :: standardsequencehandler (N) ::StandardSequenceHandler_int_getSequenceMaxLength__Iterator-int__
+SPECIAL::get (V) | longest match (N) ++ :: TokenizerProperty (N) :: standardsequencehandler (N) ::StandardSequenceHandler_TokenizerProperty_getLongestMatch__String-Iterator-TokenizerProperty__
+CONSTRUCTOR::create (V) | whitespace handler (N) ++ :: StandardWhitespaceHandler (N) :: standardwhitespacehandler (N) ::StandardWhitespaceHandler_StandardWhitespaceHandler_StandardWhitespaceHandler__TokenizerProperties__
+SPECIAL::is (V) | whitespace (N) ++ :: boolean (N) :: standardwhitespacehandler (N) ::StandardWhitespaceHandler_boolean_isWhitespace__char__
+BASE_VERB::count (V) | leading whitespaces (N) ++ :: int (N) :: standardwhitespacehandler (N) ::StandardWhitespaceHandler_int_countLeadingWhitespaces__DataProvider__
+BASE_VERB::newline (V) | is whitespace (N) ++ :: boolean (N) :: standardwhitespacehandler (N) ::StandardWhitespaceHandler_boolean_newlineIsWhitespace____
+BASE_VERB::newline (V) | is whitespace (N) ++ :: boolean (N) :: standardwhitespacehandler (N) ::StandardWhitespaceHandler_boolean_newlineIsWhitespace__String__
+SPECIAL::is (V) | whitespace (N) ++ :: boolean (N) :: whitespacehandler (N) ::WhitespaceHandler_boolean_isWhitespace__char__
+BASE_VERB::count (V) | leading whitespaces (N) ++ :: int (N) :: whitespacehandler (N) ::WhitespaceHandler_int_countLeadingWhitespaces__DataProvider__
+BASE_VERB::newline (V) | is whitespace (N) ++ :: boolean (N) :: whitespacehandler (N) ::WhitespaceHandler_boolean_newlineIsWhitespace____

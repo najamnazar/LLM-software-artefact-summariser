@@ -1,0 +1,3178 @@
+{
+  "method_list": {
+    "averages": {
+      "called": 1,
+      "calls": 1
+    },
+    "method": [
+      {
+        "id": 0,
+        "name": "getDataProvider",
+        "class": "AbstractTokenizer",
+        "returntype": "DataProvider",
+        "called": [48],
+        "calls": [],
+        "use": {
+          "type": "procedural",
+          "example": "return getBaseTokenizer().getDataProvider(startPos,length);"
+        },
+        "swum": {
+          "object": "data provider",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 1,
+        "name": "readMoreData",
+        "class": "AbstractTokenizer",
+        "returntype": "int",
+        "called": [49],
+        "calls": [],
+        "use": {
+          "type": "assignment",
+          "example": "readChars=baseTokenizer.readMoreData();"
+        },
+        "swum": {
+          "object": "more data",
+          "verb": "read"
+        }
+      },
+      {
+        "id": 2,
+        "name": "AbstractTokenizer",
+        "class": "AbstractTokenizer",
+        "returntype": "AbstractTokenizer",
+        "called": [],
+        "calls": [7],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "tokenizer",
+          "verb": "create"
+        }
+      },
+      {
+        "id": 3,
+        "name": "AbstractTokenizer",
+        "class": "AbstractTokenizer",
+        "returntype": "AbstractTokenizer",
+        "called": [],
+        "calls": [7],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "tokenizer",
+          "verb": "create"
+        }
+      },
+      {
+        "id": 4,
+        "name": "setSource",
+        "class": "AbstractTokenizer",
+        "returntype": "void",
+        "called": [5],
+        "calls": [64],
+        "use": {
+          "type": "procedural",
+          "example": "setSource(new ReaderSource(reader));"
+        },
+        "swum": {
+          "object": "source",
+          "verb": "set"
+        }
+      },
+      {
+        "id": 5,
+        "name": "setSource",
+        "class": "AbstractTokenizer",
+        "returntype": "void",
+        "called": [],
+        "calls": [4],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "source",
+          "verb": "set"
+        }
+      },
+      {
+        "id": 6,
+        "name": "getSource",
+        "class": "AbstractTokenizer",
+        "returntype": "TokenizerSource",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "source",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 7,
+        "name": "setTokenizerProperties",
+        "class": "AbstractTokenizer",
+        "returntype": "void",
+        "called": [2, 3],
+        "calls": [133, 132, 13, 15, 17, 11, 19, 10, 46, 157],
+        "use": {
+          "type": "procedural",
+          "example": "setTokenizerProperties(_defaultProperties);"
+        },
+        "swum": {
+          "object": "tokenizer properties",
+          "verb": "set"
+        }
+      },
+      {
+        "id": 8,
+        "name": "getTokenizerProperties",
+        "class": "AbstractTokenizer",
+        "returntype": "TokenizerProperties",
+        "called": [9, 10, 12, 18, 20, 46, 65],
+        "calls": [],
+        "use": {
+          "type": "assignment",
+          "example": "_flags=(flags & mask) | (getTokenizerProperties().getParseFlags() & ~mask);"
+        },
+        "swum": {
+          "object": "tokenizer properties",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 9,
+        "name": "changeParseFlags",
+        "class": "AbstractTokenizer",
+        "returntype": "void",
+        "called": [38],
+        "calls": [10, 8, 64],
+        "use": {
+          "type": "procedural",
+          "example": "tokenizer.changeParseFlags(baseTokenizer.getParseFlags(),Flags.F_COUNT_LINES);"
+        },
+        "swum": {
+          "object": "parse flags",
+          "verb": "change"
+        }
+      },
+      {
+        "id": 10,
+        "name": "getParseFlags",
+        "class": "AbstractTokenizer",
+        "returntype": "int",
+        "called": [7, 9, 38, 46, 64, 65],
+        "calls": [8],
+        "use": {
+          "type": "assignment",
+          "example": "int newFlags=_properties.getParseFlags();"
+        },
+        "swum": {
+          "object": "parse flags",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 11,
+        "name": "setKeywordHandler",
+        "class": "AbstractTokenizer",
+        "returntype": "void",
+        "called": [7, 46],
+        "calls": [190, 177],
+        "use": {
+          "type": "procedural",
+          "example": "setKeywordHandler((KeywordHandler)props);"
+        },
+        "swum": {
+          "object": "keyword handler",
+          "verb": "set"
+        }
+      },
+      {
+        "id": 12,
+        "name": "getKeywordHandler",
+        "class": "AbstractTokenizer",
+        "returntype": "de.susebox.jtopas.spi.KeywordHandler",
+        "called": [],
+        "calls": [8],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "keyword handler",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 13,
+        "name": "setWhitespaceHandler",
+        "class": "AbstractTokenizer",
+        "returntype": "void",
+        "called": [7],
+        "calls": [],
+        "use": {
+          "type": "procedural",
+          "example": "setWhitespaceHandler((WhitespaceHandler)_properties);"
+        },
+        "swum": {
+          "object": "whitespace handler",
+          "verb": "set"
+        }
+      },
+      {
+        "id": 14,
+        "name": "getWhitespaceHandler",
+        "class": "AbstractTokenizer",
+        "returntype": "de.susebox.jtopas.spi.WhitespaceHandler",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "whitespace handler",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 15,
+        "name": "setSeparatorHandler",
+        "class": "AbstractTokenizer",
+        "returntype": "void",
+        "called": [7],
+        "calls": [],
+        "use": {
+          "type": "procedural",
+          "example": "setSeparatorHandler((SeparatorHandler)_properties);"
+        },
+        "swum": {
+          "object": "separator handler",
+          "verb": "set"
+        }
+      },
+      {
+        "id": 16,
+        "name": "getSeparatorHandler",
+        "class": "AbstractTokenizer",
+        "returntype": "de.susebox.jtopas.spi.SeparatorHandler",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "separator handler",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 17,
+        "name": "setSequenceHandler",
+        "class": "AbstractTokenizer",
+        "returntype": "void",
+        "called": [7, 46],
+        "calls": [190],
+        "use": {
+          "type": "procedural",
+          "example": "setSequenceHandler((SequenceHandler)_properties);"
+        },
+        "swum": {
+          "object": "sequence handler",
+          "verb": "set"
+        }
+      },
+      {
+        "id": 18,
+        "name": "getSequenceHandler",
+        "class": "AbstractTokenizer",
+        "returntype": "de.susebox.jtopas.spi.SequenceHandler",
+        "called": [],
+        "calls": [8],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "sequence handler",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 19,
+        "name": "setPatternHandler",
+        "class": "AbstractTokenizer",
+        "returntype": "void",
+        "called": [7, 46],
+        "calls": [190],
+        "use": {
+          "type": "procedural",
+          "example": "setPatternHandler((PatternHandler)_properties);"
+        },
+        "swum": {
+          "object": "pattern handler",
+          "verb": "set"
+        }
+      },
+      {
+        "id": 20,
+        "name": "getPatternHandler",
+        "class": "AbstractTokenizer",
+        "returntype": "de.susebox.jtopas.spi.PatternHandler",
+        "called": [],
+        "calls": [8],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "pattern handler",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 21,
+        "name": "getCurrentLine",
+        "class": "AbstractTokenizer",
+        "returntype": "int",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "current line",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 22,
+        "name": "getCurrentColumn",
+        "class": "AbstractTokenizer",
+        "returntype": "int",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "current column",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 23,
+        "name": "hasMoreToken",
+        "class": "AbstractTokenizer",
+        "returntype": "boolean",
+        "called": [],
+        "calls": [144],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "more token",
+          "verb": "has"
+        }
+      },
+      {
+        "id": 24,
+        "name": "nextToken",
+        "class": "AbstractTokenizer",
+        "returntype": "Token",
+        "called": [25],
+        "calls": [51, 40, 54, 56, 57, 55, 154, 153, 30, 144],
+        "use": {
+          "type": "procedural",
+          "example": "nextToken();"
+        },
+        "swum": {
+          "object": "token",
+          "verb": "next"
+        }
+      },
+      {
+        "id": 25,
+        "name": "nextImage",
+        "class": "AbstractTokenizer",
+        "returntype": "String",
+        "called": [],
+        "calls": [24, 27],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "image",
+          "verb": "next"
+        }
+      },
+      {
+        "id": 26,
+        "name": "currentToken",
+        "class": "AbstractTokenizer",
+        "returntype": "Token",
+        "called": [27],
+        "calls": [],
+        "use": {
+          "type": "assignment",
+          "example": "Token token=currentToken();"
+        },
+        "swum": {
+          "object": "token",
+          "verb": "current"
+        }
+      },
+      {
+        "id": 27,
+        "name": "currentImage",
+        "class": "AbstractTokenizer",
+        "returntype": "String",
+        "called": [25],
+        "calls": [26, 144, 64, 34, 196, 197],
+        "use": {
+          "type": "procedural",
+          "example": "return currentImage();"
+        },
+        "swum": {
+          "object": "image",
+          "verb": "current"
+        }
+      },
+      {
+        "id": 28,
+        "name": "getLineNumber",
+        "class": "AbstractTokenizer",
+        "returntype": "int",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "line number",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 29,
+        "name": "getColumnNumber",
+        "class": "AbstractTokenizer",
+        "returntype": "int",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "column number",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 30,
+        "name": "getReadPosition",
+        "class": "AbstractTokenizer",
+        "returntype": "int",
+        "called": [24, 36],
+        "calls": [],
+        "use": {
+          "type": "procedural",
+          "example": "token.setStartPosition(getReadPosition());"
+        },
+        "swum": {
+          "object": "read position",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 31,
+        "name": "currentlyAvailable",
+        "class": "AbstractTokenizer",
+        "returntype": "int",
+        "called": [32, 35],
+        "calls": [],
+        "use": {
+          "type": "procedural",
+          "example": "return currentlyAvailable();"
+        },
+        "swum": {
+          "object": "available",
+          "verb": "currently"
+        }
+      },
+      {
+        "id": 32,
+        "name": "readMore",
+        "class": "AbstractTokenizer",
+        "returntype": "int",
+        "called": [],
+        "calls": [49, 31],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "more",
+          "verb": "read"
+        }
+      },
+      {
+        "id": 33,
+        "name": "getChar",
+        "class": "AbstractTokenizer",
+        "returntype": "char",
+        "called": [54, 55, 58, 61, 62],
+        "calls": [193, 48],
+        "use": {
+          "type": "conditional",
+          "example": "if (isWhitespace(getChar(_currentReadPos + offset))) {"
+        },
+        "swum": {
+          "object": "char",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 34,
+        "name": "getText",
+        "class": "AbstractTokenizer",
+        "returntype": "String",
+        "called": [24, 27],
+        "calls": [162, 48],
+        "use": {
+          "type": "procedural",
+          "example": "token.setImage(getText(_currentReadPos,token.getLength()));"
+        },
+        "swum": {
+          "object": "text",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 35,
+        "name": "setReadPositionAbsolute",
+        "class": "AbstractTokenizer",
+        "returntype": "void",
+        "called": [36],
+        "calls": [31, 64],
+        "use": {
+          "type": "procedural",
+          "example": "setReadPositionAbsolute(getReadPosition() + offset);"
+        },
+        "swum": {
+          "object": "read position absolute",
+          "verb": "set"
+        }
+      },
+      {
+        "id": 36,
+        "name": "setReadPositionRelative",
+        "class": "AbstractTokenizer",
+        "returntype": "void",
+        "called": [],
+        "calls": [35, 30],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "read position relative",
+          "verb": "set"
+        }
+      },
+      {
+        "id": 37,
+        "name": "close",
+        "class": "AbstractTokenizer",
+        "returntype": "void",
+        "called": [],
+        "calls": [133],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "value",
+          "verb": "close"
+        }
+      },
+      {
+        "id": 38,
+        "name": "addTokenizer",
+        "class": "AbstractTokenizer",
+        "returntype": "void",
+        "called": [],
+        "calls": [47, 9, 10],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "tokenizer",
+          "verb": "add"
+        }
+      },
+      {
+        "id": 39,
+        "name": "switchTo",
+        "class": "AbstractTokenizer",
+        "returntype": "void",
+        "called": [50],
+        "calls": [],
+        "use": {
+          "type": "procedural",
+          "example": "switchTo(embedded);"
+        },
+        "swum": {
+          "object": "to",
+          "verb": "switch"
+        }
+      },
+      {
+        "id": 40,
+        "name": "isWhitespace",
+        "class": "AbstractTokenizer",
+        "returntype": "boolean",
+        "called": [24, 52, 54, 56, 62],
+        "calls": [54],
+        "use": {
+          "type": "conditional",
+          "example": "if (!isWhitespace(0)) {"
+        },
+        "swum": {
+          "object": "whitespace",
+          "verb": "is"
+        }
+      },
+      {
+        "id": 41,
+        "name": "readWhitespaces",
+        "class": "AbstractTokenizer",
+        "returntype": "int",
+        "called": [53],
+        "calls": [48],
+        "use": {
+          "type": "assignment",
+          "example": "int len=readWhitespaces(start,available);"
+        },
+        "swum": {
+          "object": "whitespaces",
+          "verb": "read"
+        }
+      },
+      {
+        "id": 42,
+        "name": "isKeyword",
+        "class": "AbstractTokenizer",
+        "returntype": "TokenizerProperty",
+        "called": [52],
+        "calls": [48, 168],
+        "use": {
+          "type": "conditional",
+          "example": "if ((prop=isKeyword(_currentReadPos,len)) != null) {"
+        },
+        "swum": {
+          "object": "keyword",
+          "verb": "is"
+        }
+      },
+      {
+        "id": 43,
+        "name": "splitIntoLines",
+        "class": "AbstractTokenizer",
+        "returntype": "String[]",
+        "called": [24, 44, 45],
+        "calls": [],
+        "use": {
+          "type": "procedural",
+          "example": "token.setImageParts(splitIntoLines(token.getImage()));"
+        },
+        "swum": {
+          "object": "into lines",
+          "verb": "split"
+        }
+      },
+      {
+        "id": 44,
+        "name": "splitString",
+        "class": "AbstractTokenizer",
+        "returntype": "String[]",
+        "called": [24],
+        "calls": [152, 65, 161, 43, 162],
+        "use": {
+          "type": "procedural",
+          "example": "token.setImageParts(splitString(prop,token.getImage()));"
+        },
+        "swum": {
+          "object": "string",
+          "verb": "split"
+        }
+      },
+      {
+        "id": 45,
+        "name": "splitBlockComment",
+        "class": "AbstractTokenizer",
+        "returntype": "String[]",
+        "called": [24],
+        "calls": [152, 65, 161, 43],
+        "use": {
+          "type": "procedural",
+          "example": "token.setImageParts(splitBlockComment(prop,token.getImage()));"
+        },
+        "swum": {
+          "object": "block comment",
+          "verb": "split"
+        }
+      },
+      {
+        "id": 46,
+        "name": "propertyChanged",
+        "class": "AbstractTokenizer",
+        "returntype": "void",
+        "called": [7, 142],
+        "calls": [152, 144, 17, 11, 19, 10, 8, 64, 63],
+        "use": {
+          "type": "procedural",
+          "example": "propertyChanged(new TokenizerPropertyEvent(TokenizerPropertyEvent.PROPERTY_MODIFIED,new TokenizerProperty(TokenizerProperty.PARSE_FLAG_MASK,new String[]{Integer.toBinaryString(newFlags)}),new TokenizerProperty(TokenizerProperty.PARSE_FLAG_MASK,new String[]{Integer.toBinaryString(_flags)})));"
+        },
+        "swum": {
+          "object": "changed",
+          "verb": "property"
+        }
+      },
+      {
+        "id": 47,
+        "name": "getBaseTokenizer",
+        "class": "AbstractTokenizer",
+        "returntype": "AbstractTokenizer",
+        "called": [38, 48, 49, 50],
+        "calls": [],
+        "use": {
+          "type": "assignment",
+          "example": "AbstractTokenizer baseTokenizer=getBaseTokenizer();"
+        },
+        "swum": {
+          "object": "base tokenizer",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 48,
+        "name": "getBaseDataProvider",
+        "class": "AbstractTokenizer",
+        "returntype": "DataProvider",
+        "called": [33, 34, 41, 42, 56, 57],
+        "calls": [0, 47],
+        "use": {
+          "type": "procedural",
+          "example": "return getBaseDataProvider(pos,1).getCharAt(0);"
+        },
+        "swum": {
+          "object": "base data provider",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 49,
+        "name": "readMoreDataFromBase",
+        "class": "AbstractTokenizer",
+        "returntype": "int",
+        "called": [32, 51, 53, 54, 55, 56, 57, 58, 61],
+        "calls": [47, 1, 50],
+        "use": {
+          "type": "procedural",
+          "example": "readMoreDataFromBase();"
+        },
+        "swum": {
+          "object": "more data from base",
+          "verb": "read"
+        }
+      },
+      {
+        "id": 50,
+        "name": "synchronizeAll",
+        "class": "AbstractTokenizer",
+        "returntype": "void",
+        "called": [49],
+        "calls": [47, 39],
+        "use": {
+          "type": "procedural",
+          "example": "synchronizeAll();"
+        },
+        "swum": {
+          "object": "all",
+          "verb": "synchronize"
+        }
+      },
+      {
+        "id": 51,
+        "name": "isEOF",
+        "class": "AbstractTokenizer",
+        "returntype": "boolean",
+        "called": [24, 52, 56],
+        "calls": [49],
+        "use": {
+          "type": "conditional",
+          "example": "if (!isEOF(0)) {"
+        },
+        "swum": {
+          "object": "eof",
+          "verb": "is"
+        }
+      },
+      {
+        "id": 52,
+        "name": "completeBoundedToken",
+        "class": "AbstractTokenizer",
+        "returntype": "TokenizerProperty",
+        "called": [24],
+        "calls": [51, 40, 54, 56, 57, 55, 42, 143, 153, 154],
+        "use": {
+          "type": "assignment",
+          "example": "prop=completeBoundedToken(token);"
+        },
+        "swum": {
+          "object": "bounded token",
+          "verb": "complete"
+        }
+      },
+      {
+        "id": 53,
+        "name": "completeWhitespace",
+        "class": "AbstractTokenizer",
+        "returntype": "int",
+        "called": [24],
+        "calls": [41, 49],
+        "use": {
+          "type": "procedural",
+          "example": "token.setLength(completeWhitespace());"
+        },
+        "swum": {
+          "object": "whitespace",
+          "verb": "complete"
+        }
+      },
+      {
+        "id": 54,
+        "name": "isWhitespace",
+        "class": "AbstractTokenizer",
+        "returntype": "boolean",
+        "called": [24, 40, 52, 56, 62],
+        "calls": [49, 40, 33],
+        "use": {
+          "type": "conditional",
+          "example": "if (!isWhitespace(0)) {"
+        },
+        "swum": {
+          "object": "whitespace",
+          "verb": "is"
+        }
+      },
+      {
+        "id": 55,
+        "name": "isSeparator",
+        "class": "AbstractTokenizer",
+        "returntype": "boolean",
+        "called": [24, 52, 56],
+        "calls": [49, 33],
+        "use": {
+          "type": "conditional",
+          "example": "if (!isSeparator(0)) {"
+        },
+        "swum": {
+          "object": "separator",
+          "verb": "is"
+        }
+      },
+      {
+        "id": 56,
+        "name": "isPattern",
+        "class": "AbstractTokenizer",
+        "returntype": "boolean",
+        "called": [24, 52],
+        "calls": [49, 48, 65, 51, 40, 54, 57, 55],
+        "use": {
+          "type": "conditional",
+          "example": "if (!isPattern(0,false)) {"
+        },
+        "swum": {
+          "object": "pattern",
+          "verb": "is"
+        }
+      },
+      {
+        "id": 57,
+        "name": "isSpecialSequence",
+        "class": "AbstractTokenizer",
+        "returntype": "boolean",
+        "called": [24, 52, 56],
+        "calls": [166, 49, 48, 165, 144],
+        "use": {
+          "type": "conditional",
+          "example": "if (!isSpecialSequence(0)) {"
+        },
+        "swum": {
+          "object": "special sequence",
+          "verb": "is"
+        }
+      },
+      {
+        "id": 58,
+        "name": "completeLineComment",
+        "class": "AbstractTokenizer",
+        "returntype": "int",
+        "called": [24],
+        "calls": [152, 49, 33],
+        "use": {
+          "type": "procedural",
+          "example": "token.setLength(completeLineComment(prop));"
+        },
+        "swum": {
+          "object": "line comment",
+          "verb": "complete"
+        }
+      },
+      {
+        "id": 59,
+        "name": "completeBlockComment",
+        "class": "AbstractTokenizer",
+        "returntype": "int",
+        "called": [24],
+        "calls": [152, 65, 61],
+        "use": {
+          "type": "procedural",
+          "example": "token.setLength(completeBlockComment(prop));"
+        },
+        "swum": {
+          "object": "block comment",
+          "verb": "complete"
+        }
+      },
+      {
+        "id": 60,
+        "name": "completeString",
+        "class": "AbstractTokenizer",
+        "returntype": "int",
+        "called": [24],
+        "calls": [152, 65, 61],
+        "use": {
+          "type": "procedural",
+          "example": "token.setLength(completeString(prop));"
+        },
+        "swum": {
+          "object": "string",
+          "verb": "complete"
+        }
+      },
+      {
+        "id": 61,
+        "name": "comparePrefix",
+        "class": "AbstractTokenizer",
+        "returntype": "int",
+        "called": [59, 60],
+        "calls": [49, 33],
+        "use": {
+          "type": "procedural",
+          "example": "switch (comparePrefix(len,start,noCase)) {"
+        },
+        "swum": {
+          "object": "prefix",
+          "verb": "compare"
+        }
+      },
+      {
+        "id": 62,
+        "name": "adjustLineAndColumn",
+        "class": "AbstractTokenizer",
+        "returntype": "void",
+        "called": [24],
+        "calls": [64, 63, 40, 54, 33],
+        "use": {
+          "type": "procedural",
+          "example": "adjustLineAndColumn(token.getType(),token.getLength());"
+        },
+        "swum": {
+          "object": "line and column",
+          "verb": "adjust"
+        }
+      },
+      {
+        "id": 63,
+        "name": "putPosition",
+        "class": "AbstractTokenizer",
+        "returntype": "void",
+        "called": [46, 62],
+        "calls": [],
+        "use": {
+          "type": "procedural",
+          "example": "putPosition(_currentReadPos,_lineNumber);"
+        },
+        "swum": {
+          "object": "position",
+          "verb": "put"
+        }
+      },
+      {
+        "id": 64,
+        "name": "isFlagSet",
+        "class": "AbstractTokenizer",
+        "returntype": "boolean",
+        "called": [4, 9, 24, 27, 35, 46, 62, 65],
+        "calls": [10],
+        "use": {
+          "type": "conditional",
+          "example": "if (isFlagSet(Flags.F_COUNT_LINES)) {"
+        },
+        "swum": {
+          "object": "flag set",
+          "verb": "is"
+        }
+      },
+      {
+        "id": 65,
+        "name": "isFlagSet",
+        "class": "AbstractTokenizer",
+        "returntype": "boolean",
+        "called": [24, 44, 45, 56, 59, 60],
+        "calls": [10, 8, 64],
+        "use": {
+          "type": "assignment",
+          "example": "returnIt=isFlagSet(Flags.F_RETURN_SIMPLE_WHITESPACES);"
+        },
+        "swum": {
+          "object": "flag set",
+          "verb": "is"
+        }
+      },
+      {
+        "id": 66,
+        "name": "doAddProperty",
+        "class": "AbstractTokenizerProperties",
+        "returntype": "TokenizerProperty",
+        "called": [129],
+        "calls": [],
+        "use": {
+          "type": "assignment",
+          "example": "TokenizerProperty oldProp=doAddProperty(property);"
+        },
+        "swum": {
+          "object": "add property",
+          "verb": "do"
+        }
+      },
+      {
+        "id": 67,
+        "name": "doRemoveProperty",
+        "class": "AbstractTokenizerProperties",
+        "returntype": "TokenizerProperty",
+        "called": [130],
+        "calls": [],
+        "use": {
+          "type": "assignment",
+          "example": "TokenizerProperty removed=doRemoveProperty(property);"
+        },
+        "swum": {
+          "object": "remove property",
+          "verb": "do"
+        }
+      },
+      {
+        "id": 68,
+        "name": "doGetProperty",
+        "class": "AbstractTokenizerProperties",
+        "returntype": "TokenizerProperty",
+        "called": [88, 96, 104, 112, 120, 128, 131],
+        "calls": [],
+        "use": {
+          "type": "procedural",
+          "example": "return doGetProperty(Token.STRING,start);"
+        },
+        "swum": {
+          "object": "get property",
+          "verb": "do"
+        }
+      },
+      {
+        "id": 69,
+        "name": "doSetWhitespaces",
+        "class": "AbstractTokenizerProperties",
+        "returntype": "String",
+        "called": [75],
+        "calls": [],
+        "use": {
+          "type": "assignment",
+          "example": "oldValue=doSetWhitespaces(newValue);"
+        },
+        "swum": {
+          "object": "set whitespaces",
+          "verb": "do"
+        }
+      },
+      {
+        "id": 70,
+        "name": "doSetSeparators",
+        "class": "AbstractTokenizerProperties",
+        "returntype": "String",
+        "called": [78],
+        "calls": [],
+        "use": {
+          "type": "assignment",
+          "example": "oldValue=doSetSeparators(newValue);"
+        },
+        "swum": {
+          "object": "set separators",
+          "verb": "do"
+        }
+      },
+      {
+        "id": 71,
+        "name": "setParseFlags",
+        "class": "AbstractTokenizerProperties",
+        "returntype": "void",
+        "called": [],
+        "calls": [138, 142, 157],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "parse flags",
+          "verb": "set"
+        }
+      },
+      {
+        "id": 72,
+        "name": "getParseFlags",
+        "class": "AbstractTokenizerProperties",
+        "returntype": "int",
+        "called": [82, 90, 98, 106, 114, 122],
+        "calls": [],
+        "use": {
+          "type": "procedural",
+          "example": "addString(start,end,escape,companion,getParseFlags());"
+        },
+        "swum": {
+          "object": "parse flags",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 73,
+        "name": "isFlagSet",
+        "class": "AbstractTokenizerProperties",
+        "returntype": "boolean",
+        "called": [74],
+        "calls": [],
+        "use": {
+          "type": "procedural",
+          "example": "return prop.isFlagSet(flag,isFlagSet(flag));"
+        },
+        "swum": {
+          "object": "flag set",
+          "verb": "is"
+        }
+      },
+      {
+        "id": 74,
+        "name": "isFlagSet",
+        "class": "AbstractTokenizerProperties",
+        "returntype": "boolean",
+        "called": [],
+        "calls": [73],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "flag set",
+          "verb": "is"
+        }
+      },
+      {
+        "id": 75,
+        "name": "setWhitespaces",
+        "class": "AbstractTokenizerProperties",
+        "returntype": "void",
+        "called": [76, 77],
+        "calls": [69, 141],
+        "use": {
+          "type": "procedural",
+          "example": "setWhitespaces(mergeSet(getWhitespaces(),whitespaces,false));"
+        },
+        "swum": {
+          "object": "whitespaces",
+          "verb": "set"
+        }
+      },
+      {
+        "id": 76,
+        "name": "addWhitespaces",
+        "class": "AbstractTokenizerProperties",
+        "returntype": "void",
+        "called": [],
+        "calls": [75, 137],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "whitespaces",
+          "verb": "add"
+        }
+      },
+      {
+        "id": 77,
+        "name": "removeWhitespaces",
+        "class": "AbstractTokenizerProperties",
+        "returntype": "void",
+        "called": [],
+        "calls": [75, 137],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "whitespaces",
+          "verb": "remove"
+        }
+      },
+      {
+        "id": 78,
+        "name": "setSeparators",
+        "class": "AbstractTokenizerProperties",
+        "returntype": "void",
+        "called": [79, 80],
+        "calls": [70, 141],
+        "use": {
+          "type": "procedural",
+          "example": "setSeparators(mergeSet(getSeparators(),separators,false));"
+        },
+        "swum": {
+          "object": "separators",
+          "verb": "set"
+        }
+      },
+      {
+        "id": 79,
+        "name": "addSeparators",
+        "class": "AbstractTokenizerProperties",
+        "returntype": "void",
+        "called": [],
+        "calls": [78, 137],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "separators",
+          "verb": "add"
+        }
+      },
+      {
+        "id": 80,
+        "name": "removeSeparators",
+        "class": "AbstractTokenizerProperties",
+        "returntype": "void",
+        "called": [],
+        "calls": [78, 137],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "separators",
+          "verb": "remove"
+        }
+      },
+      {
+        "id": 81,
+        "name": "addString",
+        "class": "AbstractTokenizerProperties",
+        "returntype": "void",
+        "called": [],
+        "calls": [82],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "string",
+          "verb": "add"
+        }
+      },
+      {
+        "id": 82,
+        "name": "addString",
+        "class": "AbstractTokenizerProperties",
+        "returntype": "void",
+        "called": [81],
+        "calls": [83, 72],
+        "use": {
+          "type": "procedural",
+          "example": "addString(start,end,escape,null);"
+        },
+        "swum": {
+          "object": "string",
+          "verb": "add"
+        }
+      },
+      {
+        "id": 83,
+        "name": "addString",
+        "class": "AbstractTokenizerProperties",
+        "returntype": "void",
+        "called": [82],
+        "calls": [84],
+        "use": {
+          "type": "procedural",
+          "example": "addString(start,end,escape,companion,getParseFlags());"
+        },
+        "swum": {
+          "object": "string",
+          "verb": "add"
+        }
+      },
+      {
+        "id": 84,
+        "name": "addString",
+        "class": "AbstractTokenizerProperties",
+        "returntype": "void",
+        "called": [83],
+        "calls": [129, 160],
+        "use": {
+          "type": "procedural",
+          "example": "addString(start,end,escape,companion,flags,flags);"
+        },
+        "swum": {
+          "object": "string",
+          "verb": "add"
+        }
+      },
+      {
+        "id": 85,
+        "name": "removeString",
+        "class": "AbstractTokenizerProperties",
+        "returntype": "void",
+        "called": [],
+        "calls": [88, 130],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "string",
+          "verb": "remove"
+        }
+      },
+      {
+        "id": 86,
+        "name": "getStringCompanion",
+        "class": "AbstractTokenizerProperties",
+        "returntype": "Object",
+        "called": [],
+        "calls": [88, 154],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "string companion",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 87,
+        "name": "stringExists",
+        "class": "AbstractTokenizerProperties",
+        "returntype": "boolean",
+        "called": [],
+        "calls": [88],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "exists",
+          "verb": "string"
+        }
+      },
+      {
+        "id": 88,
+        "name": "getString",
+        "class": "AbstractTokenizerProperties",
+        "returntype": "TokenizerProperty",
+        "called": [85, 86, 87],
+        "calls": [139, 68],
+        "use": {
+          "type": "assignment",
+          "example": "TokenizerProperty prop=getString(start);"
+        },
+        "swum": {
+          "object": "string",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 89,
+        "name": "addLineComment",
+        "class": "AbstractTokenizerProperties",
+        "returntype": "void",
+        "called": [],
+        "calls": [90],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "line comment",
+          "verb": "add"
+        }
+      },
+      {
+        "id": 90,
+        "name": "addLineComment",
+        "class": "AbstractTokenizerProperties",
+        "returntype": "void",
+        "called": [89],
+        "calls": [91, 72],
+        "use": {
+          "type": "procedural",
+          "example": "addLineComment(lineComment,null);"
+        },
+        "swum": {
+          "object": "line comment",
+          "verb": "add"
+        }
+      },
+      {
+        "id": 91,
+        "name": "addLineComment",
+        "class": "AbstractTokenizerProperties",
+        "returntype": "void",
+        "called": [90],
+        "calls": [92],
+        "use": {
+          "type": "procedural",
+          "example": "addLineComment(lineComment,companion,getParseFlags());"
+        },
+        "swum": {
+          "object": "line comment",
+          "verb": "add"
+        }
+      },
+      {
+        "id": 92,
+        "name": "addLineComment",
+        "class": "AbstractTokenizerProperties",
+        "returntype": "void",
+        "called": [91],
+        "calls": [129, 160],
+        "use": {
+          "type": "procedural",
+          "example": "addLineComment(lineComment,companion,flags,flags);"
+        },
+        "swum": {
+          "object": "line comment",
+          "verb": "add"
+        }
+      },
+      {
+        "id": 93,
+        "name": "removeLineComment",
+        "class": "AbstractTokenizerProperties",
+        "returntype": "void",
+        "called": [],
+        "calls": [96, 130],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "line comment",
+          "verb": "remove"
+        }
+      },
+      {
+        "id": 94,
+        "name": "getLineCommentCompanion",
+        "class": "AbstractTokenizerProperties",
+        "returntype": "Object",
+        "called": [],
+        "calls": [96, 154],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "line comment companion",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 95,
+        "name": "lineCommentExists",
+        "class": "AbstractTokenizerProperties",
+        "returntype": "boolean",
+        "called": [],
+        "calls": [96],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "comment exists",
+          "verb": "line"
+        }
+      },
+      {
+        "id": 96,
+        "name": "getLineComment",
+        "class": "AbstractTokenizerProperties",
+        "returntype": "TokenizerProperty",
+        "called": [93, 94, 95],
+        "calls": [139, 68],
+        "use": {
+          "type": "assignment",
+          "example": "TokenizerProperty prop=getLineComment(lineComment);"
+        },
+        "swum": {
+          "object": "line comment",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 97,
+        "name": "addBlockComment",
+        "class": "AbstractTokenizerProperties",
+        "returntype": "void",
+        "called": [],
+        "calls": [98],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "block comment",
+          "verb": "add"
+        }
+      },
+      {
+        "id": 98,
+        "name": "addBlockComment",
+        "class": "AbstractTokenizerProperties",
+        "returntype": "void",
+        "called": [97],
+        "calls": [99, 72],
+        "use": {
+          "type": "procedural",
+          "example": "addBlockComment(start,end,null);"
+        },
+        "swum": {
+          "object": "block comment",
+          "verb": "add"
+        }
+      },
+      {
+        "id": 99,
+        "name": "addBlockComment",
+        "class": "AbstractTokenizerProperties",
+        "returntype": "void",
+        "called": [98],
+        "calls": [100],
+        "use": {
+          "type": "procedural",
+          "example": "addBlockComment(start,end,companion,getParseFlags());"
+        },
+        "swum": {
+          "object": "block comment",
+          "verb": "add"
+        }
+      },
+      {
+        "id": 100,
+        "name": "addBlockComment",
+        "class": "AbstractTokenizerProperties",
+        "returntype": "void",
+        "called": [99],
+        "calls": [129, 160],
+        "use": {
+          "type": "procedural",
+          "example": "addBlockComment(start,end,companion,flags,flags);"
+        },
+        "swum": {
+          "object": "block comment",
+          "verb": "add"
+        }
+      },
+      {
+        "id": 101,
+        "name": "removeBlockComment",
+        "class": "AbstractTokenizerProperties",
+        "returntype": "void",
+        "called": [],
+        "calls": [104, 130],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "block comment",
+          "verb": "remove"
+        }
+      },
+      {
+        "id": 102,
+        "name": "getBlockCommentCompanion",
+        "class": "AbstractTokenizerProperties",
+        "returntype": "Object",
+        "called": [],
+        "calls": [104, 154],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "block comment companion",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 103,
+        "name": "blockCommentExists",
+        "class": "AbstractTokenizerProperties",
+        "returntype": "boolean",
+        "called": [],
+        "calls": [104],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "comment exists",
+          "verb": "block"
+        }
+      },
+      {
+        "id": 104,
+        "name": "getBlockComment",
+        "class": "AbstractTokenizerProperties",
+        "returntype": "TokenizerProperty",
+        "called": [101, 102, 103],
+        "calls": [139, 68],
+        "use": {
+          "type": "assignment",
+          "example": "TokenizerProperty prop=getBlockComment(start);"
+        },
+        "swum": {
+          "object": "block comment",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 105,
+        "name": "addSpecialSequence",
+        "class": "AbstractTokenizerProperties",
+        "returntype": "void",
+        "called": [],
+        "calls": [106],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "special sequence",
+          "verb": "add"
+        }
+      },
+      {
+        "id": 106,
+        "name": "addSpecialSequence",
+        "class": "AbstractTokenizerProperties",
+        "returntype": "void",
+        "called": [105],
+        "calls": [107, 72],
+        "use": {
+          "type": "procedural",
+          "example": "addSpecialSequence(specSeq,null);"
+        },
+        "swum": {
+          "object": "special sequence",
+          "verb": "add"
+        }
+      },
+      {
+        "id": 107,
+        "name": "addSpecialSequence",
+        "class": "AbstractTokenizerProperties",
+        "returntype": "void",
+        "called": [106],
+        "calls": [108],
+        "use": {
+          "type": "procedural",
+          "example": "addSpecialSequence(specSeq,companion,getParseFlags());"
+        },
+        "swum": {
+          "object": "special sequence",
+          "verb": "add"
+        }
+      },
+      {
+        "id": 108,
+        "name": "addSpecialSequence",
+        "class": "AbstractTokenizerProperties",
+        "returntype": "void",
+        "called": [107],
+        "calls": [129, 160],
+        "use": {
+          "type": "procedural",
+          "example": "addSpecialSequence(specSeq,companion,flags,flags);"
+        },
+        "swum": {
+          "object": "special sequence",
+          "verb": "add"
+        }
+      },
+      {
+        "id": 109,
+        "name": "removeSpecialSequence",
+        "class": "AbstractTokenizerProperties",
+        "returntype": "void",
+        "called": [],
+        "calls": [112, 130],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "special sequence",
+          "verb": "remove"
+        }
+      },
+      {
+        "id": 110,
+        "name": "getSpecialSequenceCompanion",
+        "class": "AbstractTokenizerProperties",
+        "returntype": "Object",
+        "called": [],
+        "calls": [112, 154],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "special sequence companion",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 111,
+        "name": "specialSequenceExists",
+        "class": "AbstractTokenizerProperties",
+        "returntype": "boolean",
+        "called": [],
+        "calls": [112],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "sequence exists",
+          "verb": "special"
+        }
+      },
+      {
+        "id": 112,
+        "name": "getSpecialSequence",
+        "class": "AbstractTokenizerProperties",
+        "returntype": "TokenizerProperty",
+        "called": [109, 110, 111],
+        "calls": [139, 68],
+        "use": {
+          "type": "assignment",
+          "example": "TokenizerProperty prop=getSpecialSequence(specSeq);"
+        },
+        "swum": {
+          "object": "special sequence",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 113,
+        "name": "addKeyword",
+        "class": "AbstractTokenizerProperties",
+        "returntype": "void",
+        "called": [],
+        "calls": [114],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "keyword",
+          "verb": "add"
+        }
+      },
+      {
+        "id": 114,
+        "name": "addKeyword",
+        "class": "AbstractTokenizerProperties",
+        "returntype": "void",
+        "called": [113],
+        "calls": [115, 72],
+        "use": {
+          "type": "procedural",
+          "example": "addKeyword(keyword,null);"
+        },
+        "swum": {
+          "object": "keyword",
+          "verb": "add"
+        }
+      },
+      {
+        "id": 115,
+        "name": "addKeyword",
+        "class": "AbstractTokenizerProperties",
+        "returntype": "void",
+        "called": [114],
+        "calls": [116],
+        "use": {
+          "type": "procedural",
+          "example": "addKeyword(keyword,companion,getParseFlags());"
+        },
+        "swum": {
+          "object": "keyword",
+          "verb": "add"
+        }
+      },
+      {
+        "id": 116,
+        "name": "addKeyword",
+        "class": "AbstractTokenizerProperties",
+        "returntype": "void",
+        "called": [115],
+        "calls": [129, 160],
+        "use": {
+          "type": "procedural",
+          "example": "addKeyword(keyword,companion,flags,flags);"
+        },
+        "swum": {
+          "object": "keyword",
+          "verb": "add"
+        }
+      },
+      {
+        "id": 117,
+        "name": "removeKeyword",
+        "class": "AbstractTokenizerProperties",
+        "returntype": "void",
+        "called": [],
+        "calls": [120, 130],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "keyword",
+          "verb": "remove"
+        }
+      },
+      {
+        "id": 118,
+        "name": "getKeywordCompanion",
+        "class": "AbstractTokenizerProperties",
+        "returntype": "Object",
+        "called": [],
+        "calls": [120, 154],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "keyword companion",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 119,
+        "name": "keywordExists",
+        "class": "AbstractTokenizerProperties",
+        "returntype": "boolean",
+        "called": [],
+        "calls": [120],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "exists",
+          "verb": "keyword"
+        }
+      },
+      {
+        "id": 120,
+        "name": "getKeyword",
+        "class": "AbstractTokenizerProperties",
+        "returntype": "TokenizerProperty",
+        "called": [117, 118, 119],
+        "calls": [139, 68],
+        "use": {
+          "type": "assignment",
+          "example": "TokenizerProperty prop=getKeyword(keyword);"
+        },
+        "swum": {
+          "object": "keyword",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 121,
+        "name": "addPattern",
+        "class": "AbstractTokenizerProperties",
+        "returntype": "void",
+        "called": [],
+        "calls": [122],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "pattern",
+          "verb": "add"
+        }
+      },
+      {
+        "id": 122,
+        "name": "addPattern",
+        "class": "AbstractTokenizerProperties",
+        "returntype": "void",
+        "called": [121],
+        "calls": [123, 72],
+        "use": {
+          "type": "procedural",
+          "example": "addPattern(pattern,null);"
+        },
+        "swum": {
+          "object": "pattern",
+          "verb": "add"
+        }
+      },
+      {
+        "id": 123,
+        "name": "addPattern",
+        "class": "AbstractTokenizerProperties",
+        "returntype": "void",
+        "called": [122],
+        "calls": [124],
+        "use": {
+          "type": "procedural",
+          "example": "addPattern(pattern,companion,getParseFlags());"
+        },
+        "swum": {
+          "object": "pattern",
+          "verb": "add"
+        }
+      },
+      {
+        "id": 124,
+        "name": "addPattern",
+        "class": "AbstractTokenizerProperties",
+        "returntype": "void",
+        "called": [123],
+        "calls": [129, 160],
+        "use": {
+          "type": "procedural",
+          "example": "addPattern(pattern,companion,flags,flags);"
+        },
+        "swum": {
+          "object": "pattern",
+          "verb": "add"
+        }
+      },
+      {
+        "id": 125,
+        "name": "removePattern",
+        "class": "AbstractTokenizerProperties",
+        "returntype": "void",
+        "called": [],
+        "calls": [128, 130],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "pattern",
+          "verb": "remove"
+        }
+      },
+      {
+        "id": 126,
+        "name": "getPatternCompanion",
+        "class": "AbstractTokenizerProperties",
+        "returntype": "Object",
+        "called": [],
+        "calls": [128, 154],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "pattern companion",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 127,
+        "name": "patternExists",
+        "class": "AbstractTokenizerProperties",
+        "returntype": "boolean",
+        "called": [],
+        "calls": [128],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "exists",
+          "verb": "pattern"
+        }
+      },
+      {
+        "id": 128,
+        "name": "getPattern",
+        "class": "AbstractTokenizerProperties",
+        "returntype": "TokenizerProperty",
+        "called": [125, 126, 127],
+        "calls": [139, 68],
+        "use": {
+          "type": "assignment",
+          "example": "TokenizerProperty prop=getPattern(pattern);"
+        },
+        "swum": {
+          "object": "pattern",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 129,
+        "name": "addProperty",
+        "class": "AbstractTokenizerProperties",
+        "returntype": "void",
+        "called": [84, 92, 100, 108, 116, 124],
+        "calls": [140, 152, 144, 139, 66, 142, 161],
+        "use": {
+          "type": "procedural",
+          "example": "addProperty(new TokenizerProperty(Token.STRING,new String[]{start,end,escape},companion,flags,flagMask));"
+        },
+        "swum": {
+          "object": "property",
+          "verb": "add"
+        }
+      },
+      {
+        "id": 130,
+        "name": "removeProperty",
+        "class": "AbstractTokenizerProperties",
+        "returntype": "void",
+        "called": [85, 93, 101, 109, 117, 125],
+        "calls": [140, 67, 142],
+        "use": {
+          "type": "procedural",
+          "example": "removeProperty(prop);"
+        },
+        "swum": {
+          "object": "property",
+          "verb": "remove"
+        }
+      },
+      {
+        "id": 131,
+        "name": "propertyExists",
+        "class": "AbstractTokenizerProperties",
+        "returntype": "boolean",
+        "called": [],
+        "calls": [140, 68, 144, 152],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "exists",
+          "verb": "property"
+        }
+      },
+      {
+        "id": 132,
+        "name": "addTokenizerPropertyListener",
+        "class": "AbstractTokenizerProperties",
+        "returntype": "void",
+        "called": [7],
+        "calls": [],
+        "use": {
+          "type": "procedural",
+          "example": "_properties.addTokenizerPropertyListener(this);"
+        },
+        "swum": {
+          "object": "tokenizer property listener",
+          "verb": "add"
+        }
+      },
+      {
+        "id": 133,
+        "name": "removeTokenizerPropertyListener",
+        "class": "AbstractTokenizerProperties",
+        "returntype": "void",
+        "called": [7, 37],
+        "calls": [190, 191, 192, 161],
+        "use": {
+          "type": "procedural",
+          "example": "_properties.removeTokenizerPropertyListener(this);"
+        },
+        "swum": {
+          "object": "tokenizer property listener",
+          "verb": "remove"
+        }
+      },
+      {
+        "id": 134,
+        "name": "mapCharacterSet",
+        "class": "AbstractTokenizerProperties",
+        "returntype": "void",
+        "called": [137],
+        "calls": [],
+        "use": {
+          "type": "procedural",
+          "example": "mapCharacterSet(map,set1,false);"
+        },
+        "swum": {
+          "object": "character set",
+          "verb": "map"
+        }
+      },
+      {
+        "id": 135,
+        "name": "escapeChar",
+        "class": "AbstractTokenizerProperties",
+        "returntype": "boolean",
+        "called": [136],
+        "calls": [],
+        "use": {
+          "type": "conditional",
+          "example": "if (escapeChar(rangeStart)) {"
+        },
+        "swum": {
+          "object": "char",
+          "verb": "escape"
+        }
+      },
+      {
+        "id": 136,
+        "name": "addRange",
+        "class": "AbstractTokenizerProperties",
+        "returntype": "void",
+        "called": [137],
+        "calls": [135],
+        "use": {
+          "type": "procedural",
+          "example": "addRange(buffer,rangeStart,rangeEnd);"
+        },
+        "swum": {
+          "object": "range",
+          "verb": "add"
+        }
+      },
+      {
+        "id": 137,
+        "name": "mergeSet",
+        "class": "AbstractTokenizerProperties",
+        "returntype": "String",
+        "called": [76, 77, 79, 80],
+        "calls": [134, 190, 191, 136, 162],
+        "use": {
+          "type": "procedural",
+          "example": "setWhitespaces(mergeSet(getWhitespaces(),whitespaces,false));"
+        },
+        "swum": {
+          "object": "set",
+          "verb": "merge"
+        }
+      },
+      {
+        "id": 138,
+        "name": "normalizeFlags",
+        "class": "AbstractTokenizerProperties",
+        "returntype": "int",
+        "called": [71],
+        "calls": [],
+        "use": {
+          "type": "assignment",
+          "example": "flags=normalizeFlags(flags,flags);"
+        },
+        "swum": {
+          "object": "flags",
+          "verb": "normalize"
+        }
+      },
+      {
+        "id": 139,
+        "name": "checkArgument",
+        "class": "AbstractTokenizerProperties",
+        "returntype": "void",
+        "called": [88, 96, 104, 112, 120, 128, 129],
+        "calls": [],
+        "use": {
+          "type": "procedural",
+          "example": "checkArgument(start,\"String\");"
+        },
+        "swum": {
+          "object": "argument",
+          "verb": "check"
+        }
+      },
+      {
+        "id": 140,
+        "name": "checkPropertyArgument",
+        "class": "AbstractTokenizerProperties",
+        "returntype": "void",
+        "called": [129, 130, 131],
+        "calls": [152],
+        "use": {
+          "type": "procedural",
+          "example": "checkPropertyArgument(property);"
+        },
+        "swum": {
+          "object": "property argument",
+          "verb": "check"
+        }
+      },
+      {
+        "id": 141,
+        "name": "handleEvent",
+        "class": "AbstractTokenizerProperties",
+        "returntype": "void",
+        "called": [75, 78],
+        "calls": [142, 157, 161],
+        "use": {
+          "type": "procedural",
+          "example": "handleEvent(Token.WHITESPACE,newValue,oldValue);"
+        },
+        "swum": {
+          "object": "event",
+          "verb": "handle"
+        }
+      },
+      {
+        "id": 142,
+        "name": "notifyListeners",
+        "class": "AbstractTokenizerProperties",
+        "returntype": "void",
+        "called": [71, 129, 130, 141],
+        "calls": [190, 191, 192, 46],
+        "use": {
+          "type": "procedural",
+          "example": "notifyListeners(new TokenizerPropertyEvent(TokenizerPropertyEvent.PROPERTY_MODIFIED,new TokenizerProperty(TokenizerProperty.PARSE_FLAG_MASK,new String[]{Integer.toBinaryString(_flags)}),new TokenizerProperty(TokenizerProperty.PARSE_FLAG_MASK,new String[]{Integer.toBinaryString(oldFlags)})));"
+        },
+        "swum": {
+          "object": "listeners",
+          "verb": "notify"
+        }
+      },
+      {
+        "id": 143,
+        "name": "setType",
+        "class": "TokenizerProperty",
+        "returntype": "void",
+        "called": [52, 160],
+        "calls": [],
+        "use": {
+          "type": "procedural",
+          "example": "token.setType(Token.KEYWORD);"
+        },
+        "swum": {
+          "object": "type",
+          "verb": "set"
+        }
+      },
+      {
+        "id": 144,
+        "name": "getType",
+        "class": "TokenizerProperty",
+        "returntype": "int",
+        "called": [23, 24, 27, 46, 57, 129, 131, 161, 162, 189],
+        "calls": [],
+        "use": {
+          "type": "procedural",
+          "example": "return _scannedToken[0] == null || _scannedToken[0].getType() != Token.EOF;"
+        },
+        "swum": {
+          "object": "type",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 145,
+        "name": "setFlags",
+        "class": "TokenizerProperty",
+        "returntype": "void",
+        "called": [],
+        "calls": [146],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "flags",
+          "verb": "set"
+        }
+      },
+      {
+        "id": 146,
+        "name": "setFlags",
+        "class": "TokenizerProperty",
+        "returntype": "void",
+        "called": [145, 160],
+        "calls": [],
+        "use": {
+          "type": "procedural",
+          "example": "setFlags(flags,flags);"
+        },
+        "swum": {
+          "object": "flags",
+          "verb": "set"
+        }
+      },
+      {
+        "id": 147,
+        "name": "getFlags",
+        "class": "TokenizerProperty",
+        "returntype": "int",
+        "called": [149, 161],
+        "calls": [],
+        "use": {
+          "type": "procedural",
+          "example": "return (getFlags() & flag) == flag;"
+        },
+        "swum": {
+          "object": "flags",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 148,
+        "name": "getFlagMask",
+        "class": "TokenizerProperty",
+        "returntype": "int",
+        "called": [150],
+        "calls": [],
+        "use": {
+          "type": "procedural",
+          "example": "return (getFlagMask() & flag) == flag;"
+        },
+        "swum": {
+          "object": "flag mask",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 149,
+        "name": "isFlagSet",
+        "class": "TokenizerProperty",
+        "returntype": "boolean",
+        "called": [],
+        "calls": [150, 147],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "flag set",
+          "verb": "is"
+        }
+      },
+      {
+        "id": 150,
+        "name": "containsFlag",
+        "class": "TokenizerProperty",
+        "returntype": "boolean",
+        "called": [149],
+        "calls": [148],
+        "use": {
+          "type": "conditional",
+          "example": "if (containsFlag(flag)) {"
+        },
+        "swum": {
+          "object": "flag",
+          "verb": "contains"
+        }
+      },
+      {
+        "id": 151,
+        "name": "setImages",
+        "class": "TokenizerProperty",
+        "returntype": "void",
+        "called": [160],
+        "calls": [],
+        "use": {
+          "type": "procedural",
+          "example": "setImages(images);"
+        },
+        "swum": {
+          "object": "images",
+          "verb": "set"
+        }
+      },
+      {
+        "id": 152,
+        "name": "getImages",
+        "class": "TokenizerProperty",
+        "returntype": "String[]",
+        "called": [24, 44, 45, 46, 58, 59, 60, 129, 131, 140],
+        "calls": [],
+        "use": {
+          "type": "procedural",
+          "example": "token.setLength(prop.getImages()[0].length());"
+        },
+        "swum": {
+          "object": "images",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 153,
+        "name": "setCompanion",
+        "class": "TokenizerProperty",
+        "returntype": "void",
+        "called": [24, 52, 160],
+        "calls": [],
+        "use": {
+          "type": "assignment",
+          "example": "token.setCompanion((prop != null) ? prop.getCompanion() : null);"
+        },
+        "swum": {
+          "object": "companion",
+          "verb": "set"
+        }
+      },
+      {
+        "id": 154,
+        "name": "getCompanion",
+        "class": "TokenizerProperty",
+        "returntype": "Object",
+        "called": [24, 52, 86, 94, 102, 110, 118, 126, 161],
+        "calls": [],
+        "use": {
+          "type": "assignment",
+          "example": "TokenizerProperty prop=(TokenizerProperty)token.getCompanion();"
+        },
+        "swum": {
+          "object": "companion",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 155,
+        "name": "TokenizerProperty",
+        "class": "TokenizerProperty",
+        "returntype": "TokenizerProperty",
+        "called": [],
+        "calls": [156],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "property",
+          "verb": "create"
+        }
+      },
+      {
+        "id": 156,
+        "name": "TokenizerProperty",
+        "class": "TokenizerProperty",
+        "returntype": "TokenizerProperty",
+        "called": [155],
+        "calls": [157],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "property",
+          "verb": "create"
+        }
+      },
+      {
+        "id": 157,
+        "name": "TokenizerProperty",
+        "class": "TokenizerProperty",
+        "returntype": "TokenizerProperty",
+        "called": [7, 71, 141, 156],
+        "calls": [158],
+        "use": {
+          "type": "procedural",
+          "example": "_properties.removeTokenizerPropertyListener(this);"
+        },
+        "swum": {
+          "object": "property",
+          "verb": "create"
+        }
+      },
+      {
+        "id": 158,
+        "name": "TokenizerProperty",
+        "class": "TokenizerProperty",
+        "returntype": "TokenizerProperty",
+        "called": [157],
+        "calls": [159],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "property",
+          "verb": "create"
+        }
+      },
+      {
+        "id": 159,
+        "name": "TokenizerProperty",
+        "class": "TokenizerProperty",
+        "returntype": "TokenizerProperty",
+        "called": [158],
+        "calls": [160],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "property",
+          "verb": "create"
+        }
+      },
+      {
+        "id": 160,
+        "name": "TokenizerProperty",
+        "class": "TokenizerProperty",
+        "returntype": "TokenizerProperty",
+        "called": [84, 92, 100, 108, 116, 124, 159],
+        "calls": [143, 151, 153, 146],
+        "use": {
+          "type": "procedural",
+          "example": "addProperty(new TokenizerProperty(Token.STRING,new String[]{start,end,escape},companion,flags,flagMask));"
+        },
+        "swum": {
+          "object": "property",
+          "verb": "create"
+        }
+      },
+      {
+        "id": 161,
+        "name": "equals",
+        "class": "TokenizerProperty",
+        "returntype": "boolean",
+        "called": [44, 45, 129, 133, 141],
+        "calls": [144, 154, 147, 152],
+        "use": {
+          "type": "conditional",
+          "example": "if (image.length() - start >= end.length() && ((!noCase && end.equals(image.substring(image.length() - end.length()))) || (noCase && end.equalsIgnoreCase(image.substring(image.length() - end.length()))))) {"
+        },
+        "swum": {
+          "object": "value",
+          "verb": "equals"
+        }
+      },
+      {
+        "id": 162,
+        "name": "toString",
+        "class": "TokenizerProperty",
+        "returntype": "String",
+        "called": [34, 44, 137],
+        "calls": [144],
+        "use": {
+          "type": "procedural",
+          "example": "return getBaseDataProvider(start,len).toString();"
+        },
+        "swum": {
+          "object": "string",
+          "verb": "to"
+        }
+      },
+      {
+        "id": 163,
+        "name": "SequenceStore",
+        "class": "SequenceStore",
+        "returntype": "SequenceStore",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "store",
+          "verb": "create"
+        }
+      },
+      {
+        "id": 164,
+        "name": "hasSequenceCommentOrString",
+        "class": "SequenceStore",
+        "returntype": "boolean",
+        "called": [167],
+        "calls": [],
+        "use": {
+          "type": "procedural",
+          "example": "return hasSequenceCommentOrString();"
+        },
+        "swum": {
+          "object": "sequence comment or string",
+          "verb": "has"
+        }
+      },
+      {
+        "id": 165,
+        "name": "startsWithSequenceCommentOrString",
+        "class": "SequenceStore",
+        "returntype": "TokenizerProperty",
+        "called": [57, 168],
+        "calls": [197, 169, 193, 178, 152, 184],
+        "use": {
+          "type": "assignment",
+          "example": "TokenizerProperty prop=_sequenceHandler.startsWithSequenceCommentOrString(dataProvider);"
+        },
+        "swum": {
+          "object": "with sequence comment or string",
+          "verb": "starts"
+        }
+      },
+      {
+        "id": 166,
+        "name": "getSequenceMaxLength",
+        "class": "SequenceStore",
+        "returntype": "int",
+        "called": [57],
+        "calls": [],
+        "use": {
+          "type": "iteration",
+          "example": "while (_sequenceHandler.getSequenceMaxLength() > _currentWritePos - startingAtPos) {"
+        },
+        "swum": {
+          "object": "sequence max length",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 167,
+        "name": "hasKeywords",
+        "class": "SequenceStore",
+        "returntype": "boolean",
+        "called": [],
+        "calls": [164],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "keywords",
+          "verb": "has"
+        }
+      },
+      {
+        "id": 168,
+        "name": "isKeyword",
+        "class": "SequenceStore",
+        "returntype": "TokenizerProperty",
+        "called": [42],
+        "calls": [165],
+        "use": {
+          "type": "procedural",
+          "example": "return _keywordHandler.isKeyword(dataProvider);"
+        },
+        "swum": {
+          "object": "keyword",
+          "verb": "is"
+        }
+      },
+      {
+        "id": 169,
+        "name": "getStartChar",
+        "class": "SequenceStore",
+        "returntype": "char",
+        "called": [165, 170, 179, 181],
+        "calls": [],
+        "use": {
+          "type": "assignment",
+          "example": "char startChar=getStartChar(dataProvider.getCharAt(0));"
+        },
+        "swum": {
+          "object": "start char",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 170,
+        "name": "addSpecialSequence",
+        "class": "SequenceStore",
+        "returntype": "TokenizerProperty",
+        "called": [174],
+        "calls": [152, 169, 180, 181],
+        "use": {
+          "type": "procedural",
+          "example": "return addSpecialSequence(property);"
+        },
+        "swum": {
+          "object": "special sequence",
+          "verb": "add"
+        }
+      },
+      {
+        "id": 171,
+        "name": "removeSpecialSequence",
+        "class": "SequenceStore",
+        "returntype": "TokenizerProperty",
+        "called": [175],
+        "calls": [179],
+        "use": {
+          "type": "procedural",
+          "example": "return removeSpecialSequence(image);"
+        },
+        "swum": {
+          "object": "special sequence",
+          "verb": "remove"
+        }
+      },
+      {
+        "id": 172,
+        "name": "getSpecialSequence",
+        "class": "SequenceStore",
+        "returntype": "TokenizerProperty",
+        "called": [176],
+        "calls": [179],
+        "use": {
+          "type": "procedural",
+          "example": "return getSpecialSequence(image);"
+        },
+        "swum": {
+          "object": "special sequence",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 173,
+        "name": "getSpecialSequences",
+        "class": "SequenceStore",
+        "returntype": "Iterator",
+        "called": [177],
+        "calls": [188],
+        "use": {
+          "type": "procedural",
+          "example": "return getSpecialSequences(Token.KEYWORD);"
+        },
+        "swum": {
+          "object": "special sequences",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 174,
+        "name": "addKeyword",
+        "class": "SequenceStore",
+        "returntype": "TokenizerProperty",
+        "called": [],
+        "calls": [170],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "keyword",
+          "verb": "add"
+        }
+      },
+      {
+        "id": 175,
+        "name": "removeKeyword",
+        "class": "SequenceStore",
+        "returntype": "TokenizerProperty",
+        "called": [],
+        "calls": [171],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "keyword",
+          "verb": "remove"
+        }
+      },
+      {
+        "id": 176,
+        "name": "getKeyword",
+        "class": "SequenceStore",
+        "returntype": "TokenizerProperty",
+        "called": [],
+        "calls": [172],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "keyword",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 177,
+        "name": "getKeywords",
+        "class": "SequenceStore",
+        "returntype": "Iterator",
+        "called": [11],
+        "calls": [173],
+        "use": {
+          "type": "conditional",
+          "example": "if (_properties != null && _properties.getKeywords().hasNext()) {"
+        },
+        "swum": {
+          "object": "keywords",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 178,
+        "name": "getList",
+        "class": "SequenceStore",
+        "returntype": "PropertyList",
+        "called": [165, 179],
+        "calls": [],
+        "use": {
+          "type": "assignment",
+          "example": "PropertyList list=getList(startChar);"
+        },
+        "swum": {
+          "object": "list",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 179,
+        "name": "searchString",
+        "class": "SequenceStore",
+        "returntype": "TokenizerProperty",
+        "called": [171, 172, 192],
+        "calls": [169, 178, 152, 183],
+        "use": {
+          "type": "procedural",
+          "example": "return searchString(image,true);"
+        },
+        "swum": {
+          "object": "string",
+          "verb": "search"
+        }
+      },
+      {
+        "id": 180,
+        "name": "insertDirect",
+        "class": "SequenceStore",
+        "returntype": "TokenizerProperty",
+        "called": [170],
+        "calls": [186, 182],
+        "use": {
+          "type": "procedural",
+          "example": "return insertDirect(startChar,property);"
+        },
+        "swum": {
+          "object": "direct",
+          "verb": "insert"
+        }
+      },
+      {
+        "id": 181,
+        "name": "insertMapped",
+        "class": "SequenceStore",
+        "returntype": "TokenizerProperty",
+        "called": [170],
+        "calls": [169, 186, 182],
+        "use": {
+          "type": "procedural",
+          "example": "return insertMapped(startChar,property);"
+        },
+        "swum": {
+          "object": "mapped",
+          "verb": "insert"
+        }
+      },
+      {
+        "id": 182,
+        "name": "putIntoList",
+        "class": "SequenceStore",
+        "returntype": "TokenizerProperty",
+        "called": [180, 181],
+        "calls": [152, 183, 187, 186],
+        "use": {
+          "type": "procedural",
+          "example": "return putIntoList(_asciiArray[startChar],property);"
+        },
+        "swum": {
+          "object": "into list",
+          "verb": "put"
+        }
+      },
+      {
+        "id": 183,
+        "name": "compare",
+        "class": "SequenceStore",
+        "returntype": "int",
+        "called": [179, 182],
+        "calls": [185],
+        "use": {
+          "type": "assignment",
+          "example": "int res=compare(img,image,1);"
+        },
+        "swum": {
+          "object": "value",
+          "verb": "compare"
+        }
+      },
+      {
+        "id": 184,
+        "name": "comparePrefix",
+        "class": "SequenceStore",
+        "returntype": "int",
+        "called": [165],
+        "calls": [185, 193],
+        "use": {
+          "type": "conditional",
+          "example": "else       if (imageLen <= len && comparePrefix(image,dataProvider,1) == 0) {"
+        },
+        "swum": {
+          "object": "prefix",
+          "verb": "compare"
+        }
+      },
+      {
+        "id": 185,
+        "name": "compare",
+        "class": "SequenceStore",
+        "returntype": "int",
+        "called": [183, 184],
+        "calls": [],
+        "use": {
+          "type": "assignment",
+          "example": "int res=compare(thisImage.charAt(fromIndex),thatImage.charAt(fromIndex));"
+        },
+        "swum": {
+          "object": "value",
+          "verb": "compare"
+        }
+      },
+      {
+        "id": 186,
+        "name": "PropertyList",
+        "class": "SequenceStore",
+        "returntype": "SequenceStore",
+        "called": [180, 181, 182],
+        "calls": [],
+        "use": {
+          "type": "assignment",
+          "example": "_asciiArray[startChar]=new PropertyList(property);"
+        },
+        "swum": {
+          "object": "list",
+          "verb": "create"
+        }
+      },
+      {
+        "id": 187,
+        "name": "PropertyList",
+        "class": "SequenceStore",
+        "returntype": "SequenceStore",
+        "called": [182],
+        "calls": [],
+        "use": {
+          "type": "procedural",
+          "example": "PropertyList prev;"
+        },
+        "swum": {
+          "object": "list",
+          "verb": "create"
+        }
+      },
+      {
+        "id": 188,
+        "name": "SpecialSequencesIterator",
+        "class": "SequenceStore",
+        "returntype": "SequenceStore",
+        "called": [173],
+        "calls": [],
+        "use": {
+          "type": "procedural",
+          "example": "return new SpecialSequencesIterator(this,type);"
+        },
+        "swum": {
+          "object": "sequences iterator",
+          "verb": "create"
+        }
+      },
+      {
+        "id": 189,
+        "name": "listHasNext",
+        "class": "SequenceStore",
+        "returntype": "boolean",
+        "called": [190],
+        "calls": [144],
+        "use": {
+          "type": "conditional",
+          "example": "if (listHasNext()) {"
+        },
+        "swum": {
+          "object": "has next",
+          "verb": "list"
+        }
+      },
+      {
+        "id": 190,
+        "name": "hasNext",
+        "class": "SequenceStore",
+        "returntype": "boolean",
+        "called": [11, 17, 19, 133, 137, 142, 191],
+        "calls": [189, 191],
+        "use": {
+          "type": "conditional",
+          "example": "if (_properties != null && _properties.getKeywords().hasNext()) {"
+        },
+        "swum": {
+          "object": "next",
+          "verb": "has"
+        }
+      },
+      {
+        "id": 191,
+        "name": "next",
+        "class": "SequenceStore",
+        "returntype": "Object",
+        "called": [133, 137, 142, 190],
+        "calls": [190],
+        "use": {
+          "type": "assignment",
+          "example": "WeakReference ref=(WeakReference)iter.next();"
+        },
+        "swum": {
+          "object": "value",
+          "verb": "next"
+        }
+      },
+      {
+        "id": 192,
+        "name": "remove",
+        "class": "SequenceStore",
+        "returntype": "void",
+        "called": [133, 142],
+        "calls": [179, 152],
+        "use": {
+          "type": "procedural",
+          "example": "iter.remove();"
+        },
+        "swum": {
+          "object": "value",
+          "verb": "remove"
+        }
+      },
+      {
+        "id": 193,
+        "name": "getCharAt",
+        "class": "DataProvider",
+        "returntype": "char",
+        "called": [33, 165, 184],
+        "calls": [],
+        "use": {
+          "type": "procedural",
+          "example": "return getBaseDataProvider(pos,1).getCharAt(0);"
+        },
+        "swum": {
+          "object": "char at",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 194,
+        "name": "getData",
+        "class": "DataProvider",
+        "returntype": "char[]",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "data",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 195,
+        "name": "getDataCopy",
+        "class": "DataProvider",
+        "returntype": "char[]",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "data copy",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 196,
+        "name": "getStartPosition",
+        "class": "DataProvider",
+        "returntype": "int",
+        "called": [27],
+        "calls": [],
+        "use": {
+          "type": "procedural",
+          "example": "return getText(token.getStartPosition(),token.getLength());"
+        },
+        "swum": {
+          "object": "start position",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 197,
+        "name": "getLength",
+        "class": "DataProvider",
+        "returntype": "int",
+        "called": [24, 27, 165],
+        "calls": [],
+        "use": {
+          "type": "procedural",
+          "example": "adjustLineAndColumn(token.getType(),token.getLength());"
+        },
+        "swum": {
+          "object": "length",
+          "verb": "get"
+        }
+      }
+    ]
+  }
+}

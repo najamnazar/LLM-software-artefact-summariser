@@ -1,0 +1,1181 @@
+{
+  "model": "qwen/qwen3.7-plus",
+  "summaries": [
+    {
+      "id": 72,
+      "project": "jEdit",
+      "name": "getFlag",
+      "class": "Buffer",
+      "summary": "Retrieves the boolean state of a specific flag within the buffer. It is typically used in conditional checks to alter control flow, such as returning early if the buffer is untitled."
+    },
+    {
+      "id": 95,
+      "project": "jEdit",
+      "name": "getProperty",
+      "class": "PropertyManager",
+      "summary": "Retrieves the value of a specified property as a string. It is typically used in assignment statements to store the fetched value in a variable."
+    },
+    {
+      "id": 96,
+      "project": "jEdit",
+      "name": "setProperty",
+      "class": "PropertyManager",
+      "summary": "Sets a system property to a specified value using the provided name and value parameters. This method is used procedurally to configure system settings, such as by calling `system.setProperty(name, value)`."
+    },
+    {
+      "id": 100,
+      "project": "jEdit",
+      "name": "getDefaultProperty",
+      "class": "PropertyManager",
+      "summary": "Retrieves the default string value for a specified property. It is used to fetch and return default property configurations by name."
+    },
+    {
+      "id": 121,
+      "project": "jEdit",
+      "name": "getInputHandler",
+      "class": "View",
+      "summary": "Retrieves the input handler associated with this view. It is typically used to obtain the current handler when assigning it to a new default input handler."
+    },
+    {
+      "id": 213,
+      "project": "jEdit",
+      "name": "invoke",
+      "class": "BshMethod",
+      "summary": "Invokes the BeanShell method encapsulated by this instance and returns its resulting value. It is typically used to dynamically execute scripted methods programmatically from Java code or within the scripting environment."
+    },
+    {
+      "id": 214,
+      "project": "jEdit",
+      "name": "invoke",
+      "class": "BshMethod",
+      "summary": "Invokes the encapsulated BeanShell method and returns the resulting value. It is used procedurally to execute the method's logic within the scripting environment."
+    },
+    {
+      "id": 215,
+      "project": "jEdit",
+      "name": "invoke",
+      "class": "BshMethod",
+      "summary": "Invokes the BeanShell method using the provided argument values and interpreter context to return the resulting object. It is used procedurally to execute the method and retrieve its computed return value."
+    },
+    {
+      "id": 221,
+      "project": "jEdit",
+      "name": "event",
+      "class": "JThis",
+      "summary": "The `event` method triggers a named event by passing an event name and an associated event object. It is typically used to dispatch specific lifecycle or state-change notifications, such as \"ancestorAdded\", to registered listeners."
+    },
+    {
+      "id": 309,
+      "project": "jEdit",
+      "name": "BeginToken",
+      "class": "JavaCharStream",
+      "summary": "Begins a new token and returns its first character. It is typically used to assign the initial character to a current character variable during lexical analysis."
+    },
+    {
+      "id": 312,
+      "project": "jEdit",
+      "name": "readChar",
+      "class": "JavaCharStream",
+      "summary": "Reads and returns the next character from the character stream. It is used procedurally to sequentially fetch characters during lexical analysis or parsing."
+    },
+    {
+      "id": 315,
+      "project": "jEdit",
+      "name": "getEndColumn",
+      "class": "JavaCharStream",
+      "summary": "Retrieves the ending column number of the current token in the character stream. This value is typically used to preserve the cursor position when reinitializing the input stream."
+    },
+    {
+      "id": 316,
+      "project": "jEdit",
+      "name": "getEndLine",
+      "class": "JavaCharStream",
+      "summary": "Retrieves the current end line number of the character stream. This value is typically used to reinitialize the input stream while preserving the current line and column positions."
+    },
+    {
+      "id": 319,
+      "project": "jEdit",
+      "name": "backup",
+      "class": "JavaCharStream",
+      "summary": "The `backup` method moves the character stream pointer backward by a specified number of values to un-read previously consumed input. It is used during lexical analysis to adjust the stream position when recovering from invalid tokens or performing lookahead."
+    },
+    {
+      "id": 332,
+      "project": "jEdit",
+      "name": "GetImage",
+      "class": "JavaCharStream",
+      "summary": "Retrieves the string image of the current token from the character input stream. It is typically used to populate the image field of a token object during lexical analysis."
+    },
+    {
+      "id": 345,
+      "project": "jEdit",
+      "name": "getNode",
+      "class": "NameSpace",
+      "summary": "Retrieves a SimpleNode from the NameSpace. The returned node is typically assigned to a SimpleNode variable for further use."
+    },
+    {
+      "id": 372,
+      "project": "jEdit",
+      "name": "getMethod",
+      "class": "NameSpace",
+      "summary": "Retrieves a method from the namespace by its name, returning it as a BshMethod object. This is typically used to assign a method reference to a variable for later invocation, such as fetching an event handler."
+    },
+    {
+      "id": 373,
+      "project": "jEdit",
+      "name": "getMethod",
+      "class": "NameSpace",
+      "summary": "Retrieves a BshMethod from the namespace using the specified method name and signature. This lookup is used to resolve method definitions during script execution."
+    },
+    {
+      "id": 757,
+      "project": "jEdit",
+      "name": "getToken",
+      "class": "Parser",
+      "summary": "Retrieves a specific token from the parser's token stream using the provided index. It is typically used to assign the first token to a syntax tree node during parsing."
+    },
+    {
+      "id": 810,
+      "project": "jEdit",
+      "name": "jjFillToken",
+      "class": "ParserTokenManager",
+      "summary": "Fills and returns the current token object containing the results of the lexical analysis. It is typically used in assignment statements to capture the matched token, such as assigning it to a `matchedToken` variable."
+    },
+    {
+      "id": 811,
+      "project": "jEdit",
+      "name": "getNextToken",
+      "class": "ParserTokenManager",
+      "summary": "Retrieves the next token from the input stream. This method is invoked by the parser to sequentially consume tokens during syntax analysis."
+    },
+    {
+      "id": 812,
+      "project": "jEdit",
+      "name": "getSourceFile",
+      "class": "SimpleNode",
+      "summary": "Retrieves the source file for this node. It is used conditionally to fall back to the parent node's source file when the current node's source file is null."
+    },
+    {
+      "id": 830,
+      "project": "jEdit",
+      "name": "getSourceFile",
+      "class": "SimpleNode",
+      "summary": "Retrieves the name of the source file from which this SimpleNode was parsed. This method is typically used to track the origin of nodes within an abstract syntax tree."
+    },
+    {
+      "id": 849,
+      "project": "jEdit",
+      "name": "getLineCount",
+      "class": "JEditBuffer",
+      "summary": "Returns the total number of lines in the buffer. It is commonly used to validate line indices and prevent out-of-bounds exceptions."
+    },
+    {
+      "id": 851,
+      "project": "jEdit",
+      "name": "getLineStartOffset",
+      "class": "JEditBuffer",
+      "summary": "Retrieves the starting character offset of a specified line within the text buffer. It is commonly used alongside the line's end offset to calculate the exact length of the line."
+    },
+    {
+      "id": 964,
+      "project": "jEdit",
+      "name": "getLineCount",
+      "class": "LineManager",
+      "summary": "Retrieves the total number of lines managed by the LineManager."
+    },
+    {
+      "id": 6,
+      "project": "jajuk",
+      "name": "popupMenuCanceled",
+      "class": "DropDownButton",
+      "summary": "Handles the cancellation event for the drop-down button's popup menu. It is invoked by the UI framework when the user dismisses the menu without making a selection."
+    },
+    {
+      "id": 16,
+      "project": "jajuk",
+      "name": "getGenre",
+      "class": "AudioObject",
+      "summary": "Retrieves the genre of the audio object as a string. This method is used to access the musical category or style associated with the audio content."
+    },
+    {
+      "id": 37,
+      "project": "jajuk",
+      "name": "setImage",
+      "class": "ContextListener",
+      "summary": "Sets the image associated with the ContextListener."
+    },
+    {
+      "id": 46,
+      "project": "jajuk",
+      "name": "getArtistSimilarCacheDir",
+      "class": "LastFmCache",
+      "summary": "Retrieves the directory used to cache similar artist data. This directory is typically used for cache management operations, such as clearing its contents."
+    },
+    {
+      "id": 57,
+      "project": "jajuk",
+      "name": "getFileNameForArtistInfo",
+      "class": "LastFmCache",
+      "summary": "Retrieves the file name for caching artist information. It is used to construct the full file path by concatenating this name with the artist info cache directory."
+    },
+    {
+      "id": 101,
+      "project": "jajuk",
+      "name": "handleDirectories",
+      "class": "Collection",
+      "summary": "The `handleDirectories` method processes directory attributes using a provided ID index to manage collection data. It is invoked procedurally with the attributes and index passed as arguments."
+    },
+    {
+      "id": 112,
+      "project": "jajuk",
+      "name": "GenreManager",
+      "class": "GenreManager",
+      "summary": "Creates a new instance of the GenreManager class. This constructor initializes the manager responsible for handling genre-related operations."
+    },
+    {
+      "id": 131,
+      "project": "jajuk",
+      "name": "getType",
+      "class": "PropertyMetaInformation",
+      "summary": "Retrieves the Class object representing the data type of the property. This method is used to inspect the expected type of a property during metadata processing."
+    },
+    {
+      "id": 162,
+      "project": "jajuk",
+      "name": "getDiscoveryDate",
+      "class": "Track",
+      "summary": "Returns the discovery date of the track. It is typically used when formatting track information for display or logging."
+    },
+    {
+      "id": 170,
+      "project": "jajuk",
+      "name": "updateRate",
+      "class": "Track",
+      "summary": "Updates the track's rate. This procedural method is invoked without arguments to modify the object's internal state."
+    },
+    {
+      "id": 212,
+      "project": "jajuk",
+      "name": "isAutocommit",
+      "class": "TrackManager",
+      "summary": "Determines whether the autocommit mode is currently enabled for the TrackManager. This method is used to verify the autocommit state before executing operations."
+    },
+    {
+      "id": 218,
+      "project": "jajuk",
+      "name": "getURL",
+      "class": "Cover",
+      "summary": "Retrieves the URL associated with this Cover instance. It is typically used to compare this instance's URL with another Cover's URL for equality."
+    },
+    {
+      "id": 245,
+      "project": "jajuk",
+      "name": "subList",
+      "class": "QueueList",
+      "summary": "Extracts a sublist of stack items starting from a specified index to the end of the internal list. Returns the extracted elements as a new ArrayList."
+    },
+    {
+      "id": 260,
+      "project": "jajuk",
+      "name": "process",
+      "class": "XMLExporter",
+      "summary": "Processes a list of items for XML export. It is typically invoked with a list of items retrieved from a device manager."
+    },
+    {
+      "id": 261,
+      "project": "jajuk",
+      "name": "process",
+      "class": "XMLExporter",
+      "summary": "Processes a given item, such as an Album, to prepare it for XML export. This method is invoked procedurally to handle individual elements within a collection during the export process."
+    },
+    {
+      "id": 262,
+      "project": "jajuk",
+      "name": "process",
+      "class": "XMLExporter",
+      "summary": "Processes a given value, such as an Album, to prepare it for XML export. This procedural method is invoked within the XMLExporter to handle the serialization of specific domain objects."
+    },
+    {
+      "id": 263,
+      "project": "jajuk",
+      "name": "process",
+      "class": "XMLExporter",
+      "summary": "Processes a given value, such as an Album, to prepare it for XML export. This method is used procedurally within the XMLExporter to handle individual items during the export operation."
+    },
+    {
+      "id": 264,
+      "project": "jajuk",
+      "name": "process",
+      "class": "XMLExporter",
+      "summary": "Processes a value, such as an Album, to prepare it for XML export. This method is used procedurally to handle each element within a collection during the export process."
+    },
+    {
+      "id": 265,
+      "project": "jajuk",
+      "name": "process",
+      "class": "XMLExporter",
+      "summary": "Processes an Album object for XML export. It is invoked procedurally by passing an Album instance, typically after casting an item to the Album type."
+    },
+    {
+      "id": 266,
+      "project": "jajuk",
+      "name": "process",
+      "class": "XMLExporter",
+      "summary": "Processes a given item, such as an Album, to facilitate its export to XML format. This procedural method is invoked within the XMLExporter class to handle the serialization of domain objects."
+    },
+    {
+      "id": 278,
+      "project": "jajuk",
+      "name": "process",
+      "class": "XMLExporter",
+      "summary": "Processes a given value, such as an Album, for XML export. This procedural method is invoked to handle individual items during the export workflow."
+    },
+    {
+      "id": 288,
+      "project": "jajuk",
+      "name": "perform",
+      "class": "GCAction",
+      "summary": "Triggers the garbage collection process to reclaim unused memory. It is invoked procedurally through the ActionManager by retrieving the specific action instance and calling this method."
+    },
+    {
+      "id": 290,
+      "project": "jajuk",
+      "name": "getItemAt",
+      "class": "PlaylistTableModel",
+      "summary": "Retrieves the Item at a specified index within the playlist table model. This method is used to access individual playlist entries for display or manipulation in the user interface."
+    },
+    {
+      "id": 311,
+      "project": "jajuk",
+      "name": "handleSave",
+      "class": "CoverView",
+      "summary": "Handles the save operation for the cover view. This procedural method is invoked to execute the saving logic when a save action is triggered."
+    },
+    {
+      "id": 353,
+      "project": "jajuk",
+      "name": "updateGUIFromConfCovers",
+      "class": "ParameterViewGUIHelper",
+      "summary": "Updates the graphical user interface to reflect the current configuration covers. This procedural method is used to synchronize the UI state with configuration settings."
+    },
+    {
+      "id": 394,
+      "project": "jajuk",
+      "name": "getNothingFoundPanel",
+      "class": "SuggestionView",
+      "summary": "Retrieves the panel displayed when no suggestions are found. It is typically wrapped in a JScrollPane and returned as part of the suggestion view."
+    },
+    {
+      "id": 405,
+      "project": "jajuk",
+      "name": "getID",
+      "class": "ViewAdapter",
+      "summary": "Retrieves the string identifier for the view adapter. It is commonly used to fetch this ID for property assignment, such as mapping it to an XML property."
+    },
+    {
+      "id": 414,
+      "project": "jajuk",
+      "name": "paint",
+      "class": "JajukJSplitPane",
+      "summary": "Paints the JajukJSplitPane component to render its visual representation. This method is invoked by the Swing framework during the component's standard painting cycle."
+    },
+    {
+      "id": 415,
+      "project": "jajuk",
+      "name": "JajukJSplitPane",
+      "class": "JajukJSplitPane",
+      "summary": "Creates a new instance of the JajukJSplitPane class. This constructor initializes a custom split pane component for the application's graphical user interface."
+    },
+    {
+      "id": 420,
+      "project": "jajuk",
+      "name": "getOptionPane",
+      "class": "PasswordDialog",
+      "summary": "Returns the JOptionPane instance associated with the PasswordDialog. This provides access to the underlying option pane component for further UI configuration or interaction."
+    },
+    {
+      "id": 440,
+      "project": "jajuk",
+      "name": "closeSystray",
+      "class": "JajukSystray",
+      "summary": "Closes the system tray component to remove the application's icon from the system tray. It is invoked when the application needs to shut down or hide the system tray interface."
+    },
+    {
+      "id": 448,
+      "project": "jajuk",
+      "name": "WindowGlobalKeystrokeManager",
+      "class": "WindowGlobalKeystrokeManager",
+      "summary": "Creates a new global keystroke manager to handle window-level keystroke events. It is typically instantiated and assigned to a variable to initialize the manager for a specific window context."
+    },
+    {
+      "id": 22,
+      "project": "jhotdraw",
+      "name": "createAlignmentMenu",
+      "class": "DrawApplication",
+      "summary": "Creates and returns a JMenu containing alignment options for the drawing application. It is typically invoked to add the resulting menu to the main menu bar."
+    },
+    {
+      "id": 108,
+      "project": "jhotdraw",
+      "name": "getCommand",
+      "class": "CommandMenuItem",
+      "summary": "Retrieves the Command object associated with this menu item. It is typically used to fetch the command for immediate execution when the menu item is selected."
+    },
+    {
+      "id": 117,
+      "project": "jhotdraw",
+      "name": "getComponent",
+      "class": "ComponentFigure",
+      "summary": "Retrieves the underlying Component associated with this ComponentFigure. It is typically used to access the component to perform operations such as setting its display bounds."
+    },
+    {
+      "id": 127,
+      "project": "jhotdraw",
+      "name": "createUndoActivity",
+      "class": "PolygonScaleHandle",
+      "summary": "Creates an undo activity object to support undo operations for the polygon scale handle. The returned object is typically cast to `PolygonScaleHandle.UndoActivity` and assigned to a variable using the provided view."
+    },
+    {
+      "id": 137,
+      "project": "jhotdraw",
+      "name": "invokeEnd",
+      "class": "TriangleRotationHandle",
+      "summary": "The `invokeEnd` method finalizes the rotation interaction for a triangle handle. It is invoked when a user completes a dragging or manipulation action on the rotation control."
+    },
+    {
+      "id": 148,
+      "project": "jhotdraw",
+      "name": "AttributeFigureContentProducer",
+      "class": "AttributeFigureContentProducer",
+      "summary": "This constructor creates a new instance of the AttributeFigureContentProducer class. It initializes a producer responsible for generating figure content based on attributes."
+    },
+    {
+      "id": 161,
+      "project": "jhotdraw",
+      "name": "markFontDirty",
+      "class": "HTMLTextAreaFigure",
+      "summary": "Marks the font as dirty to indicate that the HTMLTextAreaFigure needs to recalculate its font metrics. This method is invoked to trigger a layout or rendering update when font properties change."
+    },
+    {
+      "id": 216,
+      "project": "jhotdraw",
+      "name": "setURL",
+      "class": "URLContentProducer",
+      "summary": "Sets the target URL for the URLContentProducer. This method is used to configure the resource location before producing content."
+    },
+    {
+      "id": 217,
+      "project": "jhotdraw",
+      "name": "ZoomDrawingView",
+      "class": "ZoomDrawingView",
+      "summary": "Creates a new instance of a zoomable drawing view. This constructor initializes the component to render drawings and handle zoom interactions."
+    },
+    {
+      "id": 218,
+      "project": "jhotdraw",
+      "name": "ZoomDrawingView",
+      "class": "ZoomDrawingView",
+      "summary": "Creates a new instance of a zoomable drawing view. This constructor initializes the component for rendering and interacting with zoomable graphics within the user interface."
+    },
+    {
+      "id": 270,
+      "project": "jhotdraw",
+      "name": "getTypingTarget",
+      "class": "TextTool",
+      "summary": "Retrieves the current typing target as a TextHolder. It is typically used in conditional checks to ensure a valid target exists before performing operations."
+    },
+    {
+      "id": 291,
+      "project": "jhotdraw",
+      "name": "createButtons",
+      "class": "JavaDrawApplet",
+      "summary": "Creates the user interface buttons for the Java drawing applet. This method initializes the interactive controls required for the application's graphical interface."
+    },
+    {
+      "id": 298,
+      "project": "jhotdraw",
+      "name": "deactivate",
+      "class": "AbstractTool",
+      "summary": "Deactivates the tool or its associated value. This procedural method is invoked to disable the tool's active functionality."
+    },
+    {
+      "id": 357,
+      "project": "jhotdraw",
+      "name": "findConnectableFigure",
+      "class": "ChangeConnectionHandle",
+      "summary": "Finds and returns a connectable figure at the specified coordinates within a drawing. It is typically used to assign the located figure to a variable when modifying connection handles."
+    },
+    {
+      "id": 377,
+      "project": "jhotdraw",
+      "name": "findConnectionTarget",
+      "class": "ConnectionHandle",
+      "summary": "Finds and returns a Connector acting as a connection target at the specified coordinates within a drawing view. It is used to assign the resulting connector to a variable when establishing connections."
+    },
+    {
+      "id": 395,
+      "project": "jhotdraw",
+      "name": "getPrototypeFigure",
+      "class": "CreationTool",
+      "summary": "Retrieves the prototype figure for the creation tool. It is commonly used in conditional statements to check if the prototype figure is null."
+    },
+    {
+      "id": 433,
+      "project": "jhotdraw",
+      "name": "selectionHandles",
+      "class": "StandardDrawingView",
+      "summary": "Returns an enumeration of handles for the currently selected figures in the drawing view. It is typically assigned to a HandleEnumeration variable to iterate over or process the selection handles."
+    },
+    {
+      "id": 447,
+      "project": "jhotdraw",
+      "name": "drawingInvalidated",
+      "class": "StandardDrawingView",
+      "summary": "Handles the invalidation of the underlying drawing model to trigger a visual update within the standard drawing view. It serves as a callback to repaint the component when the drawing's state or contents change."
+    },
+    {
+      "id": 470,
+      "project": "jhotdraw",
+      "name": "keyTyped",
+      "class": "StandardDrawingView",
+      "summary": "Handles character input events when a key is typed within the drawing view. This event handler is invoked by the event dispatch thread to process user keystrokes for interacting with the canvas."
+    },
+    {
+      "id": 490,
+      "project": "jhotdraw",
+      "name": "keyTyped",
+      "class": "StandardDrawingView",
+      "summary": "Handles key typed events to process user keyboard input within the standard drawing view. This method is automatically invoked by the AWT event system when a key is typed while the component has focus."
+    },
+    {
+      "id": 504,
+      "project": "jhotdraw",
+      "name": "NullToolTest",
+      "class": "NullToolTest",
+      "summary": "Creates a new instance of the NullToolTest class. This constructor is used to initialize the test environment for executing test cases that evaluate null tool behaviors."
+    },
+    {
+      "id": 519,
+      "project": "jhotdraw",
+      "name": "testVault",
+      "class": "OffsetLocatorTest",
+      "summary": "Tests the vault functionality to verify its correct behavior within the offset locator. This method is executed as a unit test to validate the vault component."
+    },
+    {
+      "id": 520,
+      "project": "jhotdraw",
+      "name": "StandardFigureSelectionTest",
+      "class": "StandardFigureSelectionTest",
+      "summary": "Creates a new instance of the StandardFigureSelectionTest class. This constructor initializes the testing environment for evaluating standard figure selection functionality."
+    },
+    {
+      "id": 530,
+      "project": "jhotdraw",
+      "name": "setUp",
+      "class": "ClipboardTest",
+      "summary": "Initializes the test environment and required fixtures for the ClipboardTest class. This method is automatically invoked by the testing framework prior to the execution of each test case."
+    },
+    {
+      "id": 536,
+      "project": "jhotdraw",
+      "name": "addStorageFormat",
+      "class": "StorageFormatManager",
+      "summary": "Adds a specified storage format to the manager. This method is typically used to register formats, such as adding the default storage format."
+    },
+    {
+      "id": 554,
+      "project": "jhotdraw",
+      "name": "setUndoActivity",
+      "class": "UndoableCommand",
+      "summary": "Sets the undo activity for this command. It configures the specific reversal operation to be executed when the command is undone."
+    },
+    {
+      "id": 560,
+      "project": "jhotdraw",
+      "name": "commandExecuted",
+      "class": "UndoableCommand",
+      "summary": "Records the execution of the command to enable undo functionality. This method is invoked internally to update the command's state after its action has been performed."
+    },
+    {
+      "id": 8,
+      "project": "jtopas",
+      "name": "getTokenizerProperties",
+      "class": "AbstractTokenizer",
+      "summary": "Retrieves the configuration properties for the tokenizer. It is commonly used to access specific settings, such as parse flags, to update the tokenizer's state via bitwise operations."
+    },
+    {
+      "id": 47,
+      "project": "jtopas",
+      "name": "getBaseTokenizer",
+      "class": "AbstractTokenizer",
+      "summary": "Retrieves the base tokenizer instance associated with this abstract tokenizer. It is typically used in variable assignments to obtain a reference to the underlying tokenizer."
+    },
+    {
+      "id": 48,
+      "project": "jtopas",
+      "name": "getBaseDataProvider",
+      "class": "AbstractTokenizer",
+      "summary": "Retrieves the base data provider used by the abstract tokenizer. It is typically called to access the underlying data source, such as reading specific characters at a specified position."
+    },
+    {
+      "id": 49,
+      "project": "jtopas",
+      "name": "readMoreDataFromBase",
+      "class": "AbstractTokenizer",
+      "summary": "Reads additional data from the underlying base source to replenish the tokenizer's internal buffer. This method is invoked internally when the current buffer is exhausted during the tokenization process."
+    },
+    {
+      "id": 64,
+      "project": "jtopas",
+      "name": "isFlagSet",
+      "class": "AbstractTokenizer",
+      "summary": "Checks whether a specified flag is set in the tokenizer. It is typically used in conditional statements to alter parsing behavior based on active flags, such as counting lines."
+    },
+    {
+      "id": 65,
+      "project": "jtopas",
+      "name": "isFlagSet",
+      "class": "AbstractTokenizer",
+      "summary": "Checks whether a specified tokenizer flag is currently set. It is used to conditionally adjust tokenization behavior based on active configuration flags, such as returning simple whitespaces."
+    },
+    {
+      "id": 68,
+      "project": "jtopas",
+      "name": "doGetProperty",
+      "class": "AbstractTokenizerProperties",
+      "summary": "Retrieves a tokenizer property for a specified token type and starting index. This method is used internally to fetch property details during the tokenization process."
+    },
+    {
+      "id": 88,
+      "project": "jtopas",
+      "name": "getString",
+      "class": "AbstractTokenizerProperties",
+      "summary": "Retrieves the string token property starting at a specified index. It is typically used to assign the resulting property to a variable for further token processing."
+    },
+    {
+      "id": 104,
+      "project": "jtopas",
+      "name": "getBlockComment",
+      "class": "AbstractTokenizerProperties",
+      "summary": "Retrieves the block comment tokenizer property. It is typically invoked with a starting index and assigned to a variable for further token processing."
+    },
+    {
+      "id": 112,
+      "project": "jtopas",
+      "name": "getSpecialSequence",
+      "class": "AbstractTokenizerProperties",
+      "summary": "Retrieves the TokenizerProperty associated with a specified special sequence. It is typically used in assignments to obtain the property configuration for a given sequence."
+    },
+    {
+      "id": 120,
+      "project": "jtopas",
+      "name": "getKeyword",
+      "class": "AbstractTokenizerProperties",
+      "summary": "Retrieves the `TokenizerProperty` for a specified keyword. It is commonly used in assignment statements to obtain property details for tokenization."
+    },
+    {
+      "id": 128,
+      "project": "jtopas",
+      "name": "getPattern",
+      "class": "AbstractTokenizerProperties",
+      "summary": "Retrieves the `TokenizerProperty` associated with a specified pattern. It is used in assignments to obtain the property configuration for a given pattern."
+    },
+    {
+      "id": 130,
+      "project": "jtopas",
+      "name": "removeProperty",
+      "class": "AbstractTokenizerProperties",
+      "summary": "Removes a specified property from the tokenizer properties collection. This procedural method is used to delete a property configuration by passing its identifier."
+    },
+    {
+      "id": 139,
+      "project": "jtopas",
+      "name": "checkArgument",
+      "class": "AbstractTokenizerProperties",
+      "summary": "Validates a given argument to ensure it meets expected conditions. It is used to verify inputs, such as checking a start position against a descriptor like \"String\"."
+    },
+    {
+      "id": 144,
+      "project": "jtopas",
+      "name": "getType",
+      "class": "TokenizerProperty",
+      "summary": "Returns the integer type of this tokenizer property. It is typically used to evaluate scanned tokens, such as checking if a token's type indicates the end of the file."
+    },
+    {
+      "id": 145,
+      "project": "jtopas",
+      "name": "setFlags",
+      "class": "TokenizerProperty",
+      "summary": "Sets the flags for a tokenizer property to configure its behavior. This method is used to modify the property's attributes during tokenizer initialization."
+    },
+    {
+      "id": 146,
+      "project": "jtopas",
+      "name": "setFlags",
+      "class": "TokenizerProperty",
+      "summary": "Sets the specified flags for a tokenizer property. This procedural method is used to update the property's configuration with the provided flag values."
+    },
+    {
+      "id": 148,
+      "project": "jtopas",
+      "name": "getFlagMask",
+      "class": "TokenizerProperty",
+      "summary": "Retrieves the flag mask associated with this tokenizer property. It is used in bitwise operations to check if specific flags are set."
+    },
+    {
+      "id": 152,
+      "project": "jtopas",
+      "name": "getImages",
+      "class": "TokenizerProperty",
+      "summary": "Returns an array of image strings associated with this tokenizer property. It is typically used to access these strings, such as determining the length of the first image to set a token's length."
+    },
+    {
+      "id": 154,
+      "project": "jtopas",
+      "name": "getCompanion",
+      "class": "TokenizerProperty",
+      "summary": "Retrieves the companion object associated with this tokenizer property. The returned object is typically cast to a specific type, such as `TokenizerProperty`, for further processing."
+    },
+    {
+      "id": 165,
+      "project": "jtopas",
+      "name": "startsWithSequenceCommentOrString",
+      "class": "SequenceStore",
+      "summary": "Determines if the input data starts with a sequence comment or string and returns the corresponding `TokenizerProperty`. This method is typically used to assign the resulting property to a variable for further tokenization."
+    },
+    {
+      "id": 179,
+      "project": "jtopas",
+      "name": "searchString",
+      "class": "SequenceStore",
+      "summary": "Searches for a given string within the sequence store and returns its associated tokenizer property. This method is typically used to retrieve tokenization properties for specific string inputs."
+    },
+    {
+      "id": 183,
+      "project": "jtopas",
+      "name": "compare",
+      "class": "SequenceStore",
+      "summary": "Compares two values, such as images or sequences, using a specified integer parameter and returns an integer result. It is typically used to assign the comparison outcome to an integer variable for further processing."
+    },
+    {
+      "id": 185,
+      "project": "jtopas",
+      "name": "compare",
+      "class": "SequenceStore",
+      "summary": "Compares two values and returns an integer indicating their relative order. It is typically used to assign the result of comparing characters at specific indices from two image sequences."
+    },
+    {
+      "id": 193,
+      "project": "jtopas",
+      "name": "getCharAt",
+      "class": "DataProvider",
+      "summary": "Retrieves the character at a specified index from the data provider. It is commonly used to extract a character from a base data provider at a specific position."
+    },
+    {
+      "id": 7,
+      "project": "nanoxml",
+      "name": "getName",
+      "class": "IXMLElement",
+      "summary": "Retrieves the name of the XML element as a string. This method is used to identify the element when parsing or manipulating XML data."
+    },
+    {
+      "id": 44,
+      "project": "nanoxml",
+      "name": "getContent",
+      "class": "IXMLElement",
+      "summary": "Retrieves the textual content of the XML element as a string. This method is used to extract the inner text of an XML node."
+    },
+    {
+      "id": 45,
+      "project": "nanoxml",
+      "name": "setContent",
+      "class": "IXMLElement",
+      "summary": "Sets the content of the XML element. This method is used to assign or update the element's internal data."
+    },
+    {
+      "id": 48,
+      "project": "nanoxml",
+      "name": "read",
+      "class": "IXMLReader",
+      "summary": "Reads a single character value from the XML input source. It is used within the IXMLReader interface to sequentially process XML data character by character."
+    },
+    {
+      "id": 51,
+      "project": "nanoxml",
+      "name": "unread",
+      "class": "IXMLReader",
+      "summary": "Pushes a value back into the reader's input stream so it can be read again. This is typically used during XML parsing to re-evaluate a previously consumed character or token."
+    },
+    {
+      "id": 52,
+      "project": "nanoxml",
+      "name": "getLineNr",
+      "class": "IXMLReader",
+      "summary": "Retrieves the current line number being processed by the XML reader. This is typically used to track parsing progress or provide accurate line references in error messages."
+    },
+    {
+      "id": 59,
+      "project": "nanoxml",
+      "name": "getSystemID",
+      "class": "IXMLReader",
+      "summary": "Retrieves the system identifier of the XML document being processed. This method is used to determine the source location, such as a URI or file path, of the parsed XML data."
+    },
+    {
+      "id": 61,
+      "project": "nanoxml",
+      "name": "setParameterEntityResolver",
+      "class": "IXMLValidator",
+      "summary": "Sets the parameter entity resolver for handling external parameter entities during XML validation. This method is typically invoked to configure custom resolution logic before validating an XML document."
+    },
+    {
+      "id": 62,
+      "project": "nanoxml",
+      "name": "getParameterEntityResolver",
+      "class": "IXMLValidator",
+      "summary": "Retrieves the parameter entity resolver used during XML validation. This allows developers to access the current resolver instance to inspect or configure entity resolution behavior."
+    },
+    {
+      "id": 63,
+      "project": "nanoxml",
+      "name": "parseDTD",
+      "class": "IXMLValidator",
+      "summary": "Parses a Document Type Definition (DTD) to establish validation rules for XML documents. This method is utilized within the XML validation process."
+    },
+    {
+      "id": 64,
+      "project": "nanoxml",
+      "name": "elementStarted",
+      "class": "IXMLValidator",
+      "summary": "This method handles the event when an XML element begins during parsing. It is used within the XML validation process to track or process the start of document elements."
+    },
+    {
+      "id": 65,
+      "project": "nanoxml",
+      "name": "elementEnded",
+      "class": "IXMLValidator",
+      "summary": "This method handles the event triggered when an XML element ends during parsing. It is invoked as a callback within the XML validation lifecycle to process element closure."
+    },
+    {
+      "id": 66,
+      "project": "nanoxml",
+      "name": "attributeAdded",
+      "class": "IXMLValidator",
+      "summary": "Notifies the XML validator when a new attribute is added to an element. It serves as a callback method invoked during the XML parsing or validation process to track attribute additions."
+    },
+    {
+      "id": 67,
+      "project": "nanoxml",
+      "name": "elementAttributesProcessed",
+      "class": "IXMLValidator",
+      "summary": "Notifies the XML validator that all attributes for a specific element have been processed. This callback method is invoked during event-driven XML parsing to signal the completion of attribute handling."
+    },
+    {
+      "id": 68,
+      "project": "nanoxml",
+      "name": "PCDataAdded",
+      "class": "IXMLValidator",
+      "summary": "Notifies the XML validator that parsed character data (PCDATA) has been added to the document. It acts as an event callback during XML parsing and validation operations."
+    },
+    {
+      "id": 82,
+      "project": "nanoxml",
+      "name": "startNewStream",
+      "class": "StdXMLReader",
+      "summary": "Starts a new input stream for the XML reader to process. This method is used to initialize the underlying character stream, such as a StringReader, from which the parser reads data."
+    },
+    {
+      "id": 83,
+      "project": "nanoxml",
+      "name": "startNewStream",
+      "class": "StdXMLReader",
+      "summary": "Starts a new stream for the XML reader to begin processing. It is invoked procedurally by passing a reader object and a boolean flag to configure the stream initialization."
+    },
+    {
+      "id": 91,
+      "project": "nanoxml",
+      "name": "getFullName",
+      "class": "XMLAttribute",
+      "summary": "Retrieves the full name of the XML attribute as a string. This method is used when the complete, qualified name of the attribute is required for XML processing."
+    },
+    {
+      "id": 92,
+      "project": "nanoxml",
+      "name": "getName",
+      "class": "XMLAttribute",
+      "summary": "Returns the name of this XML attribute as a string. This method is used to identify the attribute when parsing or processing XML documents."
+    },
+    {
+      "id": 93,
+      "project": "nanoxml",
+      "name": "getNamespace",
+      "class": "XMLAttribute",
+      "summary": "Retrieves the namespace of this XML attribute as a string. It is used during XML processing to identify the attribute's namespace context."
+    },
+    {
+      "id": 94,
+      "project": "nanoxml",
+      "name": "getValue",
+      "class": "XMLAttribute",
+      "summary": "Retrieves the string value of an XML attribute. It is used to extract and return the attribute's value for further processing."
+    },
+    {
+      "id": 96,
+      "project": "nanoxml",
+      "name": "getType",
+      "class": "XMLAttribute",
+      "summary": "Returns the type of the XML attribute as a string. This method is used to access the attribute's type information during XML processing."
+    },
+    {
+      "id": 128,
+      "project": "nanoxml",
+      "name": "findAttribute",
+      "class": "XMLElement",
+      "summary": "Finds and returns a specific XML attribute from the current element by name. The returned XMLAttribute is typically assigned to a variable for further processing."
+    },
+    {
+      "id": 129,
+      "project": "nanoxml",
+      "name": "findAttribute",
+      "class": "XMLElement",
+      "summary": "Finds and returns an XML attribute matching the specified name and namespace. It is typically used in assignment statements to retrieve the attribute for further processing."
+    },
+    {
+      "id": 153,
+      "project": "nanoxml",
+      "name": "equalsXMLElement",
+      "class": "XMLElement",
+      "summary": "Determines whether this XML element is equal to another specified XML element. It is typically used to compare the current instance with a raw element cast to an IXMLElement."
+    },
+    {
+      "id": 160,
+      "project": "nanoxml",
+      "name": "finalize",
+      "class": "XMLException",
+      "summary": "Finalizes the XMLException object to perform cleanup operations before garbage collection. This method is invoked automatically by the Java runtime when the object is no longer referenced."
+    },
+    {
+      "id": 5,
+      "project": "siena-master",
+      "name": "wrap",
+      "class": "Json",
+      "summary": "Wraps a given value into a Json representation. It is typically used to convert objects before adding them to collections."
+    },
+    {
+      "id": 10,
+      "project": "siena-master",
+      "name": "get",
+      "class": "Json",
+      "summary": "Retrieves the JSON value associated with a specified key. This method is typically used to extract nested data from a JSON object for further processing or insertion into another structure."
+    },
+    {
+      "id": 11,
+      "project": "siena-master",
+      "name": "put",
+      "class": "Json",
+      "summary": "Adds a key-value pair to the JSON object and returns the current instance to support fluent method chaining. It is typically used to populate the JSON structure with data, such as when iterating over map entries."
+    },
+    {
+      "id": 16,
+      "project": "siena-master",
+      "name": "keys",
+      "class": "Json",
+      "summary": "Retrieves a set of string keys from the JSON object. The returned set can be assigned to a variable for subsequent iteration or processing."
+    },
+    {
+      "id": 17,
+      "project": "siena-master",
+      "name": "containsKey",
+      "class": "Json",
+      "summary": "Checks whether the JSON object contains a specified key. It is typically used in conditional statements to verify key existence before accessing the associated value."
+    },
+    {
+      "id": 27,
+      "project": "siena-master",
+      "name": "size",
+      "class": "Json",
+      "summary": "Returns the size of the JSON value. It is typically used in conditional checks to verify index bounds before accessing elements."
+    },
+    {
+      "id": 38,
+      "project": "siena-master",
+      "name": "asString",
+      "class": "Json",
+      "summary": "Returns the string representation of the current JSON element. This method is used to extract string values from a parsed JSON structure."
+    },
+    {
+      "id": 41,
+      "project": "siena-master",
+      "name": "asBoolean",
+      "class": "Json",
+      "summary": "Converts the current JSON value to a boolean. This method is used to extract boolean data from a JSON node."
+    },
+    {
+      "id": 63,
+      "project": "siena-master",
+      "name": "get",
+      "class": "Json",
+      "summary": "Retrieves a value within the JSON processing context. This procedural method is invoked to extract data during JSON operations."
+    },
+    {
+      "id": 72,
+      "project": "siena-master",
+      "name": "getPersistenceManager",
+      "class": "Model",
+      "summary": "Retrieves the persistence manager instance used to handle data persistence for the model. It is typically used to execute database operations, such as fetching the current model instance."
+    },
+    {
+      "id": 136,
+      "project": "siena-master",
+      "name": "getPersistenceManager",
+      "class": "Model",
+      "summary": "Retrieves the persistence manager responsible for database operations on this model. It is typically used to execute persistence actions, such as fetching the current model instance."
+    },
+    {
+      "id": 167,
+      "project": "siena-master",
+      "name": "createQuery",
+      "class": "PersistenceManager",
+      "summary": "Creates and returns a new query object for executing database operations. This method is used to construct and run queries against the persistence layer."
+    },
+    {
+      "id": 168,
+      "project": "siena-master",
+      "name": "createQuery",
+      "class": "PersistenceManager",
+      "summary": "Creates and returns a new query object for executing datastore queries. It is used within a persistence context to retrieve or manipulate managed entities."
+    },
+    {
+      "id": 172,
+      "project": "siena-master",
+      "name": "get",
+      "class": "PersistenceManager",
+      "summary": "Retrieves a value from the persistence manager. This method is used to access managed data or state within the persistence context."
+    },
+    {
+      "id": 173,
+      "project": "siena-master",
+      "name": "insert",
+      "class": "PersistenceManager",
+      "summary": "Inserts a specified value into the underlying data store to persist new records. This method is used within the persistence layer to save data without returning a result."
+    },
+    {
+      "id": 179,
+      "project": "siena-master",
+      "name": "insert",
+      "class": "PersistenceManager",
+      "summary": "Inserts a specified value into the persistent data store. It returns an integer representing the outcome or generated identifier of the insertion."
+    },
+    {
+      "id": 180,
+      "project": "siena-master",
+      "name": "insert",
+      "class": "PersistenceManager",
+      "summary": "Inserts a specified value into the persistent storage and returns an integer indicating the result of the operation. This method is utilized by the PersistenceManager to persist new data entries."
+    },
+    {
+      "id": 185,
+      "project": "siena-master",
+      "name": "get",
+      "class": "PersistenceManager",
+      "summary": "Retrieves an integer value from the persistence layer. This method is used to access specific numeric data or identifiers managed by the PersistenceManager."
+    },
+    {
+      "id": 186,
+      "project": "siena-master",
+      "name": "get",
+      "class": "PersistenceManager",
+      "summary": "Retrieves an integer value from the persistent storage. This method is used to fetch specific integer properties or identifiers managed by the PersistenceManager."
+    },
+    {
+      "id": 197,
+      "project": "siena-master",
+      "name": "get",
+      "class": "PersistenceManager",
+      "summary": "Retrieves a persisted value of type T from the data store. This method is used to fetch a specific managed entity by its identifier within the persistence layer."
+    },
+    {
+      "id": 222,
+      "project": "siena-master",
+      "name": "get",
+      "class": "PersistenceManagerFactory",
+      "summary": "Retrieves a PersistenceManager instance from the factory. It is typically invoked with a specific class to obtain a manager configured for handling objects of that type."
+    },
+    {
+      "id": 227,
+      "project": "siena-master",
+      "name": "filter",
+      "class": "Query",
+      "summary": "Filters the values of the query based on a specified condition. It returns a new Query instance to enable fluent method chaining."
+    },
+    {
+      "id": 228,
+      "project": "siena-master",
+      "name": "order",
+      "class": "Query",
+      "summary": "Specifies the sorting order for the query results based on the provided value. It returns the Query instance to support fluent method chaining."
+    },
+    {
+      "id": 239,
+      "project": "siena-master",
+      "name": "fetch",
+      "class": "Query",
+      "summary": "The `fetch` method retrieves a list of values of type `T` by executing the query. It is used to obtain the complete set of results matching the query criteria."
+    },
+    {
+      "id": 240,
+      "project": "siena-master",
+      "name": "fetch",
+      "class": "Query",
+      "summary": "The `fetch` method retrieves a list of values of type `T` by executing the current query. It is used to obtain the final result set from the underlying data source."
+    },
+    {
+      "id": 241,
+      "project": "siena-master",
+      "name": "fetch",
+      "class": "Query",
+      "summary": "Retrieves a list of values of type `T` based on the query criteria. It is used to execute the query and return the resulting collection of data."
+    },
+    {
+      "id": 276,
+      "project": "siena-master",
+      "name": "createRequest",
+      "class": "RemotePersistenceManager",
+      "summary": "Creates a new request document using the specified name. It is used to instantiate and assign a Document object for remote persistence operations."
+    },
+    {
+      "id": 277,
+      "project": "siena-master",
+      "name": "createRequest",
+      "class": "RemotePersistenceManager",
+      "summary": "Creates a request document using the specified name, entity, and identifiers. The returned document is typically assigned to a variable for subsequent remote persistence operations."
+    },
+    {
+      "id": 278,
+      "project": "siena-master",
+      "name": "simpleRequest",
+      "class": "RemotePersistenceManager",
+      "summary": "Sends a simple remote request to the persistence manager using a specified action, target object, and boolean flag. It is typically used to execute remote operations such as deleting an object."
+    },
+    {
+      "id": 285,
+      "project": "siena-master",
+      "name": "createRequest",
+      "class": "RemotePersistenceManager",
+      "summary": "Creates and returns a Document representing a request for the specified name. It is typically used by assigning the returned Document to a variable."
+    },
+    {
+      "id": 321,
+      "project": "siena-master",
+      "name": "serialize",
+      "class": "Serializer",
+      "summary": "Serializes a given value and writes the resulting data to an output stream. This method is typically used to transmit serialized objects over a network connection."
+    },
+    {
+      "id": 322,
+      "project": "siena-master",
+      "name": "deserialize",
+      "class": "Serializer",
+      "summary": "Deserializes a value from an input stream into a Document object. This method is typically used to parse data retrieved from a connector's input stream into a structured document."
+    }
+  ]
+}

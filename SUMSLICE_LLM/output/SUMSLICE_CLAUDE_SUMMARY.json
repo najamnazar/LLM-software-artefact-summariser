@@ -1,0 +1,1181 @@
+{
+  "model": "anthropic/claude-sonnet-4.6",
+  "summaries": [
+    {
+      "id": 72,
+      "project": "jEdit",
+      "name": "getFlag",
+      "class": "Buffer",
+      "summary": "Returns the boolean value of a specified flag for the buffer, used extensively in conditional checks to test buffer state properties such as whether the buffer is untitled, read-only, or has other attributes."
+    },
+    {
+      "id": 95,
+      "project": "jEdit",
+      "name": "getProperty",
+      "class": "PropertyManager",
+      "summary": "Retrieves a property value as a String by name from the managed property store. Used in assignment contexts to obtain configuration or site-level property values, as seen in `String value = site.getProperty(name)`."
+    },
+    {
+      "id": 96,
+      "project": "jEdit",
+      "name": "setProperty",
+      "class": "PropertyManager",
+      "summary": "Sets a named property to the specified value within the `PropertyManager`, serving as the primary mechanism for storing or updating property entries in the system."
+    },
+    {
+      "id": 100,
+      "project": "jEdit",
+      "name": "getDefaultProperty",
+      "class": "PropertyManager",
+      "summary": "Retrieves the default value for a named property, serving as a delegating helper called by at least three other methods to resolve property defaults."
+    },
+    {
+      "id": 121,
+      "project": "jEdit",
+      "name": "getInputHandler",
+      "class": "View",
+      "summary": "Returns the input handler associated with this view, used to manage keyboard input processing. Typically called when initializing a new `DefaultInputHandler` that needs a reference to the current view's input handler."
+    },
+    {
+      "id": 213,
+      "project": "jEdit",
+      "name": "invoke",
+      "class": "BshMethod",
+      "summary": "Invokes the method with the provided arguments and interpreter context, returning the resulting value as an Object. Serves as the primary entry point for executing a BshMethod within the BeanShell scripting environment."
+    },
+    {
+      "id": 214,
+      "project": "jEdit",
+      "name": "invoke",
+      "class": "BshMethod",
+      "summary": "Invokes the BshMethod and returns the resulting value, serving as an entry point for method execution within the BeanShell interpreter context."
+    },
+    {
+      "id": 215,
+      "project": "jEdit",
+      "name": "invoke",
+      "class": "BshMethod",
+      "summary": "Invokes the BshMethod with the given argument values and interpreter, delegating to an overloaded version with null callstack, null caller info, and strict Java mode disabled."
+    },
+    {
+      "id": 221,
+      "project": "jEdit",
+      "name": "event",
+      "class": "JThis",
+      "summary": "Fires a named event with a given value, typically used to notify listeners of state changes such as ancestor modifications."
+    },
+    {
+      "id": 309,
+      "project": "jEdit",
+      "name": "BeginToken",
+      "class": "JavaCharStream",
+      "summary": "Begins a new token by reading and returning the first character from the input stream, typically called to mark the start of token recognition in a lexical analyzer."
+    },
+    {
+      "id": 312,
+      "project": "jEdit",
+      "name": "readChar",
+      "class": "JavaCharStream",
+      "summary": "Reads and returns the next character from the input stream, advancing the stream position. Called frequently across the codebase as a core character-reading operation within the `JavaCharStream` class."
+    },
+    {
+      "id": 315,
+      "project": "jEdit",
+      "name": "getEndColumn",
+      "class": "JavaCharStream",
+      "summary": "Returns the column number of the last character of the most recently read token, used when reinitializing or tracking position within a character stream."
+    },
+    {
+      "id": 316,
+      "project": "jEdit",
+      "name": "getEndLine",
+      "class": "JavaCharStream",
+      "summary": "Returns the line number of the end position of the last character read from the stream, typically used when reinitializing the input stream to preserve the current position."
+    },
+    {
+      "id": 319,
+      "project": "jEdit",
+      "name": "backup",
+      "class": "JavaCharStream",
+      "summary": "Backs up the stream by a specified number of characters, effectively rewinding the current position in the character buffer. Typically called during tokenization when a lookahead character needs to be \"unread\" and reprocessed."
+    },
+    {
+      "id": 332,
+      "project": "jEdit",
+      "name": "GetImage",
+      "class": "JavaCharStream",
+      "summary": "Returns the current token image as a String from the character stream, used to retrieve the matched token text during lexical analysis."
+    },
+    {
+      "id": 345,
+      "project": "jEdit",
+      "name": "getNode",
+      "class": "NameSpace",
+      "summary": "Returns the `SimpleNode` associated with this `NameSpace`, typically used to retrieve the underlying AST node for further processing or inspection."
+    },
+    {
+      "id": 372,
+      "project": "jEdit",
+      "name": "getMethod",
+      "class": "NameSpace",
+      "summary": "Retrieves a `BshMethod` by name from the namespace, returning the corresponding method object. Typically used in assignment contexts where a specific method needs to be looked up within a `NameSpace` instance, such as resolving event handler methods by name."
+    },
+    {
+      "id": 373,
+      "project": "jEdit",
+      "name": "getMethod",
+      "class": "NameSpace",
+      "summary": "Retrieves a `BshMethod` by name and signature, delegating to an overloaded version with a default `false` parameter for additional lookup behavior."
+    },
+    {
+      "id": 757,
+      "project": "jEdit",
+      "name": "getToken",
+      "class": "Parser",
+      "summary": "Retrieves a specific token from the parser's token stream, used in contexts such as assigning the first token of a `SimpleNode` during parsing operations."
+    },
+    {
+      "id": 810,
+      "project": "jEdit",
+      "name": "jjFillToken",
+      "class": "ParserTokenManager",
+      "summary": "Creates and populates a new `Token` object with the current matched token's metadata (such as kind, image, and position). Used during lexical analysis when a token has been successfully matched and needs to be constructed for further parsing."
+    },
+    {
+      "id": 811,
+      "project": "jEdit",
+      "name": "getNextToken",
+      "class": "ParserTokenManager",
+      "summary": "Retrieves and returns the next token from the input stream by advancing the lexer state. Manages token transitions and handles any lexical errors encountered during tokenization."
+    },
+    {
+      "id": 812,
+      "project": "jEdit",
+      "name": "getSourceFile",
+      "class": "SimpleNode",
+      "summary": "Returns the source file associated with this node, delegating to the parent node if the current node's source file is null. Used conditionally to traverse up the node hierarchy until a non-null source file is found."
+    },
+    {
+      "id": 830,
+      "project": "jEdit",
+      "name": "getSourceFile",
+      "class": "SimpleNode",
+      "summary": "Returns the source file associated with this node by delegating to its parser context."
+    },
+    {
+      "id": 849,
+      "project": "jEdit",
+      "name": "getLineCount",
+      "class": "JEditBuffer",
+      "summary": "Returns the total number of lines in the buffer, typically used in bounds-checking conditions to validate that a given line index is within the valid range."
+    },
+    {
+      "id": 851,
+      "project": "jEdit",
+      "name": "getLineStartOffset",
+      "class": "JEditBuffer",
+      "summary": "Returns the start offset of the specified line within the buffer, commonly used in conjunction with `getLineEndOffset` to calculate line lengths or define text ranges for editing operations."
+    },
+    {
+      "id": 964,
+      "project": "jEdit",
+      "name": "getLineCount",
+      "class": "LineManager",
+      "summary": "Returns the total number of lines managed by the `LineManager` instance."
+    },
+    {
+      "id": 6,
+      "project": "jajuk",
+      "name": "popupMenuCanceled",
+      "class": "DropDownButton",
+      "summary": "Handles the cancellation event of the popup menu by ensuring the button's pressed state is properly reset or updated when the user dismisses the menu without making a selection."
+    },
+    {
+      "id": 16,
+      "project": "jajuk",
+      "name": "getGenre",
+      "class": "AudioObject",
+      "summary": "Returns the genre associated with the audio object as a String value."
+    },
+    {
+      "id": 37,
+      "project": "jajuk",
+      "name": "setImage",
+      "class": "ContextListener",
+      "summary": "Sets the image associated with the context listener. This method is a setter intended to assign or update the image property of the `ContextListener` instance."
+    },
+    {
+      "id": 46,
+      "project": "jajuk",
+      "name": "getArtistSimilarCacheDir",
+      "class": "LastFmCache",
+      "summary": "Returns the directory used for caching artist similarity data, intended for use in cache management operations such as cleaning or accessing cached similar-artist results."
+    },
+    {
+      "id": 57,
+      "project": "jajuk",
+      "name": "getFileNameForArtistInfo",
+      "class": "LastFmCache",
+      "summary": "Returns the file path string for an artist's cached info by concatenating the cache directory's absolute path with the appropriate filename for the given artist."
+    },
+    {
+      "id": 101,
+      "project": "jajuk",
+      "name": "handleDirectories",
+      "class": "Collection",
+      "summary": "Handles directory-related processing by operating on a collection using the provided attributes and an index identifier. Called procedurally to manage directory entries within the collection context."
+    },
+    {
+      "id": 112,
+      "project": "jajuk",
+      "name": "GenreManager",
+      "class": "GenreManager",
+      "summary": "Constructs a new `GenreManager` instance, initializing it with the necessary dependencies or default state by invoking two internal setup calls."
+    },
+    {
+      "id": 131,
+      "project": "jajuk",
+      "name": "getType",
+      "class": "PropertyMetaInformation",
+      "summary": "Returns the type associated with this property meta information as a `Class<?>` object."
+    },
+    {
+      "id": 162,
+      "project": "jajuk",
+      "name": "getDiscoveryDate",
+      "class": "Track",
+      "summary": "Returns the discovery date associated with this track. Typically used in assignment contexts when building string representations or other data aggregations involving track metadata."
+    },
+    {
+      "id": 170,
+      "project": "jajuk",
+      "name": "updateRate",
+      "class": "Track",
+      "summary": "Updates the track's rate by recalculating or refreshing the relevant rate-related state, called as a standalone procedural operation with no parameters or return value."
+    },
+    {
+      "id": 212,
+      "project": "jajuk",
+      "name": "isAutocommit",
+      "class": "TrackManager",
+      "summary": "Returns whether autocommit mode is currently enabled for the track manager."
+    },
+    {
+      "id": 218,
+      "project": "jajuk",
+      "name": "getURL",
+      "class": "Cover",
+      "summary": "Returns the URL associated with this `Cover` object, used for comparison purposes such as checking URL equality between cover instances."
+    },
+    {
+      "id": 245,
+      "project": "jajuk",
+      "name": "subList",
+      "class": "QueueList",
+      "summary": "Returns a sublist of `StackItem` elements from the specified index to the end of the internal list by delegating to `ArrayList.subList` and wrapping the result in a new `ArrayList`."
+    },
+    {
+      "id": 260,
+      "project": "jajuk",
+      "name": "process",
+      "class": "XMLExporter",
+      "summary": "Processes a list of items by exporting them to XML format, iterating over each item and writing its data using the XMLExporter's output logic. Typically called with a collection retrieved from a manager instance, such as `DeviceManager.getInstance().getItems()`."
+    },
+    {
+      "id": 261,
+      "project": "jajuk",
+      "name": "process",
+      "class": "XMLExporter",
+      "summary": "Processes a value by casting the given item to an `Album` and delegating to the appropriate export handler. Called in procedural contexts where XML export logic needs to handle album-type items specifically."
+    },
+    {
+      "id": 262,
+      "project": "jajuk",
+      "name": "process",
+      "class": "XMLExporter",
+      "summary": "Processes a value by casting the given item to an `Album` and delegating to the appropriate export handler. Called in procedural contexts where items need to be serialized or exported as XML."
+    },
+    {
+      "id": 263,
+      "project": "jajuk",
+      "name": "process",
+      "class": "XMLExporter",
+      "summary": "Processes a value by casting the given item to an `Album` and delegating to the appropriate export handler. It is called procedurally in contexts where an item needs to be serialized or exported as XML."
+    },
+    {
+      "id": 264,
+      "project": "jajuk",
+      "name": "process",
+      "class": "XMLExporter",
+      "summary": "Processes a value by casting the given item to an `Album` and delegating to the appropriate export handler. This method is called in procedural contexts where XML export logic needs to handle album-type items specifically."
+    },
+    {
+      "id": 265,
+      "project": "jajuk",
+      "name": "process",
+      "class": "XMLExporter",
+      "summary": "Processes a value by casting the given item to an `Album` and delegating to the appropriate export handler. Called in procedural contexts where items need to be serialized or exported to XML format."
+    },
+    {
+      "id": 266,
+      "project": "jajuk",
+      "name": "process",
+      "class": "XMLExporter",
+      "summary": "Processes a value by casting the given item to an `Album` and delegating to the appropriate typed handler. It is called procedurally in contexts where a generic item needs to be handled as an `Album` during XML export."
+    },
+    {
+      "id": 278,
+      "project": "jajuk",
+      "name": "process",
+      "class": "XMLExporter",
+      "summary": "Processes a value by exporting it as XML, handling the conversion and serialization of the provided object into its XML representation. Called procedurally in contexts such as `process((Album)item)`, suggesting it dispatches processing based on the specific type of the item being exported."
+    },
+    {
+      "id": 288,
+      "project": "jajuk",
+      "name": "perform",
+      "class": "GCAction",
+      "summary": "Executes the garbage collection action by invoking the Java runtime's garbage collector. Typically called through the `ActionManager` to trigger manual GC from within the application's action framework."
+    },
+    {
+      "id": 290,
+      "project": "jajuk",
+      "name": "getItemAt",
+      "class": "PlaylistTableModel",
+      "summary": "Retrieves and returns an `Item` object at a specified position within the playlist table model's data structure."
+    },
+    {
+      "id": 311,
+      "project": "jajuk",
+      "name": "handleSave",
+      "class": "CoverView",
+      "summary": "Handles the save operation by delegating to `handleSaveAs()`, serving as a procedural entry point for triggering a save-as workflow within the `CoverView` class."
+    },
+    {
+      "id": 353,
+      "project": "jajuk",
+      "name": "updateGUIFromConfCovers",
+      "class": "ParameterViewGUIHelper",
+      "summary": "Updates the GUI components to reflect the current configuration coverage settings, typically called to synchronize the interface state with underlying configuration data."
+    },
+    {
+      "id": 394,
+      "project": "jajuk",
+      "name": "getNothingFoundPanel",
+      "class": "SuggestionView",
+      "summary": "Returns a JPanel indicating that no results were found, used as the content of a JScrollPane when a suggestion search yields no matches."
+    },
+    {
+      "id": 405,
+      "project": "jajuk",
+      "name": "getID",
+      "class": "ViewAdapter",
+      "summary": "Returns the unique identifier of the view adapter, commonly used when setting XML properties or referencing the adapter in configurations such as album metadata assignments."
+    },
+    {
+      "id": 414,
+      "project": "jajuk",
+      "name": "paint",
+      "class": "JajukJSplitPane",
+      "summary": "Overrides the paint method to apply a one-time divider location adjustment before delegating to the superclass rendering, ensuring the split pane initializes with the correct proportional divider position on first paint."
+    },
+    {
+      "id": 415,
+      "project": "jajuk",
+      "name": "JajukJSplitPane",
+      "class": "JajukJSplitPane",
+      "summary": "Creates a new `JajukJSplitPane` instance, serving as the constructor for this custom split pane component."
+    },
+    {
+      "id": 420,
+      "project": "jajuk",
+      "name": "getOptionPane",
+      "class": "PasswordDialog",
+      "summary": "Returns the `JOptionPane` instance associated with this `PasswordDialog`, providing access to the underlying option pane component for configuration or retrieval purposes."
+    },
+    {
+      "id": 440,
+      "project": "jajuk",
+      "name": "closeSystray",
+      "class": "JajukSystray",
+      "summary": "Closes and removes the system tray icon, cleaning up the systray resources when the application shuts down or the tray is no longer needed."
+    },
+    {
+      "id": 448,
+      "project": "jajuk",
+      "name": "WindowGlobalKeystrokeManager",
+      "class": "WindowGlobalKeystrokeManager",
+      "summary": "Constructs a new `WindowGlobalKeystrokeManager` instance, serving as the entry point for managing global keystroke handling across windows. Typically used in assignment context to initialize a single manager instance, as in `self = new WindowGlobalKeystrokeManager()`."
+    },
+    {
+      "id": 22,
+      "project": "jhotdraw",
+      "name": "createAlignmentMenu",
+      "class": "DrawApplication",
+      "summary": "Creates and returns a `JMenu` for alignment-related actions, which is added to the menu bar via `addMenuIfPossible`."
+    },
+    {
+      "id": 108,
+      "project": "jhotdraw",
+      "name": "getCommand",
+      "class": "CommandMenuItem",
+      "summary": "Returns the `Command` associated with this menu item, intended for use when executing the command directly, as in `getCommand().execute()`."
+    },
+    {
+      "id": 117,
+      "project": "jhotdraw",
+      "name": "getComponent",
+      "class": "ComponentFigure",
+      "summary": "Returns the AWT `Component` associated with this figure, used to retrieve the component for operations such as setting its bounds or other display-related configurations."
+    },
+    {
+      "id": 127,
+      "project": "jhotdraw",
+      "name": "createUndoActivity",
+      "class": "PolygonScaleHandle",
+      "summary": "Creates and returns a new `UndoActivity` instance associated with the given drawing view, enabling undo support for polygon scale handle operations. It is called during scaling interactions and its result is assigned to track the undoable state of the transformation."
+    },
+    {
+      "id": 137,
+      "project": "jhotdraw",
+      "name": "invokeEnd",
+      "class": "TriangleRotationHandle",
+      "summary": "Finalizes or terminates the invocation of an end operation on a `TriangleRotationHandle`, likely cleaning up state or committing a rotation interaction when the user releases or completes a drag gesture."
+    },
+    {
+      "id": 148,
+      "project": "jhotdraw",
+      "name": "AttributeFigureContentProducer",
+      "class": "AttributeFigureContentProducer",
+      "summary": "Creates a new `AttributeFigureContentProducer` instance, serving as the default constructor for this class."
+    },
+    {
+      "id": 161,
+      "project": "jhotdraw",
+      "name": "markFontDirty",
+      "class": "HTMLTextAreaFigure",
+      "summary": "Marks the font as dirty to signal that it needs to be recalculated or refreshed, typically called when font-related properties change in an `HTMLTextAreaFigure`."
+    },
+    {
+      "id": 216,
+      "project": "jhotdraw",
+      "name": "setURL",
+      "class": "URLContentProducer",
+      "summary": "Sets the URL for this content producer, used to configure the source location from which content will be retrieved."
+    },
+    {
+      "id": 217,
+      "project": "jhotdraw",
+      "name": "ZoomDrawingView",
+      "class": "ZoomDrawingView",
+      "summary": "Creates and initializes a new `ZoomDrawingView` instance, serving as the constructor for a zoomable drawing view component."
+    },
+    {
+      "id": 218,
+      "project": "jhotdraw",
+      "name": "ZoomDrawingView",
+      "class": "ZoomDrawingView",
+      "summary": "Creates and initializes a new `ZoomDrawingView` instance, serving as the constructor for this drawing view component."
+    },
+    {
+      "id": 270,
+      "project": "jhotdraw",
+      "name": "getTypingTarget",
+      "class": "TextTool",
+      "summary": "Returns the current typing target, which is the `TextHolder` object that is actively receiving text input. Used conditionally to check whether a typing target exists before performing text-related operations."
+    },
+    {
+      "id": 291,
+      "project": "jhotdraw",
+      "name": "createButtons",
+      "class": "JavaDrawApplet",
+      "summary": "Creates and initializes the button components for the JavaDrawApplet interface. This method sets up the UI button elements used within the applet's drawing toolbar or control panel."
+    },
+    {
+      "id": 298,
+      "project": "jhotdraw",
+      "name": "deactivate",
+      "class": "AbstractTool",
+      "summary": "Deactivates the current tool by clearing its active value and performing any necessary cleanup. Called without arguments as part of the tool lifecycle when the tool needs to be disabled or switched out."
+    },
+    {
+      "id": 357,
+      "project": "jhotdraw",
+      "name": "findConnectableFigure",
+      "class": "ChangeConnectionHandle",
+      "summary": "Finds and returns a connectable figure at the specified coordinates within the given drawing, used during connection handle interactions to identify valid connection targets."
+    },
+    {
+      "id": 377,
+      "project": "jhotdraw",
+      "name": "findConnectionTarget",
+      "class": "ConnectionHandle",
+      "summary": "Locates and returns the `Connector` at the specified coordinates within the given drawing, serving as the target for a connection operation. Typically called during connection handle interactions to resolve the endpoint of a connector being drawn or moved."
+    },
+    {
+      "id": 395,
+      "project": "jhotdraw",
+      "name": "getPrototypeFigure",
+      "class": "CreationTool",
+      "summary": "Returns the prototype figure associated with this creation tool, typically used to check whether a prototype figure has been set before proceeding with a creation operation."
+    },
+    {
+      "id": 433,
+      "project": "jhotdraw",
+      "name": "selectionHandles",
+      "class": "StandardDrawingView",
+      "summary": "Returns an enumeration of handles for the current selection, typically used to retrieve and iterate over interactive control points associated with selected drawing elements."
+    },
+    {
+      "id": 447,
+      "project": "jhotdraw",
+      "name": "drawingInvalidated",
+      "class": "StandardDrawingView",
+      "summary": "Handles invalidation events from the drawing model by triggering a repaint of the view to reflect any changes made to the drawing's contents."
+    },
+    {
+      "id": 470,
+      "project": "jhotdraw",
+      "name": "keyTyped",
+      "class": "StandardDrawingView",
+      "summary": "Handles a key-typed event within the drawing view, serving as an implementation of the key listener interface method that responds when a key is typed by the user."
+    },
+    {
+      "id": 490,
+      "project": "jhotdraw",
+      "name": "keyTyped",
+      "class": "StandardDrawingView",
+      "summary": "Handles a key-typed event within the drawing view, serving as an implementation of the key listener interface that currently performs no action."
+    },
+    {
+      "id": 504,
+      "project": "jhotdraw",
+      "name": "NullToolTest",
+      "class": "NullToolTest",
+      "summary": "Constructs a new `NullToolTest` instance, serving as the default constructor for the test class."
+    },
+    {
+      "id": 519,
+      "project": "jhotdraw",
+      "name": "testVault",
+      "class": "OffsetLocatorTest",
+      "summary": "Tests the vault-related offset location functionality to verify correct behavior when locating offsets within a vault context."
+    },
+    {
+      "id": 520,
+      "project": "jhotdraw",
+      "name": "StandardFigureSelectionTest",
+      "class": "StandardFigureSelectionTest",
+      "summary": "Creates a new instance of `StandardFigureSelectionTest`, serving as the default constructor for this test class."
+    },
+    {
+      "id": 530,
+      "project": "jhotdraw",
+      "name": "setUp",
+      "class": "ClipboardTest",
+      "summary": "Initializes the test environment by invoking the superclass `setUp` method to prepare the necessary preconditions before each test case in `ClipboardTest` runs."
+    },
+    {
+      "id": 536,
+      "project": "jhotdraw",
+      "name": "addStorageFormat",
+      "class": "StorageFormatManager",
+      "summary": "Registers a new storage format with the manager, as demonstrated by adding the default storage format to the `StorageFormatManager` instance."
+    },
+    {
+      "id": 554,
+      "project": "jhotdraw",
+      "name": "setUndoActivity",
+      "class": "UndoableCommand",
+      "summary": "Sets the undo activity associated with this undoable command, replacing any previously assigned activity."
+    },
+    {
+      "id": 560,
+      "project": "jhotdraw",
+      "name": "commandExecuted",
+      "class": "UndoableCommand",
+      "summary": "Marks the command as having been executed by setting the internal executed state to true."
+    },
+    {
+      "id": 8,
+      "project": "jtopas",
+      "name": "getTokenizerProperties",
+      "class": "AbstractTokenizer",
+      "summary": "Returns the `TokenizerProperties` associated with this tokenizer, providing access to configuration such as parse flags used to control tokenization behavior."
+    },
+    {
+      "id": 47,
+      "project": "jtopas",
+      "name": "getBaseTokenizer",
+      "class": "AbstractTokenizer",
+      "summary": "Returns the base tokenizer associated with this instance, typically used to access the underlying tokenizer in assignment contexts where the base implementation is needed."
+    },
+    {
+      "id": 48,
+      "project": "jtopas",
+      "name": "getBaseDataProvider",
+      "class": "AbstractTokenizer",
+      "summary": "Returns the base `DataProvider` instance used by the tokenizer, typically accessed to retrieve underlying character or data content at a given position."
+    },
+    {
+      "id": 49,
+      "project": "jtopas",
+      "name": "readMoreDataFromBase",
+      "class": "AbstractTokenizer",
+      "summary": "Reads additional data from the underlying base source into the tokenizer's buffer, returning an integer result indicating the outcome. Called internally by the tokenizer when more input data is needed during the tokenization process."
+    },
+    {
+      "id": 64,
+      "project": "jtopas",
+      "name": "isFlagSet",
+      "class": "AbstractTokenizer",
+      "summary": "Checks whether a specific flag is set on the tokenizer, returning true if the flag is active. Commonly used in conditional logic to control tokenizer behavior based on configuration flags."
+    },
+    {
+      "id": 65,
+      "project": "jtopas",
+      "name": "isFlagSet",
+      "class": "AbstractTokenizer",
+      "summary": "Checks whether a specific tokenizer flag is currently set, returning a boolean result. Used internally to query the state of tokenizer configuration flags, such as determining whether simple whitespace handling is enabled."
+    },
+    {
+      "id": 68,
+      "project": "jtopas",
+      "name": "doGetProperty",
+      "class": "AbstractTokenizerProperties",
+      "summary": "Retrieves a `TokenizerProperty` associated with a given token type and starting sequence, serving as a core lookup method called by multiple higher-level property accessors within the tokenizer framework."
+    },
+    {
+      "id": 88,
+      "project": "jtopas",
+      "name": "getString",
+      "class": "AbstractTokenizerProperties",
+      "summary": "Retrieves a `TokenizerProperty` associated with a given string token. Typically used in assignment contexts to look up tokenizer configuration for a specific string pattern."
+    },
+    {
+      "id": 104,
+      "project": "jtopas",
+      "name": "getBlockComment",
+      "class": "AbstractTokenizerProperties",
+      "summary": "Returns the `TokenizerProperty` associated with a block comment that begins with the specified start sequence, intended for use when retrieving comment token metadata by its opening delimiter."
+    },
+    {
+      "id": 112,
+      "project": "jtopas",
+      "name": "getSpecialSequence",
+      "class": "AbstractTokenizerProperties",
+      "summary": "Retrieves the `TokenizerProperty` associated with a given special sequence, returning the property object that can be used for further inspection or assignment."
+    },
+    {
+      "id": 120,
+      "project": "jtopas",
+      "name": "getKeyword",
+      "class": "AbstractTokenizerProperties",
+      "summary": "Retrieves a `TokenizerProperty` associated with the specified keyword, returning the property object for assignment or further inspection. Typically called when looking up keyword definitions within the tokenizer's property registry."
+    },
+    {
+      "id": 128,
+      "project": "jtopas",
+      "name": "getPattern",
+      "class": "AbstractTokenizerProperties",
+      "summary": "Returns the `TokenizerProperty` associated with the given pattern by looking it up in the tokenizer's property store. Used in assignment contexts where the retrieved property is needed for further processing or validation."
+    },
+    {
+      "id": 130,
+      "project": "jtopas",
+      "name": "removeProperty",
+      "class": "AbstractTokenizerProperties",
+      "summary": "Removes a property from the tokenizer's property collection, typically called to unregister or clean up a previously added tokenizer property configuration."
+    },
+    {
+      "id": 139,
+      "project": "jtopas",
+      "name": "checkArgument",
+      "class": "AbstractTokenizerProperties",
+      "summary": "Validates that a given argument meets expected conditions, throwing an appropriate exception if the check fails. Commonly used as a precondition guard throughout the class to enforce input constraints before processing tokenizer operations."
+    },
+    {
+      "id": 144,
+      "project": "jtopas",
+      "name": "getType",
+      "class": "TokenizerProperty",
+      "summary": "Returns the integer type identifier of this tokenizer property, used to distinguish between different token classifications during lexical scanning."
+    },
+    {
+      "id": 145,
+      "project": "jtopas",
+      "name": "setFlags",
+      "class": "TokenizerProperty",
+      "summary": "Sets the flags on the `TokenizerProperty`, overwriting any previously assigned flag values with the provided integer bitmask."
+    },
+    {
+      "id": 146,
+      "project": "jtopas",
+      "name": "setFlags",
+      "class": "TokenizerProperty",
+      "summary": "Sets the flags on the `TokenizerProperty`, replacing any previously stored flag values with the provided ones."
+    },
+    {
+      "id": 148,
+      "project": "jtopas",
+      "name": "getFlagMask",
+      "class": "TokenizerProperty",
+      "summary": "Returns the bitmask used to validate or check individual flags, typically used in bitwise AND operations to determine whether a specific flag is set."
+    },
+    {
+      "id": 152,
+      "project": "jtopas",
+      "name": "getImages",
+      "class": "TokenizerProperty",
+      "summary": "Returns the string images (representations) associated with this tokenizer property, used when accessing specific token patterns such as retrieving the first image's length as shown in typical usage."
+    },
+    {
+      "id": 154,
+      "project": "jtopas",
+      "name": "getCompanion",
+      "class": "TokenizerProperty",
+      "summary": "Returns the companion object associated with this tokenizer property. Typically used to retrieve metadata or contextual data linked to a token, as seen when casting the result to a `TokenizerProperty` instance."
+    },
+    {
+      "id": 165,
+      "project": "jtopas",
+      "name": "startsWithSequenceCommentOrString",
+      "class": "SequenceStore",
+      "summary": "Checks whether the current position in the provided data source begins with a sequence-based comment or string token, returning the matching `TokenizerProperty` if found or `null` otherwise. Typically called during tokenization to identify and classify sequence-delimited constructs at the current read position."
+    },
+    {
+      "id": 179,
+      "project": "jtopas",
+      "name": "searchString",
+      "class": "SequenceStore",
+      "summary": "Searches for a string token matching the given image within the sequence store, returning the corresponding `TokenizerProperty` if found. Used procedurally to look up string-type tokens, with an overload that defaults the search behavior as shown in the typical call pattern `return searchString(image, true)`."
+    },
+    {
+      "id": 183,
+      "project": "jtopas",
+      "name": "compare",
+      "class": "SequenceStore",
+      "summary": "Compares two image values within the sequence store, returning an integer result indicating their relative ordering or equality. Used in assignment contexts where the comparison result is stored, such as evaluating positional relationships between images in a sequence."
+    },
+    {
+      "id": 185,
+      "project": "jtopas",
+      "name": "compare",
+      "class": "SequenceStore",
+      "summary": "Compares two character values and returns an integer result indicating their relative order. Used in sequence comparison operations where character-by-character evaluation is needed, as seen when comparing characters at corresponding positions in two image strings."
+    },
+    {
+      "id": 193,
+      "project": "jtopas",
+      "name": "getCharAt",
+      "class": "DataProvider",
+      "summary": "Returns the character at a specified position within the data provider, used as a low-level data access method called by other data retrieval operations such as fetching a single character from a base data segment."
+    },
+    {
+      "id": 7,
+      "project": "nanoxml",
+      "name": "getName",
+      "class": "IXMLElement",
+      "summary": "Returns the name of the XML element as a String."
+    },
+    {
+      "id": 44,
+      "project": "nanoxml",
+      "name": "getContent",
+      "class": "IXMLElement",
+      "summary": "Returns the text content of the XML element as a String."
+    },
+    {
+      "id": 45,
+      "project": "nanoxml",
+      "name": "setContent",
+      "class": "IXMLElement",
+      "summary": "Sets the text content of the XML element, replacing any existing content with the provided string value."
+    },
+    {
+      "id": 48,
+      "project": "nanoxml",
+      "name": "read",
+      "class": "IXMLReader",
+      "summary": "Reads and returns a single character value from the XML input source."
+    },
+    {
+      "id": 51,
+      "project": "nanoxml",
+      "name": "unread",
+      "class": "IXMLReader",
+      "summary": "Pushes a previously read value back into the XML reader's input stream, allowing it to be read again on the next read operation."
+    },
+    {
+      "id": 52,
+      "project": "nanoxml",
+      "name": "getLineNr",
+      "class": "IXMLReader",
+      "summary": "Returns the current line number in the XML document being read."
+    },
+    {
+      "id": 59,
+      "project": "nanoxml",
+      "name": "getSystemID",
+      "class": "IXMLReader",
+      "summary": "Returns the system ID of the current XML resource being read."
+    },
+    {
+      "id": 61,
+      "project": "nanoxml",
+      "name": "setParameterEntityResolver",
+      "class": "IXMLValidator",
+      "summary": "Sets the parameter entity resolver for the XML validator, which is used to resolve parameter entities encountered during XML validation."
+    },
+    {
+      "id": 62,
+      "project": "nanoxml",
+      "name": "getParameterEntityResolver",
+      "class": "IXMLValidator",
+      "summary": "Returns the entity resolver used for parameter entities in the XML validator."
+    },
+    {
+      "id": 63,
+      "project": "nanoxml",
+      "name": "parseDTD",
+      "class": "IXMLValidator",
+      "summary": "Parses a DTD (Document Type Definition) to validate XML structure and constraints. This method is typically invoked as part of the XML validation process to process and interpret DTD declarations."
+    },
+    {
+      "id": 64,
+      "project": "nanoxml",
+      "name": "elementStarted",
+      "class": "IXMLValidator",
+      "summary": "Signals to the validator that an XML element has started, allowing it to perform validation logic at the beginning of an element's parsing lifecycle."
+    },
+    {
+      "id": 65,
+      "project": "nanoxml",
+      "name": "elementEnded",
+      "class": "IXMLValidator",
+      "summary": "Signals to the validator that an XML element has ended, allowing it to perform any necessary validation or state updates upon element closure."
+    },
+    {
+      "id": 66,
+      "project": "nanoxml",
+      "name": "attributeAdded",
+      "class": "IXMLValidator",
+      "summary": "Handles the event triggered when an attribute is added to an XML element during validation processing."
+    },
+    {
+      "id": 67,
+      "project": "nanoxml",
+      "name": "elementAttributesProcessed",
+      "class": "IXMLValidator",
+      "summary": "Signals that all attributes for the current XML element have been processed, serving as a notification hook within the XML validation lifecycle."
+    },
+    {
+      "id": 68,
+      "project": "nanoxml",
+      "name": "PCDataAdded",
+      "class": "IXMLValidator",
+      "summary": "Signals that parsed character data (PCDATA) has been added to the XML structure being validated."
+    },
+    {
+      "id": 82,
+      "project": "nanoxml",
+      "name": "startNewStream",
+      "class": "StdXMLReader",
+      "summary": "Initiates a new XML input stream by wrapping the provided reader as the current parsing source. Used when switching the reader context mid-parse, such as when redirecting input from a string buffer."
+    },
+    {
+      "id": 83,
+      "project": "nanoxml",
+      "name": "startNewStream",
+      "class": "StdXMLReader",
+      "summary": "Initializes and begins processing a new XML input stream from the provided reader. Used internally to switch the parser's active stream context, as seen when called with a secondary reader and a false flag."
+    },
+    {
+      "id": 91,
+      "project": "nanoxml",
+      "name": "getFullName",
+      "class": "XMLAttribute",
+      "summary": "Returns the full name of the XML attribute as a String."
+    },
+    {
+      "id": 92,
+      "project": "nanoxml",
+      "name": "getName",
+      "class": "XMLAttribute",
+      "summary": "Returns the name of the XML attribute as a String."
+    },
+    {
+      "id": 93,
+      "project": "nanoxml",
+      "name": "getNamespace",
+      "class": "XMLAttribute",
+      "summary": "Returns the namespace associated with this XML attribute as a String."
+    },
+    {
+      "id": 94,
+      "project": "nanoxml",
+      "name": "getValue",
+      "class": "XMLAttribute",
+      "summary": "Returns the value of the XML attribute as a String. Commonly used when retrieving attribute values from parsed XML elements, as seen in direct return statements like `return attr.getValue()`."
+    },
+    {
+      "id": 96,
+      "project": "nanoxml",
+      "name": "getType",
+      "class": "XMLAttribute",
+      "summary": "Returns the type of the XML attribute as a String, typically used when inspecting or processing attribute metadata in XML parsing contexts."
+    },
+    {
+      "id": 128,
+      "project": "nanoxml",
+      "name": "findAttribute",
+      "class": "XMLElement",
+      "summary": "Searches for and returns an `XMLAttribute` by name within the current XML element. Typically used to retrieve a specific attribute for further inspection or modification, as seen in assignment contexts where the result is stored for subsequent use."
+    },
+    {
+      "id": 129,
+      "project": "nanoxml",
+      "name": "findAttribute",
+      "class": "XMLElement",
+      "summary": "Searches for and returns an `XMLAttribute` matching the specified name and namespace within the XML element. Typically used when direct attribute lookup is needed before performing read or write operations on the attribute value."
+    },
+    {
+      "id": 153,
+      "project": "nanoxml",
+      "name": "equalsXMLElement",
+      "class": "XMLElement",
+      "summary": "Compares this XML element to another object for equality by delegating to the `IXMLElement`-typed overload after casting the raw element. Used when checking structural or value-based equality between XML elements in a type-safe manner."
+    },
+    {
+      "id": 160,
+      "project": "nanoxml",
+      "name": "finalize",
+      "class": "XMLException",
+      "summary": "Overrides the `finalize` method to perform cleanup operations on an `XMLException` instance before it is garbage collected."
+    },
+    {
+      "id": 5,
+      "project": "siena-master",
+      "name": "wrap",
+      "class": "Json",
+      "summary": "Wraps a given value into a `Json` instance, enabling uniform handling of arbitrary objects within JSON structures. Commonly used when adding elements to JSON arrays or objects, as seen in list construction contexts."
+    },
+    {
+      "id": 10,
+      "project": "siena-master",
+      "name": "get",
+      "class": "Json",
+      "summary": "Retrieves a JSON value associated with the given key. Commonly used to extract nested values for operations like copying or transferring entries between JSON objects."
+    },
+    {
+      "id": 11,
+      "project": "siena-master",
+      "name": "put",
+      "class": "Json",
+      "summary": "Stores a key-value pair into the JSON object, where the value is a generic `Object`, and returns the current `Json` instance to support method chaining."
+    },
+    {
+      "id": 16,
+      "project": "siena-master",
+      "name": "keys",
+      "class": "Json",
+      "summary": "Returns the set of keys present in the JSON object, typically used to iterate over or inspect the top-level fields of a `Json` instance."
+    },
+    {
+      "id": 17,
+      "project": "siena-master",
+      "name": "containsKey",
+      "class": "Json",
+      "summary": "Checks whether the JSON object contains a mapping for the specified key, returning `true` if the key exists. Typically used in conditional logic to verify key presence before accessing or modifying a value."
+    },
+    {
+      "id": 27,
+      "project": "siena-master",
+      "name": "size",
+      "class": "Json",
+      "summary": "Returns the number of elements in the JSON value's list, used conditionally to check bounds or validate collection size before performing index-based operations."
+    },
+    {
+      "id": 38,
+      "project": "siena-master",
+      "name": "asString",
+      "class": "Json",
+      "summary": "Converts the JSON object to its string representation, intended for use as a simple serialization utility when a plain `String` form of the JSON data is needed."
+    },
+    {
+      "id": 41,
+      "project": "siena-master",
+      "name": "asBoolean",
+      "class": "Json",
+      "summary": "Converts the current JSON value to a boolean primitive and returns it."
+    },
+    {
+      "id": 63,
+      "project": "siena-master",
+      "name": "get",
+      "class": "Json",
+      "summary": "Retrieves a value from a JSON structure and performs a procedural operation with it. Called by up to 3 other methods within the `Json` class context."
+    },
+    {
+      "id": 72,
+      "project": "siena-master",
+      "name": "getPersistenceManager",
+      "class": "Model",
+      "summary": "Returns the `PersistenceManager` associated with this model, used to perform persistence operations such as retrieving or storing the current instance, as shown in `getPersistenceManager().get(this)`."
+    },
+    {
+      "id": 136,
+      "project": "siena-master",
+      "name": "getPersistenceManager",
+      "class": "Model",
+      "summary": "Returns the `PersistenceManager` associated with this model, used to perform persistence operations such as retrieving or storing the current model instance."
+    },
+    {
+      "id": 167,
+      "project": "siena-master",
+      "name": "createQuery",
+      "class": "PersistenceManager",
+      "summary": "Creates and returns a typed `Query<T>` instance for executing database queries against the persistence layer. Intended for use within the `PersistenceManager` class to initialize query objects before applying filters or retrieving results."
+    },
+    {
+      "id": 168,
+      "project": "siena-master",
+      "name": "createQuery",
+      "class": "PersistenceManager",
+      "summary": "Creates and returns a typed `Query<T>` instance for executing database queries against the persistence layer. Intended for use within the `PersistenceManager` class to initialize query objects before applying filters or executing them."
+    },
+    {
+      "id": 172,
+      "project": "siena-master",
+      "name": "get",
+      "class": "PersistenceManager",
+      "summary": "Retrieves a value from persistent storage, serving as a core accessor method within the `PersistenceManager` class."
+    },
+    {
+      "id": 173,
+      "project": "siena-master",
+      "name": "insert",
+      "class": "PersistenceManager",
+      "summary": "Inserts a value into the persistence store managed by this class. This method serves as the core write operation for persisting data within the `PersistenceManager`."
+    },
+    {
+      "id": 179,
+      "project": "siena-master",
+      "name": "insert",
+      "class": "PersistenceManager",
+      "summary": "Inserts a value into the persistence store and returns an integer result, typically indicating the outcome or identifier of the insertion operation."
+    },
+    {
+      "id": 180,
+      "project": "siena-master",
+      "name": "insert",
+      "class": "PersistenceManager",
+      "summary": "Inserts a value into the persistence store and returns an integer result, typically indicating the outcome or identifier of the insertion operation."
+    },
+    {
+      "id": 185,
+      "project": "siena-master",
+      "name": "get",
+      "class": "PersistenceManager",
+      "summary": "Retrieves and returns an integer value managed by the PersistenceManager."
+    },
+    {
+      "id": 186,
+      "project": "siena-master",
+      "name": "get",
+      "class": "PersistenceManager",
+      "summary": "Retrieves and returns an integer value managed by the PersistenceManager."
+    },
+    {
+      "id": 197,
+      "project": "siena-master",
+      "name": "get",
+      "class": "PersistenceManager",
+      "summary": "Retrieves a stored value of type T associated with a given key from the persistence layer, returning a generic typed result to support flexible data retrieval across different value types."
+    },
+    {
+      "id": 222,
+      "project": "siena-master",
+      "name": "get",
+      "class": "PersistenceManagerFactory",
+      "summary": "Returns a `PersistenceManager` instance for the given class by delegating to the singleton instance of `PersistenceManagerFactory`, typically used to retrieve a persistence manager associated with a specific class type."
+    },
+    {
+      "id": 227,
+      "project": "siena-master",
+      "name": "filter",
+      "class": "Query",
+      "summary": "Filters the query results based on a specified value, returning a modified `Query<T>` instance with the filter applied."
+    },
+    {
+      "id": 228,
+      "project": "siena-master",
+      "name": "order",
+      "class": "Query",
+      "summary": "Sets the ordering for the query results, returning the modified `Query<T>` instance to support method chaining."
+    },
+    {
+      "id": 239,
+      "project": "siena-master",
+      "name": "fetch",
+      "class": "Query",
+      "summary": "Fetches and returns all results of the query as a list of type `T`. Intended to execute the query and collect the resulting records into a `List` for further processing."
+    },
+    {
+      "id": 240,
+      "project": "siena-master",
+      "name": "fetch",
+      "class": "Query",
+      "summary": "Fetches and returns all results of the query as a list of type `T`. Intended to execute the query and collect the resulting records into a `List` for further processing."
+    },
+    {
+      "id": 241,
+      "project": "siena-master",
+      "name": "fetch",
+      "class": "Query",
+      "summary": "Fetches and returns all results of the query as a list of type `T`. Intended to execute the query and collect the resulting values into a `List<T>` for further processing."
+    },
+    {
+      "id": 276,
+      "project": "siena-master",
+      "name": "createRequest",
+      "class": "RemotePersistenceManager",
+      "summary": "Creates and returns a new XML `Document` representing a request with the given name. Commonly used as a helper to initialize request documents before sending them to a remote persistence layer."
+    },
+    {
+      "id": 277,
+      "project": "siena-master",
+      "name": "createRequest",
+      "class": "RemotePersistenceManager",
+      "summary": "Creates and returns a `Document` representing a remote persistence request, constructed using the provided name, entity, and IDs. Typically called during request preparation before dispatching to a remote persistence operation."
+    },
+    {
+      "id": 278,
+      "project": "siena-master",
+      "name": "simpleRequest",
+      "class": "RemotePersistenceManager",
+      "summary": "Sends a simple remote persistence request (such as \"delete\") for a given object, delegating to the underlying remote communication mechanism with a flag to control behavior."
+    },
+    {
+      "id": 285,
+      "project": "siena-master",
+      "name": "createRequest",
+      "class": "RemotePersistenceManager",
+      "summary": "Creates and returns a `Document` object representing a request with the given name. Commonly used as a factory method, with the resulting document assigned for further processing in persistence operations."
+    },
+    {
+      "id": 321,
+      "project": "siena-master",
+      "name": "serialize",
+      "class": "Serializer",
+      "summary": "Serializes a value to an output stream using the provided request and connector's output stream. Intended for procedural use where the serialized output is written directly to a stream rather than returned."
+    },
+    {
+      "id": 322,
+      "project": "siena-master",
+      "name": "deserialize",
+      "class": "Serializer",
+      "summary": "Deserializes an input stream into a `Document` object, typically used to parse a response stream received from a connector."
+    }
+  ]
+}

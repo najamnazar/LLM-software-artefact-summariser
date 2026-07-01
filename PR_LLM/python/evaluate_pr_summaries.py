@@ -51,6 +51,11 @@ import os
 from pathlib import Path
 from typing import Dict, List, Optional, Tuple
 
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+import seaborn as sns
+
 # Silence HuggingFace/Transformers output before the heavy libraries are imported.
 os.environ.setdefault("TRANSFORMERS_VERBOSITY", "error")
 os.environ.setdefault("TOKENIZERS_PARALLELISM", "false")
@@ -258,6 +263,127 @@ def evaluate_model(
 
 
 # ---------------------------------------------------------------------------
+# Violin plot
+# ---------------------------------------------------------------------------
+
+# Mirror DPS_LLM's _SHORT_LABEL_COLORS so both studies share a consistent palette.
+_MODEL_DISPLAY: Dict[str, str] = {
+    "GPT":     "GPT",
+    "QWEN":    "Qwen",
+    "CLAUDE":  "Claude",
+    "MISTRAL": "Mistral",
+}
+
+_VIOLIN_COLORS: Dict[str, str] = {
+    "GPT":     "#d35400",
+    "Qwen":    "#27ae60",
+    "Claude":  "#16a085",
+    "Mistral": "#2c3e50",
+}
+
+
+def _add_mean_markers(ax: plt.Axes, data: pd.DataFrame, order: List[str], metric: str) -> None:
+    """Overlay a red diamond at the mean on each violin body."""
+    for idx, model in enumerate(order):
+        mean_val = data.loc[data["model"] == model, metric].mean()
+        ax.plot(
+            idx,
+            mean_val,
+            marker="D",
+            markersize=8,
+            color="darkred",
+            zorder=3,
+            label="Mean" if idx == 0 else "",
+        )
+    ax.legend(loc="upper left")
+
+
+def plot_violin_scores(
+    output_dir: Path,
+    short_names: Optional[List[str]] = None,
+    limit: Optional[int] = None,
+) -> None:
+    """Draw a 1×2 violin plot of BERTScore F1 and cosine similarity for each model.
+
+    Reads per-model JSONL files from *output_dir*, extracts per-record metric
+    values, and saves ``violin_scores.png`` to the same directory.  Mirrors the
+    style used by DPS_LLM's VisualizationManager: two side-by-side violin panels
+    (cosine similarity left, BERTScore F1 right) with a mean-value diamond marker
+    overlaid on each violin body.
+
+    Parameters
+    ----------
+    output_dir:   Directory that contains the JSONL files and will receive the PNG.
+    short_names:  Subset of model short names (GPT, QWEN, CLAUDE, MISTRAL) to
+                  include.  Defaults to all four.
+    limit:        If set, only the first *limit* records per model are used
+                  (mirrors the --limit flag used during evaluation).
+    """
+    if short_names is None:
+        short_names = list(_MODEL_ALIASES.keys())
+
+    rows: List[dict] = []
+    order: List[str] = []
+
+    for short in short_names:
+        label = _MODEL_ALIASES[short]
+        path = output_dir / f"{label}.jsonl"
+        if not path.exists():
+            print(f"[violin] {path.name} not found — skipping {short}", flush=True)
+            continue
+
+        records = _load_jsonl(path, limit)
+        display = _MODEL_DISPLAY.get(short, short)
+        if display not in order:
+            order.append(display)
+
+        for rec in records:
+            m = rec.get("metrics") or {}
+            bf = m.get("bert_f1")
+            cs = m.get("cosine_similarity")
+            if bf is None or cs is None:
+                continue
+            rows.append({"model": display, "bert_f1": float(bf), "cosine_similarity": float(cs)})
+
+    if not rows:
+        print("[violin] No metric data found — skipping violin plot.", flush=True)
+        return
+
+    data = pd.DataFrame(rows)
+    palette = {lbl: _VIOLIN_COLORS[lbl] for lbl in order if lbl in _VIOLIN_COLORS}
+
+    sns.set_theme(style="whitegrid")
+    fig, axes = plt.subplots(1, 2, figsize=(max(12, len(order) * 2.5), 6))
+    fig.suptitle("PR Summary Evaluation: Score Distributions", fontsize=14, fontweight="bold")
+
+    for ax, metric, ylabel, panel_title in (
+        (axes[0], "cosine_similarity", "Cosine Similarity Score", "Cosine Similarity"),
+        (axes[1], "bert_f1",           "BERTScore F1 Score",      "BERTScore F1"),
+    ):
+        sns.violinplot(
+            data=data,
+            x="model",
+            y=metric,
+            ax=ax,
+            order=order,
+            palette=palette or None,
+            hue="model",
+            legend=False,
+        )
+        ax.set_title(panel_title, fontsize=13, fontweight="bold")
+        ax.set_xlabel("Model", fontsize=11)
+        ax.set_ylabel(ylabel, fontsize=11)
+        ax.grid(axis="y", alpha=0.3)
+        _add_mean_markers(ax, data, order, metric)
+
+    plt.tight_layout()
+    out_path = output_dir / "violin_scores.png"
+    plt.savefig(out_path, dpi=300, bbox_inches="tight")
+    plt.close()
+    print(f"[violin] Saved: {out_path}", flush=True)
+
+
+# ---------------------------------------------------------------------------
 # Main
 # ---------------------------------------------------------------------------
 
@@ -352,6 +478,10 @@ def main() -> None:
         json.dump(existing, fh, indent=2)
 
     print(f"\n[Done] Aggregated results written to: {results_path}", flush=True)
+
+    print("\n[violin] Generating violin plot ...", flush=True)
+    plot_violin_scores(output_dir, short_names=short_names, limit=args.limit)
+
     print("Next: run rank_pr_summaries.py for rubric-based LLM ranking.", flush=True)
 
 

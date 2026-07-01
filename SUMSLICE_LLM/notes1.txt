@@ -1,0 +1,64 @@
+Sumslice-LLM is an LLM based Java tool that performs natural language analysis of Java source code to create structured json based documentation of methods and converting the json based representation to natural langauge text using large language models. It combines several sophisticated techniques:
+
+SWUM (Software Word Use Model) Analysis: This extracts natural language information from method names and signatures
+Call Graph Analysis: Maps the relationships between methods (who calls whom)
+JSON Generator: Produces structured documentation combining all this information
+LLM: Use large languges models to convert JSON representation to natural language text that captures the method intent.
+The project specifically analyzes the NanoXML library (a lightweight XML parser), but the framework could be applied to any Java codebase.
+
+There should be a SWUM analyser that create the .out file as done in NanoXML.out which contains SWUM analysis results - it's the output from a SWUM analyzer that has processed the NanoXML source code. Each line represents a method or constructor and contains:
+
+Type classification (SPECIAL, CONSTRUCTOR, FIELD, BASE_VERB, etc.)
+Natural language decomposition of method names with parts of speech
+Action and theme identification (verbs and nouns)
+Parameter information
+Method signature in a standardized format
+For example:
+
+This means:
+
+Type: SPECIAL
+Action: "get" (Verb)
+Theme: "name" (Noun, Non-Informative)
+Return type: string
+Class: column
+Full signature: Column_String_getName____
+Where the SWUM grammar is created:
+The SWUM grammar is NOT created in this project - this project consumes SWUM output that was generated elsewhere. Here's what I found:
+
+External SWUM Tool: The SWUM analysis appears to be done by an external tool that produces the .out file. The grammar rules and linguistic analysis must happen in this codebase. This should be done for all other files in the corpus folder.
+
+Grammar Processing: The SwumFunc.java class parses the SWUM output format, but doesn't create the grammar itself. It interprets the linguistic annotations:
+
+Parts of speech: N (Noun), V (Verb), NI (Non-Informative), etc.
+Method types: SPECIAL, CONSTRUCTOR, FIELD, BASE_VERB, etc.
+Action/theme extraction: Separates verbs (actions) from nouns (themes)
+Word Analysis: The Word.java class provides basic part-of-speech checking (isNoun(), isVerb()), but again, this is interpreting pre-existing annotations rather than creating grammatical rules.
+
+The actual SWUM grammar and linguistic rules would be in the original SWUM research tool/framework that generated the .out file. This project is essentially a SWUM consumer that combines the linguistic analysis with call graph to create rich json documentation.
+
+The project demonstrates how LLM based natural language processing can be applied to source code analysis to create more meaningful documentation that captures both the structural relationships (call graphs) and semantic meaning (natural language themes and actions) of software methods.
+
+Use Java 14 to generate the code.
+
+Difference with sumslice and sumclidexmlgenertaor projects in the workspace.
+1. No Page rank alogrithm will be used.
+2. No XML based generation. JSON representation will be used.
+
+
+
+You generate precise method summaries.
+
+You are documenting Java methods for developers. Write a concise natural-language summary in 1-2 sentences. Mention intent first, then usage context if available. Avoid filler and do not include bullet points.
+
+Method metadata:
+id: <method.id>
+class: <method.className>
+name: <method.name>
+returnType: <method.returnType>
+swumVerb: <method.swumVerb>
+swumObject: <method.swumObject>
+calledByCount: <method.calledCount>
+callsCount: <method.callsCount>
+useType: <method.useType>
+useExample: <method.useExample>

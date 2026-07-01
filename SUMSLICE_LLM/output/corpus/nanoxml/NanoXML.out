@@ -1,0 +1,168 @@
+BASE_VERB::create (V) | pcdata element (N) ++ :: IXMLElement (N) :: ixmlelement (N) ::IXMLElement_IXMLElement_createPCDataElement____
+BASE_VERB::create (V) | element (N) ++ :: IXMLElement (N) :: ixmlelement (N) ::IXMLElement_IXMLElement_createElement__String__
+BASE_VERB::create (V) | element (N) ++ :: IXMLElement (N) :: ixmlelement (N) ::IXMLElement_IXMLElement_createElement__String-String-int__
+BASE_VERB::create (V) | element (N) ++ :: IXMLElement (N) :: ixmlelement (N) ::IXMLElement_IXMLElement_createElement__String-String__
+BASE_VERB::create (V) | element (N) ++ :: IXMLElement (N) :: ixmlelement (N) ::IXMLElement_IXMLElement_createElement__String-String-String-int__
+SPECIAL::get (V) | parent (N) ++ :: IXMLElement (N) :: ixmlelement (N) ::IXMLElement_IXMLElement_getParent____
+SPECIAL::get (V) | full name (N) ++ :: String (N) :: ixmlelement (N) ::IXMLElement_String_getFullName____
+SPECIAL::get (V) | name (N) ++ :: String (N) :: ixmlelement (N) ::IXMLElement_String_getName____
+SPECIAL::get (V) | namespace (N) ++ :: String (N) :: ixmlelement (N) ::IXMLElement_String_getNamespace____
+SPECIAL::set (V) | name (N) ++ :: void (N) :: ixmlelement (N) ::IXMLElement_void_setName__String__
+SPECIAL::set (V) | name (N) ++ :: void (N) :: ixmlelement (N) ::IXMLElement_void_setName__String-String__
+BASE_VERB::add (V) | child (N) ++ :: void (N) :: ixmlelement (N) ::IXMLElement_void_addChild__IXMLElement__
+BASE_VERB::remove (V) | child (N) ++ :: void (N) :: ixmlelement (N) ::IXMLElement_void_removeChild__IXMLElement__
+BASE_VERB::remove (V) | child at index (N) ++ :: void (N) :: ixmlelement (N) ::IXMLElement_void_removeChildAtIndex__int__
+BASE_VERB::enumerate (V) | children (N) ++ :: Enumeration (N) :: ixmlelement (N) ::IXMLElement_Enumeration_enumerateChildren____
+SPECIAL::is (V) | leaf (N) ++ :: boolean (N) :: ixmlelement (N) ::IXMLElement_boolean_isLeaf____
+BASE_VERB::has (V) | children (N) ++ :: boolean (N) :: ixmlelement (N) ::IXMLElement_boolean_hasChildren____
+SPECIAL::get (V) | children count (N) ++ :: int (N) :: ixmlelement (N) ::IXMLElement_int_getChildrenCount____
+SPECIAL::get (V) | children (N) ++ :: Vector (N) :: ixmlelement (N) ::IXMLElement_Vector_getChildren____
+SPECIAL::get (V) | child at index (N) ++ :: IXMLElement (N) :: ixmlelement (N) ::IXMLElement_IXMLElement_getChildAtIndex__int__
+SPECIAL::get (V) | first child named (N) ++ :: IXMLElement (N) :: ixmlelement (N) ::IXMLElement_IXMLElement_getFirstChildNamed__String__
+SPECIAL::get (V) | first child named (N) ++ :: IXMLElement (N) :: ixmlelement (N) ::IXMLElement_IXMLElement_getFirstChildNamed__String-String__
+SPECIAL::get (V) | children named (N) ++ :: Vector (N) :: ixmlelement (N) ::IXMLElement_Vector_getChildrenNamed__String__
+SPECIAL::get (V) | children named (N) ++ :: Vector (N) :: ixmlelement (N) ::IXMLElement_Vector_getChildrenNamed__String-String__
+SPECIAL::get (V) | attribute count (N) ++ :: int (N) :: ixmlelement (N) ::IXMLElement_int_getAttributeCount____
+SPECIAL::get (V) | attribute (N) ++ :: String (N) :: ixmlelement (N) ::IXMLElement_String_getAttribute__String__
+SPECIAL::get (V) | attribute (N) ++ :: String (N) :: ixmlelement (N) ::IXMLElement_String_getAttribute__String-String__
+SPECIAL::get (V) | attribute (N) ++ :: String (N) :: ixmlelement (N) ::IXMLElement_String_getAttribute__String-String-String__
+SPECIAL::get (V) | attribute (N) ++ :: int (N) :: ixmlelement (N) ::IXMLElement_int_getAttribute__String-int__
+SPECIAL::get (V) | attribute (N) ++ :: int (N) :: ixmlelement (N) ::IXMLElement_int_getAttribute__String-String-int__
+SPECIAL::get (V) | attribute type (N) ++ :: String (N) :: ixmlelement (N) ::IXMLElement_String_getAttributeType__String__
+SPECIAL::get (V) | attribute namespace (N) ++ :: String (N) :: ixmlelement (N) ::IXMLElement_String_getAttributeNamespace__String__
+SPECIAL::get (V) | attribute type (N) ++ :: String (N) :: ixmlelement (N) ::IXMLElement_String_getAttributeType__String-String__
+SPECIAL::set (V) | attribute (N) ++ :: void (N) :: ixmlelement (N) ::IXMLElement_void_setAttribute__String-String__
+SPECIAL::set (V) | attribute (N) ++ :: void (N) :: ixmlelement (N) ::IXMLElement_void_setAttribute__String-String-String__
+BASE_VERB::remove (V) | attribute (N) ++ :: void (N) :: ixmlelement (N) ::IXMLElement_void_removeAttribute__String__
+BASE_VERB::remove (V) | attribute (N) ++ :: void (N) :: ixmlelement (N) ::IXMLElement_void_removeAttribute__String-String__
+BASE_VERB::enumerate (V) | attribute names (N) ++ :: Enumeration (N) :: ixmlelement (N) ::IXMLElement_Enumeration_enumerateAttributeNames____
+BASE_VERB::has (V) | attribute (N) ++ :: boolean (N) :: ixmlelement (N) ::IXMLElement_boolean_hasAttribute__String__
+BASE_VERB::has (V) | attribute (N) ++ :: boolean (N) :: ixmlelement (N) ::IXMLElement_boolean_hasAttribute__String-String__
+SPECIAL::get (V) | attributes (N) ++ :: Properties (N) :: ixmlelement (N) ::IXMLElement_Properties_getAttributes____
+SPECIAL::get (V) | attributes in namespace (N) ++ :: Properties (N) :: ixmlelement (N) ::IXMLElement_Properties_getAttributesInNamespace__String__
+SPECIAL::get (V) | system id (N) ++ :: String (N) :: ixmlelement (N) ::IXMLElement_String_getSystemID____
+SPECIAL::get (V) | line nr (N) ++ :: int (N) :: ixmlelement (N) ::IXMLElement_int_getLineNr____
+SPECIAL::get (V) | content (N) ++ :: String (N) :: ixmlelement (N) ::IXMLElement_String_getContent____
+SPECIAL::set (V) | content (N) ++ :: void (N) :: ixmlelement (N) ::IXMLElement_void_setContent__String__
+BASE_VERB::equals (V) | value (N) ++ :: boolean (N) :: ixmlelement (N) ::IXMLElement_boolean_equals__Object__
+BASE_VERB::equals (V) | xmlelement (N) ++ :: boolean (N) :: ixmlelement (N) ::IXMLElement_boolean_equalsXMLElement__IXMLElement__
+BASE_VERB::read (V) | value (N) ++ :: char (N) :: ixmlreader (N) ::IXMLReader_char_read____
+BASE_VERB::at (V) | eofof current stream (N) ++ :: boolean (N) :: ixmlreader (N) ::IXMLReader_boolean_atEOFOfCurrentStream____
+BASE_VERB::at (V) | eof (N) ++ :: boolean (N) :: ixmlreader (N) ::IXMLReader_boolean_atEOF____
+BASE_VERB::unread (V) | value (N) ++ :: void (N) :: ixmlreader (N) ::IXMLReader_void_unread__char__
+SPECIAL::get (V) | line nr (N) ++ :: int (N) :: ixmlreader (N) ::IXMLReader_int_getLineNr____
+BASE_VERB::open (V) | stream (N) ++ :: Reader (N) :: ixmlreader (N) ::IXMLReader_Reader_openStream__String-String__
+BASE_VERB::start (V) | new stream (N) ++ :: void (N) :: ixmlreader (N) ::IXMLReader_void_startNewStream__Reader__
+BASE_VERB::start (V) | new stream (N) ++ :: void (N) :: ixmlreader (N) ::IXMLReader_void_startNewStream__Reader-boolean__
+SPECIAL::get (V) | stream level (N) ++ :: int (N) :: ixmlreader (N) ::IXMLReader_int_getStreamLevel____
+SPECIAL::set (V) | system id (N) ++ :: void (N) :: ixmlreader (N) ::IXMLReader_void_setSystemID__String__
+SPECIAL::set (V) | public id (N) ++ :: void (N) :: ixmlreader (N) ::IXMLReader_void_setPublicID__String__
+SPECIAL::get (V) | system id (N) ++ :: String (N) :: ixmlreader (N) ::IXMLReader_String_getSystemID____
+SPECIAL::get (V) | public id (N) ++ :: String (N) :: ixmlreader (N) ::IXMLReader_String_getPublicID____
+SPECIAL::set (V) | parameter entity resolver (N) ++ :: void (N) :: ixmlvalidator (N) ::IXMLValidator_void_setParameterEntityResolver__IXMLEntityResolver__
+SPECIAL::get (V) | parameter entity resolver (N) ++ :: IXMLEntityResolver (N) :: ixmlvalidator (N) ::IXMLValidator_IXMLEntityResolver_getParameterEntityResolver____
+BASE_VERB::parse (V) | dtd (N) ++ :: void (N) :: ixmlvalidator (N) ::IXMLValidator_void_parseDTD__String-IXMLReader-IXMLEntityResolver-boolean__
+BASE_VERB::element (V) | started (N) ++ :: void (N) :: ixmlvalidator (N) ::IXMLValidator_void_elementStarted__String-String-int__
+BASE_VERB::element (V) | ended (N) ++ :: void (N) :: ixmlvalidator (N) ::IXMLValidator_void_elementEnded__String-String-int__
+BASE_VERB::attribute (V) | added (N) ++ :: void (N) :: ixmlvalidator (N) ::IXMLValidator_void_attributeAdded__String-String-String-int__
+BASE_VERB::element (V) | attributes processed (N) ++ :: void (N) :: ixmlvalidator (N) ::IXMLValidator_void_elementAttributesProcessed__String-Properties-String-int__
+BASE_VERB::pcdata (V) | added (N) ++ :: void (N) :: ixmlvalidator (N) ::IXMLValidator_void_PCDataAdded__String-int__
+BASE_VERB::string (V) | reader (N) ++ :: IXMLReader (N) :: stdxmlreader (N) ::StdXMLReader_IXMLReader_stringReader__String__
+BASE_VERB::file (V) | reader (N) ++ :: IXMLReader (N) :: stdxmlreader (N) ::StdXMLReader_IXMLReader_fileReader__String__
+CONSTRUCTOR::create (V) | xmlreader (N) ++ :: StdXMLReader (N) :: stdxmlreader (N) ::StdXMLReader_StdXMLReader_StdXMLReader__String-String__
+CONSTRUCTOR::create (V) | xmlreader (N) ++ :: StdXMLReader (N) :: stdxmlreader (N) ::StdXMLReader_StdXMLReader_StdXMLReader__Reader__
+BASE_VERB::finalize (V) | value (N) ++ :: void (N) :: stdxmlreader (N) ::StdXMLReader_void_finalize____
+SPECIAL::get (V) | encoding (N) ++ :: String (N) :: stdxmlreader (N) ::StdXMLReader_String_getEncoding__String__
+BASE_VERB::stream2reader (V) | value (N) ++ :: Reader (N) :: stdxmlreader (N) ::StdXMLReader_Reader_stream2reader__InputStream-StringBuffer__
+CONSTRUCTOR::create (V) | xmlreader (N) ++ :: StdXMLReader (N) :: stdxmlreader (N) ::StdXMLReader_StdXMLReader_StdXMLReader__InputStream__
+BASE_VERB::read (V) | value (N) ++ :: char (N) :: stdxmlreader (N) ::StdXMLReader_char_read____
+BASE_VERB::at (V) | eofof current stream (N) ++ :: boolean (N) :: stdxmlreader (N) ::StdXMLReader_boolean_atEOFOfCurrentStream____
+BASE_VERB::at (V) | eof (N) ++ :: boolean (N) :: stdxmlreader (N) ::StdXMLReader_boolean_atEOF____
+BASE_VERB::unread (V) | value (N) ++ :: void (N) :: stdxmlreader (N) ::StdXMLReader_void_unread__char__
+BASE_VERB::open (V) | stream (N) ++ :: Reader (N) :: stdxmlreader (N) ::StdXMLReader_Reader_openStream__String-String__
+BASE_VERB::start (V) | new stream (N) ++ :: void (N) :: stdxmlreader (N) ::StdXMLReader_void_startNewStream__Reader__
+BASE_VERB::start (V) | new stream (N) ++ :: void (N) :: stdxmlreader (N) ::StdXMLReader_void_startNewStream__Reader-boolean__
+SPECIAL::get (V) | stream level (N) ++ :: int (N) :: stdxmlreader (N) ::StdXMLReader_int_getStreamLevel____
+SPECIAL::get (V) | line nr (N) ++ :: int (N) :: stdxmlreader (N) ::StdXMLReader_int_getLineNr____
+SPECIAL::set (V) | system id (N) ++ :: void (N) :: stdxmlreader (N) ::StdXMLReader_void_setSystemID__String__
+SPECIAL::set (V) | public id (N) ++ :: void (N) :: stdxmlreader (N) ::StdXMLReader_void_setPublicID__String__
+SPECIAL::get (V) | system id (N) ++ :: String (N) :: stdxmlreader (N) ::StdXMLReader_String_getSystemID____
+SPECIAL::get (V) | public id (N) ++ :: String (N) :: stdxmlreader (N) ::StdXMLReader_String_getPublicID____
+CONSTRUCTOR::create (V) | value (N) ++ :: XMLAttribute (N) :: xmlattribute (N) ::XMLAttribute_XMLAttribute_XMLAttribute__String-String-String-String-String__
+SPECIAL::get (V) | full name (N) ++ :: String (N) :: xmlattribute (N) ::XMLAttribute_String_getFullName____
+SPECIAL::get (V) | name (N) ++ :: String (N) :: xmlattribute (N) ::XMLAttribute_String_getName____
+SPECIAL::get (V) | namespace (N) ++ :: String (N) :: xmlattribute (N) ::XMLAttribute_String_getNamespace____
+SPECIAL::get (V) | value (N) ++ :: String (N) :: xmlattribute (N) ::XMLAttribute_String_getValue____
+SPECIAL::set (V) | value (N) ++ :: void (N) :: xmlattribute (N) ::XMLAttribute_void_setValue__String__
+SPECIAL::get (V) | type (N) ++ :: String (N) :: xmlattribute (N) ::XMLAttribute_String_getType____
+CONSTRUCTOR::create (V) | value (N) ++ :: XMLElement (N) :: xmlelement (N) ::XMLElement_XMLElement_XMLElement____
+CONSTRUCTOR::create (V) | value (N) ++ :: XMLElement (N) :: xmlelement (N) ::XMLElement_XMLElement_XMLElement__String__
+CONSTRUCTOR::create (V) | value (N) ++ :: XMLElement (N) :: xmlelement (N) ::XMLElement_XMLElement_XMLElement__String-String-int__
+CONSTRUCTOR::create (V) | value (N) ++ :: XMLElement (N) :: xmlelement (N) ::XMLElement_XMLElement_XMLElement__String-String__
+CONSTRUCTOR::create (V) | value (N) ++ :: XMLElement (N) :: xmlelement (N) ::XMLElement_XMLElement_XMLElement__String-String-String-int__
+BASE_VERB::create (V) | pcdata element (N) ++ :: IXMLElement (N) :: xmlelement (N) ::XMLElement_IXMLElement_createPCDataElement____
+BASE_VERB::create (V) | element (N) ++ :: IXMLElement (N) :: xmlelement (N) ::XMLElement_IXMLElement_createElement__String__
+BASE_VERB::create (V) | element (N) ++ :: IXMLElement (N) :: xmlelement (N) ::XMLElement_IXMLElement_createElement__String-String-int__
+BASE_VERB::create (V) | element (N) ++ :: IXMLElement (N) :: xmlelement (N) ::XMLElement_IXMLElement_createElement__String-String__
+BASE_VERB::create (V) | element (N) ++ :: IXMLElement (N) :: xmlelement (N) ::XMLElement_IXMLElement_createElement__String-String-String-int__
+BASE_VERB::finalize (V) | value (N) ++ :: void (N) :: xmlelement (N) ::XMLElement_void_finalize____
+SPECIAL::get (V) | parent (N) ++ :: IXMLElement (N) :: xmlelement (N) ::XMLElement_IXMLElement_getParent____
+SPECIAL::get (V) | full name (N) ++ :: String (N) :: xmlelement (N) ::XMLElement_String_getFullName____
+SPECIAL::get (V) | name (N) ++ :: String (N) :: xmlelement (N) ::XMLElement_String_getName____
+SPECIAL::get (V) | namespace (N) ++ :: String (N) :: xmlelement (N) ::XMLElement_String_getNamespace____
+SPECIAL::set (V) | name (N) ++ :: void (N) :: xmlelement (N) ::XMLElement_void_setName__String__
+SPECIAL::set (V) | name (N) ++ :: void (N) :: xmlelement (N) ::XMLElement_void_setName__String-String__
+BASE_VERB::add (V) | child (N) ++ :: void (N) :: xmlelement (N) ::XMLElement_void_addChild__IXMLElement__
+BASE_VERB::insert (V) | child (N) ++ :: void (N) :: xmlelement (N) ::XMLElement_void_insertChild__IXMLElement-int__
+BASE_VERB::remove (V) | child (N) ++ :: void (N) :: xmlelement (N) ::XMLElement_void_removeChild__IXMLElement__
+BASE_VERB::remove (V) | child at index (N) ++ :: void (N) :: xmlelement (N) ::XMLElement_void_removeChildAtIndex__int__
+BASE_VERB::enumerate (V) | children (N) ++ :: Enumeration (N) :: xmlelement (N) ::XMLElement_Enumeration_enumerateChildren____
+SPECIAL::is (V) | leaf (N) ++ :: boolean (N) :: xmlelement (N) ::XMLElement_boolean_isLeaf____
+BASE_VERB::has (V) | children (N) ++ :: boolean (N) :: xmlelement (N) ::XMLElement_boolean_hasChildren____
+SPECIAL::get (V) | children count (N) ++ :: int (N) :: xmlelement (N) ::XMLElement_int_getChildrenCount____
+SPECIAL::get (V) | children (N) ++ :: Vector (N) :: xmlelement (N) ::XMLElement_Vector_getChildren____
+SPECIAL::get (V) | child at index (N) ++ :: IXMLElement (N) :: xmlelement (N) ::XMLElement_IXMLElement_getChildAtIndex__int__
+SPECIAL::get (V) | first child named (N) ++ :: IXMLElement (N) :: xmlelement (N) ::XMLElement_IXMLElement_getFirstChildNamed__String__
+SPECIAL::get (V) | first child named (N) ++ :: IXMLElement (N) :: xmlelement (N) ::XMLElement_IXMLElement_getFirstChildNamed__String-String__
+SPECIAL::get (V) | children named (N) ++ :: Vector (N) :: xmlelement (N) ::XMLElement_Vector_getChildrenNamed__String__
+SPECIAL::get (V) | children named (N) ++ :: Vector (N) :: xmlelement (N) ::XMLElement_Vector_getChildrenNamed__String-String__
+BASE_VERB::find (V) | attribute (N) ++ :: XMLAttribute (N) :: xmlelement (N) ::XMLElement_XMLAttribute_findAttribute__String__
+BASE_VERB::find (V) | attribute (N) ++ :: XMLAttribute (N) :: xmlelement (N) ::XMLElement_XMLAttribute_findAttribute__String-String__
+SPECIAL::get (V) | attribute count (N) ++ :: int (N) :: xmlelement (N) ::XMLElement_int_getAttributeCount____
+SPECIAL::get (V) | attribute (N) ++ :: String (N) :: xmlelement (N) ::XMLElement_String_getAttribute__String__
+SPECIAL::get (V) | attribute (N) ++ :: String (N) :: xmlelement (N) ::XMLElement_String_getAttribute__String-String__
+SPECIAL::get (V) | attribute (N) ++ :: String (N) :: xmlelement (N) ::XMLElement_String_getAttribute__String-String-String__
+SPECIAL::get (V) | attribute (N) ++ :: int (N) :: xmlelement (N) ::XMLElement_int_getAttribute__String-int__
+SPECIAL::get (V) | attribute (N) ++ :: int (N) :: xmlelement (N) ::XMLElement_int_getAttribute__String-String-int__
+SPECIAL::get (V) | attribute type (N) ++ :: String (N) :: xmlelement (N) ::XMLElement_String_getAttributeType__String__
+SPECIAL::get (V) | attribute namespace (N) ++ :: String (N) :: xmlelement (N) ::XMLElement_String_getAttributeNamespace__String__
+SPECIAL::get (V) | attribute type (N) ++ :: String (N) :: xmlelement (N) ::XMLElement_String_getAttributeType__String-String__
+SPECIAL::set (V) | attribute (N) ++ :: void (N) :: xmlelement (N) ::XMLElement_void_setAttribute__String-String__
+SPECIAL::set (V) | attribute (N) ++ :: void (N) :: xmlelement (N) ::XMLElement_void_setAttribute__String-String-String__
+BASE_VERB::remove (V) | attribute (N) ++ :: void (N) :: xmlelement (N) ::XMLElement_void_removeAttribute__String__
+BASE_VERB::remove (V) | attribute (N) ++ :: void (N) :: xmlelement (N) ::XMLElement_void_removeAttribute__String-String__
+BASE_VERB::enumerate (V) | attribute names (N) ++ :: Enumeration (N) :: xmlelement (N) ::XMLElement_Enumeration_enumerateAttributeNames____
+BASE_VERB::has (V) | attribute (N) ++ :: boolean (N) :: xmlelement (N) ::XMLElement_boolean_hasAttribute__String__
+BASE_VERB::has (V) | attribute (N) ++ :: boolean (N) :: xmlelement (N) ::XMLElement_boolean_hasAttribute__String-String__
+SPECIAL::get (V) | attributes (N) ++ :: Properties (N) :: xmlelement (N) ::XMLElement_Properties_getAttributes____
+SPECIAL::get (V) | attributes in namespace (N) ++ :: Properties (N) :: xmlelement (N) ::XMLElement_Properties_getAttributesInNamespace__String__
+SPECIAL::get (V) | system id (N) ++ :: String (N) :: xmlelement (N) ::XMLElement_String_getSystemID____
+SPECIAL::get (V) | line nr (N) ++ :: int (N) :: xmlelement (N) ::XMLElement_int_getLineNr____
+SPECIAL::get (V) | content (N) ++ :: String (N) :: xmlelement (N) ::XMLElement_String_getContent____
+SPECIAL::set (V) | content (N) ++ :: void (N) :: xmlelement (N) ::XMLElement_void_setContent__String__
+BASE_VERB::equals (V) | value (N) ++ :: boolean (N) :: xmlelement (N) ::XMLElement_boolean_equals__Object__
+BASE_VERB::equals (V) | xmlelement (N) ++ :: boolean (N) :: xmlelement (N) ::XMLElement_boolean_equalsXMLElement__IXMLElement__
+CONSTRUCTOR::create (V) | value (N) ++ :: XMLException (N) :: xmlexception (N) ::XMLException_XMLException_XMLException__String__
+CONSTRUCTOR::create (V) | value (N) ++ :: XMLException (N) :: xmlexception (N) ::XMLException_XMLException_XMLException__Exception__
+CONSTRUCTOR::create (V) | value (N) ++ :: XMLException (N) :: xmlexception (N) ::XMLException_XMLException_XMLException__String-int-Exception__
+CONSTRUCTOR::create (V) | value (N) ++ :: XMLException (N) :: xmlexception (N) ::XMLException_XMLException_XMLException__String-int-String__
+CONSTRUCTOR::create (V) | value (N) ++ :: XMLException (N) :: xmlexception (N) ::XMLException_XMLException_XMLException__String-int-Exception-String-boolean__
+BASE_VERB::build (V) | message (N) ++ :: String (N) :: xmlexception (N) ::XMLException_String_buildMessage__String-int-Exception-String-boolean__
+BASE_VERB::finalize (V) | value (N) ++ :: void (N) :: xmlexception (N) ::XMLException_void_finalize____
+SPECIAL::get (V) | system id (N) ++ :: String (N) :: xmlexception (N) ::XMLException_String_getSystemID____
+SPECIAL::get (V) | line nr (N) ++ :: int (N) :: xmlexception (N) ::XMLException_int_getLineNr____
+SPECIAL::get (V) | exception (N) ++ :: Exception (N) :: xmlexception (N) ::XMLException_Exception_getException____
+BASE_VERB::print (V) | stack trace (N) ++ :: void (N) :: xmlexception (N) ::XMLException_void_printStackTrace__PrintWriter__
+BASE_VERB::print (V) | stack trace (N) ++ :: void (N) :: xmlexception (N) ::XMLException_void_printStackTrace__PrintStream__
+BASE_VERB::print (V) | stack trace (N) ++ :: void (N) :: xmlexception (N) ::XMLException_void_printStackTrace____
+BASE_VERB::to (V) | string (N) ++ :: String (N) :: xmlexception (N) ::XMLException_String_toString____

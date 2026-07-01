@@ -1,0 +1,7194 @@
+{
+  "method_list": {
+    "averages": {
+      "called": 1,
+      "calls": 1
+    },
+    "method": [
+      {
+        "id": 0,
+        "name": "DropDownButton",
+        "class": "DropDownButton",
+        "returntype": "DropDownButton",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "down button",
+          "verb": "create"
+        }
+      },
+      {
+        "id": 1,
+        "name": "propertyChange",
+        "class": "DropDownButton",
+        "returntype": "void",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "change",
+          "verb": "property"
+        }
+      },
+      {
+        "id": 2,
+        "name": "stateChanged",
+        "class": "DropDownButton",
+        "returntype": "void",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "changed",
+          "verb": "state"
+        }
+      },
+      {
+        "id": 3,
+        "name": "actionPerformed",
+        "class": "DropDownButton",
+        "returntype": "void",
+        "called": [],
+        "calls": [7],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "performed",
+          "verb": "action"
+        }
+      },
+      {
+        "id": 4,
+        "name": "popupMenuWillBecomeVisible",
+        "class": "DropDownButton",
+        "returntype": "void",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "menu will become visible",
+          "verb": "popup"
+        }
+      },
+      {
+        "id": 5,
+        "name": "popupMenuWillBecomeInvisible",
+        "class": "DropDownButton",
+        "returntype": "void",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "menu will become invisible",
+          "verb": "popup"
+        }
+      },
+      {
+        "id": 6,
+        "name": "popupMenuCanceled",
+        "class": "DropDownButton",
+        "returntype": "void",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "menu canceled",
+          "verb": "popup"
+        }
+      },
+      {
+        "id": 7,
+        "name": "getPopupMenu",
+        "class": "DropDownButton",
+        "returntype": "JPopupMenu",
+        "called": [3],
+        "calls": [],
+        "use": {
+          "type": "assignment",
+          "example": "JPopupMenu popup=getPopupMenu();"
+        },
+        "swum": {
+          "object": "popup menu",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 8,
+        "name": "addToToolBar",
+        "class": "DropDownButton",
+        "returntype": "JButton",
+        "called": [],
+        "calls": [225],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "to tool bar",
+          "verb": "add"
+        }
+      },
+      {
+        "id": 9,
+        "name": "getAlbum",
+        "class": "AudioObject",
+        "returntype": "String",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "album",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 10,
+        "name": "getAlbumArtist",
+        "class": "AudioObject",
+        "returntype": "String",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "album artist",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 11,
+        "name": "getArtist",
+        "class": "AudioObject",
+        "returntype": "String",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "artist",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 12,
+        "name": "getBitrate",
+        "class": "AudioObject",
+        "returntype": "long",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "bitrate",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 13,
+        "name": "getComposer",
+        "class": "AudioObject",
+        "returntype": "String",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "composer",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 14,
+        "name": "getDuration",
+        "class": "AudioObject",
+        "returntype": "long",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "duration",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 15,
+        "name": "getFrequency",
+        "class": "AudioObject",
+        "returntype": "int",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "frequency",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 16,
+        "name": "getGenre",
+        "class": "AudioObject",
+        "returntype": "String",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "genre",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 17,
+        "name": "getLyrics",
+        "class": "AudioObject",
+        "returntype": "String",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "lyrics",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 18,
+        "name": "getStars",
+        "class": "AudioObject",
+        "returntype": "int",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "stars",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 19,
+        "name": "getTitle",
+        "class": "AudioObject",
+        "returntype": "String",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "title",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 20,
+        "name": "getTitleOrFileName",
+        "class": "AudioObject",
+        "returntype": "String",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "title or file name",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 21,
+        "name": "getTrackNumber",
+        "class": "AudioObject",
+        "returntype": "Integer",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "track number",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 22,
+        "name": "getUrl",
+        "class": "AudioObject",
+        "returntype": "String",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "url",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 23,
+        "name": "getYear",
+        "class": "AudioObject",
+        "returntype": "String",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "year",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 24,
+        "name": "setStars",
+        "class": "AudioObject",
+        "returntype": "void",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "stars",
+          "verb": "set"
+        }
+      },
+      {
+        "id": 25,
+        "name": "isSeekable",
+        "class": "AudioObject",
+        "returntype": "boolean",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "seekable",
+          "verb": "is"
+        }
+      },
+      {
+        "id": 26,
+        "name": "getDiscNumber",
+        "class": "AudioObject",
+        "returntype": "Integer",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "disc number",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 27,
+        "name": "getAlbums",
+        "class": "ContextListener",
+        "returntype": "List<AlbumInfo>",
+        "called": [88, 312, 387, 390],
+        "calls": [],
+        "use": {
+          "type": "procedural",
+          "example": "writeItemList(bw,AlbumManager.getInstance().toXML(),AlbumManager.getInstance().getAlbums(),AlbumManager.getInstance().getXMLTag(),40);"
+        },
+        "swum": {
+          "object": "albums",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 28,
+        "name": "notifyAlbumRetrieved",
+        "class": "ContextListener",
+        "returntype": "void",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "album retrieved",
+          "verb": "notify"
+        }
+      },
+      {
+        "id": 29,
+        "name": "notifyArtistImage",
+        "class": "ContextListener",
+        "returntype": "void",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "artist image",
+          "verb": "notify"
+        }
+      },
+      {
+        "id": 30,
+        "name": "notifyCoverRetrieved",
+        "class": "ContextListener",
+        "returntype": "void",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "cover retrieved",
+          "verb": "notify"
+        }
+      },
+      {
+        "id": 31,
+        "name": "notifyFinishGetSimilarArtist",
+        "class": "ContextListener",
+        "returntype": "void",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "finish get similar artist",
+          "verb": "notify"
+        }
+      },
+      {
+        "id": 32,
+        "name": "notifyStartRetrievingArtistImages",
+        "class": "ContextListener",
+        "returntype": "void",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "start retrieving artist images",
+          "verb": "notify"
+        }
+      },
+      {
+        "id": 33,
+        "name": "notifyStartRetrievingCovers",
+        "class": "ContextListener",
+        "returntype": "void",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "start retrieving covers",
+          "verb": "notify"
+        }
+      },
+      {
+        "id": 34,
+        "name": "notifyWikiInfoRetrieved",
+        "class": "ContextListener",
+        "returntype": "void",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "wiki info retrieved",
+          "verb": "notify"
+        }
+      },
+      {
+        "id": 35,
+        "name": "setAlbum",
+        "class": "ContextListener",
+        "returntype": "void",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "album",
+          "verb": "set"
+        }
+      },
+      {
+        "id": 36,
+        "name": "setAlbums",
+        "class": "ContextListener",
+        "returntype": "void",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "albums",
+          "verb": "set"
+        }
+      },
+      {
+        "id": 37,
+        "name": "setImage",
+        "class": "ContextListener",
+        "returntype": "void",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "image",
+          "verb": "set"
+        }
+      },
+      {
+        "id": 38,
+        "name": "setLastAlbumRetrieved",
+        "class": "ContextListener",
+        "returntype": "void",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "last album retrieved",
+          "verb": "set"
+        }
+      },
+      {
+        "id": 39,
+        "name": "setLastArtistRetrieved",
+        "class": "ContextListener",
+        "returntype": "void",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "last artist retrieved",
+          "verb": "set"
+        }
+      },
+      {
+        "id": 40,
+        "name": "clearCache",
+        "class": "LastFmCache",
+        "returntype": "boolean",
+        "called": [187],
+        "calls": [41, 42, 44, 45, 46, 47, 48, 43, 49],
+        "use": {
+          "type": "procedural",
+          "example": "Tag.clearCache();"
+        },
+        "swum": {
+          "object": "cache",
+          "verb": "clear"
+        }
+      },
+      {
+        "id": 41,
+        "name": "getAlbumCoverCacheDir",
+        "class": "LastFmCache",
+        "returntype": "File",
+        "called": [40, 51],
+        "calls": [],
+        "use": {
+          "type": "procedural",
+          "example": "FileUtils.cleanDirectory(getAlbumCoverCacheDir());"
+        },
+        "swum": {
+          "object": "album cover cache dir",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 42,
+        "name": "getAlbumInfoCacheDir",
+        "class": "LastFmCache",
+        "returntype": "File",
+        "called": [40, 53],
+        "calls": [],
+        "use": {
+          "type": "procedural",
+          "example": "FileUtils.cleanDirectory(getAlbumInfoCacheDir());"
+        },
+        "swum": {
+          "object": "album info cache dir",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 43,
+        "name": "getArtistInfoCacheDir",
+        "class": "LastFmCache",
+        "returntype": "File",
+        "called": [40, 54],
+        "calls": [],
+        "use": {
+          "type": "procedural",
+          "example": "FileUtils.cleanDirectory(getArtistInfoCacheDir());"
+        },
+        "swum": {
+          "object": "artist info cache dir",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 44,
+        "name": "getArtistImageCacheDir",
+        "class": "LastFmCache",
+        "returntype": "File",
+        "called": [40, 56],
+        "calls": [],
+        "use": {
+          "type": "procedural",
+          "example": "FileUtils.cleanDirectory(getArtistImageCacheDir());"
+        },
+        "swum": {
+          "object": "artist image cache dir",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 45,
+        "name": "getAlbumListCacheDir",
+        "class": "LastFmCache",
+        "returntype": "File",
+        "called": [40, 58],
+        "calls": [],
+        "use": {
+          "type": "procedural",
+          "example": "FileUtils.cleanDirectory(getAlbumListCacheDir());"
+        },
+        "swum": {
+          "object": "album list cache dir",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 46,
+        "name": "getArtistSimilarCacheDir",
+        "class": "LastFmCache",
+        "returntype": "File",
+        "called": [40, 60],
+        "calls": [],
+        "use": {
+          "type": "procedural",
+          "example": "FileUtils.cleanDirectory(getArtistSimilarCacheDir());"
+        },
+        "swum": {
+          "object": "artist similar cache dir",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 47,
+        "name": "getArtistThumbsCacheDir",
+        "class": "LastFmCache",
+        "returntype": "File",
+        "called": [40, 62],
+        "calls": [],
+        "use": {
+          "type": "procedural",
+          "example": "FileUtils.cleanDirectory(getArtistThumbsCacheDir());"
+        },
+        "swum": {
+          "object": "artist thumbs cache dir",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 48,
+        "name": "getArtistWikiCacheDir",
+        "class": "LastFmCache",
+        "returntype": "File",
+        "called": [40, 64],
+        "calls": [],
+        "use": {
+          "type": "procedural",
+          "example": "FileUtils.cleanDirectory(getArtistWikiCacheDir());"
+        },
+        "swum": {
+          "object": "artist wiki cache dir",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 49,
+        "name": "getSubmissionDataDir",
+        "class": "LastFmCache",
+        "returntype": "File",
+        "called": [40, 65],
+        "calls": [],
+        "use": {
+          "type": "procedural",
+          "example": "FileUtils.cleanDirectory(getSubmissionDataDir());"
+        },
+        "swum": {
+          "object": "submission data dir",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 50,
+        "name": "getFileNameForAlbumCover",
+        "class": "LastFmCache",
+        "returntype": "String",
+        "called": [51],
+        "calls": [],
+        "use": {
+          "type": "procedural",
+          "example": "return UtilString.concat(albumCoverCacheDirFile.getAbsolutePath(),File.separator,getFileNameForAlbumCover(album));"
+        },
+        "swum": {
+          "object": "file name for album cover",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 51,
+        "name": "getFileNameForAlbumCoverAtCache",
+        "class": "LastFmCache",
+        "returntype": "String",
+        "called": [66, 74],
+        "calls": [41, 50],
+        "use": {
+          "type": "assignment",
+          "example": "String path=getFileNameForAlbumCoverAtCache(album);"
+        },
+        "swum": {
+          "object": "file name for album cover at cache",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 52,
+        "name": "getFileNameForAlbumInfo",
+        "class": "LastFmCache",
+        "returntype": "String",
+        "called": [53],
+        "calls": [],
+        "use": {
+          "type": "procedural",
+          "example": "return UtilString.concat(albumInfoCacheDirFile.getAbsolutePath(),File.separator,getFileNameForAlbumInfo(artist,album));"
+        },
+        "swum": {
+          "object": "file name for album info",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 53,
+        "name": "getFileNameForAlbumInfoAtCache",
+        "class": "LastFmCache",
+        "returntype": "String",
+        "called": [67, 75],
+        "calls": [42, 52],
+        "use": {
+          "type": "assignment",
+          "example": "String path=getFileNameForAlbumInfoAtCache(artist,album);"
+        },
+        "swum": {
+          "object": "file name for album info at cache",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 54,
+        "name": "getFileNameForArtistInfoAtCache",
+        "class": "LastFmCache",
+        "returntype": "String",
+        "called": [68, 76],
+        "calls": [43, 57],
+        "use": {
+          "type": "assignment",
+          "example": "String path=getFileNameForArtistInfoAtCache(artist);"
+        },
+        "swum": {
+          "object": "file name for artist info at cache",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 55,
+        "name": "getFileNameForArtistImage",
+        "class": "LastFmCache",
+        "returntype": "String",
+        "called": [56],
+        "calls": [],
+        "use": {
+          "type": "procedural",
+          "example": "return UtilString.concat(artistImageCacheDirFile.getAbsolutePath(),File.separator,getFileNameForArtistImage(artist));"
+        },
+        "swum": {
+          "object": "file name for artist image",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 56,
+        "name": "getFileNameForArtistImageAtCache",
+        "class": "LastFmCache",
+        "returntype": "String",
+        "called": [69, 77],
+        "calls": [44, 55],
+        "use": {
+          "type": "assignment",
+          "example": "String path=getFileNameForArtistImageAtCache(artist);"
+        },
+        "swum": {
+          "object": "file name for artist image at cache",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 57,
+        "name": "getFileNameForArtistInfo",
+        "class": "LastFmCache",
+        "returntype": "String",
+        "called": [54, 58],
+        "calls": [],
+        "use": {
+          "type": "procedural",
+          "example": "return UtilString.concat(artistInfoCacheDirFile.getAbsolutePath(),File.separator,getFileNameForArtistInfo(artist));"
+        },
+        "swum": {
+          "object": "file name for artist info",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 58,
+        "name": "getFileNameForAlbumListAtCache",
+        "class": "LastFmCache",
+        "returntype": "String",
+        "called": [70, 78],
+        "calls": [45, 57],
+        "use": {
+          "type": "assignment",
+          "example": "String path=getFileNameForAlbumListAtCache(artist);"
+        },
+        "swum": {
+          "object": "file name for album list at cache",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 59,
+        "name": "getFileNameForArtistSimilar",
+        "class": "LastFmCache",
+        "returntype": "String",
+        "called": [60],
+        "calls": [],
+        "use": {
+          "type": "procedural",
+          "example": "return UtilString.concat(artistSimilarCacheDirFile.getAbsolutePath(),File.separator,getFileNameForArtistSimilar(artist));"
+        },
+        "swum": {
+          "object": "file name for artist similar",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 60,
+        "name": "getFileNameForArtistSimilarAtCache",
+        "class": "LastFmCache",
+        "returntype": "String",
+        "called": [71, 79],
+        "calls": [46, 59],
+        "use": {
+          "type": "assignment",
+          "example": "String path=getFileNameForArtistSimilarAtCache(artist);"
+        },
+        "swum": {
+          "object": "file name for artist similar at cache",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 61,
+        "name": "getFileNameForArtistThumb",
+        "class": "LastFmCache",
+        "returntype": "String",
+        "called": [62],
+        "calls": [132],
+        "use": {
+          "type": "procedural",
+          "example": "return UtilString.concat(artistThumbCacheDirFile.getAbsolutePath(),File.separator,getFileNameForArtistThumb(artist));"
+        },
+        "swum": {
+          "object": "file name for artist thumb",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 62,
+        "name": "getFileNameForArtistThumbAtCache",
+        "class": "LastFmCache",
+        "returntype": "String",
+        "called": [72, 80],
+        "calls": [47, 61],
+        "use": {
+          "type": "assignment",
+          "example": "String path=getFileNameForArtistThumbAtCache(artist);"
+        },
+        "swum": {
+          "object": "file name for artist thumb at cache",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 63,
+        "name": "getFileNameForArtistWiki",
+        "class": "LastFmCache",
+        "returntype": "String",
+        "called": [64],
+        "calls": [],
+        "use": {
+          "type": "procedural",
+          "example": "return UtilString.concat(artistWikiCacheDirFile.getAbsolutePath(),File.separator,getFileNameForArtistWiki(artist));"
+        },
+        "swum": {
+          "object": "file name for artist wiki",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 64,
+        "name": "getFileNameForArtistWikiAtCache",
+        "class": "LastFmCache",
+        "returntype": "String",
+        "called": [73, 81],
+        "calls": [48, 63],
+        "use": {
+          "type": "assignment",
+          "example": "String path=getFileNameForArtistWikiAtCache(artist);"
+        },
+        "swum": {
+          "object": "file name for artist wiki at cache",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 65,
+        "name": "getFileNameForSubmissionCache",
+        "class": "LastFmCache",
+        "returntype": "String",
+        "called": [84, 85],
+        "calls": [49],
+        "use": {
+          "type": "assignment",
+          "example": "String path=getFileNameForSubmissionCache();"
+        },
+        "swum": {
+          "object": "file name for submission cache",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 66,
+        "name": "retrieveAlbumCover",
+        "class": "LastFmCache",
+        "returntype": "Image",
+        "called": [],
+        "calls": [51, 220, 95],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "album cover",
+          "verb": "retrieve"
+        }
+      },
+      {
+        "id": 67,
+        "name": "retrieveAlbumInfo",
+        "class": "LastFmCache",
+        "returntype": "AlbumInfo",
+        "called": [],
+        "calls": [53, 95],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "album info",
+          "verb": "retrieve"
+        }
+      },
+      {
+        "id": 68,
+        "name": "retrieveArtistInfo",
+        "class": "LastFmCache",
+        "returntype": "ArtistInfo",
+        "called": [],
+        "calls": [54, 95],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "artist info",
+          "verb": "retrieve"
+        }
+      },
+      {
+        "id": 69,
+        "name": "retrieveArtistImage",
+        "class": "LastFmCache",
+        "returntype": "Image",
+        "called": [],
+        "calls": [56, 220, 95],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "artist image",
+          "verb": "retrieve"
+        }
+      },
+      {
+        "id": 70,
+        "name": "retrieveAlbumList",
+        "class": "LastFmCache",
+        "returntype": "AlbumListInfo",
+        "called": [],
+        "calls": [58, 95],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "album list",
+          "verb": "retrieve"
+        }
+      },
+      {
+        "id": 71,
+        "name": "retrieveArtistSimilar",
+        "class": "LastFmCache",
+        "returntype": "SimilarArtistsInfo",
+        "called": [],
+        "calls": [60, 95],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "artist similar",
+          "verb": "retrieve"
+        }
+      },
+      {
+        "id": 72,
+        "name": "retrieveArtistThumbImage",
+        "class": "LastFmCache",
+        "returntype": "Image",
+        "called": [],
+        "calls": [62, 220, 95],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "artist thumb image",
+          "verb": "retrieve"
+        }
+      },
+      {
+        "id": 73,
+        "name": "retrieveArtistWiki",
+        "class": "LastFmCache",
+        "returntype": "String",
+        "called": [],
+        "calls": [64, 95],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "artist wiki",
+          "verb": "retrieve"
+        }
+      },
+      {
+        "id": 74,
+        "name": "storeAlbumCover",
+        "class": "LastFmCache",
+        "returntype": "void",
+        "called": [],
+        "calls": [51, 95],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "album cover",
+          "verb": "store"
+        }
+      },
+      {
+        "id": 75,
+        "name": "storeAlbumInfo",
+        "class": "LastFmCache",
+        "returntype": "void",
+        "called": [],
+        "calls": [53, 95],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "album info",
+          "verb": "store"
+        }
+      },
+      {
+        "id": 76,
+        "name": "storeArtistInfo",
+        "class": "LastFmCache",
+        "returntype": "void",
+        "called": [],
+        "calls": [54, 95],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "artist info",
+          "verb": "store"
+        }
+      },
+      {
+        "id": 77,
+        "name": "storeArtistImage",
+        "class": "LastFmCache",
+        "returntype": "void",
+        "called": [],
+        "calls": [56, 95],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "artist image",
+          "verb": "store"
+        }
+      },
+      {
+        "id": 78,
+        "name": "storeAlbumList",
+        "class": "LastFmCache",
+        "returntype": "void",
+        "called": [],
+        "calls": [58, 95],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "album list",
+          "verb": "store"
+        }
+      },
+      {
+        "id": 79,
+        "name": "storeArtistSimilar",
+        "class": "LastFmCache",
+        "returntype": "void",
+        "called": [],
+        "calls": [60, 95],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "artist similar",
+          "verb": "store"
+        }
+      },
+      {
+        "id": 80,
+        "name": "storeArtistThumbImage",
+        "class": "LastFmCache",
+        "returntype": "void",
+        "called": [],
+        "calls": [62, 132, 95],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "artist thumb image",
+          "verb": "store"
+        }
+      },
+      {
+        "id": 81,
+        "name": "storeArtistWiki",
+        "class": "LastFmCache",
+        "returntype": "void",
+        "called": [],
+        "calls": [64, 95],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "artist wiki",
+          "verb": "store"
+        }
+      },
+      {
+        "id": 82,
+        "name": "compare",
+        "class": "LastFmCache",
+        "returntype": "int",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "value",
+          "verb": "compare"
+        }
+      },
+      {
+        "id": 83,
+        "name": "addSubmissionData",
+        "class": "LastFmCache",
+        "returntype": "void",
+        "called": [],
+        "calls": [84, 225],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "submission data",
+          "verb": "add"
+        }
+      },
+      {
+        "id": 84,
+        "name": "getSubmissionData",
+        "class": "LastFmCache",
+        "returntype": "List<FullSubmissionData>",
+        "called": [83],
+        "calls": [65, 95],
+        "use": {
+          "type": "assignment",
+          "example": "List<FullSubmissionData> submissionDataList=getSubmissionData();"
+        },
+        "swum": {
+          "object": "submission data",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 85,
+        "name": "removeSubmissionData",
+        "class": "LastFmCache",
+        "returntype": "void",
+        "called": [],
+        "calls": [65, 95],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "submission data",
+          "verb": "remove"
+        }
+      },
+      {
+        "id": 86,
+        "name": "getInstance",
+        "class": "Collection",
+        "returntype": "Collection",
+        "called": [88, 91, 92, 93, 99, 100, 101, 102, 103, 104],
+        "calls": [],
+        "use": {
+          "type": "procedural",
+          "example": "writeItemList(bw,DeviceManager.getInstance().toXML(),DeviceManager.getInstance().getDevices(),DeviceManager.getInstance().getXMLTag(),40);"
+        },
+        "swum": {
+          "object": "instance",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 87,
+        "name": "Collection",
+        "class": "Collection",
+        "returntype": "Collection",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "value",
+          "verb": "create"
+        }
+      },
+      {
+        "id": 88,
+        "name": "commit",
+        "class": "Collection",
+        "returntype": "void",
+        "called": [],
+        "calls": [89, 133, 86, 113, 126, 27, 182, 210, 244, 146],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "value",
+          "verb": "commit"
+        }
+      },
+      {
+        "id": 89,
+        "name": "writeItemList",
+        "class": "Collection",
+        "returntype": "void",
+        "called": [88],
+        "calls": [133, 90],
+        "use": {
+          "type": "procedural",
+          "example": "writeItemList(bw,DeviceManager.getInstance().toXML(),DeviceManager.getInstance().getDevices(),DeviceManager.getInstance().getXMLTag(),40);"
+        },
+        "swum": {
+          "object": "item list",
+          "verb": "write"
+        }
+      },
+      {
+        "id": 90,
+        "name": "writeString",
+        "class": "Collection",
+        "returntype": "void",
+        "called": [88, 89],
+        "calls": [],
+        "use": {
+          "type": "procedural",
+          "example": "writeString(bw,TrackManager.getInstance().getXMLTag(),200);"
+        },
+        "swum": {
+          "object": "string",
+          "verb": "write"
+        }
+      },
+      {
+        "id": 91,
+        "name": "load",
+        "class": "Collection",
+        "returntype": "void",
+        "called": [],
+        "calls": [222, 132, 86],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "value",
+          "verb": "load"
+        }
+      },
+      {
+        "id": 92,
+        "name": "cleanupLogical",
+        "class": "Collection",
+        "returntype": "void",
+        "called": [],
+        "calls": [182, 86],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "logical",
+          "verb": "cleanup"
+        }
+      },
+      {
+        "id": 93,
+        "name": "clearCollection",
+        "class": "Collection",
+        "returntype": "void",
+        "called": [],
+        "calls": [229, 182, 113, 86],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "collection",
+          "verb": "clear"
+        }
+      },
+      {
+        "id": 94,
+        "name": "warning",
+        "class": "Collection",
+        "returntype": "void",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "value",
+          "verb": "warning"
+        }
+      },
+      {
+        "id": 95,
+        "name": "error",
+        "class": "Collection",
+        "returntype": "void",
+        "called": [66, 67, 68, 69, 70, 71, 72, 73, 74, 75],
+        "calls": [],
+        "use": {
+          "type": "procedural",
+          "example": "Log.error(e);"
+        },
+        "swum": {
+          "object": "value",
+          "verb": "error"
+        }
+      },
+      {
+        "id": 96,
+        "name": "fatalError",
+        "class": "Collection",
+        "returntype": "void",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "error",
+          "verb": "fatal"
+        }
+      },
+      {
+        "id": 97,
+        "name": "startDocument",
+        "class": "Collection",
+        "returntype": "void",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "document",
+          "verb": "start"
+        }
+      },
+      {
+        "id": 98,
+        "name": "endDocument",
+        "class": "Collection",
+        "returntype": "void",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "document",
+          "verb": "end"
+        }
+      },
+      {
+        "id": 99,
+        "name": "startElement",
+        "class": "Collection",
+        "returntype": "void",
+        "called": [],
+        "calls": [86, 113, 182, 128, 100, 101, 102, 103, 104, 109],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "element",
+          "verb": "start"
+        }
+      },
+      {
+        "id": 100,
+        "name": "handleFiles",
+        "class": "Collection",
+        "returntype": "void",
+        "called": [99],
+        "calls": [86, 244, 232, 208, 182],
+        "use": {
+          "type": "procedural",
+          "example": "handleFiles(attributes,idIndex);"
+        },
+        "swum": {
+          "object": "files",
+          "verb": "handle"
+        }
+      },
+      {
+        "id": 101,
+        "name": "handleDirectories",
+        "class": "Collection",
+        "returntype": "void",
+        "called": [99],
+        "calls": [244, 232, 86],
+        "use": {
+          "type": "procedural",
+          "example": "handleDirectories(attributes,idIndex);"
+        },
+        "swum": {
+          "object": "directories",
+          "verb": "handle"
+        }
+      },
+      {
+        "id": 102,
+        "name": "handleTracks",
+        "class": "Collection",
+        "returntype": "void",
+        "called": [99],
+        "calls": [244, 232, 86, 125, 113, 185, 186, 182, 193, 167],
+        "use": {
+          "type": "procedural",
+          "example": "handleTracks(attributes,idIndex);"
+        },
+        "swum": {
+          "object": "tracks",
+          "verb": "handle"
+        }
+      },
+      {
+        "id": 103,
+        "name": "handleAlbums",
+        "class": "Collection",
+        "returntype": "void",
+        "called": [99],
+        "calls": [86],
+        "use": {
+          "type": "procedural",
+          "example": "handleAlbums(attributes,idIndex);"
+        },
+        "swum": {
+          "object": "albums",
+          "verb": "handle"
+        }
+      },
+      {
+        "id": 104,
+        "name": "handleArtists",
+        "class": "Collection",
+        "returntype": "void",
+        "called": [99],
+        "calls": [86],
+        "use": {
+          "type": "procedural",
+          "example": "handleArtists(attributes,idIndex);"
+        },
+        "swum": {
+          "object": "artists",
+          "verb": "handle"
+        }
+      },
+      {
+        "id": 105,
+        "name": "handleGenres",
+        "class": "Collection",
+        "returntype": "void",
+        "called": [99],
+        "calls": [115, 113],
+        "use": {
+          "type": "procedural",
+          "example": "handleGenres(attributes,idIndex);"
+        },
+        "swum": {
+          "object": "genres",
+          "verb": "handle"
+        }
+      },
+      {
+        "id": 106,
+        "name": "handlePlaylistFiles",
+        "class": "Collection",
+        "returntype": "void",
+        "called": [99],
+        "calls": [244, 232, 86],
+        "use": {
+          "type": "procedural",
+          "example": "handlePlaylistFiles(attributes,idIndex);"
+        },
+        "swum": {
+          "object": "playlist files",
+          "verb": "handle"
+        }
+      },
+      {
+        "id": 107,
+        "name": "handleDevices",
+        "class": "Collection",
+        "returntype": "void",
+        "called": [99],
+        "calls": [86],
+        "use": {
+          "type": "procedural",
+          "example": "handleDevices(attributes,idIndex);"
+        },
+        "swum": {
+          "object": "devices",
+          "verb": "handle"
+        }
+      },
+      {
+        "id": 108,
+        "name": "handleYears",
+        "class": "Collection",
+        "returntype": "void",
+        "called": [99],
+        "calls": [86],
+        "use": {
+          "type": "procedural",
+          "example": "handleYears(attributes,idIndex);"
+        },
+        "swum": {
+          "object": "years",
+          "verb": "handle"
+        }
+      },
+      {
+        "id": 109,
+        "name": "handleAlbumArtists",
+        "class": "Collection",
+        "returntype": "void",
+        "called": [99],
+        "calls": [86],
+        "use": {
+          "type": "procedural",
+          "example": "handleAlbumArtists(attributes,idIndex);"
+        },
+        "swum": {
+          "object": "album artists",
+          "verb": "handle"
+        }
+      },
+      {
+        "id": 110,
+        "name": "getHmWrongRightFileID",
+        "class": "Collection",
+        "returntype": "Map<String,String>",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "hm wrong right file id",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 111,
+        "name": "getWrongRightAlbumIDs",
+        "class": "Collection",
+        "returntype": "Map<String,String>",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "wrong right album ids",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 112,
+        "name": "GenreManager",
+        "class": "GenreManager",
+        "returntype": "GenreManager",
+        "called": [],
+        "calls": [128, 119],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "manager",
+          "verb": "create"
+        }
+      },
+      {
+        "id": 113,
+        "name": "getInstance",
+        "class": "GenreManager",
+        "returntype": "GenreManager",
+        "called": [88, 93, 99, 102, 105, 178, 190, 267],
+        "calls": [],
+        "use": {
+          "type": "procedural",
+          "example": "writeItemList(bw,DeviceManager.getInstance().toXML(),DeviceManager.getInstance().getDevices(),DeviceManager.getInstance().getXMLTag(),40);"
+        },
+        "swum": {
+          "object": "instance",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 114,
+        "name": "registerGenre",
+        "class": "GenreManager",
+        "returntype": "Genre",
+        "called": [119, 121, 190],
+        "calls": [115],
+        "use": {
+          "type": "procedural",
+          "example": "registerGenre(genre.intern());"
+        },
+        "swum": {
+          "object": "genre",
+          "verb": "register"
+        }
+      },
+      {
+        "id": 115,
+        "name": "registerGenre",
+        "class": "GenreManager",
+        "returntype": "Genre",
+        "called": [105, 114],
+        "calls": [125, 230, 225, 117],
+        "use": {
+          "type": "assignment",
+          "example": "Genre genre=GenreManager.getInstance().registerGenre(sRightID,sItemName);"
+        },
+        "swum": {
+          "object": "genre",
+          "verb": "register"
+        }
+      },
+      {
+        "id": 116,
+        "name": "compare",
+        "class": "GenreManager",
+        "returntype": "int",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "value",
+          "verb": "compare"
+        }
+      },
+      {
+        "id": 117,
+        "name": "sortGenreList",
+        "class": "GenreManager",
+        "returntype": "void",
+        "called": [115, 118],
+        "calls": [],
+        "use": {
+          "type": "procedural",
+          "example": "sortGenreList();"
+        },
+        "swum": {
+          "object": "genre list",
+          "verb": "sort"
+        }
+      },
+      {
+        "id": 118,
+        "name": "switchToOrderState",
+        "class": "GenreManager",
+        "returntype": "void",
+        "called": [],
+        "calls": [117],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "to order state",
+          "verb": "switch"
+        }
+      },
+      {
+        "id": 119,
+        "name": "registerPresetGenres",
+        "class": "GenreManager",
+        "returntype": "void",
+        "called": [112],
+        "calls": [114],
+        "use": {
+          "type": "procedural",
+          "example": "registerPresetGenres();"
+        },
+        "swum": {
+          "object": "preset genres",
+          "verb": "register"
+        }
+      },
+      {
+        "id": 120,
+        "name": "getGenreByName",
+        "class": "GenreManager",
+        "returntype": "Genre",
+        "called": [],
+        "calls": [126, 222, 132],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "genre by name",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 121,
+        "name": "changeGenreName",
+        "class": "GenreManager",
+        "returntype": "Genre",
+        "called": [],
+        "calls": [222, 114, 209, 182, 235, 190],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "genre name",
+          "verb": "change"
+        }
+      },
+      {
+        "id": 122,
+        "name": "format",
+        "class": "GenreManager",
+        "returntype": "String",
+        "called": [178],
+        "calls": [],
+        "use": {
+          "type": "procedural",
+          "example": "return UtilString.formatTimeBySec(length);"
+        },
+        "swum": {
+          "object": "value",
+          "verb": "format"
+        }
+      },
+      {
+        "id": 123,
+        "name": "getXMLTag",
+        "class": "GenreManager",
+        "returntype": "String",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "xmltag",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 124,
+        "name": "getGenresList",
+        "class": "GenreManager",
+        "returntype": "Vector<String>",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "genres list",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 125,
+        "name": "getGenreByID",
+        "class": "GenreManager",
+        "returntype": "Genre",
+        "called": [102, 115, 178],
+        "calls": [],
+        "use": {
+          "type": "assignment",
+          "example": "Genre genre=GenreManager.getInstance().getGenreByID(sGenreID);"
+        },
+        "swum": {
+          "object": "genre by id",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 126,
+        "name": "getGenres",
+        "class": "GenreManager",
+        "returntype": "List<Genre>",
+        "called": [88, 120],
+        "calls": [295],
+        "use": {
+          "type": "procedural",
+          "example": "writeItemList(bw,GenreManager.getInstance().toXML(),GenreManager.getInstance().getGenres(),GenreManager.getInstance().getXMLTag(),40);"
+        },
+        "swum": {
+          "object": "genres",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 127,
+        "name": "getGenresIterator",
+        "class": "GenreManager",
+        "returntype": "ReadOnlyIterator<Genre>",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "genres iterator",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 128,
+        "name": "PropertyMetaInformation",
+        "class": "PropertyMetaInformation",
+        "returntype": "PropertyMetaInformation",
+        "called": [99, 112, 181],
+        "calls": [222, 95],
+        "use": {
+          "type": "assignment",
+          "example": "PropertyMetaInformation meta=new PropertyMetaInformation(sPropertyName,bCustom,bConstructor,bShouldBeDisplayed,bEditable,bUnique,cType,oDefaultValue);"
+        },
+        "swum": {
+          "object": "meta information",
+          "verb": "create"
+        }
+      },
+      {
+        "id": 129,
+        "name": "isConstructor",
+        "class": "PropertyMetaInformation",
+        "returntype": "boolean",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "constructor",
+          "verb": "is"
+        }
+      },
+      {
+        "id": 130,
+        "name": "isCustom",
+        "class": "PropertyMetaInformation",
+        "returntype": "boolean",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "custom",
+          "verb": "is"
+        }
+      },
+      {
+        "id": 131,
+        "name": "getType",
+        "class": "PropertyMetaInformation",
+        "returntype": "Class<?>",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "type",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 132,
+        "name": "getName",
+        "class": "PropertyMetaInformation",
+        "returntype": "String",
+        "called": [61, 80, 91, 120, 133, 140, 142, 158, 170, 177],
+        "calls": [],
+        "use": {
+          "type": "procedural",
+          "example": "return UtilString.concat(MD5Processor.hash(artist.getName()),\".png\");"
+        },
+        "swum": {
+          "object": "name",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 133,
+        "name": "toXML",
+        "class": "PropertyMetaInformation",
+        "returntype": "String",
+        "called": [88, 89],
+        "calls": [95, 132],
+        "use": {
+          "type": "procedural",
+          "example": "writeItemList(bw,DeviceManager.getInstance().toXML(),DeviceManager.getInstance().getDevices(),DeviceManager.getInstance().getXMLTag(),40);"
+        },
+        "swum": {
+          "object": "xml",
+          "verb": "to"
+        }
+      },
+      {
+        "id": 134,
+        "name": "getDefaultValue",
+        "class": "PropertyMetaInformation",
+        "returntype": "Object",
+        "called": [294],
+        "calls": [],
+        "use": {
+          "type": "assignment",
+          "example": "oValues[iRow][iNumberStandardCols + i]=meta.getDefaultValue();"
+        },
+        "swum": {
+          "object": "default value",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 135,
+        "name": "toString",
+        "class": "PropertyMetaInformation",
+        "returntype": "String",
+        "called": [],
+        "calls": [137, 136, 138],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "string",
+          "verb": "to"
+        }
+      },
+      {
+        "id": 136,
+        "name": "isVisible",
+        "class": "PropertyMetaInformation",
+        "returntype": "boolean",
+        "called": [135, 430],
+        "calls": [],
+        "use": {
+          "type": "assignment",
+          "example": "return \"Name=\" + sName + \" Custom=\"+ bCustom+ \" Constructor=\"+ bConstructor+ \" Type=\"+ cType+ \" Default=\"+ oDefaultValue+ \" Editable=\"+ isEditable()+ \" Visible=\"+ isVisible()+ \" Mergeable=\"+ isMergeable();"
+        },
+        "swum": {
+          "object": "visible",
+          "verb": "is"
+        }
+      },
+      {
+        "id": 137,
+        "name": "isEditable",
+        "class": "PropertyMetaInformation",
+        "returntype": "boolean",
+        "called": [135],
+        "calls": [],
+        "use": {
+          "type": "assignment",
+          "example": "return \"Name=\" + sName + \" Custom=\"+ bCustom+ \" Constructor=\"+ bConstructor+ \" Type=\"+ cType+ \" Default=\"+ oDefaultValue+ \" Editable=\"+ isEditable()+ \" Visible=\"+ isVisible()+ \" Mergeable=\"+ isMergeable();"
+        },
+        "swum": {
+          "object": "editable",
+          "verb": "is"
+        }
+      },
+      {
+        "id": 138,
+        "name": "isMergeable",
+        "class": "PropertyMetaInformation",
+        "returntype": "boolean",
+        "called": [135],
+        "calls": [],
+        "use": {
+          "type": "assignment",
+          "example": "return \"Name=\" + sName + \" Custom=\"+ bCustom+ \" Constructor=\"+ bConstructor+ \" Type=\"+ cType+ \" Default=\"+ oDefaultValue+ \" Editable=\"+ isEditable()+ \" Visible=\"+ isVisible()+ \" Mergeable=\"+ isMergeable();"
+        },
+        "swum": {
+          "object": "mergeable",
+          "verb": "is"
+        }
+      },
+      {
+        "id": 139,
+        "name": "getHumanType",
+        "class": "PropertyMetaInformation",
+        "returntype": "String",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "human type",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 140,
+        "name": "getHumanName",
+        "class": "PropertyMetaInformation",
+        "returntype": "String",
+        "called": [],
+        "calls": [132],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "human name",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 141,
+        "name": "Track",
+        "class": "Track",
+        "returntype": "Track",
+        "called": [186],
+        "calls": [405],
+        "use": {
+          "type": "assignment",
+          "example": "Track track=getTrackByID(sId);"
+        },
+        "swum": {
+          "object": "value",
+          "verb": "create"
+        }
+      },
+      {
+        "id": 142,
+        "name": "toString",
+        "class": "Track",
+        "returntype": "String",
+        "called": [143, 180],
+        "calls": [405, 132, 161, 153, 162, 154, 155, 244, 157, 156],
+        "use": {
+          "type": "procedural",
+          "example": "return sb.toString();"
+        },
+        "swum": {
+          "object": "string",
+          "verb": "to"
+        }
+      },
+      {
+        "id": 143,
+        "name": "getAny",
+        "class": "Track",
+        "returntype": "String",
+        "called": [178, 211],
+        "calls": [146, 142],
+        "use": {
+          "type": "procedural",
+          "example": "return getAny();"
+        },
+        "swum": {
+          "object": "any",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 144,
+        "name": "compareTo",
+        "class": "Track",
+        "returntype": "int",
+        "called": [],
+        "calls": [405],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "to",
+          "verb": "compare"
+        }
+      },
+      {
+        "id": 145,
+        "name": "getAlbum",
+        "class": "Track",
+        "returntype": "Album",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "album",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 146,
+        "name": "getFiles",
+        "class": "Track",
+        "returntype": "List<org.jajuk.base.File>",
+        "called": [88, 143, 200, 201, 202, 206, 268, 270, 271, 330],
+        "calls": [],
+        "use": {
+          "type": "conditional",
+          "example": "if (track.getFiles().size() > 0) {"
+        },
+        "swum": {
+          "object": "files",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 147,
+        "name": "removeFile",
+        "class": "Track",
+        "returntype": "void",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "file",
+          "verb": "remove"
+        }
+      },
+      {
+        "id": 148,
+        "name": "getReadyFiles",
+        "class": "Track",
+        "returntype": "List<File>",
+        "called": [195],
+        "calls": [244, 225],
+        "use": {
+          "type": "assignment",
+          "example": "alReady=track.getReadyFiles();"
+        },
+        "swum": {
+          "object": "ready files",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 149,
+        "name": "getReadyFiles",
+        "class": "Track",
+        "returntype": "List<File>",
+        "called": [188, 189, 190, 191, 192, 194, 196, 197, 198, 199],
+        "calls": [244, 230, 225],
+        "use": {
+          "type": "assignment",
+          "example": "alReady=track.getReadyFiles(filter);"
+        },
+        "swum": {
+          "object": "ready files",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 150,
+        "name": "getTotalSize",
+        "class": "Track",
+        "returntype": "long",
+        "called": [],
+        "calls": [219],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "total size",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 151,
+        "name": "compare",
+        "class": "Track",
+        "returntype": "int",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "value",
+          "verb": "compare"
+        }
+      },
+      {
+        "id": 152,
+        "name": "getBestFile",
+        "class": "Track",
+        "returntype": "File",
+        "called": [175, 211],
+        "calls": [225, 244, 232],
+        "use": {
+          "type": "conditional",
+          "example": "if (getBestFile(true) != null || !Conf.getBoolean(Const.CONF_OPTIONS_HIDE_UNMOUNTED)) {"
+        },
+        "swum": {
+          "object": "best file",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 153,
+        "name": "getHits",
+        "class": "Track",
+        "returntype": "long",
+        "called": [142, 168, 170, 294],
+        "calls": [],
+        "use": {
+          "type": "assignment",
+          "example": "sOut.append(\"Track[ID=\").append(getID()).append(\" Name={{\").append(getName()).append(\"}} \").append(album).append(\" \").append(genre).append(\" \").append(artist).append(\" Length=\").append(length).append(\" Year=\").append(year.getValue()).append(\" Rate=\").append(getRate()).append(\" \").append(type).append(\" Hits=\").append(getHits()).append(\" Addition date=\").append(getDiscoveryDate()).append(\" Comment=\").append(getComment()).append(\" order=\").append(getOrder()).append(\" Nb of files=\").append(alFiles.size()).append(\" Album artist=\").append(getAlbumArtist()).append(\" Disc=\").append(getDiscNumber()).append(\"]\");"
+        },
+        "swum": {
+          "object": "hits",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 154,
+        "name": "getComment",
+        "class": "Track",
+        "returntype": "String",
+        "called": [142, 192, 272],
+        "calls": [],
+        "use": {
+          "type": "assignment",
+          "example": "sOut.append(\"Track[ID=\").append(getID()).append(\" Name={{\").append(getName()).append(\"}} \").append(album).append(\" \").append(genre).append(\" \").append(artist).append(\" Length=\").append(length).append(\" Year=\").append(year.getValue()).append(\" Rate=\").append(getRate()).append(\" \").append(type).append(\" Hits=\").append(getHits()).append(\" Addition date=\").append(getDiscoveryDate()).append(\" Comment=\").append(getComment()).append(\" order=\").append(getOrder()).append(\" Nb of files=\").append(alFiles.size()).append(\" Album artist=\").append(getAlbumArtist()).append(\" Disc=\").append(getDiscNumber()).append(\"]\");"
+        },
+        "swum": {
+          "object": "comment",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 155,
+        "name": "getOrder",
+        "class": "Track",
+        "returntype": "long",
+        "called": [142, 188, 189, 190, 191, 194, 196, 272, 294],
+        "calls": [],
+        "use": {
+          "type": "assignment",
+          "example": "sOut.append(\"Track[ID=\").append(getID()).append(\" Name={{\").append(getName()).append(\"}} \").append(album).append(\" \").append(genre).append(\" \").append(artist).append(\" Length=\").append(length).append(\" Year=\").append(year.getValue()).append(\" Rate=\").append(getRate()).append(\" \").append(type).append(\" Hits=\").append(getHits()).append(\" Addition date=\").append(getDiscoveryDate()).append(\" Comment=\").append(getComment()).append(\" order=\").append(getOrder()).append(\" Nb of files=\").append(alFiles.size()).append(\" Album artist=\").append(getAlbumArtist()).append(\" Disc=\").append(getDiscNumber()).append(\"]\");"
+        },
+        "swum": {
+          "object": "order",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 156,
+        "name": "getDiscNumber",
+        "class": "Track",
+        "returntype": "long",
+        "called": [142],
+        "calls": [],
+        "use": {
+          "type": "assignment",
+          "example": "sOut.append(\"Track[ID=\").append(getID()).append(\" Name={{\").append(getName()).append(\"}} \").append(album).append(\" \").append(genre).append(\" \").append(artist).append(\" Length=\").append(length).append(\" Year=\").append(year.getValue()).append(\" Rate=\").append(getRate()).append(\" \").append(type).append(\" Hits=\").append(getHits()).append(\" Addition date=\").append(getDiscoveryDate()).append(\" Comment=\").append(getComment()).append(\" order=\").append(getOrder()).append(\" Nb of files=\").append(alFiles.size()).append(\" Album artist=\").append(getAlbumArtist()).append(\" Disc=\").append(getDiscNumber()).append(\"]\");"
+        },
+        "swum": {
+          "object": "disc number",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 157,
+        "name": "getAlbumArtist",
+        "class": "Track",
+        "returntype": "AlbumArtist",
+        "called": [142, 158],
+        "calls": [],
+        "use": {
+          "type": "assignment",
+          "example": "sOut.append(\"Track[ID=\").append(getID()).append(\" Name={{\").append(getName()).append(\"}} \").append(album).append(\" \").append(genre).append(\" \").append(artist).append(\" Length=\").append(length).append(\" Year=\").append(year.getValue()).append(\" Rate=\").append(getRate()).append(\" \").append(type).append(\" Hits=\").append(getHits()).append(\" Addition date=\").append(getDiscoveryDate()).append(\" Comment=\").append(getComment()).append(\" order=\").append(getOrder()).append(\" Nb of files=\").append(alFiles.size()).append(\" Album artist=\").append(getAlbumArtist()).append(\" Disc=\").append(getDiscNumber()).append(\"]\");"
+        },
+        "swum": {
+          "object": "album artist",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 158,
+        "name": "getAlbumArtistOrArtist",
+        "class": "Track",
+        "returntype": "String",
+        "called": [],
+        "calls": [157, 132, 222, 164],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "album artist or artist",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 159,
+        "name": "getYear",
+        "class": "Track",
+        "returntype": "Year",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "year",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 160,
+        "name": "getDuration",
+        "class": "Track",
+        "returntype": "long",
+        "called": [170],
+        "calls": [],
+        "use": {
+          "type": "assignment",
+          "example": "long duration=getDuration();"
+        },
+        "swum": {
+          "object": "duration",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 161,
+        "name": "getRate",
+        "class": "Track",
+        "returntype": "long",
+        "called": [142, 193, 272],
+        "calls": [],
+        "use": {
+          "type": "assignment",
+          "example": "sOut.append(\"Track[ID=\").append(getID()).append(\" Name={{\").append(getName()).append(\"}} \").append(album).append(\" \").append(genre).append(\" \").append(artist).append(\" Length=\").append(length).append(\" Year=\").append(year.getValue()).append(\" Rate=\").append(getRate()).append(\" \").append(type).append(\" Hits=\").append(getHits()).append(\" Addition date=\").append(getDiscoveryDate()).append(\" Comment=\").append(getComment()).append(\" order=\").append(getOrder()).append(\" Nb of files=\").append(alFiles.size()).append(\" Album artist=\").append(getAlbumArtist()).append(\" Disc=\").append(getDiscNumber()).append(\"]\");"
+        },
+        "swum": {
+          "object": "rate",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 162,
+        "name": "getDiscoveryDate",
+        "class": "Track",
+        "returntype": "Date",
+        "called": [142, 178, 294],
+        "calls": [],
+        "use": {
+          "type": "assignment",
+          "example": "sOut.append(\"Track[ID=\").append(getID()).append(\" Name={{\").append(getName()).append(\"}} \").append(album).append(\" \").append(genre).append(\" \").append(artist).append(\" Length=\").append(length).append(\" Year=\").append(year.getValue()).append(\" Rate=\").append(getRate()).append(\" \").append(type).append(\" Hits=\").append(getHits()).append(\" Addition date=\").append(getDiscoveryDate()).append(\" Comment=\").append(getComment()).append(\" order=\").append(getOrder()).append(\" Nb of files=\").append(alFiles.size()).append(\" Album artist=\").append(getAlbumArtist()).append(\" Disc=\").append(getDiscNumber()).append(\"]\");"
+        },
+        "swum": {
+          "object": "discovery date",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 163,
+        "name": "getType",
+        "class": "Track",
+        "returntype": "Type",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "type",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 164,
+        "name": "getArtist",
+        "class": "Track",
+        "returntype": "Artist",
+        "called": [158],
+        "calls": [],
+        "use": {
+          "type": "assignment",
+          "example": "Artist artist=getArtist();"
+        },
+        "swum": {
+          "object": "artist",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 165,
+        "name": "getGenre",
+        "class": "Track",
+        "returntype": "Genre",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "genre",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 166,
+        "name": "addFile",
+        "class": "Track",
+        "returntype": "void",
+        "called": [],
+        "calls": [230, 222, 225],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "file",
+          "verb": "add"
+        }
+      },
+      {
+        "id": 167,
+        "name": "setHits",
+        "class": "Track",
+        "returntype": "void",
+        "called": [102, 168],
+        "calls": [],
+        "use": {
+          "type": "procedural",
+          "example": "track.setHits(UtilString.fastLongParser(attributes.getValue(Const.XML_TRACK_HITS)));"
+        },
+        "swum": {
+          "object": "hits",
+          "verb": "set"
+        }
+      },
+      {
+        "id": 168,
+        "name": "incHits",
+        "class": "Track",
+        "returntype": "void",
+        "called": [],
+        "calls": [153, 167],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "hits",
+          "verb": "inc"
+        }
+      },
+      {
+        "id": 169,
+        "name": "setPreference",
+        "class": "Track",
+        "returntype": "void",
+        "called": [],
+        "calls": [405, 170],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "preference",
+          "verb": "set"
+        }
+      },
+      {
+        "id": 170,
+        "name": "updateRate",
+        "class": "Track",
+        "returntype": "void",
+        "called": [169],
+        "calls": [171, 160, 153, 132, 95],
+        "use": {
+          "type": "procedural",
+          "example": "updateRate();"
+        },
+        "swum": {
+          "object": "rate",
+          "verb": "update"
+        }
+      },
+      {
+        "id": 171,
+        "name": "setRate",
+        "class": "Track",
+        "returntype": "void",
+        "called": [170, 193],
+        "calls": [],
+        "use": {
+          "type": "procedural",
+          "example": "setRate(rate);"
+        },
+        "swum": {
+          "object": "rate",
+          "verb": "set"
+        }
+      },
+      {
+        "id": 172,
+        "name": "setComment",
+        "class": "Track",
+        "returntype": "void",
+        "called": [102, 192],
+        "calls": [],
+        "use": {
+          "type": "procedural",
+          "example": "track.setComment(sComment.intern());"
+        },
+        "swum": {
+          "object": "comment",
+          "verb": "set"
+        }
+      },
+      {
+        "id": 173,
+        "name": "setAlbumArtist",
+        "class": "Track",
+        "returntype": "void",
+        "called": [102, 197],
+        "calls": [405],
+        "use": {
+          "type": "procedural",
+          "example": "track.setAlbumArtist(albumArtist);"
+        },
+        "swum": {
+          "object": "album artist",
+          "verb": "set"
+        }
+      },
+      {
+        "id": 174,
+        "name": "setDiscoveryDate",
+        "class": "Track",
+        "returntype": "void",
+        "called": [102],
+        "calls": [],
+        "use": {
+          "type": "procedural",
+          "example": "track.setDiscoveryDate(dAdditionDate);"
+        },
+        "swum": {
+          "object": "discovery date",
+          "verb": "set"
+        }
+      },
+      {
+        "id": 175,
+        "name": "shouldBeHidden",
+        "class": "Track",
+        "returntype": "boolean",
+        "called": [],
+        "calls": [152],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "be hidden",
+          "verb": "should"
+        }
+      },
+      {
+        "id": 176,
+        "name": "getXMLTag",
+        "class": "Track",
+        "returntype": "String",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "xmltag",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 177,
+        "name": "getTitle",
+        "class": "Track",
+        "returntype": "String",
+        "called": [],
+        "calls": [132],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "title",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 178,
+        "name": "getHumanValue",
+        "class": "Track",
+        "returntype": "String",
+        "called": [],
+        "calls": [222, 125, 113, 132, 122, 162, 143],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "human value",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 179,
+        "name": "getIconRepresentation",
+        "class": "Track",
+        "returntype": "ImageIcon",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "icon representation",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 180,
+        "name": "getFilesString",
+        "class": "Track",
+        "returntype": "String",
+        "called": [183],
+        "calls": [132, 142],
+        "use": {
+          "type": "assignment",
+          "example": "final int iResu=Messages.getChoice(Messages.getString(\"Confirmation_tag_write\") + \" : \\n\" + track.getFilesString(),JOptionPane.YES_NO_CANCEL_OPTION,JOptionPane.INFORMATION_MESSAGE);"
+        },
+        "swum": {
+          "object": "files string",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 181,
+        "name": "TrackManager",
+        "class": "TrackManager",
+        "returntype": "TrackManager",
+        "called": [],
+        "calls": [128],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "manager",
+          "verb": "create"
+        }
+      },
+      {
+        "id": 182,
+        "name": "getInstance",
+        "class": "TrackManager",
+        "returntype": "TrackManager",
+        "called": [88, 92, 93, 99, 100, 102, 121, 187, 188, 189],
+        "calls": [],
+        "use": {
+          "type": "procedural",
+          "example": "writeItemList(bw,DeviceManager.getInstance().toXML(),DeviceManager.getInstance().getDevices(),DeviceManager.getInstance().getXMLTag(),40);"
+        },
+        "swum": {
+          "object": "instance",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 183,
+        "name": "confirm",
+        "class": "TrackManager",
+        "returntype": "boolean",
+        "called": [188, 189, 190, 191, 192, 194, 195, 196, 197, 198],
+        "calls": [180],
+        "use": {
+          "type": "conditional",
+          "example": "if (!confirm(track)) {"
+        },
+        "swum": {
+          "object": "value",
+          "verb": "confirm"
+        }
+      },
+      {
+        "id": 184,
+        "name": "registerTrack",
+        "class": "TrackManager",
+        "returntype": "Track",
+        "called": [188, 189, 190, 191, 194, 196, 198],
+        "calls": [185, 186],
+        "use": {
+          "type": "assignment",
+          "example": "Track newTrack=registerTrack(track.getName(),newAlbum,track.getGenre(),track.getArtist(),track.getDuration(),track.getYear(),track.getOrder(),track.getType(),track.getDiscNumber());"
+        },
+        "swum": {
+          "object": "track",
+          "verb": "register"
+        }
+      },
+      {
+        "id": 185,
+        "name": "createID",
+        "class": "TrackManager",
+        "returntype": "String",
+        "called": [102, 184],
+        "calls": [405],
+        "use": {
+          "type": "assignment",
+          "example": "sRightID=TrackManager.createID(sTrackName,album,genre,artist,length,year,lOrder,type,lDiscNumber).intern();"
+        },
+        "swum": {
+          "object": "id",
+          "verb": "create"
+        }
+      },
+      {
+        "id": 186,
+        "name": "registerTrack",
+        "class": "TrackManager",
+        "returntype": "Track",
+        "called": [102, 184],
+        "calls": [208, 141, 225],
+        "use": {
+          "type": "assignment",
+          "example": "Track track=TrackManager.getInstance().registerTrack(sRightID,sTrackName,album,genre,artist,length,year,lOrder,type,lDiscNumber);"
+        },
+        "swum": {
+          "object": "track",
+          "verb": "register"
+        }
+      },
+      {
+        "id": 187,
+        "name": "commit",
+        "class": "TrackManager",
+        "returntype": "void",
+        "called": [188, 189, 190, 191, 192, 194, 195, 196, 197, 198],
+        "calls": [229, 95, 40, 182],
+        "use": {
+          "type": "conditional",
+          "example": "if (bAutocommit) {"
+        },
+        "swum": {
+          "object": "value",
+          "verb": "commit"
+        }
+      },
+      {
+        "id": 188,
+        "name": "changeTrackAlbum",
+        "class": "TrackManager",
+        "returntype": "Track",
+        "called": [],
+        "calls": [183, 222, 149, 244, 187, 225, 182, 184, 132, 155],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "track album",
+          "verb": "change"
+        }
+      },
+      {
+        "id": 189,
+        "name": "changeTrackArtist",
+        "class": "TrackManager",
+        "returntype": "Track",
+        "called": [],
+        "calls": [183, 222, 149, 244, 187, 225, 182, 184, 132, 155],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "track artist",
+          "verb": "change"
+        }
+      },
+      {
+        "id": 190,
+        "name": "changeTrackGenre",
+        "class": "TrackManager",
+        "returntype": "Track",
+        "called": [121],
+        "calls": [183, 222, 149, 244, 187, 225, 114, 113, 184, 132],
+        "use": {
+          "type": "procedural",
+          "example": "TrackManager.getInstance().changeTrackGenre(track,sNewName,null);"
+        },
+        "swum": {
+          "object": "track genre",
+          "verb": "change"
+        }
+      },
+      {
+        "id": 191,
+        "name": "changeTrackYear",
+        "class": "TrackManager",
+        "returntype": "Track",
+        "called": [],
+        "calls": [183, 222, 132, 149, 244, 187, 225, 182, 184, 155],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "track year",
+          "verb": "change"
+        }
+      },
+      {
+        "id": 192,
+        "name": "changeTrackComment",
+        "class": "TrackManager",
+        "returntype": "Track",
+        "called": [],
+        "calls": [183, 222, 154, 149, 244, 172, 187, 182, 225],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "track comment",
+          "verb": "change"
+        }
+      },
+      {
+        "id": 193,
+        "name": "changeTrackRate",
+        "class": "TrackManager",
+        "returntype": "Track",
+        "called": [102],
+        "calls": [161, 171, 95],
+        "use": {
+          "type": "procedural",
+          "example": "TrackManager.getInstance().changeTrackRate(track,UtilString.fastLongParser(attributes.getValue(Const.XML_TRACK_RATE)));"
+        },
+        "swum": {
+          "object": "track rate",
+          "verb": "change"
+        }
+      },
+      {
+        "id": 194,
+        "name": "changeTrackOrder",
+        "class": "TrackManager",
+        "returntype": "Track",
+        "called": [],
+        "calls": [183, 155, 149, 244, 187, 225, 184, 132, 200],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "track order",
+          "verb": "change"
+        }
+      },
+      {
+        "id": 195,
+        "name": "changeTrackField",
+        "class": "TrackManager",
+        "returntype": "Track",
+        "called": [],
+        "calls": [183, 148, 244, 187, 225],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "track field",
+          "verb": "change"
+        }
+      },
+      {
+        "id": 196,
+        "name": "changeTrackName",
+        "class": "TrackManager",
+        "returntype": "Track",
+        "called": [],
+        "calls": [183, 222, 132, 149, 244, 187, 225, 184, 155, 200],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "track name",
+          "verb": "change"
+        }
+      },
+      {
+        "id": 197,
+        "name": "changeTrackAlbumArtist",
+        "class": "TrackManager",
+        "returntype": "Item",
+        "called": [],
+        "calls": [183, 222, 149, 244, 173, 187, 182, 225],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "track album artist",
+          "verb": "change"
+        }
+      },
+      {
+        "id": 198,
+        "name": "changeTrackDiscNumber",
+        "class": "TrackManager",
+        "returntype": "Item",
+        "called": [],
+        "calls": [183, 149, 244, 187, 225, 222, 184, 132, 200],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "track disc number",
+          "verb": "change"
+        }
+      },
+      {
+        "id": 199,
+        "name": "updateFilesReferences",
+        "class": "TrackManager",
+        "returntype": "void",
+        "called": [200],
+        "calls": [149],
+        "use": {
+          "type": "procedural",
+          "example": "updateFilesReferences(track,newTrack,filter);"
+        },
+        "swum": {
+          "object": "files references",
+          "verb": "update"
+        }
+      },
+      {
+        "id": 200,
+        "name": "postChange",
+        "class": "TrackManager",
+        "returntype": "void",
+        "called": [188, 189, 190, 191, 194, 196, 198],
+        "calls": [199, 244, 146],
+        "use": {
+          "type": "procedural",
+          "example": "postChange(track,newTrack,filter);"
+        },
+        "swum": {
+          "object": "change",
+          "verb": "post"
+        }
+      },
+      {
+        "id": 201,
+        "name": "cleanup",
+        "class": "TrackManager",
+        "returntype": "void",
+        "called": [],
+        "calls": [209, 244, 146, 182, 405, 202],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "value",
+          "verb": "cleanup"
+        }
+      },
+      {
+        "id": 202,
+        "name": "removeFile",
+        "class": "TrackManager",
+        "returntype": "void",
+        "called": [201],
+        "calls": [405, 244, 146],
+        "use": {
+          "type": "procedural",
+          "example": "FileManager.getInstance().removeFile(file);"
+        },
+        "swum": {
+          "object": "file",
+          "verb": "remove"
+        }
+      },
+      {
+        "id": 203,
+        "name": "getTrackFromAttic",
+        "class": "TrackManager",
+        "returntype": "Track",
+        "called": [],
+        "calls": [232],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "track from attic",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 204,
+        "name": "getXMLTag",
+        "class": "TrackManager",
+        "returntype": "String",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "xmltag",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 205,
+        "name": "getAssociatedTracks",
+        "class": "TrackManager",
+        "returntype": "List<Track>",
+        "called": [],
+        "calls": [225, 206],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "associated tracks",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 206,
+        "name": "getAssociatedTracks",
+        "class": "TrackManager",
+        "returntype": "List<Track>",
+        "called": [205],
+        "calls": [244, 232, 227, 225, 230, 146],
+        "use": {
+          "type": "procedural",
+          "example": "return getAssociatedTracks(items,sorted);"
+        },
+        "swum": {
+          "object": "associated tracks",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 207,
+        "name": "getComparator",
+        "class": "TrackManager",
+        "returntype": "TrackComparator",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "comparator",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 208,
+        "name": "getTrackByID",
+        "class": "TrackManager",
+        "returntype": "Track",
+        "called": [100, 186],
+        "calls": [],
+        "use": {
+          "type": "assignment",
+          "example": "Track track=TrackManager.getInstance().getTrackByID(sTrackId);"
+        },
+        "swum": {
+          "object": "track by id",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 209,
+        "name": "getTracks",
+        "class": "TrackManager",
+        "returntype": "List<Track>",
+        "called": [121, 201],
+        "calls": [295],
+        "use": {
+          "type": "assignment",
+          "example": "List<Track> alTracks=TrackManager.getInstance().getTracks();"
+        },
+        "swum": {
+          "object": "tracks",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 210,
+        "name": "getTracksIterator",
+        "class": "TrackManager",
+        "returntype": "ReadOnlyIterator<Track>",
+        "called": [88, 211],
+        "calls": [],
+        "use": {
+          "type": "assignment",
+          "example": "ReadOnlyIterator<Track> tracks=TrackManager.getInstance().getTracksIterator();"
+        },
+        "swum": {
+          "object": "tracks iterator",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 211,
+        "name": "search",
+        "class": "TrackManager",
+        "returntype": "List<SearchResult>",
+        "called": [],
+        "calls": [210, 152, 143, 233, 225],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "value",
+          "verb": "search"
+        }
+      },
+      {
+        "id": 212,
+        "name": "isAutocommit",
+        "class": "TrackManager",
+        "returntype": "boolean",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "autocommit",
+          "verb": "is"
+        }
+      },
+      {
+        "id": 213,
+        "name": "setAutocommit",
+        "class": "TrackManager",
+        "returntype": "void",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "autocommit",
+          "verb": "set"
+        }
+      },
+      {
+        "id": 214,
+        "name": "Cover",
+        "class": "Cover",
+        "returntype": "Cover",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "value",
+          "verb": "create"
+        }
+      },
+      {
+        "id": 215,
+        "name": "Cover",
+        "class": "Cover",
+        "returntype": "Cover",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "value",
+          "verb": "create"
+        }
+      },
+      {
+        "id": 216,
+        "name": "compareTo",
+        "class": "Cover",
+        "returntype": "int",
+        "called": [],
+        "calls": [217, 132, 236, 224],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "to",
+          "verb": "compare"
+        }
+      },
+      {
+        "id": 217,
+        "name": "getType",
+        "class": "Cover",
+        "returntype": "CoverType",
+        "called": [216, 220],
+        "calls": [],
+        "use": {
+          "type": "assignment",
+          "example": "int comparison=getType().ordinal() - cOther.getType().ordinal();"
+        },
+        "swum": {
+          "object": "type",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 218,
+        "name": "getURL",
+        "class": "Cover",
+        "returntype": "URL",
+        "called": [222],
+        "calls": [],
+        "use": {
+          "type": "procedural",
+          "example": "return url.toString().equals(cOther.getURL().toString());"
+        },
+        "swum": {
+          "object": "url",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 219,
+        "name": "getSize",
+        "class": "Cover",
+        "returntype": "String",
+        "called": [150, 269, 319, 329],
+        "calls": [],
+        "use": {
+          "type": "assignment",
+          "example": "l+=file.getSize();"
+        },
+        "swum": {
+          "object": "size",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 220,
+        "name": "getImage",
+        "class": "Cover",
+        "returntype": "Image",
+        "called": [66, 69, 72, 327, 337],
+        "calls": [217, 224],
+        "use": {
+          "type": "procedural",
+          "example": "return new ImageIcon(path).getImage();"
+        },
+        "swum": {
+          "object": "image",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 221,
+        "name": "toString",
+        "class": "Cover",
+        "returntype": "String",
+        "called": [222, 223],
+        "calls": [],
+        "use": {
+          "type": "procedural",
+          "example": "return url.toString().equals(cOther.getURL().toString());"
+        },
+        "swum": {
+          "object": "string",
+          "verb": "to"
+        }
+      },
+      {
+        "id": 222,
+        "name": "equals",
+        "class": "Cover",
+        "returntype": "boolean",
+        "called": [91, 120, 121, 128, 158, 166, 178, 188, 189, 190],
+        "calls": [221, 218],
+        "use": {
+          "type": "conditional",
+          "example": "if (file.equals(regularFile)) {"
+        },
+        "swum": {
+          "object": "value",
+          "verb": "equals"
+        }
+      },
+      {
+        "id": 223,
+        "name": "hashCode",
+        "class": "Cover",
+        "returntype": "int",
+        "called": [],
+        "calls": [221],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "code",
+          "verb": "hash"
+        }
+      },
+      {
+        "id": 224,
+        "name": "getFile",
+        "class": "Cover",
+        "returntype": "File",
+        "called": [216, 220, 254, 290, 294, 309, 314, 316, 330, 340],
+        "calls": [],
+        "use": {
+          "type": "assignment",
+          "example": "String fileNameOther=cOther.getFile().getName();"
+        },
+        "swum": {
+          "object": "file",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 225,
+        "name": "add",
+        "class": "QueueList",
+        "returntype": "boolean",
+        "called": [8, 83, 115, 148, 149, 152, 166, 186, 188, 189],
+        "calls": [],
+        "use": {
+          "type": "procedural",
+          "example": "tempBar.add(this);"
+        },
+        "swum": {
+          "object": "value",
+          "verb": "add"
+        }
+      },
+      {
+        "id": 226,
+        "name": "add",
+        "class": "QueueList",
+        "returntype": "void",
+        "called": [329, 394],
+        "calls": [],
+        "use": {
+          "type": "procedural",
+          "example": "alCovers.add(CoverView.nocover);"
+        },
+        "swum": {
+          "object": "value",
+          "verb": "add"
+        }
+      },
+      {
+        "id": 227,
+        "name": "addAll",
+        "class": "QueueList",
+        "returntype": "boolean",
+        "called": [206, 382],
+        "calls": [],
+        "use": {
+          "type": "procedural",
+          "example": "out.addAll(tracks);"
+        },
+        "swum": {
+          "object": "all",
+          "verb": "add"
+        }
+      },
+      {
+        "id": 228,
+        "name": "addAll",
+        "class": "QueueList",
+        "returntype": "boolean",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "all",
+          "verb": "add"
+        }
+      },
+      {
+        "id": 229,
+        "name": "clear",
+        "class": "QueueList",
+        "returntype": "void",
+        "called": [93, 187, 255, 293, 339, 343],
+        "calls": [],
+        "use": {
+          "type": "procedural",
+          "example": "TrackManager.getInstance().clear();"
+        },
+        "swum": {
+          "object": "value",
+          "verb": "clear"
+        }
+      },
+      {
+        "id": 230,
+        "name": "contains",
+        "class": "QueueList",
+        "returntype": "boolean",
+        "called": [115, 149, 166, 206, 278, 294, 310, 316, 343],
+        "calls": [],
+        "use": {
+          "type": "conditional",
+          "example": "if (!genresList.contains(sName)) {"
+        },
+        "swum": {
+          "object": "value",
+          "verb": "contains"
+        }
+      },
+      {
+        "id": 231,
+        "name": "containsAll",
+        "class": "QueueList",
+        "returntype": "boolean",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "all",
+          "verb": "contains"
+        }
+      },
+      {
+        "id": 232,
+        "name": "get",
+        "class": "QueueList",
+        "returntype": "StackItem",
+        "called": [100, 101, 102, 106, 142, 152, 203, 206, 252, 292],
+        "calls": [],
+        "use": {
+          "type": "assignment",
+          "example": "String sItemName=attributes.getValue(Const.XML_NAME);"
+        },
+        "swum": {
+          "object": "value",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 233,
+        "name": "indexOf",
+        "class": "QueueList",
+        "returntype": "int",
+        "called": [211, 350],
+        "calls": [],
+        "use": {
+          "type": "conditional",
+          "example": "if (sResu.toLowerCase(Locale.getDefault()).indexOf(criteria.toLowerCase(Locale.getDefault())) != -1) {"
+        },
+        "swum": {
+          "object": "of",
+          "verb": "index"
+        }
+      },
+      {
+        "id": 234,
+        "name": "isEmpty",
+        "class": "QueueList",
+        "returntype": "boolean",
+        "called": [343, 355, 358, 364],
+        "calls": [],
+        "use": {
+          "type": "conditional",
+          "example": "if (!sQuery.isEmpty()) {"
+        },
+        "swum": {
+          "object": "empty",
+          "verb": "is"
+        }
+      },
+      {
+        "id": 235,
+        "name": "iterator",
+        "class": "QueueList",
+        "returntype": "Iterator<StackItem>",
+        "called": [121, 273, 294, 330, 343],
+        "calls": [],
+        "use": {
+          "type": "assignment",
+          "example": "Iterator<Track> it=alTracks.iterator();"
+        },
+        "swum": {
+          "object": "value",
+          "verb": "iterator"
+        }
+      },
+      {
+        "id": 236,
+        "name": "lastIndexOf",
+        "class": "QueueList",
+        "returntype": "int",
+        "called": [216, 313],
+        "calls": [],
+        "use": {
+          "type": "assignment",
+          "example": "String fileNameNoExtension=fileName.substring(0,fileName.lastIndexOf('.'));"
+        },
+        "swum": {
+          "object": "index of",
+          "verb": "last"
+        }
+      },
+      {
+        "id": 237,
+        "name": "listIterator",
+        "class": "QueueList",
+        "returntype": "ListIterator<StackItem>",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "iterator",
+          "verb": "list"
+        }
+      },
+      {
+        "id": 238,
+        "name": "listIterator",
+        "class": "QueueList",
+        "returntype": "ListIterator<StackItem>",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "iterator",
+          "verb": "list"
+        }
+      },
+      {
+        "id": 239,
+        "name": "remove",
+        "class": "QueueList",
+        "returntype": "boolean",
+        "called": [240, 254, 257],
+        "calls": [240],
+        "use": {
+          "type": "procedural",
+          "example": "return alQueue.remove(index);"
+        },
+        "swum": {
+          "object": "value",
+          "verb": "remove"
+        }
+      },
+      {
+        "id": 240,
+        "name": "remove",
+        "class": "QueueList",
+        "returntype": "StackItem",
+        "called": [239, 254, 257],
+        "calls": [239],
+        "use": {
+          "type": "procedural",
+          "example": "return alQueue.remove(o);"
+        },
+        "swum": {
+          "object": "value",
+          "verb": "remove"
+        }
+      },
+      {
+        "id": 241,
+        "name": "removeAll",
+        "class": "QueueList",
+        "returntype": "boolean",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "all",
+          "verb": "remove"
+        }
+      },
+      {
+        "id": 242,
+        "name": "retainAll",
+        "class": "QueueList",
+        "returntype": "boolean",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "all",
+          "verb": "retain"
+        }
+      },
+      {
+        "id": 243,
+        "name": "set",
+        "class": "QueueList",
+        "returntype": "StackItem",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "value",
+          "verb": "set"
+        }
+      },
+      {
+        "id": 244,
+        "name": "size",
+        "class": "QueueList",
+        "returntype": "int",
+        "called": [88, 100, 101, 102, 106, 142, 148, 149, 152, 188],
+        "calls": [],
+        "use": {
+          "type": "conditional",
+          "example": "if (track.getFiles().size() > 0) {"
+        },
+        "swum": {
+          "object": "value",
+          "verb": "size"
+        }
+      },
+      {
+        "id": 245,
+        "name": "subList",
+        "class": "QueueList",
+        "returntype": "List<StackItem>",
+        "called": [291, 343],
+        "calls": [],
+        "use": {
+          "type": "procedural",
+          "example": "return new ArrayList<StackItem>(alItems.subList(index,alItems.size()));"
+        },
+        "swum": {
+          "object": "list",
+          "verb": "sub"
+        }
+      },
+      {
+        "id": 246,
+        "name": "toArray",
+        "class": "QueueList",
+        "returntype": "Object[]",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "array",
+          "verb": "to"
+        }
+      },
+      {
+        "id": 247,
+        "name": "toArray",
+        "class": "QueueList",
+        "returntype": "T[]",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "array",
+          "verb": "to"
+        }
+      },
+      {
+        "id": 248,
+        "name": "getQueue",
+        "class": "QueueList",
+        "returntype": "List<StackItem>",
+        "called": [438],
+        "calls": [],
+        "use": {
+          "type": "assignment",
+          "example": "boolean bQueueNotVoid=(QueueModel.getQueue().size() > 0);"
+        },
+        "swum": {
+          "object": "queue",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 249,
+        "name": "sizePlanned",
+        "class": "QueueList",
+        "returntype": "int",
+        "called": [257],
+        "calls": [244],
+        "use": {
+          "type": "conditional",
+          "example": "if (sizePlanned() != 0) {"
+        },
+        "swum": {
+          "object": "planned",
+          "verb": "size"
+        }
+      },
+      {
+        "id": 250,
+        "name": "addPlanned",
+        "class": "QueueList",
+        "returntype": "boolean",
+        "called": [],
+        "calls": [225],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "planned",
+          "verb": "add"
+        }
+      },
+      {
+        "id": 251,
+        "name": "addPlanned",
+        "class": "QueueList",
+        "returntype": "void",
+        "called": [],
+        "calls": [298, 225],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "planned",
+          "verb": "add"
+        }
+      },
+      {
+        "id": 252,
+        "name": "getPlanned",
+        "class": "QueueList",
+        "returntype": "StackItem",
+        "called": [],
+        "calls": [232],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "planned",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 253,
+        "name": "getPlanned",
+        "class": "QueueList",
+        "returntype": "List<StackItem>",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "planned",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 254,
+        "name": "removePlannedFromList",
+        "class": "QueueList",
+        "returntype": "void",
+        "called": [],
+        "calls": [239, 240, 224],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "planned from list",
+          "verb": "remove"
+        }
+      },
+      {
+        "id": 255,
+        "name": "clearPlanned",
+        "class": "QueueList",
+        "returntype": "void",
+        "called": [],
+        "calls": [229],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "planned",
+          "verb": "clear"
+        }
+      },
+      {
+        "id": 256,
+        "name": "containsRepeat",
+        "class": "QueueList",
+        "returntype": "boolean",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "repeat",
+          "verb": "contains"
+        }
+      },
+      {
+        "id": 257,
+        "name": "popNextPlanned",
+        "class": "QueueList",
+        "returntype": "StackItem",
+        "called": [],
+        "calls": [249, 239, 240],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "next planned",
+          "verb": "pop"
+        }
+      },
+      {
+        "id": 258,
+        "name": "containsOnlyRepeat",
+        "class": "QueueList",
+        "returntype": "boolean",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "only repeat",
+          "verb": "contains"
+        }
+      },
+      {
+        "id": 259,
+        "name": "XMLExporter",
+        "class": "XMLExporter",
+        "returntype": "XMLExporter",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "value",
+          "verb": "create"
+        }
+      },
+      {
+        "id": 260,
+        "name": "process",
+        "class": "XMLExporter",
+        "returntype": "void",
+        "called": [267, 278],
+        "calls": [261, 262, 263, 264, 265, 266, 278],
+        "use": {
+          "type": "procedural",
+          "example": "process((List<Item>)DeviceManager.getInstance().getItems());"
+        },
+        "swum": {
+          "object": "value",
+          "verb": "process"
+        }
+      },
+      {
+        "id": 261,
+        "name": "process",
+        "class": "XMLExporter",
+        "returntype": "void",
+        "called": [260, 267, 278],
+        "calls": [273],
+        "use": {
+          "type": "procedural",
+          "example": "process((Album)item);"
+        },
+        "swum": {
+          "object": "value",
+          "verb": "process"
+        }
+      },
+      {
+        "id": 262,
+        "name": "process",
+        "class": "XMLExporter",
+        "returntype": "void",
+        "called": [260, 267, 278],
+        "calls": [275],
+        "use": {
+          "type": "procedural",
+          "example": "process((Album)item);"
+        },
+        "swum": {
+          "object": "value",
+          "verb": "process"
+        }
+      },
+      {
+        "id": 263,
+        "name": "process",
+        "class": "XMLExporter",
+        "returntype": "void",
+        "called": [260, 267, 278],
+        "calls": [274],
+        "use": {
+          "type": "procedural",
+          "example": "process((Album)item);"
+        },
+        "swum": {
+          "object": "value",
+          "verb": "process"
+        }
+      },
+      {
+        "id": 264,
+        "name": "process",
+        "class": "XMLExporter",
+        "returntype": "void",
+        "called": [260, 267, 278],
+        "calls": [276],
+        "use": {
+          "type": "procedural",
+          "example": "process((Album)item);"
+        },
+        "swum": {
+          "object": "value",
+          "verb": "process"
+        }
+      },
+      {
+        "id": 265,
+        "name": "process",
+        "class": "XMLExporter",
+        "returntype": "void",
+        "called": [260, 267, 278],
+        "calls": [270],
+        "use": {
+          "type": "procedural",
+          "example": "process((Album)item);"
+        },
+        "swum": {
+          "object": "value",
+          "verb": "process"
+        }
+      },
+      {
+        "id": 266,
+        "name": "process",
+        "class": "XMLExporter",
+        "returntype": "void",
+        "called": [260, 267, 278],
+        "calls": [271],
+        "use": {
+          "type": "procedural",
+          "example": "process((Album)item);"
+        },
+        "swum": {
+          "object": "value",
+          "verb": "process"
+        }
+      },
+      {
+        "id": 267,
+        "name": "processCollection",
+        "class": "XMLExporter",
+        "returntype": "void",
+        "called": [],
+        "calls": [260, 261, 262, 263, 264, 265, 266, 278, 295, 113],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "collection",
+          "verb": "process"
+        }
+      },
+      {
+        "id": 268,
+        "name": "exportDirectoryHelper",
+        "class": "XMLExporter",
+        "returntype": "void",
+        "called": [270, 271],
+        "calls": [277, 281, 132, 405, 283, 284, 285, 286, 146, 269],
+        "use": {
+          "type": "procedural",
+          "example": "exportDirectoryHelper(1,d);"
+        },
+        "swum": {
+          "object": "directory helper",
+          "verb": "export"
+        }
+      },
+      {
+        "id": 269,
+        "name": "tagFile",
+        "class": "XMLExporter",
+        "returntype": "void",
+        "called": [268, 270, 271],
+        "calls": [405, 132, 219, 277, 281, 283, 284, 285, 286, 272],
+        "use": {
+          "type": "procedural",
+          "example": "tagFile(file,level + 1);"
+        },
+        "swum": {
+          "object": "file",
+          "verb": "tag"
+        }
+      },
+      {
+        "id": 270,
+        "name": "tagDirectory",
+        "class": "XMLExporter",
+        "returntype": "void",
+        "called": [265],
+        "calls": [281, 132, 405, 277, 283, 284, 285, 286, 268, 146],
+        "use": {
+          "type": "procedural",
+          "example": "tagDirectory(directory);"
+        },
+        "swum": {
+          "object": "directory",
+          "verb": "tag"
+        }
+      },
+      {
+        "id": 271,
+        "name": "tagDevice",
+        "class": "XMLExporter",
+        "returntype": "void",
+        "called": [266],
+        "calls": [405, 281, 277, 283, 284, 285, 286, 132, 268, 146],
+        "use": {
+          "type": "procedural",
+          "example": "tagDevice(device);"
+        },
+        "swum": {
+          "object": "device",
+          "verb": "tag"
+        }
+      },
+      {
+        "id": 272,
+        "name": "tagTrack",
+        "class": "XMLExporter",
+        "returntype": "void",
+        "called": [269, 273],
+        "calls": [405, 132, 161, 154, 155, 277, 281, 283, 284, 285],
+        "use": {
+          "type": "procedural",
+          "example": "tagTrack(file.getTrack(),level + 1);"
+        },
+        "swum": {
+          "object": "track",
+          "verb": "tag"
+        }
+      },
+      {
+        "id": 273,
+        "name": "tagAlbum",
+        "class": "XMLExporter",
+        "returntype": "void",
+        "called": [261, 274, 275, 276],
+        "calls": [405, 182, 244, 235, 277, 281, 283, 284, 285, 286],
+        "use": {
+          "type": "procedural",
+          "example": "tagAlbum(album,0);"
+        },
+        "swum": {
+          "object": "album",
+          "verb": "tag"
+        }
+      },
+      {
+        "id": 274,
+        "name": "tagArtist",
+        "class": "XMLExporter",
+        "returntype": "void",
+        "called": [263, 276],
+        "calls": [405, 277, 281, 283, 284, 285, 286, 273, 282],
+        "use": {
+          "type": "procedural",
+          "example": "tagArtist(artist,0);"
+        },
+        "swum": {
+          "object": "artist",
+          "verb": "tag"
+        }
+      },
+      {
+        "id": 275,
+        "name": "tagYear",
+        "class": "XMLExporter",
+        "returntype": "void",
+        "called": [262],
+        "calls": [405, 132, 277, 281, 283, 284, 285, 286, 273, 282],
+        "use": {
+          "type": "procedural",
+          "example": "tagYear(year,0);"
+        },
+        "swum": {
+          "object": "year",
+          "verb": "tag"
+        }
+      },
+      {
+        "id": 276,
+        "name": "tagGenre",
+        "class": "XMLExporter",
+        "returntype": "void",
+        "called": [264],
+        "calls": [405, 277, 281, 283, 284, 285, 286, 273, 274, 282],
+        "use": {
+          "type": "procedural",
+          "example": "tagGenre(genre,0);"
+        },
+        "swum": {
+          "object": "genre",
+          "verb": "tag"
+        }
+      },
+      {
+        "id": 277,
+        "name": "addTabs",
+        "class": "XMLExporter",
+        "returntype": "String",
+        "called": [268, 269, 270, 271, 272, 273, 274, 275, 276],
+        "calls": [],
+        "use": {
+          "type": "procedural",
+          "example": "writer.write(addTabs(level) + Tag.openTag(Const.XML_DIRECTORY) + NEWLINE);"
+        },
+        "swum": {
+          "object": "tabs",
+          "verb": "add"
+        }
+      },
+      {
+        "id": 278,
+        "name": "process",
+        "class": "XMLExporter",
+        "returntype": "void",
+        "called": [260, 267],
+        "calls": [281, 225, 260, 261, 262, 263, 264, 265, 266, 230],
+        "use": {
+          "type": "procedural",
+          "example": "process((Album)item);"
+        },
+        "swum": {
+          "object": "value",
+          "verb": "process"
+        }
+      },
+      {
+        "id": 279,
+        "name": "setShowTracks",
+        "class": "XMLExporter",
+        "returntype": "void",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "show tracks",
+          "verb": "set"
+        }
+      },
+      {
+        "id": 280,
+        "name": "Tag",
+        "class": "XMLExporter",
+        "returntype": "XMLExporter",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "value",
+          "verb": "create"
+        }
+      },
+      {
+        "id": 281,
+        "name": "openTag",
+        "class": "XMLExporter",
+        "returntype": "String",
+        "called": [268, 269, 270, 271, 272, 273, 274, 275, 276, 278],
+        "calls": [],
+        "use": {
+          "type": "procedural",
+          "example": "writer.write(addTabs(level) + Tag.openTag(Const.XML_DIRECTORY) + NEWLINE);"
+        },
+        "swum": {
+          "object": "tag",
+          "verb": "open"
+        }
+      },
+      {
+        "id": 282,
+        "name": "closeTag",
+        "class": "XMLExporter",
+        "returntype": "String",
+        "called": [268, 269, 270, 271, 272, 273, 274, 275, 276, 278],
+        "calls": [],
+        "use": {
+          "type": "procedural",
+          "example": "writer.write(addTabs(level) + Tag.closeTag(Const.XML_DIRECTORY) + NEWLINE);"
+        },
+        "swum": {
+          "object": "tag",
+          "verb": "close"
+        }
+      },
+      {
+        "id": 283,
+        "name": "tagData",
+        "class": "XMLExporter",
+        "returntype": "String",
+        "called": [268, 269, 270, 271, 272, 273, 274, 275, 276, 278],
+        "calls": [281, 282],
+        "use": {
+          "type": "procedural",
+          "example": "writer.write(addTabs(level + 1) + Tag.tagData(Const.XML_ID,sID) + NEWLINE);"
+        },
+        "swum": {
+          "object": "data",
+          "verb": "tag"
+        }
+      },
+      {
+        "id": 284,
+        "name": "tagData",
+        "class": "XMLExporter",
+        "returntype": "String",
+        "called": [268, 269, 270, 271, 272, 273, 274, 275, 276, 278],
+        "calls": [281, 282],
+        "use": {
+          "type": "procedural",
+          "example": "writer.write(addTabs(level + 1) + Tag.tagData(Const.XML_ID,sID) + NEWLINE);"
+        },
+        "swum": {
+          "object": "data",
+          "verb": "tag"
+        }
+      },
+      {
+        "id": 285,
+        "name": "tagData",
+        "class": "XMLExporter",
+        "returntype": "String",
+        "called": [268, 269, 270, 271, 272, 273, 274, 275, 276, 278],
+        "calls": [281, 282],
+        "use": {
+          "type": "procedural",
+          "example": "writer.write(addTabs(level + 1) + Tag.tagData(Const.XML_ID,sID) + NEWLINE);"
+        },
+        "swum": {
+          "object": "data",
+          "verb": "tag"
+        }
+      },
+      {
+        "id": 286,
+        "name": "tagData",
+        "class": "XMLExporter",
+        "returntype": "String",
+        "called": [268, 269, 270, 271, 272, 273, 274, 275, 276, 278],
+        "calls": [281, 282],
+        "use": {
+          "type": "procedural",
+          "example": "writer.write(addTabs(level + 1) + Tag.tagData(Const.XML_ID,sID) + NEWLINE);"
+        },
+        "swum": {
+          "object": "data",
+          "verb": "tag"
+        }
+      },
+      {
+        "id": 287,
+        "name": "GCAction",
+        "class": "GCAction",
+        "returntype": "GCAction",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "value",
+          "verb": "create"
+        }
+      },
+      {
+        "id": 288,
+        "name": "perform",
+        "class": "GCAction",
+        "returntype": "void",
+        "called": [364, 447],
+        "calls": [],
+        "use": {
+          "type": "procedural",
+          "example": "ActionManager.getAction(JajukActions.EXIT).perform(null);"
+        },
+        "swum": {
+          "object": "value",
+          "verb": "perform"
+        }
+      },
+      {
+        "id": 289,
+        "name": "PlaylistTableModel",
+        "class": "PlaylistTableModel",
+        "returntype": "PlaylistTableModel",
+        "called": [],
+        "calls": [293],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "table model",
+          "verb": "create"
+        }
+      },
+      {
+        "id": 290,
+        "name": "getItemAt",
+        "class": "PlaylistTableModel",
+        "returntype": "Item",
+        "called": [],
+        "calls": [292, 224],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "item at",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 291,
+        "name": "getItemsFrom",
+        "class": "PlaylistTableModel",
+        "returntype": "List<StackItem>",
+        "called": [],
+        "calls": [244, 245],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "items from",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 292,
+        "name": "getStackItem",
+        "class": "PlaylistTableModel",
+        "returntype": "StackItem",
+        "called": [290, 294],
+        "calls": [244, 232],
+        "use": {
+          "type": "assignment",
+          "example": "StackItem si=getStackItem(iRow);"
+        },
+        "swum": {
+          "object": "stack item",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 293,
+        "name": "prepareColumns",
+        "class": "PlaylistTableModel",
+        "returntype": "void",
+        "called": [289],
+        "calls": [229, 225, 182, 132],
+        "use": {
+          "type": "procedural",
+          "example": "prepareColumns();"
+        },
+        "swum": {
+          "object": "columns",
+          "verb": "prepare"
+        }
+      },
+      {
+        "id": 294,
+        "name": "populateModel",
+        "class": "PlaylistTableModel",
+        "returntype": "void",
+        "called": [],
+        "calls": [244, 182, 230, 292, 224, 132, 162, 155, 153, 235],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "model",
+          "verb": "populate"
+        }
+      },
+      {
+        "id": 295,
+        "name": "getItems",
+        "class": "PlaylistTableModel",
+        "returntype": "List<StackItem>",
+        "called": [126, 209, 267],
+        "calls": [],
+        "use": {
+          "type": "procedural",
+          "example": "return (List<Genre>)getItems();"
+        },
+        "swum": {
+          "object": "items",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 296,
+        "name": "setItems",
+        "class": "PlaylistTableModel",
+        "returntype": "void",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "items",
+          "verb": "set"
+        }
+      },
+      {
+        "id": 297,
+        "name": "getPlanned",
+        "class": "PlaylistTableModel",
+        "returntype": "List<StackItem>",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "planned",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 298,
+        "name": "setPlanned",
+        "class": "PlaylistTableModel",
+        "returntype": "void",
+        "called": [251],
+        "calls": [],
+        "use": {
+          "type": "procedural",
+          "example": "item.setPlanned(true);"
+        },
+        "swum": {
+          "object": "planned",
+          "verb": "set"
+        }
+      },
+      {
+        "id": 299,
+        "name": "CoverView",
+        "class": "CoverView",
+        "returntype": "CoverView",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "view",
+          "verb": "create"
+        }
+      },
+      {
+        "id": 300,
+        "name": "CoverView",
+        "class": "CoverView",
+        "returntype": "CoverView",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "view",
+          "verb": "create"
+        }
+      },
+      {
+        "id": 301,
+        "name": "initUI",
+        "class": "CoverView",
+        "returntype": "void",
+        "called": [],
+        "calls": [303],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "ui",
+          "verb": "init"
+        }
+      },
+      {
+        "id": 302,
+        "name": "getListCellRendererComponent",
+        "class": "CoverView",
+        "returntype": "Component",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "list cell renderer component",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 303,
+        "name": "initUI",
+        "class": "CoverView",
+        "returntype": "void",
+        "called": [301],
+        "calls": [],
+        "use": {
+          "type": "procedural",
+          "example": "initUI(true);"
+        },
+        "swum": {
+          "object": "ui",
+          "verb": "init"
+        }
+      },
+      {
+        "id": 304,
+        "name": "actionPerformed",
+        "class": "CoverView",
+        "returntype": "void",
+        "called": [],
+        "calls": [306, 307, 308, 309, 317, 315, 311],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "performed",
+          "verb": "action"
+        }
+      },
+      {
+        "id": 305,
+        "name": "run",
+        "class": "CoverView",
+        "returntype": "void",
+        "called": [],
+        "calls": [407, 338],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "value",
+          "verb": "run"
+        }
+      },
+      {
+        "id": 306,
+        "name": "handleAccuracy",
+        "class": "CoverView",
+        "returntype": "void",
+        "called": [304],
+        "calls": [407, 405],
+        "use": {
+          "type": "procedural",
+          "example": "handleAccuracy();"
+        },
+        "swum": {
+          "object": "accuracy",
+          "verb": "handle"
+        }
+      },
+      {
+        "id": 307,
+        "name": "handlePrevious",
+        "class": "CoverView",
+        "returntype": "void",
+        "called": [304],
+        "calls": [244, 322],
+        "use": {
+          "type": "procedural",
+          "example": "handlePrevious();"
+        },
+        "swum": {
+          "object": "previous",
+          "verb": "handle"
+        }
+      },
+      {
+        "id": 308,
+        "name": "handleNext",
+        "class": "CoverView",
+        "returntype": "void",
+        "called": [304],
+        "calls": [244, 322],
+        "use": {
+          "type": "procedural",
+          "example": "handleNext();"
+        },
+        "swum": {
+          "object": "next",
+          "verb": "handle"
+        }
+      },
+      {
+        "id": 309,
+        "name": "handleDelete",
+        "class": "CoverView",
+        "returntype": "void",
+        "called": [304],
+        "calls": [244, 232, 222, 224, 338],
+        "use": {
+          "type": "procedural",
+          "example": "handleDelete();"
+        },
+        "swum": {
+          "object": "delete",
+          "verb": "handle"
+        }
+      },
+      {
+        "id": 310,
+        "name": "run",
+        "class": "CoverView",
+        "returntype": "void",
+        "called": [],
+        "calls": [232, 313, 230, 225, 332, 312],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "value",
+          "verb": "run"
+        }
+      },
+      {
+        "id": 311,
+        "name": "handleSave",
+        "class": "CoverView",
+        "returntype": "void",
+        "called": [304],
+        "calls": [244],
+        "use": {
+          "type": "procedural",
+          "example": "handleSaveAs();"
+        },
+        "swum": {
+          "object": "save",
+          "verb": "handle"
+        }
+      },
+      {
+        "id": 312,
+        "name": "resetCachedCover",
+        "class": "CoverView",
+        "returntype": "void",
+        "called": [310, 314],
+        "calls": [27, 222],
+        "use": {
+          "type": "procedural",
+          "example": "resetCachedCover();"
+        },
+        "swum": {
+          "object": "cached cover",
+          "verb": "reset"
+        }
+      },
+      {
+        "id": 313,
+        "name": "convertCoverPath",
+        "class": "CoverView",
+        "returntype": "String",
+        "called": [310, 316],
+        "calls": [236],
+        "use": {
+          "type": "assignment",
+          "example": "sFilePath=convertCoverPath(sFilePath);"
+        },
+        "swum": {
+          "object": "cover path",
+          "verb": "convert"
+        }
+      },
+      {
+        "id": 314,
+        "name": "run",
+        "class": "CoverView",
+        "returntype": "void",
+        "called": [],
+        "calls": [232, 222, 224, 312],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "value",
+          "verb": "run"
+        }
+      },
+      {
+        "id": 315,
+        "name": "handleSaveAs",
+        "class": "CoverView",
+        "returntype": "void",
+        "called": [304],
+        "calls": [244],
+        "use": {
+          "type": "procedural",
+          "example": "handleSaveAs();"
+        },
+        "swum": {
+          "object": "save as",
+          "verb": "handle"
+        }
+      },
+      {
+        "id": 316,
+        "name": "run",
+        "class": "CoverView",
+        "returntype": "void",
+        "called": [],
+        "calls": [232, 224, 132, 313, 225, 230, 332, 330],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "value",
+          "verb": "run"
+        }
+      },
+      {
+        "id": 317,
+        "name": "handleDefault",
+        "class": "CoverView",
+        "returntype": "void",
+        "called": [304],
+        "calls": [244],
+        "use": {
+          "type": "procedural",
+          "example": "handleDefault();"
+        },
+        "swum": {
+          "object": "default",
+          "verb": "handle"
+        }
+      },
+      {
+        "id": 318,
+        "name": "run",
+        "class": "CoverView",
+        "returntype": "void",
+        "called": [],
+        "calls": [338, 322],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "value",
+          "verb": "run"
+        }
+      },
+      {
+        "id": 319,
+        "name": "componentResized",
+        "class": "CoverView",
+        "returntype": "void",
+        "called": [],
+        "calls": [219, 405],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "resized",
+          "verb": "component"
+        }
+      },
+      {
+        "id": 320,
+        "name": "createQuery",
+        "class": "CoverView",
+        "returntype": "String",
+        "called": [343],
+        "calls": [407, 405, 132],
+        "use": {
+          "type": "assignment",
+          "example": "final String sQuery=createQuery(fCurrent);"
+        },
+        "swum": {
+          "object": "query",
+          "verb": "create"
+        }
+      },
+      {
+        "id": 321,
+        "name": "run",
+        "class": "CoverView",
+        "returntype": "void",
+        "called": [],
+        "calls": [329],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "value",
+          "verb": "run"
+        }
+      },
+      {
+        "id": 322,
+        "name": "displayCurrentCover",
+        "class": "CoverView",
+        "returntype": "void",
+        "called": [307, 308, 318, 338, 339, 340],
+        "calls": [323],
+        "use": {
+          "type": "procedural",
+          "example": "displayCurrentCover();"
+        },
+        "swum": {
+          "object": "current cover",
+          "verb": "display"
+        }
+      },
+      {
+        "id": 323,
+        "name": "findRightCover",
+        "class": "CoverView",
+        "returntype": "void",
+        "called": [322],
+        "calls": [244, 225, 327, 95, 232],
+        "use": {
+          "type": "procedural",
+          "example": "findRightCover();"
+        },
+        "swum": {
+          "object": "right cover",
+          "verb": "find"
+        }
+      },
+      {
+        "id": 324,
+        "name": "getCoverNumber",
+        "class": "CoverView",
+        "returntype": "int",
+        "called": [331],
+        "calls": [244],
+        "use": {
+          "type": "assignment",
+          "example": "int i=getCoverNumber() - index;"
+        },
+        "swum": {
+          "object": "cover number",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 325,
+        "name": "getDesc",
+        "class": "CoverView",
+        "returntype": "String",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "desc",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 326,
+        "name": "getRegistrationKeys",
+        "class": "CoverView",
+        "returntype": "Set<JajukEvents>",
+        "called": [],
+        "calls": [225],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "registration keys",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 327,
+        "name": "prepareDisplay",
+        "class": "CoverView",
+        "returntype": "void",
+        "called": [323],
+        "calls": [232, 220, 222, 95],
+        "use": {
+          "type": "procedural",
+          "example": "prepareDisplay(0);"
+        },
+        "swum": {
+          "object": "display",
+          "verb": "prepare"
+        }
+      },
+      {
+        "id": 328,
+        "name": "mousePressed",
+        "class": "CoverView",
+        "returntype": "void",
+        "called": [],
+        "calls": [222],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "pressed",
+          "verb": "mouse"
+        }
+      },
+      {
+        "id": 329,
+        "name": "displayCover",
+        "class": "CoverView",
+        "returntype": "void",
+        "called": [321],
+        "calls": [244, 225, 232, 219, 336, 332, 95, 226],
+        "use": {
+          "type": "procedural",
+          "example": "displayCover(index);"
+        },
+        "swum": {
+          "object": "cover",
+          "verb": "display"
+        }
+      },
+      {
+        "id": 330,
+        "name": "refreshThumbs",
+        "class": "CoverView",
+        "returntype": "void",
+        "called": [316],
+        "calls": [235, 146, 224],
+        "use": {
+          "type": "procedural",
+          "example": "refreshThumbs(cover);"
+        },
+        "swum": {
+          "object": "thumbs",
+          "verb": "refresh"
+        }
+      },
+      {
+        "id": 331,
+        "name": "run",
+        "class": "CoverView",
+        "returntype": "void",
+        "called": [],
+        "calls": [324],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "value",
+          "verb": "run"
+        }
+      },
+      {
+        "id": 332,
+        "name": "setFoundText",
+        "class": "CoverView",
+        "returntype": "void",
+        "called": [310, 316, 329],
+        "calls": [],
+        "use": {
+          "type": "procedural",
+          "example": "setFoundText();"
+        },
+        "swum": {
+          "object": "found text",
+          "verb": "set"
+        }
+      },
+      {
+        "id": 333,
+        "name": "run",
+        "class": "CoverView",
+        "returntype": "void",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "value",
+          "verb": "run"
+        }
+      },
+      {
+        "id": 334,
+        "name": "setFoundText",
+        "class": "CoverView",
+        "returntype": "void",
+        "called": [339],
+        "calls": [],
+        "use": {
+          "type": "procedural",
+          "example": "setFoundText(\"\");"
+        },
+        "swum": {
+          "object": "found text",
+          "verb": "set"
+        }
+      },
+      {
+        "id": 335,
+        "name": "run",
+        "class": "CoverView",
+        "returntype": "void",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "value",
+          "verb": "run"
+        }
+      },
+      {
+        "id": 336,
+        "name": "setSizeText",
+        "class": "CoverView",
+        "returntype": "void",
+        "called": [329, 339],
+        "calls": [],
+        "use": {
+          "type": "procedural",
+          "example": "setSizeText(size + \"K\" + sType);"
+        },
+        "swum": {
+          "object": "size text",
+          "verb": "set"
+        }
+      },
+      {
+        "id": 337,
+        "name": "getCurrentImage",
+        "class": "CoverView",
+        "returntype": "Image",
+        "called": [],
+        "calls": [244, 220, 232],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "current image",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 338,
+        "name": "update",
+        "class": "CoverView",
+        "returntype": "void",
+        "called": [305, 309, 318],
+        "calls": [222, 340, 339, 343, 322, 95],
+        "use": {
+          "type": "procedural",
+          "example": "update(new JajukEvent(JajukEvents.COVER_NEED_REFRESH));"
+        },
+        "swum": {
+          "object": "value",
+          "verb": "update"
+        }
+      },
+      {
+        "id": 339,
+        "name": "reset",
+        "class": "CoverView",
+        "returntype": "void",
+        "called": [338],
+        "calls": [334, 336, 229, 225, 322, 342],
+        "use": {
+          "type": "procedural",
+          "example": "reset();"
+        },
+        "swum": {
+          "object": "value",
+          "verb": "reset"
+        }
+      },
+      {
+        "id": 340,
+        "name": "updateFileLaunched",
+        "class": "CoverView",
+        "returntype": "void",
+        "called": [338],
+        "calls": [232, 224, 222, 343, 244, 322, 342],
+        "use": {
+          "type": "procedural",
+          "example": "updateFileLaunched(event);"
+        },
+        "swum": {
+          "object": "file launched",
+          "verb": "update"
+        }
+      },
+      {
+        "id": 341,
+        "name": "run",
+        "class": "CoverView",
+        "returntype": "void",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "value",
+          "verb": "run"
+        }
+      },
+      {
+        "id": 342,
+        "name": "enableCommands",
+        "class": "CoverView",
+        "returntype": "void",
+        "called": [339, 340],
+        "calls": [],
+        "use": {
+          "type": "procedural",
+          "example": "enableCommands(false);"
+        },
+        "swum": {
+          "object": "commands",
+          "verb": "enable"
+        }
+      },
+      {
+        "id": 343,
+        "name": "refreshCovers",
+        "class": "CoverView",
+        "returntype": "void",
+        "called": [338, 340],
+        "calls": [229, 225, 235, 146, 230, 320, 234, 244, 245, 95],
+        "use": {
+          "type": "procedural",
+          "example": "refreshCovers(true);"
+        },
+        "swum": {
+          "object": "covers",
+          "verb": "refresh"
+        }
+      },
+      {
+        "id": 344,
+        "name": "ParameterViewGUIHelper",
+        "class": "ParameterViewGUIHelper",
+        "returntype": "ParameterViewGUIHelper",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "view guihelper",
+          "verb": "create"
+        }
+      },
+      {
+        "id": 345,
+        "name": "updateConfFromGUI",
+        "class": "ParameterViewGUIHelper",
+        "returntype": "void",
+        "called": [368],
+        "calls": [355, 356, 357, 358, 359, 360, 361, 364, 362, 363],
+        "use": {
+          "type": "procedural",
+          "example": "updateConfFromGUI();"
+        },
+        "swum": {
+          "object": "conf from gui",
+          "verb": "update"
+        }
+      },
+      {
+        "id": 346,
+        "name": "updateGUIFromConf",
+        "class": "ParameterViewGUIHelper",
+        "returntype": "void",
+        "called": [368],
+        "calls": [347, 348, 349, 351, 350, 352, 353, 354],
+        "use": {
+          "type": "procedural",
+          "example": "updateGUIFromConf();"
+        },
+        "swum": {
+          "object": "guifrom conf",
+          "verb": "update"
+        }
+      },
+      {
+        "id": 347,
+        "name": "updateGUIFromConfHistory",
+        "class": "ParameterViewGUIHelper",
+        "returntype": "void",
+        "called": [346],
+        "calls": [],
+        "use": {
+          "type": "procedural",
+          "example": "updateGUIFromConfHistory();"
+        },
+        "swum": {
+          "object": "guifrom conf history",
+          "verb": "update"
+        }
+      },
+      {
+        "id": 348,
+        "name": "updateGUIFromConfConfirmations",
+        "class": "ParameterViewGUIHelper",
+        "returntype": "void",
+        "called": [346],
+        "calls": [],
+        "use": {
+          "type": "procedural",
+          "example": "updateGUIFromConfConfirmations();"
+        },
+        "swum": {
+          "object": "guifrom conf confirmations",
+          "verb": "update"
+        }
+      },
+      {
+        "id": 349,
+        "name": "updateGUIFromConfOptions",
+        "class": "ParameterViewGUIHelper",
+        "returntype": "void",
+        "called": [346],
+        "calls": [222],
+        "use": {
+          "type": "procedural",
+          "example": "updateGUIFromConfOptions();"
+        },
+        "swum": {
+          "object": "guifrom conf options",
+          "verb": "update"
+        }
+      },
+      {
+        "id": 350,
+        "name": "updateGUIFromConfStartup",
+        "class": "ParameterViewGUIHelper",
+        "returntype": "void",
+        "called": [346],
+        "calls": [222, 233, 132],
+        "use": {
+          "type": "procedural",
+          "example": "updateGUIFromConfStartup();"
+        },
+        "swum": {
+          "object": "guifrom conf startup",
+          "verb": "update"
+        }
+      },
+      {
+        "id": 351,
+        "name": "updateGUIFromConfAdvanced",
+        "class": "ParameterViewGUIHelper",
+        "returntype": "void",
+        "called": [346],
+        "calls": [],
+        "use": {
+          "type": "procedural",
+          "example": "updateGUIFromConfAdvanced();"
+        },
+        "swum": {
+          "object": "guifrom conf advanced",
+          "verb": "update"
+        }
+      },
+      {
+        "id": 352,
+        "name": "updateGUIFromConfNetwork",
+        "class": "ParameterViewGUIHelper",
+        "returntype": "void",
+        "called": [346],
+        "calls": [222],
+        "use": {
+          "type": "procedural",
+          "example": "updateGUIFromConfNetwork();"
+        },
+        "swum": {
+          "object": "guifrom conf network",
+          "verb": "update"
+        }
+      },
+      {
+        "id": 353,
+        "name": "updateGUIFromConfCovers",
+        "class": "ParameterViewGUIHelper",
+        "returntype": "void",
+        "called": [346],
+        "calls": [],
+        "use": {
+          "type": "procedural",
+          "example": "updateGUIFromConfCovers();"
+        },
+        "swum": {
+          "object": "guifrom conf covers",
+          "verb": "update"
+        }
+      },
+      {
+        "id": 354,
+        "name": "updateGUIFromConfGUI",
+        "class": "ParameterViewGUIHelper",
+        "returntype": "void",
+        "called": [346],
+        "calls": [],
+        "use": {
+          "type": "procedural",
+          "example": "updateGUIFromConfGUI();"
+        },
+        "swum": {
+          "object": "guifrom conf gui",
+          "verb": "update"
+        }
+      },
+      {
+        "id": 355,
+        "name": "updateConfFromGUIOptions",
+        "class": "ParameterViewGUIHelper",
+        "returntype": "void",
+        "called": [345],
+        "calls": [234],
+        "use": {
+          "type": "procedural",
+          "example": "updateConfFromGUIOptions();"
+        },
+        "swum": {
+          "object": "conf from guioptions",
+          "verb": "update"
+        }
+      },
+      {
+        "id": 356,
+        "name": "updateConfFromGUIStartup",
+        "class": "ParameterViewGUIHelper",
+        "returntype": "void",
+        "called": [345],
+        "calls": [],
+        "use": {
+          "type": "procedural",
+          "example": "updateConfFromGUIStartup();"
+        },
+        "swum": {
+          "object": "conf from guistartup",
+          "verb": "update"
+        }
+      },
+      {
+        "id": 357,
+        "name": "updateConfFromGUIConfirmation",
+        "class": "ParameterViewGUIHelper",
+        "returntype": "void",
+        "called": [345],
+        "calls": [],
+        "use": {
+          "type": "procedural",
+          "example": "updateConfFromGUIConfirmation();"
+        },
+        "swum": {
+          "object": "conf from guiconfirmation",
+          "verb": "update"
+        }
+      },
+      {
+        "id": 358,
+        "name": "updateConfFromGUIHistory",
+        "class": "ParameterViewGUIHelper",
+        "returntype": "void",
+        "called": [345],
+        "calls": [234],
+        "use": {
+          "type": "procedural",
+          "example": "updateConfFromGUIHistory();"
+        },
+        "swum": {
+          "object": "conf from guihistory",
+          "verb": "update"
+        }
+      },
+      {
+        "id": 359,
+        "name": "updateConfFromGUIPatterns",
+        "class": "ParameterViewGUIHelper",
+        "returntype": "void",
+        "called": [345],
+        "calls": [],
+        "use": {
+          "type": "procedural",
+          "example": "updateConfFromGUIPatterns();"
+        },
+        "swum": {
+          "object": "conf from guipatterns",
+          "verb": "update"
+        }
+      },
+      {
+        "id": 360,
+        "name": "updateConfFromGUIAdvanced",
+        "class": "ParameterViewGUIHelper",
+        "returntype": "void",
+        "called": [345],
+        "calls": [222],
+        "use": {
+          "type": "procedural",
+          "example": "updateConfFromGUIAdvanced();"
+        },
+        "swum": {
+          "object": "conf from guiadvanced",
+          "verb": "update"
+        }
+      },
+      {
+        "id": 361,
+        "name": "updateConfFromGUIGUI",
+        "class": "ParameterViewGUIHelper",
+        "returntype": "void",
+        "called": [345],
+        "calls": [222],
+        "use": {
+          "type": "procedural",
+          "example": "updateConfFromGUIGUI();"
+        },
+        "swum": {
+          "object": "conf from guigui",
+          "verb": "update"
+        }
+      },
+      {
+        "id": 362,
+        "name": "updateConfFromGUINetwork",
+        "class": "ParameterViewGUIHelper",
+        "returntype": "void",
+        "called": [345],
+        "calls": [],
+        "use": {
+          "type": "procedural",
+          "example": "updateConfFromGUINetwork();"
+        },
+        "swum": {
+          "object": "conf from guinetwork",
+          "verb": "update"
+        }
+      },
+      {
+        "id": 363,
+        "name": "updateConfFromGUICover",
+        "class": "ParameterViewGUIHelper",
+        "returntype": "void",
+        "called": [345],
+        "calls": [],
+        "use": {
+          "type": "procedural",
+          "example": "updateConfFromGUICover();"
+        },
+        "swum": {
+          "object": "conf from guicover",
+          "verb": "update"
+        }
+      },
+      {
+        "id": 364,
+        "name": "handleWorkspaceChange",
+        "class": "ParameterViewGUIHelper",
+        "returntype": "void",
+        "called": [345],
+        "calls": [222, 234, 288, 95],
+        "use": {
+          "type": "procedural",
+          "example": "handleWorkspaceChange();"
+        },
+        "swum": {
+          "object": "workspace change",
+          "verb": "handle"
+        }
+      },
+      {
+        "id": 365,
+        "name": "run",
+        "class": "ParameterViewGUIHelper",
+        "returntype": "void",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "value",
+          "verb": "run"
+        }
+      },
+      {
+        "id": 366,
+        "name": "doInBackground",
+        "class": "ParameterViewGUIHelper",
+        "returntype": "Boolean",
+        "called": [],
+        "calls": [95],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "in background",
+          "verb": "do"
+        }
+      },
+      {
+        "id": 367,
+        "name": "done",
+        "class": "ParameterViewGUIHelper",
+        "returntype": "void",
+        "called": [],
+        "calls": [95],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "value",
+          "verb": "done"
+        }
+      },
+      {
+        "id": 368,
+        "name": "actionPerformed",
+        "class": "ParameterViewGUIHelper",
+        "returntype": "void",
+        "called": [],
+        "calls": [345, 346, 222],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "performed",
+          "verb": "action"
+        }
+      },
+      {
+        "id": 369,
+        "name": "itemStateChanged",
+        "class": "ParameterViewGUIHelper",
+        "returntype": "void",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "state changed",
+          "verb": "item"
+        }
+      },
+      {
+        "id": 370,
+        "name": "stateChanged",
+        "class": "ParameterViewGUIHelper",
+        "returntype": "void",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "changed",
+          "verb": "state"
+        }
+      },
+      {
+        "id": 371,
+        "name": "getContentBorderInsets",
+        "class": "SuggestionView",
+        "returntype": "Insets",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "content border insets",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 372,
+        "name": "paintContentBorder",
+        "class": "SuggestionView",
+        "returntype": "void",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "content border",
+          "verb": "paint"
+        }
+      },
+      {
+        "id": 373,
+        "name": "mousePressed",
+        "class": "SuggestionView",
+        "returntype": "void",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "pressed",
+          "verb": "mouse"
+        }
+      },
+      {
+        "id": 374,
+        "name": "SuggestionView",
+        "class": "SuggestionView",
+        "returntype": "SuggestionView",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "view",
+          "verb": "create"
+        }
+      },
+      {
+        "id": 375,
+        "name": "getDesc",
+        "class": "SuggestionView",
+        "returntype": "String",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "desc",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 376,
+        "name": "initUI",
+        "class": "SuggestionView",
+        "returntype": "void",
+        "called": [],
+        "calls": [379, 377, 384, 225],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "ui",
+          "verb": "init"
+        }
+      },
+      {
+        "id": 377,
+        "name": "selectTabFromConf",
+        "class": "SuggestionView",
+        "returntype": "void",
+        "called": [376],
+        "calls": [132, 407, 405],
+        "use": {
+          "type": "procedural",
+          "example": "selectTabFromConf();"
+        },
+        "swum": {
+          "object": "tab from conf",
+          "verb": "select"
+        }
+      },
+      {
+        "id": 378,
+        "name": "stateChanged",
+        "class": "SuggestionView",
+        "returntype": "void",
+        "called": [],
+        "calls": [385, 132, 407, 405],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "changed",
+          "verb": "state"
+        }
+      },
+      {
+        "id": 379,
+        "name": "addTabChangeListener",
+        "class": "SuggestionView",
+        "returntype": "void",
+        "called": [376],
+        "calls": [],
+        "use": {
+          "type": "procedural",
+          "example": "addTabChangeListener();"
+        },
+        "swum": {
+          "object": "tab change listener",
+          "verb": "add"
+        }
+      },
+      {
+        "id": 380,
+        "name": "getRegistrationKeys",
+        "class": "SuggestionView",
+        "returntype": "Set<JajukEvents>",
+        "called": [],
+        "calls": [225],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "registration keys",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 381,
+        "name": "doInBackground",
+        "class": "SuggestionView",
+        "returntype": "Void",
+        "called": [],
+        "calls": [382],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "in background",
+          "verb": "do"
+        }
+      },
+      {
+        "id": 382,
+        "name": "refreshThumbsForLocalAlbums",
+        "class": "SuggestionView",
+        "returntype": "void",
+        "called": [381],
+        "calls": [227, 244],
+        "use": {
+          "type": "procedural",
+          "example": "refreshThumbsForLocalAlbums();"
+        },
+        "swum": {
+          "object": "thumbs for local albums",
+          "verb": "refresh"
+        }
+      },
+      {
+        "id": 383,
+        "name": "done",
+        "class": "SuggestionView",
+        "returntype": "void",
+        "called": [],
+        "calls": [389],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "value",
+          "verb": "done"
+        }
+      },
+      {
+        "id": 384,
+        "name": "refreshLocalCollectionTabs",
+        "class": "SuggestionView",
+        "returntype": "void",
+        "called": [376, 391],
+        "calls": [],
+        "use": {
+          "type": "procedural",
+          "example": "refreshLocalCollectionTabs();"
+        },
+        "swum": {
+          "object": "local collection tabs",
+          "verb": "refresh"
+        }
+      },
+      {
+        "id": 385,
+        "name": "refreshLastFMCollectionTabs",
+        "class": "SuggestionView",
+        "returntype": "void",
+        "called": [378, 391, 393],
+        "calls": [],
+        "use": {
+          "type": "procedural",
+          "example": "refreshLastFMCollectionTabs();"
+        },
+        "swum": {
+          "object": "last fmcollection tabs",
+          "verb": "refresh"
+        }
+      },
+      {
+        "id": 386,
+        "name": "run",
+        "class": "SuggestionView",
+        "returntype": "void",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "value",
+          "verb": "run"
+        }
+      },
+      {
+        "id": 387,
+        "name": "preFetchOthersAlbum",
+        "class": "SuggestionView",
+        "returntype": "void",
+        "called": [],
+        "calls": [244, 27],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "fetch others album",
+          "verb": "pre"
+        }
+      },
+      {
+        "id": 388,
+        "name": "preFetchSimilarArtists",
+        "class": "SuggestionView",
+        "returntype": "void",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "fetch similar artists",
+          "verb": "pre"
+        }
+      },
+      {
+        "id": 389,
+        "name": "getLocalSuggestionsPanel",
+        "class": "SuggestionView",
+        "returntype": "JScrollPane",
+        "called": [383],
+        "calls": [244, 225],
+        "use": {
+          "type": "assignment",
+          "example": "jsp1=getLocalSuggestionsPanel(SuggestionType.BEST_OF);"
+        },
+        "swum": {
+          "object": "local suggestions panel",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 390,
+        "name": "getLastFMSuggestionsPanel",
+        "class": "SuggestionView",
+        "returntype": "JScrollPane",
+        "called": [],
+        "calls": [244, 27, 225, 394],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "last fmsuggestions panel",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 391,
+        "name": "update",
+        "class": "SuggestionView",
+        "returntype": "void",
+        "called": [],
+        "calls": [222, 384, 385, 392],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "value",
+          "verb": "update"
+        }
+      },
+      {
+        "id": 392,
+        "name": "isLastFMTabsVisible",
+        "class": "SuggestionView",
+        "returntype": "boolean",
+        "called": [391],
+        "calls": [222, 407],
+        "use": {
+          "type": "conditional",
+          "example": "else   if (subject.equals(JajukEvents.PARAMETERS_CHANGE) && isLastFMTabsVisible()) {"
+        },
+        "swum": {
+          "object": "last fmtabs visible",
+          "verb": "is"
+        }
+      },
+      {
+        "id": 393,
+        "name": "onPerspectiveSelection",
+        "class": "SuggestionView",
+        "returntype": "void",
+        "called": [],
+        "calls": [385],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "perspective selection",
+          "verb": "on"
+        }
+      },
+      {
+        "id": 394,
+        "name": "getNothingFoundPanel",
+        "class": "SuggestionView",
+        "returntype": "JPanel",
+        "called": [390],
+        "calls": [226],
+        "use": {
+          "type": "procedural",
+          "example": "return new JScrollPane(getNothingFoundPanel());"
+        },
+        "swum": {
+          "object": "nothing found panel",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 395,
+        "name": "ViewAdapter",
+        "class": "ViewAdapter",
+        "returntype": "ViewAdapter",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "adapter",
+          "verb": "create"
+        }
+      },
+      {
+        "id": 396,
+        "name": "toString",
+        "class": "ViewAdapter",
+        "returntype": "String",
+        "called": [],
+        "calls": [405],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "string",
+          "verb": "to"
+        }
+      },
+      {
+        "id": 397,
+        "name": "isPopulated",
+        "class": "ViewAdapter",
+        "returntype": "boolean",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "populated",
+          "verb": "is"
+        }
+      },
+      {
+        "id": 398,
+        "name": "setPopulated",
+        "class": "ViewAdapter",
+        "returntype": "void",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "populated",
+          "verb": "set"
+        }
+      },
+      {
+        "id": 399,
+        "name": "componentHidden",
+        "class": "ViewAdapter",
+        "returntype": "void",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "hidden",
+          "verb": "component"
+        }
+      },
+      {
+        "id": 400,
+        "name": "componentMoved",
+        "class": "ViewAdapter",
+        "returntype": "void",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "moved",
+          "verb": "component"
+        }
+      },
+      {
+        "id": 401,
+        "name": "componentResized",
+        "class": "ViewAdapter",
+        "returntype": "void",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "resized",
+          "verb": "component"
+        }
+      },
+      {
+        "id": 402,
+        "name": "componentShown",
+        "class": "ViewAdapter",
+        "returntype": "void",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "shown",
+          "verb": "component"
+        }
+      },
+      {
+        "id": 403,
+        "name": "getDockKey",
+        "class": "ViewAdapter",
+        "returntype": "DockKey",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "dock key",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 404,
+        "name": "getComponent",
+        "class": "ViewAdapter",
+        "returntype": "Component",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "component",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 405,
+        "name": "getID",
+        "class": "ViewAdapter",
+        "returntype": "String",
+        "called": [141, 142, 144, 169, 173, 185, 201, 202, 268, 269],
+        "calls": [],
+        "use": {
+          "type": "procedural",
+          "example": "setProperty(Const.XML_ALBUM,album.getID());"
+        },
+        "swum": {
+          "object": "id",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 406,
+        "name": "setID",
+        "class": "ViewAdapter",
+        "returntype": "void",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "id",
+          "verb": "set"
+        }
+      },
+      {
+        "id": 407,
+        "name": "getPerspective",
+        "class": "ViewAdapter",
+        "returntype": "IPerspective",
+        "called": [306, 305, 320, 377, 378, 392],
+        "calls": [],
+        "use": {
+          "type": "procedural",
+          "example": "Conf.setProperty(Const.CONF_COVERS_ACCURACY + \"_\" + ((getPerspective() == null) ? \"popup\" : getPerspective().getID()),Integer.toString(jcbAccuracy.getSelectedIndex()));"
+        },
+        "swum": {
+          "object": "perspective",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 408,
+        "name": "setPerspective",
+        "class": "ViewAdapter",
+        "returntype": "void",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "perspective",
+          "verb": "set"
+        }
+      },
+      {
+        "id": 409,
+        "name": "compareTo",
+        "class": "ViewAdapter",
+        "returntype": "int",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "to",
+          "verb": "compare"
+        }
+      },
+      {
+        "id": 410,
+        "name": "onPerspectiveSelection",
+        "class": "ViewAdapter",
+        "returntype": "void",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "perspective selection",
+          "verb": "on"
+        }
+      },
+      {
+        "id": 411,
+        "name": "cleanup",
+        "class": "ViewAdapter",
+        "returntype": "void",
+        "called": [412],
+        "calls": [412],
+        "use": {
+          "type": "procedural",
+          "example": "((ViewAdapter)comp).cleanup();"
+        },
+        "swum": {
+          "object": "value",
+          "verb": "cleanup"
+        }
+      },
+      {
+        "id": 412,
+        "name": "cleanupRecursive",
+        "class": "ViewAdapter",
+        "returntype": "void",
+        "called": [411],
+        "calls": [411],
+        "use": {
+          "type": "procedural",
+          "example": "cleanupRecursive(this);"
+        },
+        "swum": {
+          "object": "recursive",
+          "verb": "cleanup"
+        }
+      },
+      {
+        "id": 413,
+        "name": "setDividerLocation",
+        "class": "JajukJSplitPane",
+        "returntype": "void",
+        "called": [414],
+        "calls": [],
+        "use": {
+          "type": "procedural",
+          "example": "super.setDividerLocation(proportionalLocation);"
+        },
+        "swum": {
+          "object": "divider location",
+          "verb": "set"
+        }
+      },
+      {
+        "id": 414,
+        "name": "paint",
+        "class": "JajukJSplitPane",
+        "returntype": "void",
+        "called": [],
+        "calls": [413],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "value",
+          "verb": "paint"
+        }
+      },
+      {
+        "id": 415,
+        "name": "JajukJSplitPane",
+        "class": "JajukJSplitPane",
+        "returntype": "JajukJSplitPane",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "jsplit pane",
+          "verb": "create"
+        }
+      },
+      {
+        "id": 416,
+        "name": "propertyChange",
+        "class": "PasswordDialog",
+        "returntype": "void",
+        "called": [],
+        "calls": [222],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "change",
+          "verb": "property"
+        }
+      },
+      {
+        "id": 417,
+        "name": "componentShown",
+        "class": "PasswordDialog",
+        "returntype": "void",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "shown",
+          "verb": "component"
+        }
+      },
+      {
+        "id": 418,
+        "name": "PasswordDialog",
+        "class": "PasswordDialog",
+        "returntype": "PasswordDialog",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "dialog",
+          "verb": "create"
+        }
+      },
+      {
+        "id": 419,
+        "name": "actionPerformed",
+        "class": "PasswordDialog",
+        "returntype": "void",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "performed",
+          "verb": "action"
+        }
+      },
+      {
+        "id": 420,
+        "name": "getOptionPane",
+        "class": "PasswordDialog",
+        "returntype": "JOptionPane",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "option pane",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 421,
+        "name": "isLoaded",
+        "class": "JajukSystray",
+        "returntype": "boolean",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "loaded",
+          "verb": "is"
+        }
+      },
+      {
+        "id": 422,
+        "name": "specificAfterHidden",
+        "class": "JajukSystray",
+        "returntype": "void",
+        "called": [],
+        "calls": [440],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "after hidden",
+          "verb": "specific"
+        }
+      },
+      {
+        "id": 423,
+        "name": "specificBeforeHidden",
+        "class": "JajukSystray",
+        "returntype": "void",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "before hidden",
+          "verb": "specific"
+        }
+      },
+      {
+        "id": 424,
+        "name": "specificAfterShown",
+        "class": "JajukSystray",
+        "returntype": "void",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "after shown",
+          "verb": "specific"
+        }
+      },
+      {
+        "id": 425,
+        "name": "specificBeforeShown",
+        "class": "JajukSystray",
+        "returntype": "void",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "before shown",
+          "verb": "specific"
+        }
+      },
+      {
+        "id": 426,
+        "name": "getInstance",
+        "class": "JajukSystray",
+        "returntype": "JajukSystray",
+        "called": [434, 436, 438, 441],
+        "calls": [428],
+        "use": {
+          "type": "procedural",
+          "example": "PlayerStateMediator.getInstance();"
+        },
+        "swum": {
+          "object": "instance",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 427,
+        "name": "getWindowStateDecorator",
+        "class": "JajukSystray",
+        "returntype": "WindowStateDecorator",
+        "called": [436],
+        "calls": [],
+        "use": {
+          "type": "assignment",
+          "example": "windowDecorator=JajukMainWindow.getInstance().getWindowStateDecorator();"
+        },
+        "swum": {
+          "object": "window state decorator",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 428,
+        "name": "JajukSystray",
+        "class": "JajukSystray",
+        "returntype": "JajukSystray",
+        "called": [426],
+        "calls": [],
+        "use": {
+          "type": "assignment",
+          "example": "jsystray=new JajukSystray();"
+        },
+        "swum": {
+          "object": "systray",
+          "verb": "create"
+        }
+      },
+      {
+        "id": 429,
+        "name": "mouseClicked",
+        "class": "JajukSystray",
+        "returntype": "void",
+        "called": [],
+        "calls": [435],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "clicked",
+          "verb": "mouse"
+        }
+      },
+      {
+        "id": 430,
+        "name": "mouseMoved",
+        "class": "JajukSystray",
+        "returntype": "void",
+        "called": [],
+        "calls": [136],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "moved",
+          "verb": "mouse"
+        }
+      },
+      {
+        "id": 431,
+        "name": "mousePressed",
+        "class": "JajukSystray",
+        "returntype": "void",
+        "called": [],
+        "calls": [435],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "pressed",
+          "verb": "mouse"
+        }
+      },
+      {
+        "id": 432,
+        "name": "handleActionSingleClick",
+        "class": "JajukSystray",
+        "returntype": "void",
+        "called": [],
+        "calls": [435],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "action single click",
+          "verb": "handle"
+        }
+      },
+      {
+        "id": 433,
+        "name": "handlePopup",
+        "class": "JajukSystray",
+        "returntype": "void",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "popup",
+          "verb": "handle"
+        }
+      },
+      {
+        "id": 434,
+        "name": "initUI",
+        "class": "JajukSystray",
+        "returntype": "void",
+        "called": [],
+        "calls": [426],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "ui",
+          "verb": "init"
+        }
+      },
+      {
+        "id": 435,
+        "name": "showMainOrSlimbarWindow",
+        "class": "JajukSystray",
+        "returntype": "void",
+        "called": [429, 431, 432],
+        "calls": [436],
+        "use": {
+          "type": "procedural",
+          "example": "showMainOrSlimbarWindow(e);"
+        },
+        "swum": {
+          "object": "main or slimbar window",
+          "verb": "show"
+        }
+      },
+      {
+        "id": 436,
+        "name": "getWindowStateDecoratorByDisplayMode",
+        "class": "JajukSystray",
+        "returntype": "WindowStateDecorator",
+        "called": [435],
+        "calls": [427, 426],
+        "use": {
+          "type": "assignment",
+          "example": "WindowStateDecorator windowDecorator=getWindowStateDecoratorByDisplayMode(displayMode);"
+        },
+        "swum": {
+          "object": "window state decorator by display mode",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 437,
+        "name": "getRegistrationKeys",
+        "class": "JajukSystray",
+        "returntype": "Set<JajukEvents>",
+        "called": [],
+        "calls": [225],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "registration keys",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 438,
+        "name": "run",
+        "class": "JajukSystray",
+        "returntype": "void",
+        "called": [],
+        "calls": [222, 244, 248, 439, 426, 132, 442],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "value",
+          "verb": "run"
+        }
+      },
+      {
+        "id": 439,
+        "name": "update",
+        "class": "JajukSystray",
+        "returntype": "void",
+        "called": [438],
+        "calls": [],
+        "use": {
+          "type": "procedural",
+          "example": "JajukSystray.super.update(event);"
+        },
+        "swum": {
+          "object": "value",
+          "verb": "update"
+        }
+      },
+      {
+        "id": 440,
+        "name": "closeSystray",
+        "class": "JajukSystray",
+        "returntype": "void",
+        "called": [422],
+        "calls": [],
+        "use": {
+          "type": "procedural",
+          "example": "jsystray.closeSystray();"
+        },
+        "swum": {
+          "object": "systray",
+          "verb": "close"
+        }
+      },
+      {
+        "id": 441,
+        "name": "actionPerformed",
+        "class": "JajukSystray",
+        "returntype": "void",
+        "called": [],
+        "calls": [222, 426, 405],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "performed",
+          "verb": "action"
+        }
+      },
+      {
+        "id": 442,
+        "name": "populateAmbiences",
+        "class": "JajukSystray",
+        "returntype": "void",
+        "called": [438],
+        "calls": [],
+        "use": {
+          "type": "procedural",
+          "example": "populateAmbiences();"
+        },
+        "swum": {
+          "object": "ambiences",
+          "verb": "populate"
+        }
+      },
+      {
+        "id": 443,
+        "name": "getMenu",
+        "class": "JajukSystray",
+        "returntype": "JPopupMenu",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "menu",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 444,
+        "name": "getTrayIcon",
+        "class": "JajukSystray",
+        "returntype": "TrayIcon",
+        "called": [],
+        "calls": [],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "tray icon",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 445,
+        "name": "mouseWheelMoved",
+        "class": "JajukSystray",
+        "returntype": "void",
+        "called": [],
+        "calls": [222],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "wheel moved",
+          "verb": "mouse"
+        }
+      },
+      {
+        "id": 446,
+        "name": "getInstance",
+        "class": "WindowGlobalKeystrokeManager",
+        "returntype": "WindowGlobalKeystrokeManager",
+        "called": [],
+        "calls": [448],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "instance",
+          "verb": "get"
+        }
+      },
+      {
+        "id": 447,
+        "name": "dispatchKeyEvent",
+        "class": "WindowGlobalKeystrokeManager",
+        "returntype": "boolean",
+        "called": [],
+        "calls": [288, 95],
+        "use": {
+          "type": "unknown",
+          "example": "unknown"
+        },
+        "swum": {
+          "object": "key event",
+          "verb": "dispatch"
+        }
+      },
+      {
+        "id": 448,
+        "name": "WindowGlobalKeystrokeManager",
+        "class": "WindowGlobalKeystrokeManager",
+        "returntype": "WindowGlobalKeystrokeManager",
+        "called": [446],
+        "calls": [],
+        "use": {
+          "type": "assignment",
+          "example": "self=new WindowGlobalKeystrokeManager();"
+        },
+        "swum": {
+          "object": "global keystroke manager",
+          "verb": "create"
+        }
+      }
+    ]
+  }
+}

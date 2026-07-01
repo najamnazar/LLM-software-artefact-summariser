@@ -1,0 +1,156 @@
+{
+  "configFile": "siena-example.xml",
+  "summaryCount": 25,
+  "summaries": [
+    {
+      "methodId": 54,
+      "methodName": "wrap",
+      "className": "Json",
+      "summary": "This method wraps the object and returns a Json. That Json is used by methods that removes the object and that puts the string. Wrap() seems far more important than average because it is called by 6 methods. The method can be used in a procedural statement ; for example: \"map.put(key,wrap(value));\"."
+    },
+    {
+      "methodId": 2384,
+      "methodName": "simpleRequest",
+      "className": "RemotePersistenceManager",
+      "summary": "This method handles the simple request. Return data is used by some methods that deletes the query. Return data is used by some methods that deletes the object. SimpleRequest() seems far more important than average because it is called by 10 methods."
+    },
+    {
+      "methodId": 555,
+      "methodName": "getPersistenceManager",
+      "className": "Model",
+      "summary": "This method gets the persistence manager and returns a PersistenceManager. That PersistenceManager is used by methods that updates the model and that gets the model. Return data is used by some methods that gets the model. Return data is used by some methods that updates the model. GetPersistenceManager() seems far more important than average because it is called by 4 methods. The method can be used in a procedural statement ; for example: \"getPersistenceManager().update(this);\"."
+    },
+    {
+      "methodId": 275,
+      "methodName": "filter",
+      "className": "Query",
+      "summary": "This method filters the string and returns a Query<T>. That Query<T> is used by some methods that processes the document. Filter() seems far more important than average because it is called by 1 method. The method can be used in a procedural statement ; for example: \"if (\"filter\".equals(name)) {\"."
+    },
+    {
+      "methodId": 128,
+      "methodName": "createQuery",
+      "className": "PersistenceManager",
+      "summary": "This method creates the query and returns a Query<T>. CreateQuery() seems far more important than average because it is not called by any methods."
+    },
+    {
+      "methodId": 129,
+      "methodName": "createQuery",
+      "className": "PersistenceManager",
+      "summary": "This method creates the EQUIV[query base query data T and returns a Query<T>. CreateQuery() seems far more important than average because it is not called by any methods."
+    },
+    {
+      "methodId": 60,
+      "methodName": "put",
+      "className": "Json",
+      "summary": "This method puts the string and returns a Json. That Json is used by methods that sums the real and that sums the integer. Put() seems far more important than average because it is called by 6 methods. The method can be used in a procedural statement ; for example: \"if (!containsKey(key)) put(key,value);\"."
+    },
+    {
+      "methodId": 334,
+      "methodName": "get",
+      "className": "PersistenceManagerFactory",
+      "summary": "This method gets the class and returns a PersistenceManager. Get() seems far more important than average because it is not called by any methods."
+    },
+    {
+      "methodId": 87,
+      "methodName": "asString",
+      "className": "Json",
+      "summary": "This method nulls the (P) and returns a String. That String is used by some methods that strs the json. AsString() seems far more important than average because it is called by 1 method. The method can be used in a procedural statement ; for example: \"return asString();\"."
+    },
+    {
+      "methodId": 76,
+      "methodName": "size",
+      "className": "Json",
+      "summary": "This method gets the size and returns an int. That int is used by some methods that is the empty. Size() seems far more important than average because it is called by 1 method. The method can be used in a procedural statement ; for example: \"return size() == 0;\"."
+    },
+    {
+      "methodId": 287,
+      "methodName": "fetch",
+      "className": "Query",
+      "summary": "This method fetches the query and returns a List<T>. That List<T> is used by some methods that processes the document. Fetch() seems far more important than average because it is called by 1 method. The method can be used in an assignment statement ; for example: \"result=query.fetch(Integer.parseInt(limit),Integer.parseInt(offset));\"."
+    },
+    {
+      "methodId": 288,
+      "methodName": "fetch",
+      "className": "Query",
+      "summary": "This method fetches the int and returns a List<T>. Fetch() seems far more important than average because it is not called by any methods."
+    },
+    {
+      "methodId": 289,
+      "methodName": "fetch",
+      "className": "Query",
+      "summary": "This method fetches the int and returns a List<T>. Fetch() seems far more important than average because it is not called by any methods."
+    },
+    {
+      "methodId": 90,
+      "methodName": "asBoolean",
+      "className": "Json",
+      "summary": "This method nulls the (P) and returns a boolean. That boolean is used by some methods that bools the json. AsBoolean() seems far more important than average because it is called by 1 method. The method can be used in a procedural statement ; for example: \"return asBoolean();\"."
+    },
+    {
+      "methodId": 59,
+      "methodName": "get",
+      "className": "Json",
+      "summary": "This method gets the string and returns a Json. That Json is used by methods that sums the integer and that sums the real. Get() seems far more important than average because it is called by 5 methods. The method can be used in an assignment statement ; for example: \"value+=get(key).asDouble();\"."
+    },
+    {
+      "methodId": 276,
+      "methodName": "order",
+      "className": "Query",
+      "summary": "This method orders the string and returns a Query<T>. That Query<T> is used by a method that processes the document. Order() seems far more important than average because it is called by 1 method. The method can be used in a procedural statement ; for example: \"else if (\"order\".equals(name)) {\"."
+    },
+    {
+      "methodId": 2382,
+      "methodName": "createRequest",
+      "className": "RemotePersistenceManager",
+      "summary": "This method creates the request and returns a Document. That Document is used by methods that handles the simple request and that creates the request. CreateRequest() seems far more important than average because it is called by 4 methods. The method can be used in an assignment statement ; for example: \"Document request=createRequest(name,entity,ids);\"."
+    },
+    {
+      "methodId": 2383,
+      "methodName": "createRequest",
+      "className": "RemotePersistenceManager",
+      "summary": "This method creates the request and returns a Document. CreateRequest() seems far more important than average because it is not called by any methods."
+    },
+    {
+      "methodId": 2391,
+      "methodName": "createRequest",
+      "className": "RemotePersistenceManager",
+      "summary": "This method creates the request and returns a Document. CreateRequest() seems far more important than average because it is not called by any methods."
+    },
+    {
+      "methodId": 66,
+      "methodName": "containsKey",
+      "className": "Json",
+      "summary": "This method contains the EQUIV[key string and returns a boolean. That boolean is used by methods that sums the real and that sums the integer. ContainsKey() seems far more important than average because it is called by 3 methods. The method can be used in a procedural statement ; for example: \"if (!containsKey(key)) put(key,value);\"."
+    },
+    {
+      "methodId": 65,
+      "methodName": "keys",
+      "className": "Json",
+      "summary": "This method keyses the json and returns a Set<String>. Keys() seems far more important than average because it is called by 4 methods. The method can be used in a procedural statement ; for example: \"for ( String key : other.keys()) {\"."
+    },
+    {
+      "methodId": 2365,
+      "methodName": "serialize",
+      "className": "Serializer",
+      "summary": "This method serializes the document. Return data is used by some methods that sends the document. Return data is used by some methods that executes the [ in. Serialize() seems far more important than average because it is called by 2 methods. The method can be used in a procedural statement ; for example: \"serializer.serialize(request,connector.getOutputStream());\"."
+    },
+    {
+      "methodId": 2366,
+      "methodName": "deserialize",
+      "className": "Serializer",
+      "summary": "This method deserializes the [ in and returns a Document. That Document is used by methods that executes the [ in and that sends the document. Deserialize() seems far more important than average because it is called by 2 methods. The method can be used in an assignment statement ; for example: \"Document response=serializer.deserialize(connector.getInputStream());\"."
+    },
+    {
+      "methodId": 133,
+      "methodName": "get",
+      "className": "PersistenceManager",
+      "summary": "This method gets the object. Return data is used by some methods that gets the model. Get() seems far more important than average because it is called by 1 method. The method can be used in a procedural statement ; for example: \"getPersistenceManager().get(this);\"."
+    },
+    {
+      "methodId": 134,
+      "methodName": "insert",
+      "className": "PersistenceManager",
+      "summary": "This method inserts the object. Return data is used by a method that inserts the model. Insert() seems far more important than average because it is called by 1 method. The method can be used in a procedural statement ; for example: \"getPersistenceManager().insert(this);\"."
+    }
+  ]
+}
