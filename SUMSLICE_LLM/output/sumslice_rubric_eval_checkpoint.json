@@ -1921,7 +1921,12 @@
         "MISTRAL": 4,
         "QWEN": 1
       },
-      "why": null,
+      "why": {
+        "CLAUDE": 3,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 1
+      },
       "how": {
         "CLAUDE": 2,
         "GPT": 3,
@@ -2602,7 +2607,12 @@
         "MISTRAL": 3,
         "QWEN": 2
       },
-      "content": null,
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
       "conciseness": {
         "CLAUDE": 3,
         "GPT": 4,
@@ -3741,9 +3751,24 @@
         "MISTRAL": 3,
         "QWEN": 2
       },
-      "content": null,
-      "conciseness": null,
-      "what": null,
+      "content": {
+        "CLAUDE": 2,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 1
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
       "why": {
         "CLAUDE": 1,
         "GPT": 4,
@@ -5769,7 +5794,12 @@
         "MISTRAL": 4,
         "QWEN": 3
       },
-      "how": null
+      "how": {
+        "CLAUDE": 2,
+        "GPT": 1,
+        "MISTRAL": 4,
+        "QWEN": 3
+      }
     }
   },
   "siena-master::createRequest::RemotePersistenceManager::2": {
@@ -5778,12 +5808,42 @@
     "method_name": "createRequest",
     "occurrence_index": 2,
     "criteria": {
-      "accuracy": null,
-      "content": null,
-      "conciseness": null,
-      "what": null,
-      "why": null,
-      "how": null
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 2,
+        "QWEN": 4
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 2,
+        "QWEN": 4
+      },
+      "conciseness": {
+        "CLAUDE": 1,
+        "GPT": 4,
+        "MISTRAL": 3,
+        "QWEN": 2
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 3,
+        "MISTRAL": 2,
+        "QWEN": 4
+      },
+      "why": {
+        "CLAUDE": 3,
+        "GPT": 2,
+        "MISTRAL": 1,
+        "QWEN": 4
+      },
+      "how": {
+        "CLAUDE": 2,
+        "GPT": 3,
+        "MISTRAL": 1,
+        "QWEN": 4
+      }
     }
   },
   "siena-master::deserialize::Serializer::0": {
@@ -5792,11 +5852,36 @@
     "method_name": "deserialize",
     "occurrence_index": 0,
     "criteria": {
-      "accuracy": null,
-      "content": null,
-      "conciseness": null,
-      "what": null,
-      "why": null,
+      "accuracy": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "content": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 3,
+        "QWEN": 4
+      },
+      "conciseness": {
+        "CLAUDE": 2,
+        "GPT": 1,
+        "MISTRAL": 4,
+        "QWEN": 3
+      },
+      "what": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 3,
+        "QWEN": 4
+      },
+      "why": {
+        "CLAUDE": 1,
+        "GPT": 2,
+        "MISTRAL": 3,
+        "QWEN": 4
+      },
       "how": {
         "CLAUDE": 2,
         "GPT": 1,

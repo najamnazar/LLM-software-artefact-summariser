@@ -47,7 +47,7 @@ from openai import OpenAI
 
 # Load .env once at module import time so all classes share the same
 # environment state without each needing to call load_dotenv() individually.
-load_dotenv()
+load_dotenv(Path(__file__).resolve().parent.parent.parent / ".env")
 
 # Configure logging before any third-party library can install its own handler.
 logging.basicConfig(
@@ -159,7 +159,7 @@ class CommitDatasetLoader:
 
 
 class SystemPromptLoader:
-    """Read the system prompt from ``resources/prompts.json``."""
+    """Read the system prompt from ``<repo root>/resources/prompts.json``."""
 
     def __init__(self, prompt_path: Path) -> None:
         self.prompt_path = prompt_path
@@ -178,7 +178,7 @@ class SystemPromptLoader:
             raise FileNotFoundError(f"System prompt file missing: {self.prompt_path}")
         with self.prompt_path.open(encoding="utf-8") as handle:
             payload = json.load(handle)
-        prompt = payload.get("system_prompt", "").strip()
+        prompt = payload.get("pr_llm", {}).get("system_prompt", "").strip()
         if not prompt:
             raise ValueError("system_prompt is empty in the provided prompt file")
         return prompt
@@ -405,7 +405,7 @@ def build_default_pipeline(
         Default: ``<PR_LLM>/output/``.
     prompt_path:
         Path to ``prompts.json``.
-        Default: ``<PR_LLM>/resources/prompts.json``.
+        Default: ``<repo root>/resources/prompts.json``.
     temperature:
         LLM sampling temperature.  Falls back to ``OPENROUTER_TEMPERATURE``
         from the ``.env`` file, or ``0.0`` if unset.
@@ -428,9 +428,10 @@ def build_default_pipeline(
         max_tokens = int(os.getenv("OPENROUTER_MAX_COMPLETION_TOKENS", "512"))
 
     pr_llm_root = Path(__file__).resolve().parent.parent  # PR_LLM/
+    repo_root = pr_llm_root.parent
     dataset = dataset_path or (pr_llm_root / "input" / "dataset" / "selected_commits.jsonl")
     base_output_dir = output_path or (pr_llm_root / "output")
-    prompt_file = prompt_path or (pr_llm_root / "resources" / "prompts.json")
+    prompt_file = prompt_path or (repo_root / "resources" / "prompts.json")
 
     prompt_text = SystemPromptLoader(prompt_file).load()
     client = OpenRouterLLMClient()

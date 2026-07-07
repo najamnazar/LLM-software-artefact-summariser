@@ -44,10 +44,11 @@ from dotenv import load_dotenv
 # Paths
 # ---------------------------------------------------------------------------
 PR_LLM_ROOT = Path(__file__).resolve().parent.parent  # PR_LLM/
+REPO_ROOT = PR_LLM_ROOT.parent
 OUTPUT_DIR = PR_LLM_ROOT / "output"
 RESULTS_JSON = OUTPUT_DIR / "results.json"
 CHECKPOINT_FILE = OUTPUT_DIR / "rubric_eval_checkpoint.json"
-PROMPTS_JSON = PR_LLM_ROOT / "resources" / "prompts.json"
+PROMPTS_JSON = REPO_ROOT / "resources" / "prompts.json"
 
 # ---------------------------------------------------------------------------
 # Models
@@ -68,7 +69,7 @@ MODEL_LABELS = {
 # ---------------------------------------------------------------------------
 # Evaluation criteria
 # ---------------------------------------------------------------------------
-# Criteria definitions moved to resources/prompts.json under "pr_ranking".
+# Criteria definitions moved to <repo root>/resources/prompts.json under "pr_llm.pr_ranking".
 # Loaded at runtime via load_ranking_prompts().
 # CRITERIA: dict[str, str] = {
 #     "accuracy": (
@@ -99,7 +100,7 @@ POINTS_MAP: dict[int, int] = {1: 4, 2: 3, 3: 2, 4: 1}
 
 def load_env() -> tuple[str, str, str, int, float]:
     """Load and validate .env configuration."""
-    load_dotenv(PR_LLM_ROOT / ".env")
+    load_dotenv(REPO_ROOT / ".env")
     api_key = os.getenv("OPENROUTER_API_KEY", "")
     api_url = os.getenv("OPENROUTER_API_URL", "")
     model = os.getenv("RANK_SUMMARIES_MODEL", "")
@@ -199,14 +200,14 @@ def load_jsonl(path: Path) -> dict[int, dict]:
 
 
 def load_ranking_prompts() -> dict[str, str]:
-    """Load pr_ranking prompt templates from resources/prompts.json."""
+    """Load pr_llm.pr_ranking prompt templates from <repo root>/resources/prompts.json."""
     if not PROMPTS_JSON.exists():
         raise FileNotFoundError(f"Prompt file not found: {PROMPTS_JSON}")
     with open(PROMPTS_JSON, "r", encoding="utf-8") as fh:
         data = json.load(fh)
-    ranking_prompts = data.get("pr_ranking")
+    ranking_prompts = data.get("pr_llm", {}).get("pr_ranking")
     if not isinstance(ranking_prompts, dict):
-        raise ValueError("prompts.json is missing the pr_ranking section")
+        raise ValueError("prompts.json is missing the pr_llm.pr_ranking section")
     return ranking_prompts
 
 

@@ -38,17 +38,17 @@ public class LlmSummaryGenerator {
         if (args.length >= 2 && args[0].equalsIgnoreCase("ALL")) {
             String modelKey     = args[1].toUpperCase();
             Path allOutputDir   = args.length > 2 ? Paths.get(args[2]) : Paths.get("output", "all");
-            Path envPath        = args.length > 3 ? Paths.get(args[3]) : Paths.get(".env");
+            Path envPath        = args.length > 3 ? Paths.get(args[3]) : Paths.get("..", ".env");
             int maxMethods      = args.length > 4 ? Integer.parseInt(args[4]) : -1;
-            Path promptPath     = args.length > 5 ? Paths.get(args[5]) : Paths.get("resources", "prompts.json");
+            Path promptPath     = args.length > 5 ? Paths.get(args[5]) : Paths.get("..", "resources", "prompts.json");
             Path groundTruthDir = args.length > 6 ? Paths.get(args[6]) : Paths.get("input", "ground-truth");
             runAll(modelKey, allOutputDir, envPath, maxMethods, promptPath, groundTruthDir);
         } else {
             Path jsonPath    = args.length > 0 ? Paths.get(args[0]) : Paths.get("output", "nanoxml-methods.json");
             Path outputPath  = args.length > 1 ? Paths.get(args[1]) : Paths.get("output", "nanoxml-method-summaries.json");
-            Path envPath     = args.length > 2 ? Paths.get(args[2]) : Paths.get(".env");
+            Path envPath     = args.length > 2 ? Paths.get(args[2]) : Paths.get("..", ".env");
             int maxMethods   = args.length > 3 ? Integer.parseInt(args[3]) : -1;
-            Path promptPath  = args.length > 4 ? Paths.get(args[4]) : Paths.get("resources", "prompts.json");
+            Path promptPath  = args.length > 4 ? Paths.get(args[4]) : Paths.get("..", "resources", "prompts.json");
             if (args.length < 6) {
                 throw new IllegalArgumentException(
                     "Model key required as 6th argument. Example: MISTRAL, GPT, CLAUDE, QWEN");
@@ -533,17 +533,44 @@ public class LlmSummaryGenerator {
     private static PromptConfig loadPromptConfig(Path promptPath) throws IOException {
         String promptJson = Files.readString(promptPath, StandardCharsets.UTF_8);
 
-        String systemPrompt = extractString(promptJson, "content");
+        // prompts.json is shared across projects; scope extraction to this project's
+        // namespace so sibling projects' "content"/"sections" keys are never matched.
+        String scoped = extractObjectRegion(promptJson, "sumslice_llm");
+        scoped = extractObjectRegion(scoped != null ? scoped : promptJson, "sumslice-llm");
+        if (scoped == null) {
+            scoped = promptJson;
+        }
+
+        String systemPrompt = extractString(scoped, "content");
         if (systemPrompt == null || systemPrompt.isBlank()) {
             systemPrompt = DEFAULT_SYSTEM_PROMPT;
         }
 
-        List<String> sections = extractStringArray(promptJson, "sections");
+        List<String> sections = extractStringArray(scoped, "sections");
         if (sections.isEmpty()) {
             sections = DEFAULT_USER_PROMPT_SECTIONS;
         }
 
         return new PromptConfig(systemPrompt, sections);
+    }
+
+    private static String extractObjectRegion(String src, String key) {
+        if (src == null) {
+            return null;
+        }
+        int keyIndex = src.indexOf("\"" + key + "\"");
+        if (keyIndex < 0) {
+            return null;
+        }
+        int openIndex = src.indexOf('{', keyIndex);
+        if (openIndex < 0) {
+            return null;
+        }
+        int closeIndex = findMatchingBracket(src, openIndex, '{', '}');
+        if (closeIndex < 0) {
+            return null;
+        }
+        return src.substring(openIndex + 1, closeIndex);
     }
 
     private static List<String> extractStringArray(String src, String key) {

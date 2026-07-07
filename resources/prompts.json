@@ -1,0 +1,95 @@
+{
+  "pr_llm": {
+    "system_prompt": "You are a senior software analyst creating evidence-based pull request descriptions. The input consists of a list of commit messages and the source code comments added in those commits. Write a pull request description based only on the provided information. Use a third-person tone and avoid speculation or undocumented behaviour.",
+    "user_prompt_template": {
+      "alias": "PR_SUMMARY",
+      "sections": [
+        "Rank: {rank}",
+        "Dataset Index: {dataset_index}",
+        "Identifier: {identifier}",
+        "Commit messages and code comments:\n{article}",
+        "Produce a concise pull request description based only on the content above."
+      ]
+    },
+    "pr_ranking": {
+      "accuracy": "Evaluate the accuracy of each generated summary against the gold summary.\n\nGold summary:\n{human_summary}\n\nGenerated summaries:\n1. {summary_1}\n2. {summary_2}\n3. {summary_3}\n4. {summary_4}\n\nRank the generated summaries from most accurate (1) to least accurate (4). Output only the ranking.",
+      "adequacy": "Evaluate the adequacy of each generated summary against the gold summary.\n\nGold summary:\n{human_summary}\n\nGenerated summaries:\n1. {summary_1}\n2. {summary_2}\n3. {summary_3}\n4. {summary_4}\n\nRank the summaries from most adequate (1) to least adequate (4). Output only the ranking.",
+      "conciseness": "Evaluate the conciseness of each generated summary against the gold summary.\n\nGold summary:\n{human_summary}\n\nGenerated summaries:\n1. {summary_1}\n2. {summary_2}\n3. {summary_3}\n4. {summary_4}\n\nRank the summaries from most concise (1) to least concise (4). Output only the ranking.",
+      "context_awareness": "Evaluate how well each generated summary captures the context present in the gold summary.\n\nGold summary:\n{human_summary}\n\nGenerated summaries:\n1. {summary_1}\n2. {summary_2}\n3. {summary_3}\n4. {summary_4}\n\nRank the summaries from best at capturing context (1) to worst (4). Output only the ranking.",
+      "clarity": "Evaluate the clarity of each generated summary against the gold summary.\n\nGold summary:\n{human_summary}\n\nGenerated summaries:\n1. {summary_1}\n2. {summary_2}\n3. {summary_3}\n4. {summary_4}\n\nRank the summaries from clearest (1) to least clear (4). Output only the ranking."
+    }
+  },
+  "sumslice_llm": {
+    "sumslice-llm": {
+      "system_prompt": {
+        "alias": "SENIOR_DEVELOPER",
+        "content": "You are documenting Java methods for developers. Write a concise natural-language summary in 1-2 sentences. Mention intent first, then usage context if available. Avoid filler and do not include bullet points"
+      },
+      "user_prompt_template": {
+        "alias": "METHOD_SUMMARY_STRUCTURED",
+        "sections": [
+          "id: {method.id}",
+          "class: {method.className}",
+          "classExtends: {method.classExtends}",
+          "classImplements: {method.classImplements}",
+          "name: {method.name}",
+          "parameters: {method.parameters}",
+          "returnType: {method.returnType}",
+          "swumVerb: {method.swumVerb}",
+          "swumObject: {method.swumObject}",
+          "methodBody: {method.body}",
+          "calledByCount: {method.calledCount}",
+          "importanceLabel: {method.importanceLabel}",
+          "topCallers: {method.topCallers}",
+          "callsCount: {method.callsCount}",
+          "useType: {method.useType}",
+          "useExample: {method.useExample}"
+        ]
+      },
+      "summary_ranking": {
+        "accuracy": "Evaluate the accuracy of each generated summary against the gold summary. Consider whether the summary correctly describes the method's behaviour without introducing false or misleading information.\n\nGold summary:\n{human_summary}\n\nGenerated summaries:\n1. {summary_1}\n2. {summary_2}\n3. {summary_3}\n4. {summary_4}\n\nRank the generated summaries from most accurate (1) to least accurate (4). Output only the ranking.",
+        "content": "Evaluate whether each generated summary is missing important information that could hinder understanding of the method, compared to the gold summary.\n\nGold summary:\n{human_summary}\n\nGenerated summaries:\n1. {summary_1}\n2. {summary_2}\n3. {summary_3}\n4. {summary_4}\n\nRank the summaries from most complete (least missing information, 1) to least complete (most missing information, 4). Output only the ranking.",
+        "conciseness": "Evaluate whether each generated summary contains unnecessary information that is not essential to understanding the method, compared to the gold summary.\n\nGold summary:\n{human_summary}\n\nGenerated summaries:\n1. {summary_1}\n2. {summary_2}\n3. {summary_3}\n4. {summary_4}\n\nRank the summaries from most concise (least unnecessary information, 1) to least concise (most unnecessary information, 4). Output only the ranking.",
+        "what": "Evaluate how well each generated summary helps you understand what the method does (e.g., the internals of the method), compared to the gold summary.\n\nGold summary:\n{human_summary}\n\nGenerated summaries:\n1. {summary_1}\n2. {summary_2}\n3. {summary_3}\n4. {summary_4}\n\nRank the summaries from best at explaining what the method does (1) to worst (4). Output only the ranking.",
+        "why": "Evaluate how well each generated summary helps you understand why the method exists in the project (e.g., the consequences of altering or removing the method), compared to the gold summary.\n\nGold summary:\n{human_summary}\n\nGenerated summaries:\n1. {summary_1}\n2. {summary_2}\n3. {summary_3}\n4. {summary_4}\n\nRank the summaries from best at explaining why the method exists (1) to worst (4). Output only the ranking.",
+        "how": "Evaluate how well each generated summary helps you understand how to use the method, compared to the gold summary.\n\nGold summary:\n{human_summary}\n\nGenerated summaries:\n1. {summary_1}\n2. {summary_2}\n3. {summary_3}\n4. {summary_4}\n\nRank the summaries from best at explaining how to use the method (1) to worst (4). Output only the ranking."
+      }
+    }
+  },
+  "dps_llm": {
+    "llm_summarization": {
+      "system_prompt": {
+        "alias": "SENIOR_ANALYST_50_WORDS",
+        "content": "You are a senior software analyst who writes concise, factual summaries of Java classes. Use only the supplied structural facts to describe each class in a single paragraph no longer than 50 words. Highlight the class responsibilities, key collaborators, and any explicit design-pattern roles. Do not invent behaviour or reference missing information. Write in third person with an objective tone."
+      },
+      "user_prompt_template": {
+        "alias": "CLASS_SUMMARY_STRUCTURED",
+        "sections": [
+          "Project: {project_name}",
+          "Class: {class_name} ({class_kind}, modifiers: {modifiers})",
+          "Extends: {extends_types}",
+          "Implements: {implements_types}",
+          "Fields (total {field_count}): {field_signatures}",
+          "Constructors (total {constructor_count}): {constructor_signatures}",
+          "Methods (total {method_count}): {method_summaries}",
+          "Interactions: {interaction_notes}",
+          "Design pattern insights:\n{pattern_insights}",
+          "\nTask: Produce a single-paragraph summary (<=50 words) that stresses the class responsibility, its collaborators, and the provided design-pattern context. Avoid repeating raw bullet text."
+        ]
+      },
+      "alternative_prompts": {
+        "non_concise_50": {
+          "alias": "SENIOR_ANALYST_50_WORDS_NON_CONCISE",
+          "content": "You are a senior software analyst who writes factual summaries of Java classes. Use only the supplied structural facts to describe each class in a single paragraph no longer than 50 words. Highlight the class responsibilities, key collaborators, and any explicit design-pattern roles. Do not invent behaviour or reference missing information. Write in third person with an objective tone."
+        }
+      }
+    },
+    "summary_ranking": {
+      "accuracy": "Evaluate the accuracy of each generated summary against the gold summary.\n\nGold summary:\n{human_summary}\n\nGenerated summaries:\n1. {summary_a}\n2. {summary_b}\n3. {summary_c}\n\nRank the generated summaries from most accurate (1) to least accurate (3). Output only the ranking.",
+      "conciseness": "Evaluate the conciseness of each generated summary against the gold summary.\n\nGold summary:\n{human_summary}\n\nGenerated summaries:\n1. {summary_a}\n2. {summary_b}\n3. {summary_c}\n\nRank the summaries from most concise (1) to least concise (3). Output only the ranking.",
+      "adequacy": "Evaluate the adequacy of each generated summary against the gold summary.\n\nGold summary:\n{human_summary}\n\nGenerated summaries:\n1. {summary_a}\n2. {summary_b}\n3. {summary_c}\n\nRank the summaries from most adequate (1) to least adequate (3). Output only the ranking.",
+      "code_context": "Evaluate how well each generated summary captures the context present in the gold summary.\n\nGold summary:\n{human_summary}\n\nGenerated summaries:\n1. {summary_a}\n2. {summary_b}\n3. {summary_c}\n\nRank the summaries from best at capturing context (1) to worst (3). Output only the ranking.",
+      "design_patterns": "Evaluate how well each generated summary conveys the pattern described in the gold summary.\n\nGold summary:\n{human_summary}\n\nGenerated summaries:\n1. {summary_a}\n2. {summary_b}\n3. {summary_c}\n\nRank the summaries from best at conveying the pattern (1) to worst (3). Output only the ranking."
+    }
+  }
+}

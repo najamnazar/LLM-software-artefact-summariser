@@ -27,8 +27,8 @@ from transformers import logging as hf_logging
 
 try:
     from dotenv import load_dotenv
-    # Load .env file from project root (parent directory of python/)
-    env_path = Path(__file__).parent.parent / '.env'
+    # Load .env file from repo root (two directories up from python/)
+    env_path = Path(__file__).parent.parent.parent / '.env'
     load_dotenv(dotenv_path=env_path)
 except ImportError:
     pass  # dotenv not installed, will use environment variables directly

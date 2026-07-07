@@ -426,7 +426,7 @@ def main() -> None:
     _log.setLevel(level)
     _log.handlers[0].setLevel(level)
 
-    load_dotenv(PR_LLM_ROOT / ".env")
+    load_dotenv(PR_LLM_ROOT.parent / ".env")
     output_dir = args.output or (PR_LLM_ROOT / "output")
 
     selected = [m.upper() for m in args.models]

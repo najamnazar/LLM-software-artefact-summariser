@@ -51,12 +51,13 @@ from dotenv import load_dotenv
 # Paths
 # ---------------------------------------------------------------------------
 SUMSLICE_ROOT = Path(__file__).resolve().parent.parent  # SUMSLICE_LLM/
+REPO_ROOT = SUMSLICE_ROOT.parent
 OUTPUT_DIR = SUMSLICE_ROOT / "output"
 GT_DIR = SUMSLICE_ROOT / "input" / "ground-truth"
 RESULTS_DIR = SUMSLICE_ROOT / "evaluation_results"
 RESULTS_JSON = RESULTS_DIR / "rubric_results.json"
 CHECKPOINT_FILE = OUTPUT_DIR / "sumslice_rubric_eval_checkpoint.json"
-PROMPTS_JSON = SUMSLICE_ROOT / "resources" / "prompts.json"
+PROMPTS_JSON = REPO_ROOT / "resources" / "prompts.json"
 
 # ---------------------------------------------------------------------------
 # Models
@@ -96,7 +97,7 @@ MethodKey = tuple[str, str, str]  # (project, methodName, className)
 
 def load_env() -> tuple[str, str, str, int, float]:
     """Load and validate .env configuration."""
-    load_dotenv(SUMSLICE_ROOT / ".env")
+    load_dotenv(REPO_ROOT / ".env")
     api_key = os.getenv("OPENROUTER_API_KEY", "")
     api_url = os.getenv("OPENROUTER_API_URL", "")
     model = os.getenv("RANK_SUMMARIES_MODEL", "")
@@ -202,14 +203,14 @@ def load_ground_truth(gt_dir: Path) -> dict[MethodKey, list[str]]:
 # ---------------------------------------------------------------------------
 
 def load_ranking_prompts() -> dict[str, str]:
-    """Load sumslice-llm.summary_ranking prompt templates from resources/prompts.json."""
+    """Load sumslice_llm.sumslice-llm.summary_ranking prompt templates from <repo root>/resources/prompts.json."""
     if not PROMPTS_JSON.exists():
         raise FileNotFoundError(f"Prompt file not found: {PROMPTS_JSON}")
     with open(PROMPTS_JSON, "r", encoding="utf-8") as fh:
         data = json.load(fh)
-    ranking_prompts = data.get("sumslice-llm", {}).get("summary_ranking")
+    ranking_prompts = data.get("sumslice_llm", {}).get("sumslice-llm", {}).get("summary_ranking")
     if not isinstance(ranking_prompts, dict):
-        raise ValueError("prompts.json is missing the sumslice-llm.summary_ranking section")
+        raise ValueError("prompts.json is missing the sumslice_llm.sumslice-llm.summary_ranking section")
     return ranking_prompts
 
 

@@ -101,7 +101,7 @@ public class DpsLlmApplication {
         // Ensure duplicate tracking starts clean for this run
         ParseProject.resetDuplicateTracking();
 
-        Map<String, String> dotEnv = DotEnvLoader.load(Path.of(".env"));
+        Map<String, String> dotEnv = DotEnvLoader.load(Path.of("..", ".env"));
         if (dotEnv.isEmpty()) {
             System.out.println("No .env file found or it was empty. Falling back to OS environment variables.");
         }

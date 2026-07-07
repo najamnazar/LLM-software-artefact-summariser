@@ -354,7 +354,7 @@ class SummaryRankingPipeline:
         self.results_dir = (base_dir / 'evaluation-results').resolve()
         self.results_dir.mkdir(parents=True, exist_ok=True)
 
-        env_path = base_dir / '.env'
+        env_path = base_dir.parent / '.env'
         load_dotenv(env_path)
 
         api_key = os.getenv('OPENROUTER_API_KEY')
@@ -380,7 +380,7 @@ class SummaryRankingPipeline:
         except ValueError as exc:
             raise ValueError('RANK_SUMMARIES_MAX_TOKENS must be an integer') from exc
 
-        prompts_path = base_dir / 'resources' / 'prompts.json'
+        prompts_path = base_dir.parent / 'resources' / 'prompts.json'
         if not prompts_path.exists():
             raise FileNotFoundError(f'Prompt file not found: {prompts_path}')
 
@@ -389,10 +389,10 @@ class SummaryRankingPipeline:
         if not isinstance(prompts_data, dict):
             raise ValueError('prompts.json must contain a top-level JSON object')
 
-        ranking_prompts = prompts_data.get('summary_ranking')
+        ranking_prompts = prompts_data.get('dps_llm', {}).get('summary_ranking')
         if not isinstance(ranking_prompts, dict):
             raise ValueError(
-                'prompts.json is missing the summary_ranking section required by rank_summaries.py'
+                'prompts.json is missing the dps_llm.summary_ranking section required by rank_summaries.py'
             )
 
         self.ranker = MultiCriteriaRanker(

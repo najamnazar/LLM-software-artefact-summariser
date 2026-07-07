@@ -64,9 +64,15 @@ public class PromptManager {
             }
             
             JsonNode root = objectMapper.readTree(is);
-            
+
+            // prompts.json is shared across projects; scope lookups to this project's namespace.
+            JsonNode dpsRoot = root.get("dps_llm");
+            if (dpsRoot == null) {
+                throw new IllegalStateException("dps_llm section not found in prompts.json");
+            }
+
             // Load LLM summarization prompts
-            loadCategoryPrompts(root, "llm_summarization");
+            loadCategoryPrompts(dpsRoot, "llm_summarization");
             // Najam, 2026-06-04: These four categories do not exist in prompts.json; each call no-ops silently
             // due to the null check in loadCategoryPrompts, but their presence misled PromptConfigurationExample
             // into referencing aliases (CODE_REVIEWER, TEST_ENGINEER, etc.) that were never defined.
