@@ -36,8 +36,6 @@ PR_LLM/
 │   ├── pr_llm_summariser.py                # Stage 1 — generate summaries (LLM API calls)
 │   ├── evaluate_pr_summaries.py            # Stage 2 — BERTScore + cosine metrics
 │   └── rank_pr_summaries.py                # Stage 3 — rubric-based LLM ranking
-├── resources/
-│   └── prompts.json                        # System prompt template
 │
 └── output/                                 # Created automatically on first run
     ├── PR_GPT_SUMMARY.jsonl
@@ -46,6 +44,9 @@ PR_LLM/
     ├── PR_MISTRAL_SUMMARY.jsonl
     ├── results.json                        # Aggregated BERTScore + cosine metrics
     └── rubric_eval_checkpoint.json         # Checkpoint for rubric evaluation
+
+# resources/prompts.json now lives at the REPO ROOT (../resources/prompts.json),
+# shared by DPS_LLM, PR_LLM, and SUMSLICE_LLM — it is not a PR_LLM subdirectory.
 ```
 
 ---
@@ -167,7 +168,7 @@ python PR_LLM\python\pr_llm_summariser.py MISTRAL
 
 #### Overriding default paths
 
-The defaults resolve to `PR_LLM/input/dataset/`, `PR_LLM/output/`, and `PR_LLM/resources/` automatically. Override with flags if you need to point elsewhere:
+The defaults resolve to `PR_LLM/input/dataset/`, `PR_LLM/output/`, and the repo-root `resources/` automatically. Override with flags if you need to point elsewhere:
 
 **Linux / macOS**
 ```bash
@@ -208,7 +209,7 @@ optional arguments:
   --output DIR          Directory for per-model JSONL summary files
                         Default: <PR_LLM>/output/
   --prompt PATH         Path to prompts.json
-                        Default: <PR_LLM>/resources/prompts.json
+                        Default: <repo root>/resources/prompts.json
   --limit N             Process only the first N samples (debugging)
   --temperature FLOAT   Sampling temperature for all models
                         Default: OPENROUTER_TEMPERATURE from .env, else 0.0

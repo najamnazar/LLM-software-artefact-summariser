@@ -51,8 +51,8 @@ DPS_LLM/
 │
 ├── python/                         # Evaluation scripts (run after Java)
 │   ├── evaluate_summaries.py       # Cosine Similarity + BERTScore vs human
-│   ├── evaluate_nlg_additional_metrics.py  # BLEU, ROUGE, METEOR for NLG
 │   ├── evaluate_iterations.py      # Metrics across prompt word-limit variants
+│   ├── plot_results.py             # Regenerate violin plots from existing score CSVs
 │   ├── rank_summaries.py           # LLM multi-criteria ranking (A vs B vs C)
 │   ├── rank_model_comparisons.py   # LLM model head-to-head ranking
 │   ├── rank_design_patterns.py     # Ranking grouped by design pattern
@@ -77,25 +77,27 @@ DPS_LLM/
 │   └── summary-output/
 │       ├── nlg_summaries.csv          # NLG-generated summaries
 │       ├── swum_summaries.csv         # SWUM-generated summaries
-│       ├── LLM_CLAUDE_SUMMARY.csv     # Claude summaries
-│       ├── LLM_GEMINI_SUMMARY.csv     # Gemini summaries
-│       ├── LLM_GPT_SUMMARY.csv        # GPT summaries
-│       └── LLM_MISTRAL_SUMMARY.csv    # Mistral summaries
+│       ├── LLM_{MODEL}_SUMMARY.csv    # e.g. LLM_CLAUDE_SUMMARY.csv, LLM_GPT_SUMMARY.csv,
+│       └── LLM_{MODEL}_NC_SUMMARY.csv #   LLM_MISTRAL_SUMMARY.csv, LLM_QWEN_SUMMARY.csv (+ "_NC" no-context variants)
 │
-├── evaluation-results/             # All evaluation outputs
+├── evaluation-results/             # All evaluation outputs (see actual filenames in the dir — naming
+│   │                               #   has drifted from the pattern below across pipeline revisions)
 │   ├── {method}_vs_human_class_scores.csv    # Per-file metric scores
 │   ├── {method}_vs_human_project_scores.csv  # Aggregated by project
 │   ├── {method}_vs_human_pattern_scores.csv  # Aggregated by design pattern
-│   ├── multi_criteria_rankings.csv            # LLM judge ranks per file
+│   ├── model_comparisons_ranking_*.csv        # Head-to-head model ranking (report/detail/summary)
+│   ├── design_pattern_*.csv/.txt              # Ranking grouped by design pattern
+│   ├── *_violin.png                           # Distribution plots (concise/nc, all-methods/llm-only)
 │   ├── results.txt                            # Appended statistical test output
 │   ├── evaluation_summary.txt                 # Summary of all methods
-│   └── methods_comparison_violin_plots.png    # Distribution plots
+│   └── pipeline_summary.txt                   # Pipeline run summary
 │
-├── resources/
-│   └── prompts.json                # System prompt templates (20/40/50/60/80 words)
 ├── pom.xml                         # Maven build + exec targets
 ├── requirements.txt                # Python dependencies
 └── .env                            # API credentials (not committed)
+
+# resources/prompts.json now lives at the REPO ROOT (../resources/prompts.json),
+# shared by DPS_LLM, PR_LLM, and SUMSLICE_LLM — it is not a DPS_LLM subdirectory.
 ```
 
 ---
@@ -170,11 +172,11 @@ OPENROUTER_API_KEY=sk-or-your-key-here
 OPENROUTER_API_URL=https://openrouter.ai/api/v1/chat/completions
 
 # ── Model to use for summary generation (set exactly one) ────────────────────
-# The first non-empty value found wins in this order: MISTRAL → GPT → CLAUDE → GEMINI
+# The first non-empty value found wins in this order: MISTRAL → GPT → CLAUDE → QWEN
 MISTRAL_MODEL=mistralai/mistral-small-2503
 GPT_MODEL=openai/gpt-4.1-mini
 CLAUDE_MODEL=anthropic/claude-sonnet-4-5
-GEMINI_MODEL=google/gemini-2.0-flash-001
+QWEN_MODEL=qwen/qwen3-plus
 
 # ── LLM generation settings ──────────────────────────────────────────────────
 OPENROUTER_MAX_TOKENS=256
@@ -209,7 +211,6 @@ Step 1  →  DPS-NLG   (Java)   — must run first; SWUM depends on its JSON out
 Step 2  →  DPS-SWUM  (Java)   — reads output/json-output/nlg/
 Step 3  →  DPS-LLM   (Java)   — independent; requires API key
 Step 4  →  evaluate_summaries.py        — requires steps 1–3 outputs
-Step 5  →  evaluate_nlg_additional_metrics.py  — requires step 1 output
 Step 6  →  rank_summaries.py            — requires A/B/C CSVs + API key
 Step 7  →  calculate_wilcoxon_tests.py  — requires step 4 outputs
 Step 8  →  friedman_test.py             — requires step 6 output
@@ -294,7 +295,7 @@ mvn exec:java@llm-summaries
 
 Each alias produces a separate CSV file under `output/summary-output/`.
 
-**Available prompt aliases** (defined in `resources/prompts.json`):
+**Available prompt aliases** (defined in `../resources/prompts.json`, at the repo root):
 
 | Alias | Word limit |
 |-------|-----------|
@@ -363,7 +364,7 @@ python python/evaluate_summaries.py \
   --nlg-csv output/summary-output/nlg_summaries.csv \
   --swum-csv output/summary-output/swum_summaries.csv \
   --llm-claude-csv output/summary-output/LLM_CLAUDE_SUMMARY.csv \
-  --llm-gemini-csv output/summary-output/LLM_GEMINI_SUMMARY.csv \
+  --llm-qwen-csv output/summary-output/LLM_QWEN_SUMMARY.csv \
   --llm-gpt-csv output/summary-output/LLM_GPT_SUMMARY.csv \
   --llm-mistral-csv output/summary-output/LLM_MISTRAL_SUMMARY.csv \
   --output-dir evaluation-results
@@ -376,18 +377,6 @@ python python/evaluate_summaries.py `
   --llm-claude-csv output/summary-output/LLM_CLAUDE_SUMMARY.csv `
   --output-dir evaluation-results
 ```
-
----
-
-#### Step 5 — Additional NLG metrics (BLEU, ROUGE, METEOR)
-
-```bash
-python python/evaluate_nlg_additional_metrics.py
-```
-
-Output:
-- `evaluation-results/nlg_vs_human_additional_metrics.csv`
-- `evaluation-results/nlg_vs_human_additional_metrics_summary.csv`
 
 ---
 
@@ -522,7 +511,6 @@ mvn exec:java@llm-summaries    # LLM  → output/summary-output/LLM_*_SUMMARY.cs
 
 # ── Stage 2: Evaluate ─────────────────────────────────────────────────────────
 python python/evaluate_summaries.py                # Cosine + BERTScore
-python python/evaluate_nlg_additional_metrics.py   # BLEU, ROUGE, METEOR
 
 # ── Stage 2: Rank ─────────────────────────────────────────────────────────────
 python python/rank_summaries.py                    # Multi-criteria LLM ranking
@@ -552,7 +540,6 @@ mvn exec:java@llm-summaries
 
 # ── Stage 2: Evaluate ─────────────────────────────────────────────────────────
 python python/evaluate_summaries.py
-python python/evaluate_nlg_additional_metrics.py
 
 # ── Stage 2: Rank ─────────────────────────────────────────────────────────────
 python python/rank_summaries.py
@@ -582,7 +569,6 @@ mvn exec:java@llm-summaries
 
 :: ── Stage 2: Evaluate ────────────────────────────────────────────────────────
 python python\evaluate_summaries.py
-python python\evaluate_nlg_additional_metrics.py
 
 :: ── Stage 2: Rank ────────────────────────────────────────────────────────────
 python python\rank_summaries.py
@@ -679,7 +665,7 @@ Cross-criteria Friedman (5 criteria as blocks): **χ² = 8.40**, p = 0.015, **Ke
 | `MISTRAL_MODEL` | One of four | — | Mistral model ID (checked first) |
 | `GPT_MODEL` | One of four | — | GPT model ID |
 | `CLAUDE_MODEL` | One of four | — | Claude model ID |
-| `GEMINI_MODEL` | One of four | — | Gemini model ID |
+| `QWEN_MODEL` | One of four | — | Qwen model ID |
 | `OPENROUTER_MAX_TOKENS` | No | `256` | Max tokens in LLM response |
 | `OPENROUTER_TEMPERATURE` | No | `0.2` | Sampling temperature (0.0–2.0) |
 | `OPENROUTER_HTTP_REFERER` | No | — | Optional HTTP-Referer header |

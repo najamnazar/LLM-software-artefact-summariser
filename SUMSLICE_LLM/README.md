@@ -2,19 +2,22 @@
 
 `sumslice-llm` is a Java command-line project that analyzes Java source code and generates method summaries with an LLM.
 
-It runs in two stages:
+It runs in three stages:
 
-1. **Static analysis stage** (`MethodFeatureExtractor`)
+1. **Static analysis stage** (`MethodFeatureExtractor`, Java)
    - Parses Java files with Eclipse JDT AST.
    - Extracts method metadata (name, class, return type, arguments).
    - Infers lightweight SWUM-style action/object labels from method names.
    - Builds call/called-by relationships.
    - Writes structured JSON and intermediate artifacts.
-2. **LLM summarization stage** (`LlmSummaryGenerator`)
+2. **LLM summarization stage** (`LlmSummaryGenerator`, Java)
    - Reads generated method JSON.
    - Builds prompts from `resources/prompts.json`.
    - Calls an OpenRouter-compatible chat completion API.
    - Writes method summaries JSON.
+3. **Evaluation stage** (`evaluate_sumslice_summaries.py` + `rank_sumslice_summaries.py`, Python)
+   - Scores generated summaries against ground truth (BERTScore + TF-IDF cosine) and produces violin plots.
+   - Runs a rubric-based LLM judge that ranks the models across quality criteria.
 
 ## Project Structure
 
@@ -22,12 +25,18 @@ It runs in two stages:
   - `MethodFeatureExtractor.java`: Static analysis entry point.
   - `LlmSummaryGenerator.java`: LLM summarization entry point.
   - `MethodInfo.java`, `SwumRecord.java`, `JsonWriter.java`: supporting model/output classes.
-- `input/corpus/`: Input Java corpora.
+- `bin/`: Compiled `.class` files (created by the `javac -d bin` build step below).
+- `python/`
+  - `evaluate_sumslice_summaries.py`: Evaluation stage — BERTScore + cosine metrics vs ground truth, violin plots.
+  - `rank_sumslice_summaries.py`: Evaluation stage — rubric-based LLM ranking across quality criteria.
+- `input/corpus/`: Input Java corpora (used by Stage 1).
 - `input/ground-truth/`: Reference summaries for evaluation.
-- `resources/prompts.json`: System prompt + user prompt template.
-- `output/`: Generated artifacts.
+- `dataset/`: Raw source checkouts for the corpus projects (jEdit, jtopas, nanoxml, siena-master, jhotdraw60b1, jajuk-src-1.10.5) — predates `input/corpus/` and is not read by any current script; kept for provenance, safe to remove if not needed.
+- `output/`: Generated artifacts from Stages 1–2.
+- `evaluation_results/`: Generated artifacts from Stage 3 (CSVs, `rubric_results.json`, `violin_scores.png`).
 - `.env`: API configuration (required for LLM stage).
-- `bin/`: Compiled `.class` files.
+
+`resources/prompts.json` lives at the **repo root** (`../resources/prompts.json` relative to `SUMSLICE_LLM/`), shared with DPS_LLM and PR_LLM — it is not a `SUMSLICE_LLM` subdirectory, despite the relative paths used in the commands below.
 
 ## Prerequisites
 
@@ -99,9 +108,9 @@ Repeat for each project folder under `input/corpus/` (`jajuk`, `jEdit`, `jhotdra
 java -cp "bin:../ORIGINAL_SUMSLICE/SumsliceXMLGenerator/lib/*" LlmSummaryGenerator \
   output/corpus/nanoxml/nanoxml-methods.json \
   output/corpus/nanoxml/nanoxml-qwen-summaries.json \
-  .env \
+  ../.env \
   -1 \
-  resources/prompts.json \
+  ../resources/prompts.json \
   QWEN \
   input/ground-truth/nanoXML-example-summaries.json
 ```
@@ -122,7 +131,7 @@ Swap the model key (and output filename) to run a different model, e.g. `GPT`, `
 java -cp "bin:../ORIGINAL_SUMSLICE/SumsliceXMLGenerator/lib/*" LlmSummaryGenerator \
   output/corpus/nanoxml/nanoxml-methods.json \
   output/corpus/nanoxml/nanoxml-gpt-summaries.json \
-  .env -1 resources/prompts.json GPT \
+  ../.env -1 ../resources/prompts.json GPT \
   input/ground-truth/nanoXML-example-summaries.json
 ```
 
@@ -132,15 +141,15 @@ This loops every project under `output/corpus/`, auto-matches each project's gro
 
 ```bash
 java -cp "bin:../ORIGINAL_SUMSLICE/SumsliceXMLGenerator/lib/*" LlmSummaryGenerator \
-  ALL QWEN output/corpus .env -1 resources/prompts.json input/ground-truth
+  ALL QWEN output/corpus ../.env -1 ../resources/prompts.json input/ground-truth
 ```
 
 Run again with a different model key to generate the other sets:
 
 ```bash
-java -cp "bin:../ORIGINAL_SUMSLICE/SumsliceXMLGenerator/lib/*" LlmSummaryGenerator ALL GPT    output/corpus .env -1 resources/prompts.json input/ground-truth
-java -cp "bin:../ORIGINAL_SUMSLICE/SumsliceXMLGenerator/lib/*" LlmSummaryGenerator ALL CLAUDE output/corpus .env -1 resources/prompts.json input/ground-truth
-java -cp "bin:../ORIGINAL_SUMSLICE/SumsliceXMLGenerator/lib/*" LlmSummaryGenerator ALL MISTRAL output/corpus .env -1 resources/prompts.json input/ground-truth
+java -cp "bin:../ORIGINAL_SUMSLICE/SumsliceXMLGenerator/lib/*" LlmSummaryGenerator ALL GPT    output/corpus ../.env -1 ../resources/prompts.json input/ground-truth
+java -cp "bin:../ORIGINAL_SUMSLICE/SumsliceXMLGenerator/lib/*" LlmSummaryGenerator ALL CLAUDE output/corpus ../.env -1 ../resources/prompts.json input/ground-truth
+java -cp "bin:../ORIGINAL_SUMSLICE/SumsliceXMLGenerator/lib/*" LlmSummaryGenerator ALL MISTRAL output/corpus ../.env -1 ../resources/prompts.json input/ground-truth
 ```
 
 Arguments for `ALL` mode:
@@ -148,10 +157,45 @@ Arguments for `ALL` mode:
 1. Literal `ALL`.
 2. Model key (required) — `QWEN`, `GPT`, `CLAUDE`, or `MISTRAL`.
 3. Directory containing one subfolder per project, each with a `*-methods.json` file (default: `output/all`).
-4. `.env` path (default: `.env`).
+4. `.env` path (default: `../.env`, i.e. repo root).
 5. Max methods per project (default: `-1`, all).
-6. Prompt config JSON path (default: `resources/prompts.json`).
+6. Prompt config JSON path (default: `../resources/prompts.json`, i.e. repo root).
 7. Ground-truth directory (default: `input/ground-truth`) — files are matched to project folders by name prefix.
+
+## Run Stage 3: Evaluation (Python)
+
+Run from the `SUMSLICE_LLM` directory with a Python environment that has `pandas`, `bert-score`, `scikit-learn`, `matplotlib`, `python-dotenv`, and `requests` installed (see DPS_LLM/PR_LLM for equivalent dependency lists — this project has no separate `requirements.txt` of its own).
+
+### Step 1 — Metrics (BERTScore + cosine) and violin plots
+
+```bash
+python python/evaluate_sumslice_summaries.py
+```
+
+Reads `output/SUMSLICE_{MODEL}_SUMMARY.json` for each model and the ground-truth files under `input/ground-truth/`, and writes to `evaluation_results/`:
+- `{model}_vs_gt_method_scores.csv` — per-method metric scores
+- `{model}_vs_gt_project_scores.csv` — aggregated by project
+- `overall_comparison.csv` — all models side by side
+- `evaluation_summary.txt`, `results.txt`
+- `violin_scores.png` — distribution plot
+
+Useful flags: `--output-dir`, `--gt-dir`, `--results-dir`, `--models CLAUDE GPT MISTRAL QWEN`, `--bertscore-lang`.
+
+> **Known gap**: `evaluate_sumslice_summaries.py` expects one flat, all-projects file per model directly under `output/` (`output/SUMSLICE_{MODEL}_SUMMARY.json`, with a top-level `summaries` list spanning every project). The `ALL`-mode `LlmSummaryGenerator` command documented above writes **per-project** files under `output/corpus/<project>/<project>-<model>-summaries.json` instead. There is currently no script in this repo that merges the per-project outputs into the flat file Stage 3 expects — the `output/SUMSLICE_*_SUMMARY.json` files present in this repo were produced by a step not captured here. If you're re-running the pipeline from scratch, you'll need to merge the per-project `summaries` arrays yourself (or write a small aggregation script) before running Stage 3.
+
+### Step 2 — Rubric-based LLM ranking
+
+Run **after** Step 1. Requires at least two model summary files and an OpenRouter-compatible judge configured in `.env` (see Configuration above).
+
+```bash
+python python/rank_sumslice_summaries.py
+```
+
+Loads ranking criteria from `../resources/prompts.json` (`sumslice_llm.sumslice-llm.summary_ranking`), ranks all available models against ground truth, and writes `evaluation_results/rubric_results.json`.
+
+Quick smoke-test: `python python/rank_sumslice_summaries.py --limit 5`
+
+---
 
 ## End-to-End Example (bash)
 
@@ -162,7 +206,7 @@ java -cp "bin:../ORIGINAL_SUMSLICE/SumsliceXMLGenerator/lib/*" MethodFeatureExtr
 java -cp "bin:../ORIGINAL_SUMSLICE/SumsliceXMLGenerator/lib/*" LlmSummaryGenerator \
   output/corpus/nanoxml/nanoxml-methods.json \
   output/corpus/nanoxml/nanoxml-qwen-summaries.json \
-  .env -1 resources/prompts.json QWEN \
+  ../.env -1 ../resources/prompts.json QWEN \
   input/ground-truth/nanoXML-example-summaries.json
 ```
 
@@ -180,9 +224,9 @@ java -cp "bin;..\ORIGINAL_SUMSLICE\SumsliceXMLGenerator\lib\*" MethodFeatureExtr
 - `LlmSummaryGenerator` (single-project mode) defaults to:
   - `output/nanoxml-methods.json`
   - `output/nanoxml-method-summaries.json`
-  - `.env`
+  - `../.env` (repo root)
   - max methods `-1`
-  - `resources/prompts.json`
+  - `../resources/prompts.json` (repo root)
   - **model key has no default — it is required as the 6th argument**, or the command throws `Model key required as 6th argument. Example: MISTRAL, GPT, CLAUDE, QWEN`.
 
 ## Output Schema (High Level)
