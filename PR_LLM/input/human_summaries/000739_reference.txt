@@ -1,0 +1,2 @@
+simplify the code and make search operation to perform faster .
+also , fixed a bug in the folders sorting algorithm .

@@ -1,0 +1,5 @@
+viewmessagebodywriter : : detectlocale will now catch
+` headervalueexception ` s thrown when retrieving the languages from the
+headers and return a ` 0 - bad request ` to clients instead of a server
+error .
+not my decision in the end though , i can change this to use the default locale if you guys prefer this .

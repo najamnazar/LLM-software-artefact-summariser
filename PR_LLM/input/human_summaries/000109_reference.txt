@@ -1,0 +1,2 @@
+- increase timeout as doi resolution often fails from ` 0 ` to ` 0 `
+- return doi page if it directly redirects to a pdf ( good guess that it is the fulltext then )

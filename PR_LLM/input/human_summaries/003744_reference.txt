@@ -1,0 +1,3 @@
+the plugins were inherited but also recreated .
+this was inefficient but also could cause duplication of equals was not properly implemented .
+no inherit the object references from the parent and only create plugins for the local level .

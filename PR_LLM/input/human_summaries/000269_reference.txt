@@ -1,0 +1,1 @@
+fix api storage key path endpoints from allowing blank path

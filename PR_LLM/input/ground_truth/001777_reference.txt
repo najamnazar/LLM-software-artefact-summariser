@@ -1,8 +1,0 @@
-- artifact and package names changed
-- dropped the mustache template and generate document from json with groovy
-- fixed doc issues here and there
-- removed annotations from jax-rs version module ( not used )
-the doc is in better shape now :
-- no broken links
-- better representation of arrays and allowable values
-- new format column

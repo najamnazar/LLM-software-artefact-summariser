@@ -1,0 +1,1 @@
+documentation and catch nulls before exception is thrown .

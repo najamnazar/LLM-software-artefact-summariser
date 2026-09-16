@@ -1,0 +1,1 @@
+extract combo box common parts to be able to reuse it in combo boxes that should not allow store related configurations .

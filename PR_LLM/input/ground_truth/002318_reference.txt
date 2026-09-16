@@ -1,7 +1,0 @@
-related to gclocker
-motivation :
-getprimitivearraycritical ( ... ) may cause multiple not-fixed bugs related to the gclocker while there is little gain for our use-case .
-we should just use getbytearrayregion ( ... ) and copy into a small on-stack buffer .
-see also :
-modifications :
-replace getprimitivearraycritical ( ... ) with getbytearrayregion ( ... )

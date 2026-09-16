@@ -1,0 +1,1 @@
+also remove bridge network and set dns name correctly .

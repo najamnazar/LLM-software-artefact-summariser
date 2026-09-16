@@ -1,6 +1,0 @@
-- nginx : make methods/fields protected so can be sub-classed
-( in groovy , even if not overriding the method it still needs to
-be non-private sometimes so that it can be called from other methods
-of the superclass ! )
-- javawebappsoftwareprocess : log exception on deploy/undeploy
-- autoscalerpolicy : adds setters for config

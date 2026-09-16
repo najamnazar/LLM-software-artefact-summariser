@@ -1,0 +1,1 @@
+set plugin versions compatible with tools.jar has gone in java9 .

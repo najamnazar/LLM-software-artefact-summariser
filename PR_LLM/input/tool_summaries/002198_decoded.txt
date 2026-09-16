@@ -1,0 +1,2 @@
+agrega un nuevo mensaje sin unidades .
+selectunitsview : no permite enviar un game si no hay al menos una unidad en el campo .

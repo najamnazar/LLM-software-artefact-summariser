@@ -1,0 +1,3 @@
+trimdistribution ( ) in theoreticalsensitivity an off by one bug that can cause tools that use theoreticalsensitivity to crash .
+this bug-fix resolve this .
+-- --

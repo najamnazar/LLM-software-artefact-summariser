@@ -1,0 +1,2 @@
+with path_prefix in the proper way of the file system in localfileinputplugin
+before this fix , it matched case-sensitively even on windows , for example .

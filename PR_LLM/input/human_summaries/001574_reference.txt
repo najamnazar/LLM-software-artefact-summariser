@@ -1,0 +1,8 @@
+build 0
+it should in my opinion howerver merged an the various problems should be fixed .
+e.g .
+- atc-code refer missing files
+- several tests eg .
+loinc_test prompt the user to save resource patient-detail/konsultation , therefore never returning
+- arzttarife tests work now , but asks for elexis to restart
+todo on my side : externe_dokumente fails various tests .

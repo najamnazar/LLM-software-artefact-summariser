@@ -1,0 +1,4 @@
+* move bulk import clientimpl code to its own bulk package
+* pull some fate logic out of bulkimport
+* made the loadmappingiterator its own class and push some of the reader logic into it
+* added comments to bulkserialize annotations for readability .

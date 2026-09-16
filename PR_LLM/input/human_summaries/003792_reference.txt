@@ -1,0 +1,1 @@
+fixing appveyor script since appveyor environment changed and gem update was not working

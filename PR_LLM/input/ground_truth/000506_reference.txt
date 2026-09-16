@@ -1,4 +1,0 @@
-this appears never to have been properly implemented or used .
-all widget subclasses except tablewidget returned null .
-tablewidget implementation was also buggy due to searching for primaryidentifier rather than primaryidentifier .
-method getelementinlist ( ) also made no sense since it had no element parameter and returned a list , not a bool or similar .

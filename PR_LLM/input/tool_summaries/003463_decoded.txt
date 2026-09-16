@@ -1,0 +1,3 @@
+this test is run by ` go test ` .
+and also add test and testing utils .
+this assert library is almost same functionality for java assert .

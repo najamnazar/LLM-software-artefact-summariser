@@ -1,0 +1,6 @@
+- new icon
+- pat realtime tracker
+for incoming commits :
+- planning to use a relativelayout to make a list layout :
+- startside : description of route
+- end : route number with a box for the color

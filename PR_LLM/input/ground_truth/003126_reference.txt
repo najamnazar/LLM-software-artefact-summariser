@@ -1,2 +1,0 @@
-when the cover has been downloaded the resulting cover is displayed only if it matches the tag set in the album cover view
-it is useful for the nowplaying fragment which displayed the last downloaded cover even if it was a previous played song

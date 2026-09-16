@@ -5,7 +5,9 @@ Claude, Mistral) via the OpenRouter API.
 
 Workflow
 --------
-1. Load commit records from a JSONL / CSV dataset.
+1. Load commit records (articles) from a JSONL / CSV dataset in input/dataset/.
+   Gold descriptions are read from input/human_summaries/ and every record is
+   keyed by the canonical 6-digit ``pr_id``.
 2. For each record, call every configured LLM to produce a PR description.
 3. Persist per-sample results to one JSONL file per model (summary text only).
 
@@ -13,9 +15,17 @@ Metric scoring (BERTScore + TF-IDF cosine similarity) is handled by the
 companion script evaluate_pr_summaries.py. Rubric-based LLM ranking is
 handled by rank_pr_summaries.py.
 
-Model identifiers are driven exclusively by the .env file
-(GPT_MODEL, QWEN_MODEL, CLAUDE_MODEL, MISTRAL_MODEL) so that no versions
-need to be hardcoded in source.
+Configuration is external to this file:
+
+* Prompts come from ``resources/prompts.json`` — ``pr_llm.system_prompt`` for
+  the system message and ``pr_llm.user_prompt_template.sections`` for the
+  per-sample user message.
+* Model identifiers come from ``.env`` (GPT_MODEL, QWEN_MODEL, CLAUDE_MODEL,
+  MISTRAL_MODEL), as do the endpoint (OPENROUTER_API_URL or
+  OPENROUTER_BASE_URL), OPENROUTER_TEMPERATURE, OPENROUTER_MAX_COMPLETION_TOKENS
+  and OPENROUTER_TIMEOUT.
+
+So neither a model version nor any prompt wording is hardcoded in source.
 
 :author: Najam Nazar
 :version: 1.0.0
@@ -45,6 +55,8 @@ import openai
 from dotenv import load_dotenv
 from openai import OpenAI
 
+import pr_corpus
+
 # Load .env once at module import time so all classes share the same
 # environment state without each needing to call load_dotenv() individually.
 load_dotenv(Path(__file__).resolve().parent.parent.parent / ".env")
@@ -72,6 +84,8 @@ class SummarySample:
 
     Attributes
     ----------
+    pr_id:             Canonical zero-padded corpus id (e.g. ``003485``). This is
+                       the key every downstream script joins on.
     rank:              Curated ranking position in the selected dataset.
     dataset_index:     Original row index in the full upstream dataset.
     identifier:        Unique string ID (e.g. commit SHA or PR number).
@@ -81,6 +95,7 @@ class SummarySample:
                        evaluation.
     """
 
+    pr_id: str
     rank: int
     dataset_index: int
     identifier: str
@@ -93,10 +108,17 @@ class CommitDatasetLoader:
 
     Supports both JSONL and CSV formats.  Each row is normalised into a
     :class:`SummarySample` so downstream code is format-agnostic.
+
+    The gold description is taken from ``input/human_summaries/`` — the same
+    source the evaluation and ranking scripts read — rather than from a column
+    inside the dataset file, so every stage of the pipeline compares against
+    one authoritative reference. A dataset row whose ``pr_id`` has no human
+    summary falls back to the row's own ``abstract`` column.
     """
 
-    def __init__(self, dataset_path: Path) -> None:
+    def __init__(self, dataset_path: Path, human_summaries: Optional[Dict[str, str]] = None) -> None:
         self.dataset_path = dataset_path
+        self.human_summaries = human_summaries or {}
 
     def load(self, limit: Optional[int] = None) -> List[SummarySample]:
         """Read the dataset and return a list of :class:`SummarySample` objects.
@@ -123,16 +145,21 @@ class CommitDatasetLoader:
         else:
             raise ValueError("Dataset must be .jsonl or .csv")
 
-        samples: List[SummarySample] = [
-            SummarySample(
-                rank=int(row.get("rank", 0)),
-                dataset_index=int(row.get("dataset_index", -1)),
-                identifier=str(row.get("id", "")),
-                article=str(row.get("article", "")),
-                reference_summary=str(row.get("abstract", "")),
+        samples: List[SummarySample] = []
+        for row in rows:
+            pr_id = pr_corpus.record_pr_id(row) or ""
+            samples.append(
+                SummarySample(
+                    pr_id=pr_id,
+                    rank=int(row.get("rank", 0) or 0),
+                    dataset_index=int(row.get("dataset_index", -1) or -1),
+                    identifier=str(row.get("id", "")),
+                    article=str(row.get("article", "")),
+                    reference_summary=self.human_summaries.get(
+                        pr_id, str(row.get("abstract", ""))
+                    ),
+                )
             )
-            for row in rows
-        ]
         return samples
 
     def _load_jsonl(self, limit: Optional[int]) -> List[dict]:
@@ -158,30 +185,85 @@ class CommitDatasetLoader:
         return rows
 
 
-class SystemPromptLoader:
-    """Read the system prompt from ``<repo root>/resources/prompts.json``."""
+class PromptLoader:
+    """Read the PR-LLM prompts from ``<repo root>/resources/prompts.json``.
+
+    Both halves of every request live under the ``pr_llm`` namespace: the
+    ``system_prompt`` that sets the summariser's role, and the
+    ``user_prompt_template.sections`` that are rendered per sample. Loading both
+    from the same file means the wording of every LLM call in the pipeline is
+    edited in one place, alongside the ``pr_ranking`` prompts the judge uses.
+
+    .. note::
+       Previously only ``system_prompt`` was read here and the user prompt was
+       duplicated as a hardcoded f-string in
+       :meth:`PullRequestSummarizer._build_user_prompt`, so edits to
+       ``user_prompt_template`` in the JSON had no effect on what the models
+       received. The template is now the single source of truth.
+    """
 
     def __init__(self, prompt_path: Path) -> None:
         self.prompt_path = prompt_path
+        # Parsed lazily and cached: both loaders read the same file.
+        self._payload: Optional[dict] = None
 
-    def load(self) -> str:
-        """Read and return the system prompt string.
+    def _pr_llm(self) -> dict:
+        """Return the ``pr_llm`` section, reading the file on first use.
 
         Raises
         ------
         FileNotFoundError:
             If the JSON file does not exist at :attr:`prompt_path`.
         ValueError:
+            If the file has no ``"pr_llm"`` namespace.
+        """
+        if self._payload is None:
+            if not self.prompt_path.exists():
+                raise FileNotFoundError(f"Prompt file missing: {self.prompt_path}")
+            with self.prompt_path.open(encoding="utf-8") as handle:
+                self._payload = json.load(handle)
+        section = self._payload.get("pr_llm")
+        if not isinstance(section, dict):
+            raise ValueError(f"{self.prompt_path} has no 'pr_llm' section")
+        return section
+
+    def load_system_prompt(self) -> str:
+        """Read and return the system prompt string.
+
+        Raises
+        ------
+        ValueError:
             If the ``"system_prompt"`` field is missing or blank.
         """
-        if not self.prompt_path.exists():
-            raise FileNotFoundError(f"System prompt file missing: {self.prompt_path}")
-        with self.prompt_path.open(encoding="utf-8") as handle:
-            payload = json.load(handle)
-        prompt = payload.get("pr_llm", {}).get("system_prompt", "").strip()
+        prompt = self._pr_llm().get("system_prompt", "").strip()
         if not prompt:
             raise ValueError("system_prompt is empty in the provided prompt file")
         return prompt
+
+    def load_user_sections(self) -> List[str]:
+        """Return the user-prompt sections from ``pr_llm.user_prompt_template``.
+
+        Each section is a format string over the :class:`SummarySample` fields
+        (``{rank}``, ``{dataset_index}``, ``{identifier}``, ``{article}``);
+        :meth:`PullRequestSummarizer._build_user_prompt` joins them with
+        newlines to form the user message.
+
+        Raises
+        ------
+        ValueError:
+            If ``user_prompt_template.sections`` is absent, empty, or holds
+            anything other than strings.
+        """
+        template = self._pr_llm().get("user_prompt_template")
+        sections = template.get("sections") if isinstance(template, dict) else None
+        if not isinstance(sections, list) or not sections:
+            raise ValueError(
+                f"{self.prompt_path} is missing 'pr_llm.user_prompt_template.sections' "
+                "(expected a non-empty list of format strings)"
+            )
+        if not all(isinstance(section, str) for section in sections):
+            raise ValueError("Every entry of user_prompt_template.sections must be a string")
+        return sections
 
 
 class OpenRouterLLMClient:
@@ -191,16 +273,44 @@ class OpenRouterLLMClient:
     model available on OpenRouter can be addressed with a single client.
     """
 
+    # Endpoint path the OpenAI SDK appends itself; stripped from OPENROUTER_API_URL
+    # so either form of the variable works.
+    _CHAT_COMPLETIONS_PATH = "/chat/completions"
+    _DEFAULT_BASE_URL = "https://openrouter.ai/api/v1"
+
+    @classmethod
+    def _resolve_base_url(cls) -> str:
+        """Resolve the API base URL from ``.env``.
+
+        Accepts either ``OPENROUTER_BASE_URL`` (already a base, e.g.
+        ``https://openrouter.ai/api/v1``) or ``OPENROUTER_API_URL`` (the full
+        endpoint ``.../v1/chat/completions``, which is what this repo's ``.env``
+        defines). The OpenAI SDK appends ``/chat/completions`` itself, so that
+        suffix is trimmed rather than passed through — previously only
+        ``OPENROUTER_BASE_URL`` was read, so the configured value was ignored
+        and the hardcoded default always won.
+        """
+        url = (os.getenv("OPENROUTER_BASE_URL") or os.getenv("OPENROUTER_API_URL") or "").strip()
+        if not url:
+            return cls._DEFAULT_BASE_URL
+        url = url.rstrip("/")
+        if url.endswith(cls._CHAT_COMPLETIONS_PATH):
+            url = url[: -len(cls._CHAT_COMPLETIONS_PATH)]
+        return url
+
     def __init__(
         self,
         api_key: Optional[str] = None,
         base_url: Optional[str] = None,
-        request_timeout: int = 120,
+        request_timeout: Optional[int] = None,
     ) -> None:
         self.api_key = api_key or os.getenv("OPENROUTER_API_KEY")
         if not self.api_key:
             raise EnvironmentError("OPENROUTER_API_KEY is required but was not found.")
-        self.base_url = base_url or os.getenv("OPENROUTER_BASE_URL", "https://openrouter.ai/api/v1")
+        self.base_url = base_url or self._resolve_base_url()
+        # Request timeout is configurable via .env (OPENROUTER_TIMEOUT), 120s default.
+        if request_timeout is None:
+            request_timeout = int(os.getenv("OPENROUTER_TIMEOUT", "120"))
 
         default_headers = {}
         referer = os.getenv("OPENROUTER_HTTP_REFERER")
@@ -224,8 +334,21 @@ class OpenRouterLLMClient:
         user_prompt: str,
         temperature: float = 0.3,
         max_tokens: int = 256,
+        disable_reasoning: bool = False,
     ) -> str:
-        """Send a chat-completion request and return the generated text."""
+        """Send a chat-completion request and return the generated text.
+
+        Parameters
+        ----------
+        disable_reasoning:
+            Suppress a hybrid reasoning model's internal chain of thought via
+            OpenRouter's ``reasoning`` field. See
+            :attr:`PullRequestSummarizer.NO_REASONING_LABELS` for why this is
+            needed for Qwen.
+        """
+        # OpenRouter-specific request field, passed through by the OpenAI SDK.
+        extra_body = {"reasoning": {"enabled": False}} if disable_reasoning else None
+
         response = self.client.chat.completions.create(
             model=model,
             messages=[
@@ -234,6 +357,7 @@ class OpenRouterLLMClient:
             ],
             temperature=temperature,
             max_tokens=max_tokens,
+            extra_body=extra_body,
         )
         content = response.choices[0].message.content
         if content is None:
@@ -244,16 +368,39 @@ class OpenRouterLLMClient:
 class PullRequestSummarizer:
     """Generate PR-description summaries for each sample using multiple LLMs."""
 
+    # Models whose internal chain of thought must be switched off.
+    #
+    # Every current-generation Qwen on OpenRouter (3.5 through 3.8, including
+    # qwen3.7-plus) is a hybrid reasoning model that thinks before answering.
+    # Under this pipeline's token budget it spent the whole allowance on that
+    # chain of thought and hit finish_reason='length' before emitting any
+    # answer, so the API returned content=None on every item:
+    #
+    #     completion_tokens: 512, reasoning_tokens: 512, content: None
+    #
+    # Two other fixes were rejected as worse for the study. Raising
+    # max_tokens only for Qwen would give it extended reasoning the other three
+    # models do not get, confounding the comparison the ranking and Friedman
+    # tests are built on; and the only non-reasoning Qwen models on OpenRouter
+    # are a generation behind GPT-5.4-mini, Claude Sonnet 4.6 and
+    # Mistral Small 2603. Disabling reasoning keeps qwen3.7-plus in the lineup
+    # and has all four models answer directly under the same budget.
+    NO_REASONING_LABELS = frozenset({"PR_QWEN_SUMMARY"})
+
     def __init__(
         self,
         client: OpenRouterLLMClient,
         system_prompt: str,
+        user_sections: List[str],
         model_map: Optional[Dict[str, str]] = None,
         temperature: float = 0.0,
         max_tokens: int = 256,
     ) -> None:
         self.client = client
         self.system_prompt = system_prompt
+        # Format strings from prompts.json (pr_llm.user_prompt_template.sections),
+        # rendered per sample by _build_user_prompt().
+        self.user_sections = user_sections
         self.temperature = temperature
         self.max_tokens = max_tokens
         self.model_map = model_map or self._default_models()
@@ -269,14 +416,33 @@ class PullRequestSummarizer:
         }
 
     def _build_user_prompt(self, sample: SummarySample) -> str:
-        return (
-            f"Rank: {sample.rank}\n"
-            f"Dataset Index: {sample.dataset_index}\n"
-            f"Identifier: {sample.identifier}\n"
-            "Commit messages and code comments:\n"
-            f"{sample.article}\n\n"
-            "Produce a concise pull request description based only on the content above."
-        )
+        """Render the user message for *sample* from the prompts.json template.
+
+        The sections are filled from the sample's fields and joined with
+        newlines. Substituted values are not re-scanned for placeholders, so an
+        article containing literal braces is safe.
+
+        Raises
+        ------
+        ValueError:
+            If a section references a field the sample does not provide — a
+            typo in prompts.json is reported by name rather than surfacing as a
+            bare ``KeyError`` mid-run.
+        """
+        fields = {
+            "rank": sample.rank,
+            "dataset_index": sample.dataset_index,
+            "identifier": sample.identifier,
+            "article": sample.article,
+            "pr_id": sample.pr_id,
+        }
+        try:
+            return "\n".join(section.format(**fields) for section in self.user_sections)
+        except KeyError as exc:
+            raise ValueError(
+                f"Unknown placeholder {exc} in pr_llm.user_prompt_template.sections; "
+                f"available fields: {', '.join(sorted(fields))}"
+            ) from exc
 
     def summarize(self, sample: SummarySample) -> Dict[str, str]:
         """Run all configured models against one sample and return their outputs."""
@@ -291,6 +457,8 @@ class PullRequestSummarizer:
                     user_prompt=user_prompt,
                     temperature=self.temperature,
                     max_tokens=self.max_tokens,
+                    # Qwen only — see NO_REASONING_LABELS above.
+                    disable_reasoning=label in self.NO_REASONING_LABELS,
                 )
             except openai.RateLimitError as exc:
                 _log.error("[%s] Rate limit exceeded: %s", label, exc)
@@ -357,11 +525,12 @@ class SummarizationPipeline:
 
         print(f"[Generating] {total} samples...", flush=True)
         for idx, sample in enumerate(samples, start=1):
-            print(f"[{idx}/{total}] id={sample.identifier}  rank={sample.rank}", flush=True)
+            print(f"[{idx}/{total}] pr_id={sample.pr_id}  id={sample.identifier}", flush=True)
             try:
                 generated = self.summarizer.summarize(sample)
                 for label, summary_text in generated.items():
                     self.writers[label].append({
+                        "pr_id": sample.pr_id,
                         "rank": sample.rank,
                         "dataset_index": sample.dataset_index,
                         "id": sample.identifier,
@@ -385,6 +554,34 @@ _MODEL_ALIASES: Dict[str, str] = {
 }
 
 
+def discover_dataset() -> Path:
+    """Locate the article dataset inside ``PR_LLM/input/dataset/``.
+
+    The corpus ships the human and tool summaries as plain text directories but
+    keeps the PR articles (commit messages and code comments) in a single
+    ``.jsonl`` or ``.csv`` file. Prefer JSONL when both are present.
+
+    Raises
+    ------
+    FileNotFoundError:
+        If no dataset file is present, with the expected location spelled out
+        so the pipeline fails with a clear instruction rather than an empty run.
+    """
+    candidates = sorted(pr_corpus.DATASET_DIR.glob("*.jsonl")) + sorted(
+        pr_corpus.DATASET_DIR.glob("*.csv")
+    )
+    if not candidates:
+        raise FileNotFoundError(
+            f"No article dataset found in {pr_corpus.DATASET_DIR}.\n"
+            "The summariser needs the PR articles (commit messages and code "
+            "comments) for the corpus in input/human_summaries/. Place a "
+            ".jsonl or .csv there with an 'article' column plus a 'ref_file', "
+            "'pr_id' or 'dataset_index' column that matches the 6-digit ids, "
+            "or pass --dataset explicitly."
+        )
+    return candidates[0]
+
+
 def build_default_pipeline(
     dataset_path: Optional[Path] = None,
     output_path: Optional[Path] = None,
@@ -399,7 +596,7 @@ def build_default_pipeline(
     ----------
     dataset_path:
         Path to the ``.jsonl`` or ``.csv`` commit dataset.
-        Default: ``<PR_LLM>/input/dataset/selected_commits.jsonl``.
+        Default: the first file discovered in ``<PR_LLM>/input/dataset/``.
     output_path:
         Directory where per-model JSONL summary files are written.
         Default: ``<PR_LLM>/output/``.
@@ -427,13 +624,17 @@ def build_default_pipeline(
     if max_tokens is None:
         max_tokens = int(os.getenv("OPENROUTER_MAX_COMPLETION_TOKENS", "512"))
 
-    pr_llm_root = Path(__file__).resolve().parent.parent  # PR_LLM/
-    repo_root = pr_llm_root.parent
-    dataset = dataset_path or (pr_llm_root / "input" / "dataset" / "selected_commits.jsonl")
-    base_output_dir = output_path or (pr_llm_root / "output")
+    pr_llm_root = pr_corpus.PR_LLM_ROOT
+    repo_root = pr_corpus.REPO_ROOT
+    dataset = dataset_path or discover_dataset()
+    base_output_dir = output_path or pr_corpus.OUTPUT_DIR
     prompt_file = prompt_path or (repo_root / "resources" / "prompts.json")
 
-    prompt_text = SystemPromptLoader(prompt_file).load()
+    # Both the system prompt and the per-sample user template come from
+    # prompts.json; nothing about the request wording is hardcoded here.
+    prompts = PromptLoader(prompt_file)
+    prompt_text = prompts.load_system_prompt()
+    user_sections = prompts.load_user_sections()
     client = OpenRouterLLMClient()
 
     # Resolve which models to run.
@@ -470,14 +671,26 @@ def build_default_pipeline(
     print(flush=True)
 
     summarizer = PullRequestSummarizer(
-        client, prompt_text, model_map=filtered_map,
+        client, prompt_text, user_sections, model_map=filtered_map,
         temperature=temperature, max_tokens=max_tokens,
     )
     writers = {
         label: ResultWriter(base_output_dir / f"{label}.jsonl")
         for label in summarizer.model_map.keys()
     }
-    loader = CommitDatasetLoader(dataset)
+    # Gold descriptions come from input/human_summaries/ when present so the
+    # summariser, evaluator and ranker all quote the same reference text.
+    try:
+        human_summaries = pr_corpus.load_human_summaries()
+        print(f"[Corpus] {len(human_summaries)} human summaries loaded from "
+              f"{pr_corpus.HUMAN_DIR}", flush=True)
+    except FileNotFoundError as exc:
+        print(f"[Corpus] {exc}\n         Falling back to the dataset's own "
+              f"'abstract' column for references.", flush=True)
+        human_summaries = {}
+
+    print(f"[Corpus] Article dataset: {dataset}", flush=True)
+    loader = CommitDatasetLoader(dataset, human_summaries)
     return SummarizationPipeline(loader, summarizer, writers)
 
 

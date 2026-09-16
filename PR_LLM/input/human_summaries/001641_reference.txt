@@ -1,0 +1,5 @@
+cleaned up old logo stuff from mapleapplication and moved it to the ad manager .
+implemented json parsing of company data for company names and logo urls .
+switched system to actually display company logos from website .
+right now the website has no logos uploaded so nothing shows up in the app .
+therefore it 's not completely tested ( but should work ... )

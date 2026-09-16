@@ -1,6 +1,0 @@
-this avoids a race condition in viewpager .
-note that
-this still looks a bit janky because the pager noticeably scrolls
-away and back to the right view .
-a bug has been filed with the
-support library team to look into a better solution .

@@ -1,8 +1,0 @@
-prior to this change , deregistering a host would fail if it had a job
-' deployed ' to it that lacked a corresponding node in the
-/status/hosts/ &lt; host &gt; /jobs tree .
-one easy way to force this particular state is to :
-- kill a host ( i.e .
-make it report as down )
-- deploy a job to the now dead host
-- de-register the host

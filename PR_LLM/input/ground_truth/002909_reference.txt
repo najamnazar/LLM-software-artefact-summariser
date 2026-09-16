@@ -1,7 +1,0 @@
-ional test
-- test hanging with cbl-views.js functional test
-- router unable to route request to do_get_designdocument ( forestdb )
-- async queries sometimes failed with router unable to route request to do_get_designdocumentcom.couchbase.lite.couchbaseliteexception : getviewid ( ) &lt; 0 , status : 0
-changes :
-- database.java : make sure obtaining view instance thread-safe
-- router.java : make sure querydesigndoc ( ) thread-safe

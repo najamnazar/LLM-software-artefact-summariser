@@ -1,0 +1,4 @@
+i added a render test for the modal component .
+the wicket : fragment has been changed to wicket : component .
+i ensured my test was valid by changing the html back to wicket : fragment and i got the same stack trace i was getting in version .
+thanks i think you can close this one .

@@ -1,0 +1,9 @@
+* is this a blocking issue or new feature if yes , qe needs to +1 this pr
+* are method-/class-/variable-names meaningful
+* are methods concise , not too long
+* are catch blocks catching precise exceptions only ( no catch all )
+* are there unit-tests
+* are there integration tests ( or at least a jira to tackle these )
+* is the non-happy path working , too
+* are other parts that use the same component still working fine
+* does it work

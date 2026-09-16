@@ -1,6 +1,0 @@
-added some jvm -d flags to control the behavior of httpsession .
-specifically , added the following two flags :
-0 .
--dtds.http.conntimeout - set the timout ( in seconds ) for initial connection to a server
-0 .
--dtds.http.sotimeout - set the timeout ( in seconds ) for read requests on a socket

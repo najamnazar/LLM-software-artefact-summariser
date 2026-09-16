@@ -1,0 +1,2 @@
+as we migrated to the hbz/lobid repo the usage of
+the lobid/lodmill repo is deprecated .

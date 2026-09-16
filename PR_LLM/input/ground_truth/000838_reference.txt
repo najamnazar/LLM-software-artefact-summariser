@@ -1,6 +1,0 @@
-checkgrammarname assumes that all grammars come from actual files , but
-grammars loaded using tool.parsegrammarfromstring use input streams
-without source file names .
-this patch changes checkgrammarname to only verify
-that grammar names and file names correspond when a file name is
-available .

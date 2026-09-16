@@ -1,0 +1,7 @@
+my attempt to make the new code easier to follow and maintain .
+* move bulk import clientimpl code to its own bulk package
+* pull some fate logic out of bulkimport
+* made the loadmappingiterator its own class and push some of the reader logic into it
+* added comments to bulkserialize
+* removed some visibilefortesting annotations from concurrentkeyextentcache where its used in bulkimport
+* pulled some logic out of loadfiles.loadfiles and created some new methods for readability

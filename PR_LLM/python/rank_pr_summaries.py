@@ -3,8 +3,8 @@
 
 Rubric-based LLM ranking of PR summaries across 5 quality criteria.
 
-Evaluates GPT, QWEN, CLAUDE, and MISTRAL pull request summaries against
-reference summaries on 5 criteria:
+Ranks the deterministic tool baseline and every LLM against the human gold
+description on 5 criteria:
 
   1. Accuracy          - Does the description correctly represent the changes?
   2. Adequacy          - Does the description cover the main aspects of the change?
@@ -12,21 +12,36 @@ reference summaries on 5 criteria:
   4. Context Awareness - Does the description reflect relevant PR context (commits, rationale)?
   5. Clarity           - Is the description easy for reviewers to understand?
 
-Approach (mirrors rank_summaries.py for DPS):
-  - For each PR entry all 4 model summaries are ranked 1-4 per criterion against
-    the reference summary via the LLM judge.
-  - Points awarded: 1st=4, 2nd=3, 3rd=2, 4th=1.
-  - Per-model per-criterion and overall averages computed and merged into results.json.
+Approach (mirrors DPS_LLM's rank_summaries.py):
+  - The deterministic tool holds the first, fixed slot — the role NLG and SWUM
+    play in DPS_LLM — and the LLMs follow in a stable order.
+  - For each PR item every system's summary is ranked 1..n per criterion
+    against the human gold summary via the LLM judge.
+  - Points awarded: 1st = n points ... last = 1 point, so the scale adapts to
+    however many systems are present.
+  - Per-system per-criterion and overall averages are merged into results.json.
 
-Run this script after evaluate_pr_summaries.py has produced results.json.
+Run after evaluate_pr_summaries.py has produced results.json.
 
 Usage:
-    python rank_pr_summaries.py [--limit N]
+    python rank_pr_summaries.py [SYSTEM ...] [--limit N] [--fresh]
 
-    --limit N   Process only the first N entries (useful for testing).
+    SYSTEM      Subset to rank: TOOL, GPT, QWEN, CLAUDE, MISTRAL, or ALL.
+    --limit N   Process only the first N items (useful for testing).
+    --fresh     Ignore any existing checkpoint and re-rank from scratch.
+
+:author: Najam Nazar
+:version: 2.0.0
+:date: 2026-09-16
+:license: MIT
 """
 
 from __future__ import annotations
+
+__author__ = "Najam Nazar"
+__version__ = "2.0.0"
+__date__ = "2026-09-16"
+__license__ = "MIT"
 
 import argparse
 import json
@@ -35,63 +50,35 @@ import re
 import sys
 import time
 from pathlib import Path
-from typing import Optional
+from typing import Callable, Dict, List, Optional
 
 import requests
 from dotenv import load_dotenv
 
+import pr_corpus
+from pr_corpus import (
+    DISPLAY_NAMES,
+    OUTPUT_DIR,
+    RESULTS_DIR,
+    REPO_ROOT,
+    system_order,
+    write_jsonl,
+)
+
 # ---------------------------------------------------------------------------
 # Paths
 # ---------------------------------------------------------------------------
-PR_LLM_ROOT = Path(__file__).resolve().parent.parent  # PR_LLM/
-REPO_ROOT = PR_LLM_ROOT.parent
-OUTPUT_DIR = PR_LLM_ROOT / "output"
 RESULTS_JSON = OUTPUT_DIR / "results.json"
 CHECKPOINT_FILE = OUTPUT_DIR / "rubric_eval_checkpoint.json"
-PROMPTS_JSON = REPO_ROOT / "resources" / "prompts.json"
 
-# ---------------------------------------------------------------------------
-# Models
-# ---------------------------------------------------------------------------
-MODELS = [
-    "PR_GPT_SUMMARY",
-    "PR_QWEN_SUMMARY",
-    "PR_CLAUDE_SUMMARY",
-    "PR_MISTRAL_SUMMARY",
-]
-MODEL_LABELS = {
-    "PR_GPT_SUMMARY": "GPT",
-    "PR_QWEN_SUMMARY": "QWEN",
-    "PR_CLAUDE_SUMMARY": "CLAUDE",
-    "PR_MISTRAL_SUMMARY": "MISTRAL",
-}
-
-# ---------------------------------------------------------------------------
-# Evaluation criteria
-# ---------------------------------------------------------------------------
-# Criteria definitions moved to <repo root>/resources/prompts.json under "pr_llm.pr_ranking".
-# Loaded at runtime via load_ranking_prompts().
-# CRITERIA: dict[str, str] = {
-#     "accuracy": (
-#         "Accuracy: Does the description correctly represent the changes in the pull request?"
-#     ),
-#     "adequacy": (
-#         "Adequacy: Does the description cover the main aspects of the change?"
-#     ),
-#     "conciseness": (
-#         "Conciseness: Is the description brief while still conveying the essential information?"
-#     ),
-#     "context_awareness": (
-#         "Context Awareness: Does the description reflect relevant information from the PR "
-#         "context (e.g., commits, rationale)?"
-#     ),
-#     "clarity": (
-#         "Clarity: Is the description easy for reviewers to understand?"
-#     ),
-# }
-
-# Rank -> points mapping (4 models)
-POINTS_MAP: dict[int, int] = {1: 4, 2: 3, 3: 2, 4: 1}
+# Repair runs re-issue only the criterion calls that failed on an earlier pass.
+# Those failures are overwhelmingly truncations — the judge opened with an
+# analysis and ran out of budget before emitting its ranking — so retrying at
+# the same limit and temperature would reproduce the same truncated reply and
+# waste the call. The retry therefore gets a larger budget; paired with
+# parse_ranking_tail, the longer reply is read from its conclusion rather than
+# from its opening prose.
+REPAIR_TOKEN_MULTIPLIER = 6
 
 
 # ---------------------------------------------------------------------------
@@ -118,7 +105,7 @@ def load_env() -> tuple[str, str, str, int, float]:
     except ValueError:
         max_tokens = 100
 
-    # Ensure at least 100 tokens so the 4-item ranking output is never truncated.
+    # Ensure enough tokens that the n-item ranking output is never truncated.
     max_tokens = max(max_tokens, 100)
     temperature = float(os.getenv("OPENROUTER_TEMPERATURE", "0.0"))
     return api_key, api_url, model, max_tokens, temperature
@@ -160,78 +147,26 @@ def call_api(
 
 
 # ---------------------------------------------------------------------------
-# Data loading
-# ---------------------------------------------------------------------------
-
-def load_jsonl(path: Path) -> dict[int, dict]:
-    """Load a JSONL file and index entries by dataset_index."""
-    entries: dict[int, dict] = {}
-    with open(path, "r", encoding="utf-8") as fh:
-        for line in fh:
-            line = line.strip()
-            if not line:
-                continue
-            entry = json.loads(line)
-            entries[entry["dataset_index"]] = entry
-    return entries
-
-
-# ---------------------------------------------------------------------------
-# Prompt construction
-# ---------------------------------------------------------------------------
-
-# Replaced by load_ranking_prompts() + template.format() in evaluate_entry.
-# def build_ranking_prompt(
-#     criterion_desc: str,
-#     reference: str,
-#     summaries: list[str],
-# ) -> str:
-#     """Build a prompt asking the LLM to rank *len(summaries)* summaries."""
-#     n = len(summaries)
-#     summaries_block = "\n".join(f"{i + 1}. {s}" for i, s in enumerate(summaries))
-#     return (
-#         f"{criterion_desc}\n\n"
-#         f"Reference description:\n{reference}\n\n"
-#         f"Generated summaries:\n{summaries_block}\n\n"
-#         f"Rank the generated summaries from best (1) to worst ({n}) based on the "
-#         f"criterion above. Output only the ranking as {n} space-separated integers, "
-#         f"e.g.: 2 1 4 3"
-#     )
-
-
-def load_ranking_prompts() -> dict[str, str]:
-    """Load pr_llm.pr_ranking prompt templates from <repo root>/resources/prompts.json."""
-    if not PROMPTS_JSON.exists():
-        raise FileNotFoundError(f"Prompt file not found: {PROMPTS_JSON}")
-    with open(PROMPTS_JSON, "r", encoding="utf-8") as fh:
-        data = json.load(fh)
-    ranking_prompts = data.get("pr_llm", {}).get("pr_ranking")
-    if not isinstance(ranking_prompts, dict):
-        raise ValueError("prompts.json is missing the pr_llm.pr_ranking section")
-    return ranking_prompts
-
-
-# ---------------------------------------------------------------------------
 # Ranking output parser
 # ---------------------------------------------------------------------------
 
-def parse_ranking(content: str, n: int) -> Optional[list[int]]:
-    """
-    Parse LLM output into a list of integer ranks (length *n*).
+def parse_ranking(content: str, n: int) -> Optional[List[int]]:
+    """Parse LLM output into a list of integer ranks of length *n*.
 
-    Returns a list where result[i] is the rank assigned to summary i+1,
-    or None if the output cannot be reliably parsed.
+    Returns a list where ``result[i]`` is the rank assigned to summary ``i+1``,
+    or ``None`` if the output cannot be reliably parsed.
     """
-    digits = re.findall(r"[1-9]", content)
-    # Keep only values in [1, n]
+    # Match multi-digit runs so a 10+ system comparison still parses, then keep
+    # only values inside the valid rank range.
+    digits = re.findall(r"\d+", content)
     valid = [int(d) for d in digits if 1 <= int(d) <= n]
-    # Deduplicate while preserving order
+
     seen: set[int] = set()
-    deduped: list[int] = []
-    for v in valid:
-        if v not in seen:
-            seen.add(v)
-            deduped.append(v)
+    deduped: List[int] = []
+    for value in valid:
+        if value not in seen:
+            seen.add(value)
+            deduped.append(value)
         if len(deduped) == n:
             break
 
@@ -240,33 +175,68 @@ def parse_ranking(content: str, n: int) -> Optional[list[int]]:
     return deduped
 
 
+def parse_ranking_tail(content: str, n: int) -> Optional[List[int]]:
+    """Parse a ranking from the END of a verbose reply.
+
+    ``parse_ranking`` scans forward and keeps the first *n* in-range integers it
+    meets. That is correct for a bare ``"3, 1, 5, 2, 4"`` answer, but wrong when
+    the judge writes an analysis first: its prose numbering ("1. The first
+    generated summary ...") gets consumed as if it were the ranking, which would
+    turn an honest parse failure into a silently incorrect one.
+
+    This variant walks backwards over the in-range integers and returns the last
+    window of *n* that forms a permutation of 1..n — the ranking the model
+    settled on after its reasoning, rather than the numbering it opened with.
+
+    Used only on the repair path (see ``main``), so the primary ranking pass
+    keeps its original, stricter parsing behaviour untouched.
+    """
+    valid = [int(d) for d in re.findall(r"\d+", content) if 1 <= int(d) <= n]
+    for start in range(len(valid) - n, -1, -1):
+        window = valid[start:start + n]
+        if set(window) == set(range(1, n + 1)):
+            return window
+    return None
+
+
 # ---------------------------------------------------------------------------
-# Per-entry evaluation
+# Per-item evaluation
 # ---------------------------------------------------------------------------
 
-def evaluate_entry(
+def build_summaries_block(summaries_ordered: List[str]) -> str:
+    """Render the numbered 'Generated summaries' block for the judge prompt."""
+    return "\n".join(f"{i + 1}. {s}" for i, s in enumerate(summaries_ordered))
+
+
+def evaluate_item(
     api_key: str,
     api_url: str,
     model: str,
     max_tokens: int,
     temperature: float,
-    reference: str,
-    summaries_ordered: list[str],
-    model_keys: list[str],
-    prompts: dict[str, str],
-) -> dict[str, Optional[dict[str, int]]]:
-    """
-    Evaluate one PR entry across all 5 criteria.
+    human_summary: str,
+    summaries_ordered: List[str],
+    systems: List[str],
+    prompts: Dict[str, str],
+    parse: Callable[[str, int], Optional[List[int]]] = parse_ranking,
+) -> Dict[str, Optional[Dict[str, int]]]:
+    """Evaluate one PR item across the criteria in *prompts*.
 
-    Returns a dict mapping criterion_name -> {model_key: rank, ...} or None on failure.
+    Returns a dict mapping criterion -> {system: rank} or ``None`` on failure.
+
+    *prompts* may hold a subset of the criteria, which is how the repair path in
+    ``main`` re-runs only the criteria a cached item is missing. *parse* selects
+    the reply parser; the repair path overrides it with ``parse_ranking_tail``.
     """
     n = len(summaries_ordered)
-    criterion_results: dict[str, Optional[dict[str, int]]] = {}
+    summaries_block = build_summaries_block(summaries_ordered)
+    criterion_results: Dict[str, Optional[Dict[str, int]]] = {}
 
     for criterion_name, template in prompts.items():
         prompt = template.format(
-            human_summary=reference,
-            **{f"summary_{i + 1}": s for i, s in enumerate(summaries_ordered)},
+            human_summary=human_summary,
+            summaries_block=summaries_block,
+            n=n,
         )
         content = call_api(api_key, api_url, model, prompt, max_tokens, temperature)
 
@@ -275,17 +245,18 @@ def evaluate_entry(
             print(f"        [{criterion_name}] skipped (API error)")
             continue
 
-        ranks = parse_ranking(content, n)
+        ranks = parse(content, n)
         if ranks is None:
             criterion_results[criterion_name] = None
             print(f"        [{criterion_name}] parse failed: {content!r}")
             continue
 
-        ranking_dict = {model_keys[i]: ranks[i] for i in range(n)}
-        criterion_results[criterion_name] = ranking_dict
+        criterion_results[criterion_name] = {
+            systems[i]: ranks[i] for i in range(n)
+        }
 
         rank_str = "  ".join(
-            f"{MODEL_LABELS.get(k, k)}={ranks[i]}" for i, k in enumerate(model_keys)
+            f"{DISPLAY_NAMES.get(s, s)}={ranks[i]}" for i, s in enumerate(systems)
         )
         print(f"        [{criterion_name}] {rank_str}")
 
@@ -296,50 +267,100 @@ def evaluate_entry(
 # Aggregation
 # ---------------------------------------------------------------------------
 
+def points_for_rank(rank: int, n_systems: int) -> int:
+    """Convert a 1-based rank into points: 1st = n points ... last = 1 point."""
+    return (n_systems + 1) - rank
+
+
 def aggregate_scores(
-    all_entry_results: list[dict],
-    model_keys: list[str],
-    criteria: list[str],
-) -> dict[str, dict]:
-    """Aggregate per-entry rankings into per-model summary statistics."""
-    # model -> criterion -> list of points
-    collected: dict[str, dict[str, list[int]]] = {
-        m: {c: [] for c in criteria} for m in model_keys
+    all_item_results: List[dict],
+    systems: List[str],
+    criteria: List[str],
+) -> Dict[str, dict]:
+    """Aggregate per-item rankings into per-system summary statistics."""
+    n_systems = len(systems)
+    collected: Dict[str, Dict[str, List[int]]] = {
+        s: {c: [] for c in criteria} for s in systems
     }
 
-    for entry in all_entry_results:
-        for criterion_name, rankings in entry["criteria"].items():
-            if rankings is None:
+    for item in all_item_results:
+        for criterion_name, rankings in item["criteria"].items():
+            if not rankings:
                 continue
-            for model_key, rank in rankings.items():
-                if model_key in collected and criterion_name in collected[model_key]:
-                    collected[model_key][criterion_name].append(
-                        POINTS_MAP.get(rank, 0)
+            for system, rank in rankings.items():
+                if system in collected and criterion_name in collected[system]:
+                    collected[system][criterion_name].append(
+                        points_for_rank(rank, n_systems)
                     )
 
-    result: dict[str, dict] = {}
-    for m in model_keys:
+    result: Dict[str, dict] = {}
+    for system in systems:
         stats: dict = {}
-        all_points: list[int] = []
+        all_points: List[int] = []
 
-        for c in criteria:
-            pts = collected[m][c]
-            if pts:
-                avg = round(sum(pts) / len(pts), 4)
-                stats[f"{c}_avg_points"] = avg
-                stats[f"{c}_entries"] = len(pts)
-                all_points.extend(pts)
+        for criterion in criteria:
+            points = collected[system][criterion]
+            if points:
+                stats[f"{criterion}_avg_points"] = round(sum(points) / len(points), 4)
+                stats[f"{criterion}_entries"] = len(points)
+                all_points.extend(points)
             else:
-                stats[f"{c}_avg_points"] = None
-                stats[f"{c}_entries"] = 0
+                stats[f"{criterion}_avg_points"] = None
+                stats[f"{criterion}_entries"] = 0
 
         stats["total_rubric_points"] = sum(all_points)
         stats["overall_avg_points"] = (
             round(sum(all_points) / len(all_points), 4) if all_points else None
         )
-        result[m] = stats
+        stats["max_points_per_item"] = n_systems
+        result[system] = stats
 
     return result
+
+
+# ---------------------------------------------------------------------------
+# Checkpoint
+# ---------------------------------------------------------------------------
+
+def load_checkpoint(systems: List[str], fresh: bool) -> Dict[str, dict]:
+    """Load cached per-item rankings, discarding any built for a different set.
+
+    The checkpoint records which systems produced it. If the comparison set has
+    changed — a model added, the corpus swapped — the cached ranks no longer
+    describe the same slots, so they are dropped rather than silently reused.
+    """
+    if fresh or not CHECKPOINT_FILE.exists():
+        return {}
+
+    try:
+        with CHECKPOINT_FILE.open(encoding="utf-8") as fh:
+            payload = json.load(fh)
+    except Exception:
+        print("  WARNING: checkpoint unreadable — starting fresh")
+        return {}
+
+    meta = payload.get("meta") if isinstance(payload, dict) else None
+    if not isinstance(meta, dict) or meta.get("systems") != systems:
+        print("  Checkpoint was built for a different system set — starting fresh")
+        return {}
+
+    entries = payload.get("entries", {})
+    return entries if isinstance(entries, dict) else {}
+
+
+def save_checkpoint(entries: Dict[str, dict], systems: List[str], judge_model: str) -> None:
+    """Persist per-item rankings together with the system set that produced them."""
+    CHECKPOINT_FILE.parent.mkdir(parents=True, exist_ok=True)
+    payload = {
+        "meta": {
+            "systems": systems,
+            "judge_model": judge_model,
+            "corpus": str(pr_corpus.INPUT_DIR),
+        },
+        "entries": entries,
+    }
+    with CHECKPOINT_FILE.open("w", encoding="utf-8") as fh:
+        json.dump(payload, fh, indent=2)
 
 
 # ---------------------------------------------------------------------------
@@ -347,12 +368,32 @@ def aggregate_scores(
 # ---------------------------------------------------------------------------
 
 def main() -> None:
+    valid_systems = system_order()
+
     parser = argparse.ArgumentParser(description="Rubric ranking for PR summaries")
+    parser.add_argument(
+        "systems",
+        metavar="SYSTEM",
+        nargs="*",
+        default=["ALL"],
+        help=f"Systems to rank: {', '.join(valid_systems)}, or ALL. Default: ALL",
+    )
     parser.add_argument(
         "--limit",
         type=int,
         default=None,
-        help="Only process the first N entries (useful for testing)",
+        help="Only process the first N items (useful for testing)",
+    )
+    parser.add_argument(
+        "--fresh",
+        action="store_true",
+        help="Ignore any existing checkpoint and re-rank from scratch",
+    )
+    parser.add_argument(
+        "--no-repair",
+        action="store_true",
+        help="Accept checkpointed items exactly as cached, without re-running "
+             "criteria whose judge reply failed to parse on an earlier run",
     )
     args = parser.parse_args()
 
@@ -363,124 +404,227 @@ def main() -> None:
     print(f"Temperature : {temperature}")
 
     # --- Load ranking prompts ---
-    ranking_prompts = load_ranking_prompts()
+    ranking_prompts = pr_corpus.load_ranking_prompts()
     criteria = list(ranking_prompts.keys())
     print(f"Criteria    : {', '.join(criteria)}")
 
-    # --- Load JSONL data ---
-    print("\nLoading JSONL files...")
-    model_data: dict[str, dict[int, dict]] = {}
-    for m in MODELS:
-        path = OUTPUT_DIR / f"{m}.jsonl"
-        if not path.exists():
-            print(f"  WARNING: {path} not found – skipping {m}")
-            continue
-        model_data[m] = load_jsonl(path)
-        print(f"  {m}: {len(model_data[m])} entries")
+    # --- Resolve the comparison set ---
+    requested = [s.upper() for s in args.systems]
+    if requested == ["ALL"]:
+        wanted = valid_systems
+    else:
+        unknown = [s for s in requested if s not in valid_systems]
+        if unknown:
+            print(f"Unknown system(s): {unknown}. Valid: {valid_systems}")
+            sys.exit(1)
+        # Preserve canonical order so the tool keeps its fixed leading slot.
+        wanted = [s for s in valid_systems if s in requested]
 
-    available_models = [m for m in MODELS if m in model_data]
-    if len(available_models) < 2:
-        print("Need at least 2 model files to compare. Exiting.")
+    print("\nLoading summaries...")
+    summary_maps: Dict[str, Dict[str, str]] = {}
+    for system in wanted:
+        try:
+            summaries = pr_corpus.load_system_summaries(system)
+        except FileNotFoundError as exc:
+            print(f"  WARNING: {exc} – skipping {system}")
+            continue
+        summary_maps[system] = summaries
+        print(f"  {DISPLAY_NAMES.get(system, system)}: {len(summaries)} entries")
+
+    systems = [s for s in wanted if s in summary_maps]
+    if len(systems) < 2:
+        print("Need at least 2 systems to compare. Exiting.")
         sys.exit(1)
 
-    # --- Find common dataset indices ---
-    common_indices: list[int] = sorted(
-        set.intersection(*[set(model_data[m].keys()) for m in available_models])
-    )
-    print(f"\nCommon entries across {len(available_models)} models: {len(common_indices)}")
+    gold = pr_corpus.load_human_summaries()
+    print(f"  Human gold: {len(gold)} entries")
+
+    # --- Items every system covers ---
+    common_ids = pr_corpus.common_pr_ids(gold, *(summary_maps[s] for s in systems))
+    print(f"\nCommon items across {len(systems)} systems: {len(common_ids)}")
+    if not common_ids:
+        print("No overlapping pr_ids between the gold summaries and the systems. Exiting.")
+        sys.exit(1)
 
     if args.limit:
-        common_indices = common_indices[: args.limit]
-        print(f"(Limited to first {args.limit} entries)")
+        common_ids = common_ids[: args.limit]
+        print(f"(Limited to first {args.limit} items)")
 
     # --- Load checkpoint ---
-    checkpoint: dict[str, dict] = {}
-    if CHECKPOINT_FILE.exists():
-        with open(CHECKPOINT_FILE, "r", encoding="utf-8") as fh:
-            checkpoint = json.load(fh)
-        print(f"Loaded checkpoint: {len(checkpoint)} completed entries")
+    checkpoint = load_checkpoint(systems, args.fresh)
+    if checkpoint:
+        print(f"Loaded checkpoint: {len(checkpoint)} completed items")
 
     # --- Evaluate ---
-    evaluated_entries: list[dict] = []
+    evaluated_items: List[dict] = []
     from_checkpoint = 0
+    repaired_items = 0
+    repaired_cells = 0
 
-    for seq, idx in enumerate(common_indices, start=1):
-        idx_str = str(idx)
-        if idx_str in checkpoint:
-            evaluated_entries.append(checkpoint[idx_str])
+    for seq, pr_id in enumerate(common_ids, start=1):
+        if pr_id in checkpoint:
+            # A cached item can still carry gaps: individual criteria whose
+            # judge reply failed to parse — typically an analysis preamble that
+            # ran past max_tokens, so the ranking line was never emitted. The
+            # item is cached because its OTHER criteria succeeded, which used to
+            # make those gaps permanent: a cached item was accepted whole, and
+            # the only way back was --fresh, re-ranking all 150 items.
+            #
+            # Re-issue just the missing criterion calls (7 calls, not 750). The
+            # prompt is byte-identical, so a repaired cell is scored under the
+            # same rubric as every other cell; only the token budget and the
+            # reply parser are relaxed, since a truncated reply is not a
+            # judgement the run can keep either way.
+            #
+            # Old behaviour (cached item always accepted as-is):
+            # evaluated_items.append(checkpoint[pr_id])
+            # from_checkpoint += 1
+            # continue
+            cached = checkpoint[pr_id]
+            cached_criteria = cached.get("criteria") or {}
+            missing = [c for c in criteria if not cached_criteria.get(c)]
+
+            if not missing or args.no_repair:
+                evaluated_items.append(cached)
+                from_checkpoint += 1
+                continue
+
+            print(f"\n[{seq}/{len(common_ids)}] pr_id={pr_id} "
+                  f"— repairing {len(missing)}: {', '.join(missing)}")
+
+            retried = evaluate_item(
+                api_key,
+                api_url,
+                judge_model,
+                max_tokens * REPAIR_TOKEN_MULTIPLIER,
+                temperature,
+                gold[pr_id],
+                [summary_maps[s][pr_id] for s in systems],
+                systems,
+                {c: ranking_prompts[c] for c in missing},
+                parse=parse_ranking_tail,
+            )
+
+            recovered = {c: r for c, r in retried.items() if r}
+            cached_criteria.update(retried)
+            cached["criteria"] = cached_criteria
+            evaluated_items.append(cached)
             from_checkpoint += 1
+
+            print(f"        [repair] recovered {len(recovered)}/{len(missing)}")
+            if recovered:
+                repaired_items += 1
+                repaired_cells += len(recovered)
+                checkpoint[pr_id] = cached
+                save_checkpoint(checkpoint, systems, judge_model)
             continue
 
-        reference = model_data[available_models[0]][idx]["reference_summary"]
-        pr_id = model_data[available_models[0]][idx]["id"]
-        summaries_ordered = [model_data[m][idx]["summary"] for m in available_models]
+        human_summary = gold[pr_id]
+        summaries_ordered = [summary_maps[s][pr_id] for s in systems]
 
-        print(f"\n[{seq}/{len(common_indices)}] {pr_id}  (idx={idx})")
+        print(f"\n[{seq}/{len(common_ids)}] pr_id={pr_id}")
 
-        criteria_results = evaluate_entry(
+        criteria_results = evaluate_item(
             api_key,
             api_url,
             judge_model,
             max_tokens,
             temperature,
-            reference,
+            human_summary,
             summaries_ordered,
-            available_models,
+            systems,
             ranking_prompts,
         )
 
-        entry_result = {
-            "dataset_index": idx,
-            "id": pr_id,
+        item_result = {
+            "pr_id": pr_id,
             "criteria": criteria_results,
         }
-        evaluated_entries.append(entry_result)
+        evaluated_items.append(item_result)
 
-        # Persist checkpoint after each entry
-        checkpoint[idx_str] = entry_result
-        with open(CHECKPOINT_FILE, "w", encoding="utf-8") as fh:
-            json.dump(checkpoint, fh, indent=2)
+        # Persist checkpoint after each item so a long run is resumable — but
+        # only when at least one criterion actually produced a ranking. An item
+        # whose criteria all came back None (API outage, unparseable reply) was
+        # previously cached as "done" and then skipped by every later run, so
+        # the only way to retry it was --fresh, which re-ranks the whole corpus.
+        #
+        # Old behaviour (checkpointed unconditionally):
+        # checkpoint[pr_id] = item_result
+        # save_checkpoint(checkpoint, systems, judge_model)
+        if any(criteria_results.values()):
+            checkpoint[pr_id] = item_result
+            save_checkpoint(checkpoint, systems, judge_model)
+        else:
+            print("        [checkpoint] not cached — every criterion failed; "
+                  "this item will be retried on the next run")
 
     print(
-        f"\nEvaluation complete: {len(evaluated_entries)} entries "
+        f"\nEvaluation complete: {len(evaluated_items)} items "
         f"({from_checkpoint} from checkpoint, "
-        f"{len(evaluated_entries) - from_checkpoint} newly evaluated)"
+        f"{len(evaluated_items) - from_checkpoint} newly evaluated)"
     )
+    if repaired_cells:
+        print(f"  Repaired {repaired_cells} previously-unparsed criterion "
+              f"ranking(s) across {repaired_items} item(s)")
 
     # --- Aggregate ---
     print("\nAggregating scores...")
-    rubric_scores = aggregate_scores(evaluated_entries, available_models, criteria)
+    rubric_scores = aggregate_scores(evaluated_items, systems, criteria)
 
     print("\n=== Rubric Ranking Results ===")
-    for m in available_models:
-        label = MODEL_LABELS.get(m, m)
-        s = rubric_scores[m]
-        print(f"\n{label}:")
-        print(f"  Overall avg points : {s['overall_avg_points']} / 4.0")
-        print(f"  Total rubric points: {s['total_rubric_points']}")
-        for c in criteria:
-            print(f"  {c:<20}: avg_points={s[f'{c}_avg_points']}")
+    for system in systems:
+        stats = rubric_scores[system]
+        print(f"\n{DISPLAY_NAMES.get(system, system)}:")
+        print(f"  Overall avg points : {stats['overall_avg_points']} / {len(systems)}.0")
+        print(f"  Total rubric points: {stats['total_rubric_points']}")
+        for criterion in criteria:
+            print(f"  {criterion:<20}: avg_points={stats[f'{criterion}_avg_points']}")
+
+    # --- Write per-item ranking detail alongside the metric scores ---
+    RESULTS_DIR.mkdir(parents=True, exist_ok=True)
+    detail_rows: List[dict] = []
+    for item in evaluated_items:
+        row: dict = {"pr_id": item["pr_id"]}
+        for criterion in criteria:
+            ranks = item["criteria"].get(criterion) or {}
+            for system in systems:
+                row[f"{criterion}_{system}_rank"] = ranks.get(system)
+        detail_rows.append(row)
+    detail_path = RESULTS_DIR / "ranking_detail.jsonl"
+    write_jsonl(detail_path, detail_rows)
+
+    summary_path = RESULTS_DIR / "ranking_summary.jsonl"
+    write_jsonl(
+        summary_path,
+        [{"system": s, **rubric_scores[s]} for s in systems],
+    )
+    print(f"\nRanking detail : {detail_path}")
+    print(f"Ranking summary: {summary_path}")
 
     # --- Update results.json ---
     print(f"\nUpdating {RESULTS_JSON} ...")
-    with open(RESULTS_JSON, "r", encoding="utf-8") as fh:
-        results = json.load(fh)
+    results: dict = {}
+    if RESULTS_JSON.exists():
+        try:
+            with RESULTS_JSON.open(encoding="utf-8") as fh:
+                results = json.load(fh)
+        except Exception:
+            print("  WARNING: results.json unreadable — writing a fresh file")
 
-    for m in available_models:
-        if m not in results:
-            results[m] = {}
-        results[m]["rubric_evaluation"] = rubric_scores[m]
+    for system in systems:
+        results.setdefault(system, {})["rubric_evaluation"] = rubric_scores[system]
 
     results["rubric_evaluation_meta"] = {
         "judge_model": judge_model,
         "criteria": criteria,
         "criteria_prompts": ranking_prompts,
-        "total_entries_evaluated": len(evaluated_entries),
-        "models_compared": available_models,
-        "ranking_system": "1st=4pts, 2nd=3pts, 3rd=2pts, 4th=1pt",
+        "total_items_evaluated": len(evaluated_items),
+        "systems_compared": systems,
+        "ranking_system": f"1st={len(systems)}pts ... {len(systems)}th=1pt",
     }
 
-    with open(RESULTS_JSON, "w", encoding="utf-8") as fh:
+    RESULTS_JSON.parent.mkdir(parents=True, exist_ok=True)
+    with RESULTS_JSON.open("w", encoding="utf-8") as fh:
         json.dump(results, fh, indent=2)
 
     print("Done. Results written to results.json")

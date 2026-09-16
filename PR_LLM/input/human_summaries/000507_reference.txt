@@ -1,0 +1,1 @@
+to ensure the session is cleared properly once the account is deactivated server side

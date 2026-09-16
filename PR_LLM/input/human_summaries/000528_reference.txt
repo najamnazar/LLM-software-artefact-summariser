@@ -1,0 +1,7 @@
+fixes ` connectivityreceivershould # notifythemerlinserviceonvalidconnectivityintents ` :
+`` ` bash
+wanted but not invoked :
+merlinservice.onconnectivitychanged ( &lt; any &gt; ) ;
+- &gt; at com.novoda.merlin.receiver.connectivityreceivershould.notifythemerlinserviceonvalidconnectivityintents ( connectivityreceivershould.java : 0 )
+actually , there were zero interactions with this mock .
+`` `

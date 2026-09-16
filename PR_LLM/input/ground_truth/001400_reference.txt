@@ -1,6 +1,0 @@
-nodeproxy/relationshipproxy needs some sort of spi , acting as their relationship
-to the database instance .
-there were a couple of unnecessary indirections and
-round trips for the execution paths right below them , which were apparently
-not really required and only made code more complicated and weird .
-this is a cleanup and simplification of that part of the code .

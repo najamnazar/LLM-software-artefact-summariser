@@ -1,0 +1,1 @@
+it 's possible to use the new ` foreach ` method in the ` thingregistryimpl ` .

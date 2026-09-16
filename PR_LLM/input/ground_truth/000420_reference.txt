@@ -1,7 +1,0 @@
-- create managementcontextinternal .
-adds the interface managementcontextinternal .
-remove references/casts to abstractmanagementcontext ; instead use managementcontextinternal .
-- remove entitymanagementsupport.getmanagementcontext ( boolean ) .
-just have getmanagementcontext ( ) , which will always return either the real or the ' non-deployment ' management context .
-relies on failing fast by subsequent calls failing , if not permitted on the ' non-deployment ' management context .
-- do n't deprecate abstractentity.getmanagementcontext ( )

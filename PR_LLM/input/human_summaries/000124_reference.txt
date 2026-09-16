@@ -1,0 +1,5 @@
+i hope you are fine with it .
+so any further feedback for this will be much appreciated !
+the only downside i see now is that it will break projects where table classes with the similar naming pattern already exist .
+this can be fixed by not generating table class by default , which sounds ok to me .
+and we need to add some documentation about this feature as well .

@@ -1,0 +1,5 @@
+with this pull request , we lookup ` locale ` using a java 0 method to do this .
+some test methods are renamed to a better name .
+the ` getbundle ( ) ` producer have a parameter ` locale ` added to allow us to receive a injected object .
+so we can create an alternative producer if nedded .
+and using injected ` locale ` we avoid method ` getlocale ( ) ` called twice .

@@ -1,0 +1,1 @@
+enable sources & javadoc archives on all jar subprojects .

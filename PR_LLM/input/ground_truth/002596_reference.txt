@@ -1,8 +1,0 @@
-eady on it .
-motivation :
-java.nio.channels.spi.abstractselectablechannel.register ( ... ) need to obtain multiple locks during execution which may produce a long wait time if we currently select .
-this lead to multiple ci failures in the past .
-modifications :
-ensure the register call takes place on the eventloop .
-result :
-no more flacky ci test timeouts .

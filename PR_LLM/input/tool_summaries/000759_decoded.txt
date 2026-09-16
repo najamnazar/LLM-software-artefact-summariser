@@ -1,0 +1,5 @@
+bump version for release to the readme describing the problem of the false positive to readme
+add testgetepisodetitle again
+this test is once again failing , with virus software .
+it passes just fine from any of my machines .
+it 's unfortunate to have to disable it , but there 's little else we can do

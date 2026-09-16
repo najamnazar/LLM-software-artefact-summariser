@@ -1,0 +1,1 @@
+update jasmine , so it does not throw uncaught errors under the hood .

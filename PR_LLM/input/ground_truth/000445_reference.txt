@@ -1,2 +1,0 @@
-[ error ] failed to execute goal net.alchim31.maven : scala-maven-plugin : 3.2.2 : cctest ( default-cli ) on project pcd-quality-control : execution default-cli of goal net.alchim31.maven : scala-maven-plugin : 3.2.2 : cctest failed : local repository location : ' /users/medge/workspace/pcd-quality-control/ $ { invoker.localrepositorypath } } ' is not a directory .
-- &gt; [ help 0 ]

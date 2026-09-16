@@ -1,0 +1,1 @@
+as a first step towards moving the javaformatter to use velocity , this pr untangles the javaformatter class into much smaller , more focussed classes

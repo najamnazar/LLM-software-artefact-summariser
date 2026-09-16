@@ -1,0 +1,2 @@
+mutabletable # getcolumns returns an unmodifiablelist .
+therefore wrap it in a local arraylist , so we can remove columns .

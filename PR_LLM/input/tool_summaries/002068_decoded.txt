@@ -1,0 +1,3 @@
+refactor : remove comments , extract methods .
+refactored some names .
+deleted unused names .

@@ -1,4 +1,0 @@
-when logging that a temporaryjob container has been deployed , it may be
-more helpful for the log message to refer to the image name/id rather
-than the job 's name or version since the job name most often contains
-randomly generated characters and long prefixes .

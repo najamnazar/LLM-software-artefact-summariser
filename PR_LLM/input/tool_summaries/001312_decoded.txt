@@ -1,0 +1,7 @@
+add a new genotype will now also use the setgenotype protocol , and
+create a protocol application .
+- deleting an existiong genotype will remove it from the db , not just
+set an empty string in the field .
+- updating now takes in to account both fields of the genotype set , if
+one of the fields ( modification or state ) is empty , than the set is
+treated as empty .

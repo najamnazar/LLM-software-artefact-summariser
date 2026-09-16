@@ -1,0 +1,3 @@
+earthsmash no longer uses dynamic sourcing
+improved earth dynamic sourcing .
+added earth utility methods .

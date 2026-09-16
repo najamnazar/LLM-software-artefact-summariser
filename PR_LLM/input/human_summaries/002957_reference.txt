@@ -1,0 +1,9 @@
+separate travis commands into a build script
+i know this may seem a bit redundant , what with gradle and all , but in order to be able to run on both jenkins and travis , the set up and repo-specific gradle commands for the app must be ci-agnostic .
+- [ ] i18n
+- [ ] rtl
+- [ ] safecommit shows 0 violations
+- [ ] unit , integration , acceptance tests as appropriate
+- [ ] analytics
+- [ ] performance
+- [ ] database migrations are backwards-compatible

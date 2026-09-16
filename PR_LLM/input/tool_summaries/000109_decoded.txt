@@ -1,0 +1,1 @@
+increase timeout as doi resolution often fails .

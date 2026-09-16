@@ -1,0 +1,2 @@
+- enable sources & javadoc archives on all jar subprojects
+- add group and description to custom tasks

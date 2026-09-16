@@ -1,0 +1,1 @@
+add weight field to population and datacollectionevent classes as well as for populationdto and datacollectioneventdto .

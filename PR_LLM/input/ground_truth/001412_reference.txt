@@ -1,3 +1,0 @@
-when using sshclitool ( i.e .
-invoking ` ssh ` directly via system calls ) , the ssh session terminates before the background process has started .
-therefore in launch command we wait for evidence ( in log/console output ) that process is running .

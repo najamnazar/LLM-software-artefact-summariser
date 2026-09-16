@@ -1,0 +1,1 @@
+&gt; chunk the batch stream into multiple chunks and add a reset event at the end of each chunk .

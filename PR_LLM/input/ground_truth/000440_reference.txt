@@ -1,1 +1,0 @@
-like to be able to run work items on the pentaho server , so that these work items run on the pentaho server even though we are in worker node mode

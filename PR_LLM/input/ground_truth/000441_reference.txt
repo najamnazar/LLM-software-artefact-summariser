@@ -1,7 +1,0 @@
-plugin coordinates are in gradle.properties and ivy repository is setup
-in settings.gradle .
-we do that to use the plugin from the cloudbees
-build .
-the gradle template is also updated to use the bnd gradle plugin from jcenter .
-the version of the bnd gradle plugin is based upon the version of bndlib
-used in the build .

@@ -1,0 +1,4 @@
+some users where not able to find the droidplanner folder in their devices .
+this should help .
+changing the default folder of droidplanner to a more generic one into the folder ' downloads ' .
+also i added a about section to the bottom of the settings screen to show the path where droidplanner stores it 's data .

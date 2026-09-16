@@ -1,6 +1,0 @@
-update docs help.txt and online instructions page ;
-use vars in _config.yml for version , rather than files in fields/\\* ;
-include version in the top-right corner ;
-show versions ahead of governance in toc ; and
-make versions.md dependent on where we are running what it shows ,
-and a place to list version history , key changes , etc

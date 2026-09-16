@@ -1,5 +1,0 @@
-not sure why , but at least locally these changes cause the
-readtimeout test to fail .
-it just hangs and never gets the
-notification from either onerror or oncomplete .
-we 'll see if the same problem happens on ci .

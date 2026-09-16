@@ -1,0 +1,9 @@
+0 .
+don t try random node with immediate initiate cluster renewal after that if we got connectiontimeout from proper slot jedis .
+try proper slot until last attempt , if last attempt failed - just make cluster rediscovery , without trying random nodes which is useless .
+0 .
+new special exception for no reachable nodes
+0 .
+fixed situation when simple connection exception with tryrandomnode=true proceed as just no reachable nodes
+0 .
+fix rewriting real root cause jedisconnectionexception with jedisclustermaxredirectionsexception

@@ -1,8 +1,0 @@
-ates during certificate verification
-motivation :
-the sslsession that is returned by sslengine.gethandshakesession ( ) must be able to provide the local certificates when the trustmanager is invoked on the server-side .
-modifications :
-- correctly return the local certificates
-- add unit test
-result :
-be able to obtain local certificates from handshake sslsession during verification on the server side .

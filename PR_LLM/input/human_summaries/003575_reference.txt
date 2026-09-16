@@ -1,0 +1,4 @@
+i find this works well in my xwiki instance however i think i should set the ' locale ' rather than hard code the language to english .
+was n't sure how to achieve this so open to comment .
+also tried to boost by tag object independently of others but could n't get this to work .
+does the database schema need updating to allow this

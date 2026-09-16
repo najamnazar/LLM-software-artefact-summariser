@@ -1,6 +1,0 @@
-according to this , this problem is fixed .
-i heard somewhere that this can be removed .
-when it is removed , proguard will save use more space .
-i 've alse searched for this crash in fabric .
-we do n't have the crash mentioned in the bug report .
-so it will be safe to remove this .

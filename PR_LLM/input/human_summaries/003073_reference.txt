@@ -1,0 +1,3 @@
+added equals ( ) , hashcode ( ) and tostring ( ) methods to riakobject .
+dependent classes riaklinks , riakusermetadata and riakobject also got those methods added to allow sensible comparison of any riakobject .
+this allows checking parameters for equality in unit tests when mocking out riakclient .

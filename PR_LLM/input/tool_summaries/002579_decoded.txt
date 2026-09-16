@@ -1,0 +1,2 @@
+display favorites for current event only .
+for json api : only serve local url .

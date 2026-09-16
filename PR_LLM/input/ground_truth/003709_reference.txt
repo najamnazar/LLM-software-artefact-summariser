@@ -1,4 +1,0 @@
-start adding the study consent 's createdon timestamp to signatures .
-this is the only value in the dynamodb userconsent record , and those ddb records can be entirely removed if we just keep it with the signature .
-add a backfill to move this study consent createdon timestamp into existing signatures .
-currently will only do api study so we can test .

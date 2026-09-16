@@ -1,0 +1,1 @@
+&gt; add delete siddhi file functionality for editor

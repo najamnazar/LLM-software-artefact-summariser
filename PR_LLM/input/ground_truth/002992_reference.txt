@@ -1,4 +1,0 @@
-if for some reason query result sizes are skewed in a favor of a certain
-member , the simple averaging stats computation may suffer from a precision
-loss .
-to fix that the exact calculation is used in tests now .

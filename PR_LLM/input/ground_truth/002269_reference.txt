@@ -1,3 +1,0 @@
-- wse spec.md changes to mandate that the server must generate an http response with a 0 bad request status code and fail the wse connection in the case of an upstream request with an invalid body ( e.g .
-containing an invalid emulated websocket frame ) .
-- wse script changes to reflect the above

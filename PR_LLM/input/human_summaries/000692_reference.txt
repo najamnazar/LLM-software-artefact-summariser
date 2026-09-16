@@ -1,0 +1,8 @@
+hello ,
+this is a simple basic auth system that allow user to add these parameters into the yaml configuration :
+- http.basicauth.enabled : true
+- http.basicauth.user : ' root '
+- http.basicauth.password : ' root '
+this way it allows stormcrawler to be used in most of the intranets .
+if this pr is accepted i 'll produce the associated documentation .
+thanks

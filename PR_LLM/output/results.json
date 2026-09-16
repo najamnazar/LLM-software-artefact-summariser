@@ -1,86 +1,122 @@
 {
-  "PR_GPT_SUMMARY": {
+  "TOOL": {
+    "system": "TOOL",
     "count": 150,
-    "avg_bert_precision": 0.8383069928487142,
-    "avg_bert_recall": 0.8570542375246684,
-    "avg_bert_f1": 0.8474145634969076,
-    "avg_cosine_similarity": 0.3798974948774836,
+    "missing_vs_gold": 0,
+    "avg_bert_precision": 0.8765362048149109,
+    "avg_bert_recall": 0.8557892660299937,
+    "avg_bert_f1": 0.8656127580006917,
+    "avg_cosine_similarity": 0.28623382486193866,
     "rubric_evaluation": {
-      "accuracy_avg_points": 2.4712,
-      "accuracy_entries": 104,
-      "adequacy_avg_points": 2.5865,
-      "adequacy_entries": 133,
-      "conciseness_avg_points": 2.4122,
-      "conciseness_entries": 131,
-      "context_awareness_avg_points": 2.4574,
-      "context_awareness_entries": 94,
-      "clarity_avg_points": 2.3636,
-      "clarity_entries": 132,
-      "total_rubric_points": 1460,
-      "overall_avg_points": 2.4579
+      "accuracy_avg_points": 4.0933,
+      "accuracy_entries": 150,
+      "adequacy_avg_points": 4.2148,
+      "adequacy_entries": 149,
+      "conciseness_avg_points": 4.6533,
+      "conciseness_entries": 150,
+      "context_awareness_avg_points": 3.0467,
+      "context_awareness_entries": 150,
+      "clarity_avg_points": 3.9733,
+      "clarity_entries": 150,
+      "total_rubric_points": 2993,
+      "overall_avg_points": 3.996,
+      "max_points_per_item": 5
     }
   },
-  "PR_QWEN_SUMMARY": {
+  "GPT": {
+    "system": "GPT",
     "count": 150,
-    "avg_bert_precision": 0.8490998796621958,
-    "avg_bert_recall": 0.8647132909297943,
-    "avg_bert_f1": 0.856565336783727,
-    "avg_cosine_similarity": 0.39977386148465005,
+    "missing_vs_gold": 0,
+    "avg_bert_precision": 0.8243655256430308,
+    "avg_bert_recall": 0.8451803509394328,
+    "avg_bert_f1": 0.834326864083608,
+    "avg_cosine_similarity": 0.23736710953647078,
     "rubric_evaluation": {
-      "accuracy_avg_points": 2.8077,
-      "accuracy_entries": 104,
-      "adequacy_avg_points": 2.7519,
-      "adequacy_entries": 133,
-      "conciseness_avg_points": 2.6183,
-      "conciseness_entries": 131,
-      "context_awareness_avg_points": 2.9681,
-      "context_awareness_entries": 94,
-      "clarity_avg_points": 2.7803,
-      "clarity_entries": 132,
-      "total_rubric_points": 1647,
-      "overall_avg_points": 2.7727
+      "accuracy_avg_points": 2.44,
+      "accuracy_entries": 150,
+      "adequacy_avg_points": 2.349,
+      "adequacy_entries": 149,
+      "conciseness_avg_points": 2.66,
+      "conciseness_entries": 150,
+      "context_awareness_avg_points": 2.2867,
+      "context_awareness_entries": 150,
+      "clarity_avg_points": 2.2667,
+      "clarity_entries": 150,
+      "total_rubric_points": 1798,
+      "overall_avg_points": 2.4005,
+      "max_points_per_item": 5
     }
   },
-  "PR_CLAUDE_SUMMARY": {
+  "QWEN": {
+    "system": "QWEN",
     "count": 150,
-    "avg_bert_precision": 0.822606649796168,
-    "avg_bert_recall": 0.8618256505330404,
-    "avg_bert_f1": 0.8415939195950826,
-    "avg_cosine_similarity": 0.43140514223075077,
+    "missing_vs_gold": 0,
+    "avg_bert_precision": 0.8359178272883098,
+    "avg_bert_recall": 0.848078859647115,
+    "avg_bert_f1": 0.8415600713094076,
+    "avg_cosine_similarity": 0.22353157186355177,
     "rubric_evaluation": {
-      "accuracy_avg_points": 3.0673,
-      "accuracy_entries": 104,
-      "adequacy_avg_points": 2.9624,
-      "adequacy_entries": 133,
-      "conciseness_avg_points": 2.7176,
-      "conciseness_entries": 131,
-      "context_awareness_avg_points": 2.8617,
-      "context_awareness_entries": 94,
-      "clarity_avg_points": 2.9697,
-      "clarity_entries": 132,
-      "total_rubric_points": 1730,
-      "overall_avg_points": 2.9125
+      "accuracy_avg_points": 2.5467,
+      "accuracy_entries": 150,
+      "adequacy_avg_points": 2.4094,
+      "adequacy_entries": 149,
+      "conciseness_avg_points": 2.4267,
+      "conciseness_entries": 150,
+      "context_awareness_avg_points": 2.3333,
+      "context_awareness_entries": 150,
+      "clarity_avg_points": 2.4,
+      "clarity_entries": 150,
+      "total_rubric_points": 1815,
+      "overall_avg_points": 2.4232,
+      "max_points_per_item": 5
     }
   },
-  "PR_MISTRAL_SUMMARY": {
+  "CLAUDE": {
+    "system": "CLAUDE",
     "count": 150,
-    "avg_bert_precision": 0.8423639484246572,
-    "avg_bert_recall": 0.8596447412172953,
-    "avg_bert_f1": 0.8506861380736033,
-    "avg_cosine_similarity": 0.36804998674999523,
+    "missing_vs_gold": 0,
+    "avg_bert_precision": 0.8121495362122854,
+    "avg_bert_recall": 0.8427991648515065,
+    "avg_bert_f1": 0.8268798859914144,
+    "avg_cosine_similarity": 0.23507177035554386,
     "rubric_evaluation": {
-      "accuracy_avg_points": 1.6538,
-      "accuracy_entries": 104,
-      "adequacy_avg_points": 1.6992,
-      "adequacy_entries": 133,
-      "conciseness_avg_points": 2.2519,
-      "conciseness_entries": 131,
-      "context_awareness_avg_points": 1.7128,
-      "context_awareness_entries": 94,
-      "clarity_avg_points": 1.8864,
-      "clarity_entries": 132,
-      "total_rubric_points": 1103,
-      "overall_avg_points": 1.8569
+      "accuracy_avg_points": 2.3,
+      "accuracy_entries": 150,
+      "adequacy_avg_points": 2.4362,
+      "adequacy_entries": 149,
+      "conciseness_avg_points": 2.5,
+      "conciseness_entries": 150,
+      "context_awareness_avg_points": 2.7467,
+      "context_awareness_entries": 150,
+      "clarity_avg_points": 2.4667,
+      "clarity_entries": 150,
+      "total_rubric_points": 1865,
+      "overall_avg_points": 2.49,
+      "max_points_per_item": 5
+    }
+  },
+  "MISTRAL": {
+    "system": "MISTRAL",
+    "count": 150,
+    "missing_vs_gold": 0,
+    "avg_bert_precision": 0.8267513438065847,
+    "avg_bert_recall": 0.8458664627869924,
+    "avg_bert_f1": 0.8358691596984863,
+    "avg_cosine_similarity": 0.21764531364639816,
+    "rubric_evaluation": {
+      "accuracy_avg_points": 3.62,
+      "accuracy_entries": 150,
+      "adequacy_avg_points": 3.5906,
+      "adequacy_entries": 149,
+      "conciseness_avg_points": 2.76,
+      "conciseness_entries": 150,
+      "context_awareness_avg_points": 4.5867,
+      "context_awareness_entries": 150,
+      "clarity_avg_points": 3.8933,
+      "clarity_entries": 150,
+      "total_rubric_points": 2764,
+      "overall_avg_points": 3.6903,
+      "max_points_per_item": 5
     }
   },
   "rubric_evaluation_meta": {
@@ -92,20 +128,21 @@
       "context_awareness",
       "clarity"
     ],
-    "criteria_descriptions": {
-      "accuracy": "Accuracy: Does the description correctly represent the changes in the pull request?",
-      "adequacy": "Adequacy: Does the description cover the main aspects of the change?",
-      "conciseness": "Conciseness: Is the description brief while still conveying the essential information?",
-      "context_awareness": "Context Awareness: Does the description reflect relevant information from the PR context (e.g., commits, rationale)?",
-      "clarity": "Clarity: Is the description easy for reviewers to understand?"
+    "criteria_prompts": {
+      "accuracy": "Evaluate the accuracy of each generated summary against the gold summary.\n\nGold summary:\n{human_summary}\n\nGenerated summaries:\n{summaries_block}\n\nRank the generated summaries from most accurate (1) to least accurate ({n}). Output only the ranking.",
+      "adequacy": "Evaluate the adequacy of each generated summary against the gold summary.\n\nGold summary:\n{human_summary}\n\nGenerated summaries:\n{summaries_block}\n\nRank the summaries from most adequate (1) to least adequate ({n}). Output only the ranking.",
+      "conciseness": "Evaluate the conciseness of each generated summary against the gold summary.\n\nGold summary:\n{human_summary}\n\nGenerated summaries:\n{summaries_block}\n\nRank the summaries from most concise (1) to least concise ({n}). Output only the ranking.",
+      "context_awareness": "Evaluate how well each generated summary captures the context present in the gold summary.\n\nGold summary:\n{human_summary}\n\nGenerated summaries:\n{summaries_block}\n\nRank the summaries from best at capturing context (1) to worst ({n}). Output only the ranking.",
+      "clarity": "Evaluate the clarity of each generated summary against the gold summary.\n\nGold summary:\n{human_summary}\n\nGenerated summaries:\n{summaries_block}\n\nRank the summaries from clearest (1) to least clear ({n}). Output only the ranking."
     },
-    "total_entries_evaluated": 150,
-    "models_compared": [
-      "PR_GPT_SUMMARY",
-      "PR_QWEN_SUMMARY",
-      "PR_CLAUDE_SUMMARY",
-      "PR_MISTRAL_SUMMARY"
+    "total_items_evaluated": 150,
+    "systems_compared": [
+      "TOOL",
+      "GPT",
+      "QWEN",
+      "CLAUDE",
+      "MISTRAL"
     ],
-    "ranking_system": "1st=4pts, 2nd=3pts, 3rd=2pts, 4th=1pt"
+    "ranking_system": "1st=5pts ... 5th=1pt"
   }
 }

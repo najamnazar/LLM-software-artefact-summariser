@@ -1,0 +1,2 @@
+add integration test for modify
+clean up misc errors associated with the test/improve test cleanup

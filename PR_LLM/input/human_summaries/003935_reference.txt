@@ -1,0 +1,2 @@
+- added application tree to analyse menu
+- added icon

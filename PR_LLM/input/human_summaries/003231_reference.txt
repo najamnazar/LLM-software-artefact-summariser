@@ -1,0 +1,3 @@
+the problem was that ` default_config ` in ` defaultdockerclient.java ` was not thread safe .
+the rest is just intellij *optimizations* and a test to verify the fix .
+if you merge this **please** release a new version of maven-docker-client with the fix , which is the only reason for this pr to exist in the first place .

@@ -1,0 +1,8 @@
+fixed some gradle warnings only showing in idea editor
+fixed lint and deprecation warnings in code
+updated some build/test related plugin versions .
+tested with :
+`` `
+gradlew clean build lint test pmd check checkstyle assemble javadoc jacocotestreport findbugs assembledefault coveralls debugjavadocjar debugsourcejar jardebugclasses jarreleaseclasses jar
+`` `
+there 's one lint remaining : support jar is too old , i left that for v4 to fix

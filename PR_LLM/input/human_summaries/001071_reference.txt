@@ -1,0 +1,1 @@
+fixed issues with task row margins , comment counts not updating correctly in ui , others

@@ -1,0 +1,3 @@
+by default , we should cache the result of whether the device is rooted or not , as the result is unlikely to change between app launches and the calculation requires io .
+cached the result of the root check in a field when ` devicedata ` is constructed .
+enabled strictmode in the example app and verified that only one stacktrace was logged on initialisation , when filtering by ' isrooted ' .

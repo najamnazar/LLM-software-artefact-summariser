@@ -1,0 +1,5 @@
+- super procedure simply returns a list of the router capable hosts in a
+cluster , split by database name .
+- sub procedure is similar , though takes a database name as a parameter
+and only returns those router capable .
+which contain that database .

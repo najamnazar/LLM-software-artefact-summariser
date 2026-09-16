@@ -1,0 +1,3 @@
+this change allows us to update the award 's everify flag based on the value stored in ezra .
+there 's also a sql pr related to this .
+both prs need to go out together .

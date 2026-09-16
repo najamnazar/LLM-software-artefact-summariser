@@ -1,0 +1,4 @@
+we used an old version of jackrabbit .
+since version there were many updates/bugfixes/securitiy issues fixed .
+cf .
+and a nice side effect : owncloud.apk is well 100kb smaller now !

@@ -1,7 +1,0 @@
-this is a port of the equivalent code in the java runtime .
-this required a change to the charstream interface : gettext was documented
-as throwing exceptions , but it was n't actually declared as such .
-the
-unbufferedcharstream.gettext implementation throws exceptions ( in order to
-match the semantics of the java implementation ) , so this declaration is now
-needed , and callsites need to be adjusted appropriately .

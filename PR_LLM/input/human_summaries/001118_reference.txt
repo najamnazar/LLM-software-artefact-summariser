@@ -1,0 +1,6 @@
+the previous guy has fixed many translations .
+unfortunately , there are still a few inappropriate translations remaining to be fixed .
+for instance , biome is translated into ' , which i have never heard of : p
+in addition , there is a translation guide in chinese minecraft wiki :
+
+although it 's a guide for vanilla minecraft translation , i think we should strictly follow the guide for the translations of word also appeared in vanilla

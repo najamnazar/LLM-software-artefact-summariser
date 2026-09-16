@@ -1,2 +1,0 @@
-the union component was pretty badly broken ; components down the line would render metrics using the outer scope 's analysisjob , and columns with the same not from different tables would end up in the wrong table when job was loaded .
-this should fix both issues .

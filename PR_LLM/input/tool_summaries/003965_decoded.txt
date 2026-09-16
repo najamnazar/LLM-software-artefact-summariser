@@ -1,0 +1,4 @@
+add , reorder , and rename positions
+many beginner and some intermediate/advanced positions were added .
+reordered the positions in terms of what level they should be mastered , based on the book , ' silman 's complete endgame course ' .
+renamed the positions to better highlight the contents ( no more basic endgames ) , and to correct some roman .

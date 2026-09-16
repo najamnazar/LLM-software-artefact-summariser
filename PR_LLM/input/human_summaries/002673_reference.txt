@@ -1,0 +1,5 @@
+- extends ` dynamicgroup ` reusing its methods and sensors , including ` entity_filter `
+- operates on its own members for bucketing
+- includes configuration for a periodic rescan of the entity tree
+- fixed an issue where if an entity changed from being selected by the filter to not being selected , it would not be removed from buckets
+- tidy up code , using guava to generate buckets

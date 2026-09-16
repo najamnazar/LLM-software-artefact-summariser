@@ -1,5 +1,0 @@
-in special cases it was possible to have pairs of axes that
-pass our quality thresholds but form invalid symmetry groups .
-now alignments that superimpose a subunit onto itself are forbidden ,
-which should restrict it to the chiral groups .
-also add numerous notes and documentation .

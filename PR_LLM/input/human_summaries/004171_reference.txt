@@ -1,0 +1,9 @@
+**summary : **
+* add dots to the match view to display the amount of extra rp earned that match , mimicing the website .
+* parsing scorebreakdown json slows down scrolling on older devices .
+**issues reference : **
+**test plan : **
+works on my phones
+tests fixed to not fail
+**screenshots : **
+!

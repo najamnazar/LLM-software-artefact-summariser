@@ -1,0 +1,3 @@
+new special exception for no reachable proceed as just no reachable nodes
+0 .
+don t try random node with immediate initiate cluster renewal after that if we got connectiontimeout from proper slot jedis with jedisclustermaxredirectionsexception .

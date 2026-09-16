@@ -1,0 +1,1 @@
+note : this will need tested on pro version - since we have n't built the 2525c/app6b plugins for pro version yet

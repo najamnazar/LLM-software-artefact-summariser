@@ -1,0 +1,4 @@
+for [ bugzid : 0 ] creating new database sg for new relational db instance .
+all relational database created in aws were tied to the same default firewall .
+for [ bugzid : none ] was receiving different error messages when forbidden .
+was a case of forbidden but getting slightly different message from aws .

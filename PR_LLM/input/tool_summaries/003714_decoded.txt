@@ -1,0 +1,1 @@
+javaformatter : split results page printing out into own class .

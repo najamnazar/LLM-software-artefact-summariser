@@ -1,0 +1,1 @@
+add deactivate account api , the same way a logout api exists .

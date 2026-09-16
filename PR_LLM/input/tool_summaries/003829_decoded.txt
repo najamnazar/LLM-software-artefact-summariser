@@ -1,0 +1,1 @@
+corrected map binder for terremark so that it is compatible w/ jclouds version .

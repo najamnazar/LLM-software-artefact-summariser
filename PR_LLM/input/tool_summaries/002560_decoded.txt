@@ -1,0 +1,2 @@
+- remove deprecated uses of guava 0 code , so will compile against 0 .
+- useful for if testing out jclouds version-snapshot locally .

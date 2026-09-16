@@ -1,0 +1,2 @@
+this will allow us to remove .java files from zanata-common-api.jar , which is causing problems for enunciate 0 .
+-- -

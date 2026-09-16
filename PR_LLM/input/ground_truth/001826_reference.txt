@@ -1,6 +1,0 @@
-when running dbdoc a custom change properties are set when
-customchangewrapper.validate is called .
-changes are no longer validated ( for performance reasons ) .
-unfortunately that causes problems if the properties are used in composing the confirmation
-message ( from npes - causing dbdoc to fail - to wrong messages - nulls
-everywhere ) .

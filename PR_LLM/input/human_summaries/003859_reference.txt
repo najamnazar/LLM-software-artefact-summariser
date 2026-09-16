@@ -1,0 +1,1 @@
+this pr addresses performance issues with the droolsalarmcontext handling of alarm snapshotting .

@@ -1,0 +1,3 @@
+*summary of pull request , including references to relevant tickets ( if applicable ) .
+*
+*besides running unit tests , how can the reviewer test your feature / bug fix are there edge cases to be aware of *

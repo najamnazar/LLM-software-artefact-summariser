@@ -1,0 +1,2 @@
+this is probably the first time that one of the pr 's has non-insignificant test changes , the three tests here were not running in the build before but have been renamed to not be ignored .
+( it literally took me this long to realize that the jasmine config file was ignoring anything that was not ending in _spec ... derp )

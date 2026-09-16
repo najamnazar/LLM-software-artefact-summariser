@@ -1,0 +1,2 @@
+added javadoc to class definition .
+change the constructor layout o chain the constructor .

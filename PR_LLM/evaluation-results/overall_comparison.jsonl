@@ -1,0 +1,5 @@
+{"system": "TOOL", "count": 150, "missing_vs_gold": 0, "avg_bert_precision": 0.8765362048149109, "avg_bert_recall": 0.8557892660299937, "avg_bert_f1": 0.8656127580006917, "avg_cosine_similarity": 0.28623382486193866}
+{"system": "QWEN", "count": 150, "missing_vs_gold": 0, "avg_bert_precision": 0.8359178272883098, "avg_bert_recall": 0.848078859647115, "avg_bert_f1": 0.8415600713094076, "avg_cosine_similarity": 0.22353157186355177}
+{"system": "MISTRAL", "count": 150, "missing_vs_gold": 0, "avg_bert_precision": 0.8267513438065847, "avg_bert_recall": 0.8458664627869924, "avg_bert_f1": 0.8358691596984863, "avg_cosine_similarity": 0.21764531364639816}
+{"system": "GPT", "count": 150, "missing_vs_gold": 0, "avg_bert_precision": 0.8243655256430308, "avg_bert_recall": 0.8451803509394328, "avg_bert_f1": 0.834326864083608, "avg_cosine_similarity": 0.23736710953647078}
+{"system": "CLAUDE", "count": 150, "missing_vs_gold": 0, "avg_bert_precision": 0.8121495362122854, "avg_bert_recall": 0.8427991648515065, "avg_bert_f1": 0.8268798859914144, "avg_cosine_similarity": 0.23507177035554386}

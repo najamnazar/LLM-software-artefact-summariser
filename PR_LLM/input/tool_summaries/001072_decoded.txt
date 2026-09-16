@@ -1,0 +1,2 @@
+this is for tests that require an initialized workspace to work .
+the superclass initializes the workspace with one project .

@@ -1,0 +1,1 @@
+updated the names of static fields to be all uppercase .

@@ -1,0 +1,4 @@
+encodingmanager refactoring for encodingmanager .
+encodingmanager encoding with new tagparser .
+create one via :
+create the encodingmanager from the provided tagparser .

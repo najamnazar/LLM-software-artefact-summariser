@@ -1,3 +1,0 @@
-previously , attempting to close a netcdffilewriter that was still in define mode would cause an exception .
-that possibility clearly had n't been planned for and i had to make several different changes to make the operation work !
-tests will follow in a separate commit , on the version branch .

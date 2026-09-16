@@ -1,0 +1,5 @@
+previous pr did n't merge .
+and did n't work together .
+so i dealt with conflicts and fixed that stuff .
+and now you have a single bit fat one , with an impossible code review .
+good luck !

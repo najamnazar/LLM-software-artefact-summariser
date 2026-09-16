@@ -1,2 +1,0 @@
--refactor start/rebind hooks for overriding
-- instead of doing sensorregistry.activate after registering all the sensors , have the sensor polling begin immediately as soon as it is registered .

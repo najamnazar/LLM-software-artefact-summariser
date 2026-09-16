@@ -1,6 +1,0 @@
-for instance , statement create/close loop leads to outofmemory in openjdk/oraclejdk ( finalizer
-queue fills up )
-`` `
--xmx128m , oraclejdk versionu40 , macos , versionghz core i7
-java.lang.outofmemoryerror : gc overhead limit exceeded
-`` `

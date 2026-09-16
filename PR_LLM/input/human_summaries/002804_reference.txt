@@ -1,0 +1,1 @@
+update mapping to not index data references and a few other fields .

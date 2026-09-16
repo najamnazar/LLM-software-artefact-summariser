@@ -1,7 +1,0 @@
-- photovoltaic cell now has a common tooltip text
-- it says ' solar power ' because people search nei for ' solar ' not
-' photovoltaic '
-- support in tooltipaddera for common tooltips of
-iresourcetooltipproviders
-- fixed advanced photovoltaic cell not displaying detailed tooltip text
-shared with photovoltaic cell in vanilla tooltip ( waila was ok )

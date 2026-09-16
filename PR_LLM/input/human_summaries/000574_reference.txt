@@ -1,0 +1,1 @@
+the original fix has been enhanced to remove the circular imports from the wsdl so that subsequent wsdl4j processing will not run into another endless recursion .

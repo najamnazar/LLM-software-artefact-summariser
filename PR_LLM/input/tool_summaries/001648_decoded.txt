@@ -1,0 +1,2 @@
+removed unnecessary enablement .
+removed catalog view from presepective extension , it is already included in prespective .

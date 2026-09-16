@@ -1,0 +1,4 @@
+changes of this pr :
+- migrate the ` attributemanager ` to the bukkit api
+- implement the ` attributable ` interface
+- include modifiers in the computation of attribute values

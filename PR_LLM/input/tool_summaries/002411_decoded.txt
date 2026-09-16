@@ -1,0 +1,1 @@
+removes unnecessary source code such as extra empty lines , superfluous synchronized .

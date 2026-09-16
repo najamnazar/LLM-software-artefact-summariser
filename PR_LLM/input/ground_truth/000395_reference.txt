@@ -1,4 +1,0 @@
-issues fixed :
-* single poster preview is square , should be portrait ( editor is portrait aspet ration , therefore correct )
-* single poster image preview is of very low quality
-* poster collage editor is portrait , it should be square ) ( preview is square , therefore correct )

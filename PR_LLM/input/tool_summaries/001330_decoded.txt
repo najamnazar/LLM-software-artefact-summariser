@@ -1,0 +1,1 @@
+changing the place in the settings screen to show the default folder where droidplanner store it 's data .

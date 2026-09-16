@@ -1,0 +1,6 @@
+- [ x ] add test case ( s )
+- [ x ] update ` changes.txt `
+we encourage pull requests that :
+* add new features to testng ( or )
+* fix bugs in testng
+if your pull request involves fixing sonarqube issues then we would suggest that you please discuss this with the

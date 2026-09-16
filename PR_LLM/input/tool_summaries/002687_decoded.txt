@@ -1,0 +1,2 @@
+add backup accounttype check .
+fix al profile crash caused by butterknife .

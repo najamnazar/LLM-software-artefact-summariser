@@ -1,5 +1,0 @@
-split the monolithic ` stirling ` project into three subprojects :
-- ` stirling-core `
-- ` stirling-fix-console `
-- ` stirling-fix-perftest `
-while at it , rename the fix console to ` fix-console.jar ` , use ` sbt-start-script ` for the fix performance test , and remove ide cruft for eclipse and intellij idea .

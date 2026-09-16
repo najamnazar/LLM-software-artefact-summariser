@@ -1,4 +1,0 @@
-- differentiate highlight types ( allow multiple at once e.g .
-selection and audio )
-- highlight by drawing rect instead of bitmap
-- colors for different highlight types

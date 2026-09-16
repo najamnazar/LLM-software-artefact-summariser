@@ -1,0 +1,3 @@
+remove ` nwbibspatial ` notations 0 and 0 if ` coverage ` exists
+also removes custom labels if both ` coverage and ` nwbibspatial
+are shown to avoid excessive complexity due to added filtering .

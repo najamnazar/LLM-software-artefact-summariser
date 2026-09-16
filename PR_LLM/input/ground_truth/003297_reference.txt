@@ -1,6 +1,0 @@
-localexecutorplugin creates n times more output tasks and run them in
-parallel if number of input tasks is less than min_output_tasks option
-( n &gt; 0 ) .
-default min_output_tasks is same with number of cpu cores .
-this behavior is deterministic as long as min_output_tasks option is not
-changed .

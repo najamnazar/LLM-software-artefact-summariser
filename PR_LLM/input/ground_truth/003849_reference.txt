@@ -1,2 +1,0 @@
-the ` contributing.md ` steps to import the gradle project cause the run configurations to be deleted , so they should n't be mentioned in ` contributing.md ` , instead i added how to recreate them from the gradle tool window properly , so that the debugger works in the run configurations .
-i also added more explicit steps to match the style used in the ` readme ` .

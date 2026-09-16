@@ -1,9 +1,0 @@
-**why **
-archaius1 is a deprecated library that also promotes static access patterns .
-this pr is a first step of many to first decouple the library .
-subsequent prs will address static access patterns .
-**how **
-- upgrade from java version to version
-- move all archaius specific code into ribbon-archaius
-- static clientconfigfactory discoverable via the serviceloader
-- add default values to iclientconfigkey

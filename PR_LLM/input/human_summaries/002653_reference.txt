@@ -1,0 +1,2 @@
+oc-0 remove button is missing on participant matrix event view if permission tags are attached to a form .
+oc-0 reassign button is inactive on participant view event page

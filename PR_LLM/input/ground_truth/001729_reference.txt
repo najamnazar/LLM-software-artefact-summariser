@@ -1,2 +1,0 @@
-this commit adds a simple method for executing a runnable against a shard under a primary permit .
-today there is only a single caller for this method , but this there are two upcoming use-cases for which having this method will help keep the code simpler .

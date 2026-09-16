@@ -1,0 +1,1 @@
+adds a configuration option to limit the maximum size of an output node .

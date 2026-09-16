@@ -1,4 +1,0 @@
-- added a menu item to open online help .
-- changed the delimiter detection behavior to ignore invalid files .
-and added an error message when invalid files or clipboard content is imported .
-- disabled clear data table menu item .

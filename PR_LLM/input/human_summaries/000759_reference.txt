@@ -1,0 +1,2 @@
+add text to the readme about some virus software 's false positive on the windows executable .
+increase version to version for release .

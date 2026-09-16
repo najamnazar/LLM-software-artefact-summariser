@@ -1,0 +1,2 @@
+this fixes the immediate issue .
+there is a remaining issue with kscope ads sometimes not being delivered , which manifests itself as ssl errors , but we 'll log that separately .

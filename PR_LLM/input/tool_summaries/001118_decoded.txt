@@ -1,0 +1,1 @@
+update zh_cn.lang to the zh_cn.lang

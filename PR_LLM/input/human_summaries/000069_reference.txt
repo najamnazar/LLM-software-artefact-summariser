@@ -1,0 +1,2 @@
+serialized out fixed
+auxiliary bash scripts

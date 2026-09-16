@@ -1,7 +1,0 @@
-motivation :
-we did miss to use messageformatter inside locationawareslf4jlogger and so { } was not correctly replaced in log messages when using slf4j .
-this regression was introduced by sha .
-modifications :
-- make use of messageformatter
-- add unit test .
-result :

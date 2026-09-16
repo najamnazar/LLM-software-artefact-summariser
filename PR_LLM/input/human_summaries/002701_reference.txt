@@ -1,0 +1,2 @@
+after that pr distributedlockservicecuratorimpl will support multiple locks .
+isacquiredinthisprocess will be used , so it should be thread-safe .

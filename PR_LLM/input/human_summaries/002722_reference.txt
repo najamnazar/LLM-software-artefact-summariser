@@ -1,0 +1,5 @@
+this pull contains :
+-/xp command
+-/tell command
+-misc .
+cleanup

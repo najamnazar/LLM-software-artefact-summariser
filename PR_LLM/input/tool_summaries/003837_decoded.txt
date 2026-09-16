@@ -1,0 +1,4 @@
+the stored container id gets cleared when we stop the reactor .
+grab it
+before we call ` stopasync ( ) ` to ensure we can kill the container by id
+if and when we have the id available .

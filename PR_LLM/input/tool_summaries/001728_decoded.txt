@@ -1,0 +1,3 @@
+nms-0 snmp configurations in release notes .
+add documentation about snmp-informant changes .
+nms-0 snmp informant configurations

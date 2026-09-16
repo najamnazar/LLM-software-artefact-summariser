@@ -1,0 +1,4 @@
+- implemented ability to read infinity .
+- replaced double conversions with infinity reading .
+- added test case .
+- removed jedis.gettupledset ( ) and replaced it with binaryjedis.get~~binary~~tupledset ( ) .

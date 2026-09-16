@@ -1,0 +1,1 @@
+move custom pages to repository bonita-distrib

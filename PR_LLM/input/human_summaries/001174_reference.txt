@@ -1,0 +1,1 @@
+removes application and bridge networks when no more containers are attached

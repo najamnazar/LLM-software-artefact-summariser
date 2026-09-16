@@ -1,3 +1,0 @@
-- store the label property rather than the slug property in solr
-- use the label property for a filename when sending a file , and change the method signature of the private version of streamdata in fedoracontentservice to use the term ' filename ' rather than slug
-- change fedoraproperty in contentmodelhelper to save the property 's fragment as well as the entire uri

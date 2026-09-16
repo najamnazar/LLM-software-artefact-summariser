@@ -1,0 +1,6 @@
+done
+- prevention of concurrent collection requests for the same user/cloud pair .
+- spaced out collection requests during the refresh period .
+- propagation of timeout from clojure collector to java and up to python cli .
+- enhanced logging .
+todo

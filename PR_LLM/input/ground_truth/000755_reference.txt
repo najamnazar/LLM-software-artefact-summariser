@@ -1,4 +1,0 @@
-* add an optional parameter to the classpropertyvaluesresource api to get the exact match value .
-* add a getvalue method to the classpropertyvaluesprovider to get the exact match value .
-* use the exact match parameter when fetching selected items in the property suggest picker .
-* use the exact match query for selected values in users or groups suggest picker .

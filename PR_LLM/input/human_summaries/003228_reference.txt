@@ -1,0 +1,3 @@
+adds support for istio
+- creates ` istioassistant `
+- integrates with ` istio-java-api `

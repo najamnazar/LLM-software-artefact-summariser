@@ -1,0 +1,2 @@
+changed logos to use company url from json parsed data
+ca n't really test this yet since no company has a url uploaded on heroku .

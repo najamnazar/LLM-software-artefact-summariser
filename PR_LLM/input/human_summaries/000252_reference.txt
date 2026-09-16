@@ -1,0 +1,3 @@
+the main advantage of a build pattern is that we can configure the encodingmanager first and then create it .
+at the moment all information needs to be injected via the constructor .
+we could use a ' emconfiguration ' but the builder pattern is usually also less code .

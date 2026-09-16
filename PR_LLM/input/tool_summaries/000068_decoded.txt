@@ -1,0 +1,11 @@
+enforce max size limit after block resolution
+previously i was only checking size as we rendered individual output
+nodes .
+this helped prevent any one node from getting too big and short
+circuiting the render , but it was possible to have output that was too
+big when adding up the output nodes and rendered blocks .
+.
+this the prevent any output as from the too big than too
+circuiting when adding the one node was too individual output .
+this the render .
+this it was adding to have ` output that

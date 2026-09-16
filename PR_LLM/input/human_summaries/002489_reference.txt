@@ -1,0 +1,1 @@
+also renamed pages for my contributed analyzers , in order to shorten the urls , while keeping them unambiguous and readable .

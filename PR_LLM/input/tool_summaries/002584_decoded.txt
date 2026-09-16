@@ -1,0 +1,2 @@
+fixes off by one error in trimdistribution .
+fixing some broken test , not ready for re-review .

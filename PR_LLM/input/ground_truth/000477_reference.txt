@@ -1,3 +1,0 @@
-now that the src for tokenautocomplete is in familiar , add a function which properly clears all objects and stray text .
-removed the kludgy wrapper which we had been using for clearing fields .
-cleartextandtokens ( ) is modeled on removeobject ( ) , but for all objects , and adds code to clear stray text too .

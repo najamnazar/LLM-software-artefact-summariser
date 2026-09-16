@@ -1,2 +1,0 @@
-it was possible that if job is killed just before the job gets inside the sync block currently in ` delayexecution ( ) ` , it can remain in wait for the full ` delaystartms ` instead of exiting .
-this is fixed by bringing also the checks for ` iskilled ( ) ` into the sync block in ` delayexecution ( ) ` .

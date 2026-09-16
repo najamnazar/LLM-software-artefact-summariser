@@ -1,3 +1,0 @@
-this enhancement is to crop the words that exceed the width of the cell .
-if the property is not set , it will wrap around cell and expand the
-height of the row and table changing the overall layout

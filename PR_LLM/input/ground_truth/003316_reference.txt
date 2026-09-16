@@ -1,5 +1,0 @@
-- database now only loads when not present or needs to upgrading via the database version
-- added setpa crashlytics key
-- crashlytics disabled for debug builds , reduce noise when testing locally
-- database uses force upgrade option as there are no update scripts and a read-only db is uesd
-- updated version

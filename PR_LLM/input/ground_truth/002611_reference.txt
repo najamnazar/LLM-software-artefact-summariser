@@ -1,3 +1,0 @@
-- refactor persistence of temporal fields - move persistence methods from channel/channelgrouptranslators
-to the temporaltitle/imagetranslator
-- clean up imports on several tests

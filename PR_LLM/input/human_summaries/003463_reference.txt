@@ -1,0 +1,6 @@
+this pr add tests for ` commontokenstream ` .
+to testing purpose , these two files are also added .
+- testing_lexer_b_test.go
+- testing_util_test.go
+- testing_assert_test.go &lt; -- assert library which is almost same as java assertions .
+( updated : as thankful comment , i removed dependency to assert library )

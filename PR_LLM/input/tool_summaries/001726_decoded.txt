@@ -1,0 +1,4 @@
+added an arcgis pro project package to the
+military-features-data\\data\\mil2525d\\sample_data\\projects folder .
+this file is the layer package
+containing the feature templates for the military features geodatabase .

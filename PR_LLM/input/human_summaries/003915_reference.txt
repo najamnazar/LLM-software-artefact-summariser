@@ -1,0 +1,7 @@
+improved earth dynamic sourcing :
+- if an earth source could not directly be found then dynamic sourcing will attempt to search for a nearby valid earth block to use instead .
+earthsmash no longer uses dynamic sourcing :
+- earthsmash was behaving weirdly with dynamic sourcing because it requires the user to release shift to activate the ability .
+earthsmash has been reverted to its previous version .
+blocksource distance error fix :
+- fixed a bug that was causing errors with distance ( )

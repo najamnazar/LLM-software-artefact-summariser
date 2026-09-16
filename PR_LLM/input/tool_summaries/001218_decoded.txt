@@ -1,0 +1,1 @@
+setop , and riakset now have tostring ( ) methods for printing .

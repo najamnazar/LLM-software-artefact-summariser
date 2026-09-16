@@ -1,0 +1,3 @@
+add a providercombobox that allows specifying the binding name of an selectableentryprovider .
+selectableentryprovider is then responsible for returning the list of id/name pair to be selectable in the combo box .
+example can be seen by looking at test/demo providercombocapabilitydescriptor/realmsprovider or the real ones from sonatype/nexus-pro/pull/97 .

@@ -1,0 +1,2 @@
+do n't attempt to query hrs earnings statements in the case where hrs earnings statements are not yet expected to work .
+avoids a premature error to employees .

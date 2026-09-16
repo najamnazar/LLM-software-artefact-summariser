@@ -1,0 +1,3 @@
+removal of the hack , and programmatically install jul level change listener .
+to not have to much with existing logback xml configurations , but
+have it ' working out of the box ' .

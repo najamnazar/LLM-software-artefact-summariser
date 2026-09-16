@@ -1,0 +1,2 @@
+butterknife was crashing due a call which was not set .
+the backup had no account type check which caused crashes

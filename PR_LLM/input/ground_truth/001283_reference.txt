@@ -1,2 +1,0 @@
-atom lexing was parsing the atom_start or operator first and only if atom_start was the longer match , did it try to match the atom_middle and atom_end .
-i removed this extra state and have atom match all three atom_\\* parts using the same pattern as used in identifier , which means that operators that prefix longer atoms no longer stop the lexing of the atom fragment .

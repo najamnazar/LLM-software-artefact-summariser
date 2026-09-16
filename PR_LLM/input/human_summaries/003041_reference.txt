@@ -1,0 +1,5 @@
+patch suggested by jr ruggentaler taken from mailing list from 0 .
+dec 0 :
+&gt; the erxdatabasecontextdelegate class method databasecontextshouldhandledatabaseexception ( eodatabasecontext databasecontext , throwable throwable ) only reconnects to the database if the exception message contains the string ' _obtainopenchannel ' .
+the string looks like something from the early woadaptor .
+i changed the code to make the string a property and changed the code to do string.matches ( ) so anyone can configure which messages the erxdatabasecontextdelegate will reconnect on .

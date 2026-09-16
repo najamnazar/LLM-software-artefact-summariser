@@ -1,4 +1,0 @@
-ispn-0 use major.minor in docs/javadocs instead of the full version
-ispn-0 archive generated html docs in jenkins
-ispn-0 default maven target in build script should be ' clean install '
-shrink documentation images by using indexed mode

@@ -1,0 +1,1 @@
+move setup/test commands into makefile .

@@ -1,0 +1,3 @@
+this is in response to several performance problems discovered with connection management in the version mina release .
+there are two commits here : one to revert the original upgrade , and another to remove an extraneous override that was added later .
+refer to ticket for details .

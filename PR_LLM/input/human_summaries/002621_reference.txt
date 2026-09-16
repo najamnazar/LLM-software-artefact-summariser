@@ -1,0 +1,1 @@
+this pr captures my understanding of the different ` moduletypes ` .

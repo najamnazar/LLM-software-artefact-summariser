@@ -1,0 +1,1 @@
+dodano labelk dla komunikatu w edytorze pojawiaj cego si w wypadku brakuj cej templaty .

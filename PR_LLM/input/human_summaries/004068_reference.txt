@@ -1,0 +1,1 @@
+this pr provides support for statelessform based on the wicket statelessform .

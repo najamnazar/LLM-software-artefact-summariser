@@ -1,5 +1,0 @@
-the rabbitmq network enters an unhappy state if messages are being produced and not consumed .
-but the cluster is in a very bad state when messages can no longer be produced .
-when messages are dropped on the floor the cluster can enter an inconsistent state .
-this automatically quiesces the cluster to minimize the damage .
-ref t54274 .

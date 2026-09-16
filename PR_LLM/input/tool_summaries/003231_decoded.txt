@@ -1,0 +1,12 @@
+make default docker client thread safe .
+only available in docker api & gt ; = if this is the last manager or gt .
+update a parallel forcefully .
+force a new swarm .
+only if this safe is available .
+leave a swarm docker client & gt in the docker api .
+make the default swarm .
+only make default client thread .
+this pr is required for the docker docker client .
+todo :
+- make ` [UNK] ` and ` swarm ` .
+- ` default `

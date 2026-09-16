@@ -1,0 +1,3 @@
+implemented ability to read infinity .
+replaced double conversions .
+added test case .

@@ -1,6 +1,0 @@
-this delays the resolution of the user specfied agent
-configs so that the mappings lists will merge properly
-if multiple files are specified .
-to aid in debugging the final loaded config is now logged
-and the jmx query results and types can be enabled at the
-trace level .

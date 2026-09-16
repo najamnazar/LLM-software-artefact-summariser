@@ -1,0 +1,1 @@
+adapt message for http client : upload/download

@@ -1,0 +1,2 @@
+` headervalueexception ` s thrown when retrieving the languages from the
+headers and return a ` 0 - bad request ` to clients instead of a server error .

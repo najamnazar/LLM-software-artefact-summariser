@@ -1,0 +1,3 @@
+enabling authentication interceptor for business-rules , status-dashboard , job-manager , ha and siddhi-apps api
+yes
+- confirmed that this pr does n't commit any keys , passwords , tokens , usernames , or other secrets yes

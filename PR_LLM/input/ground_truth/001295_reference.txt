@@ -1,2 +1,0 @@
-to mainain configuration compatibility , set original port_range value when parsing schemas prior to wf11 .
-otherwise , migrated configuration containing facbricated channels , will encounter port conflicts at runtime , as the shared transport feature on which it previously relied no longer exists .

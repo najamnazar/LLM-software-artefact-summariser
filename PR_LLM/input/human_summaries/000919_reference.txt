@@ -1,0 +1,2 @@
+this changes is useful when we release a new version of vraptor , changing version in vraptor filter .
+at this time this file needs to be changed manually , and in some time was forgotten .

@@ -1,6 +1,0 @@
-this implements mp rest client version milestone 0 which includes :
-* ` removecontext ` method in ` asyncinvocationinterceptor ` interface .
-* new ` restclientlistener ` interface for intercepting client instances .
-* portable connect and read timeout properties .
-* invoking cdi interceptors .
-this commit includes the runtime changes , some unit test changes , updates to the systests to include the latest tck test cases , etc .

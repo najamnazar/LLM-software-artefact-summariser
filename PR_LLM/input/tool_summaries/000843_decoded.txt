@@ -1,0 +1,2 @@
+this shows that the regular expression logic correctly identifies the list and removes / and retains \ and \
+.

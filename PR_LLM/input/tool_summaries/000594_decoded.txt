@@ -1,0 +1,2 @@
+currently they apply the specified rotation to the existing orientation
+and are functionally indistinguisable from the rotate ( ) methods .

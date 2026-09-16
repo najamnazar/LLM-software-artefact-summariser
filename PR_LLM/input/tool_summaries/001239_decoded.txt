@@ -1,0 +1,1 @@
+fix null crash when anime/manga lists were n't updated right .

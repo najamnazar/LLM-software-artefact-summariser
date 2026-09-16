@@ -1,0 +1,2 @@
+generates a fields class for each class in repo .
+this is useful to get field names of searchrequest , searchresponse , repoelement and repolicense in constants

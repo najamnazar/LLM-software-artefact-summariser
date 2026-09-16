@@ -1,5 +1,0 @@
-this will be used by loadbalancer plugins that delegates to another ,
-which is what the new request routing ( go/grpc-request-routing-design )
-requires .
-this will also be used to wrap loadbalancers to add
-client-side health-checking functionality .

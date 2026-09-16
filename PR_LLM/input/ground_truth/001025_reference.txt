@@ -1,3 +1,0 @@
--when rename context parameter , related field in analysis need to be
-updated
-- when imported items didnot contains used context , make it buildin

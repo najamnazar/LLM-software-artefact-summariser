@@ -1,0 +1,2 @@
+the user level api ` setupdate ` and ` registerupdate ` classes now
+have string convenience methods .

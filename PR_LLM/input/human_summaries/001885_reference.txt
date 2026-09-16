@@ -1,0 +1,3 @@
+disable the abiquo build until the dependencies are in maven central .
+the repository where the dependencies are right now is experiencing some issues making the dependencies inaccessible .
+we should not depend on other maven repositories rather than maven central , so this build should be disabled until the dependencies are properly populated .

@@ -1,5 +1,0 @@
-the bnd_include property can be set in gradle.properties to configure
-a set of projects that must always be included in the build during
-settings.gradle processing by the bndworkspaceplugin .
-the value of the
-property must be a comma-separated list of project names to include .

@@ -1,0 +1,2 @@
+adds support for pooled or queued state machines to be used in classes containing queued methods .
+the change also includes a better separation of the code generation templates ( most code generation needed is now in queued_methods.ump ) .

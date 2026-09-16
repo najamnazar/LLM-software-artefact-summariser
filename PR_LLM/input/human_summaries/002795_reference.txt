@@ -1,0 +1,4 @@
+while testing notifications , i discovered my account 's healthcode was changing in the local environment .
+after verifying this has not happened in production , and tracking down why it occurs , it comes down to the fact we 're deleting records from the key mapping table , healthcode , during the tests .
+this would be catastrophic if it happened in any other environment .
+i do n't know how these tests would run anywhere else , but i 'm removing the use of this method so it does n't happen locally .

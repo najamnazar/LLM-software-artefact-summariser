@@ -1,0 +1,4 @@
+this pr allows the ability to use the columns for all options
+create header if we need to create columns for ` all options .
+create header column if we needed .
+add ' other

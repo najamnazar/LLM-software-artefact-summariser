@@ -1,3 +1,0 @@
-added validation checks for authority and clientid when constructing tokencacheitem from ssostateserializer
-flipped the comparision check for authority in ismultiplertsmatchinggivenappandresource method
-unit test cases

@@ -1,5 +1,0 @@
-the texture coordinates for the plane was rotated by default causing postprocessingrenderer to display the framebuffer texture incorrectly .
-also , other general textures on the plane would appear rotated .
-this is a simple fix that corrects the texture coordinates .
-!
-!

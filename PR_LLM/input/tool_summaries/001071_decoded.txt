@@ -1,0 +1,1 @@
+upgrade margin issues when viewing full task titles , fixed a crash in draggable task 0 and send creation date when saving task .

@@ -1,2 +1,0 @@
-` nodesstatsintegrationtest ` was flaky because the tests fetching the nodes stats of a specifc node did n't guarantee whether the retrieved node was a data-only or a master-only node .
-this pr changes the test to explicitly start a data-only node in these tests and use its nodes stats for their assertions .

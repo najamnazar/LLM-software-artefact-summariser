@@ -1,0 +1,1 @@
+to allow users to easily add or remove data collections which support snmp informant extension packages , the configurations are splitted in the same way as snmp provides extension packages .

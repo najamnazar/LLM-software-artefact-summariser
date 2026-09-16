@@ -1,6 +1,0 @@
-if you happen to run cliconfigtest # testconfigfromfile ( ) on a host that
-has the environment variable ` helios_master ` set , the test will fail as
-it implicitly assumes no environment variables are set .
-to be safe when
-running the test , always wipe out whatever env vars are inherited by the
-process .

@@ -1,0 +1,1 @@
+added label for template loading error in editor .

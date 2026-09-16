@@ -1,0 +1,2 @@
+vector3.normalize 's contract stipulates that it will return the original magnitude of the vector ; currently it returns the reciprocal of the magnitude .
+similarly , the setrotation methods in atransformable should set the absolute value of morientation from the supplied arguments , but currently apply the rotation to the existing orientation and are therefore indistinguishable from the rotate ( ) methods .

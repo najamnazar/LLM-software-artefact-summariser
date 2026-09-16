@@ -1,0 +1,5 @@
+this pull request fixed :
+0 ) starttime now is correctly 0 ) previously this module only monitor one of packet performance and reset the counter , which does n't make sense at all as it is designed for ' cumulative time bucket ' -- now it count all of packets and computes the performance metrics ( i.e .
+avg time in a cumulative amount of time ) .
+0 ) also rewrite the rest api .
+please let me know your thoughts , thanks !

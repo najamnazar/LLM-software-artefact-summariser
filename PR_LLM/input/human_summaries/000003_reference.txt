@@ -1,0 +1,3 @@
+- rename excelwizard to uploadwizard
+- extract generic wizardmodel
+- various fixes and improvements

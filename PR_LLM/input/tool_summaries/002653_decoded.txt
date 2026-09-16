@@ -1,0 +1,1 @@
+oc-0 reassign button is inactive on participant matrix event view if permission tags are attached to a form .

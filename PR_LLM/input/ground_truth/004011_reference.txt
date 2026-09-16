@@ -1,5 +1,0 @@
-the ' as ' and ' getstateas ' functions should return an instance of the
-given type ( or null ) .
-it does not make sense that someone calls e.g .
-` item.getstateas ( decimaltype.class ) ` and needs to cast the return value .
-the return value should already use the correct type .

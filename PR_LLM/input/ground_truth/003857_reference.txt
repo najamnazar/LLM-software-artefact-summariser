@@ -1,4 +1,0 @@
-- changed the pipeline configuration to keep track of http state so that observer.oncompleted ( ) will be called appropriately .
-- httpprotocolhandler.configure ( ) will be called after channel is established , instead of in the middle of channel read .
-- remove the code from observablehttpclient to dynamically install sse decoder .
-instead , sse handling is done by specifying ssehandler at execute ( ) call .

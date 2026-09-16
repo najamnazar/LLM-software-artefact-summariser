@@ -1,0 +1,2 @@
+removed dialogtools activity
+refactor dialog to singleton pattern

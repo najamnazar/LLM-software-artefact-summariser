@@ -1,0 +1,5 @@
+name .
+hadoop cluster test fails when ignore.classes property exists but is not set
+- change ignored.classes property to ignore.classes
+- add check for empty property
+- add unit test

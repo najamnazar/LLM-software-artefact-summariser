@@ -1,0 +1,2 @@
+- this is intended to show no interaction with merlin service
+- it does this , but for the wrong reason ( intent == null ) .

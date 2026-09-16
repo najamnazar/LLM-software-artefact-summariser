@@ -1,0 +1,2 @@
+enabling interceptor for business-rules , status-dashboard ,
+ha and siddhi-apps api .

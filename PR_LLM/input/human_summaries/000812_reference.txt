@@ -1,0 +1,2 @@
+fixed [ 0 ] and added short-circuiting , instead of evaluating both ' then ' and ' else ' expressions prior to ' if ' condition .
+please review and merge .

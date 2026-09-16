@@ -1,8 +1,0 @@
-to enable a smooth transition from servoregistry to
-atlasregistry for internal users , this change detects
-whether a new class in the internal client is present
-and sets the registry accordingly .
-this should allow
-us to release the newer version of spectator and have
-some users pick it up before the new version of the
-client is released .

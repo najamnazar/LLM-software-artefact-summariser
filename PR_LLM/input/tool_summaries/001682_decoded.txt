@@ -1,0 +1,3 @@
+changed of constructor from private to protected .
+redirectaction.java - changed visibility of constructor to protected , added protected setters .
+redirectactiontests.java - added test for setters .

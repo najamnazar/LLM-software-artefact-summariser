@@ -1,0 +1,2 @@
+kfspts-0 : add everify attribute to ezra integration .
+made some updates based on code integration .

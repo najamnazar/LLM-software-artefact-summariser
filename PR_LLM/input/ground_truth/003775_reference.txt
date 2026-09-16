@@ -1,5 +1,0 @@
-this commit provides an update to the atom-hopper pom files to allow for clean compilation on a stock jdk version installation .
-in addition , this commit adds a configuration that is compliant with what is expected of the already existing project model .
-this commit has been tested on :
-- java version : version_03 , vendor : oracle corporation
-- java version : version_45 , vendor : sun microsystems inc .

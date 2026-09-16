@@ -1,7 +1,0 @@
-0 when sql datasource created via data access wizard has japanese columns in it .
-( 5.4 suite )
-- list of unacceptable characters was added for validateid ( ) method
-- uts
-- mql_reserved_chars constant was added
-- updated the headers
-*as far as i know static imports should be allowed in this context .

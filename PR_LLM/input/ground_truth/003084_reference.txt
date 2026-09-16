@@ -1,5 +1,0 @@
-- cleaned base-level build.properties of unnecessary declarations
-- removed eula from base-level build
-- removed misleading comment lines
-- narrowed down assemble target to a single-line of dependency declaration
-- removed junit/mockito unnecessary dependencies from base-level ivy

@@ -1,5 +1,0 @@
-* supported mime type checking is now done in include method of binaryfilebatchindexer .
-* logging entries of updates/deletes increased to info .
-* added failed_updates_and_deletes and successful_updates_and_deletes properties to indexingstatus .
-* added back old search api v1 to server .
-now the server can both accept api v1 and v2 requests .

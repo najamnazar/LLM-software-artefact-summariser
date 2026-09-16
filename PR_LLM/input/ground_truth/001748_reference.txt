@@ -1,2 +1,0 @@
-previously we use symlink in execution dir .
-symlink will be invalidated and execution will thus fail when source project dir is deleted by other executors when multiple executors are running .

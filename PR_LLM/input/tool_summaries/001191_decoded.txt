@@ -1,0 +1,1 @@
+clarify which types of file to relax the file type filter .

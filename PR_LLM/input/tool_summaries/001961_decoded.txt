@@ -1,0 +1,3 @@
+move resources and tests from web project to distrib project
+conflicts :
+custom-pages/layout-page/pom.xml

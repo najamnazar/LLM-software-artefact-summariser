@@ -1,0 +1,3 @@
+there were a couple bugs with how taskrunner keeps track of and stops
+containers .
+these would also cause jobexpirationtest to fail .

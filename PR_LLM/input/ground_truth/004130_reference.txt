@@ -1,6 +1,0 @@
-update parselength to be more strict and precise and also support inches when feet are specified .
-inches are actually mandatory per the wiki , but not all mappers give them .
-the new function supports them when they are specified ( so handles them as optional ) .
-sorry , i ca n't build osmand so this patch is untested .
-please try it out and then merge .
-thanks .

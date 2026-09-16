@@ -1,0 +1,1 @@
+fixed triage view on triage page .

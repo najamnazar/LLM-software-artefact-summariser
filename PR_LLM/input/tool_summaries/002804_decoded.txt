@@ -1,0 +1,2 @@
+do not index service offers .
+apply indexed=false to normal fields not just objects .

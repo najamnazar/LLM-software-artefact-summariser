@@ -1,3 +1,0 @@
-when ` connectionresult.geterrorcode ( ) == connectionresult.api_unavailable ` , this means we are on an unsupported device and we should not attempt to update the data layer .
-however , since that status is unlikely to change over the course of the app 's lifecycle , creating a warning message each and every time this happens is unnecessary .
-instead , we can do a simple verbose statement that does not spam logcat unless specifically requested .

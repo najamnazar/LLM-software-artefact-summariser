@@ -1,3 +1,0 @@
-when i want to e2e test android app with google play services , appium-adb ca n't recognize avd with google api , test failed .
-checkavdexist ` android list avd -c ` command does not return avd list with google api .
-so i change ' android list avd -c ' to ' emulator -list-avds ' .

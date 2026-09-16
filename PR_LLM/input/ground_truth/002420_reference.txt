@@ -1,4 +1,0 @@
-by default , the riak client uses the json converter , this patch
-changes that so that by default the json converter is used , unless
-the stored/fetched object is an iriakobject , when the passthroughconverter
-will be used instead .

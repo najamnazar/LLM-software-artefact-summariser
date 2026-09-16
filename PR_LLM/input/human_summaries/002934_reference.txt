@@ -1,0 +1,2 @@
+if user provides non existing folder , invalid host , incorrect credentials - than exception will be generated and user will see error in report
+creation of hierarchicalelement object is moved out to buildprocess ( ) method , as a result exception is logged into error report

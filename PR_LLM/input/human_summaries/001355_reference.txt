@@ -1,0 +1,3 @@
+added test for methods :
+- ` setclass `
+- ` setstyle `

@@ -1,3 +1,0 @@
-fixing testcalculatedmemberincubeviaapi - new calculated members need to be added to the correct list
-fixing testcalculatedmemberincubewithprops - loading needs to be true while creating new calculated members .
-fixing testcyclefalsepositive - customer_id is not a valid column in the store table .

@@ -1,0 +1,1 @@
+files includes svg and png formats of favicon , logotypes and adaptive icon .

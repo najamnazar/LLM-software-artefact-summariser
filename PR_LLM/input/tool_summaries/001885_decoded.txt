@@ -1,0 +1,2 @@
+disabled abiquo build until deps are in maven central .
+added comment to force a new build

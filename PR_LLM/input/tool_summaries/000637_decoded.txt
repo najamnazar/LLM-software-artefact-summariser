@@ -1,0 +1,2 @@
+by default , we should cache the result of whether the device is rooted or not , as the result is
+unlikely to change between app launches and the calculation requires io .

@@ -1,0 +1,1 @@
+so that both httpaction and redirectaction may be extended , the visibility of the constructors need to be changed from private to protected .

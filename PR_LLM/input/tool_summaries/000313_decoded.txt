@@ -1,0 +1,2 @@
+use new foreach method in thingregistryimpl .
+do n't use foreach when notifying .

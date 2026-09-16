@@ -1,0 +1,1 @@
+allows queued or pooled state machines to be used in the same class as queued methods .

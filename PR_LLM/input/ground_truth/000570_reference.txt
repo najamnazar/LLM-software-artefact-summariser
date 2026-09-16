@@ -1,8 +1,0 @@
-calling into mimeutil2 hides a point where
-congestion might happen , as all these calls
-are hitting a single j.u.properties instance .
-this change adds a cache a top of mimeutil2
-( actually in nexus component wrapping it ) ,
-and should reduce actual calls to mimeutil2 .
-the calls to guess mime types are happening often , at high rate .
-it happens at every creation of storagefileitem .

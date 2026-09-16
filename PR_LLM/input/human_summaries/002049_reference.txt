@@ -1,0 +1,4 @@
+the way ids are handled in jack make this change dirty .
+it always assumes that id is an existing column based on rails convention .
+unfortunately there is no such assumption in redshift and supporting this requires a huge refactoring .
+discovered and fixed a potential bug in code generation : discard columns named tbl and id as they may conflict with existing class members

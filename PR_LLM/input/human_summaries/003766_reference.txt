@@ -1,0 +1,4 @@
+add parameters for job page filter :
+server node uuid ( *only on cluster mode instances* ) and scheduled : ` true ` , ` false ` or ignore filter : ` all `
+clustermode disabled :
+clustermode enabled :

@@ -1,0 +1,2 @@
+document module types .
+merge core and plugin types .

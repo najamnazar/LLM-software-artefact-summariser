@@ -1,5 +1,0 @@
-constraints create using separate transactions and separate commands .
-it can be the case that index command was already executed and the index is there
-while actual constraint transaction is not yet/longer there .
-this pr updates only consistency checker to ignore such indexes and
-only warn about those instead of claim about store inconsistency .

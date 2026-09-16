@@ -1,3 +1,0 @@
-the bug happend only on some mobile devices because clicking on a completions element would
-trigger a scroll event of the page before the click event was triggered .
-the following click event would hold the completions div as target instead of the selected row .

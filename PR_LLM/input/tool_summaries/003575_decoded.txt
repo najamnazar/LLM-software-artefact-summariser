@@ -1,0 +1,3 @@
+added a set phrase fields macro to enable sloppy phrase matching .
+also added some tie breaking and min match parameter .
+also tie breaker parameter and min should match .

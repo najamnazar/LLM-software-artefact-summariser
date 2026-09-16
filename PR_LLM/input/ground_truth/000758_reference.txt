@@ -1,3 +1,0 @@
-do not try to recover native label scan store on cc .
-allow native scan store to shutdown even if init failed .
-cleanup in recoverrequiredchecker .

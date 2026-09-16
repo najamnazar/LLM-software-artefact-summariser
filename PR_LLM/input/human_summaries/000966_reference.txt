@@ -1,0 +1,2 @@
+this updates the old plone links to use the new website urls and removes unused extlinks and updates the downloads and javadoc links to version.x
+no decision has been made yet re : the future status of downloads.oo.org

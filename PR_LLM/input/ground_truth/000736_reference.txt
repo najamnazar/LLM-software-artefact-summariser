@@ -1,2 +1,0 @@
-restws-0 personattributeresource rest api includes hydratedobject property which takes uuid/object representation of attributables
-restws-0 personattributetyperesource should return hydrated concept in its full representation

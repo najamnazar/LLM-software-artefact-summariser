@@ -1,0 +1,3 @@
+- removed redundant dependency declarations
+- moved log4j and slf4j-over-log4j to test scope , otherwise they end up in the jax-rs implementations war files
+- removed codehaus jackson from jax-rs version war file with cdi .

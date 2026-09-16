@@ -1,0 +1,5 @@
+- added option to save and load colheader filters
+- existing saved filters are overwritten if same name is specified on save .
+- added apply quickview option in matrix , to quickly load a filter/column layout
+- included the most recent changes to the editanimalplugin .
+passes local selenium testing ; )
