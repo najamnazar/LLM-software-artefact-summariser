@@ -6,69 +6,79 @@ EVALUATION SUMMARY: Generated vs Human Summaries
 NLG:
   Classes Evaluated: 150
   Avg Cosine Similarity: 0.1749 (±0.0907)
-  Avg BERT Precision: 0.8327
-  Avg BERT Recall: 0.8576
-  Avg BERT F1: 0.8446 (±0.0237)
+  Avg BERT Precision: 0.0072
+  Avg BERT Recall: 0.1550
+  Avg BERT F1: 0.0791 (±0.1402)
+  BERTScore variant: roberta-large, baseline-rescaled
 
 SWUM:
   Classes Evaluated: 150
-  Avg Cosine Similarity: 0.2525 (±0.1103)
-  Avg BERT Precision: 0.8965
-  Avg BERT Recall: 0.8645
-  Avg BERT F1: 0.8799 (±0.0175)
+  Avg Cosine Similarity: 0.2589 (±0.1161)
+  Avg BERT Precision: 0.2095
+  Avg BERT Recall: 0.2145
+  Avg BERT F1: 0.2106 (±0.1461)
+  BERTScore variant: roberta-large, baseline-rescaled
 
-LLM (Claude) (Claude Sonnet 4.6):
+LLM (Claude) (anthropic/claude-sonnet-4.6):
   Classes Evaluated: 150
-  Avg Cosine Similarity: 0.3111 (±0.1150)
-  Avg BERT Precision: 0.8532
-  Avg BERT Recall: 0.8956
-  Avg BERT F1: 0.8738 (±0.0183)
+  Avg Cosine Similarity: 0.3064 (±0.1105)
+  Avg BERT Precision: 0.1288
+  Avg BERT Recall: 0.3764
+  Avg BERT F1: 0.2503 (±0.1043)
+  BERTScore variant: roberta-large, baseline-rescaled
 
-LLM (GPT) (GPT-5.4 Mini):
+LLM (GPT) (openai/gpt-5.4-mini):
   Classes Evaluated: 150
-  Avg Cosine Similarity: 0.2582 (±0.0992)
-  Avg BERT Precision: 0.8685
-  Avg BERT Recall: 0.8863
-  Avg BERT F1: 0.8772 (±0.0167)
+  Avg Cosine Similarity: 0.2585 (±0.0973)
+  Avg BERT Precision: 0.2258
+  Avg BERT Recall: 0.3304
+  Avg BERT F1: 0.2782 (±0.1005)
+  BERTScore variant: roberta-large, baseline-rescaled
 
-LLM (Mistral) (Mistral Small 2603):
+LLM (Mistral) (mistralai/mistral-small-2603):
   Classes Evaluated: 150
   Avg Cosine Similarity: 0.3071 (±0.1167)
-  Avg BERT Precision: 0.8618
-  Avg BERT Recall: 0.8925
-  Avg BERT F1: 0.8768 (±0.0169)
+  Avg BERT Precision: 0.1800
+  Avg BERT Recall: 0.3619
+  Avg BERT F1: 0.2699 (±0.0999)
+  BERTScore variant: roberta-large, baseline-rescaled
 
-LLM (Qwen) (Qwen3.7):
+LLM (Qwen) (qwen/qwen3.7-plus):
   Classes Evaluated: 150
-  Avg Cosine Similarity: 0.2974 (±0.1186)
-  Avg BERT Precision: 0.8590
-  Avg BERT Recall: 0.8897
-  Avg BERT F1: 0.8740 (±0.0173)
+  Avg Cosine Similarity: 0.2868 (±0.0987)
+  Avg BERT Precision: 0.2559
+  Avg BERT Recall: 0.3524
+  Avg BERT F1: 0.3042 (±0.1085)
+  BERTScore variant: roberta-large, baseline-rescaled
 
-LLM (Claude NC):
+LLM (Claude NC) (anthropic/claude-sonnet-4.6, narrative context):
   Classes Evaluated: 150
-  Avg Cosine Similarity: 0.3042 (±0.1092)
-  Avg BERT Precision: 0.8527
-  Avg BERT Recall: 0.8944
-  Avg BERT F1: 0.8730 (±0.0169)
+  Avg Cosine Similarity: 0.3105 (±0.1133)
+  Avg BERT Precision: 0.1248
+  Avg BERT Recall: 0.3751
+  Avg BERT F1: 0.2475 (±0.1050)
+  BERTScore variant: roberta-large, baseline-rescaled
 
-LLM (GPT NC):
+LLM (GPT NC) (openai/gpt-5.4-mini, narrative context):
   Classes Evaluated: 150
-  Avg Cosine Similarity: 0.2590 (±0.1003)
-  Avg BERT Precision: 0.8695
-  Avg BERT Recall: 0.8865
-  Avg BERT F1: 0.8778 (±0.0174)
+  Avg Cosine Similarity: 0.2589 (±0.1000)
+  Avg BERT Precision: 0.2252
+  Avg BERT Recall: 0.3287
+  Avg BERT F1: 0.2770 (±0.0994)
+  BERTScore variant: roberta-large, baseline-rescaled
 
-LLM (Mistral NC):
+LLM (Mistral NC) (mistralai/mistral-small-2603, narrative context):
   Classes Evaluated: 150
   Avg Cosine Similarity: 0.3041 (±0.1096)
-  Avg BERT Precision: 0.8635
-  Avg BERT Recall: 0.8930
-  Avg BERT F1: 0.8779 (±0.0168)
+  Avg BERT Precision: 0.1901
+  Avg BERT Recall: 0.3648
+  Avg BERT F1: 0.2765 (±0.0998)
+  BERTScore variant: roberta-large, baseline-rescaled
 
-LLM (Qwen NC):
-  Classes Evaluated: 149
-  Avg Cosine Similarity: 0.2959 (±0.1191)
-  Avg BERT Precision: 0.8603
-  Avg BERT Recall: 0.8904
-  Avg BERT F1: 0.8750 (±0.0181)
+LLM (Qwen NC) (qwen/qwen3.7-plus, narrative context):
+  Classes Evaluated: 150
+  Avg Cosine Similarity: 0.2816 (±0.1086)
+  Avg BERT Precision: 0.2493
+  Avg BERT Recall: 0.3460
+  Avg BERT F1: 0.2978 (±0.1105)
+  BERTScore variant: roberta-large, baseline-rescaled

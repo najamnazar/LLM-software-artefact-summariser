@@ -1,7 +1,7 @@
 {
   "project_name" : "spring-framework/AbstractFactory",
   "swum_version" : "1.0",
-  "generated_timestamp" : 1780917880853,
+  "generated_timestamp" : 1789807088602,
   "class_summaries" : {
     "ClientHttpRequestFactory" : {
       "class_name" : "ClientHttpRequestFactory",

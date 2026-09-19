@@ -2,28 +2,28 @@
 Compute average, min, and max summary lengths (words and characters)
 for multiple NLG output files.
 
-Targets:
-- output/summary-output/nlg_summaries.csv
-- output/summary-output/LLM_CLAUDE_SUMMARY.csv
-- output/summary-output/LLM_GEMINI_SUMMARY.csv
-- output/summary-output/LLM_GPT_SUMMARY.csv
-- output/summary-output/LLM_MISTRAL_SUMMARY.csv
-- output/summary-output/LLM_CLAUDE_NC_SUMMARY.csv
-- output/summary-output/LLM_GEMINI_NC_SUMMARY.csv
-- output/summary-output/LLM_GPT_NC_SUMMARY.csv
-- output/summary-output/LLM_MISTRAL_NC_SUMMARY.csv
-- output/summary-output/swum_summaries.csv
+Targets: nlg_summaries.csv, swum_summaries.csv, and the standard plus narrative-context
+CSV for every model declared in .env, all under output/summary-output/.
+
+The model list is read from the *_MODEL keys in .env rather than hardcoded here. The
+hardcoded list it replaces still demanded LLM_GEMINI_SUMMARY.csv and LLM_GEMINI_NC_SUMMARY.csv
+long after Gemini had been replaced by Qwen in .env and those files had been removed, so
+this script raised FileNotFoundError on every run — and never reported Qwen at all.
 
 Outputs a plain-text table at evaluation-results/summary_length_stats.txt.
-Object-oriented implementation with useful comments.
 """
 from __future__ import annotations
 
 import csv
 import os
 import re
+import sys
 from dataclasses import dataclass
+from pathlib import Path
 from typing import Dict, List, Optional, Tuple
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from rank_summaries import resolve_model_roster  # noqa: E402  - sys.path must be extended first
 
 
 @dataclass
@@ -223,19 +223,38 @@ def main() -> None:
     #     resolve_summary_file("swum_summaries.csv"),
     # ]
 
-    # Updated source set: NLG + four LLM model variants (standard + NC) + SWUM.
-    resolved_sources = [
-        resolve_summary_file("nlg_summaries.csv"),
-        resolve_summary_file("LLM_CLAUDE_SUMMARY.csv"),
-        resolve_summary_file("LLM_GEMINI_SUMMARY.csv"),
-        resolve_summary_file("LLM_GPT_SUMMARY.csv"),
-        resolve_summary_file("LLM_MISTRAL_SUMMARY.csv"),
-        resolve_summary_file("LLM_CLAUDE_NC_SUMMARY.csv", "LLM_CLAUDE_SUMMARY.csv"),
-        resolve_summary_file("LLM_GEMINI_NC_SUMMARY.csv", "LLM_GEMINI_SUMMARY.csv"),
-        resolve_summary_file("LLM_GPT_NC_SUMMARY.csv", "LLM_GPT_SUMMARY.csv"),
-        resolve_summary_file("LLM_MISTRAL_NC_SUMMARY.csv", "LLM_MISTRAL_SUMMARY.csv"),
-        resolve_summary_file("swum_summaries.csv"),
-    ]
+    def optional_summary_file(*relative_names: str) -> Optional[Tuple[str, str]]:
+        """Like resolve_summary_file, but returns None instead of raising.
+
+        A model configured in .env whose summaries have not been generated yet is a normal
+        intermediate state, not an error; it is reported and skipped so the table still
+        covers everything that does exist.
+        """
+        try:
+            return resolve_summary_file(*relative_names)
+        except FileNotFoundError:
+            return None
+
+    # Source set: NLG, then each model from .env (standard then narrative-context), then SWUM.
+    roster = resolve_model_roster(Path(repo_root).parent / ".env")
+    candidates: List[Tuple[str, ...]] = [("nlg_summaries.csv",)]
+    candidates += [(entry.summary_csv,) for entry in roster]
+    candidates += [(entry.nc_summary_csv, entry.summary_csv) for entry in roster]
+    candidates.append(("swum_summaries.csv",))
+
+    resolved_sources: List[Tuple[str, str]] = []
+    for names in candidates:
+        resolved = optional_summary_file(*names)
+        if resolved is None:
+            print(f"  Skipping {names[0]}: not found in output/summary-output")
+            continue
+        resolved_sources.append(resolved)
+
+    if not resolved_sources:
+        raise FileNotFoundError(
+            "No summary CSVs found in output/summary-output; nothing to measure."
+        )
+
     files = {label: path for label, path in resolved_sources}
     out_path = os.path.join(repo_root, "evaluation-results", "summary_length_stats.txt")
 

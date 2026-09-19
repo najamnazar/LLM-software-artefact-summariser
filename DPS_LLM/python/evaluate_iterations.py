@@ -12,7 +12,6 @@ Assumptions:
 """
 from __future__ import annotations
 
-import os
 import subprocess
 import sys
 from dataclasses import dataclass
@@ -23,7 +22,7 @@ import pandas as pd
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 EVAL_SCRIPT = REPO_ROOT / "python" / "evaluate_summaries.py"
-HUMAN_CSV = REPO_ROOT / "input" / "DPS_Human_Summaries.csv"
+HUMAN_CSV = REPO_ROOT / "input" / "human_summaries" / "DPS_Human_Summaries.csv"
 OUTPUT_DIR = REPO_ROOT / "evaluation-results"
 SUMMARY_OUT = OUTPUT_DIR / "b_iterations_summary.txt"
 PAIRWISE_OUT = OUTPUT_DIR / "b_iterations_pairwise.csv"

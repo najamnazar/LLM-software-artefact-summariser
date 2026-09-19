@@ -9,9 +9,9 @@ visualisation, and orchestration responsibilities while retaining the CLI behavi
 """
 
 import argparse
-from datetime import datetime
-import os
 import re
+import sys
+from datetime import datetime
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Dict, List, Optional, Tuple
@@ -25,10 +25,23 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 from transformers import logging as hf_logging
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from rank_summaries import resolve_model_roster  # noqa: E402  - sys.path must be extended first
+
+# Najam: the default input and output paths below used to be relative to the current directory, so
+# the script ran only from DPS_LLM/ and died with "Human summaries file not found" from anywhere
+# else. Worse than the error: a run from python/ would have resolved --output-dir to
+# python/evaluation-results/ and written a full set of results where nothing else looks for them,
+# leaving the real evaluation-results/ silently stale. Anchored on this file instead, as the .env
+# lookup already was. Paths passed explicitly on the command line are untouched and still resolve
+# against the current directory, which is what a caller typing one expects.
+PROJECT_DIR = Path(__file__).resolve().parent.parent
+REPO_ROOT = PROJECT_DIR.parent
+
 try:
     from dotenv import load_dotenv
-    # Load .env file from repo root (two directories up from python/)
-    env_path = Path(__file__).parent.parent.parent / '.env'
+    # Load .env file from the repo root, shared by DPS_LLM, PR_LLM and SUMSLICE_LLM
+    env_path = REPO_ROOT / '.env'
     load_dotenv(dotenv_path=env_path)
 except ImportError:
     pass  # dotenv not installed, will use environment variables directly
@@ -147,12 +160,34 @@ def canonicalize_design_pattern(raw_value: str) -> str:
     return 'Unknown'
 
 
-class MetricsCalculator:
-    """Stateless helper that computes text-similarity metrics for summary pairs.
+# BERTScore returns raw contextual-embedding cosine similarities, which occupy only the
+# top of the 0-1 range: two unrelated English sentences still score around 0.85 under
+# roberta-large. Reported unrescaled, every system looks excellent and the differences
+# between them are compressed into the last couple of decimal places. Baseline rescaling
+# subtracts the score expected from random sentence pairs, so 0 means "no better than
+# unrelated text" and the numbers become comparable to other work that reports rescaled
+# BERTScore. It is the default here; --no-rescale-bertscore reproduces the old values.
+RESCALE_BERTSCORE_DEFAULT = True
 
-    All methods are static so the class acts as a namespace rather than requiring
-    instantiation — callers can inject the class itself or a subclass for testing.
+
+class MetricsCalculator:
+    """Helper that computes text-similarity metrics for summary pairs.
+
+    Cosine similarity is static; BERTScore depends on whether baseline rescaling is
+    enabled, so the calculator carries that one setting and is instantiated per run.
     """
+
+    def __init__(self, rescale_bertscore: bool = RESCALE_BERTSCORE_DEFAULT) -> None:
+        self.rescale_bertscore = rescale_bertscore
+
+    @property
+    def bertscore_mode(self) -> str:
+        """Short label naming the BERTScore variant, for stamping into reports."""
+        return (
+            'roberta-large, baseline-rescaled'
+            if self.rescale_bertscore
+            else 'roberta-large, raw (NOT baseline-rescaled)'
+        )
 
     @staticmethod
     def cosine_similarity(text_a: str, text_b: str) -> float:
@@ -170,21 +205,21 @@ class MetricsCalculator:
         except ValueError:
             return 0.0
 
-    @staticmethod
-    def bert_scores(candidates: List[str], references: List[str]) -> Tuple[np.ndarray, np.ndarray, np.ndarray]:
+    def bert_scores(self, candidates: List[str], references: List[str]) -> Tuple[np.ndarray, np.ndarray, np.ndarray]:
         """Compute BERTScore precision, recall, and F1 for a batch of text pairs.
 
         Uses the default ``roberta-large`` model with English language settings.
-        Baseline rescaling is disabled so raw contextual-embedding cosine distances
-        are returned directly.  Raises RuntimeError (wrapping the underlying
-        exception) on failure so callers can handle it uniformly.
+        Baseline rescaling follows ``self.rescale_bertscore`` — see
+        ``RESCALE_BERTSCORE_DEFAULT`` for why it is on by default.  Raises RuntimeError
+        (wrapping the underlying exception) on failure so callers can handle it
+        uniformly.
         """
         try:
             precision, recall, f1 = bert_score(
                 candidates,
                 references,
                 lang='en',
-                rescale_with_baseline=False,
+                rescale_with_baseline=self.rescale_bertscore,
                 verbose=False,
             )
         except Exception as exc:  # noqa: BLE001 - propagate with context
@@ -354,7 +389,8 @@ class EvaluationConfig:
     swum_csv: Path
     output_dir: Path
     llm_claude_csv: Optional[Path] = None
-    llm_gemini_csv: Optional[Path] = None
+    # No llm_gemini_csv: Gemini was replaced by Qwen in .env and its CSV was removed.
+    # The field and its CLI flag outlived the data and only invited stale references.
     llm_gpt_csv: Optional[Path] = None
     llm_mistral_csv: Optional[Path] = None
     llm_qwen_csv: Optional[Path] = None
@@ -364,6 +400,7 @@ class EvaluationConfig:
     llm_gpt_nc_csv: Optional[Path] = None     # GPT with Narrative Context
     llm_mistral_nc_csv: Optional[Path] = None # Mistral with Narrative Context
     llm_qwen_nc_csv: Optional[Path] = None    # Qwen with Narrative Context
+    rescale_bertscore: bool = RESCALE_BERTSCORE_DEFAULT
 
     def ensure_output_dir(self) -> None:
         """Create the output directory (and any parents) if it does not exist."""
@@ -383,8 +420,6 @@ class EvaluationConfig:
 
         if self.llm_claude_csv is not None:
             sources.append(('LLM (Claude)', self.llm_claude_csv))
-        if self.llm_gemini_csv is not None:
-            sources.append(('LLM (Gemini)', self.llm_gemini_csv))
         if self.llm_gpt_csv is not None:
             sources.append(('LLM (GPT)', self.llm_gpt_csv))
         if self.llm_mistral_csv is not None:
@@ -502,7 +537,7 @@ class SummaryEvaluator:
         print(f"  Computing BERTScore for {len(candidates)} pairs (this may take 2-3 minutes)...")
         try:
             bert_p, bert_r, bert_f1 = self.metrics.bert_scores(candidates, references)
-            print(f"  BERTScore computation complete")
+            print("  BERTScore computation complete")
         except RuntimeError as exc:
             print(f"  ERROR: {exc}")
             return None
@@ -613,6 +648,7 @@ class SummaryEvaluator:
         print(f"  Avg BERT Precision: {overall_metrics['avg_bert_precision']:.4f}")
         print(f"  Avg BERT Recall: {overall_metrics['avg_bert_recall']:.4f}")
         print(f"  Avg BERT F1: {overall_metrics['avg_bert_f1']:.4f}")
+        print(f"  BERTScore variant: {self.metrics.bertscore_mode}")
         # print(f"  Combined Score: {overall_metrics['combined_score']:.4f}")
 
         return MethodEvaluationResult(
@@ -626,6 +662,32 @@ class SummaryEvaluator:
 
 
 _NC_SUFFIX = ' NC'
+def build_method_info_map() -> Dict[str, str]:
+    """Map each method label to the model identifier configured for it in .env.
+
+    These suffixes used to be a literal dict naming specific versions, including
+    '(Gemini 3.5 Flash)' for a model that is no longer in .env and whose CSV no longer
+    exists. Reading them from .env means the report can only ever name the model that
+    actually produced the summaries.
+
+    Keys are lowercased; look up with ``method_info_map.get(result.method.lower(), "")``.
+    Method labels capitalise inconsistently ('LLM (GPT)' beside 'LLM (Claude)'), so
+    matching on case would silently drop the model name from whichever ones disagree.
+    """
+    env_path = REPO_ROOT / '.env'
+    info: Dict[str, str] = {}
+    try:
+        roster = resolve_model_roster(env_path)
+    except (ValueError, OSError):
+        # Reporting is not worth failing a completed evaluation over.
+        return info
+    for entry in roster:
+        label = entry.name.lower()
+        info[f'llm ({label})'] = f' ({entry.model_id})'
+        info[f'llm ({label} nc)'] = f' ({entry.model_id}, narrative context)'
+    return info
+
+
 _NC_METHODS = {'LLM (Claude NC)', 'LLM (GPT NC)', 'LLM (Mistral NC)', 'LLM (Qwen NC)'}
 _NON_NC_LLM_METHODS = {'LLM (Claude)', 'LLM (GPT)', 'LLM (Mistral)', 'LLM (Qwen)'}
 
@@ -633,7 +695,6 @@ _METHOD_COLORS = {
     'NLG': '#e74c3c',
     'SWUM': '#3498db',
     'LLM (Claude)': '#16a085',
-    'LLM (Gemini)': '#8e44ad',
     'LLM (GPT)': '#d35400',
     'LLM (Mistral)': '#2c3e50',
     'LLM (Qwen)': '#27ae60',
@@ -655,7 +716,6 @@ _SHORT_LABEL_COLORS = {
     'GPT': '#d35400',
     'Mistral': '#2c3e50',
     'Qwen': '#27ae60',
-    'Gemini': '#8e44ad',
     'Mixtral': '#f39c12',
 }
 
@@ -852,7 +912,7 @@ class SummaryEvaluationPipeline:
     def __init__(self, config: EvaluationConfig) -> None:
         self.config = config
         self.loader = SummaryDataLoader()
-        self.metrics = MetricsCalculator()
+        self.metrics = MetricsCalculator(rescale_bertscore=config.rescale_bertscore)
         self.visualizer = VisualizationManager(self.metrics)
 
     def run(self) -> None:
@@ -950,21 +1010,15 @@ class SummaryEvaluationPipeline:
         summary_file = self.config.output_dir / 'evaluation_summary.txt'
         results_file = self.config.output_dir / 'results.txt'
 
+        method_info_map = build_method_info_map()
+
         try:
             with open(summary_file, 'w', encoding='utf-8') as handle:
                 handle.write("=" * 60 + "\n")
                 handle.write("EVALUATION SUMMARY: Generated vs Human Summaries\n")
                 handle.write("=" * 60 + "\n\n")
                 for result in results:
-                    method_info_map = {
-                        'LLM (Mixtral)': ' (Mixtral-8x22B)',
-                        'LLM (Claude)': ' (Claude Sonnet 4.6)',
-                        'LLM (Gemini)': ' (Gemini 3.5 Flash)',
-                        'LLM (GPT)': ' (GPT-5.4 Mini)',
-                        'LLM (Mistral)': ' (Mistral Small 2603)',
-                        'LLM (Qwen)': ' (Qwen3.7)',
-                    }
-                    method_info = method_info_map.get(result.method, "")
+                    method_info = method_info_map.get(result.method.lower(), "")
                     metrics = result.metrics
                     handle.write(f"\n{result.method}{method_info}:\n")
                     handle.write(f"  Classes Evaluated: {metrics['classes_evaluated']}\n")
@@ -976,6 +1030,7 @@ class SummaryEvaluationPipeline:
                     handle.write(
                         f"  Avg BERT F1: {metrics['avg_bert_f1']:.4f} (±{metrics['bert_f1_std']:.4f})\n"
                     )
+                    handle.write(f"  BERTScore variant: {self.metrics.bertscore_mode}\n")
                     # handle.write(f"  Combined Score: {metrics['combined_score']:.4f}\n")
 
             formatted_overall = pd.DataFrame(result.metrics for result in results)
@@ -1000,15 +1055,7 @@ class SummaryEvaluationPipeline:
                 handle.write(formatted_overall.to_string(index=False))
                 handle.write("\n\nDetailed Metrics by Method:\n")
                 for result in results:
-                    method_info_map = {
-                        'LLM (Mixtral)': ' (Mixtral-8x22B)',
-                        'LLM (Claude)': ' (Claude Sonnet 4.6)',
-                        'LLM (Gemini)': ' (Gemini 3.5 Flash)',
-                        'LLM (GPT)': ' (GPT-5.4 Mini)',
-                        'LLM (Mistral)': ' (Mistral Small 2603)',
-                        'LLM (Qwen)': ' (Qwen3.7)',
-                    }
-                    method_info = method_info_map.get(result.method, "")
+                    method_info = method_info_map.get(result.method.lower(), "")
                     metrics = result.metrics
                     handle.write(f"\n{result.method}{method_info}\n")
                     handle.write(f"  Projects Evaluated: {metrics['projects_evaluated']}\n")
@@ -1017,6 +1064,7 @@ class SummaryEvaluationPipeline:
                     handle.write(f"  Avg BERT Precision: {metrics['avg_bert_precision']:.4f}\n")
                     handle.write(f"  Avg BERT Recall: {metrics['avg_bert_recall']:.4f}\n")
                     handle.write(f"  Avg BERT F1: {metrics['avg_bert_f1']:.4f}\n")
+                    handle.write(f"  BERTScore variant: {self.metrics.bertscore_mode}\n")
                     # handle.write(f"  Combined Score: {metrics['combined_score']:.4f}\n")
 
                 # Dedicated section for the new per-design-pattern requirement.
@@ -1094,19 +1142,19 @@ def parse_arguments(argv: Optional[List[str]]) -> argparse.Namespace:
     parser.add_argument(
         '--human-csv',
         type=Path,
-        default=Path('input/DPS_Human_Summaries.csv'),
+        default=PROJECT_DIR / 'input/human_summaries/DPS_Human_Summaries.csv',
         help='Path to human summaries CSV file',
     )
     parser.add_argument(
         '--nlg-csv',
         type=Path,
-        default=Path('output/summary-output/nlg_summaries.csv'),
+        default=PROJECT_DIR / 'output/summary-output/nlg_summaries.csv',
         help='Path to NLG summaries CSV file',
     )
     parser.add_argument(
         '--swum-csv',
         type=Path,
-        default=Path('output/summary-output/swum_summaries.csv'),
+        default=PROJECT_DIR / 'output/summary-output/swum_summaries.csv',
         help='Path to SWUM summaries CSV file',
     )
     parser.add_argument(
@@ -1118,31 +1166,25 @@ def parse_arguments(argv: Optional[List[str]]) -> argparse.Namespace:
     parser.add_argument(
         '--llm-claude-csv',
         type=Path,
-        default=Path('output/summary-output/LLM_CLAUDE_SUMMARY.csv'),
+        default=PROJECT_DIR / 'output/summary-output/LLM_CLAUDE_SUMMARY.csv',
         help='Path to Claude LLM summaries CSV file',
-    )
-    parser.add_argument(
-        '--llm-gemini-csv',
-        type=Path,
-        default=None,
-        help='Optional path to Gemini LLM summaries CSV file',
     )
     parser.add_argument(
         '--llm-gpt-csv',
         type=Path,
-        default=Path('output/summary-output/LLM_GPT_SUMMARY.csv'),
+        default=PROJECT_DIR / 'output/summary-output/LLM_GPT_SUMMARY.csv',
         help='Path to GPT LLM summaries CSV file',
     )
     parser.add_argument(
         '--llm-mistral-csv',
         type=Path,
-        default=Path('output/summary-output/LLM_MISTRAL_SUMMARY.csv'),
+        default=PROJECT_DIR / 'output/summary-output/LLM_MISTRAL_SUMMARY.csv',
         help='Path to Mistral LLM summaries CSV file',
     )
     parser.add_argument(
         '--llm-qwen-csv',
         type=Path,
-        default=Path('output/summary-output/LLM_QWEN_SUMMARY.csv'),
+        default=PROJECT_DIR / 'output/summary-output/LLM_QWEN_SUMMARY.csv',
         help='Path to Qwen LLM summaries CSV file',
     )
     parser.add_argument(
@@ -1154,33 +1196,43 @@ def parse_arguments(argv: Optional[List[str]]) -> argparse.Namespace:
     parser.add_argument(
         '--llm-claude-nc-csv',
         type=Path,
-        default=Path('output/summary-output/LLM_CLAUDE_NC_SUMMARY.csv'),
+        default=PROJECT_DIR / 'output/summary-output/LLM_CLAUDE_NC_SUMMARY.csv',
         help='Path to Claude NC summaries CSV file',
     )
     parser.add_argument(
         '--llm-gpt-nc-csv',
         type=Path,
-        default=Path('output/summary-output/LLM_GPT_NC_SUMMARY.csv'),
+        default=PROJECT_DIR / 'output/summary-output/LLM_GPT_NC_SUMMARY.csv',
         help='Path to GPT NC summaries CSV file',
     )
     parser.add_argument(
         '--llm-mistral-nc-csv',
         type=Path,
-        default=Path('output/summary-output/LLM_MISTRAL_NC_SUMMARY.csv'),
+        default=PROJECT_DIR / 'output/summary-output/LLM_MISTRAL_NC_SUMMARY.csv',
         help='Path to Mistral NC summaries CSV file',
     )
     parser.add_argument(
         '--llm-qwen-nc-csv',
         type=Path,
-        default=Path('output/summary-output/LLM_QWEN_NC_SUMMARY.csv'),
+        default=PROJECT_DIR / 'output/summary-output/LLM_QWEN_NC_SUMMARY.csv',
         help='Path to Qwen NC summaries CSV file',
     )
     parser.add_argument(
         '--output-dir',
         type=Path,
-        default=Path('evaluation-results'),
+        default=PROJECT_DIR / 'evaluation-results',
         help='Output directory for results',
     )
+    parser.add_argument(
+        '--no-rescale-bertscore',
+        dest='rescale_bertscore',
+        action='store_false',
+        help=(
+            'Report raw BERTScore instead of baseline-rescaled BERTScore. Raw scores sit '
+            'near 0.85 even for unrelated text; use this only to reproduce older results.'
+        ),
+    )
+    parser.set_defaults(rescale_bertscore=RESCALE_BERTSCORE_DEFAULT)
     return parser.parse_args([] if argv is None else argv)
 
 
@@ -1192,7 +1244,6 @@ def main(argv: Optional[List[str]] = None) -> None:
         swum_csv=args.swum_csv,
         output_dir=args.output_dir,
         llm_claude_csv=args.llm_claude_csv,
-        llm_gemini_csv=args.llm_gemini_csv,
         llm_gpt_csv=args.llm_gpt_csv,
         llm_mistral_csv=args.llm_mistral_csv,
         llm_qwen_csv=args.llm_qwen_csv,
@@ -1202,6 +1253,7 @@ def main(argv: Optional[List[str]] = None) -> None:
         llm_gpt_nc_csv=args.llm_gpt_nc_csv,
         llm_mistral_nc_csv=args.llm_mistral_nc_csv,
         llm_qwen_nc_csv=args.llm_qwen_nc_csv,
+        rescale_bertscore=args.rescale_bertscore,
     )
     pipeline = SummaryEvaluationPipeline(config)
     pipeline.run()

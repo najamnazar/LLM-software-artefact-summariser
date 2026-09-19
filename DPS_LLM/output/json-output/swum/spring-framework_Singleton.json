@@ -1,0 +1,1279 @@
+{
+	"final_summary" : "",
+	"design_pattern" : [ ],
+	"summary_NLG" : { },
+	"spring-framework/Singleton" : {
+		"SmartInitializingSingleton" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "SmartInitializingSingleton",
+				"ISINTERFACEORNOT" : true,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "afterSingletonsInstantiated",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"DefaultSingletonBeanRegistry" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "int",
+				"FIELDMODIFIERTYPE" : [ "private", "static", "final" ],
+				"FIELDDECLARATION" : [ "SUPPRESSED_EXCEPTIONS_LIMIT = 100" ],
+				"FIELDDATATYPE" : "int",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "Lock",
+				"FIELDMODIFIERTYPE" : [ "final" ],
+				"FIELDDECLARATION" : [ "singletonLock = new ReentrantLock()" ],
+				"FIELDDATATYPE" : "Lock",
+				"FIELDACCESSSPECIFIER" : "NONE"
+			}, {
+				"FIELDCOMMONTYPE" : "Map<String, Object>",
+				"FIELDMODIFIERTYPE" : [ "private", "final" ],
+				"FIELDDECLARATION" : [ "singletonObjects = new ConcurrentHashMap<>(256)" ],
+				"FIELDDATATYPE" : "Map<String, Object>",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "Map<String, ObjectFactory<?>>",
+				"FIELDMODIFIERTYPE" : [ "private", "final" ],
+				"FIELDDECLARATION" : [ "singletonFactories = new ConcurrentHashMap<>(16)" ],
+				"FIELDDATATYPE" : "Map<String, ObjectFactory<?>>",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "Map<String, Consumer<Object>>",
+				"FIELDMODIFIERTYPE" : [ "private", "final" ],
+				"FIELDDECLARATION" : [ "singletonCallbacks = new ConcurrentHashMap<>(16)" ],
+				"FIELDDATATYPE" : "Map<String, Consumer<Object>>",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "Map<String, Object>",
+				"FIELDMODIFIERTYPE" : [ "private", "final" ],
+				"FIELDDECLARATION" : [ "earlySingletonObjects = new ConcurrentHashMap<>(16)" ],
+				"FIELDDATATYPE" : "Map<String, Object>",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "Set<String>",
+				"FIELDMODIFIERTYPE" : [ "private", "final" ],
+				"FIELDDECLARATION" : [ "registeredSingletons = Collections.synchronizedSet(new LinkedHashSet<>(256))" ],
+				"FIELDDATATYPE" : "Set<String>",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "Set<String>",
+				"FIELDMODIFIERTYPE" : [ "private", "final" ],
+				"FIELDDECLARATION" : [ "singletonsCurrentlyInCreation = ConcurrentHashMap.newKeySet(16)" ],
+				"FIELDDATATYPE" : "Set<String>",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "Set<String>",
+				"FIELDMODIFIERTYPE" : [ "private", "final" ],
+				"FIELDDECLARATION" : [ "inCreationCheckExclusions = ConcurrentHashMap.newKeySet(16)" ],
+				"FIELDDATATYPE" : "Set<String>",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "Lock",
+				"FIELDMODIFIERTYPE" : [ "private", "final" ],
+				"FIELDDECLARATION" : [ "lenientCreationLock = new ReentrantLock()" ],
+				"FIELDDATATYPE" : "Lock",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "Condition",
+				"FIELDMODIFIERTYPE" : [ "private", "final" ],
+				"FIELDDECLARATION" : [ "lenientCreationFinished = this.lenientCreationLock.newCondition()" ],
+				"FIELDDATATYPE" : "Condition",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "Set<String>",
+				"FIELDMODIFIERTYPE" : [ "private", "final" ],
+				"FIELDDECLARATION" : [ "singletonsInLenientCreation = new HashSet<>()" ],
+				"FIELDDATATYPE" : "Set<String>",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "Map<Thread, Thread>",
+				"FIELDMODIFIERTYPE" : [ "private", "final" ],
+				"FIELDDECLARATION" : [ "lenientWaitingThreads = new HashMap<>()" ],
+				"FIELDDATATYPE" : "Map<Thread, Thread>",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "Map<String, Thread>",
+				"FIELDMODIFIERTYPE" : [ "private", "final" ],
+				"FIELDDECLARATION" : [ "currentCreationThreads = new ConcurrentHashMap<>()" ],
+				"FIELDDATATYPE" : "Map<String, Thread>",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "boolean",
+				"FIELDMODIFIERTYPE" : [ "private", "volatile" ],
+				"FIELDDECLARATION" : [ "singletonsCurrentlyInDestruction = false" ],
+				"FIELDDATATYPE" : "boolean",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "Set<Exception>",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "suppressedExceptions" ],
+				"FIELDDATATYPE" : "Set<Exception>",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "Map<String, DisposableBean>",
+				"FIELDMODIFIERTYPE" : [ "private", "final" ],
+				"FIELDDECLARATION" : [ "disposableBeans = new LinkedHashMap<>()" ],
+				"FIELDDATATYPE" : "Map<String, DisposableBean>",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "Map<String, Set<String>>",
+				"FIELDMODIFIERTYPE" : [ "private", "final" ],
+				"FIELDDECLARATION" : [ "containedBeanMap = new ConcurrentHashMap<>(16)" ],
+				"FIELDDATATYPE" : "Map<String, Set<String>>",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "Map<String, Set<String>>",
+				"FIELDMODIFIERTYPE" : [ "private", "final" ],
+				"FIELDDECLARATION" : [ "dependentBeanMap = new ConcurrentHashMap<>(64)" ],
+				"FIELDDATATYPE" : "Map<String, Set<String>>",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "Map<String, Set<String>>",
+				"FIELDMODIFIERTYPE" : [ "private", "final" ],
+				"FIELDDECLARATION" : [ "dependenciesForBeanMap = new ConcurrentHashMap<>(64)" ],
+				"FIELDDATATYPE" : "Map<String, Set<String>>",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 167,
+				"EXTENDSFROM" : [ "SimpleAliasRegistry", "SingletonBeanRegistry" ],
+				"IMPLEMENTSFROM" : [ "SingletonBeanRegistry" ],
+				"CLASSNAME" : "DefaultSingletonBeanRegistry",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "oldObject = this.singletonObjects.putIfAbsent(beanName, singletonObject)" ],
+				"VARIABLECOMMONTYPE" : "Object",
+				"VARIABLEELEMENTTYPE" : "Object"
+			}, {
+				"VARIABLEDECLARATION" : [ "callback = this.singletonCallbacks.get(beanName)" ],
+				"VARIABLECOMMONTYPE" : "Consumer<Object>",
+				"VARIABLEELEMENTTYPE" : "Consumer<Object>"
+			}, {
+				"VARIABLEDECLARATION" : [ "singletonObject = this.singletonObjects.get(beanName)" ],
+				"VARIABLECOMMONTYPE" : "Object",
+				"VARIABLEELEMENTTYPE" : "Object"
+			}, {
+				"VARIABLEDECLARATION" : [ "singletonFactory = this.singletonFactories.get(beanName)" ],
+				"VARIABLECOMMONTYPE" : "ObjectFactory<?>",
+				"VARIABLEELEMENTTYPE" : "ObjectFactory<?>"
+			}, {
+				"VARIABLEDECLARATION" : [ "currentThread = Thread.currentThread()" ],
+				"VARIABLECOMMONTYPE" : "Thread",
+				"VARIABLEELEMENTTYPE" : "Thread"
+			}, {
+				"VARIABLEDECLARATION" : [ "lockFlag = isCurrentThreadAllowedToHoldSingletonLock()" ],
+				"VARIABLECOMMONTYPE" : "Boolean",
+				"VARIABLEELEMENTTYPE" : "Boolean"
+			}, {
+				"VARIABLEDECLARATION" : [ "acquireLock = !Boolean.FALSE.equals(lockFlag)" ],
+				"VARIABLECOMMONTYPE" : "boolean",
+				"VARIABLEELEMENTTYPE" : "boolean"
+			}, {
+				"VARIABLEDECLARATION" : [ "locked = (acquireLock && this.singletonLock.tryLock())" ],
+				"VARIABLECOMMONTYPE" : "boolean",
+				"VARIABLEELEMENTTYPE" : "boolean"
+			}, {
+				"VARIABLEDECLARATION" : [ "singletonObject = this.singletonObjects.get(beanName)" ],
+				"VARIABLECOMMONTYPE" : "Object",
+				"VARIABLEELEMENTTYPE" : "Object"
+			}, {
+				"VARIABLEDECLARATION" : [ "lockedBeans = new HashSet<>(this.singletonsCurrentlyInCreation)" ],
+				"VARIABLECOMMONTYPE" : "Set<String>",
+				"VARIABLEELEMENTTYPE" : "Set<String>"
+			}, {
+				"VARIABLEDECLARATION" : [ "otherThread = this.currentCreationThreads.get(beanName)" ],
+				"VARIABLECOMMONTYPE" : "Thread",
+				"VARIABLEELEMENTTYPE" : "Thread"
+			}, {
+				"VARIABLEDECLARATION" : [ "newSingleton = false" ],
+				"VARIABLECOMMONTYPE" : "boolean",
+				"VARIABLEELEMENTTYPE" : "boolean"
+			}, {
+				"VARIABLEDECLARATION" : [ "recordSuppressedExceptions = (locked && this.suppressedExceptions == null)" ],
+				"VARIABLECOMMONTYPE" : "boolean",
+				"VARIABLEELEMENTTYPE" : "boolean"
+			}, {
+				"VARIABLEDECLARATION" : [ "suppressedException" ],
+				"VARIABLECOMMONTYPE" : "Exception",
+				"VARIABLEELEMENTTYPE" : "Exception"
+			}, {
+				"VARIABLEDECLARATION" : [ "object = this.singletonObjects.get(beanName)" ],
+				"VARIABLECOMMONTYPE" : "Object",
+				"VARIABLEELEMENTTYPE" : "Object"
+			}, {
+				"VARIABLEDECLARATION" : [ "threadToCheck = waitingThread" ],
+				"VARIABLECOMMONTYPE" : "Thread",
+				"VARIABLEELEMENTTYPE" : "Thread"
+			}, {
+				"VARIABLEDECLARATION" : [ "containedBeans = this.containedBeanMap.computeIfAbsent(containingBeanName, k -> new LinkedHashSet<>(8))" ],
+				"VARIABLECOMMONTYPE" : "Set<String>",
+				"VARIABLEELEMENTTYPE" : "Set<String>"
+			}, {
+				"VARIABLEDECLARATION" : [ "canonicalName = canonicalName(beanName)" ],
+				"VARIABLECOMMONTYPE" : "String",
+				"VARIABLEELEMENTTYPE" : "String"
+			}, {
+				"VARIABLEDECLARATION" : [ "dependentBeans = this.dependentBeanMap.computeIfAbsent(canonicalName, k -> new LinkedHashSet<>(8))" ],
+				"VARIABLECOMMONTYPE" : "Set<String>",
+				"VARIABLEELEMENTTYPE" : "Set<String>"
+			}, {
+				"VARIABLEDECLARATION" : [ "dependenciesForBean = this.dependenciesForBeanMap.computeIfAbsent(dependentBeanName, k -> new LinkedHashSet<>(8))" ],
+				"VARIABLECOMMONTYPE" : "Set<String>",
+				"VARIABLEELEMENTTYPE" : "Set<String>"
+			}, {
+				"VARIABLEDECLARATION" : [ "canonicalName = canonicalName(beanName)" ],
+				"VARIABLECOMMONTYPE" : "String",
+				"VARIABLEELEMENTTYPE" : "String"
+			}, {
+				"VARIABLEDECLARATION" : [ "dependentBeans = this.dependentBeanMap.get(canonicalName)" ],
+				"VARIABLECOMMONTYPE" : "Set<String>",
+				"VARIABLEELEMENTTYPE" : "Set<String>"
+			}, {
+				"VARIABLEDECLARATION" : [ "transitiveDependency" ],
+				"VARIABLECOMMONTYPE" : "String",
+				"VARIABLEELEMENTTYPE" : "String"
+			}, {
+				"VARIABLEDECLARATION" : [ "dependentBeans = this.dependentBeanMap.get(beanName)" ],
+				"VARIABLECOMMONTYPE" : "Set<String>",
+				"VARIABLEELEMENTTYPE" : "Set<String>"
+			}, {
+				"VARIABLEDECLARATION" : [ "dependenciesForBean = this.dependenciesForBeanMap.get(beanName)" ],
+				"VARIABLECOMMONTYPE" : "Set<String>",
+				"VARIABLEELEMENTTYPE" : "Set<String>"
+			}, {
+				"VARIABLEDECLARATION" : [ "disposableBeanNames" ],
+				"VARIABLECOMMONTYPE" : "String[]",
+				"VARIABLEELEMENTTYPE" : "String"
+			}, {
+				"VARIABLEDECLARATION" : [ "i = disposableBeanNames.length - 1" ],
+				"VARIABLECOMMONTYPE" : "int",
+				"VARIABLEELEMENTTYPE" : "int"
+			}, {
+				"VARIABLEDECLARATION" : [ "disposableBean" ],
+				"VARIABLECOMMONTYPE" : "DisposableBean",
+				"VARIABLEELEMENTTYPE" : "DisposableBean"
+			}, {
+				"VARIABLEDECLARATION" : [ "dependentBeanNames" ],
+				"VARIABLECOMMONTYPE" : "Set<String>",
+				"VARIABLEELEMENTTYPE" : "Set<String>"
+			}, {
+				"VARIABLEDECLARATION" : [ "dependentBeanName" ],
+				"VARIABLECOMMONTYPE" : "String",
+				"VARIABLEELEMENTTYPE" : "String"
+			}, {
+				"VARIABLEDECLARATION" : [ "containedBeans" ],
+				"VARIABLECOMMONTYPE" : "Set<String>",
+				"VARIABLEELEMENTTYPE" : "Set<String>"
+			}, {
+				"VARIABLEDECLARATION" : [ "containedBeanName" ],
+				"VARIABLECOMMONTYPE" : "String",
+				"VARIABLEELEMENTTYPE" : "String"
+			}, {
+				"VARIABLEDECLARATION" : [ "entry = it.next()" ],
+				"VARIABLECOMMONTYPE" : "Map.Entry<String, Set<String>>",
+				"VARIABLEELEMENTTYPE" : "Map.Entry<String, Set<String>>"
+			}, {
+				"VARIABLEDECLARATION" : [ "dependenciesToClean = entry.getValue()" ],
+				"VARIABLECOMMONTYPE" : "Set<String>",
+				"VARIABLEELEMENTTYPE" : "Set<String>"
+			}, {
+				"VARIABLEDECLARATION" : [ "it = this.dependentBeanMap.entrySet().iterator()" ],
+				"VARIABLECOMMONTYPE" : "Iterator<Map.Entry<String, Set<String>>>",
+				"VARIABLEELEMENTTYPE" : "Iterator<Map.Entry<String, Set<String>>>"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "registerSingleton",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "EXPRESSION", "OTHER" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 5,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "DefaultSingletonBeanRegistry",
+					"CALLEEMETHODNAME" : "addSingleton"
+				} ],
+				"NUMBEROFMETHODLINES" : 4,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "beanName",
+					"PARAMETERTYPE" : "String"
+				}, {
+					"PARAMETERNAME" : "singletonObject",
+					"PARAMETERTYPE" : "Object"
+				} ]
+			}, {
+				"METHODNAME" : "addSingleton",
+				"NUMBEROFINCOMINGMETHODS" : 1,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "registerSingleton",
+					"CALLEDCLASS" : "DefaultSingletonBeanRegistry"
+				} ],
+				"METHODMODIFIERTYPE" : [ "protected" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "IF", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "IF" ],
+				"NUMBEROFMETHODVARIABLES" : 2,
+				"NUMBEROFOUTGOINGMETHODS" : 6,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 7,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "beanName",
+					"PARAMETERTYPE" : "String"
+				}, {
+					"PARAMETERNAME" : "singletonObject",
+					"PARAMETERTYPE" : "Object"
+				} ]
+			}, {
+				"METHODNAME" : "addSingletonFactory",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "protected" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 4,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 4,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "beanName",
+					"PARAMETERTYPE" : "String"
+				}, {
+					"PARAMETERNAME" : "singletonFactory",
+					"PARAMETERTYPE" : "ObjectFactory<?>"
+				} ]
+			}, {
+				"METHODNAME" : "addSingletonCallback",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "beanName",
+					"PARAMETERTYPE" : "String"
+				}, {
+					"PARAMETERNAME" : "singletonConsumer",
+					"PARAMETERTYPE" : "Consumer<Object>"
+				} ]
+			}, {
+				"METHODNAME" : "getSingleton",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "Object",
+				"METHODOVERRIDE" : [ "@Override", "@Nullable" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "DefaultSingletonBeanRegistry",
+					"CALLEEMETHODNAME" : "isSingletonCurrentlyInCreation"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "beanName",
+					"PARAMETERTYPE" : "String"
+				} ]
+			}, {
+				"METHODNAME" : "getSingleton",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "protected" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "IF", "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 1,
+				"NUMBEROFOUTGOINGMETHODS" : 12,
+				"METHODRETURNTYPE" : "Object",
+				"METHODOVERRIDE" : [ "@Nullable" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "DefaultSingletonBeanRegistry",
+					"CALLEEMETHODNAME" : "isSingletonCurrentlyInCreation"
+				} ],
+				"NUMBEROFMETHODLINES" : 3,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "beanName",
+					"PARAMETERTYPE" : "String"
+				}, {
+					"PARAMETERNAME" : "allowEarlyReference",
+					"PARAMETERTYPE" : "boolean"
+				} ]
+			}, {
+				"METHODNAME" : "getSingleton",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "OTHER" ],
+				"NUMBEROFMETHODVARIABLES" : 4,
+				"NUMBEROFOUTGOINGMETHODS" : 49,
+				"METHODRETURNTYPE" : "Object",
+				"METHODOVERRIDE" : [ "// Dataflow analysis limitation\n@SuppressWarnings(\"NullAway\")" ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "DefaultSingletonBeanRegistry",
+					"CALLEEMETHODNAME" : "isSingletonCurrentlyInCreation"
+				} ],
+				"NUMBEROFMETHODLINES" : 6,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "beanName",
+					"PARAMETERTYPE" : "String"
+				}, {
+					"PARAMETERNAME" : "singletonFactory",
+					"PARAMETERTYPE" : "ObjectFactory<?>"
+				} ]
+			}, {
+				"METHODNAME" : "checkDependentWaitingThreads",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "private" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "LOOP", "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 1,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "boolean",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 3,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "waitingThread",
+					"PARAMETERTYPE" : "Thread"
+				}, {
+					"PARAMETERNAME" : "candidateThread",
+					"PARAMETERTYPE" : "Thread"
+				} ]
+			}, {
+				"METHODNAME" : "isCurrentThreadAllowedToHoldSingletonLock",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "protected" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "Boolean",
+				"METHODOVERRIDE" : [ "@Nullable" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "onSuppressedException",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "protected" ],
+				"METHODBODYLINETYPE" : [ "IF" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "ex",
+					"PARAMETERTYPE" : "Exception"
+				} ]
+			}, {
+				"METHODNAME" : "removeSingleton",
+				"NUMBEROFINCOMINGMETHODS" : 2,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "destroySingleton",
+					"CALLEDCLASS" : "DefaultSingletonBeanRegistry"
+				}, {
+					"CALLEDMETHODNAME" : "destroySingleton",
+					"CALLEDCLASS" : "DefaultSingletonBeanRegistry"
+				} ],
+				"METHODMODIFIERTYPE" : [ "protected" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 4,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 4,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "beanName",
+					"PARAMETERTYPE" : "String"
+				} ]
+			}, {
+				"METHODNAME" : "containsSingleton",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "boolean",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "beanName",
+					"PARAMETERTYPE" : "String"
+				} ]
+			}, {
+				"METHODNAME" : "getSingletonNames",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "String[]",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "getSingletonCount",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "int",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "setCurrentlyInCreation",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "IF" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 3,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "beanName",
+					"PARAMETERTYPE" : "String"
+				}, {
+					"PARAMETERNAME" : "inCreation",
+					"PARAMETERTYPE" : "boolean"
+				} ]
+			}, {
+				"METHODNAME" : "isCurrentlyInCreation",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 3,
+				"METHODRETURNTYPE" : "boolean",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "DefaultSingletonBeanRegistry",
+					"CALLEEMETHODNAME" : "isActuallyInCreation"
+				} ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "beanName",
+					"PARAMETERTYPE" : "String"
+				} ]
+			}, {
+				"METHODNAME" : "isActuallyInCreation",
+				"NUMBEROFINCOMINGMETHODS" : 1,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "isCurrentlyInCreation",
+					"CALLEDCLASS" : "DefaultSingletonBeanRegistry"
+				} ],
+				"METHODMODIFIERTYPE" : [ "protected" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "boolean",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "DefaultSingletonBeanRegistry",
+					"CALLEEMETHODNAME" : "isSingletonCurrentlyInCreation"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "beanName",
+					"PARAMETERTYPE" : "String"
+				} ]
+			}, {
+				"METHODNAME" : "isSingletonCurrentlyInCreation",
+				"NUMBEROFINCOMINGMETHODS" : 4,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "getSingleton",
+					"CALLEDCLASS" : "DefaultSingletonBeanRegistry"
+				}, {
+					"CALLEDMETHODNAME" : "getSingleton",
+					"CALLEDCLASS" : "DefaultSingletonBeanRegistry"
+				}, {
+					"CALLEDMETHODNAME" : "getSingleton",
+					"CALLEDCLASS" : "DefaultSingletonBeanRegistry"
+				}, {
+					"CALLEDMETHODNAME" : "isActuallyInCreation",
+					"CALLEDCLASS" : "DefaultSingletonBeanRegistry"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "boolean",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "String",
+					"PARAMETERTYPE" : "@Nullable"
+				} ]
+			}, {
+				"METHODNAME" : "beforeSingletonCreation",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "protected" ],
+				"METHODBODYLINETYPE" : [ "IF" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "beanName",
+					"PARAMETERTYPE" : "String"
+				} ]
+			}, {
+				"METHODNAME" : "afterSingletonCreation",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "protected" ],
+				"METHODBODYLINETYPE" : [ "IF" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "beanName",
+					"PARAMETERTYPE" : "String"
+				} ]
+			}, {
+				"METHODNAME" : "registerDisposableBean",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "OTHER" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "beanName",
+					"PARAMETERTYPE" : "String"
+				}, {
+					"PARAMETERNAME" : "bean",
+					"PARAMETERTYPE" : "DisposableBean"
+				} ]
+			}, {
+				"METHODNAME" : "registerContainedBean",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "OTHER", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 3,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "DefaultSingletonBeanRegistry",
+					"CALLEEMETHODNAME" : "registerDependentBean"
+				} ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "containedBeanName",
+					"PARAMETERTYPE" : "String"
+				}, {
+					"PARAMETERNAME" : "containingBeanName",
+					"PARAMETERTYPE" : "String"
+				} ]
+			}, {
+				"METHODNAME" : "registerDependentBean",
+				"NUMBEROFINCOMINGMETHODS" : 1,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "registerContainedBean",
+					"CALLEDCLASS" : "DefaultSingletonBeanRegistry"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "OTHER", "OTHER" ],
+				"NUMBEROFMETHODVARIABLES" : 1,
+				"NUMBEROFOUTGOINGMETHODS" : 5,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 3,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "beanName",
+					"PARAMETERTYPE" : "String"
+				}, {
+					"PARAMETERNAME" : "dependentBeanName",
+					"PARAMETERTYPE" : "String"
+				} ]
+			}, {
+				"METHODNAME" : "isDependent",
+				"NUMBEROFINCOMINGMETHODS" : 4,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "isDependent",
+					"CALLEDCLASS" : "DefaultSingletonBeanRegistry"
+				}, {
+					"CALLEDMETHODNAME" : "isDependent",
+					"CALLEDCLASS" : "DefaultSingletonBeanRegistry"
+				}, {
+					"CALLEDMETHODNAME" : "isDependent",
+					"CALLEDCLASS" : "DefaultSingletonBeanRegistry"
+				}, {
+					"CALLEDMETHODNAME" : "isDependent",
+					"CALLEDCLASS" : "DefaultSingletonBeanRegistry"
+				} ],
+				"METHODMODIFIERTYPE" : [ "protected" ],
+				"METHODBODYLINETYPE" : [ "OTHER" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "boolean",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "DefaultSingletonBeanRegistry",
+					"CALLEEMETHODNAME" : "isDependent"
+				}, {
+					"CALLEECLASS" : "DefaultSingletonBeanRegistry",
+					"CALLEEMETHODNAME" : "isDependent"
+				} ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "beanName",
+					"PARAMETERTYPE" : "String"
+				}, {
+					"PARAMETERNAME" : "dependentBeanName",
+					"PARAMETERTYPE" : "String"
+				} ]
+			}, {
+				"METHODNAME" : "isDependent",
+				"NUMBEROFINCOMINGMETHODS" : 4,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "isDependent",
+					"CALLEDCLASS" : "DefaultSingletonBeanRegistry"
+				}, {
+					"CALLEDMETHODNAME" : "isDependent",
+					"CALLEDCLASS" : "DefaultSingletonBeanRegistry"
+				}, {
+					"CALLEDMETHODNAME" : "isDependent",
+					"CALLEDCLASS" : "DefaultSingletonBeanRegistry"
+				}, {
+					"CALLEDMETHODNAME" : "isDependent",
+					"CALLEDCLASS" : "DefaultSingletonBeanRegistry"
+				} ],
+				"METHODMODIFIERTYPE" : [ "private" ],
+				"METHODBODYLINETYPE" : [ "IF", "EXPRESSION", "EXPRESSION", "IF", "IF", "IF", "EXPRESSION", "LOOP", "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 2,
+				"NUMBEROFOUTGOINGMETHODS" : 7,
+				"METHODRETURNTYPE" : "boolean",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "DefaultSingletonBeanRegistry",
+					"CALLEEMETHODNAME" : "isDependent"
+				}, {
+					"CALLEECLASS" : "DefaultSingletonBeanRegistry",
+					"CALLEEMETHODNAME" : "isDependent"
+				} ],
+				"NUMBEROFMETHODLINES" : 9,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "beanName",
+					"PARAMETERTYPE" : "String"
+				}, {
+					"PARAMETERNAME" : "dependentBeanName",
+					"PARAMETERTYPE" : "String"
+				}, {
+					"PARAMETERNAME" : "Set<String>",
+					"PARAMETERTYPE" : "@Nullable"
+				} ]
+			}, {
+				"METHODNAME" : "hasDependentBean",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "protected" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 1,
+				"METHODRETURNTYPE" : "boolean",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "beanName",
+					"PARAMETERTYPE" : "String"
+				} ]
+			}, {
+				"METHODNAME" : "getDependentBeans",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "IF", "OTHER" ],
+				"NUMBEROFMETHODVARIABLES" : 1,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "String[]",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 3,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "beanName",
+					"PARAMETERTYPE" : "String"
+				} ]
+			}, {
+				"METHODNAME" : "getDependenciesForBean",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "IF", "OTHER" ],
+				"NUMBEROFMETHODVARIABLES" : 1,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "String[]",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 3,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "beanName",
+					"PARAMETERTYPE" : "String"
+				} ]
+			}, {
+				"METHODNAME" : "destroySingletons",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "IF", "EXPRESSION", "EXPRESSION", "OTHER", "LOOP", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "OTHER" ],
+				"NUMBEROFMETHODVARIABLES" : 1,
+				"NUMBEROFOUTGOINGMETHODS" : 11,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "DefaultSingletonBeanRegistry",
+					"CALLEEMETHODNAME" : "destroySingleton"
+				}, {
+					"CALLEECLASS" : "DefaultSingletonBeanRegistry",
+					"CALLEEMETHODNAME" : "clearSingletonCache"
+				} ],
+				"NUMBEROFMETHODLINES" : 10,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "clearSingletonCache",
+				"NUMBEROFINCOMINGMETHODS" : 1,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "destroySingletons",
+					"CALLEDCLASS" : "DefaultSingletonBeanRegistry"
+				} ],
+				"METHODMODIFIERTYPE" : [ "protected" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 4,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 5,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "destroySingleton",
+				"NUMBEROFINCOMINGMETHODS" : 1,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "destroySingletons",
+					"CALLEDCLASS" : "DefaultSingletonBeanRegistry"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "OTHER", "EXPRESSION", "IF" ],
+				"NUMBEROFMETHODVARIABLES" : 1,
+				"NUMBEROFOUTGOINGMETHODS" : 8,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "DefaultSingletonBeanRegistry",
+					"CALLEEMETHODNAME" : "removeSingleton"
+				}, {
+					"CALLEECLASS" : "DefaultSingletonBeanRegistry",
+					"CALLEEMETHODNAME" : "removeSingleton"
+				} ],
+				"NUMBEROFMETHODLINES" : 4,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "beanName",
+					"PARAMETERTYPE" : "String"
+				} ]
+			}, {
+				"METHODNAME" : "destroyBean",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "protected" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "OTHER", "IF", "IF", "EXPRESSION", "OTHER", "IF", "OTHER", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 2,
+				"NUMBEROFOUTGOINGMETHODS" : 18,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 9,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "beanName",
+					"PARAMETERTYPE" : "String"
+				}, {
+					"PARAMETERNAME" : "DisposableBean",
+					"PARAMETERTYPE" : "@Nullable"
+				} ]
+			}, {
+				"METHODNAME" : "getSingletonMutex",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public", "final" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "Object",
+				"METHODOVERRIDE" : [ "@Deprecated(since = \"6.2\")", "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"SingletonSupplier" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "Supplier<? extends @Nullable T>",
+				"FIELDMODIFIERTYPE" : [ "private", "final" ],
+				"FIELDDECLARATION" : [ "instanceSupplier" ],
+				"FIELDDATATYPE" : "Supplier<? extends @Nullable T>",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "Supplier<? extends @Nullable T>",
+				"FIELDMODIFIERTYPE" : [ "private", "final" ],
+				"FIELDDECLARATION" : [ "defaultSupplier" ],
+				"FIELDDATATYPE" : "Supplier<? extends @Nullable T>",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "T",
+				"FIELDMODIFIERTYPE" : [ "private", "volatile" ],
+				"FIELDDECLARATION" : [ "singletonInstance" ],
+				"FIELDDATATYPE" : "T",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "boolean",
+				"FIELDMODIFIERTYPE" : [ "private" ],
+				"FIELDDECLARATION" : [ "initialized" ],
+				"FIELDDATATYPE" : "boolean",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			}, {
+				"FIELDCOMMONTYPE" : "Lock",
+				"FIELDMODIFIERTYPE" : [ "private", "final" ],
+				"FIELDDECLARATION" : [ "initializationLock = new ReentrantLock()" ],
+				"FIELDDATATYPE" : "Lock",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 6,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ "Supplier<T>" ],
+				"CLASSNAME" : "SingletonSupplier",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ "T extends @Nullable Object" ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ {
+					"PARAMETERNAME" : "T",
+					"PARAMETERTYPE" : "@Nullable"
+				}, {
+					"PARAMETERNAME" : "extends",
+					"PARAMETERTYPE" : "Supplier<?"
+				} ]
+			}, {
+				"CONSTRUCTORMODIFIER" : [ "public" ],
+				"CONSTRUCTORPARAMETER" : [ {
+					"PARAMETERNAME" : "Supplier<?",
+					"PARAMETERTYPE" : "@Nullable"
+				}, {
+					"PARAMETERNAME" : "extends",
+					"PARAMETERTYPE" : "Supplier<?"
+				} ]
+			}, {
+				"CONSTRUCTORMODIFIER" : [ "private" ],
+				"CONSTRUCTORPARAMETER" : [ {
+					"PARAMETERNAME" : "extends",
+					"PARAMETERTYPE" : "Supplier<?"
+				} ]
+			}, {
+				"CONSTRUCTORMODIFIER" : [ "private" ],
+				"CONSTRUCTORPARAMETER" : [ {
+					"PARAMETERNAME" : "T",
+					"PARAMETERTYPE" : "@Nullable"
+				} ]
+			} ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "instance = this.singletonInstance" ],
+				"VARIABLECOMMONTYPE" : "T",
+				"VARIABLEELEMENTTYPE" : "T"
+			}, {
+				"VARIABLEDECLARATION" : [ "instance = get()" ],
+				"VARIABLECOMMONTYPE" : "T",
+				"VARIABLEELEMENTTYPE" : "T"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "get",
+				"NUMBEROFINCOMINGMETHODS" : 1,
+				"INCOMINGMETHOD" : [ {
+					"CALLEDMETHODNAME" : "obtain",
+					"CALLEDCLASS" : "SingletonSupplier"
+				} ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "IF", "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 1,
+				"NUMBEROFOUTGOINGMETHODS" : 4,
+				"METHODRETURNTYPE" : "T",
+				"METHODOVERRIDE" : [ "@Override", "@Nullable" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 3,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "obtain",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 1,
+				"NUMBEROFOUTGOINGMETHODS" : 2,
+				"METHODRETURNTYPE" : "T",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ {
+					"CALLEECLASS" : "SingletonSupplier",
+					"CALLEEMETHODNAME" : "get"
+				} ],
+				"NUMBEROFMETHODLINES" : 3,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "of",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public", "static" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "SingletonSupplier<T>",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "instance",
+					"PARAMETERTYPE" : "T"
+				} ]
+			}, {
+				"METHODNAME" : "ofNullable",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public", "static" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "SingletonSupplier<T>",
+				"METHODOVERRIDE" : [ "@Contract(\"null -> null; !null -> !null\")", "@Nullable" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "T",
+					"PARAMETERTYPE" : "@Nullable"
+				} ]
+			}, {
+				"METHODNAME" : "of",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public", "static" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "SingletonSupplier<T>",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "supplier",
+					"PARAMETERTYPE" : "Supplier<T>"
+				} ]
+			}, {
+				"METHODNAME" : "ofNullable",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public", "static" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "SingletonSupplier<T>",
+				"METHODOVERRIDE" : [ "@Contract(\"null -> null; !null -> !null\")", "@Nullable" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "Supplier<T>",
+					"PARAMETERTYPE" : "@Nullable"
+				} ]
+			} ]
+		},
+		"SingletonBeanRegistry" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "SingletonBeanRegistry",
+				"ISINTERFACEORNOT" : true,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "registerSingleton",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "beanName",
+					"PARAMETERTYPE" : "String"
+				}, {
+					"PARAMETERNAME" : "singletonObject",
+					"PARAMETERTYPE" : "Object"
+				} ]
+			}, {
+				"METHODNAME" : "addSingletonCallback",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "beanName",
+					"PARAMETERTYPE" : "String"
+				}, {
+					"PARAMETERNAME" : "singletonConsumer",
+					"PARAMETERTYPE" : "Consumer<Object>"
+				} ]
+			}, {
+				"METHODNAME" : "getSingleton",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "Object",
+				"METHODOVERRIDE" : [ "@Nullable" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "beanName",
+					"PARAMETERTYPE" : "String"
+				} ]
+			}, {
+				"METHODNAME" : "containsSingleton",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "boolean",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "beanName",
+					"PARAMETERTYPE" : "String"
+				} ]
+			}, {
+				"METHODNAME" : "getSingletonNames",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "String[]",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "getSingletonCount",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "int",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ ]
+			}, {
+				"METHODNAME" : "getSingletonMutex",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ ],
+				"METHODBODYLINETYPE" : [ ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "Object",
+				"METHODOVERRIDE" : [ "@Deprecated(since = \"6.2\")" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 0,
+				"METHODPARAMETER" : [ ]
+			} ]
+		}
+	},
+	"project_identifier" : "spring-framework/Singleton"
+}

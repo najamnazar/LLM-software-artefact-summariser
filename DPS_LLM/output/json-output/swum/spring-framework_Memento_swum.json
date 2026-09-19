@@ -1,7 +1,7 @@
 {
   "project_name" : "spring-framework/Memento",
   "swum_version" : "1.0",
-  "generated_timestamp" : 1780917880887,
+  "generated_timestamp" : 1789807088648,
   "class_summaries" : {
     "SimpleApplicationEventMulticaster" : {
       "class_name" : "SimpleApplicationEventMulticaster",

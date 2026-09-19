@@ -1,7 +1,7 @@
 {
   "project_name" : "spring-framework/FactoryMethod",
   "swum_version" : "1.0",
-  "generated_timestamp" : 1780917880882,
+  "generated_timestamp" : 1789807088640,
   "class_summaries" : {
     "CronTriggerFactoryBean" : {
       "class_name" : "CronTriggerFactoryBean",

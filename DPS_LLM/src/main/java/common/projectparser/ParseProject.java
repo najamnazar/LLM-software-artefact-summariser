@@ -12,7 +12,6 @@ import com.github.javaparser.symbolsolver.javaparsermodel.declarations.JavaParse
 
 import common.designpatternidentifier.CheckPattern;
 
-import dps_nlg.summarygenerator.Summarise;
 import common.utils.*;
 
 import java.io.File;
@@ -23,8 +22,6 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.*;
 import java.util.regex.Pattern;
-
-import org.apache.commons.collections4.MultiValuedMap;
 
 public class ParseProject {
 
@@ -81,14 +78,17 @@ public class ParseProject {
     }
 
     public HashMap<String, Object> parseProject(File directory) throws FileNotFoundException, IOException {
-        return parseProject(directory, true);
+        return parseProject(directory, directory.getName());
     }
 
-    public HashMap<String, Object> parseProject(File directory, boolean generateNlgSummary) throws FileNotFoundException, IOException {
-        return parseProject(directory, directory.getName(), generateNlgSummary);
-    }
-    
-    public HashMap<String, Object> parseProject(File directory, String projectIdentifier, boolean generateNlgSummary) throws FileNotFoundException, IOException {
+    // Najam: the boolean generateNlgSummary parameter is gone. ParseProject is the shared feature
+    // extractor for DPS_NLG, DPS_SWUM and DPS_LLM, and it used to run the NLG summariser inline for
+    // one of those three. That made NLG's summaries a side effect of parsing, so NLG never read the
+    // JSON representation it emitted, and it tied the common parser to the dps_nlg package. Each
+    // pipeline now writes the JSON and summarises from it.
+    // public HashMap<String, Object> parseProject(File directory, boolean generateNlgSummary) ...
+    // public HashMap<String, Object> parseProject(File directory, String projectIdentifier, boolean generateNlgSummary) ...
+    public HashMap<String, Object> parseProject(File directory, String projectIdentifier) throws FileNotFoundException, IOException {
 
         // Bug 1 fix: processedFiles is now a local variable so each call to parseProject() gets its
         // own fresh deduplication context. Previously the static map accumulated entries across all
@@ -119,11 +119,11 @@ public class ParseProject {
 
         HashMap<String, HashMap> parsedFile = new HashMap<>();
         CheckPattern checkPattern = new CheckPattern();
-        Summarise summarise = generateNlgSummary ? new Summarise() : null;
 
         ArrayList designPatternArrayList = new ArrayList<>();
 
-        HashMap<String, MultiValuedMap<String, String>> summaries = new HashMap<>();
+        // Empty placeholders keeping the JSON schema stable across all three pipelines; DPS_NLG
+        // overwrites them once it has summarised the JSON, DPS_SWUM and DPS_LLM leave them empty.
         HashMap<String, HashMap<String, HashSet<String>>> summaryMap = new HashMap<String, HashMap<String, HashSet<String>>>();
         String finalSummary = "";
 
@@ -226,28 +226,14 @@ public class ParseProject {
         // HashMap dataToStore = extractedCallGraph.isEmpty() ? parsedFile : extractedCallGraph;
         HashMap dataToStore = enrichedParsedFile.isEmpty() ? parsedFile : enrichedParsedFile;
 
-        // Only generate NLG summaries if explicitly requested (for DPS_NLG pipeline)
-        if (generateNlgSummary && summarise != null) {
-            // Always run the summariser so that every parsed file gets a CSV row (even if there are no
-            // detected design patterns). The Summarise class internally skips design-pattern-specific
-            // processing when designPatternArrayList is empty and will still produce class/method
-            // summaries for files without patterns.
-            finalSummary = summarise.summarise(dataToStore, designPatternArrayList, summaries, projectIdentifier);
-        }
-
-        // Only populate the structured summaryMap if any design-pattern summaries were produced
-        if (!summaries.isEmpty()) {
-            for (String designPattern : summaries.keySet()) {
-                summaryMap.put(designPattern, new HashMap<>());
-                for (String classString : summaries.get(designPattern).keySet()) {
-                    HashSet<String> summarySet = new HashSet<String>();
-                    for (String summary : summaries.get(designPattern).get(classString)) {
-                        summarySet.add(summary);
-                    }
-                    summaryMap.get(designPattern).put(classString, summarySet);
-                }
-            }
-        }
+        // Summarisation no longer happens here. DPS_NLG reads the JSON this method produces and runs
+        // Summarise over it (see dps_nlg.NlgJsonSummariser), which is how DPS_SWUM and DPS_LLM already
+        // worked. summary_NLG and final_summary are still written so the JSON schema is unchanged for
+        // every consumer; DPS_NLG fills them in on its second pass.
+        // Old inline call:
+        // if (generateNlgSummary && summarise != null) {
+        //     finalSummary = summarise.summarise(dataToStore, designPatternArrayList, summaries, projectIdentifier);
+        // }
 
         // Bug 2 fix: was directory.getName() (leaf folder name only), which is ambiguous when two
         // different projects share the same folder name but differ in their parent path. Using

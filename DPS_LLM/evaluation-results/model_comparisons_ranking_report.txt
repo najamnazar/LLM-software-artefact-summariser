@@ -5,117 +5,117 @@ MODEL COMPARISON RANKING RESULTS (NLG vs MODEL vs SWUM)
 Per-Comparison Summary:
 ----------------------------------------------------------------------
 
-Comparison: NLG vs CLAUDE vs SWUM
-  Source file (B): LLM_CLAUDE_SUMMARY.csv
-  Ranked: 150, Skipped: 0
-  Average Points: A(NLG)=11.99, B(CLAUDE)=11.52, C(SWUM)=6.33
-  Ranking by Criterion:
-    ACCURACY:
-      NLG: 79 first, 45 second, 26 third
-      CLAUDE: 60 first, 90 second, 0 third
-      SWUM: 11 first, 15 second, 124 third
-    CONCISENESS:
-      NLG: 71 first, 51 second, 24 third
-      CLAUDE: 58 first, 49 second, 39 third
-      SWUM: 17 first, 46 second, 83 third
-    ADEQUACY:
-      NLG: 139 first, 5 second, 6 third
-      CLAUDE: 7 first, 140 second, 3 third
-      SWUM: 4 first, 5 second, 141 third
-    CODE_CONTEXT:
-      NLG: 95 first, 32 second, 23 third
-      CLAUDE: 44 first, 104 second, 2 third
-      SWUM: 11 first, 14 second, 125 third
-    DESIGN_PATTERNS:
-      NLG: 27 first, 97 second, 26 third
-      CLAUDE: 112 first, 37 second, 1 third
-      SWUM: 11 first, 16 second, 123 third
-
 Comparison: NLG vs QWEN vs SWUM
   Source file (B): LLM_QWEN_SUMMARY.csv
   Ranked: 150, Skipped: 0
-  Average Points: A(NLG)=11.32, B(QWEN)=11.54, C(SWUM)=6.94
+  Average Points: A(NLG)=6.61, B(QWEN)=13.49, C(SWUM)=7.53
   Ranking by Criterion:
     ACCURACY:
-      NLG: 70 first, 42 second, 38 third
-      QWEN: 71 first, 74 second, 5 third
-      SWUM: 9 first, 34 second, 107 third
+      NLG: 0 first, 51 second, 82 third
+      QWEN: 131 first, 2 second, 0 third
+      SWUM: 2 first, 80 second, 51 third
     CONCISENESS:
-      NLG: 55 first, 37 second, 53 third
-      QWEN: 59 first, 54 second, 32 third
-      SWUM: 31 first, 54 second, 60 third
+      NLG: 2 first, 43 second, 75 third
+      QWEN: 100 first, 10 second, 10 third
+      SWUM: 18 first, 67 second, 35 third
     ADEQUACY:
-      NLG: 132 first, 4 second, 14 third
-      QWEN: 12 first, 131 second, 7 third
-      SWUM: 6 first, 15 second, 129 third
+      NLG: 1 first, 66 second, 74 third
+      QWEN: 139 first, 2 second, 0 third
+      SWUM: 1 first, 73 second, 67 third
     CODE_CONTEXT:
-      NLG: 92 first, 30 second, 28 third
-      QWEN: 48 first, 98 second, 4 third
-      SWUM: 10 first, 22 second, 118 third
+      NLG: 3 first, 57 second, 89 third
+      QWEN: 145 first, 4 second, 0 third
+      SWUM: 1 first, 88 second, 60 third
     DESIGN_PATTERNS:
-      NLG: 33 first, 76 second, 41 third
-      QWEN: 103 first, 43 second, 4 third
-      SWUM: 14 first, 31 second, 105 third
+      NLG: 5 first, 62 second, 81 third
+      QWEN: 139 first, 7 second, 2 third
+      SWUM: 4 first, 79 second, 65 third
 
 Comparison: NLG vs GPT vs SWUM
   Source file (B): LLM_GPT_SUMMARY.csv
   Ranked: 150, Skipped: 0
-  Average Points: A(NLG)=11.02, B(GPT)=11.75, C(SWUM)=6.95
+  Average Points: A(NLG)=6.53, B(GPT)=13.75, C(SWUM)=8.00
   Ranking by Criterion:
     ACCURACY:
-      NLG: 58 first, 43 second, 49 third
-      GPT: 84 first, 63 second, 3 third
-      SWUM: 8 first, 44 second, 98 third
+      NLG: 2 first, 55 second, 83 third
+      GPT: 132 first, 8 second, 0 third
+      SWUM: 6 first, 77 second, 57 third
     CONCISENESS:
-      NLG: 57 first, 36 second, 51 third
-      GPT: 68 first, 38 second, 38 third
-      SWUM: 19 first, 70 second, 55 third
+      NLG: 2 first, 37 second, 85 third
+      GPT: 108 first, 9 second, 7 third
+      SWUM: 14 first, 78 second, 32 third
     ADEQUACY:
-      NLG: 119 first, 9 second, 22 third
-      GPT: 26 first, 122 second, 2 third
-      SWUM: 5 first, 19 second, 126 third
+      NLG: 0 first, 53 second, 93 third
+      GPT: 139 first, 7 second, 0 third
+      SWUM: 7 first, 86 second, 53 third
     CODE_CONTEXT:
-      NLG: 90 first, 23 second, 37 third
-      GPT: 49 first, 100 second, 1 third
-      SWUM: 11 first, 27 second, 112 third
+      NLG: 1 first, 63 second, 85 third
+      GPT: 144 first, 5 second, 0 third
+      SWUM: 4 first, 81 second, 64 third
     DESIGN_PATTERNS:
-      NLG: 42 first, 67 second, 40 third
-      GPT: 94 first, 54 second, 1 third
-      SWUM: 13 first, 28 second, 108 third
+      NLG: 2 first, 51 second, 95 third
+      GPT: 132 first, 16 second, 0 third
+      SWUM: 14 first, 81 second, 53 third
+
+Comparison: NLG vs CLAUDE vs SWUM
+  Source file (B): LLM_CLAUDE_SUMMARY.csv
+  Ranked: 150, Skipped: 0
+  Average Points: A(NLG)=6.67, B(CLAUDE)=14.02, C(SWUM)=7.79
+  Ranking by Criterion:
+    ACCURACY:
+      NLG: 0 first, 53 second, 89 third
+      CLAUDE: 142 first, 0 second, 0 third
+      SWUM: 0 first, 89 second, 53 third
+    CONCISENESS:
+      NLG: 1 first, 39 second, 85 third
+      CLAUDE: 108 first, 9 second, 8 third
+      SWUM: 16 first, 77 second, 32 third
+    ADEQUACY:
+      NLG: 0 first, 64 second, 83 third
+      CLAUDE: 146 first, 1 second, 0 third
+      SWUM: 1 first, 82 second, 64 third
+    CODE_CONTEXT:
+      NLG: 1 first, 66 second, 82 third
+      CLAUDE: 147 first, 2 second, 0 third
+      SWUM: 1 first, 81 second, 67 third
+    DESIGN_PATTERNS:
+      NLG: 2 first, 59 second, 88 third
+      CLAUDE: 144 first, 5 second, 0 third
+      SWUM: 3 first, 85 second, 61 third
 
 Comparison: NLG vs MISTRAL vs SWUM
   Source file (B): LLM_MISTRAL_SUMMARY.csv
   Ranked: 150, Skipped: 0
-  Average Points: A(NLG)=11.35, B(MISTRAL)=11.49, C(SWUM)=6.91
+  Average Points: A(NLG)=6.58, B(MISTRAL)=13.41, C(SWUM)=7.77
   Ranking by Criterion:
     ACCURACY:
-      NLG: 74 first, 35 second, 41 third
-      MISTRAL: 66 first, 82 second, 2 third
-      SWUM: 10 first, 33 second, 107 third
+      NLG: 4 first, 48 second, 88 third
+      MISTRAL: 130 first, 9 second, 1 third
+      SWUM: 6 first, 83 second, 51 third
     CONCISENESS:
-      NLG: 59 first, 35 second, 50 third
-      MISTRAL: 53 first, 58 second, 33 third
-      SWUM: 32 first, 51 second, 61 third
+      NLG: 1 first, 31 second, 81 third
+      MISTRAL: 96 first, 9 second, 8 third
+      SWUM: 16 first, 73 second, 24 third
     ADEQUACY:
-      NLG: 139 first, 3 second, 8 third
-      MISTRAL: 6 first, 141 second, 3 third
-      SWUM: 5 first, 6 second, 139 third
+      NLG: 3 first, 55 second, 85 third
+      MISTRAL: 135 first, 7 second, 1 third
+      SWUM: 5 first, 81 second, 57 third
     CODE_CONTEXT:
-      NLG: 94 first, 28 second, 28 third
-      MISTRAL: 46 first, 103 second, 1 third
-      SWUM: 10 first, 19 second, 121 third
+      NLG: 4 first, 65 second, 81 third
+      MISTRAL: 144 first, 6 second, 0 third
+      SWUM: 2 first, 79 second, 69 third
     DESIGN_PATTERNS:
-      NLG: 28 first, 70 second, 52 third
-      MISTRAL: 106 first, 42 second, 2 third
-      SWUM: 16 first, 38 second, 96 third
+      NLG: 5 first, 60 second, 83 third
+      MISTRAL: 131 first, 15 second, 2 third
+      SWUM: 12 first, 73 second, 63 third
 
 ----------------------------------------------------------------------
 Aggregate Statistics (Min/Max/Avg across all 4 comparisons):
 ----------------------------------------------------------------------
 
 Overall Average Points:
-  A (NLG):   min=11.02, max=11.99, avg=11.42
-  B (Model): min=11.49, max=11.75, avg=11.57
-  C (SWUM):  min=6.33, max=6.95, avg=6.79
+  A (NLG):   min=6.53, max=6.67, avg=6.60
+  B (Model): min=13.41, max=14.02, avg=13.67
+  C (SWUM):  min=7.53, max=8.00, avg=7.77
 
 ======================================================================

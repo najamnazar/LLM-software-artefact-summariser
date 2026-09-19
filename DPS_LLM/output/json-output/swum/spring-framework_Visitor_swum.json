@@ -1,7 +1,7 @@
 {
   "project_name" : "spring-framework/Visitor",
   "swum_version" : "1.0",
-  "generated_timestamp" : 1780917880897,
+  "generated_timestamp" : 1789807088656,
   "class_summaries" : {
     "BeanDefinitionVisitor" : {
       "class_name" : "BeanDefinitionVisitor",

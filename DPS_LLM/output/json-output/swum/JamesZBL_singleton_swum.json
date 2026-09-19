@@ -1,7 +1,7 @@
 {
   "project_name" : "JamesZBL/singleton",
   "swum_version" : "1.0",
-  "generated_timestamp" : 1780917880848,
+  "generated_timestamp" : 1789807088596,
   "class_summaries" : {
     "ThreadSafeDoubleCheckLocking" : {
       "class_name" : "ThreadSafeDoubleCheckLocking",

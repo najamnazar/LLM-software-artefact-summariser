@@ -11,6 +11,12 @@
         <maven.compiler.source>17</maven.compiler.source>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <!-- Default main class for `mvn exec:java`. It was pinned to the SWUM pipeline in the plugin's
+             own configuration, which silently overrode -Dexec.mainClass, so asking for another entry
+             point on the command line ran SWUM instead. Declared as a property so -D works. -->
+        <exec.mainClass>dps_swum.swum.SWUMEvaluationPipeline</exec.mainClass>
+        <!-- Arguments passed to that main class, e.g. -Dexec.args="Concise QWEN" -->
+        <exec.args></exec.args>
     </properties>
     <dependencies>
         <dependency>
@@ -60,7 +66,8 @@
                 <artifactId>exec-maven-plugin</artifactId>
                 <version>3.1.0</version>
                 <configuration>
-                    <mainClass>dps_swum.swum.SWUMEvaluationPipeline</mainClass>
+                    <mainClass>${exec.mainClass}</mainClass>
+                    <commandlineArgs>${exec.args}</commandlineArgs>
                 </configuration>
                 <executions>
                     <execution>

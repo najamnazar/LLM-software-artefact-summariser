@@ -242,10 +242,16 @@ public class SWUMSummarizer {
                 classSummaries.fields().forEachRemaining(entry -> {
                     String className = entry.getKey();
                     JsonNode classData = entry.getValue();
-                    
-                    String classSummary = classData.has("swum_class_summary") ? 
-                        classData.get("swum_class_summary").asText() : "No summary available";
-                    
+
+                    // Najam: the CSV used to export swum_class_summary alone and drop method_summaries
+                    // entirely, so it carried roughly a quarter of the text SWUM had generated. That is
+                    // why SWUM summaries looked so much shorter than the NLG ones, whose CSV rows do
+                    // include method-level description. The method sentences SWUM already produced are
+                    // now part of the exported summary.
+                    // String classSummary = classData.has("swum_class_summary") ?
+                    //     classData.get("swum_class_summary").asText() : "No summary available";
+                    String classSummary = composeCsvSummary(classData);
+
                     try {
                         writeToCsv(projectName, className + ".java", classSummary);
                     } catch (IOException e) {
@@ -256,6 +262,61 @@ public class SWUMSummarizer {
         }
     }
     
+    /**
+     * Builds the CSV summary for one class from its SWUM output.
+     * <p>
+     * The class-level sentence comes first, followed by the SWUM sentence for each method, with the
+     * subject "This method" replaced by the method name so the sentences remain distinguishable once
+     * concatenated. Sentences already produced at class level (the pattern-role sentence is repeated
+     * in every method summary) are emitted once.
+     * </p>
+     *
+     * @param classData one entry of the {@code class_summaries} object
+     * @return the summary text for the CSV row
+     */
+    private String composeCsvSummary(JsonNode classData) {
+        LinkedHashSet<String> sentences = new LinkedHashSet<>();
+
+        if (classData.has("swum_class_summary")) {
+            addSentences(sentences, classData.get("swum_class_summary").asText());
+        }
+
+        JsonNode methodSummaries = classData.get("method_summaries");
+        if (methodSummaries != null && methodSummaries.isObject()) {
+            methodSummaries.fields().forEachRemaining(methodEntry -> {
+                JsonNode methodData = methodEntry.getValue();
+                if (methodData == null || !methodData.has("swum_summary")) {
+                    return;
+                }
+                String methodSummary = methodData.get("swum_summary").asText();
+                // "This method retrieves ..." -> "The getRadius method retrieves ..."
+                String named = methodSummary.startsWith("This method ")
+                        ? "The " + methodEntry.getKey() + " method "
+                                + methodSummary.substring("This method ".length())
+                        : methodSummary;
+                addSentences(sentences, named);
+            });
+        }
+
+        if (sentences.isEmpty()) {
+            return "No summary available";
+        }
+        return String.join(" ", sentences);
+    }
+
+    /** Splits generated text into sentences, keeping the terminating period on each. */
+    private void addSentences(LinkedHashSet<String> sentences, String text) {
+        if (text == null || text.isBlank()) {
+            return;
+        }
+        for (String part : text.split("(?<=\\.)\\s+")) {
+            String sentence = part.trim();
+            if (!sentence.isEmpty()) {
+                sentences.add(sentence);
+            }
+        }
+    }
+
     /**
      * Processes all JSON files and writes summaries to CSV
      */

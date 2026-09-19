@@ -1,7 +1,7 @@
 {
   "project_name" : "spring-framework/Adapter",
   "swum_version" : "1.0",
-  "generated_timestamp" : 1780917880856,
+  "generated_timestamp" : 1789807088605,
   "class_summaries" : {
     "IsolationLevelDataSourceAdapter" : {
       "class_name" : "IsolationLevelDataSourceAdapter",

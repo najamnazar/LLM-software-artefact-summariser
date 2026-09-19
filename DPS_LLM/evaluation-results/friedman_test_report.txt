@@ -1,0 +1,812 @@
+
+========================================================================
+FRIEDMAN TEST ANALYSIS — NLG vs CLAUDE vs SWUM
+========================================================================
+  Run date   : 2026-09-20 00:16:37
+  Data file  : model_comparisons_ranking_detail.csv
+  Rows used  : 150
+
+  Systems    :  A = NLG   |  B = CLAUDE   |  C = SWUM
+  Scoring    :  1st place = 3 pts  |  2nd = 2 pts  |  3rd = 1 pt
+  Alpha      :  0.05
+  Post-hoc   :  Wilcoxon signed-rank, Bonferroni α_adj = 0.0167
+
+  H0 (each Friedman test): no significant difference in scores
+  among the three systems under the given criterion / criteria.
+
+========================================================================
+PART 1: PER-CRITERION FRIEDMAN TESTS  (class files as blocks)
+========================================================================
+
+  Test design : one Friedman test per criterion
+  Blocks      : individual class files  (n ≈ 150 per test)
+  Treatments  : k = 3 systems  (NLG, CLAUDE, SWUM)
+  Scoring     : 1st = 3 pts | 2nd = 2 pts | 3rd = 1 pt
+  H0          : no significant difference among the 3 systems
+  α           : 0.05  |  post-hoc Bonferroni α_adj = 0.0167
+  Family-wise : Holm-Bonferroni across the 5 criterion tests;
+                significance and post-hocs are decided on the adjusted p.
+
+------------------------------------------------------------------------
+  Criterion      : ACCURACY
+  N (blocks)     : 142 class files
+  Friedman chi²  = 217.5634
+  p-value (raw)  = 0.000000
+  p-value (Holm) = 0.000000    < 0.05  →  REJECT H0 *
+  Kendall's W    = 0.7661  (very strong concordance)
+  Significant    : YES
+
+  Mean scores per system (higher = better ranked):
+    NLG          : 1.3732
+    CLAUDE       : 3.0000  <-- best
+    SWUM         : 1.6268
+
+  Post-hoc pairwise Wilcoxon signed-rank tests (Bonferroni α_adj = 0.0167):
+  Comparison                     W-stat      p (raw)      p (adj)   Sig?  Direction
+  ----------------------------------------------------------------------------------
+  NLG      vs CLAUDE               0.00     0.000000     0.000000  YES *  CLAUDE > NLG
+  NLG      vs SWUM              3789.50     0.002519     0.007557  YES *  SWUM > NLG
+  CLAUDE   vs SWUM                 0.00     0.000000     0.000000  YES *  CLAUDE > SWUM
+
+------------------------------------------------------------------------
+  Criterion      : CONCISENESS
+  N (blocks)     : 125 class files
+  Friedman chi²  = 138.4960
+  p-value (raw)  = 0.000000
+  p-value (Holm) = 0.000000    < 0.05  →  REJECT H0 *
+  Kendall's W    = 0.5540  (strong concordance)
+  Significant    : YES
+
+  Mean scores per system (higher = better ranked):
+    NLG          : 1.3280
+    CLAUDE       : 2.8000  <-- best
+    SWUM         : 1.8720
+
+  Post-hoc pairwise Wilcoxon signed-rank tests (Bonferroni α_adj = 0.0167):
+  Comparison                     W-stat      p (raw)      p (adj)   Sig?  Direction
+  ----------------------------------------------------------------------------------
+  NLG      vs CLAUDE             258.50     0.000000     0.000000  YES *  CLAUDE > NLG
+  NLG      vs SWUM              1930.50     0.000000     0.000000  YES *  SWUM > NLG
+  CLAUDE   vs SWUM              1177.00     0.000000     0.000000  YES *  CLAUDE > SWUM
+
+------------------------------------------------------------------------
+  Criterion      : ADEQUACY
+  N (blocks)     : 147 class files
+  Friedman chi²  = 218.8707
+  p-value (raw)  = 0.000000
+  p-value (Holm) = 0.000000    < 0.05  →  REJECT H0 *
+  Kendall's W    = 0.7445  (very strong concordance)
+  Significant    : YES
+
+  Mean scores per system (higher = better ranked):
+    NLG          : 1.4354
+    CLAUDE       : 2.9932  <-- best
+    SWUM         : 1.5714
+
+  Post-hoc pairwise Wilcoxon signed-rank tests (Bonferroni α_adj = 0.0167):
+  Comparison                     W-stat      p (raw)      p (adj)   Sig?  Direction
+  ----------------------------------------------------------------------------------
+  NLG      vs CLAUDE               0.00     0.000000     0.000000  YES *  CLAUDE > NLG
+  NLG      vs SWUM              4704.00     0.102470     0.307411     no  SWUM > NLG
+  CLAUDE   vs SWUM                42.00     0.000000     0.000000  YES *  CLAUDE > SWUM
+
+------------------------------------------------------------------------
+  Criterion      : CODE CONTEXT
+  N (blocks)     : 149 class files
+  Friedman chi²  = 218.2953
+  p-value (raw)  = 0.000000
+  p-value (Holm) = 0.000000    < 0.05  →  REJECT H0 *
+  Kendall's W    = 0.7325  (very strong concordance)
+  Significant    : YES
+
+  Mean scores per system (higher = better ranked):
+    NLG          : 1.4564
+    CLAUDE       : 2.9866  <-- best
+    SWUM         : 1.5570
+
+  Post-hoc pairwise Wilcoxon signed-rank tests (Bonferroni α_adj = 0.0167):
+  Comparison                     W-stat      p (raw)      p (adj)   Sig?  Direction
+  ----------------------------------------------------------------------------------
+  NLG      vs CLAUDE              34.50     0.000000     0.000000  YES *  CLAUDE > NLG
+  NLG      vs SWUM              5032.50     0.228351     0.685052     no  SWUM > NLG
+  CLAUDE   vs SWUM                42.00     0.000000     0.000000  YES *  CLAUDE > SWUM
+
+------------------------------------------------------------------------
+  Criterion      : DESIGN PATTERN
+  N (blocks)     : 149 class files
+  Friedman chi²  = 211.3826
+  p-value (raw)  = 0.000000
+  p-value (Holm) = 0.000000    < 0.05  →  REJECT H0 *
+  Kendall's W    = 0.7093  (very strong concordance)
+  Significant    : YES
+
+  Mean scores per system (higher = better ranked):
+    NLG          : 1.4228
+    CLAUDE       : 2.9664  <-- best
+    SWUM         : 1.6107
+
+  Post-hoc pairwise Wilcoxon signed-rank tests (Bonferroni α_adj = 0.0167):
+  Comparison                     W-stat      p (raw)      p (adj)   Sig?  Direction
+  ----------------------------------------------------------------------------------
+  NLG      vs CLAUDE              65.00     0.000000     0.000000  YES *  CLAUDE > NLG
+  NLG      vs SWUM              4571.50     0.028897     0.086691     no  SWUM > NLG
+  CLAUDE   vs SWUM               136.50     0.000000     0.000000  YES *  CLAUDE > SWUM
+
+========================================================================
+PART 2: CROSS-CRITERIA FRIEDMAN TEST  (criteria as blocks)
+========================================================================
+
+  Test design : one Friedman test across all criteria
+  Blocks      : n = 5 criteria  (ACCURACY, CONCISENESS, ADEQUACY,
+                                  CODE CONTEXT, DESIGN PATTERN)
+  Treatments  : k = 3 systems  (NLG, CLAUDE, SWUM)
+  Cell value  : mean score of system on criterion across all class files
+  H0          : rank ordering of systems does not differ across criteria
+  α           : 0.05
+
+  How to read this part — two limitations, both structural:
+    1. n = 5 blocks. The chi-square approximation the Friedman test
+       normally uses needs roughly 10 blocks; at five it is
+       unreliable, so an EXACT permutation p-value over all 6^5 = 7776 rank
+       assignments is reported instead. Even exact, five blocks give the test
+       coarse resolution: the statistic peaks when all five criteria order the
+       systems identically, which only 6 of the 7776 assignments do, so the
+       smallest p this design can ever produce is 6/7776 ≈ 0.00077.
+    2. Each cell is a mean over ~150 class files, not a single observation, so
+       within-criterion variability is averaged away before the test sees it.
+       This part therefore describes the consistency of the system ordering
+       across criteria; it is not independent evidence of a system difference.
+       The per-criterion tests in PART 1 carry that evidence.
+
+  Mean score matrix:
+  Criterion                     NLG     CLAUDE       SWUM
+  ------------------------------------------------------
+  ACCURACY                  1.3732    3.0000 *    1.6268
+  CONCISENESS               1.3280    2.8000 *    1.8720
+  ADEQUACY                  1.4354    2.9932 *    1.5714
+  CODE CONTEXT              1.4564    2.9866 *    1.5570
+  DESIGN PATTERN            1.4228    2.9664 *    1.6107
+  ------------------------------------------------------
+  COLUMN MEAN                1.4032     2.9492     1.6476
+  (* = best system for that criterion)
+
+  Friedman chi²  = 10.0000
+  p-value (exact)= 0.000772    < 0.05  →  REJECT H0 *
+  p-value (chi²) = 0.006738    [approximation, not valid at n = 5; shown for comparison only]
+  Kendall's W    = 1.0000  (very strong concordance)
+  Significant    : YES  (decided on the exact p-value)
+
+  Note: n = 5 blocks — Wilcoxon signed-rank requires n >= 6, and with
+  averaged cells a pairwise test would be descriptive regardless.
+  Pairwise mean-score differences (descriptive):
+  Comparison                  Mean diff  Direction
+  ----------------------------------------------------
+  NLG      vs CLAUDE            -1.5461  CLAUDE > NLG
+  NLG      vs SWUM              -0.2444  SWUM > NLG
+  CLAUDE   vs SWUM              +1.3016  CLAUDE > SWUM
+
+========================================================================
+SUMMARY TABLE — PER-CRITERION FRIEDMAN RESULTS
+========================================================================
+
+  Criterion                  n       chi²      p (raw)     p (Holm)  Kendall W  Sig?  Best System
+  ------------------------------------------------------------------------------------------
+  ACCURACY                 142   217.5634     0.000000     0.000000     0.7661 YES *  CLAUDE
+  CONCISENESS              125   138.4960     0.000000     0.000000     0.5540 YES *  CLAUDE
+  ADEQUACY                 147   218.8707     0.000000     0.000000     0.7445 YES *  CLAUDE
+  CODE CONTEXT             149   218.2953     0.000000     0.000000     0.7325 YES *  CLAUDE
+  DESIGN PATTERN           149   211.3826     0.000000     0.000000     0.7093 YES *  CLAUDE
+
+  α = 0.05  |  Sig? is decided on the Holm-adjusted p across the 5 criterion tests
+  post-hoc Bonferroni α_adj = 0.0167 (3 pairwise tests within a criterion)
+  Kendall's W : 0.1 weak | 0.3 moderate | 0.5 strong | 0.7 very strong
+
+
+========================================================================
+FRIEDMAN TEST ANALYSIS — NLG vs GPT vs SWUM
+========================================================================
+  Run date   : 2026-09-20 00:16:37
+  Data file  : model_comparisons_ranking_detail.csv
+  Rows used  : 150
+
+  Systems    :  A = NLG   |  B = GPT   |  C = SWUM
+  Scoring    :  1st place = 3 pts  |  2nd = 2 pts  |  3rd = 1 pt
+  Alpha      :  0.05
+  Post-hoc   :  Wilcoxon signed-rank, Bonferroni α_adj = 0.0167
+
+  H0 (each Friedman test): no significant difference in scores
+  among the three systems under the given criterion / criteria.
+
+========================================================================
+PART 1: PER-CRITERION FRIEDMAN TESTS  (class files as blocks)
+========================================================================
+
+  Test design : one Friedman test per criterion
+  Blocks      : individual class files  (n ≈ 150 per test)
+  Treatments  : k = 3 systems  (NLG, GPT, SWUM)
+  Scoring     : 1st = 3 pts | 2nd = 2 pts | 3rd = 1 pt
+  H0          : no significant difference among the 3 systems
+  α           : 0.05  |  post-hoc Bonferroni α_adj = 0.0167
+  Family-wise : Holm-Bonferroni across the 5 criterion tests;
+                significance and post-hocs are decided on the adjusted p.
+
+------------------------------------------------------------------------
+  Criterion      : ACCURACY
+  N (blocks)     : 140 class files
+  Friedman chi²  = 189.9000
+  p-value (raw)  = 0.000000
+  p-value (Holm) = 0.000000    < 0.05  →  REJECT H0 *
+  Kendall's W    = 0.6782  (strong concordance)
+  Significant    : YES
+
+  Mean scores per system (higher = better ranked):
+    NLG          : 1.4214
+    GPT          : 2.9429  <-- best
+    SWUM         : 1.6357
+
+  Post-hoc pairwise Wilcoxon signed-rank tests (Bonferroni α_adj = 0.0167):
+  Comparison                     W-stat      p (raw)      p (adj)   Sig?  Direction
+  ----------------------------------------------------------------------------------
+  NLG      vs GPT                 64.00     0.000000     0.000000  YES *  GPT > NLG
+  NLG      vs SWUM              3930.50     0.018932     0.056796     no  SWUM > NLG
+  GPT      vs SWUM               258.00     0.000000     0.000000  YES *  GPT > SWUM
+
+------------------------------------------------------------------------
+  Criterion      : CONCISENESS
+  N (blocks)     : 124 class files
+  Friedman chi²  = 140.4355
+  p-value (raw)  = 0.000000
+  p-value (Holm) = 0.000000    < 0.05  →  REJECT H0 *
+  Kendall's W    = 0.5663  (strong concordance)
+  Significant    : YES
+
+  Mean scores per system (higher = better ranked):
+    NLG          : 1.3306
+    GPT          : 2.8145  <-- best
+    SWUM         : 1.8548
+
+  Post-hoc pairwise Wilcoxon signed-rank tests (Bonferroni α_adj = 0.0167):
+  Comparison                     W-stat      p (raw)      p (adj)   Sig?  Direction
+  ----------------------------------------------------------------------------------
+  NLG      vs GPT                250.00     0.000000     0.000000  YES *  GPT > NLG
+  NLG      vs SWUM              1976.00     0.000000     0.000000  YES *  SWUM > NLG
+  GPT      vs SWUM              1032.00     0.000000     0.000000  YES *  GPT > SWUM
+
+------------------------------------------------------------------------
+  Criterion      : ADEQUACY
+  N (blocks)     : 146 class files
+  Friedman chi²  = 206.0685
+  p-value (raw)  = 0.000000
+  p-value (Holm) = 0.000000    < 0.05  →  REJECT H0 *
+  Kendall's W    = 0.7057  (very strong concordance)
+  Significant    : YES
+
+  Mean scores per system (higher = better ranked):
+    NLG          : 1.3630
+    GPT          : 2.9521  <-- best
+    SWUM         : 1.6849
+
+  Post-hoc pairwise Wilcoxon signed-rank tests (Bonferroni α_adj = 0.0167):
+  Comparison                     W-stat      p (raw)      p (adj)   Sig?  Direction
+  ----------------------------------------------------------------------------------
+  NLG      vs GPT                  0.00     0.000000     0.000000  YES *  GPT > NLG
+  NLG      vs SWUM              3710.00     0.000265     0.000796  YES *  SWUM > NLG
+  GPT      vs SWUM               329.00     0.000000     0.000000  YES *  GPT > SWUM
+
+------------------------------------------------------------------------
+  Criterion      : CODE CONTEXT
+  N (blocks)     : 149 class files
+  Friedman chi²  = 210.6846
+  p-value (raw)  = 0.000000
+  p-value (Holm) = 0.000000    < 0.05  →  REJECT H0 *
+  Kendall's W    = 0.7070  (very strong concordance)
+  Significant    : YES
+
+  Mean scores per system (higher = better ranked):
+    NLG          : 1.4362
+    GPT          : 2.9664  <-- best
+    SWUM         : 1.5973
+
+  Post-hoc pairwise Wilcoxon signed-rank tests (Bonferroni α_adj = 0.0167):
+  Comparison                     W-stat      p (raw)      p (adj)   Sig?  Direction
+  ----------------------------------------------------------------------------------
+  NLG      vs GPT                 34.50     0.000000     0.000000  YES *  GPT > NLG
+  NLG      vs SWUM              4714.50     0.060467     0.181402     no  SWUM > NLG
+  GPT      vs SWUM               174.00     0.000000     0.000000  YES *  GPT > SWUM
+
+------------------------------------------------------------------------
+  Criterion      : DESIGN PATTERN
+  N (blocks)     : 148 class files
+  Friedman chi²  = 186.4459
+  p-value (raw)  = 0.000000
+  p-value (Holm) = 0.000000    < 0.05  →  REJECT H0 *
+  Kendall's W    = 0.6299  (strong concordance)
+  Significant    : YES
+
+  Mean scores per system (higher = better ranked):
+    NLG          : 1.3716
+    GPT          : 2.8919  <-- best
+    SWUM         : 1.7365
+
+  Post-hoc pairwise Wilcoxon signed-rank tests (Bonferroni α_adj = 0.0167):
+  Comparison                     W-stat      p (raw)      p (adj)   Sig?  Direction
+  ----------------------------------------------------------------------------------
+  NLG      vs GPT                 68.00     0.000000     0.000000  YES *  GPT > NLG
+  NLG      vs SWUM              3672.50     0.000104     0.000312  YES *  SWUM > NLG
+  GPT      vs SWUM               686.00     0.000000     0.000000  YES *  GPT > SWUM
+
+========================================================================
+PART 2: CROSS-CRITERIA FRIEDMAN TEST  (criteria as blocks)
+========================================================================
+
+  Test design : one Friedman test across all criteria
+  Blocks      : n = 5 criteria  (ACCURACY, CONCISENESS, ADEQUACY,
+                                  CODE CONTEXT, DESIGN PATTERN)
+  Treatments  : k = 3 systems  (NLG, GPT, SWUM)
+  Cell value  : mean score of system on criterion across all class files
+  H0          : rank ordering of systems does not differ across criteria
+  α           : 0.05
+
+  How to read this part — two limitations, both structural:
+    1. n = 5 blocks. The chi-square approximation the Friedman test
+       normally uses needs roughly 10 blocks; at five it is
+       unreliable, so an EXACT permutation p-value over all 6^5 = 7776 rank
+       assignments is reported instead. Even exact, five blocks give the test
+       coarse resolution: the statistic peaks when all five criteria order the
+       systems identically, which only 6 of the 7776 assignments do, so the
+       smallest p this design can ever produce is 6/7776 ≈ 0.00077.
+    2. Each cell is a mean over ~150 class files, not a single observation, so
+       within-criterion variability is averaged away before the test sees it.
+       This part therefore describes the consistency of the system ordering
+       across criteria; it is not independent evidence of a system difference.
+       The per-criterion tests in PART 1 carry that evidence.
+
+  Mean score matrix:
+  Criterion                     NLG        GPT       SWUM
+  ------------------------------------------------------
+  ACCURACY                  1.4214    2.9429 *    1.6357
+  CONCISENESS               1.3306    2.8145 *    1.8548
+  ADEQUACY                  1.3630    2.9521 *    1.6849
+  CODE CONTEXT              1.4362    2.9664 *    1.5973
+  DESIGN PATTERN            1.3716    2.8919 *    1.7365
+  ------------------------------------------------------
+  COLUMN MEAN                1.3846     2.9136     1.7019
+  (* = best system for that criterion)
+
+  Friedman chi²  = 10.0000
+  p-value (exact)= 0.000772    < 0.05  →  REJECT H0 *
+  p-value (chi²) = 0.006738    [approximation, not valid at n = 5; shown for comparison only]
+  Kendall's W    = 1.0000  (very strong concordance)
+  Significant    : YES  (decided on the exact p-value)
+
+  Note: n = 5 blocks — Wilcoxon signed-rank requires n >= 6, and with
+  averaged cells a pairwise test would be descriptive regardless.
+  Pairwise mean-score differences (descriptive):
+  Comparison                  Mean diff  Direction
+  ----------------------------------------------------
+  NLG      vs GPT               -1.5290  GPT > NLG
+  NLG      vs SWUM              -0.3173  SWUM > NLG
+  GPT      vs SWUM              +1.2117  GPT > SWUM
+
+========================================================================
+SUMMARY TABLE — PER-CRITERION FRIEDMAN RESULTS
+========================================================================
+
+  Criterion                  n       chi²      p (raw)     p (Holm)  Kendall W  Sig?  Best System
+  ------------------------------------------------------------------------------------------
+  ACCURACY                 140   189.9000     0.000000     0.000000     0.6782 YES *  GPT
+  CONCISENESS              124   140.4355     0.000000     0.000000     0.5663 YES *  GPT
+  ADEQUACY                 146   206.0685     0.000000     0.000000     0.7057 YES *  GPT
+  CODE CONTEXT             149   210.6846     0.000000     0.000000     0.7070 YES *  GPT
+  DESIGN PATTERN           148   186.4459     0.000000     0.000000     0.6299 YES *  GPT
+
+  α = 0.05  |  Sig? is decided on the Holm-adjusted p across the 5 criterion tests
+  post-hoc Bonferroni α_adj = 0.0167 (3 pairwise tests within a criterion)
+  Kendall's W : 0.1 weak | 0.3 moderate | 0.5 strong | 0.7 very strong
+
+
+========================================================================
+FRIEDMAN TEST ANALYSIS — NLG vs MISTRAL vs SWUM
+========================================================================
+  Run date   : 2026-09-20 00:16:37
+  Data file  : model_comparisons_ranking_detail.csv
+  Rows used  : 150
+
+  Systems    :  A = NLG   |  B = MISTRAL   |  C = SWUM
+  Scoring    :  1st place = 3 pts  |  2nd = 2 pts  |  3rd = 1 pt
+  Alpha      :  0.05
+  Post-hoc   :  Wilcoxon signed-rank, Bonferroni α_adj = 0.0167
+
+  H0 (each Friedman test): no significant difference in scores
+  among the three systems under the given criterion / criteria.
+
+========================================================================
+PART 1: PER-CRITERION FRIEDMAN TESTS  (class files as blocks)
+========================================================================
+
+  Test design : one Friedman test per criterion
+  Blocks      : individual class files  (n ≈ 150 per test)
+  Treatments  : k = 3 systems  (NLG, MISTRAL, SWUM)
+  Scoring     : 1st = 3 pts | 2nd = 2 pts | 3rd = 1 pt
+  H0          : no significant difference among the 3 systems
+  α           : 0.05  |  post-hoc Bonferroni α_adj = 0.0167
+  Family-wise : Holm-Bonferroni across the 5 criterion tests;
+                significance and post-hocs are decided on the adjusted p.
+
+------------------------------------------------------------------------
+  Criterion      : ACCURACY
+  N (blocks)     : 140 class files
+  Friedman chi²  = 183.7286
+  p-value (raw)  = 0.000000
+  p-value (Holm) = 0.000000    < 0.05  →  REJECT H0 *
+  Kendall's W    = 0.6562  (strong concordance)
+  Significant    : YES
+
+  Mean scores per system (higher = better ranked):
+    NLG          : 1.4000
+    MISTRAL      : 2.9214  <-- best
+    SWUM         : 1.6786
+
+  Post-hoc pairwise Wilcoxon signed-rank tests (Bonferroni α_adj = 0.0167):
+  Comparison                     W-stat      p (raw)      p (adj)   Sig?  Direction
+  ----------------------------------------------------------------------------------
+  NLG      vs MISTRAL            186.00     0.000000     0.000000  YES *  MISTRAL > NLG
+  NLG      vs SWUM              3642.00     0.002595     0.007784  YES *  SWUM > NLG
+  MISTRAL  vs SWUM               325.50     0.000000     0.000000  YES *  MISTRAL > SWUM
+
+------------------------------------------------------------------------
+  Criterion      : CONCISENESS
+  N (blocks)     : 113 class files
+  Friedman chi²  = 125.7345
+  p-value (raw)  = 0.000000
+  p-value (Holm) = 0.000000    < 0.05  →  REJECT H0 *
+  Kendall's W    = 0.5563  (strong concordance)
+  Significant    : YES
+
+  Mean scores per system (higher = better ranked):
+    NLG          : 1.2920
+    MISTRAL      : 2.7788  <-- best
+    SWUM         : 1.9292
+
+  Post-hoc pairwise Wilcoxon signed-rank tests (Bonferroni α_adj = 0.0167):
+  Comparison                     W-stat      p (raw)      p (adj)   Sig?  Direction
+  ----------------------------------------------------------------------------------
+  NLG      vs MISTRAL            220.50     0.000000     0.000000  YES *  MISTRAL > NLG
+  NLG      vs SWUM              1312.50     0.000000     0.000000  YES *  SWUM > NLG
+  MISTRAL  vs SWUM              1101.00     0.000000     0.000000  YES *  MISTRAL > SWUM
+
+------------------------------------------------------------------------
+  Criterion      : ADEQUACY
+  N (blocks)     : 143 class files
+  Friedman chi²  = 191.4965
+  p-value (raw)  = 0.000000
+  p-value (Holm) = 0.000000    < 0.05  →  REJECT H0 *
+  Kendall's W    = 0.6696  (strong concordance)
+  Significant    : YES
+
+  Mean scores per system (higher = better ranked):
+    NLG          : 1.4266
+    MISTRAL      : 2.9371  <-- best
+    SWUM         : 1.6364
+
+  Post-hoc pairwise Wilcoxon signed-rank tests (Bonferroni α_adj = 0.0167):
+  Comparison                     W-stat      p (raw)      p (adj)   Sig?  Direction
+  ----------------------------------------------------------------------------------
+  NLG      vs MISTRAL            166.00     0.000000     0.000000  YES *  MISTRAL > NLG
+  NLG      vs SWUM              4116.00     0.019077     0.057231     no  SWUM > NLG
+  MISTRAL  vs SWUM               267.00     0.000000     0.000000  YES *  MISTRAL > SWUM
+
+------------------------------------------------------------------------
+  Criterion      : CODE CONTEXT
+  N (blocks)     : 150 class files
+  Friedman chi²  = 207.6933
+  p-value (raw)  = 0.000000
+  p-value (Holm) = 0.000000    < 0.05  →  REJECT H0 *
+  Kendall's W    = 0.6923  (strong concordance)
+  Significant    : YES
+
+  Mean scores per system (higher = better ranked):
+    NLG          : 1.4867
+    MISTRAL      : 2.9600  <-- best
+    SWUM         : 1.5533
+
+  Post-hoc pairwise Wilcoxon signed-rank tests (Bonferroni α_adj = 0.0167):
+  Comparison                     W-stat      p (raw)      p (adj)   Sig?  Direction
+  ----------------------------------------------------------------------------------
+  NLG      vs MISTRAL            144.00     0.000000     0.000000  YES *  MISTRAL > NLG
+  NLG      vs SWUM              5302.50     0.444689     1.000000     no  SWUM > NLG
+  MISTRAL  vs SWUM                86.00     0.000000     0.000000  YES *  MISTRAL > SWUM
+
+------------------------------------------------------------------------
+  Criterion      : DESIGN PATTERN
+  N (blocks)     : 148 class files
+  Friedman chi²  = 171.1216
+  p-value (raw)  = 0.000000
+  p-value (Holm) = 0.000000    < 0.05  →  REJECT H0 *
+  Kendall's W    = 0.5781  (strong concordance)
+  Significant    : YES
+
+  Mean scores per system (higher = better ranked):
+    NLG          : 1.4730
+    MISTRAL      : 2.8716  <-- best
+    SWUM         : 1.6554
+
+  Post-hoc pairwise Wilcoxon signed-rank tests (Bonferroni α_adj = 0.0167):
+  Comparison                     W-stat      p (raw)      p (adj)   Sig?  Direction
+  ----------------------------------------------------------------------------------
+  NLG      vs MISTRAL            302.00     0.000000     0.000000  YES *  MISTRAL > NLG
+  NLG      vs SWUM              4584.00     0.049566     0.148698     no  SWUM > NLG
+  MISTRAL  vs SWUM               652.50     0.000000     0.000000  YES *  MISTRAL > SWUM
+
+========================================================================
+PART 2: CROSS-CRITERIA FRIEDMAN TEST  (criteria as blocks)
+========================================================================
+
+  Test design : one Friedman test across all criteria
+  Blocks      : n = 5 criteria  (ACCURACY, CONCISENESS, ADEQUACY,
+                                  CODE CONTEXT, DESIGN PATTERN)
+  Treatments  : k = 3 systems  (NLG, MISTRAL, SWUM)
+  Cell value  : mean score of system on criterion across all class files
+  H0          : rank ordering of systems does not differ across criteria
+  α           : 0.05
+
+  How to read this part — two limitations, both structural:
+    1. n = 5 blocks. The chi-square approximation the Friedman test
+       normally uses needs roughly 10 blocks; at five it is
+       unreliable, so an EXACT permutation p-value over all 6^5 = 7776 rank
+       assignments is reported instead. Even exact, five blocks give the test
+       coarse resolution: the statistic peaks when all five criteria order the
+       systems identically, which only 6 of the 7776 assignments do, so the
+       smallest p this design can ever produce is 6/7776 ≈ 0.00077.
+    2. Each cell is a mean over ~150 class files, not a single observation, so
+       within-criterion variability is averaged away before the test sees it.
+       This part therefore describes the consistency of the system ordering
+       across criteria; it is not independent evidence of a system difference.
+       The per-criterion tests in PART 1 carry that evidence.
+
+  Mean score matrix:
+  Criterion                     NLG    MISTRAL       SWUM
+  ------------------------------------------------------
+  ACCURACY                  1.4000    2.9214 *    1.6786
+  CONCISENESS               1.2920    2.7788 *    1.9292
+  ADEQUACY                  1.4266    2.9371 *    1.6364
+  CODE CONTEXT              1.4867    2.9600 *    1.5533
+  DESIGN PATTERN            1.4730    2.8716 *    1.6554
+  ------------------------------------------------------
+  COLUMN MEAN                1.4156     2.8938     1.6906
+  (* = best system for that criterion)
+
+  Friedman chi²  = 10.0000
+  p-value (exact)= 0.000772    < 0.05  →  REJECT H0 *
+  p-value (chi²) = 0.006738    [approximation, not valid at n = 5; shown for comparison only]
+  Kendall's W    = 1.0000  (very strong concordance)
+  Significant    : YES  (decided on the exact p-value)
+
+  Note: n = 5 blocks — Wilcoxon signed-rank requires n >= 6, and with
+  averaged cells a pairwise test would be descriptive regardless.
+  Pairwise mean-score differences (descriptive):
+  Comparison                  Mean diff  Direction
+  ----------------------------------------------------
+  NLG      vs MISTRAL           -1.4781  MISTRAL > NLG
+  NLG      vs SWUM              -0.2749  SWUM > NLG
+  MISTRAL  vs SWUM              +1.2032  MISTRAL > SWUM
+
+========================================================================
+SUMMARY TABLE — PER-CRITERION FRIEDMAN RESULTS
+========================================================================
+
+  Criterion                  n       chi²      p (raw)     p (Holm)  Kendall W  Sig?  Best System
+  ------------------------------------------------------------------------------------------
+  ACCURACY                 140   183.7286     0.000000     0.000000     0.6562 YES *  MISTRAL
+  CONCISENESS              113   125.7345     0.000000     0.000000     0.5563 YES *  MISTRAL
+  ADEQUACY                 143   191.4965     0.000000     0.000000     0.6696 YES *  MISTRAL
+  CODE CONTEXT             150   207.6933     0.000000     0.000000     0.6923 YES *  MISTRAL
+  DESIGN PATTERN           148   171.1216     0.000000     0.000000     0.5781 YES *  MISTRAL
+
+  α = 0.05  |  Sig? is decided on the Holm-adjusted p across the 5 criterion tests
+  post-hoc Bonferroni α_adj = 0.0167 (3 pairwise tests within a criterion)
+  Kendall's W : 0.1 weak | 0.3 moderate | 0.5 strong | 0.7 very strong
+
+
+========================================================================
+FRIEDMAN TEST ANALYSIS — NLG vs QWEN vs SWUM
+========================================================================
+  Run date   : 2026-09-20 00:16:37
+  Data file  : model_comparisons_ranking_detail.csv
+  Rows used  : 150
+
+  Systems    :  A = NLG   |  B = QWEN   |  C = SWUM
+  Scoring    :  1st place = 3 pts  |  2nd = 2 pts  |  3rd = 1 pt
+  Alpha      :  0.05
+  Post-hoc   :  Wilcoxon signed-rank, Bonferroni α_adj = 0.0167
+
+  H0 (each Friedman test): no significant difference in scores
+  among the three systems under the given criterion / criteria.
+
+========================================================================
+PART 1: PER-CRITERION FRIEDMAN TESTS  (class files as blocks)
+========================================================================
+
+  Test design : one Friedman test per criterion
+  Blocks      : individual class files  (n ≈ 150 per test)
+  Treatments  : k = 3 systems  (NLG, QWEN, SWUM)
+  Scoring     : 1st = 3 pts | 2nd = 2 pts | 3rd = 1 pt
+  H0          : no significant difference among the 3 systems
+  α           : 0.05  |  post-hoc Bonferroni α_adj = 0.0167
+  Family-wise : Holm-Bonferroni across the 5 criterion tests;
+                significance and post-hocs are decided on the adjusted p.
+
+------------------------------------------------------------------------
+  Criterion      : ACCURACY
+  N (blocks)     : 133 class files
+  Friedman chi²  = 197.6391
+  p-value (raw)  = 0.000000
+  p-value (Holm) = 0.000000    < 0.05  →  REJECT H0 *
+  Kendall's W    = 0.7430  (very strong concordance)
+  Significant    : YES
+
+  Mean scores per system (higher = better ranked):
+    NLG          : 1.3835
+    QWEN         : 2.9850  <-- best
+    SWUM         : 1.6316
+
+  Post-hoc pairwise Wilcoxon signed-rank tests (Bonferroni α_adj = 0.0167):
+  Comparison                     W-stat      p (raw)      p (adj)   Sig?  Direction
+  ----------------------------------------------------------------------------------
+  NLG      vs QWEN                 0.00     0.000000     0.000000  YES *  QWEN > NLG
+  NLG      vs SWUM              3366.00     0.005115     0.015345  YES *  SWUM > NLG
+  QWEN     vs SWUM                83.00     0.000000     0.000000  YES *  QWEN > SWUM
+
+------------------------------------------------------------------------
+  Criterion      : CONCISENESS
+  N (blocks)     : 120 class files
+  Friedman chi²  = 114.3167
+  p-value (raw)  = 0.000000
+  p-value (Holm) = 0.000000    < 0.05  →  REJECT H0 *
+  Kendall's W    = 0.4763  (moderate concordance)
+  Significant    : YES
+
+  Mean scores per system (higher = better ranked):
+    NLG          : 1.3917
+    QWEN         : 2.7500  <-- best
+    SWUM         : 1.8583
+
+  Post-hoc pairwise Wilcoxon signed-rank tests (Bonferroni α_adj = 0.0167):
+  Comparison                     W-stat      p (raw)      p (adj)   Sig?  Direction
+  ----------------------------------------------------------------------------------
+  NLG      vs QWEN               390.00     0.000000     0.000000  YES *  QWEN > NLG
+  NLG      vs SWUM              2053.50     0.000004     0.000013  YES *  SWUM > NLG
+  QWEN     vs SWUM              1260.00     0.000000     0.000000  YES *  QWEN > SWUM
+
+------------------------------------------------------------------------
+  Criterion      : ADEQUACY
+  N (blocks)     : 141 class files
+  Friedman chi²  = 205.7163
+  p-value (raw)  = 0.000000
+  p-value (Holm) = 0.000000    < 0.05  →  REJECT H0 *
+  Kendall's W    = 0.7295  (very strong concordance)
+  Significant    : YES
+
+  Mean scores per system (higher = better ranked):
+    NLG          : 1.4823
+    QWEN         : 2.9858  <-- best
+    SWUM         : 1.5319
+
+  Post-hoc pairwise Wilcoxon signed-rank tests (Bonferroni α_adj = 0.0167):
+  Comparison                     W-stat      p (raw)      p (adj)   Sig?  Direction
+  ----------------------------------------------------------------------------------
+  NLG      vs QWEN                34.50     0.000000     0.000000  YES *  QWEN > NLG
+  NLG      vs SWUM              4760.50     0.563779     1.000000     no  SWUM > NLG
+  QWEN     vs SWUM                38.00     0.000000     0.000000  YES *  QWEN > SWUM
+
+------------------------------------------------------------------------
+  Criterion      : CODE CONTEXT
+  N (blocks)     : 149 class files
+  Friedman chi²  = 214.1074
+  p-value (raw)  = 0.000000
+  p-value (Holm) = 0.000000    < 0.05  →  REJECT H0 *
+  Kendall's W    = 0.7185  (very strong concordance)
+  Significant    : YES
+
+  Mean scores per system (higher = better ranked):
+    NLG          : 1.4228
+    QWEN         : 2.9732  <-- best
+    SWUM         : 1.6040
+
+  Post-hoc pairwise Wilcoxon signed-rank tests (Bonferroni α_adj = 0.0167):
+  Comparison                     W-stat      p (raw)      p (adj)   Sig?  Direction
+  ----------------------------------------------------------------------------------
+  NLG      vs QWEN                93.00     0.000000     0.000000  YES *  QWEN > NLG
+  NLG      vs SWUM              4603.50     0.033797     0.101392     no  SWUM > NLG
+  QWEN     vs SWUM                46.50     0.000000     0.000000  YES *  QWEN > SWUM
+
+------------------------------------------------------------------------
+  Criterion      : DESIGN PATTERN
+  N (blocks)     : 148 class files
+  Friedman chi²  = 190.9865
+  p-value (raw)  = 0.000000
+  p-value (Holm) = 0.000000    < 0.05  →  REJECT H0 *
+  Kendall's W    = 0.6452  (strong concordance)
+  Significant    : YES
+
+  Mean scores per system (higher = better ranked):
+    NLG          : 1.4865
+    QWEN         : 2.9257  <-- best
+    SWUM         : 1.5878
+
+  Post-hoc pairwise Wilcoxon signed-rank tests (Bonferroni α_adj = 0.0167):
+  Comparison                     W-stat      p (raw)      p (adj)   Sig?  Direction
+  ----------------------------------------------------------------------------------
+  NLG      vs QWEN               323.00     0.000000     0.000000  YES *  QWEN > NLG
+  NLG      vs SWUM              4979.00     0.248900     0.746700     no  SWUM > NLG
+  QWEN     vs SWUM               261.00     0.000000     0.000000  YES *  QWEN > SWUM
+
+========================================================================
+PART 2: CROSS-CRITERIA FRIEDMAN TEST  (criteria as blocks)
+========================================================================
+
+  Test design : one Friedman test across all criteria
+  Blocks      : n = 5 criteria  (ACCURACY, CONCISENESS, ADEQUACY,
+                                  CODE CONTEXT, DESIGN PATTERN)
+  Treatments  : k = 3 systems  (NLG, QWEN, SWUM)
+  Cell value  : mean score of system on criterion across all class files
+  H0          : rank ordering of systems does not differ across criteria
+  α           : 0.05
+
+  How to read this part — two limitations, both structural:
+    1. n = 5 blocks. The chi-square approximation the Friedman test
+       normally uses needs roughly 10 blocks; at five it is
+       unreliable, so an EXACT permutation p-value over all 6^5 = 7776 rank
+       assignments is reported instead. Even exact, five blocks give the test
+       coarse resolution: the statistic peaks when all five criteria order the
+       systems identically, which only 6 of the 7776 assignments do, so the
+       smallest p this design can ever produce is 6/7776 ≈ 0.00077.
+    2. Each cell is a mean over ~150 class files, not a single observation, so
+       within-criterion variability is averaged away before the test sees it.
+       This part therefore describes the consistency of the system ordering
+       across criteria; it is not independent evidence of a system difference.
+       The per-criterion tests in PART 1 carry that evidence.
+
+  Mean score matrix:
+  Criterion                     NLG       QWEN       SWUM
+  ------------------------------------------------------
+  ACCURACY                  1.3835    2.9850 *    1.6316
+  CONCISENESS               1.3917    2.7500 *    1.8583
+  ADEQUACY                  1.4823    2.9858 *    1.5319
+  CODE CONTEXT              1.4228    2.9732 *    1.6040
+  DESIGN PATTERN            1.4865    2.9257 *    1.5878
+  ------------------------------------------------------
+  COLUMN MEAN                1.4333     2.9239     1.6427
+  (* = best system for that criterion)
+
+  Friedman chi²  = 10.0000
+  p-value (exact)= 0.000772    < 0.05  →  REJECT H0 *
+  p-value (chi²) = 0.006738    [approximation, not valid at n = 5; shown for comparison only]
+  Kendall's W    = 1.0000  (very strong concordance)
+  Significant    : YES  (decided on the exact p-value)
+
+  Note: n = 5 blocks — Wilcoxon signed-rank requires n >= 6, and with
+  averaged cells a pairwise test would be descriptive regardless.
+  Pairwise mean-score differences (descriptive):
+  Comparison                  Mean diff  Direction
+  ----------------------------------------------------
+  NLG      vs QWEN              -1.4906  QWEN > NLG
+  NLG      vs SWUM              -0.2094  SWUM > NLG
+  QWEN     vs SWUM              +1.2812  QWEN > SWUM
+
+========================================================================
+SUMMARY TABLE — PER-CRITERION FRIEDMAN RESULTS
+========================================================================
+
+  Criterion                  n       chi²      p (raw)     p (Holm)  Kendall W  Sig?  Best System
+  ------------------------------------------------------------------------------------------
+  ACCURACY                 133   197.6391     0.000000     0.000000     0.7430 YES *  QWEN
+  CONCISENESS              120   114.3167     0.000000     0.000000     0.4763 YES *  QWEN
+  ADEQUACY                 141   205.7163     0.000000     0.000000     0.7295 YES *  QWEN
+  CODE CONTEXT             149   214.1074     0.000000     0.000000     0.7185 YES *  QWEN
+  DESIGN PATTERN           148   190.9865     0.000000     0.000000     0.6452 YES *  QWEN
+
+  α = 0.05  |  Sig? is decided on the Holm-adjusted p across the 5 criterion tests
+  post-hoc Bonferroni α_adj = 0.0167 (3 pairwise tests within a criterion)
+  Kendall's W : 0.1 weak | 0.3 moderate | 0.5 strong | 0.7 very strong
+

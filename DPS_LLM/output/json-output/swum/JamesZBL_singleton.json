@@ -1,0 +1,279 @@
+{
+	"final_summary" : "",
+	"JamesZBL/singleton" : {
+		"ThreadSafeDoubleCheckLocking" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "ThreadSafeDoubleCheckLocking",
+				"FIELDMODIFIERTYPE" : [ "private", "static", "volatile" ],
+				"FIELDDECLARATION" : [ "INSTANCE" ],
+				"FIELDDATATYPE" : "ThreadSafeDoubleCheckLocking",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "ThreadSafeDoubleCheckLocking",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public", "final" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "private" ],
+				"CONSTRUCTORPARAMETER" : [ ]
+			} ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "instance = INSTANCE" ],
+				"VARIABLECOMMONTYPE" : "ThreadSafeDoubleCheckLocking",
+				"VARIABLEELEMENTTYPE" : "ThreadSafeDoubleCheckLocking"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getInstance",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public", "static" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "IF", "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 1,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "ThreadSafeDoubleCheckLocking",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 3,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"EnumDirector" : {
+			"FIELDDETAIL" : [ ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 3,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "EnumDirector",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "toString",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 3,
+				"METHODRETURNTYPE" : "String",
+				"METHODOVERRIDE" : [ "@Override" ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"LazyInitializationDirector" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "LazyInitializationDirector",
+				"FIELDMODIFIERTYPE" : [ "private", "static", "final" ],
+				"FIELDDECLARATION" : [ "INSTANCE = new LazyInitializationDirector()" ],
+				"FIELDDATATYPE" : "LazyInitializationDirector",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "LazyInitializationDirector",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public", "final" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "private" ],
+				"CONSTRUCTORPARAMETER" : [ ]
+			} ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getInstance",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public", "static" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "LazyInitializationDirector",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"Director" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "Director",
+				"FIELDMODIFIERTYPE" : [ "private", "static", "final" ],
+				"FIELDDECLARATION" : [ "INSTANCE = new Director()" ],
+				"FIELDDATATYPE" : "Director",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Director",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public", "final" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "private" ],
+				"CONSTRUCTORPARAMETER" : [ ]
+			} ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getInstance",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public", "static" ],
+				"METHODBODYLINETYPE" : [ "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "Director",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 1,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"ThreadSafeLazyLoadDirector" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "ThreadSafeLazyLoadDirector",
+				"FIELDMODIFIERTYPE" : [ "private", "static", "volatile" ],
+				"FIELDDECLARATION" : [ "INSTANCE" ],
+				"FIELDDATATYPE" : "ThreadSafeLazyLoadDirector",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 0,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "ThreadSafeLazyLoadDirector",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public", "final" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ {
+				"CONSTRUCTORMODIFIER" : [ "private" ],
+				"CONSTRUCTORPARAMETER" : [ ]
+			} ],
+			"VARIABLEDETAIL" : [ ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "getInstance",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public", "static", "synchronized" ],
+				"METHODBODYLINETYPE" : [ "IF", "RETURN" ],
+				"NUMBEROFMETHODVARIABLES" : 0,
+				"NUMBEROFOUTGOINGMETHODS" : 0,
+				"METHODRETURNTYPE" : "ThreadSafeLazyLoadDirector",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 2,
+				"METHODPARAMETER" : [ ]
+			} ]
+		},
+		"Application" : {
+			"FIELDDETAIL" : [ {
+				"FIELDCOMMONTYPE" : "Logger",
+				"FIELDMODIFIERTYPE" : [ "private", "static", "final" ],
+				"FIELDDECLARATION" : [ "LOGGER = LoggerFactory.getLogger(Application.class)" ],
+				"FIELDDATATYPE" : "Logger",
+				"FIELDACCESSSPECIFIER" : "PRIVATE"
+			} ],
+			"CLASSORINTERFACEDETAIL" : [ {
+				"CLASSACCESSSPECIFIER" : "PUBLIC",
+				"NUMBEROFMETHODCALLS" : 21,
+				"EXTENDSFROM" : [ ],
+				"IMPLEMENTSFROM" : [ ],
+				"CLASSNAME" : "Application",
+				"ISINTERFACEORNOT" : false,
+				"CLASSTYPEPARAMS" : [ ],
+				"ISABSTRACTORNOT" : false,
+				"CLASSMODIFIERTYPE" : [ "public" ]
+			} ],
+			"CONSTRUCTORDETAIL" : [ ],
+			"VARIABLEDETAIL" : [ {
+				"VARIABLEDECLARATION" : [ "director1 = Director.getInstance()" ],
+				"VARIABLECOMMONTYPE" : "Director",
+				"VARIABLEELEMENTTYPE" : "Director"
+			}, {
+				"VARIABLEDECLARATION" : [ "director2 = Director.getInstance()" ],
+				"VARIABLECOMMONTYPE" : "Director",
+				"VARIABLEELEMENTTYPE" : "Director"
+			}, {
+				"VARIABLEDECLARATION" : [ "lazyDirector1 = LazyInitializationDirector.getInstance()" ],
+				"VARIABLECOMMONTYPE" : "LazyInitializationDirector",
+				"VARIABLEELEMENTTYPE" : "LazyInitializationDirector"
+			}, {
+				"VARIABLEDECLARATION" : [ "lazyDirector2 = LazyInitializationDirector.getInstance()" ],
+				"VARIABLECOMMONTYPE" : "LazyInitializationDirector",
+				"VARIABLEELEMENTTYPE" : "LazyInitializationDirector"
+			}, {
+				"VARIABLEDECLARATION" : [ "doubleCheckLocking1 = ThreadSafeDoubleCheckLocking.getInstance()" ],
+				"VARIABLECOMMONTYPE" : "ThreadSafeDoubleCheckLocking",
+				"VARIABLEELEMENTTYPE" : "ThreadSafeDoubleCheckLocking"
+			}, {
+				"VARIABLEDECLARATION" : [ "doubleCheckLocking2 = ThreadSafeDoubleCheckLocking.getInstance()" ],
+				"VARIABLECOMMONTYPE" : "ThreadSafeDoubleCheckLocking",
+				"VARIABLEELEMENTTYPE" : "ThreadSafeDoubleCheckLocking"
+			}, {
+				"VARIABLEDECLARATION" : [ "lazyLoadDirector1 = ThreadSafeLazyLoadDirector.getInstance()" ],
+				"VARIABLECOMMONTYPE" : "ThreadSafeLazyLoadDirector",
+				"VARIABLEELEMENTTYPE" : "ThreadSafeLazyLoadDirector"
+			}, {
+				"VARIABLEDECLARATION" : [ "lazyLoadDirector2 = ThreadSafeLazyLoadDirector.getInstance()" ],
+				"VARIABLECOMMONTYPE" : "ThreadSafeLazyLoadDirector",
+				"VARIABLEELEMENTTYPE" : "ThreadSafeLazyLoadDirector"
+			}, {
+				"VARIABLEDECLARATION" : [ "enumDirector1 = EnumDirector.INSTANCE" ],
+				"VARIABLECOMMONTYPE" : "EnumDirector",
+				"VARIABLEELEMENTTYPE" : "EnumDirector"
+			}, {
+				"VARIABLEDECLARATION" : [ "enumDirector2 = EnumDirector.INSTANCE" ],
+				"VARIABLECOMMONTYPE" : "EnumDirector",
+				"VARIABLEELEMENTTYPE" : "EnumDirector"
+			} ],
+			"METHODDETAIL" : [ {
+				"METHODNAME" : "main",
+				"NUMBEROFINCOMINGMETHODS" : 0,
+				"INCOMINGMETHOD" : [ ],
+				"METHODMODIFIERTYPE" : [ "public", "static" ],
+				"METHODBODYLINETYPE" : [ "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION", "EXPRESSION" ],
+				"NUMBEROFMETHODVARIABLES" : 10,
+				"NUMBEROFOUTGOINGMETHODS" : 20,
+				"METHODRETURNTYPE" : "void",
+				"METHODOVERRIDE" : [ ],
+				"OUTGOINGMETHOD" : [ ],
+				"NUMBEROFMETHODLINES" : 20,
+				"METHODPARAMETER" : [ {
+					"PARAMETERNAME" : "args",
+					"PARAMETERTYPE" : "String[]"
+				} ]
+			} ]
+		}
+	},
+	"design_pattern" : [ {
+		"singleton" : [ "ThreadSafeDoubleCheckLocking", "LazyInitializationDirector", "Director", "ThreadSafeLazyLoadDirector" ]
+	} ],
+	"summary_NLG" : { },
+	"project_identifier" : "JamesZBL/singleton"
+}

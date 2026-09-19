@@ -1,7 +1,7 @@
 {
   "project_name" : "project_identifier",
   "swum_version" : "1.0",
-  "generated_timestamp" : 1780917880858,
+  "generated_timestamp" : 1789807088609,
   "class_summaries" : {
     "BufferingClientHttpResponseWrapper" : {
       "class_name" : "BufferingClientHttpResponseWrapper",

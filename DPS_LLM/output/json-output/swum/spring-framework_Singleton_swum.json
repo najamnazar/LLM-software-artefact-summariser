@@ -1,7 +1,7 @@
 {
   "project_name" : "spring-framework/Singleton",
   "swum_version" : "1.0",
-  "generated_timestamp" : 1780917880893,
+  "generated_timestamp" : 1789807088653,
   "class_summaries" : {
     "SmartInitializingSingleton" : {
       "class_name" : "SmartInitializingSingleton",

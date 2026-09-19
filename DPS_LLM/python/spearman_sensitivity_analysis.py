@@ -2,7 +2,13 @@
 
 This script computes Spearman correlation between:
 - X: criterion points per system per class file (1st=3, 2nd=2, 3rd=1)
-- Y: total points of that same system for the same class file
+- Y: points of that same system on the OTHER four criteria for the same class file
+
+Y excludes the criterion being tested. The earlier definition correlated X against the
+full total, which already contained X as one fifth of its value, so every criterion was
+partly being correlated with itself and rho was inflated by construction — a criterion
+contributing nothing but noise would still have scored well above zero. The part-whole
+value is still reported alongside the corrected one so older numbers remain traceable.
 
 Input:
 - evaluation-results/model_comparisons_ranking_detail.csv (default)
@@ -18,9 +24,13 @@ from __future__ import annotations
 from dataclasses import dataclass
 from pathlib import Path
 import argparse
+import sys
 
 import pandas as pd
 from scipy.stats import spearmanr
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from report_paths import guard_report_target  # noqa: E402  - sys.path must be extended first
 
 
 @dataclass
@@ -30,6 +40,8 @@ class CriterionResult:
     n_obs: int
     rho: float
     p_value: float
+    rho_partwhole: float
+    p_value_partwhole: float
 
 
 def _norm_rank(value) -> str | None:
@@ -76,7 +88,7 @@ def compute_spearman_sensitivity_from_df(df: pd.DataFrame) -> list[CriterionResu
         if not all(col in df.columns for col in rank_cols):
             continue
 
-        rows: list[tuple[int, float]] = []
+        rows: list[tuple[int, float, float]] = []
         valid_blocks = 0
 
         for _, row in df.iterrows():
@@ -94,12 +106,17 @@ def compute_spearman_sensitivity_from_df(df: pd.DataFrame) -> list[CriterionResu
                 total_points = row.get(f"total_points_{suffix}")
                 if pd.isna(total_points):
                     continue
-                rows.append((points[system_id], float(total_points)))
+                criterion_points = points[system_id]
+                # Remove this criterion's own contribution from the total so X is not
+                # correlated against a Y that contains it.
+                rest_points = float(total_points) - criterion_points
+                rows.append((criterion_points, rest_points, float(total_points)))
 
-        data = pd.DataFrame(rows, columns=["criterion_points", "total_points"])
+        data = pd.DataFrame(rows, columns=["criterion_points", "rest_points", "total_points"])
         if len(data) < 2:
             continue
-        rho, p_value = spearmanr(data["criterion_points"], data["total_points"])
+        rho, p_value = spearmanr(data["criterion_points"], data["rest_points"])
+        rho_pw, p_pw = spearmanr(data["criterion_points"], data["total_points"])
 
         results.append(
             CriterionResult(
@@ -108,6 +125,8 @@ def compute_spearman_sensitivity_from_df(df: pd.DataFrame) -> list[CriterionResu
                 n_obs=len(data),
                 rho=float(rho),
                 p_value=float(p_value),
+                rho_partwhole=float(rho_pw),
+                p_value_partwhole=float(p_pw),
             )
         )
 
@@ -131,21 +150,27 @@ def format_section(results: list[CriterionResult], title_suffix: str = "") -> st
     lines.append("  Definition:")
     lines.append("  For each criterion, Spearman's rho is computed between:")
     lines.append("    X = criterion points per system per class file (1st=3, 2nd=2, 3rd=1)")
-    lines.append("    Y = total points of that same system on that same class file")
-    lines.append("  This quantifies how strongly each criterion aligns with overall ranking outcomes.")
+    lines.append("    Y = points of that same system on the OTHER four criteria")
+    lines.append("  This quantifies how strongly each criterion agrees with the remaining criteria.")
+    lines.append("")
+    lines.append("  Y deliberately excludes the criterion under test. Correlating X against the")
+    lines.append("  full total would correlate it partly with itself (X is one fifth of the total),")
+    lines.append("  inflating rho for every criterion regardless of its actual agreement. The")
+    lines.append("  part-whole column reproduces that older, inflated figure for comparison only.")
     lines.append("")
     lines.append("------------------------------------------------------------------------")
-    lines.append("  Criterion                  blocks   n(obs)   Spearman rho      p-value   Sig?")
-    lines.append("  -------------------------------------------------------------------------------")
+    lines.append("  Criterion                  blocks   n(obs)   Spearman rho      p-value   Sig?    part-whole rho")
+    lines.append("  ------------------------------------------------------------------------------------------------")
 
     for r in results:
         sig = "YES *" if r.p_value < 0.05 else "no"
         lines.append(
-            f"  {r.criterion:<25} {r.blocks:>6} {r.n_obs:>8} {r.rho:>15.6f} {r.p_value:>14.5e}  {sig}"
+            f"  {r.criterion:<25} {r.blocks:>6} {r.n_obs:>8} {r.rho:>15.6f} {r.p_value:>14.5e}  {sig:<6} "
+            f"{r.rho_partwhole:>15.6f}"
         )
 
     lines.append("")
-    lines.append("  α = 0.05")
+    lines.append("  α = 0.05   |   part-whole rho = superseded definition, reported for traceability")
     lines.append("")
     return "\n".join(lines)
 
@@ -176,6 +201,11 @@ def main() -> None:
         type=Path,
         default=None,
         help="Append the formatted section to this text report file.",
+    )
+    parser.add_argument(
+        "--allow-curated-append",
+        action="store_true",
+        help="Permit appending to a hand-curated report such as results.txt",
     )
 
     args = parser.parse_args()
@@ -208,6 +238,8 @@ def main() -> None:
     print(section)
 
     if args.append_to is not None:
+        guard_report_target(args.append_to, args.allow_curated_append)
+        args.append_to.parent.mkdir(parents=True, exist_ok=True)
         with args.append_to.open("a", encoding="utf-8") as handle:
             handle.write("\n" + section + "\n")
         print(f"Appended section to: {args.append_to}")

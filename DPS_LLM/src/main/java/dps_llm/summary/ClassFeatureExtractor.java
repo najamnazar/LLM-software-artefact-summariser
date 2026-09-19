@@ -1,6 +1,7 @@
 package dps_llm.summary;
 
 import common.utils.Utils;
+import dps_llm.config.FeatureLimits;
 import dps_llm.model.ClassFeatureSnapshot;
 
 import java.util.ArrayList;
@@ -35,10 +36,33 @@ import java.util.stream.Collectors;
 @SuppressWarnings({"rawtypes", "unchecked"})
 public class ClassFeatureExtractor {
 
-    private static final int FIELD_LIMIT = 6;
-    private static final int CONSTRUCTOR_LIMIT = 4;
-    private static final int METHOD_LIMIT = 6;
-    private static final int PATTERN_LIMIT = 6;
+    // Najam: these four caps were compiled-in constants, recorded nowhere but this file — not in
+    // .env, not in prompts.json — so the amount of each class the model actually saw could not be
+    // inspected or changed without a rebuild. They now arrive as configuration; FeatureLimits
+    // defaults to the same 6/4/6/6 so existing runs are reproduced exactly.
+    // private static final int FIELD_LIMIT = 6;
+    // private static final int CONSTRUCTOR_LIMIT = 4;
+    // private static final int METHOD_LIMIT = 6;
+    // private static final int PATTERN_LIMIT = 6;
+
+    private final FeatureLimits limits;
+
+    // Najam: the no-argument constructor is gone with FeatureLimits.defaults(). It existed only to
+    // supply the compiled-in 6/4/6/6, which is the copy of .env this change is removing. Callers
+    // pass the limits resolved from .env.
+    // public ClassFeatureExtractor() {
+    //     this(FeatureLimits.defaults());
+    // }
+
+    /**
+     * @param limits how much of each class reaches the prompt, resolved from .env
+     */
+    public ClassFeatureExtractor(FeatureLimits limits) {
+        if (limits == null) {
+            throw new IllegalArgumentException("limits must not be null");
+        }
+        this.limits = limits;
+    }
 
     /**
      * Extracts a feature snapshot from raw class data.
@@ -86,12 +110,12 @@ public class ClassFeatureExtractor {
         ArrayList<HashMap> constructorDetails = Utils.getConstructorDetails(classData);
         ArrayList<HashMap> methodDetails = Utils.getMethodDetails(classData);
 
-        List<String> fieldSignatures = truncate(formatFields(fieldDetails), FIELD_LIMIT);
-        List<String> constructorSignatures = truncate(formatConstructors(constructorDetails, className), CONSTRUCTOR_LIMIT);
-        List<String> methodSummaries = truncate(formatMethods(methodDetails), METHOD_LIMIT);
+        List<String> fieldSignatures = truncate(formatFields(fieldDetails), limits.getFieldLimit());
+        List<String> constructorSignatures = truncate(formatConstructors(constructorDetails, className), limits.getConstructorLimit());
+        List<String> methodSummaries = truncate(formatMethods(methodDetails), limits.getMethodLimit());
 
         List<String> interactionNotes = buildInteractionNotes(methodDetails);
-        List<String> limitedPatternInsights = truncate(patternInsights == null ? List.of() : patternInsights, PATTERN_LIMIT);
+        List<String> limitedPatternInsights = truncate(patternInsights == null ? List.of() : patternInsights, limits.getPatternLimit());
 
         ClassFeatureSnapshot snapshot = new ClassFeatureSnapshot(
                 projectName,
@@ -266,7 +290,9 @@ public class ClassFeatureExtractor {
         if (source == null || source.isEmpty()) {
             return List.of();
         }
-        if (source.size() <= limit) {
+        // A limit of 0 or less means "send everything", so the LLM can be given the same complete
+        // class that the NLG and SWUM baselines describe.
+        if (limit <= 0 || source.size() <= limit) {
             return List.copyOf(source);
         }
         List<String> truncated = new ArrayList<>(source.subList(0, limit));

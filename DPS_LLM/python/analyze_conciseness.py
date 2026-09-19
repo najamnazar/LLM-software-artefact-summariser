@@ -13,7 +13,6 @@ from __future__ import annotations
 
 import argparse
 import csv
-import math
 import os
 import statistics
 from dataclasses import dataclass
@@ -183,7 +182,6 @@ class ConcisenessAnalyzer:
         if not raw:
             return None
         s = raw.strip()
-        s_lower = s.lower()
 
         def _normalize_variants(token: str) -> List[str]:
             # Generate normalization variants including camel-case splits

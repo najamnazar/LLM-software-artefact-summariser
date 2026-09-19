@@ -15,7 +15,9 @@ Post-hoc pairwise Wilcoxon signed-rank tests (Bonferroni-corrected) are run
 for any significant Friedman result where n >= 10.  For Part 2 (n = 5) the
 pairwise mean-rank differences are reported as a descriptive alternative.
 
-Results are printed to the console and appended to evaluation-results/results.txt.
+Results are printed to the console and appended to a generated report file
+(evaluation-results/friedman_test_report.txt by default). The curated
+evaluation-results/results.txt is protected — see python/report_paths.py.
 
 Systems mapping in the CSV:
     summary_a / total_points_a  →  DPS_NLG
@@ -26,13 +28,19 @@ Systems mapping in the CSV:
 from __future__ import annotations
 
 import argparse
+import sys
 from datetime import datetime
 from pathlib import Path
 from typing import NamedTuple, Optional
 
+from itertools import permutations, product
+
 import numpy as np
 import pandas as pd
-from scipy.stats import friedmanchisquare, wilcoxon
+from scipy.stats import friedmanchisquare, rankdata, wilcoxon
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from report_paths import guard_report_target  # noqa: E402  - sys.path must be extended first
 
 
 # ---------------------------------------------------------------------------
@@ -44,11 +52,17 @@ K = 3                               # number of systems (treatments)
 BONFERRONI_PAIRS = 3                # C(3,2) pairwise comparisons
 ALPHA_ADJ = ALPHA / BONFERRONI_PAIRS  # = 0.01667
 
+# Blocks needed before the Friedman chi-square approximation is trustworthy. Below this
+# the exact permutation null is used instead.
+MIN_BLOCKS_FOR_CHI2_APPROX = 10
+
 BASE_DIR = Path(__file__).resolve().parent.parent
 # Old default retained as comment for reference:
 # RANKINGS_CSV = BASE_DIR / "evaluation-results" / "multi_criteria_rankings.csv"
 RANKINGS_CSV = BASE_DIR / "evaluation-results" / "model_comparisons_ranking_detail.csv"
-RESULTS_TXT = BASE_DIR / "evaluation-results" / "results.txt"
+# Generated per-run report. The curated results.txt is deliberately NOT the default:
+# every run used to append a fresh block to it, growing the hand-written document silently.
+REPORT_TXT = BASE_DIR / "evaluation-results" / "friedman_test_report.txt"
 
 CRITERIA = [
     ("accuracy",        "ACCURACY"),
@@ -57,6 +71,13 @@ CRITERIA = [
     ("code_context",    "CODE CONTEXT"),
     ("design_patterns", "DESIGN PATTERN"),
 ]
+
+# Part 1 runs one Friedman test per criterion, so those tests form a single family of
+# hypotheses about the same three systems on the same class files. Reading each raw
+# p-value against 0.05 leaves roughly a 1-in-4 chance that at least one criterion looks
+# significant by luck alone. Holm-Bonferroni is applied across the family; it controls the
+# same family-wise error rate as plain Bonferroni but is uniformly more powerful.
+CRITERIA_FAMILY_SIZE = len(CRITERIA)
 
 SYSTEM_A_LABEL = "NLG"
 SYSTEM_B_LABEL = "MODEL"
@@ -127,6 +148,54 @@ def decode_scores(
         return ((r1 == sys_id) * 3 + (r2 == sys_id) * 2 + (r3 == sys_id) * 1).astype(float)
 
     return scores_for(1), scores_for(2), scores_for(3)
+
+
+def holm_bonferroni(p_values: list[float]) -> list[float]:
+    """Holm-Bonferroni step-down adjusted p-values, returned in the input order.
+
+    Each p is multiplied by the number of hypotheses still in contention when it is
+    reached in ascending order, then made monotone so a smaller raw p can never end up
+    with a larger adjusted p.
+    """
+    m = len(p_values)
+    order = sorted(range(m), key=lambda i: p_values[i])
+    adjusted = [0.0] * m
+    running = 0.0
+    for rank, idx in enumerate(order):
+        running = max(running, (m - rank) * p_values[idx])
+        adjusted[idx] = min(running, 1.0)
+    return adjusted
+
+
+def _friedman_statistic(rank_rows) -> float:
+    """Friedman chi-square statistic from per-block rank rows (no tie correction)."""
+    n = len(rank_rows)
+    k = len(rank_rows[0])
+    col_sums = [sum(row[j] for row in rank_rows) for j in range(k)]
+    return 12.0 / (n * k * (k + 1)) * sum(r * r for r in col_sums) - 3.0 * n * (k + 1)
+
+
+def friedman_exact_p(matrix: np.ndarray) -> tuple[float, float]:
+    """Exact permutation p-value for the Friedman statistic on a small design.
+
+    Enumerates every one of the (k!)^n within-block rank assignments, which is precisely
+    the Friedman null hypothesis, and counts how many reach the observed statistic. For
+    Part 2 (n = 5 blocks, k = 3) that is 6^5 = 7776 cases, so the exact answer costs
+    nothing — and it is needed, because the chi-square approximation the test normally
+    relies on assumes far more blocks than five and is unreliable there.
+    """
+    rank_rows = [tuple(rankdata(row)) for row in matrix]
+    observed = _friedman_statistic(rank_rows)
+    k = matrix.shape[1]
+    orderings = list(permutations(range(1, k + 1)))
+
+    total = 0
+    at_least_as_extreme = 0
+    for assignment in product(orderings, repeat=matrix.shape[0]):
+        total += 1
+        if _friedman_statistic(assignment) >= observed - 1e-9:
+            at_least_as_extreme += 1
+    return observed, at_least_as_extreme / total
 
 
 def kendalls_w(chi2: float, n: int, k: int) -> float:
@@ -235,7 +304,7 @@ def fmt_section_header(title: str) -> str:
 def fmt_posthoc_block(results: list[PostHocResult]) -> list[str]:
     lines = [
         "",
-        f"  Post-hoc pairwise Wilcoxon signed-rank tests"
+        "  Post-hoc pairwise Wilcoxon signed-rank tests"
         f" (Bonferroni α_adj = {ALPHA_ADJ:.4f}):",
         f"  {'Comparison':<26} {'W-stat':>10} {'p (raw)':>12} "
         f"{'p (adj)':>12} {'Sig?':>6}  Direction",
@@ -262,22 +331,43 @@ def run_part1(df: pd.DataFrame) -> tuple[str, list[dict]]:
     lines: list[str] = [
         fmt_section_header("PART 1: PER-CRITERION FRIEDMAN TESTS  (class files as blocks)"),
         "",
-        f"  Test design : one Friedman test per criterion",
-        f"  Blocks      : individual class files  (n ≈ 150 per test)",
+        "  Test design : one Friedman test per criterion",
+        "  Blocks      : individual class files  (n ≈ 150 per test)",
         f"  Treatments  : k = 3 systems  ({SYSTEM_A_LABEL}, {SYSTEM_B_LABEL}, {SYSTEM_C_LABEL})",
-        f"  Scoring     : 1st = 3 pts | 2nd = 2 pts | 3rd = 1 pt",
-        f"  H0          : no significant difference among the 3 systems",
+        "  Scoring     : 1st = 3 pts | 2nd = 2 pts | 3rd = 1 pt",
+        "  H0          : no significant difference among the 3 systems",
         f"  α           : {ALPHA}  |  post-hoc Bonferroni α_adj = {ALPHA_ADJ:.4f}",
+        f"  Family-wise : Holm-Bonferroni across the {CRITERIA_FAMILY_SIZE} criterion tests;",
+        "                significance and post-hocs are decided on the adjusted p.",
     ]
 
-    summary_rows: list[dict] = []
-
+    # Pass 1: run every criterion test before judging any of them, because the
+    # Holm adjustment for one criterion depends on the p-values of the other four.
+    computed: list[dict] = []
     for crit_key, crit_label in CRITERIA:
         sa, sb, sc = decode_scores(df, crit_key)
         n = len(sa)
 
         chi2, pval = friedmanchisquare(sa, sb, sc)
-        W = kendalls_w(chi2, n, K)
+        computed.append({
+            "label": crit_label,
+            "scores": (sa, sb, sc),
+            "n": n,
+            "chi2": float(chi2),
+            "p_raw": float(pval),
+            "kendalls_w": kendalls_w(chi2, n, K),
+        })
+
+    adjusted = holm_bonferroni([entry["p_raw"] for entry in computed])
+
+    # Pass 2: report each criterion against its family-adjusted p-value.
+    summary_rows: list[dict] = []
+    for entry, p_adj in zip(computed, adjusted):
+        sa, sb, sc = entry["scores"]
+        n = entry["n"]
+        chi2 = entry["chi2"]
+        pval = entry["p_raw"]
+        W = entry["kendalls_w"]
 
         means = {
             SYSTEM_A_LABEL: float(sa.mean()),
@@ -285,18 +375,27 @@ def run_part1(df: pd.DataFrame) -> tuple[str, list[dict]]:
             SYSTEM_C_LABEL: float(sc.mean()),
         }
         best = max(means, key=means.get)
-        sig = pval < ALPHA
+        sig = p_adj < ALPHA
+        sig_raw = pval < ALPHA
 
         lines += [
             "",
             SEP_LIGHT,
-            f"  Criterion      : {crit_label}",
+            f"  Criterion      : {entry['label']}",
             f"  N (blocks)     : {n} class files",
             f"  Friedman chi²  = {chi2:.4f}",
-            f"  p-value        = {pval:.6f}  "
+            f"  p-value (raw)  = {pval:.6f}",
+            f"  p-value (Holm) = {p_adj:.6f}  "
             + ("  < 0.05  →  REJECT H0 *" if sig else "  >= 0.05  →  fail to reject H0"),
             f"  Kendall's W    = {W:.4f}  ({concordance_label(W)} concordance)",
             f"  Significant    : {'YES' if sig else 'NO'}",
+        ]
+        if sig_raw and not sig:
+            lines.append(
+                "  Note           : significant on the raw p-value only; it does not"
+                " survive correction for the 5 criterion tests."
+            )
+        lines += [
             "",
             "  Mean scores per system (higher = better ranked):",
         ]
@@ -310,14 +409,15 @@ def run_part1(df: pd.DataFrame) -> tuple[str, list[dict]]:
             lines.extend(fmt_posthoc_block(ph))
         else:
             lines.append(
-                "\n  Post-hoc tests : not conducted (overall Friedman not significant)"
+                "\n  Post-hoc tests : not conducted (Holm-adjusted Friedman not significant)"
             )
 
         summary_rows.append({
-            "criterion":  crit_label,
+            "criterion":  entry["label"],
             "n":          n,
             "chi2":       chi2,
             "p_value":    pval,
+            "p_adj":      p_adj,
             "kendalls_w": W,
             "significant": sig,
             "best":       best,
@@ -346,6 +446,20 @@ def run_part2(df: pd.DataFrame) -> str:
         "  Cell value  : mean score of system on criterion across all class files",
         "  H0          : rank ordering of systems does not differ across criteria",
         f"  α           : {ALPHA}",
+        "",
+        "  How to read this part — two limitations, both structural:",
+        f"    1. n = {len(CRITERIA)} blocks. The chi-square approximation the Friedman test",
+        f"       normally uses needs roughly {MIN_BLOCKS_FOR_CHI2_APPROX} blocks; at five it is",
+        "       unreliable, so an EXACT permutation p-value over all 6^5 = 7776 rank",
+        "       assignments is reported instead. Even exact, five blocks give the test",
+        "       coarse resolution: the statistic peaks when all five criteria order the",
+        "       systems identically, which only 6 of the 7776 assignments do, so the",
+        "       smallest p this design can ever produce is 6/7776 ≈ 0.00077.",
+        "    2. Each cell is a mean over ~150 class files, not a single observation, so",
+        "       within-criterion variability is averaged away before the test sees it.",
+        "       This part therefore describes the consistency of the system ordering",
+        "       across criteria; it is not independent evidence of a system difference.",
+        "       The per-criterion tests in PART 1 carry that evidence.",
         "",
     ]
 
@@ -387,23 +501,27 @@ def run_part2(df: pd.DataFrame) -> str:
     sc = mean_matrix[:, 2]
     n = len(CRITERIA)
 
-    chi2, pval = friedmanchisquare(sa, sb, sc)
+    chi2, pval_exact = friedman_exact_p(mean_matrix)
+    _, pval_chi2 = friedmanchisquare(sa, sb, sc)
     W = kendalls_w(chi2, n, K)
-    sig = pval < ALPHA
+    sig = pval_exact < ALPHA
 
     lines += [
         f"  Friedman chi²  = {chi2:.4f}",
-        f"  p-value        = {pval:.6f}  "
+        f"  p-value (exact)= {pval_exact:.6f}  "
         + ("  < 0.05  →  REJECT H0 *" if sig else "  >= 0.05  →  fail to reject H0"),
+        f"  p-value (chi²) = {pval_chi2:.6f}  "
+        f"  [approximation, not valid at n = {n}; shown for comparison only]",
         f"  Kendall's W    = {W:.4f}  ({concordance_label(W)} concordance)",
-        f"  Significant    : {'YES' if sig else 'NO'}",
+        f"  Significant    : {'YES' if sig else 'NO'}  (decided on the exact p-value)",
     ]
 
     if sig:
         lines += [
             "",
-            f"  Note: n = 5 blocks — Wilcoxon signed-rank requires n >= 6.",
-            f"  Pairwise mean-score differences (descriptive):",
+            f"  Note: n = {n} blocks — Wilcoxon signed-rank requires n >= 6, and with",
+            "  averaged cells a pairwise test would be descriptive regardless.",
+            "  Pairwise mean-score differences (descriptive):",
             f"  {'Comparison':<26} {'Mean diff':>10}  Direction",
             f"  {'-' * 52}",
         ]
@@ -432,20 +550,23 @@ def run_summary_table(summary_rows: list[dict]) -> str:
     lines: list[str] = [
         fmt_section_header("SUMMARY TABLE — PER-CRITERION FRIEDMAN RESULTS"),
         "",
-        f"  {'Criterion':<22s} {'n':>5s} {'chi²':>10s} {'p-value':>12s} "
-        f"{'Kendall W':>10s} {'Sig?':>5s}  Best System",
-        f"  {'-' * 76}",
+        f"  {'Criterion':<22s} {'n':>5s} {'chi²':>10s} {'p (raw)':>12s} "
+        f"{'p (Holm)':>12s} {'Kendall W':>10s} {'Sig?':>5s}  Best System",
+        f"  {'-' * 90}",
     ]
     for r in summary_rows:
         sig = "YES *" if r["significant"] else "no"
         lines.append(
             f"  {r['criterion']:<22s} {r['n']:>5d} {r['chi2']:>10.4f} "
-            f"{r['p_value']:>12.6f} {r['kendalls_w']:>10.4f} {sig:>5s}  {r['best']}"
+            f"{r['p_value']:>12.6f} {r['p_adj']:>12.6f} {r['kendalls_w']:>10.4f} "
+            f"{sig:>5s}  {r['best']}"
         )
     lines += [
         "",
-        f"  α = {ALPHA}  |  post-hoc Bonferroni α_adj = {ALPHA_ADJ:.4f}",
-        f"  Kendall's W : 0.1 weak | 0.3 moderate | 0.5 strong | 0.7 very strong",
+        f"  α = {ALPHA}  |  Sig? is decided on the Holm-adjusted p across the "
+        f"{CRITERIA_FAMILY_SIZE} criterion tests",
+        f"  post-hoc Bonferroni α_adj = {ALPHA_ADJ:.4f} (3 pairwise tests within a criterion)",
+        "  Kendall's W : 0.1 weak | 0.3 moderate | 0.5 strong | 0.7 very strong",
     ]
     return "\n".join(lines)
 
@@ -464,9 +585,14 @@ def main() -> None:
     )
     parser.add_argument(
         "--append-to",
-        type=Path,
-        default=RESULTS_TXT,
-        help="Path to report file where results are appended",
+        type=str,
+        default=str(REPORT_TXT),
+        help="Report file to append results to; pass an empty string to print only",
+    )
+    parser.add_argument(
+        "--allow-curated-append",
+        action="store_true",
+        help="Permit appending to a hand-curated report such as results.txt",
     )
     parser.add_argument(
         "--by-comparison",
@@ -477,7 +603,15 @@ def main() -> None:
         "--comparison",
         type=str,
         default=None,
-        help="Run only one comparison value (e.g., GEMINI, GPT, CLAUDE, MISTRAL)",
+        help="Run only one comparison value; the roster comes from the *_MODEL keys in .env",
+    )
+    parser.add_argument(
+        "--pool-comparisons",
+        action="store_true",
+        help=(
+            "Run a single analysis over every comparison at once. The blocks are not "
+            "independent across comparisons, so the result is descriptive only."
+        ),
     )
     args = parser.parse_args()
 
@@ -539,16 +673,55 @@ def main() -> None:
             outputs.append(run_single_analysis(df_target, f"NLG vs {comparison_name} vs SWUM", comparison_name))
 
     else:
-        outputs.append(run_single_analysis(df_all, "NLG vs MODEL vs SWUM (ALL COMPARISONS COMBINED)", "MODEL"))
+        # Pooling every comparison into one Friedman run treats 600 rows as 600
+        # independent blocks, but the four comparisons share the same 150 NLG and the
+        # same 150 SWUM summaries — only slot B changes. Each class file therefore
+        # contributes four correlated blocks, quadrupling n without adding information,
+        # which deflates the p-values and inflates Kendall's W. Per-comparison analysis
+        # is the valid default; pooling stays available behind an explicit flag.
+        comparisons = (
+            df_all["comparison"].dropna().astype(str).str.upper().unique().tolist()
+            if "comparison" in df_all.columns
+            else []
+        )
+
+        if len(comparisons) > 1 and not args.pool_comparisons:
+            raise SystemExit(
+                f"{args.csv.name} holds {len(df_all)} rows spanning {len(comparisons)} "
+                f"comparisons ({', '.join(sorted(comparisons))}). Pooling them would treat "
+                "the shared NLG and SWUM summaries as independent observations and "
+                "understate every p-value.\n"
+                "  Run one analysis per comparison : --by-comparison\n"
+                "  Run a single comparison         : --comparison QWEN\n"
+                "  Pool anyway (descriptive only)  : --pool-comparisons"
+            )
+
+        if len(comparisons) > 1:
+            print(
+                f"WARNING: pooling {len(comparisons)} comparisons. Blocks repeat the same "
+                "NLG and SWUM summaries, so the p-values and Kendall's W below are "
+                "descriptive and must not be reported as inferential results."
+            )
+            label = "NLG vs MODEL vs SWUM (ALL COMPARISONS POOLED — NON-INDEPENDENT BLOCKS, DESCRIPTIVE ONLY)"
+        else:
+            label = "NLG vs MODEL vs SWUM (ALL COMPARISONS COMBINED)"
+
+        outputs.append(run_single_analysis(df_all, label, "MODEL"))
 
     combined_output = "\n".join(outputs)
     print(combined_output)
 
-    with open(args.append_to, "a", encoding="utf-8") as fh:
+    if not args.append_to.strip():
+        return
+
+    target = Path(args.append_to)
+    guard_report_target(target, args.allow_curated_append)
+    target.parent.mkdir(parents=True, exist_ok=True)
+    with open(target, "a", encoding="utf-8") as fh:
         fh.write(combined_output)
         fh.write("\n")
 
-    print(f"Results successfully appended to: {args.append_to}")
+    print(f"Results successfully appended to: {target}")
 
 
 if __name__ == "__main__":

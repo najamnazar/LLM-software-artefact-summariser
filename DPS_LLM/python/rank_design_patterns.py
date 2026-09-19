@@ -33,7 +33,15 @@ from dotenv import load_dotenv
 
 # Reuse the exact ranking engine and matching logic used in rank_summaries.py.
 sys.path.insert(0, str(Path(__file__).parent))
-from rank_summaries import MultiCriteriaRanker, build_match_key, resolve_ranking_model
+from rank_summaries import (
+    MultiCriteriaRanker,
+    _require_env_int,
+    assert_unique_match_keys,
+    build_match_key,
+    resolve_folder_column,
+    resolve_ranking_model,
+    should_disable_reasoning,
+)
 
 
 def canonicalize_design_pattern(raw_value: str) -> str:
@@ -118,11 +126,11 @@ class DesignPatternRankingPipeline:
         model = resolve_ranking_model(model_override)
         print(f"Using ranking model: {model}")
 
-        max_tokens_raw = os.getenv("RANK_SUMMARIES_MAX_TOKENS", "50")
-        try:
-            max_tokens = int(max_tokens_raw)
-        except ValueError as exc:
-            raise ValueError("RANK_SUMMARIES_MAX_TOKENS must be an integer") from exc
+        # The "50" default this used to carry was a second copy of RANK_SUMMARIES_MAX_TOKENS living in
+        # the code, so removing the key from .env would have silently produced a 50-token budget that
+        # looked configured. rank_summaries.py already requires the key; this path now does too.
+        # max_tokens_raw = os.getenv("RANK_SUMMARIES_MAX_TOKENS", "50")
+        max_tokens = _require_env_int("RANK_SUMMARIES_MAX_TOKENS")
 
         prompts_path = self.base_dir.parent / "resources" / "prompts.json"
         if not prompts_path.exists():
@@ -137,12 +145,19 @@ class DesignPatternRankingPipeline:
         if not isinstance(ranking_prompts, dict):
             raise ValueError("prompts.json is missing the dps_llm.summary_ranking section required by rank_design_patterns.py")
 
+        # Disable the judge's chain of thought when .env says it is a hybrid reasoning
+        # model; at RANK_SUMMARIES_MAX_TOKENS it would otherwise never reach an answer.
+        disable_reasoning = should_disable_reasoning(model, env_path)
+        if disable_reasoning:
+            print("Reasoning disabled for the ranking model per LLM_NO_REASONING_MODELS.")
+
         self.ranker = MultiCriteriaRanker(
             api_key=api_key,
             api_url=api_url,
             model=model,
             prompts=ranking_prompts,
             max_tokens=max_tokens,
+            disable_reasoning=disable_reasoning,
         )
 
     def load_summaries(self) -> None:
@@ -156,7 +171,7 @@ class DesignPatternRankingPipeline:
         self.df_a = _prepare_dataframe(pd.read_csv(self.output_dir / "A.csv"))
         self.df_b = _prepare_dataframe(pd.read_csv(self.output_dir / "B.csv"))
         self.df_c = _prepare_dataframe(pd.read_csv(self.output_dir / "C.csv"))
-        self.df_human = _prepare_dataframe(pd.read_csv(self.input_dir / "DPS_Human_Summaries.csv"))
+        self.df_human = _prepare_dataframe(pd.read_csv(self.input_dir / "human_summaries" / "DPS_Human_Summaries.csv"))
 
         required_method_cols = {"project_name", "file_name", "summary"}
         for label, df in [("A.csv", self.df_a), ("B.csv", self.df_b), ("C.csv", self.df_c)]:
@@ -187,10 +202,20 @@ class DesignPatternRankingPipeline:
         else:
             self.df_human["design_pattern"] = self.df_human[pattern_col].apply(canonicalize_design_pattern)
 
-        self.df_a["match_key"] = self.df_a.apply(lambda row: build_match_key(row["project_name"], row["file_name"]), axis=1)
-        self.df_b["match_key"] = self.df_b.apply(lambda row: build_match_key(row["project_name"], row["file_name"]), axis=1)
-        self.df_c["match_key"] = self.df_c.apply(lambda row: build_match_key(row["project_name"], row["file_name"]), axis=1)
-        self.df_human["match_key"] = self.df_human.apply(lambda row: build_match_key(row["project"], row["file_name"]), axis=1)
+        for label, df in [("A.csv", self.df_a), ("B.csv", self.df_b), ("C.csv", self.df_c)]:
+            folder_col = resolve_folder_column(df, label)
+            df["match_key"] = df.apply(
+                lambda row, col=folder_col: build_match_key(row["project_name"], row[col], row["file_name"]),
+                axis=1,
+            )
+            assert_unique_match_keys(df, label)
+
+        human_folder_col = resolve_folder_column(self.df_human, "DPS_Human_Summaries.csv")
+        self.df_human["match_key"] = self.df_human.apply(
+            lambda row: build_match_key(row["project"], row[human_folder_col], row["file_name"]),
+            axis=1,
+        )
+        assert_unique_match_keys(self.df_human, "DPS_Human_Summaries.csv")
 
         self.summary_maps = {
             "A": self.df_a.drop_duplicates("match_key").set_index("match_key")["summary"].to_dict(),
@@ -269,6 +294,7 @@ class DesignPatternRankingPipeline:
                 summary_c,
                 file_name,
                 project_name,
+                order_seed=(design_pattern, match_key),
             )
             ranking_result["design_pattern"] = design_pattern
             ranking_result["status"] = "ranked"
@@ -529,7 +555,7 @@ class DesignPatternRankingPipeline:
 
     def load_human_with_patterns(self) -> pd.DataFrame:
         """Load human summaries and attach canonical design-pattern labels."""
-        df_human = pd.read_csv(self.input_dir / "DPS_Human_Summaries.csv")
+        df_human = pd.read_csv(self.input_dir / "human_summaries" / "DPS_Human_Summaries.csv")
         df_human.columns = [col.strip().lower().replace(" ", "_") for col in df_human.columns]
 
         required_human_cols = {"project", "file_name", "human_summary"}
@@ -548,10 +574,12 @@ class DesignPatternRankingPipeline:
         else:
             df_human["design_pattern"] = df_human[pattern_col].apply(canonicalize_design_pattern)
 
+        folder_col = resolve_folder_column(df_human, "DPS_Human_Summaries.csv")
         df_human["match_key"] = df_human.apply(
-            lambda row: build_match_key(row["project"], row["file_name"]),
+            lambda row: build_match_key(row["project"], row[folder_col], row["file_name"]),
             axis=1,
         )
+        assert_unique_match_keys(df_human, "DPS_Human_Summaries.csv")
         return df_human
 
     def load_model_comparisons_detail(self) -> pd.DataFrame:
@@ -589,6 +617,19 @@ class DesignPatternRankingPipeline:
 
         enriched = detail_df.copy()
         enriched["design_pattern"] = enriched["match_key"].map(pattern_map).fillna("Unknown")
+
+        # Detail CSVs written before the folder was added to the match key carry two-part
+        # keys that cannot join against the current three-part ones. Without this check the
+        # mismatch shows up only as every row being labelled "Unknown".
+        unmatched = int((enriched["design_pattern"] == "Unknown").sum())
+        if unmatched:
+            sample = enriched.loc[enriched["design_pattern"] == "Unknown", "match_key"].head(5).tolist()
+            raise ValueError(
+                f"{unmatched} of {len(enriched)} ranking rows have no design-pattern label: their "
+                f"match keys are absent from DPS_Human_Summaries.csv. If the detail CSV predates the "
+                f"folder-aware match key, regenerate it with python/rank_model_comparisons.py. "
+                f"Unmatched keys: {sample}"
+            )
         return enriched
 
     def summarise_model_comparisons_by_pattern(self, detail_df: pd.DataFrame) -> pd.DataFrame:

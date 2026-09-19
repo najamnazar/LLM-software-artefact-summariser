@@ -1,7 +1,7 @@
 {
   "project_name" : "spring-framework/Observer",
   "swum_version" : "1.0",
-  "generated_timestamp" : 1780917880890,
+  "generated_timestamp" : 1789807088650,
   "class_summaries" : {
     "ApplicationEventPublisher" : {
       "class_name" : "ApplicationEventPublisher",

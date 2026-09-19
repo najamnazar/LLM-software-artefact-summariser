@@ -2,14 +2,21 @@ package dps_swum.swum;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.ObjectWriter;
+
+import common.projectparser.ParseProject;
+import common.projectparser.ProjectJsonStore;
 
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
+import java.util.HashMap;
+import java.util.List;
 
 /**
  * Orchestrates SWUM processing for all available DPS summaries.
@@ -34,8 +41,14 @@ import java.util.Comparator;
  */
 public class SWUMEvaluationPipeline {
 
-    private static final String INPUT_DIR = "output/json-output/nlg";
+    // DPS_SWUM used to read DPS_NLG's JSON directory, which meant SWUM could not run unless DPS_NLG
+    // had run first and SWUM's "own" representation was really NLG's. SWUM now parses the corpus
+    // itself and writes its own JSON representation, then applies SWUM grammar to that file.
+    // private static final String INPUT_DIR = "output/json-output/nlg";
+    private static final String SOURCE_DIR = "input/dataset";
     private static final String SWUM_OUTPUT_DIR = "output/json-output/swum";
+    /** SWUM's own JSON representation of the corpus lives beside its grammar output. */
+    private static final String INPUT_DIR = SWUM_OUTPUT_DIR;
     private static final String SUMMARY_OUTPUT_DIR = "evaluation-results";
 
     private final SWUMSummarizer swumSummarizer;
@@ -70,14 +83,18 @@ public class SWUMEvaluationPipeline {
 
             createOutputDirectories();
 
-            System.out.println("\nStep 1: Processing files with SWUM...");
+            System.out.println("\nStep 1: Parsing the corpus into SWUM's own JSON representation...");
+            int parsedCount = parseCorpusToJson();
+            System.out.println("Parsed " + parsedCount + " projects into " + SWUM_OUTPUT_DIR);
+
+            System.out.println("\nStep 2: Applying SWUM grammar to that JSON representation...");
             int processedCount = processAllFilesWithSWUM();
 
-            System.out.println("\nStep 2: Creating processing summary...");
+            System.out.println("\nStep 3: Creating processing summary...");
             generateProcessingSummary(processedCount);
 
             System.out.println("\n=== Pipeline Complete ===");
-            System.out.println("SWUM JSON output written to: " + SWUM_OUTPUT_DIR);
+            System.out.println("SWUM JSON representation and grammar output written to: " + SWUM_OUTPUT_DIR);
             System.out.println("SWUM CSV summaries written to: output/summary-output/swum_summaries.csv");
             System.out.println("Processing summary written to: " + SUMMARY_OUTPUT_DIR);
         } catch (Exception e) {
@@ -103,6 +120,67 @@ public class SWUMEvaluationPipeline {
     }
 
     /**
+     * Parses the source corpus and writes SWUM's own JSON representation of it.
+     * <p>
+     * The representation is the same structural feature set the other pipelines extract — SWUM
+     * differs in what it does with that representation, not in how it reads the code — but it is
+     * produced and owned by this pipeline, so DPS_SWUM no longer requires DPS_NLG to have run.
+     * </p>
+     *
+     * @return the number of projects written
+     */
+    private int parseCorpusToJson() throws IOException {
+        File sourceDir = new File(SOURCE_DIR);
+        if (!sourceDir.exists() || !sourceDir.isDirectory()) {
+            throw new IOException("Source corpus not found: " + sourceDir.getAbsolutePath());
+        }
+
+        List<File> projectDirs = new ArrayList<>();
+        findProjectDirectoriesRecursive(sourceDir, projectDirs);
+        projectDirs.sort(Comparator.comparing(File::getAbsolutePath));
+
+        ParseProject parseProject = new ParseProject();
+        ParseProject.resetDuplicateTracking();
+        ObjectWriter writer = ProjectJsonStore.newWriter();
+
+        int written = 0;
+        for (File projectDir : projectDirs) {
+            String relativePath = sourceDir.toPath().relativize(projectDir.toPath())
+                    .toString().replace("\\", "/");
+            try {
+                HashMap<String, Object> parsedProject = parseProject.parseProject(projectDir, relativePath);
+                if (parsedProject.isEmpty()) {
+                    System.out.println("\t" + relativePath + ": empty");
+                    continue;
+                }
+                String jsonFileName = relativePath.replace("/", "_").replace("\\", "_");
+                ProjectJsonStore.write(writer, new File(SWUM_OUTPUT_DIR, jsonFileName + ".json"), parsedProject);
+                written++;
+            } catch (Exception e) {
+                System.err.println("\tError parsing " + relativePath + ": " + e.getMessage());
+            }
+        }
+        return written;
+    }
+
+    /** Collects every directory that directly contains at least one .java file. */
+    private void findProjectDirectoriesRecursive(File directory, List<File> projectDirs) {
+        if (!directory.isDirectory()) {
+            return;
+        }
+        File[] javaFiles = directory.listFiles((dir, name) -> name.endsWith(".java"));
+        if (javaFiles != null && javaFiles.length > 0) {
+            projectDirs.add(directory);
+        }
+        File[] subdirs = directory.listFiles(File::isDirectory);
+        if (subdirs != null) {
+            for (File subdir : subdirs) {
+                findProjectDirectoriesRecursive(subdir, projectDirs);
+            }
+        }
+    }
+
+    /**
      * Processes every JSON file in the DPS output directory.
      *
      * @return number of projects that were processed successfully
@@ -112,7 +190,7 @@ public class SWUMEvaluationPipeline {
         File outputDir = new File(SWUM_OUTPUT_DIR);
 
         if (!inputDir.exists() || !inputDir.isDirectory()) {
-            throw new IOException("Input directory not found: " + inputDir.getAbsolutePath());
+            throw new IOException("SWUM JSON directory not found: " + inputDir.getAbsolutePath());
         }
 
         File[] jsonFiles = inputDir.listFiles((dir, name) -> 
