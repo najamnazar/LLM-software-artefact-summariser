@@ -1,0 +1,5417 @@
+{
+  "project": "nanoXML",
+  "source_xml": "nanoXML-example.xml",
+  "averages": {
+    "called": 1,
+    "calls": 1,
+    "pagerank": 0.0013114375680972168
+  },
+  "methods": [
+    {
+      "id": 42,
+      "name": "CDATAReader",
+      "class": "CDATAReader",
+      "returntype": "cdatareader",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "CDATA reader",
+        "verb": "create"
+      }
+    },
+    {
+      "id": 43,
+      "name": "finalize",
+      "class": "CDATAReader",
+      "returntype": "void",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0017532362660522246,
+      "swum": {
+        "object": "CDATA reader",
+        "verb": "finalize"
+      }
+    },
+    {
+      "id": 44,
+      "name": "read",
+      "class": "CDATAReader",
+      "returntype": "int",
+      "called": [],
+      "calls": [417, 414],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0017532362660522246,
+      "swum": {
+        "object": "char",
+        "verb": "read"
+      }
+    },
+    {
+      "id": 45,
+      "name": "close",
+      "class": "CDATAReader",
+      "returntype": "void",
+      "called": [],
+      "calls": [417, 414],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0017532362660522246,
+      "swum": {
+        "object": "CDATA reader",
+        "verb": "close"
+      }
+    },
+    {
+      "id": 360,
+      "name": "ContentReader",
+      "class": "ContentReader",
+      "returntype": "contentreader",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "content reader",
+        "verb": "create"
+      }
+    },
+    {
+      "id": 361,
+      "name": "finalize",
+      "class": "ContentReader",
+      "returntype": "void",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0017532362660522246,
+      "swum": {
+        "object": "content reader",
+        "verb": "finalize"
+      }
+    },
+    {
+      "id": 362,
+      "name": "read",
+      "class": "ContentReader",
+      "returntype": "int",
+      "called": [],
+      "calls": [417],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0017532362660522246,
+      "swum": {
+        "object": "char",
+        "verb": "read"
+      }
+    },
+    {
+      "id": 363,
+      "name": "close",
+      "class": "ContentReader",
+      "returntype": "void",
+      "called": [],
+      "calls": [417],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0017532362660522246,
+      "swum": {
+        "object": "content reader",
+        "verb": "close"
+      }
+    },
+    {
+      "id": 98,
+      "name": "startBuilding",
+      "class": "IXMLBuilder",
+      "returntype": "void",
+      "called": [378],
+      "calls": [],
+      "use": {
+        "type": "procedural",
+        "example": "this.builder.startBuilding(this.reader.getSystemID(),this.reader.getLineNr());"
+      },
+      "pagerank": 0.0020016114040741747,
+      "swum": {
+        "object": "building",
+        "verb": "start"
+      }
+    },
+    {
+      "id": 99,
+      "name": "newProcessingInstruction",
+      "class": "IXMLBuilder",
+      "returntype": "void",
+      "called": [381],
+      "calls": [],
+      "use": {
+        "type": "procedural",
+        "example": "this.builder.newProcessingInstruction(target,reader);"
+      },
+      "pagerank": 0.002027183743187091,
+      "swum": {
+        "object": "new processing instruction",
+        "verb": "handle"
+      }
+    },
+    {
+      "id": 100,
+      "name": "startElement",
+      "class": "IXMLBuilder",
+      "returntype": "void",
+      "called": [385],
+      "calls": [],
+      "use": {
+        "type": "procedural",
+        "example": "this.builder.startElement(name,prefix,defaultNamespace,this.reader.getSystemID(),this.reader.getLineNr());"
+      },
+      "pagerank": 0.0017897625963368734,
+      "swum": {
+        "object": "element",
+        "verb": "start"
+      }
+    },
+    {
+      "id": 101,
+      "name": "addAttribute",
+      "class": "IXMLBuilder",
+      "returntype": "void",
+      "called": [385],
+      "calls": [],
+      "use": {
+        "type": "procedural",
+        "example": "this.builder.addAttribute(key,attPrefix,namespaces.getProperty(attPrefix),value,type);"
+      },
+      "pagerank": 0.0017897625963368734,
+      "swum": {
+        "object": "attribute",
+        "verb": "add"
+      }
+    },
+    {
+      "id": 102,
+      "name": "elementAttributesProcessed",
+      "class": "IXMLBuilder",
+      "returntype": "void",
+      "called": [385],
+      "calls": [],
+      "use": {
+        "type": "procedural",
+        "example": "this.validator.elementAttributesProcessed(fullName,extraAttributes,this.reader.getSystemID(),this.reader.getLineNr());"
+      },
+      "pagerank": 0.0017897625963368734,
+      "swum": {
+        "object": "element attributes processed",
+        "verb": "handle"
+      }
+    },
+    {
+      "id": 103,
+      "name": "endElement",
+      "class": "IXMLBuilder",
+      "returntype": "void",
+      "called": [385],
+      "calls": [],
+      "use": {
+        "type": "procedural",
+        "example": "this.builder.endElement(name,prefix,defaultNamespace);"
+      },
+      "pagerank": 0.0017897625963368734,
+      "swum": {
+        "object": "element",
+        "verb": "end"
+      }
+    },
+    {
+      "id": 104,
+      "name": "addPCData",
+      "class": "IXMLBuilder",
+      "returntype": "void",
+      "called": [383, 385],
+      "calls": [],
+      "use": {
+        "type": "procedural",
+        "example": "this.builder.addPCData(reader,this.reader.getSystemID(),this.reader.getLineNr());"
+      },
+      "pagerank": 0.001995448562890446,
+      "swum": {
+        "object": "PC data",
+        "verb": "add"
+      }
+    },
+    {
+      "id": 105,
+      "name": "getResult",
+      "class": "IXMLBuilder",
+      "returntype": "Object",
+      "called": [379, 378],
+      "calls": [],
+      "use": {
+        "type": "procedural",
+        "example": "while ((!this.reader.atEOF()) && (this.builder.getResult() == null)) {"
+      },
+      "pagerank": 0.0021231378109409773,
+      "swum": {
+        "object": "result",
+        "verb": "get"
+      }
+    },
+    {
+      "id": 49,
+      "name": "createPCDataElement",
+      "class": "IXMLElement",
+      "returntype": "IXMLElement",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "PC data element",
+        "verb": "create"
+      }
+    },
+    {
+      "id": 50,
+      "name": "createElement",
+      "class": "IXMLElement",
+      "returntype": "IXMLElement",
+      "called": [115, 111],
+      "calls": [],
+      "use": {
+        "type": "assignment",
+        "example": "IXMLElement elt=this.prototype.createElement(null,systemID,lineNr);"
+      },
+      "pagerank": 0.002088542702381857,
+      "swum": {
+        "object": "element",
+        "verb": "create"
+      }
+    },
+    {
+      "id": 51,
+      "name": "createElement",
+      "class": "IXMLElement",
+      "returntype": "IXMLElement",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.002088542702381857,
+      "swum": {
+        "object": "element",
+        "verb": "create"
+      }
+    },
+    {
+      "id": 52,
+      "name": "createElement",
+      "class": "IXMLElement",
+      "returntype": "IXMLElement",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.002088542702381857,
+      "swum": {
+        "object": "element",
+        "verb": "create"
+      }
+    },
+    {
+      "id": 53,
+      "name": "createElement",
+      "class": "IXMLElement",
+      "returntype": "IXMLElement",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.002088542702381857,
+      "swum": {
+        "object": "element",
+        "verb": "create"
+      }
+    },
+    {
+      "id": 54,
+      "name": "getParent",
+      "class": "IXMLElement",
+      "returntype": "IXMLElement",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "parent",
+        "verb": "get"
+      }
+    },
+    {
+      "id": 55,
+      "name": "getFullName",
+      "class": "IXMLElement",
+      "returntype": "String",
+      "called": [330, 327, 328, 329, 259, 260, 261, 262],
+      "calls": [],
+      "use": {
+        "type": "procedural",
+        "example": "this.writer.print(xml.getFullName());"
+      },
+      "pagerank": 0.002172142883712259,
+      "swum": {
+        "object": "full name",
+        "verb": "get"
+      }
+    },
+    {
+      "id": 56,
+      "name": "getName",
+      "class": "IXMLElement",
+      "returntype": "String",
+      "called": [288, 330, 327, 328, 329, 113, 249, 250, 259, 260],
+      "calls": [],
+      "use": {
+        "type": "procedural",
+        "example": "if (!this.name.equals(elt.getName())) {"
+      },
+      "pagerank": 0.0028362506934611477,
+      "swum": {
+        "object": "name",
+        "verb": "get"
+      }
+    },
+    {
+      "id": 57,
+      "name": "getNamespace",
+      "class": "IXMLElement",
+      "returntype": "String",
+      "called": [330, 327, 328, 329, 259, 260, 261, 262],
+      "calls": [],
+      "use": {
+        "type": "assignment",
+        "example": "if (xml.getNamespace() != null) {"
+      },
+      "pagerank": 0.002172142883712259,
+      "swum": {
+        "object": "namespace",
+        "verb": "get"
+      }
+    },
+    {
+      "id": 58,
+      "name": "setName",
+      "class": "IXMLElement",
+      "returntype": "void",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "name",
+        "verb": "set"
+      }
+    },
+    {
+      "id": 59,
+      "name": "setName",
+      "class": "IXMLElement",
+      "returntype": "void",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "name",
+        "verb": "set"
+      }
+    },
+    {
+      "id": 60,
+      "name": "addChild",
+      "class": "IXMLElement",
+      "returntype": "void",
+      "called": [115, 111],
+      "calls": [],
+      "use": {
+        "type": "procedural",
+        "example": "top.addChild(elt);"
+      },
+      "pagerank": 0.002088542702381857,
+      "swum": {
+        "object": "EQUIV[child IXML element",
+        "verb": "add"
+      }
+    },
+    {
+      "id": 61,
+      "name": "removeChild",
+      "class": "IXMLElement",
+      "returntype": "void",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "EQUIV[child IXML element",
+        "verb": "remove"
+      }
+    },
+    {
+      "id": 62,
+      "name": "removeChildAtIndex",
+      "class": "IXMLElement",
+      "returntype": "void",
+      "called": [113],
+      "calls": [],
+      "use": {
+        "type": "procedural",
+        "example": "elt.removeChildAtIndex(0);"
+      },
+      "pagerank": 0.0019661292414996103,
+      "swum": {
+        "object": "child [ index",
+        "verb": "remove (P)"
+      }
+    },
+    {
+      "id": 63,
+      "name": "enumerateChildren",
+      "class": "IXMLElement",
+      "returntype": "Enumeration",
+      "called": [330, 327, 328, 329],
+      "calls": [],
+      "use": {
+        "type": "assignment",
+        "example": "enum=xml.enumerateChildren();"
+      },
+      "pagerank": 0.0018102248254517033,
+      "swum": {
+        "object": "children",
+        "verb": "enumerate"
+      }
+    },
+    {
+      "id": 64,
+      "name": "isLeaf",
+      "class": "IXMLElement",
+      "returntype": "boolean",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "leaf",
+        "verb": "is"
+      }
+    },
+    {
+      "id": 65,
+      "name": "hasChildren",
+      "class": "IXMLElement",
+      "returntype": "boolean",
+      "called": [330, 327, 328, 329],
+      "calls": [],
+      "use": {
+        "type": "procedural",
+        "example": "else     if (xml.hasChildren() || (!collapseEmptyElements)) {"
+      },
+      "pagerank": 0.0018102248254517033,
+      "swum": {
+        "object": "children",
+        "verb": "has"
+      }
+    },
+    {
+      "id": 66,
+      "name": "getChildrenCount",
+      "class": "IXMLElement",
+      "returntype": "int",
+      "called": [288, 113],
+      "calls": [],
+      "use": {
+        "type": "assignment",
+        "example": "if (this.children.size() != elt.getChildrenCount()) {"
+      },
+      "pagerank": 0.0021192939101747727,
+      "swum": {
+        "object": "children count",
+        "verb": "get"
+      }
+    },
+    {
+      "id": 67,
+      "name": "getChildren",
+      "class": "IXMLElement",
+      "returntype": "Vector",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "children",
+        "verb": "get"
+      }
+    },
+    {
+      "id": 68,
+      "name": "getChildAtIndex",
+      "class": "IXMLElement",
+      "returntype": "IXMLElement",
+      "called": [288, 113],
+      "calls": [],
+      "use": {
+        "type": "assignment",
+        "example": "IXMLElement child1=this.getChildAtIndex(i);"
+      },
+      "pagerank": 0.0021192939101747727,
+      "swum": {
+        "object": "child [ index",
+        "verb": "get (P)"
+      }
+    },
+    {
+      "id": 69,
+      "name": "getFirstChildNamed",
+      "class": "IXMLElement",
+      "returntype": "IXMLElement",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "first child named",
+        "verb": "get"
+      }
+    },
+    {
+      "id": 70,
+      "name": "getFirstChildNamed",
+      "class": "IXMLElement",
+      "returntype": "IXMLElement",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "first child named",
+        "verb": "get"
+      }
+    },
+    {
+      "id": 71,
+      "name": "getChildrenNamed",
+      "class": "IXMLElement",
+      "returntype": "Vector",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "children named",
+        "verb": "get"
+      }
+    },
+    {
+      "id": 72,
+      "name": "getChildrenNamed",
+      "class": "IXMLElement",
+      "returntype": "Vector",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "children named",
+        "verb": "get"
+      }
+    },
+    {
+      "id": 73,
+      "name": "getAttributeCount",
+      "class": "IXMLElement",
+      "returntype": "int",
+      "called": [288],
+      "calls": [],
+      "use": {
+        "type": "assignment",
+        "example": "if (this.attributes.size() != elt.getAttributeCount()) {"
+      },
+      "pagerank": 0.0019064009347273872,
+      "swum": {
+        "object": "attribute count",
+        "verb": "get"
+      }
+    },
+    {
+      "id": 74,
+      "name": "getAttribute",
+      "class": "IXMLElement",
+      "returntype": "String",
+      "called": [288, 330, 327, 328, 329],
+      "calls": [],
+      "use": {
+        "type": "assignment",
+        "example": "if (this.attributes.size() != elt.getAttributeCount()) {"
+      },
+      "pagerank": 0.001963389494126866,
+      "swum": {
+        "object": "attribute",
+        "verb": "get"
+      }
+    },
+    {
+      "id": 75,
+      "name": "getAttribute",
+      "class": "IXMLElement",
+      "returntype": "String",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.001963389494126866,
+      "swum": {
+        "object": "attribute",
+        "verb": "get"
+      }
+    },
+    {
+      "id": 76,
+      "name": "getAttribute",
+      "class": "IXMLElement",
+      "returntype": "String",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.001963389494126866,
+      "swum": {
+        "object": "attribute",
+        "verb": "get"
+      }
+    },
+    {
+      "id": 77,
+      "name": "getAttribute",
+      "class": "IXMLElement",
+      "returntype": "int",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.001963389494126866,
+      "swum": {
+        "object": "attribute",
+        "verb": "get"
+      }
+    },
+    {
+      "id": 78,
+      "name": "getAttribute",
+      "class": "IXMLElement",
+      "returntype": "int",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.001963389494126866,
+      "swum": {
+        "object": "attribute",
+        "verb": "get"
+      }
+    },
+    {
+      "id": 79,
+      "name": "getAttributeType",
+      "class": "IXMLElement",
+      "returntype": "String",
+      "called": [288],
+      "calls": [],
+      "use": {
+        "type": "assignment",
+        "example": "String type=elt.getAttributeType(attr.getName(),attr.getNamespace());"
+      },
+      "pagerank": 0.0019064009347273872,
+      "swum": {
+        "object": "attribute type",
+        "verb": "get"
+      }
+    },
+    {
+      "id": 80,
+      "name": "getAttributeNamespace",
+      "class": "IXMLElement",
+      "returntype": "String",
+      "called": [330, 327, 328, 329],
+      "calls": [],
+      "use": {
+        "type": "assignment",
+        "example": "String namespace=xml.getAttributeNamespace(key);"
+      },
+      "pagerank": 0.0018102248254517033,
+      "swum": {
+        "object": "attribute namespace",
+        "verb": "get"
+      }
+    },
+    {
+      "id": 81,
+      "name": "getAttributeType",
+      "class": "IXMLElement",
+      "returntype": "String",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0019064009347273872,
+      "swum": {
+        "object": "attribute type",
+        "verb": "get"
+      }
+    },
+    {
+      "id": 82,
+      "name": "setAttribute",
+      "class": "IXMLElement",
+      "returntype": "void",
+      "called": [114],
+      "calls": [],
+      "use": {
+        "type": "procedural",
+        "example": "top.setAttribute(fullName,nsURI,value);"
+      },
+      "pagerank": 0.0019188196914001912,
+      "swum": {
+        "object": "attribute",
+        "verb": "set"
+      }
+    },
+    {
+      "id": 83,
+      "name": "setAttribute",
+      "class": "IXMLElement",
+      "returntype": "void",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0019188196914001912,
+      "swum": {
+        "object": "attribute",
+        "verb": "set"
+      }
+    },
+    {
+      "id": 84,
+      "name": "removeAttribute",
+      "class": "IXMLElement",
+      "returntype": "void",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "attribute",
+        "verb": "remove"
+      }
+    },
+    {
+      "id": 85,
+      "name": "removeAttribute",
+      "class": "IXMLElement",
+      "returntype": "void",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "attribute",
+        "verb": "remove"
+      }
+    },
+    {
+      "id": 86,
+      "name": "enumerateAttributeNames",
+      "class": "IXMLElement",
+      "returntype": "Enumeration",
+      "called": [330, 327, 328, 329],
+      "calls": [],
+      "use": {
+        "type": "assignment",
+        "example": "Enumeration enum=xml.enumerateAttributeNames();"
+      },
+      "pagerank": 0.0018102248254517033,
+      "swum": {
+        "object": "attribute names",
+        "verb": "enumerate"
+      }
+    },
+    {
+      "id": 87,
+      "name": "hasAttribute",
+      "class": "IXMLElement",
+      "returntype": "boolean",
+      "called": [288, 114],
+      "calls": [],
+      "use": {
+        "type": "procedural",
+        "example": "if (!elt.hasAttribute(attr.getName(),attr.getNamespace())) {"
+      },
+      "pagerank": 0.002071984360075354,
+      "swum": {
+        "object": "attribute",
+        "verb": "has"
+      }
+    },
+    {
+      "id": 88,
+      "name": "hasAttribute",
+      "class": "IXMLElement",
+      "returntype": "boolean",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.002071984360075354,
+      "swum": {
+        "object": "attribute",
+        "verb": "has"
+      }
+    },
+    {
+      "id": 89,
+      "name": "getAttributes",
+      "class": "IXMLElement",
+      "returntype": "Properties",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "attributes",
+        "verb": "get"
+      }
+    },
+    {
+      "id": 90,
+      "name": "getAttributesInNamespace",
+      "class": "IXMLElement",
+      "returntype": "Properties",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "attributes -- [ namespace",
+        "verb": "get (P)"
+      }
+    },
+    {
+      "id": 91,
+      "name": "getSystemID",
+      "class": "IXMLElement",
+      "returntype": "String",
+      "called": [114],
+      "calls": [],
+      "use": {
+        "type": "procedural",
+        "example": "throw new XMLParseException(top.getSystemID(),top.getLineNr(),\"Duplicate attribute: \" + key);"
+      },
+      "pagerank": 0.0019188196914001912,
+      "swum": {
+        "object": "system ID",
+        "verb": "get"
+      }
+    },
+    {
+      "id": 92,
+      "name": "getLineNr",
+      "class": "IXMLElement",
+      "returntype": "int",
+      "called": [114],
+      "calls": [],
+      "use": {
+        "type": "procedural",
+        "example": "throw new XMLParseException(top.getSystemID(),top.getLineNr(),\"Duplicate attribute: \" + key);"
+      },
+      "pagerank": 0.0019188196914001912,
+      "swum": {
+        "object": "line nr",
+        "verb": "get"
+      }
+    },
+    {
+      "id": 93,
+      "name": "getContent",
+      "class": "IXMLElement",
+      "returntype": "String",
+      "called": [330, 327, 328, 329, 113, 249, 250],
+      "calls": [],
+      "use": {
+        "type": "assignment",
+        "example": "if (xml.getContent() != null) {"
+      },
+      "pagerank": 0.002321167966525429,
+      "swum": {
+        "object": "content",
+        "verb": "get"
+      }
+    },
+    {
+      "id": 94,
+      "name": "setContent",
+      "class": "IXMLElement",
+      "returntype": "void",
+      "called": [250, 113, 115, 249],
+      "calls": [],
+      "use": {
+        "type": "procedural",
+        "example": "lastChild.setContent(lastChild.getContent() + child.getContent());"
+      },
+      "pagerank": 0.0024132044899391205,
+      "swum": {
+        "object": "content",
+        "verb": "set"
+      }
+    },
+    {
+      "id": 95,
+      "name": "equals",
+      "class": "IXMLElement",
+      "returntype": "boolean",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "object",
+        "verb": "equals"
+      }
+    },
+    {
+      "id": 96,
+      "name": "equalsXMLElement",
+      "class": "IXMLElement",
+      "returntype": "boolean",
+      "called": [288],
+      "calls": [],
+      "use": {
+        "type": "procedural",
+        "example": "if (!child1.equalsXMLElement(child2)) {"
+      },
+      "pagerank": 0.0019064009347273872,
+      "swum": {
+        "object": "EQUIV[XML element IXML element",
+        "verb": "equals"
+      }
+    },
+    {
+      "id": 208,
+      "name": "addInternalEntity",
+      "class": "IXMLEntityResolver",
+      "returntype": "void",
+      "called": [309],
+      "calls": [],
+      "use": {
+        "type": "procedural",
+        "example": "entityResolver.addInternalEntity(key,value);"
+      },
+      "pagerank": 0.0019404799389087584,
+      "swum": {
+        "object": "internal entity",
+        "verb": "add"
+      }
+    },
+    {
+      "id": 209,
+      "name": "addExternalEntity",
+      "class": "IXMLEntityResolver",
+      "returntype": "void",
+      "called": [309],
+      "calls": [],
+      "use": {
+        "type": "procedural",
+        "example": "entityResolver.addExternalEntity(key,publicID,systemID);"
+      },
+      "pagerank": 0.0019404799389087584,
+      "swum": {
+        "object": "external entity",
+        "verb": "add"
+      }
+    },
+    {
+      "id": 210,
+      "name": "getEntity",
+      "class": "IXMLEntityResolver",
+      "returntype": "Reader",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.00204767417954895,
+      "swum": {
+        "object": "entity",
+        "verb": "get"
+      }
+    },
+    {
+      "id": 211,
+      "name": "isExternalEntity",
+      "class": "IXMLEntityResolver",
+      "returntype": "boolean",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.00204767417954895,
+      "swum": {
+        "object": "external entity",
+        "verb": "is"
+      }
+    },
+    {
+      "id": 191,
+      "name": "setReader",
+      "class": "IXMLParser",
+      "returntype": "void",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "reader",
+        "verb": "set"
+      }
+    },
+    {
+      "id": 192,
+      "name": "getReader",
+      "class": "IXMLParser",
+      "returntype": "IXMLReader",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "reader",
+        "verb": "get"
+      }
+    },
+    {
+      "id": 193,
+      "name": "setBuilder",
+      "class": "IXMLParser",
+      "returntype": "void",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0021357339788799796,
+      "swum": {
+        "object": "builder",
+        "verb": "set"
+      }
+    },
+    {
+      "id": 194,
+      "name": "getBuilder",
+      "class": "IXMLParser",
+      "returntype": "IXMLBuilder",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "builder",
+        "verb": "get"
+      }
+    },
+    {
+      "id": 195,
+      "name": "setValidator",
+      "class": "IXMLParser",
+      "returntype": "void",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0021357339788799796,
+      "swum": {
+        "object": "validator",
+        "verb": "set"
+      }
+    },
+    {
+      "id": 196,
+      "name": "getValidator",
+      "class": "IXMLParser",
+      "returntype": "IXMLValidator",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "validator",
+        "verb": "get"
+      }
+    },
+    {
+      "id": 197,
+      "name": "setResolver",
+      "class": "IXMLParser",
+      "returntype": "void",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "resolver",
+        "verb": "set"
+      }
+    },
+    {
+      "id": 198,
+      "name": "getResolver",
+      "class": "IXMLParser",
+      "returntype": "IXMLEntityResolver",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "resolver",
+        "verb": "get"
+      }
+    },
+    {
+      "id": 199,
+      "name": "parse",
+      "class": "IXMLParser",
+      "returntype": "Object",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "IXML parser",
+        "verb": "parse"
+      }
+    },
+    {
+      "id": 414,
+      "name": "read",
+      "class": "IXMLReader",
+      "returntype": "char",
+      "called": [384, 385, 44, 45, 304, 320, 321],
+      "calls": [],
+      "use": {
+        "type": "procedural",
+        "example": "if (!XMLUtil.checkLiteral(this.reader,\"OCTYPE\")) {"
+      },
+      "pagerank": 0.01217546620660769,
+      "swum": {
+        "object": "IXML reader",
+        "verb": "read"
+      }
+    },
+    {
+      "id": 415,
+      "name": "atEOFOfCurrentStream",
+      "class": "IXMLReader",
+      "returntype": "boolean",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "(NM)",
+        "verb": "null"
+      }
+    },
+    {
+      "id": 416,
+      "name": "atEOF",
+      "class": "IXMLReader",
+      "returntype": "boolean",
+      "called": [379],
+      "calls": [],
+      "use": {
+        "type": "procedural",
+        "example": "while ((!this.reader.atEOF()) && (this.builder.getResult() == null)) {"
+      },
+      "pagerank": 0.0018747626729190272,
+      "swum": {
+        "object": "null",
+        "verb": "null"
+      }
+    },
+    {
+      "id": 417,
+      "name": "unread",
+      "class": "IXMLReader",
+      "returntype": "void",
+      "called": [309, 308, 385, 380, 44, 45, 362, 363, 304, 320],
+      "calls": [],
+      "use": {
+        "type": "procedural",
+        "example": "reader.unread(ch);"
+      },
+      "pagerank": 0.006841077400713893,
+      "swum": {
+        "object": "unread",
+        "verb": "handle"
+      }
+    },
+    {
+      "id": 418,
+      "name": "getLineNr",
+      "class": "IXMLReader",
+      "returntype": "int",
+      "called": [206, 379, 383, 384, 382, 385, 380, 386, 304, 378],
+      "calls": [],
+      "use": {
+        "type": "procedural",
+        "example": "throw new XMLParseException(parentSystemID,xmlReader.getLineNr(),\"Could not open external entity \" + \"at system ID: \" + systemID);"
+      },
+      "pagerank": 0.004701913987309199,
+      "swum": {
+        "object": "line nr",
+        "verb": "get"
+      }
+    },
+    {
+      "id": 419,
+      "name": "openStream",
+      "class": "IXMLReader",
+      "returntype": "Reader",
+      "called": [206, 384],
+      "calls": [],
+      "use": {
+        "type": "procedural",
+        "example": "return xmlReader.openStream(publicID,systemID);"
+      },
+      "pagerank": 0.002129291901348836,
+      "swum": {
+        "object": "stream",
+        "verb": "open"
+      }
+    },
+    {
+      "id": 420,
+      "name": "startNewStream",
+      "class": "IXMLReader",
+      "returntype": "void",
+      "called": [306, 384],
+      "calls": [],
+      "use": {
+        "type": "procedural",
+        "example": "reader.startNewStream(new StringReader(buf.toString()));"
+      },
+      "pagerank": 0.002270888095376365,
+      "swum": {
+        "object": "new stream",
+        "verb": "start"
+      }
+    },
+    {
+      "id": 421,
+      "name": "startNewStream",
+      "class": "IXMLReader",
+      "returntype": "void",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.002270888095376365,
+      "swum": {
+        "object": "new stream",
+        "verb": "start"
+      }
+    },
+    {
+      "id": 422,
+      "name": "getStreamLevel",
+      "class": "IXMLReader",
+      "returntype": "int",
+      "called": [304],
+      "calls": [],
+      "use": {
+        "type": "assignment",
+        "example": "int origLevel=reader.getStreamLevel();"
+      },
+      "pagerank": 0.002093582357359518,
+      "swum": {
+        "object": "stream level",
+        "verb": "get"
+      }
+    },
+    {
+      "id": 423,
+      "name": "setSystemID",
+      "class": "IXMLReader",
+      "returntype": "void",
+      "called": [384],
+      "calls": [],
+      "use": {
+        "type": "procedural",
+        "example": "this.reader.setSystemID(systemID);"
+      },
+      "pagerank": 0.0018560792493290108,
+      "swum": {
+        "object": "system ID",
+        "verb": "set"
+      }
+    },
+    {
+      "id": 424,
+      "name": "setPublicID",
+      "class": "IXMLReader",
+      "returntype": "void",
+      "called": [384],
+      "calls": [],
+      "use": {
+        "type": "procedural",
+        "example": "this.reader.setPublicID(publicID.toString());"
+      },
+      "pagerank": 0.0018560792493290108,
+      "swum": {
+        "object": "public ID",
+        "verb": "set"
+      }
+    },
+    {
+      "id": 425,
+      "name": "getSystemID",
+      "class": "IXMLReader",
+      "returntype": "String",
+      "called": [206, 379, 383, 384, 382, 385, 380, 386, 304, 378],
+      "calls": [],
+      "use": {
+        "type": "assignment",
+        "example": "String parentSystemID=xmlReader.getSystemID();"
+      },
+      "pagerank": 0.004701913987309198,
+      "swum": {
+        "object": "system ID",
+        "verb": "get"
+      }
+    },
+    {
+      "id": 426,
+      "name": "getPublicID",
+      "class": "IXMLReader",
+      "returntype": "String",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "public ID",
+        "verb": "get"
+      }
+    },
+    {
+      "id": 224,
+      "name": "setParameterEntityResolver",
+      "class": "IXMLValidator",
+      "returntype": "void",
+      "called": [126],
+      "calls": [],
+      "use": {
+        "type": "procedural",
+        "example": "this.delegate.setParameterEntityResolver(resolver);"
+      },
+      "pagerank": 0.0032434870941839247,
+      "swum": {
+        "object": "parameter entity resolver",
+        "verb": "set"
+      }
+    },
+    {
+      "id": 225,
+      "name": "getParameterEntityResolver",
+      "class": "IXMLValidator",
+      "returntype": "IXMLEntityResolver",
+      "called": [127],
+      "calls": [],
+      "use": {
+        "type": "procedural",
+        "example": "return this.delegate.getParameterEntityResolver();"
+      },
+      "pagerank": 0.0032434870941839247,
+      "swum": {
+        "object": "parameter entity resolver",
+        "verb": "get"
+      }
+    },
+    {
+      "id": 226,
+      "name": "parseDTD",
+      "class": "IXMLValidator",
+      "returntype": "void",
+      "called": [384, 128],
+      "calls": [],
+      "use": {
+        "type": "procedural",
+        "example": "this.validator.parseDTD(publicID.toString(),this.reader,this.entityResolver,false);"
+      },
+      "pagerank": 0.003346330077460711,
+      "swum": {
+        "object": "DTD",
+        "verb": "parse"
+      }
+    },
+    {
+      "id": 227,
+      "name": "elementStarted",
+      "class": "IXMLValidator",
+      "returntype": "void",
+      "called": [385, 129],
+      "calls": [],
+      "use": {
+        "type": "procedural",
+        "example": "this.validator.elementStarted(fullName,this.reader.getSystemID(),this.reader.getLineNr());"
+      },
+      "pagerank": 0.0032800134244685736,
+      "swum": {
+        "object": "element started",
+        "verb": "handle"
+      }
+    },
+    {
+      "id": 228,
+      "name": "elementEnded",
+      "class": "IXMLValidator",
+      "returntype": "void",
+      "called": [385, 130],
+      "calls": [],
+      "use": {
+        "type": "procedural",
+        "example": "this.validator.elementEnded(name,this.reader.getSystemID(),this.reader.getLineNr());"
+      },
+      "pagerank": 0.0032800134244685736,
+      "swum": {
+        "object": "element ended",
+        "verb": "handle"
+      }
+    },
+    {
+      "id": 229,
+      "name": "attributeAdded",
+      "class": "IXMLValidator",
+      "returntype": "void",
+      "called": [386, 132],
+      "calls": [],
+      "use": {
+        "type": "procedural",
+        "example": "this.validator.attributeAdded(key,value,this.reader.getSystemID(),this.reader.getLineNr());"
+      },
+      "pagerank": 0.0033956169150830325,
+      "swum": {
+        "object": "attribute added",
+        "verb": "handle"
+      }
+    },
+    {
+      "id": 230,
+      "name": "elementAttributesProcessed",
+      "class": "IXMLValidator",
+      "returntype": "void",
+      "called": [385, 131],
+      "calls": [],
+      "use": {
+        "type": "procedural",
+        "example": "this.validator.elementAttributesProcessed(fullName,extraAttributes,this.reader.getSystemID(),this.reader.getLineNr());"
+      },
+      "pagerank": 0.0032800134244685736,
+      "swum": {
+        "object": "element attributes processed",
+        "verb": "handle"
+      }
+    },
+    {
+      "id": 231,
+      "name": "PCDataAdded",
+      "class": "IXMLValidator",
+      "returntype": "void",
+      "called": [383, 385, 133],
+      "calls": [],
+      "use": {
+        "type": "procedural",
+        "example": "this.validator.PCDataAdded(this.reader.getSystemID(),this.reader.getLineNr());"
+      },
+      "pagerank": 0.0034856993910221466,
+      "swum": {
+        "object": "data added",
+        "verb": "handle"
+      }
+    },
+    {
+      "id": 300,
+      "name": "NonValidator",
+      "class": "NonValidator",
+      "returntype": "nonvalidator",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "non validator",
+        "verb": "create"
+      }
+    },
+    {
+      "id": 301,
+      "name": "finalize",
+      "class": "NonValidator",
+      "returntype": "void",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0017532362660522246,
+      "swum": {
+        "object": "non validator",
+        "verb": "finalize"
+      }
+    },
+    {
+      "id": 302,
+      "name": "setParameterEntityResolver",
+      "class": "NonValidator",
+      "returntype": "void",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "parameter entity resolver",
+        "verb": "set"
+      }
+    },
+    {
+      "id": 303,
+      "name": "getParameterEntityResolver",
+      "class": "NonValidator",
+      "returntype": "IXMLEntityResolver",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "parameter entity resolver",
+        "verb": "get"
+      }
+    },
+    {
+      "id": 304,
+      "name": "parseDTD",
+      "class": "NonValidator",
+      "returntype": "void",
+      "called": [],
+      "calls": [417, 422, 414, 418, 425, 305],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0017532362660522246,
+      "swum": {
+        "object": "DTD",
+        "verb": "parse"
+      }
+    },
+    {
+      "id": 305,
+      "name": "processElement",
+      "class": "NonValidator",
+      "returntype": "void",
+      "called": [304],
+      "calls": [308, 309, 306],
+      "use": {
+        "type": "procedural",
+        "example": "this.processElement(reader,entityResolver);"
+      },
+      "pagerank": 0.0018887136140641973,
+      "swum": {
+        "object": "element",
+        "verb": "process"
+      }
+    },
+    {
+      "id": 306,
+      "name": "processConditionalSection",
+      "class": "NonValidator",
+      "returntype": "void",
+      "called": [305],
+      "calls": [420, 307],
+      "use": {
+        "type": "procedural",
+        "example": "this.processConditionalSection(reader,entityResolver);"
+      },
+      "pagerank": 0.0019825800623830027,
+      "swum": {
+        "object": "conditional section",
+        "verb": "process"
+      }
+    },
+    {
+      "id": 307,
+      "name": "processIgnoreSection",
+      "class": "NonValidator",
+      "returntype": "void",
+      "called": [306],
+      "calls": [],
+      "use": {
+        "type": "procedural",
+        "example": "this.processIgnoreSection(reader,entityResolver);"
+      },
+      "pagerank": 0.0018736071986028536,
+      "swum": {
+        "object": "ignore section",
+        "verb": "process"
+      }
+    },
+    {
+      "id": 308,
+      "name": "processAttList",
+      "class": "NonValidator",
+      "returntype": "void",
+      "called": [305],
+      "calls": [417],
+      "use": {
+        "type": "procedural",
+        "example": "this.processAttList(reader,entityResolver);"
+      },
+      "pagerank": 0.0019825800623830027,
+      "swum": {
+        "object": "att list",
+        "verb": "process"
+      }
+    },
+    {
+      "id": 309,
+      "name": "processEntity",
+      "class": "NonValidator",
+      "returntype": "void",
+      "called": [305],
+      "calls": [209, 208, 417],
+      "use": {
+        "type": "procedural",
+        "example": "this.processEntity(reader,entityResolver);"
+      },
+      "pagerank": 0.0019825800623830027,
+      "swum": {
+        "object": "entity",
+        "verb": "process"
+      }
+    },
+    {
+      "id": 310,
+      "name": "elementStarted",
+      "class": "NonValidator",
+      "returntype": "void",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0017532362660522246,
+      "swum": {
+        "object": "element started",
+        "verb": "handle"
+      }
+    },
+    {
+      "id": 311,
+      "name": "elementEnded",
+      "class": "NonValidator",
+      "returntype": "void",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "element ended",
+        "verb": "handle"
+      }
+    },
+    {
+      "id": 312,
+      "name": "elementAttributesProcessed",
+      "class": "NonValidator",
+      "returntype": "void",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0017532362660522246,
+      "swum": {
+        "object": "element attributes processed",
+        "verb": "handle"
+      }
+    },
+    {
+      "id": 313,
+      "name": "attributeAdded",
+      "class": "NonValidator",
+      "returntype": "void",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0017532362660522246,
+      "swum": {
+        "object": "attribute added",
+        "verb": "handle"
+      }
+    },
+    {
+      "id": 314,
+      "name": "PCDataAdded",
+      "class": "NonValidator",
+      "returntype": "void",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "data added",
+        "verb": "handle"
+      }
+    },
+    {
+      "id": 318,
+      "name": "PIReader",
+      "class": "PIReader",
+      "returntype": "pireader",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "PI reader",
+        "verb": "create"
+      }
+    },
+    {
+      "id": 319,
+      "name": "finalize",
+      "class": "PIReader",
+      "returntype": "void",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0017532362660522246,
+      "swum": {
+        "object": "PI reader",
+        "verb": "finalize"
+      }
+    },
+    {
+      "id": 320,
+      "name": "read",
+      "class": "PIReader",
+      "returntype": "int",
+      "called": [],
+      "calls": [417, 414],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0017532362660522246,
+      "swum": {
+        "object": "char",
+        "verb": "read"
+      }
+    },
+    {
+      "id": 321,
+      "name": "close",
+      "class": "PIReader",
+      "returntype": "void",
+      "called": [],
+      "calls": [414],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0017532362660522246,
+      "swum": {
+        "object": "PI reader",
+        "verb": "close"
+      }
+    },
+    {
+      "id": 106,
+      "name": "StdXMLBuilder",
+      "class": "StdXMLBuilder",
+      "returntype": "stdxmlbuilder",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "std XML builder",
+        "verb": "create"
+      }
+    },
+    {
+      "id": 107,
+      "name": "StdXMLBuilder",
+      "class": "StdXMLBuilder",
+      "returntype": "stdxmlbuilder",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "std XML builder",
+        "verb": "create"
+      }
+    },
+    {
+      "id": 108,
+      "name": "finalize",
+      "class": "StdXMLBuilder",
+      "returntype": "void",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0017532362660522246,
+      "swum": {
+        "object": "std XML builder",
+        "verb": "finalize"
+      }
+    },
+    {
+      "id": 109,
+      "name": "startBuilding",
+      "class": "StdXMLBuilder",
+      "returntype": "void",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0017532362660522246,
+      "swum": {
+        "object": "building",
+        "verb": "start"
+      }
+    },
+    {
+      "id": 110,
+      "name": "newProcessingInstruction",
+      "class": "StdXMLBuilder",
+      "returntype": "void",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "new processing instruction",
+        "verb": "handle"
+      }
+    },
+    {
+      "id": 111,
+      "name": "startElement",
+      "class": "StdXMLBuilder",
+      "returntype": "void",
+      "called": [],
+      "calls": [60, 50],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0017532362660522246,
+      "swum": {
+        "object": "element",
+        "verb": "start"
+      }
+    },
+    {
+      "id": 112,
+      "name": "elementAttributesProcessed",
+      "class": "StdXMLBuilder",
+      "returntype": "void",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "element attributes processed",
+        "verb": "handle"
+      }
+    },
+    {
+      "id": 113,
+      "name": "endElement",
+      "class": "StdXMLBuilder",
+      "returntype": "void",
+      "called": [],
+      "calls": [62, 94, 93, 56, 68, 66],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0017532362660522246,
+      "swum": {
+        "object": "element",
+        "verb": "end"
+      }
+    },
+    {
+      "id": 114,
+      "name": "addAttribute",
+      "class": "StdXMLBuilder",
+      "returntype": "void",
+      "called": [],
+      "calls": [82, 92, 91, 87],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0017532362660522246,
+      "swum": {
+        "object": "attribute",
+        "verb": "add"
+      }
+    },
+    {
+      "id": 115,
+      "name": "addPCData",
+      "class": "StdXMLBuilder",
+      "returntype": "void",
+      "called": [],
+      "calls": [60, 94, 50],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0017532362660522246,
+      "swum": {
+        "object": "PC data",
+        "verb": "add"
+      }
+    },
+    {
+      "id": 116,
+      "name": "getResult",
+      "class": "StdXMLBuilder",
+      "returntype": "Object",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "result",
+        "verb": "get"
+      }
+    },
+    {
+      "id": 368,
+      "name": "StdXMLParser",
+      "class": "StdXMLParser",
+      "returntype": "stdxmlparser",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "std XML parser",
+        "verb": "create"
+      }
+    },
+    {
+      "id": 369,
+      "name": "finalize",
+      "class": "StdXMLParser",
+      "returntype": "void",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0017532362660522246,
+      "swum": {
+        "object": "std XML parser",
+        "verb": "finalize"
+      }
+    },
+    {
+      "id": 370,
+      "name": "setBuilder",
+      "class": "StdXMLParser",
+      "returntype": "void",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "builder",
+        "verb": "set"
+      }
+    },
+    {
+      "id": 371,
+      "name": "getBuilder",
+      "class": "StdXMLParser",
+      "returntype": "IXMLBuilder",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "builder",
+        "verb": "get"
+      }
+    },
+    {
+      "id": 372,
+      "name": "setValidator",
+      "class": "StdXMLParser",
+      "returntype": "void",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "validator",
+        "verb": "set"
+      }
+    },
+    {
+      "id": 373,
+      "name": "getValidator",
+      "class": "StdXMLParser",
+      "returntype": "IXMLValidator",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "validator",
+        "verb": "get"
+      }
+    },
+    {
+      "id": 374,
+      "name": "setResolver",
+      "class": "StdXMLParser",
+      "returntype": "void",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "resolver",
+        "verb": "set"
+      }
+    },
+    {
+      "id": 375,
+      "name": "getResolver",
+      "class": "StdXMLParser",
+      "returntype": "IXMLEntityResolver",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "resolver",
+        "verb": "get"
+      }
+    },
+    {
+      "id": 376,
+      "name": "setReader",
+      "class": "StdXMLParser",
+      "returntype": "void",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "reader",
+        "verb": "set"
+      }
+    },
+    {
+      "id": 377,
+      "name": "getReader",
+      "class": "StdXMLParser",
+      "returntype": "IXMLReader",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "reader",
+        "verb": "get"
+      }
+    },
+    {
+      "id": 378,
+      "name": "parse",
+      "class": "StdXMLParser",
+      "returntype": "Object",
+      "called": [],
+      "calls": [105, 379, 98, 418, 425],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0017532362660522246,
+      "swum": {
+        "object": "std XML parser",
+        "verb": "parse"
+      }
+    },
+    {
+      "id": 379,
+      "name": "scanData",
+      "class": "StdXMLParser",
+      "returntype": "void",
+      "called": [378],
+      "calls": [105, 416, 418, 425, 380],
+      "use": {
+        "type": "procedural",
+        "example": "this.scanData();"
+      },
+      "pagerank": 0.0020016114040741747,
+      "swum": {
+        "object": "data",
+        "verb": "scan"
+      }
+    },
+    {
+      "id": 380,
+      "name": "scanSomeTag",
+      "class": "StdXMLParser",
+      "returntype": "void",
+      "called": [379, 385],
+      "calls": [385, 417, 382, 381, 418, 425],
+      "use": {
+        "type": "procedural",
+        "example": "this.scanSomeTag(false,null,new Properties());"
+      },
+      "pagerank": 0.001911289003203676,
+      "swum": {
+        "object": "tag",
+        "verb": "scan"
+      }
+    },
+    {
+      "id": 381,
+      "name": "processPI",
+      "class": "StdXMLParser",
+      "returntype": "void",
+      "called": [380],
+      "calls": [99],
+      "use": {
+        "type": "procedural",
+        "example": "this.processPI();"
+      },
+      "pagerank": 0.0019337468944101365,
+      "swum": {
+        "object": "PI",
+        "verb": "process"
+      }
+    },
+    {
+      "id": 382,
+      "name": "processSpecialTag",
+      "class": "StdXMLParser",
+      "returntype": "void",
+      "called": [380],
+      "calls": [384, 418, 425, 383],
+      "use": {
+        "type": "procedural",
+        "example": "this.processSpecialTag(allowCDATA);"
+      },
+      "pagerank": 0.0019337468944101365,
+      "swum": {
+        "object": "special tag",
+        "verb": "process"
+      }
+    },
+    {
+      "id": 383,
+      "name": "processCDATA",
+      "class": "StdXMLParser",
+      "returntype": "void",
+      "called": [382],
+      "calls": [104, 418, 425, 231],
+      "use": {
+        "type": "procedural",
+        "example": "this.processCDATA();"
+      },
+      "pagerank": 0.0019358679174754688,
+      "swum": {
+        "object": "CDATA",
+        "verb": "process"
+      }
+    },
+    {
+      "id": 384,
+      "name": "processDocType",
+      "class": "StdXMLParser",
+      "returntype": "void",
+      "called": [382],
+      "calls": [226, 424, 423, 420, 419, 418, 425, 414],
+      "use": {
+        "type": "procedural",
+        "example": "this.processDocType();"
+      },
+      "pagerank": 0.0019358679174754688,
+      "swum": {
+        "object": "doc type",
+        "verb": "process"
+      }
+    },
+    {
+      "id": 385,
+      "name": "processElement",
+      "class": "StdXMLParser",
+      "returntype": "void",
+      "called": [380],
+      "calls": [104, 418, 425, 231, 417, 380, 103, 228, 414, 102],
+      "use": {
+        "type": "procedural",
+        "example": "this.processElement(defaultNamespace,namespaces);"
+      },
+      "pagerank": 0.0019337468944101365,
+      "swum": {
+        "object": "element",
+        "verb": "process"
+      }
+    },
+    {
+      "id": 386,
+      "name": "processAttribute",
+      "class": "StdXMLParser",
+      "returntype": "void",
+      "called": [385],
+      "calls": [229, 418, 425],
+      "use": {
+        "type": "procedural",
+        "example": "this.processAttribute(attrNames,attrValues,attrTypes);"
+      },
+      "pagerank": 0.0017897625963368734,
+      "swum": {
+        "object": "attribute",
+        "verb": "process"
+      }
+    },
+    {
+      "id": 0,
+      "name": "stringReader",
+      "class": "StdXMLReader",
+      "returntype": "IXMLReader",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "null",
+        "verb": "null"
+      }
+    },
+    {
+      "id": 0,
+      "name": "fileReader",
+      "class": "StdXMLReader",
+      "returntype": "IXMLReader",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "null",
+        "verb": "null"
+      }
+    },
+    {
+      "id": 149,
+      "name": "StdXMLReader",
+      "class": "StdXMLReader",
+      "returntype": "stdxmlreader",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "std XML reader",
+        "verb": "create"
+      }
+    },
+    {
+      "id": 150,
+      "name": "StdXMLReader",
+      "class": "StdXMLReader",
+      "returntype": "stdxmlreader",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "std XML reader",
+        "verb": "create"
+      }
+    },
+    {
+      "id": 151,
+      "name": "finalize",
+      "class": "StdXMLReader",
+      "returntype": "void",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0017532362660522246,
+      "swum": {
+        "object": "std XML reader",
+        "verb": "finalize"
+      }
+    },
+    {
+      "id": 152,
+      "name": "getEncoding",
+      "class": "StdXMLReader",
+      "returntype": "String",
+      "called": [153],
+      "calls": [],
+      "use": {
+        "type": "assignment",
+        "example": "String encoding=this.getEncoding(charsRead.toString());"
+      },
+      "pagerank": 0.001965946036645434,
+      "swum": {
+        "object": "encoding",
+        "verb": "get"
+      }
+    },
+    {
+      "id": 153,
+      "name": "stream2reader",
+      "class": "StdXMLReader",
+      "returntype": "Reader",
+      "called": [159],
+      "calls": [152],
+      "use": {
+        "type": "assignment",
+        "example": "Reader reader=this.stream2reader(url.openStream(),charsRead);"
+      },
+      "pagerank": 0.0020019743079858444,
+      "swum": {
+        "object": "reader",
+        "verb": "stream"
+      }
+    },
+    {
+      "id": 154,
+      "name": "StdXMLReader",
+      "class": "StdXMLReader",
+      "returntype": "stdxmlreader",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "std XML reader",
+        "verb": "create"
+      }
+    },
+    {
+      "id": 155,
+      "name": "read",
+      "class": "StdXMLReader",
+      "returntype": "char",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0017532362660522246,
+      "swum": {
+        "object": "std XML reader",
+        "verb": "read"
+      }
+    },
+    {
+      "id": 156,
+      "name": "atEOFOfCurrentStream",
+      "class": "StdXMLReader",
+      "returntype": "boolean",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0017532362660522246,
+      "swum": {
+        "object": "(NM)",
+        "verb": "null"
+      }
+    },
+    {
+      "id": 157,
+      "name": "atEOF",
+      "class": "StdXMLReader",
+      "returntype": "boolean",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0017532362660522246,
+      "swum": {
+        "object": "null",
+        "verb": "null"
+      }
+    },
+    {
+      "id": 158,
+      "name": "unread",
+      "class": "StdXMLReader",
+      "returntype": "void",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0017532362660522246,
+      "swum": {
+        "object": "unread",
+        "verb": "handle"
+      }
+    },
+    {
+      "id": 159,
+      "name": "openStream",
+      "class": "StdXMLReader",
+      "returntype": "Reader",
+      "called": [],
+      "calls": [153],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0019116996043019952,
+      "swum": {
+        "object": "stream",
+        "verb": "open"
+      }
+    },
+    {
+      "id": 160,
+      "name": "startNewStream",
+      "class": "StdXMLReader",
+      "returntype": "void",
+      "called": [161, 160],
+      "calls": [160],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0023032525363929014,
+      "swum": {
+        "object": "new stream",
+        "verb": "start"
+      }
+    },
+    {
+      "id": 161,
+      "name": "startNewStream",
+      "class": "StdXMLReader",
+      "returntype": "void",
+      "called": [],
+      "calls": [160],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0023032525363929014,
+      "swum": {
+        "object": "new stream",
+        "verb": "start"
+      }
+    },
+    {
+      "id": 162,
+      "name": "getStreamLevel",
+      "class": "StdXMLReader",
+      "returntype": "int",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0017532362660522246,
+      "swum": {
+        "object": "stream level",
+        "verb": "get"
+      }
+    },
+    {
+      "id": 163,
+      "name": "getLineNr",
+      "class": "StdXMLReader",
+      "returntype": "int",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0017532362660522246,
+      "swum": {
+        "object": "line nr",
+        "verb": "get"
+      }
+    },
+    {
+      "id": 164,
+      "name": "setSystemID",
+      "class": "StdXMLReader",
+      "returntype": "void",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0020512864316785647,
+      "swum": {
+        "object": "system ID",
+        "verb": "set"
+      }
+    },
+    {
+      "id": 165,
+      "name": "setPublicID",
+      "class": "StdXMLReader",
+      "returntype": "void",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "public ID",
+        "verb": "set"
+      }
+    },
+    {
+      "id": 166,
+      "name": "getSystemID",
+      "class": "StdXMLReader",
+      "returntype": "String",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0017532362660522246,
+      "swum": {
+        "object": "system ID",
+        "verb": "get"
+      }
+    },
+    {
+      "id": 167,
+      "name": "getPublicID",
+      "class": "StdXMLReader",
+      "returntype": "String",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "public ID",
+        "verb": "get"
+      }
+    },
+    {
+      "id": 122,
+      "name": "ValidatorPlugin",
+      "class": "ValidatorPlugin",
+      "returntype": "validatorplugin",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "validator plugin",
+        "verb": "create"
+      }
+    },
+    {
+      "id": 123,
+      "name": "finalize",
+      "class": "ValidatorPlugin",
+      "returntype": "void",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0017532362660522246,
+      "swum": {
+        "object": "validator plugin",
+        "verb": "finalize"
+      }
+    },
+    {
+      "id": 124,
+      "name": "getDelegate",
+      "class": "ValidatorPlugin",
+      "returntype": "IXMLValidator",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "delegate",
+        "verb": "get"
+      }
+    },
+    {
+      "id": 125,
+      "name": "setDelegate",
+      "class": "ValidatorPlugin",
+      "returntype": "void",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "delegate",
+        "verb": "set"
+      }
+    },
+    {
+      "id": 126,
+      "name": "setParameterEntityResolver",
+      "class": "ValidatorPlugin",
+      "returntype": "void",
+      "called": [],
+      "calls": [224],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0017532362660522246,
+      "swum": {
+        "object": "parameter entity resolver",
+        "verb": "set"
+      }
+    },
+    {
+      "id": 127,
+      "name": "getParameterEntityResolver",
+      "class": "ValidatorPlugin",
+      "returntype": "IXMLEntityResolver",
+      "called": [],
+      "calls": [225],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0017532362660522246,
+      "swum": {
+        "object": "parameter entity resolver",
+        "verb": "get"
+      }
+    },
+    {
+      "id": 128,
+      "name": "parseDTD",
+      "class": "ValidatorPlugin",
+      "returntype": "void",
+      "called": [],
+      "calls": [226],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0017532362660522246,
+      "swum": {
+        "object": "DTD",
+        "verb": "parse"
+      }
+    },
+    {
+      "id": 129,
+      "name": "elementStarted",
+      "class": "ValidatorPlugin",
+      "returntype": "void",
+      "called": [],
+      "calls": [227],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0017532362660522246,
+      "swum": {
+        "object": "element started",
+        "verb": "handle"
+      }
+    },
+    {
+      "id": 130,
+      "name": "elementEnded",
+      "class": "ValidatorPlugin",
+      "returntype": "void",
+      "called": [],
+      "calls": [228],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0017532362660522246,
+      "swum": {
+        "object": "element ended",
+        "verb": "handle"
+      }
+    },
+    {
+      "id": 131,
+      "name": "elementAttributesProcessed",
+      "class": "ValidatorPlugin",
+      "returntype": "void",
+      "called": [],
+      "calls": [230],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0017532362660522246,
+      "swum": {
+        "object": "element attributes processed",
+        "verb": "handle"
+      }
+    },
+    {
+      "id": 132,
+      "name": "attributeAdded",
+      "class": "ValidatorPlugin",
+      "returntype": "void",
+      "called": [],
+      "calls": [229],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0017532362660522246,
+      "swum": {
+        "object": "attribute added",
+        "verb": "handle"
+      }
+    },
+    {
+      "id": 133,
+      "name": "PCDataAdded",
+      "class": "ValidatorPlugin",
+      "returntype": "void",
+      "called": [],
+      "calls": [231],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0017532362660522246,
+      "swum": {
+        "object": "data added",
+        "verb": "handle"
+      }
+    },
+    {
+      "id": 134,
+      "name": "missingElement",
+      "class": "ValidatorPlugin",
+      "returntype": "void",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0017532362660522246,
+      "swum": {
+        "object": "EQUIV[element string - (NM) (NM) [ missing element name",
+        "verb": "missing"
+      }
+    },
+    {
+      "id": 135,
+      "name": "unexpectedElement",
+      "class": "ValidatorPlugin",
+      "returntype": "void",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0017532362660522246,
+      "swum": {
+        "object": "unexpected element",
+        "verb": "handle"
+      }
+    },
+    {
+      "id": 136,
+      "name": "missingAttribute",
+      "class": "ValidatorPlugin",
+      "returntype": "void",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0017532362660522246,
+      "swum": {
+        "object": "EQUIV[attribute string (NM)",
+        "verb": "missing"
+      }
+    },
+    {
+      "id": 137,
+      "name": "unexpectedAttribute",
+      "class": "ValidatorPlugin",
+      "returntype": "void",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0017532362660522246,
+      "swum": {
+        "object": "unexpected attribute",
+        "verb": "handle"
+      }
+    },
+    {
+      "id": 138,
+      "name": "invalidAttributeValue",
+      "class": "ValidatorPlugin",
+      "returntype": "void",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0017532362660522246,
+      "swum": {
+        "object": "invalid attribute value",
+        "verb": "handle"
+      }
+    },
+    {
+      "id": 139,
+      "name": "missingPCData",
+      "class": "ValidatorPlugin",
+      "returntype": "void",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0017532362660522246,
+      "swum": {
+        "object": "PC data",
+        "verb": "missing"
+      }
+    },
+    {
+      "id": 140,
+      "name": "unexpectedPCData",
+      "class": "ValidatorPlugin",
+      "returntype": "void",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0017532362660522246,
+      "swum": {
+        "object": "unexpected PC data",
+        "verb": "handle"
+      }
+    },
+    {
+      "id": 141,
+      "name": "validationError",
+      "class": "ValidatorPlugin",
+      "returntype": "void",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0017532362660522246,
+      "swum": {
+        "object": "validation error",
+        "verb": "handle"
+      }
+    },
+    {
+      "id": 212,
+      "name": "XMLAttribute",
+      "class": "XMLAttribute",
+      "returntype": "xmlattribute",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "XML attribute",
+        "verb": "create"
+      }
+    },
+    {
+      "id": 213,
+      "name": "getFullName",
+      "class": "XMLAttribute",
+      "returntype": "String",
+      "called": [264, 263, 281, 277, 482, 441],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0030759728137102044,
+      "swum": {
+        "object": "full name",
+        "verb": "get"
+      }
+    },
+    {
+      "id": 214,
+      "name": "getName",
+      "class": "XMLAttribute",
+      "returntype": "String",
+      "called": [264, 263, 288, 277, 482, 282],
+      "calls": [],
+      "use": {
+        "type": "assignment",
+        "example": "boolean found=attr.getName().equals(name);"
+      },
+      "pagerank": 0.0029334527942639975,
+      "swum": {
+        "object": "name",
+        "verb": "get"
+      }
+    },
+    {
+      "id": 215,
+      "name": "getNamespace",
+      "class": "XMLAttribute",
+      "returntype": "String",
+      "called": [264, 263, 288, 272, 277, 482, 282],
+      "calls": [],
+      "use": {
+        "type": "procedural",
+        "example": "found&=(attr.getNamespace() == null);"
+      },
+      "pagerank": 0.0036785782083298482,
+      "swum": {
+        "object": "namespace",
+        "verb": "get"
+      }
+    },
+    {
+      "id": 216,
+      "name": "getValue",
+      "class": "XMLAttribute",
+      "returntype": "String",
+      "called": [288, 266, 267, 268, 269, 270, 281, 282],
+      "calls": [],
+      "use": {
+        "type": "procedural",
+        "example": "if (!attr.getValue().equals(value)) {"
+      },
+      "pagerank": 0.002643973920951302,
+      "swum": {
+        "object": "value",
+        "verb": "get"
+      }
+    },
+    {
+      "id": 217,
+      "name": "setValue",
+      "class": "XMLAttribute",
+      "returntype": "void",
+      "called": [275, 274],
+      "calls": [],
+      "use": {
+        "type": "procedural",
+        "example": "attr.setValue(value);"
+      },
+      "pagerank": 0.0020016114040741747,
+      "swum": {
+        "object": "value",
+        "verb": "set"
+      }
+    },
+    {
+      "id": 218,
+      "name": "getType",
+      "class": "XMLAttribute",
+      "returntype": "String",
+      "called": [288, 271, 273],
+      "calls": [],
+      "use": {
+        "type": "procedural",
+        "example": "if (!attr.getType().equals(type)) {"
+      },
+      "pagerank": 0.0026515263487932378,
+      "swum": {
+        "object": "type",
+        "verb": "get"
+      }
+    },
+    {
+      "id": 427,
+      "name": "XMLElement",
+      "class": "XMLElement",
+      "returntype": "xmlelement",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "XML element",
+        "verb": "create"
+      }
+    },
+    {
+      "id": 233,
+      "name": "XMLElement",
+      "class": "XMLElement",
+      "returntype": "xmlelement",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "XML element",
+        "verb": "create"
+      }
+    },
+    {
+      "id": 234,
+      "name": "XMLElement",
+      "class": "XMLElement",
+      "returntype": "xmlelement",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "XML element",
+        "verb": "create"
+      }
+    },
+    {
+      "id": 235,
+      "name": "XMLElement",
+      "class": "XMLElement",
+      "returntype": "xmlelement",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "XML element",
+        "verb": "create"
+      }
+    },
+    {
+      "id": 236,
+      "name": "XMLElement",
+      "class": "XMLElement",
+      "returntype": "xmlelement",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "XML element",
+        "verb": "create"
+      }
+    },
+    {
+      "id": 237,
+      "name": "createPCDataElement",
+      "class": "XMLElement",
+      "returntype": "IXMLElement",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0017532362660522246,
+      "swum": {
+        "object": "PC data element",
+        "verb": "create"
+      }
+    },
+    {
+      "id": 238,
+      "name": "createElement",
+      "class": "XMLElement",
+      "returntype": "IXMLElement",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0017532362660522246,
+      "swum": {
+        "object": "element",
+        "verb": "create"
+      }
+    },
+    {
+      "id": 239,
+      "name": "createElement",
+      "class": "XMLElement",
+      "returntype": "IXMLElement",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0017532362660522246,
+      "swum": {
+        "object": "element",
+        "verb": "create"
+      }
+    },
+    {
+      "id": 240,
+      "name": "createElement",
+      "class": "XMLElement",
+      "returntype": "IXMLElement",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0017532362660522246,
+      "swum": {
+        "object": "element",
+        "verb": "create"
+      }
+    },
+    {
+      "id": 241,
+      "name": "createElement",
+      "class": "XMLElement",
+      "returntype": "IXMLElement",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0017532362660522246,
+      "swum": {
+        "object": "element",
+        "verb": "create"
+      }
+    },
+    {
+      "id": 242,
+      "name": "finalize",
+      "class": "XMLElement",
+      "returntype": "void",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0017532362660522246,
+      "swum": {
+        "object": "XML element",
+        "verb": "finalize"
+      }
+    },
+    {
+      "id": 243,
+      "name": "getParent",
+      "class": "XMLElement",
+      "returntype": "IXMLElement",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "parent",
+        "verb": "get"
+      }
+    },
+    {
+      "id": 244,
+      "name": "getFullName",
+      "class": "XMLElement",
+      "returntype": "String",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "full name",
+        "verb": "get"
+      }
+    },
+    {
+      "id": 471,
+      "name": "getName",
+      "class": "XMLElement",
+      "returntype": "String",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "name",
+        "verb": "get"
+      }
+    },
+    {
+      "id": 246,
+      "name": "getNamespace",
+      "class": "XMLElement",
+      "returntype": "String",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "namespace",
+        "verb": "get"
+      }
+    },
+    {
+      "id": 488,
+      "name": "setName",
+      "class": "XMLElement",
+      "returntype": "void",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0017532362660522246,
+      "swum": {
+        "object": "name",
+        "verb": "set"
+      }
+    },
+    {
+      "id": 248,
+      "name": "setName",
+      "class": "XMLElement",
+      "returntype": "void",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0017532362660522246,
+      "swum": {
+        "object": "name",
+        "verb": "set"
+      }
+    },
+    {
+      "id": 249,
+      "name": "addChild",
+      "class": "XMLElement",
+      "returntype": "void",
+      "called": [],
+      "calls": [94, 93, 56],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0017532362660522246,
+      "swum": {
+        "object": "EQUIV[child IXML element",
+        "verb": "add"
+      }
+    },
+    {
+      "id": 250,
+      "name": "insertChild",
+      "class": "XMLElement",
+      "returntype": "void",
+      "called": [],
+      "calls": [94, 93, 56],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0017532362660522246,
+      "swum": {
+        "object": "EQUIV[child IXML element",
+        "verb": "insert"
+      }
+    },
+    {
+      "id": 251,
+      "name": "removeChild",
+      "class": "XMLElement",
+      "returntype": "void",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0017532362660522246,
+      "swum": {
+        "object": "EQUIV[child IXML element",
+        "verb": "remove"
+      }
+    },
+    {
+      "id": 252,
+      "name": "removeChildAtIndex",
+      "class": "XMLElement",
+      "returntype": "void",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0017532362660522246,
+      "swum": {
+        "object": "child [ index",
+        "verb": "remove (P)"
+      }
+    },
+    {
+      "id": 443,
+      "name": "enumerateChildren",
+      "class": "XMLElement",
+      "returntype": "Enumeration",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0017532362660522246,
+      "swum": {
+        "object": "children",
+        "verb": "enumerate"
+      }
+    },
+    {
+      "id": 254,
+      "name": "isLeaf",
+      "class": "XMLElement",
+      "returntype": "boolean",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0017532362660522246,
+      "swum": {
+        "object": "leaf",
+        "verb": "is"
+      }
+    },
+    {
+      "id": 255,
+      "name": "hasChildren",
+      "class": "XMLElement",
+      "returntype": "boolean",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0017532362660522246,
+      "swum": {
+        "object": "children",
+        "verb": "has"
+      }
+    },
+    {
+      "id": 256,
+      "name": "getChildrenCount",
+      "class": "XMLElement",
+      "returntype": "int",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0017532362660522246,
+      "swum": {
+        "object": "children count",
+        "verb": "get"
+      }
+    },
+    {
+      "id": 444,
+      "name": "getChildren",
+      "class": "XMLElement",
+      "returntype": "Vector",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "children",
+        "verb": "get"
+      }
+    },
+    {
+      "id": 258,
+      "name": "getChildAtIndex",
+      "class": "XMLElement",
+      "returntype": "IXMLElement",
+      "called": [288],
+      "calls": [],
+      "use": {
+        "type": "assignment",
+        "example": "IXMLElement child1=this.getChildAtIndex(i);"
+      },
+      "pagerank": 0.0019064009347273872,
+      "swum": {
+        "object": "child [ index",
+        "verb": "get (P)"
+      }
+    },
+    {
+      "id": 259,
+      "name": "getFirstChildNamed",
+      "class": "XMLElement",
+      "returntype": "IXMLElement",
+      "called": [],
+      "calls": [57, 56, 55],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0017532362660522246,
+      "swum": {
+        "object": "first child named",
+        "verb": "get"
+      }
+    },
+    {
+      "id": 260,
+      "name": "getFirstChildNamed",
+      "class": "XMLElement",
+      "returntype": "IXMLElement",
+      "called": [],
+      "calls": [57, 56, 55],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0017532362660522246,
+      "swum": {
+        "object": "first child named",
+        "verb": "get"
+      }
+    },
+    {
+      "id": 261,
+      "name": "getChildrenNamed",
+      "class": "XMLElement",
+      "returntype": "Vector",
+      "called": [],
+      "calls": [57, 56, 55],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0017532362660522246,
+      "swum": {
+        "object": "children named",
+        "verb": "get"
+      }
+    },
+    {
+      "id": 262,
+      "name": "getChildrenNamed",
+      "class": "XMLElement",
+      "returntype": "Vector",
+      "called": [],
+      "calls": [57, 56, 55],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0017532362660522246,
+      "swum": {
+        "object": "children named",
+        "verb": "get"
+      }
+    },
+    {
+      "id": 263,
+      "name": "findAttribute",
+      "class": "XMLElement",
+      "returntype": "XMLAttribute",
+      "called": [270, 266, 267, 268, 269, 280, 272, 271, 273, 274],
+      "calls": [215, 214, 213],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.00534120964576614,
+      "swum": {
+        "object": "attribute",
+        "verb": "find"
+      }
+    },
+    {
+      "id": 264,
+      "name": "findAttribute",
+      "class": "XMLElement",
+      "returntype": "XMLAttribute",
+      "called": [],
+      "calls": [215, 214, 213],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.00534120964576614,
+      "swum": {
+        "object": "attribute",
+        "verb": "find"
+      }
+    },
+    {
+      "id": 265,
+      "name": "getAttributeCount",
+      "class": "XMLElement",
+      "returntype": "int",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0017532362660522246,
+      "swum": {
+        "object": "attribute count",
+        "verb": "get"
+      }
+    },
+    {
+      "id": 266,
+      "name": "getAttribute",
+      "class": "XMLElement",
+      "returntype": "String",
+      "called": [270, 266, 267, 268, 269],
+      "calls": [266, 216, 263],
+      "use": {
+        "type": "assignment",
+        "example": "String value=this.getAttribute(name,namespace,Integer.toString(defaultValue));"
+      },
+      "pagerank": 0.002112332851480787,
+      "swum": {
+        "object": "attribute",
+        "verb": "get"
+      }
+    },
+    {
+      "id": 267,
+      "name": "getAttribute",
+      "class": "XMLElement",
+      "returntype": "String",
+      "called": [],
+      "calls": [266, 216, 263],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.002112332851480787,
+      "swum": {
+        "object": "attribute",
+        "verb": "get"
+      }
+    },
+    {
+      "id": 268,
+      "name": "getAttribute",
+      "class": "XMLElement",
+      "returntype": "String",
+      "called": [],
+      "calls": [266, 216, 263],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.002112332851480787,
+      "swum": {
+        "object": "attribute",
+        "verb": "get"
+      }
+    },
+    {
+      "id": 269,
+      "name": "getAttribute",
+      "class": "XMLElement",
+      "returntype": "int",
+      "called": [],
+      "calls": [266, 216, 263],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.002112332851480787,
+      "swum": {
+        "object": "attribute",
+        "verb": "get"
+      }
+    },
+    {
+      "id": 270,
+      "name": "getAttribute",
+      "class": "XMLElement",
+      "returntype": "int",
+      "called": [],
+      "calls": [266, 216, 263],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.002112332851480787,
+      "swum": {
+        "object": "attribute",
+        "verb": "get"
+      }
+    },
+    {
+      "id": 271,
+      "name": "getAttributeType",
+      "class": "XMLElement",
+      "returntype": "String",
+      "called": [],
+      "calls": [218, 263],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0017532362660522246,
+      "swum": {
+        "object": "attribute type",
+        "verb": "get"
+      }
+    },
+    {
+      "id": 272,
+      "name": "getAttributeNamespace",
+      "class": "XMLElement",
+      "returntype": "String",
+      "called": [],
+      "calls": [215, 263],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0017532362660522246,
+      "swum": {
+        "object": "attribute namespace",
+        "verb": "get"
+      }
+    },
+    {
+      "id": 273,
+      "name": "getAttributeType",
+      "class": "XMLElement",
+      "returntype": "String",
+      "called": [],
+      "calls": [218, 263],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0017532362660522246,
+      "swum": {
+        "object": "attribute type",
+        "verb": "get"
+      }
+    },
+    {
+      "id": 274,
+      "name": "setAttribute",
+      "class": "XMLElement",
+      "returntype": "void",
+      "called": [],
+      "calls": [217, 263],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0017532362660522246,
+      "swum": {
+        "object": "attribute",
+        "verb": "set"
+      }
+    },
+    {
+      "id": 275,
+      "name": "setAttribute",
+      "class": "XMLElement",
+      "returntype": "void",
+      "called": [],
+      "calls": [217, 263],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0017532362660522246,
+      "swum": {
+        "object": "attribute",
+        "verb": "set"
+      }
+    },
+    {
+      "id": 482,
+      "name": "removeAttribute",
+      "class": "XMLElement",
+      "returntype": "void",
+      "called": [],
+      "calls": [215, 214, 213],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0017532362660522246,
+      "swum": {
+        "object": "attribute",
+        "verb": "remove"
+      }
+    },
+    {
+      "id": 277,
+      "name": "removeAttribute",
+      "class": "XMLElement",
+      "returntype": "void",
+      "called": [],
+      "calls": [215, 214, 213],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0017532362660522246,
+      "swum": {
+        "object": "attribute",
+        "verb": "remove"
+      }
+    },
+    {
+      "id": 441,
+      "name": "enumerateAttributeNames",
+      "class": "XMLElement",
+      "returntype": "Enumeration",
+      "called": [],
+      "calls": [213],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0017532362660522246,
+      "swum": {
+        "object": "attribute names",
+        "verb": "enumerate"
+      }
+    },
+    {
+      "id": 279,
+      "name": "hasAttribute",
+      "class": "XMLElement",
+      "returntype": "boolean",
+      "called": [],
+      "calls": [263],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0017532362660522246,
+      "swum": {
+        "object": "attribute",
+        "verb": "has"
+      }
+    },
+    {
+      "id": 280,
+      "name": "hasAttribute",
+      "class": "XMLElement",
+      "returntype": "boolean",
+      "called": [],
+      "calls": [263],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0017532362660522246,
+      "swum": {
+        "object": "attribute",
+        "verb": "has"
+      }
+    },
+    {
+      "id": 281,
+      "name": "getAttributes",
+      "class": "XMLElement",
+      "returntype": "Properties",
+      "called": [],
+      "calls": [216, 213],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0017532362660522246,
+      "swum": {
+        "object": "attributes",
+        "verb": "get"
+      }
+    },
+    {
+      "id": 282,
+      "name": "getAttributesInNamespace",
+      "class": "XMLElement",
+      "returntype": "Properties",
+      "called": [],
+      "calls": [216, 214, 215],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0017532362660522246,
+      "swum": {
+        "object": "attributes -- [ namespace",
+        "verb": "get (P)"
+      }
+    },
+    {
+      "id": 283,
+      "name": "getSystemID",
+      "class": "XMLElement",
+      "returntype": "String",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "system ID",
+        "verb": "get"
+      }
+    },
+    {
+      "id": 447,
+      "name": "getLineNr",
+      "class": "XMLElement",
+      "returntype": "int",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "line nr",
+        "verb": "get"
+      }
+    },
+    {
+      "id": 446,
+      "name": "getContent",
+      "class": "XMLElement",
+      "returntype": "String",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "content",
+        "verb": "get"
+      }
+    },
+    {
+      "id": 486,
+      "name": "setContent",
+      "class": "XMLElement",
+      "returntype": "void",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "content",
+        "verb": "set"
+      }
+    },
+    {
+      "id": 287,
+      "name": "equals",
+      "class": "XMLElement",
+      "returntype": "boolean",
+      "called": [],
+      "calls": [288],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0017532362660522246,
+      "swum": {
+        "object": "object",
+        "verb": "equals"
+      }
+    },
+    {
+      "id": 288,
+      "name": "equalsXMLElement",
+      "class": "XMLElement",
+      "returntype": "boolean",
+      "called": [287],
+      "calls": [96, 68, 258, 66, 218, 79, 215, 214, 216, 74],
+      "use": {
+        "type": "procedural",
+        "example": "return this.equalsXMLElement((IXMLElement)rawElement);"
+      },
+      "pagerank": 0.0032434870941839247,
+      "swum": {
+        "object": "EQUIV[XML element IXML element",
+        "verb": "equals"
+      }
+    },
+    {
+      "id": 200,
+      "name": "XMLEntityResolver",
+      "class": "XMLEntityResolver",
+      "returntype": "xmlentityresolver",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "XML entity resolver",
+        "verb": "create"
+      }
+    },
+    {
+      "id": 201,
+      "name": "finalize",
+      "class": "XMLEntityResolver",
+      "returntype": "void",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0017532362660522246,
+      "swum": {
+        "object": "XML entity resolver",
+        "verb": "finalize"
+      }
+    },
+    {
+      "id": 202,
+      "name": "addInternalEntity",
+      "class": "XMLEntityResolver",
+      "returntype": "void",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0017532362660522246,
+      "swum": {
+        "object": "internal entity",
+        "verb": "add"
+      }
+    },
+    {
+      "id": 203,
+      "name": "addExternalEntity",
+      "class": "XMLEntityResolver",
+      "returntype": "void",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0017532362660522246,
+      "swum": {
+        "object": "external entity",
+        "verb": "add"
+      }
+    },
+    {
+      "id": 204,
+      "name": "getEntity",
+      "class": "XMLEntityResolver",
+      "returntype": "Reader",
+      "called": [],
+      "calls": [206],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0017532362660522246,
+      "swum": {
+        "object": "entity",
+        "verb": "get"
+      }
+    },
+    {
+      "id": 205,
+      "name": "isExternalEntity",
+      "class": "XMLEntityResolver",
+      "returntype": "boolean",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0017532362660522246,
+      "swum": {
+        "object": "external entity",
+        "verb": "is"
+      }
+    },
+    {
+      "id": 206,
+      "name": "openExternalEntity",
+      "class": "XMLEntityResolver",
+      "returntype": "Reader",
+      "called": [204],
+      "calls": [418, 419, 425],
+      "use": {
+        "type": "procedural",
+        "example": "return this.openExternalEntity(xmlReader,id[0],id[1]);"
+      },
+      "pagerank": 0.0022499865420961248,
+      "swum": {
+        "object": "external entity",
+        "verb": "open"
+      }
+    },
+    {
+      "id": 396,
+      "name": "XMLException",
+      "class": "XMLException",
+      "returntype": "xmlexception",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "XML exception",
+        "verb": "create"
+      }
+    },
+    {
+      "id": 397,
+      "name": "XMLException",
+      "class": "XMLException",
+      "returntype": "xmlexception",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "XML exception",
+        "verb": "create"
+      }
+    },
+    {
+      "id": 398,
+      "name": "XMLException",
+      "class": "XMLException",
+      "returntype": "xmlexception",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "XML exception",
+        "verb": "create"
+      }
+    },
+    {
+      "id": 399,
+      "name": "XMLException",
+      "class": "XMLException",
+      "returntype": "xmlexception",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "XML exception",
+        "verb": "create"
+      }
+    },
+    {
+      "id": 400,
+      "name": "XMLException",
+      "class": "XMLException",
+      "returntype": "xmlexception",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "XML exception",
+        "verb": "create"
+      }
+    },
+    {
+      "id": 0,
+      "name": "buildMessage",
+      "class": "XMLException",
+      "returntype": "String",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "null",
+        "verb": "null"
+      }
+    },
+    {
+      "id": 402,
+      "name": "finalize",
+      "class": "XMLException",
+      "returntype": "void",
+      "called": [175],
+      "calls": [],
+      "use": {
+        "type": "procedural",
+        "example": "super.finalize();"
+      },
+      "pagerank": 0.0032434870941839247,
+      "swum": {
+        "object": "XML exception",
+        "verb": "finalize"
+      }
+    },
+    {
+      "id": 403,
+      "name": "getSystemID",
+      "class": "XMLException",
+      "returntype": "String",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "system ID",
+        "verb": "get"
+      }
+    },
+    {
+      "id": 404,
+      "name": "getLineNr",
+      "class": "XMLException",
+      "returntype": "int",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "line nr",
+        "verb": "get"
+      }
+    },
+    {
+      "id": 405,
+      "name": "getException",
+      "class": "XMLException",
+      "returntype": "Exception",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "exception",
+        "verb": "get"
+      }
+    },
+    {
+      "id": 406,
+      "name": "printStackTrace",
+      "class": "XMLException",
+      "returntype": "void",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0017532362660522246,
+      "swum": {
+        "object": "stack trace",
+        "verb": "print"
+      }
+    },
+    {
+      "id": 407,
+      "name": "printStackTrace",
+      "class": "XMLException",
+      "returntype": "void",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0017532362660522246,
+      "swum": {
+        "object": "stack trace",
+        "verb": "print"
+      }
+    },
+    {
+      "id": 408,
+      "name": "printStackTrace",
+      "class": "XMLException",
+      "returntype": "void",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0017532362660522246,
+      "swum": {
+        "object": "stack trace",
+        "verb": "print"
+      }
+    },
+    {
+      "id": 409,
+      "name": "toString",
+      "class": "XMLException",
+      "returntype": "String",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "string",
+        "verb": "convert"
+      }
+    },
+    {
+      "id": 120,
+      "name": "XMLParseException",
+      "class": "XMLParseException",
+      "returntype": "xmlparseexception",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "XML parse exception",
+        "verb": "create"
+      }
+    },
+    {
+      "id": 526,
+      "name": "XMLParseException",
+      "class": "XMLParseException",
+      "returntype": "xmlparseexception",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "XML parse exception",
+        "verb": "create"
+      }
+    },
+    {
+      "id": 0,
+      "name": "createDefaultXMLParser",
+      "class": "XMLParserFactory",
+      "returntype": "IXMLParser",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "null",
+        "verb": "null"
+      }
+    },
+    {
+      "id": 0,
+      "name": "createDefaultXMLParser",
+      "class": "XMLParserFactory",
+      "returntype": "IXMLParser",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "null",
+        "verb": "null"
+      }
+    },
+    {
+      "id": 0,
+      "name": "createXMLParser",
+      "class": "XMLParserFactory",
+      "returntype": "IXMLParser",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "null",
+        "verb": "null"
+      }
+    },
+    {
+      "id": 0,
+      "name": "skipComment",
+      "class": "XMLUtil",
+      "returntype": "void",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "null",
+        "verb": "null"
+      }
+    },
+    {
+      "id": 0,
+      "name": "skipTag",
+      "class": "XMLUtil",
+      "returntype": "void",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "null",
+        "verb": "null"
+      }
+    },
+    {
+      "id": 0,
+      "name": "scanPublicID",
+      "class": "XMLUtil",
+      "returntype": "String",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "null",
+        "verb": "null"
+      }
+    },
+    {
+      "id": 0,
+      "name": "scanSystemID",
+      "class": "XMLUtil",
+      "returntype": "String",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "null",
+        "verb": "null"
+      }
+    },
+    {
+      "id": 0,
+      "name": "scanIdentifier",
+      "class": "XMLUtil",
+      "returntype": "String",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "null",
+        "verb": "null"
+      }
+    },
+    {
+      "id": 0,
+      "name": "scanString",
+      "class": "XMLUtil",
+      "returntype": "String",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "null",
+        "verb": "null"
+      }
+    },
+    {
+      "id": 0,
+      "name": "processEntity",
+      "class": "XMLUtil",
+      "returntype": "void",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "null",
+        "verb": "null"
+      }
+    },
+    {
+      "id": 0,
+      "name": "processCharLiteral",
+      "class": "XMLUtil",
+      "returntype": "char",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "null",
+        "verb": "null"
+      }
+    },
+    {
+      "id": 0,
+      "name": "skipWhitespace",
+      "class": "XMLUtil",
+      "returntype": "void",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "null",
+        "verb": "null"
+      }
+    },
+    {
+      "id": 0,
+      "name": "read",
+      "class": "XMLUtil",
+      "returntype": "String",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "null",
+        "verb": "null"
+      }
+    },
+    {
+      "id": 0,
+      "name": "readChar",
+      "class": "XMLUtil",
+      "returntype": "char",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "null",
+        "verb": "null"
+      }
+    },
+    {
+      "id": 0,
+      "name": "checkLiteral",
+      "class": "XMLUtil",
+      "returntype": "boolean",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "null",
+        "verb": "null"
+      }
+    },
+    {
+      "id": 0,
+      "name": "errorExpectedInput",
+      "class": "XMLUtil",
+      "returntype": "void",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "null",
+        "verb": "null"
+      }
+    },
+    {
+      "id": 0,
+      "name": "errorInvalidEntity",
+      "class": "XMLUtil",
+      "returntype": "void",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "null",
+        "verb": "null"
+      }
+    },
+    {
+      "id": 0,
+      "name": "errorUnexpectedEntity",
+      "class": "XMLUtil",
+      "returntype": "void",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "null",
+        "verb": "null"
+      }
+    },
+    {
+      "id": 0,
+      "name": "errorUnexpectedCDATA",
+      "class": "XMLUtil",
+      "returntype": "void",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "null",
+        "verb": "null"
+      }
+    },
+    {
+      "id": 0,
+      "name": "errorInvalidInput",
+      "class": "XMLUtil",
+      "returntype": "void",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "null",
+        "verb": "null"
+      }
+    },
+    {
+      "id": 0,
+      "name": "errorWrongClosingTag",
+      "class": "XMLUtil",
+      "returntype": "void",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "null",
+        "verb": "null"
+      }
+    },
+    {
+      "id": 0,
+      "name": "errorClosingTagNotEmpty",
+      "class": "XMLUtil",
+      "returntype": "void",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "null",
+        "verb": "null"
+      }
+    },
+    {
+      "id": 0,
+      "name": "errorMissingElement",
+      "class": "XMLUtil",
+      "returntype": "void",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "null",
+        "verb": "null"
+      }
+    },
+    {
+      "id": 0,
+      "name": "errorUnexpectedElement",
+      "class": "XMLUtil",
+      "returntype": "void",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "null",
+        "verb": "null"
+      }
+    },
+    {
+      "id": 0,
+      "name": "errorMissingAttribute",
+      "class": "XMLUtil",
+      "returntype": "void",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "null",
+        "verb": "null"
+      }
+    },
+    {
+      "id": 0,
+      "name": "errorUnexpectedAttribute",
+      "class": "XMLUtil",
+      "returntype": "void",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "null",
+        "verb": "null"
+      }
+    },
+    {
+      "id": 0,
+      "name": "errorInvalidAttributeValue",
+      "class": "XMLUtil",
+      "returntype": "void",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "null",
+        "verb": "null"
+      }
+    },
+    {
+      "id": 0,
+      "name": "errorMissingPCData",
+      "class": "XMLUtil",
+      "returntype": "void",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "null",
+        "verb": "null"
+      }
+    },
+    {
+      "id": 0,
+      "name": "errorUnexpectedPCData",
+      "class": "XMLUtil",
+      "returntype": "void",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "null",
+        "verb": "null"
+      }
+    },
+    {
+      "id": 0,
+      "name": "validationError",
+      "class": "XMLUtil",
+      "returntype": "void",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "null",
+        "verb": "null"
+      }
+    },
+    {
+      "id": 174,
+      "name": "XMLValidationException",
+      "class": "XMLValidationException",
+      "returntype": "xmlvalidationexception",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "XML validation exception",
+        "verb": "create"
+      }
+    },
+    {
+      "id": 175,
+      "name": "finalize",
+      "class": "XMLValidationException",
+      "returntype": "void",
+      "called": [],
+      "calls": [402],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0017532362660522246,
+      "swum": {
+        "object": "XML validation exception",
+        "verb": "finalize"
+      }
+    },
+    {
+      "id": 176,
+      "name": "getElementName",
+      "class": "XMLValidationException",
+      "returntype": "String",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "element name",
+        "verb": "get"
+      }
+    },
+    {
+      "id": 177,
+      "name": "getAttributeName",
+      "class": "XMLValidationException",
+      "returntype": "String",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "attribute name",
+        "verb": "get"
+      }
+    },
+    {
+      "id": 178,
+      "name": "getAttributeValue",
+      "class": "XMLValidationException",
+      "returntype": "String",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "attribute value",
+        "verb": "get"
+      }
+    },
+    {
+      "id": 324,
+      "name": "XMLWriter",
+      "class": "XMLWriter",
+      "returntype": "xmlwriter",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "XML writer",
+        "verb": "create"
+      }
+    },
+    {
+      "id": 325,
+      "name": "XMLWriter",
+      "class": "XMLWriter",
+      "returntype": "xmlwriter",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0,
+      "swum": {
+        "object": "XML writer",
+        "verb": "create"
+      }
+    },
+    {
+      "id": 326,
+      "name": "finalize",
+      "class": "XMLWriter",
+      "returntype": "void",
+      "called": [],
+      "calls": [],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0017532362660522246,
+      "swum": {
+        "object": "XML writer",
+        "verb": "finalize"
+      }
+    },
+    {
+      "id": 327,
+      "name": "write",
+      "class": "XMLWriter",
+      "returntype": "void",
+      "called": [330, 327, 328, 329],
+      "calls": [55, 327, 63, 65, 331, 93, 74, 86, 80, 57],
+      "use": {
+        "type": "procedural",
+        "example": "this.writer.print(' ');"
+      },
+      "pagerank": 0.0018102248254517033,
+      "swum": {
+        "object": "(NM) xml",
+        "verb": "write"
+      }
+    },
+    {
+      "id": 328,
+      "name": "write",
+      "class": "XMLWriter",
+      "returntype": "void",
+      "called": [],
+      "calls": [55, 327, 63, 65, 331, 93, 74, 86, 80, 57],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0018102248254517033,
+      "swum": {
+        "object": "(NM) xml",
+        "verb": "write"
+      }
+    },
+    {
+      "id": 329,
+      "name": "write",
+      "class": "XMLWriter",
+      "returntype": "void",
+      "called": [],
+      "calls": [55, 327, 63, 65, 331, 93, 74, 86, 80, 57],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0018102248254517033,
+      "swum": {
+        "object": "(NM) xml",
+        "verb": "write"
+      }
+    },
+    {
+      "id": 330,
+      "name": "write",
+      "class": "XMLWriter",
+      "returntype": "void",
+      "called": [],
+      "calls": [55, 327, 63, 65, 331, 93, 74, 86, 80, 57],
+      "use": {
+        "type": "unknown",
+        "example": "unknown"
+      },
+      "pagerank": 0.0018102248254517033,
+      "swum": {
+        "object": "(NM) xml",
+        "verb": "write"
+      }
+    },
+    {
+      "id": 331,
+      "name": "writeEncoded",
+      "class": "XMLWriter",
+      "returntype": "void",
+      "called": [330, 327, 328, 329],
+      "calls": [],
+      "use": {
+        "type": "procedural",
+        "example": "this.writeEncoded(xml.getContent().trim());"
+      },
+      "pagerank": 0.0018102248254517033,
+      "swum": {
+        "object": "encoded",
+        "verb": "write"
+      }
+    }
+  ]
+}

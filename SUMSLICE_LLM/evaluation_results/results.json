@@ -1,0 +1,761 @@
+{
+  "metrics": {
+    "CLAUDE": {
+      "overall": {
+        "n": 150,
+        "mean_cosine_similarity": 0.22449557583093654,
+        "sd_cosine_similarity": 0.06532043199804546,
+        "mean_bert_precision": 0.8527994108200073,
+        "sd_bert_precision": 0.015968365285881008,
+        "mean_bert_recall": 0.8337344431877136,
+        "sd_bert_recall": 0.016691256774186446,
+        "mean_bert_f1": 0.8430121854941051,
+        "sd_bert_f1": 0.01192126948382437,
+        "mean_words": 32.266666666666666,
+        "sd_words": 8.363925948422398
+      },
+      "by_project": {
+        "jajuk": {
+          "n": 25,
+          "mean_cosine_similarity": 0.23900451607543047,
+          "sd_cosine_similarity": 0.06500279286110357,
+          "mean_bert_precision": 0.8526659965515136,
+          "sd_bert_precision": 0.012498601513453101,
+          "mean_bert_recall": 0.8269841027259827,
+          "sd_bert_recall": 0.013029286510943929,
+          "mean_bert_f1": 0.8395461297035217,
+          "sd_bert_f1": 0.00962619895669064,
+          "mean_words": 32.48,
+          "sd_words": 7.383088784512888
+        },
+        "jedit": {
+          "n": 25,
+          "mean_cosine_similarity": 0.2311210262816612,
+          "sd_cosine_similarity": 0.07460553575529777,
+          "mean_bert_precision": 0.8467976379394532,
+          "sd_bert_precision": 0.01724836763382614,
+          "mean_bert_recall": 0.8370885086059571,
+          "sd_bert_recall": 0.020081439603028297,
+          "mean_bert_f1": 0.8416946625709534,
+          "sd_bert_f1": 0.012524092452430295,
+          "mean_words": 34.08,
+          "sd_words": 9.656258764828817
+        },
+        "jhotdraw": {
+          "n": 25,
+          "mean_cosine_similarity": 0.21737507001642392,
+          "sd_cosine_similarity": 0.06087335797489278,
+          "mean_bert_precision": 0.8509494733810424,
+          "sd_bert_precision": 0.017188133642714643,
+          "mean_bert_recall": 0.8311039018630981,
+          "sd_bert_recall": 0.01507024060962286,
+          "mean_bert_f1": 0.8408115172386169,
+          "sd_bert_f1": 0.013230640679765345,
+          "mean_words": 30.92,
+          "sd_words": 7.9158069708653205
+        },
+        "jtopas": {
+          "n": 25,
+          "mean_cosine_similarity": 0.22890909935925227,
+          "sd_cosine_similarity": 0.07177046097316615,
+          "mean_bert_precision": 0.8524687957763671,
+          "sd_bert_precision": 0.014653426879978506,
+          "mean_bert_recall": 0.8319740796089172,
+          "sd_bert_recall": 0.014799172601279092,
+          "mean_bert_f1": 0.8420045733451843,
+          "sd_bert_f1": 0.011654788363485045,
+          "mean_words": 33.24,
+          "sd_words": 6.935896961941308
+        },
+        "nanoXML": {
+          "n": 25,
+          "mean_cosine_similarity": 0.22559574492777826,
+          "sd_cosine_similarity": 0.06635784327944409,
+          "mean_bert_precision": 0.8581147265434265,
+          "sd_bert_precision": 0.01672765839584327,
+          "mean_bert_recall": 0.831806902885437,
+          "sd_bert_recall": 0.017057884893193417,
+          "mean_bert_f1": 0.8445817232131958,
+          "sd_bert_f1": 0.011354615591770286,
+          "mean_words": 28.96,
+          "sd_words": 8.08537774833887
+        },
+        "siena": {
+          "n": 25,
+          "mean_cosine_similarity": 0.20496799832507315,
+          "sd_cosine_similarity": 0.05197688964007207,
+          "mean_bert_precision": 0.855799834728241,
+          "sd_bert_precision": 0.016103952733977737,
+          "mean_bert_recall": 0.8434491634368897,
+          "sd_bert_recall": 0.015738657186380796,
+          "mean_bert_f1": 0.8494345068931579,
+          "sd_bert_f1": 0.011270505033079404,
+          "mean_words": 33.92,
+          "sd_words": 9.47769310890929
+        }
+      }
+    },
+    "GPT": {
+      "overall": {
+        "n": 150,
+        "mean_cosine_similarity": 0.2339981004273928,
+        "sd_cosine_similarity": 0.06641200614171945,
+        "mean_bert_precision": 0.8636329865455628,
+        "sd_bert_precision": 0.017421241882662343,
+        "mean_bert_recall": 0.8424327003955842,
+        "sd_bert_recall": 0.01783959311687164,
+        "mean_bert_f1": 0.8527690744400025,
+        "sd_bert_f1": 0.014105001171459868,
+        "mean_words": 34.026666666666664,
+        "sd_words": 7.030085554833412
+      },
+      "by_project": {
+        "jajuk": {
+          "n": 25,
+          "mean_cosine_similarity": 0.2627382321369025,
+          "sd_cosine_similarity": 0.057492382587767954,
+          "mean_bert_precision": 0.8652604699134827,
+          "sd_bert_precision": 0.017466974695910135,
+          "mean_bert_recall": 0.8364922428131103,
+          "sd_bert_recall": 0.01986890336284015,
+          "mean_bert_f1": 0.8505270719528198,
+          "sd_bert_f1": 0.016154134457547344,
+          "mean_words": 34.08,
+          "sd_words": 7.6807117725724705
+        },
+        "jedit": {
+          "n": 25,
+          "mean_cosine_similarity": 0.2516302165751926,
+          "sd_cosine_similarity": 0.06674542391346926,
+          "mean_bert_precision": 0.8591658759117127,
+          "sd_bert_precision": 0.014708022630025575,
+          "mean_bert_recall": 0.8476555490493775,
+          "sd_bert_recall": 0.01818374089895398,
+          "mean_bert_f1": 0.8532106900215148,
+          "sd_bert_f1": 0.011465917653783419,
+          "mean_words": 36.72,
+          "sd_words": 7.231412955524897
+        },
+        "jhotdraw": {
+          "n": 25,
+          "mean_cosine_similarity": 0.22624059079505193,
+          "sd_cosine_similarity": 0.07246901729813572,
+          "mean_bert_precision": 0.862298288345337,
+          "sd_bert_precision": 0.01568690555047442,
+          "mean_bert_recall": 0.8420567345619202,
+          "sd_bert_recall": 0.018299502687794983,
+          "mean_bert_f1": 0.8519705653190612,
+          "sd_bert_f1": 0.01475359436513794,
+          "mean_words": 33.24,
+          "sd_words": 6.703730304837748
+        },
+        "jtopas": {
+          "n": 25,
+          "mean_cosine_similarity": 0.21427659369662672,
+          "sd_cosine_similarity": 0.07224960111479573,
+          "mean_bert_precision": 0.8604839468002319,
+          "sd_bert_precision": 0.015950928810466218,
+          "mean_bert_recall": 0.83584965467453,
+          "sd_bert_recall": 0.013892319915609495,
+          "mean_bert_f1": 0.847884657382965,
+          "sd_bert_f1": 0.011468371131657277,
+          "mean_words": 33.96,
+          "sd_words": 5.989435143094325
+        },
+        "nanoXML": {
+          "n": 25,
+          "mean_cosine_similarity": 0.23953467133226689,
+          "sd_cosine_similarity": 0.05658073107908547,
+          "mean_bert_precision": 0.8670164251327515,
+          "sd_bert_precision": 0.02069479486351118,
+          "mean_bert_recall": 0.8414862203598023,
+          "sd_bert_recall": 0.017353752404935804,
+          "mean_bert_f1": 0.8539100551605224,
+          "sd_bert_f1": 0.015113990110060283,
+          "mean_words": 31.96,
+          "sd_words": 8.0129062559515
+        },
+        "siena": {
+          "n": 25,
+          "mean_cosine_similarity": 0.20956829802831614,
+          "sd_cosine_similarity": 0.060357471893806795,
+          "mean_bert_precision": 0.8675729131698608,
+          "sd_bert_precision": 0.019240451214435957,
+          "mean_bert_recall": 0.8510558009147644,
+          "sd_bert_recall": 0.015248381912150163,
+          "mean_bert_f1": 0.8591114068031311,
+          "sd_bert_f1": 0.01381644398142359,
+          "mean_words": 34.2,
+          "sd_words": 6.150880695748645
+        }
+      }
+    },
+    "MISTRAL": {
+      "overall": {
+        "n": 150,
+        "mean_cosine_similarity": 0.2523718888327151,
+        "sd_cosine_similarity": 0.07638210107533851,
+        "mean_bert_precision": 0.8636468891302744,
+        "sd_bert_precision": 0.015339742312675968,
+        "mean_bert_recall": 0.8400782831509908,
+        "sd_bert_recall": 0.01730582498223278,
+        "mean_bert_f1": 0.8515667502085368,
+        "sd_bert_f1": 0.01245950194299688,
+        "mean_words": 31.426666666666666,
+        "sd_words": 7.749731899815352
+      },
+      "by_project": {
+        "jajuk": {
+          "n": 25,
+          "mean_cosine_similarity": 0.2913469861799172,
+          "sd_cosine_similarity": 0.06995635162301424,
+          "mean_bert_precision": 0.8667763447761536,
+          "sd_bert_precision": 0.01634226423170256,
+          "mean_bert_recall": 0.8370477104187012,
+          "sd_bert_recall": 0.01519349095675741,
+          "mean_bert_f1": 0.8515360641479492,
+          "sd_bert_f1": 0.012099290734864349,
+          "mean_words": 33.04,
+          "sd_words": 9.8254770876533
+        },
+        "jedit": {
+          "n": 25,
+          "mean_cosine_similarity": 0.2429790676900126,
+          "sd_cosine_similarity": 0.07844588430019522,
+          "mean_bert_precision": 0.8591251921653748,
+          "sd_bert_precision": 0.014702606514633612,
+          "mean_bert_recall": 0.8435733461380005,
+          "sd_bert_recall": 0.01875727750026904,
+          "mean_bert_f1": 0.8511260199546814,
+          "sd_bert_f1": 0.012275793782404834,
+          "mean_words": 32.4,
+          "sd_words": 7.205322107072429
+        },
+        "jhotdraw": {
+          "n": 25,
+          "mean_cosine_similarity": 0.23952720132381244,
+          "sd_cosine_similarity": 0.08488443030568749,
+          "mean_bert_precision": 0.8633307957649231,
+          "sd_bert_precision": 0.01660316148680207,
+          "mean_bert_recall": 0.839058210849762,
+          "sd_bert_recall": 0.017552449187423286,
+          "mean_bert_f1": 0.8509439444541931,
+          "sd_bert_f1": 0.015048183991775163,
+          "mean_words": 29.04,
+          "sd_words": 7.085666282479487
+        },
+        "jtopas": {
+          "n": 25,
+          "mean_cosine_similarity": 0.23335852036843202,
+          "sd_cosine_similarity": 0.06347196323098007,
+          "mean_bert_precision": 0.8614117288589478,
+          "sd_bert_precision": 0.015426139359457431,
+          "mean_bert_recall": 0.8347629618644714,
+          "sd_bert_recall": 0.01786207393441189,
+          "mean_bert_f1": 0.8477159810066223,
+          "sd_bert_f1": 0.011625650216623878,
+          "mean_words": 30.04,
+          "sd_words": 8.309031231136395
+        },
+        "nanoXML": {
+          "n": 25,
+          "mean_cosine_similarity": 0.2584634054106584,
+          "sd_cosine_similarity": 0.07382349512103799,
+          "mean_bert_precision": 0.8671877217292786,
+          "sd_bert_precision": 0.015525292382311727,
+          "mean_bert_recall": 0.8399229192733765,
+          "sd_bert_recall": 0.018706186735553076,
+          "mean_bert_f1": 0.8532012724876403,
+          "sd_bert_f1": 0.013368807838414041,
+          "mean_words": 32.2,
+          "sd_words": 7.404953297174354
+        },
+        "siena": {
+          "n": 25,
+          "mean_cosine_similarity": 0.2485561520234581,
+          "sd_cosine_similarity": 0.07882067488367948,
+          "mean_bert_precision": 0.864049551486969,
+          "sd_bert_precision": 0.013150313332358355,
+          "mean_bert_recall": 0.8461045503616333,
+          "sd_bert_recall": 0.014454857523091816,
+          "mean_bert_f1": 0.8548772192001343,
+          "sd_bert_f1": 0.009803448944098079,
+          "mean_words": 31.84,
+          "sd_words": 6.155485358604958
+        }
+      }
+    },
+    "QWEN": {
+      "overall": {
+        "n": 150,
+        "mean_cosine_similarity": 0.25783176621764964,
+        "sd_cosine_similarity": 0.06608024004207633,
+        "mean_bert_precision": 0.8634328452746073,
+        "sd_bert_precision": 0.013930458572645132,
+        "mean_bert_recall": 0.8425650799274444,
+        "sd_bert_recall": 0.015300815695830555,
+        "mean_bert_f1": 0.8527397513389587,
+        "sd_bert_f1": 0.010119683831337985,
+        "mean_words": 33.00666666666667,
+        "sd_words": 6.186689182632792
+      },
+      "by_project": {
+        "jajuk": {
+          "n": 25,
+          "mean_cosine_similarity": 0.2904137669767376,
+          "sd_cosine_similarity": 0.05602541514947218,
+          "mean_bert_precision": 0.8674503517150879,
+          "sd_bert_precision": 0.012822828760094076,
+          "mean_bert_recall": 0.8382363057136536,
+          "sd_bert_recall": 0.01362086400150037,
+          "mean_bert_f1": 0.8524955368041992,
+          "sd_bert_f1": 0.00948025521031693,
+          "mean_words": 33.0,
+          "sd_words": 7.170541588099651
+        },
+        "jedit": {
+          "n": 25,
+          "mean_cosine_similarity": 0.2593986045920763,
+          "sd_cosine_similarity": 0.058703177646329964,
+          "mean_bert_precision": 0.8573207759857178,
+          "sd_bert_precision": 0.014454902543642035,
+          "mean_bert_recall": 0.8452116394042969,
+          "sd_bert_recall": 0.016052199523249742,
+          "mean_bert_f1": 0.8510812211036682,
+          "sd_bert_f1": 0.010360569554557265,
+          "mean_words": 35.76,
+          "sd_words": 5.651548460377917
+        },
+        "jhotdraw": {
+          "n": 25,
+          "mean_cosine_similarity": 0.25267966838842304,
+          "sd_cosine_similarity": 0.07561324095182285,
+          "mean_bert_precision": 0.8664980792999267,
+          "sd_bert_precision": 0.009604633951835893,
+          "mean_bert_recall": 0.84220707654953,
+          "sd_bert_recall": 0.015386017502956794,
+          "mean_bert_f1": 0.854114785194397,
+          "sd_bert_f1": 0.010548926346910062,
+          "mean_words": 30.6,
+          "sd_words": 4.301162633521313
+        },
+        "jtopas": {
+          "n": 25,
+          "mean_cosine_similarity": 0.2333836474555156,
+          "sd_cosine_similarity": 0.06613321837093492,
+          "mean_bert_precision": 0.859932906627655,
+          "sd_bert_precision": 0.01531617616054609,
+          "mean_bert_recall": 0.8374920749664306,
+          "sd_bert_recall": 0.014729207512932775,
+          "mean_bert_f1": 0.8484095907211304,
+          "sd_bert_f1": 0.009423299075038439,
+          "mean_words": 33.36,
+          "sd_words": 6.040695324215583
+        },
+        "nanoXML": {
+          "n": 25,
+          "mean_cosine_similarity": 0.27165746169033,
+          "sd_cosine_similarity": 0.04992880692417655,
+          "mean_bert_precision": 0.8651427793502807,
+          "sd_bert_precision": 0.013744053334749071,
+          "mean_bert_recall": 0.84215336561203,
+          "sd_bert_recall": 0.014735464647192251,
+          "mean_bert_f1": 0.8533621740341186,
+          "sd_bert_f1": 0.00933702179249923,
+          "mean_words": 32.08,
+          "sd_words": 6.726316475853134
+        },
+        "siena": {
+          "n": 25,
+          "mean_cosine_similarity": 0.23945744820281523,
+          "sd_cosine_similarity": 0.07504063276833473,
+          "mean_bert_precision": 0.8642521786689759,
+          "sd_bert_precision": 0.0152857263028836,
+          "mean_bert_recall": 0.8500900173187256,
+          "sd_bert_recall": 0.015051002747962448,
+          "mean_bert_f1": 0.856975200176239,
+          "sd_bert_f1": 0.010382168614821517,
+          "mean_words": 33.24,
+          "sd_words": 6.246865880850439
+        }
+      }
+    }
+  },
+  "metrics_meta": {
+    "reference": "SumSlice tool summaries (input/tool_summaries/SUMSLICE_TOOL_SUMMARY.jsonl)",
+    "pairing": "(project, method_id)",
+    "cosine": "TF-IDF, fitted per pair (lexical)",
+    "bertscore_model": "roberta-large",
+    "bertscore_rescaled": false,
+    "mean_reference_words": 50.586666666666666
+  },
+  "judge": {
+    "CLAUDE": {
+      "overall_mean_points": 2.637777777777778,
+      "criteria": {
+        "accuracy": {
+          "mean_points": 2.7,
+          "n_methods": 150
+        },
+        "conciseness": {
+          "mean_points": 2.6433333333333335,
+          "n_methods": 150
+        },
+        "content": {
+          "mean_points": 2.6433333333333335,
+          "n_methods": 150
+        },
+        "how": {
+          "mean_points": 2.506666666666667,
+          "n_methods": 150
+        },
+        "what": {
+          "mean_points": 2.8266666666666667,
+          "n_methods": 150
+        },
+        "why": {
+          "mean_points": 2.506666666666667,
+          "n_methods": 150
+        }
+      },
+      "by_project": {
+        "jajuk": {
+          "accuracy": 2.66,
+          "conciseness": 2.76,
+          "content": 2.72,
+          "how": 2.8,
+          "what": 3.0,
+          "why": 2.7
+        },
+        "jedit": {
+          "accuracy": 2.46,
+          "conciseness": 2.44,
+          "content": 2.56,
+          "how": 2.28,
+          "what": 2.54,
+          "why": 2.1
+        },
+        "jhotdraw": {
+          "accuracy": 2.48,
+          "conciseness": 2.36,
+          "content": 2.58,
+          "how": 2.28,
+          "what": 2.56,
+          "why": 2.18
+        },
+        "jtopas": {
+          "accuracy": 3.04,
+          "conciseness": 2.88,
+          "content": 2.9,
+          "how": 2.98,
+          "what": 3.26,
+          "why": 2.96
+        },
+        "nanoXML": {
+          "accuracy": 2.84,
+          "conciseness": 2.84,
+          "content": 2.6,
+          "how": 2.44,
+          "what": 2.78,
+          "why": 2.6
+        },
+        "siena": {
+          "accuracy": 2.72,
+          "conciseness": 2.58,
+          "content": 2.5,
+          "how": 2.26,
+          "what": 2.82,
+          "why": 2.5
+        }
+      }
+    },
+    "GPT": {
+      "overall_mean_points": 2.8205555555555555,
+      "criteria": {
+        "accuracy": {
+          "mean_points": 2.75,
+          "n_methods": 150
+        },
+        "conciseness": {
+          "mean_points": 3.0,
+          "n_methods": 150
+        },
+        "content": {
+          "mean_points": 2.776666666666667,
+          "n_methods": 150
+        },
+        "how": {
+          "mean_points": 3.1766666666666667,
+          "n_methods": 150
+        },
+        "what": {
+          "mean_points": 2.6,
+          "n_methods": 150
+        },
+        "why": {
+          "mean_points": 2.62,
+          "n_methods": 150
+        }
+      },
+      "by_project": {
+        "jajuk": {
+          "accuracy": 2.14,
+          "conciseness": 2.7,
+          "content": 2.16,
+          "how": 2.66,
+          "what": 2.04,
+          "why": 2.08
+        },
+        "jedit": {
+          "accuracy": 2.82,
+          "conciseness": 3.0,
+          "content": 3.08,
+          "how": 3.22,
+          "what": 2.66,
+          "why": 2.84
+        },
+        "jhotdraw": {
+          "accuracy": 3.0,
+          "conciseness": 3.04,
+          "content": 2.84,
+          "how": 3.46,
+          "what": 2.8,
+          "why": 2.9
+        },
+        "jtopas": {
+          "accuracy": 2.78,
+          "conciseness": 2.86,
+          "content": 2.86,
+          "how": 3.04,
+          "what": 2.68,
+          "why": 2.52
+        },
+        "nanoXML": {
+          "accuracy": 2.86,
+          "conciseness": 3.22,
+          "content": 2.82,
+          "how": 3.28,
+          "what": 2.7,
+          "why": 2.64
+        },
+        "siena": {
+          "accuracy": 2.9,
+          "conciseness": 3.18,
+          "content": 2.9,
+          "how": 3.4,
+          "what": 2.72,
+          "why": 2.74
+        }
+      }
+    },
+    "MISTRAL": {
+      "overall_mean_points": 2.0383333333333336,
+      "criteria": {
+        "accuracy": {
+          "mean_points": 2.08,
+          "n_methods": 150
+        },
+        "conciseness": {
+          "mean_points": 2.03,
+          "n_methods": 150
+        },
+        "content": {
+          "mean_points": 2.0733333333333333,
+          "n_methods": 150
+        },
+        "how": {
+          "mean_points": 1.8333333333333333,
+          "n_methods": 150
+        },
+        "what": {
+          "mean_points": 2.0766666666666667,
+          "n_methods": 150
+        },
+        "why": {
+          "mean_points": 2.1366666666666667,
+          "n_methods": 150
+        }
+      },
+      "by_project": {
+        "jajuk": {
+          "accuracy": 2.46,
+          "conciseness": 2.14,
+          "content": 2.48,
+          "how": 2.04,
+          "what": 2.3,
+          "why": 2.4
+        },
+        "jedit": {
+          "accuracy": 2.24,
+          "conciseness": 2.3,
+          "content": 2.02,
+          "how": 1.9,
+          "what": 2.12,
+          "why": 2.14
+        },
+        "jhotdraw": {
+          "accuracy": 2.0,
+          "conciseness": 2.14,
+          "content": 1.96,
+          "how": 1.74,
+          "what": 2.04,
+          "why": 2.08
+        },
+        "jtopas": {
+          "accuracy": 1.56,
+          "conciseness": 1.82,
+          "content": 1.76,
+          "how": 1.58,
+          "what": 1.64,
+          "why": 1.86
+        },
+        "nanoXML": {
+          "accuracy": 2.16,
+          "conciseness": 1.94,
+          "content": 2.08,
+          "how": 2.0,
+          "what": 2.2,
+          "why": 2.18
+        },
+        "siena": {
+          "accuracy": 2.06,
+          "conciseness": 1.84,
+          "content": 2.14,
+          "how": 1.74,
+          "what": 2.16,
+          "why": 2.16
+        }
+      }
+    },
+    "QWEN": {
+      "overall_mean_points": 2.5033333333333334,
+      "criteria": {
+        "accuracy": {
+          "mean_points": 2.47,
+          "n_methods": 150
+        },
+        "conciseness": {
+          "mean_points": 2.3266666666666667,
+          "n_methods": 150
+        },
+        "content": {
+          "mean_points": 2.506666666666667,
+          "n_methods": 150
+        },
+        "how": {
+          "mean_points": 2.4833333333333334,
+          "n_methods": 150
+        },
+        "what": {
+          "mean_points": 2.4966666666666666,
+          "n_methods": 150
+        },
+        "why": {
+          "mean_points": 2.736666666666667,
+          "n_methods": 150
+        }
+      },
+      "by_project": {
+        "jajuk": {
+          "accuracy": 2.74,
+          "conciseness": 2.4,
+          "content": 2.64,
+          "how": 2.5,
+          "what": 2.66,
+          "why": 2.82
+        },
+        "jedit": {
+          "accuracy": 2.48,
+          "conciseness": 2.26,
+          "content": 2.34,
+          "how": 2.6,
+          "what": 2.68,
+          "why": 2.92
+        },
+        "jhotdraw": {
+          "accuracy": 2.52,
+          "conciseness": 2.46,
+          "content": 2.62,
+          "how": 2.52,
+          "what": 2.6,
+          "why": 2.84
+        },
+        "jtopas": {
+          "accuracy": 2.62,
+          "conciseness": 2.44,
+          "content": 2.48,
+          "how": 2.4,
+          "what": 2.42,
+          "why": 2.66
+        },
+        "nanoXML": {
+          "accuracy": 2.14,
+          "conciseness": 2.0,
+          "content": 2.5,
+          "how": 2.28,
+          "what": 2.32,
+          "why": 2.58
+        },
+        "siena": {
+          "accuracy": 2.32,
+          "conciseness": 2.4,
+          "content": 2.46,
+          "how": 2.6,
+          "what": 2.3,
+          "why": 2.6
+        }
+      }
+    }
+  },
+  "judge_meta": {
+    "judge_model": "meta-llama/llama-4-maverick",
+    "systems": [
+      "CLAUDE",
+      "GPT",
+      "MISTRAL",
+      "QWEN"
+    ],
+    "seed": 2026,
+    "presentations_per_item": 2,
+    "points": "1st=4 ... last=1",
+    "reference": "SumSlice tool summaries (input/tool_summaries/SUMSLICE_TOOL_SUMMARY.jsonl)",
+    "criteria": [
+      "accuracy",
+      "content",
+      "conciseness",
+      "what",
+      "why",
+      "how"
+    ],
+    "criteria_definitions": {
+      "accuracy": {
+        "name": "Accuracy",
+        "definition": "the summary correctly describes the method's behaviour without introducing false or misleading information."
+      },
+      "content": {
+        "name": "Content",
+        "definition": "the summary is not missing important information that could hinder understanding of the method."
+      },
+      "conciseness": {
+        "name": "Conciseness",
+        "definition": "the summary contains no information that is not essential to understanding the method."
+      },
+      "what": {
+        "name": "What",
+        "definition": "the summary helps you understand what the method does (e.g., the internals of the method)."
+      },
+      "why": {
+        "name": "Why",
+        "definition": "the summary helps you understand why the method exists in the project (e.g., the consequences of altering or removing the method)."
+      },
+      "how": {
+        "name": "How",
+        "definition": "the summary helps you understand how to use the method."
+      }
+    },
+    "skipped_methods": [],
+    "judge_calls": 1800,
+    "failed_after_retries": 3,
+    "items_ranked": 150
+  }
+}

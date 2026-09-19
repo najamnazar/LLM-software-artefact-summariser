@@ -1,0 +1,112 @@
+{
+  "top_n": 25,
+  "selection": "highest PageRank per project; ties broken by lower method id",
+  "jajuk": {
+    "raw_entries": 5921,
+    "methods_kept": 3672,
+    "exact_duplicates_merged": 22,
+    "colliding_ids_dropped": {
+      "0": 2227
+    },
+    "dangling_call_refs_removed": 401,
+    "pagerank_source": "recomputed from call graph (original values all 0)",
+    "avg_pagerank": 2.723311546840823E-4,
+    "selected": 25,
+    "source_dir": "input/dataset/projects/jajuk-src-1.10.5",
+    "source_files_indexed": 534,
+    "selected_with_source": 24,
+    "selected_with_overloads": 7,
+    "pagerank_of_last_selected": 0.00256968067241456,
+    "seconds": 1.017
+  },
+  "jedit": {
+    "raw_entries": 7161,
+    "methods_kept": 4504,
+    "exact_duplicates_merged": 69,
+    "colliding_ids_dropped": {
+      "0": 2588
+    },
+    "dangling_call_refs_removed": 187,
+    "pagerank_source": "original",
+    "avg_pagerank": 3.5759819881749895E-5,
+    "selected": 25,
+    "source_dir": "input/dataset/projects/jEdit",
+    "source_files_indexed": 496,
+    "selected_with_source": 25,
+    "selected_with_overloads": 6,
+    "pagerank_of_last_selected": 5.220961965288124E-4,
+    "seconds": 0.558
+  },
+  "jhotdraw": {
+    "raw_entries": 5263,
+    "methods_kept": 4750,
+    "exact_duplicates_merged": 22,
+    "colliding_ids_dropped": {
+      "0": 491
+    },
+    "dangling_call_refs_removed": 221,
+    "pagerank_source": "recomputed from call graph (original values all 0)",
+    "avg_pagerank": 2.1052631578944852E-4,
+    "selected": 25,
+    "source_dir": "input/dataset/projects/jhotdraw60b1",
+    "source_files_indexed": 481,
+    "selected_with_source": 25,
+    "selected_with_overloads": 9,
+    "pagerank_of_last_selected": 0.0011426357630489378,
+    "seconds": 0.376
+  },
+  "jtopas": {
+    "raw_entries": 613,
+    "methods_kept": 506,
+    "exact_duplicates_merged": 1,
+    "colliding_ids_dropped": {
+      "0": 106
+    },
+    "dangling_call_refs_removed": 13,
+    "pagerank_source": "original",
+    "avg_pagerank": 5.057172391899098E-4,
+    "selected": 25,
+    "source_dir": "input/dataset/projects/jtopas",
+    "source_files_indexed": 42,
+    "selected_with_source": 25,
+    "selected_with_overloads": 6,
+    "pagerank_of_last_selected": 0.0018455599562851538,
+    "seconds": 0.088
+  },
+  "nanoXML": {
+    "raw_entries": 318,
+    "methods_kept": 285,
+    "exact_duplicates_merged": 0,
+    "colliding_ids_dropped": {
+      "0": 33
+    },
+    "dangling_call_refs_removed": 0,
+    "pagerank_source": "original",
+    "avg_pagerank": 0.0013114375680972168,
+    "selected": 25,
+    "source_dir": "input/dataset/projects/nanoxml",
+    "source_files_indexed": 23,
+    "selected_with_source": 25,
+    "selected_with_overloads": 3,
+    "pagerank_of_last_selected": 0.0023032525363929014,
+    "seconds": 0.054
+  },
+  "siena": {
+    "raw_entries": 695,
+    "methods_kept": 411,
+    "exact_duplicates_merged": 2,
+    "colliding_ids_dropped": {
+      "0": 282
+    },
+    "dangling_call_refs_removed": 9,
+    "pagerank_source": "original",
+    "avg_pagerank": 2.0531699138726716E-4,
+    "selected": 25,
+    "source_dir": "input/dataset/projects/siena-master",
+    "source_files_indexed": 45,
+    "selected_with_source": 25,
+    "selected_with_overloads": 12,
+    "pagerank_of_last_selected": 0.0010881797639894913,
+    "seconds": 0.055
+  }
+}
